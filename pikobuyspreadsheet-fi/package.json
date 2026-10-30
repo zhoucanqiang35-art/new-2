@@ -1,0 +1,17 @@
+{
+  "name": "pikobuyspreadsheet-fi-preview",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "astro dev --host",
+    "build": "astro build && node scripts/generate-detail-pages.mjs",
+    "preview": "astro preview --host"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "astro": "^7.4.4"
+  }
+}

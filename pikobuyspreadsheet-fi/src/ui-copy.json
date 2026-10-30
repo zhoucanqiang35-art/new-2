@@ -1,0 +1,254 @@
+{
+  "en": {
+    "category": [
+      "Shoes",
+      "Hoodies / Sweaters",
+      "T-Shirts",
+      "Jackets",
+      "Pants / Shorts",
+      "Headwear",
+      "Accessories",
+      "Jerseys",
+      "Electronics",
+      "Other Finds",
+      "Sets"
+    ],
+    "search": "Search name or ID",
+    "all": "All categories",
+    "sort": "Sort",
+    "options": [
+      "Newest",
+      "Price: low to high",
+      "Price: high to low"
+    ],
+    "more": "Show more",
+    "browse": "Browse products",
+    "image": "Image",
+    "process": "THE PROCESS",
+    "cta": "FIND YOUR NEXT FAVORITE"
+  },
+  "de": {
+    "category": [
+      "Schuhe",
+      "Hoodies / Pullover",
+      "T-Shirts",
+      "Jacken",
+      "Hosen / Shorts",
+      "Kopfbedeckungen",
+      "Accessoires",
+      "Trikots",
+      "Elektronik",
+      "Weitere Funde",
+      "Sets"
+    ],
+    "search": "Name oder ID suchen",
+    "all": "Alle Kategorien",
+    "sort": "Sortieren",
+    "options": [
+      "Neueste",
+      "Preis aufsteigend",
+      "Preis absteigend"
+    ],
+    "more": "Mehr anzeigen",
+    "browse": "Produkte ansehen",
+    "image": "Bild",
+    "process": "DER ABLAUF",
+    "cta": "FINDE DEIN NÄCHSTES LIEBLINGSSTÜCK"
+  },
+  "fr": {
+    "category": [
+      "Chaussures",
+      "Sweats / pulls",
+      "T-shirts",
+      "Vestes",
+      "Pantalons / shorts",
+      "Couvre-chefs",
+      "Accessoires",
+      "Maillots",
+      "Électronique",
+      "Autres trouvailles",
+      "Ensembles"
+    ],
+    "search": "Rechercher un nom ou un ID",
+    "all": "Toutes catégories",
+    "sort": "Trier",
+    "options": [
+      "Plus récents",
+      "Prix croissant",
+      "Prix décroissant"
+    ],
+    "more": "Voir plus",
+    "browse": "Voir les produits",
+    "image": "Image",
+    "process": "LES ÉTAPES",
+    "cta": "TROUVEZ VOTRE PROCHAIN FAVORI"
+  },
+  "es": {
+    "category": [
+      "Zapatos",
+      "Sudaderas",
+      "Camisetas",
+      "Chaquetas",
+      "Pantalones / shorts",
+      "Sombreros",
+      "Accesorios",
+      "Camisetas deportivas",
+      "Electrónica",
+      "Otros",
+      "Conjuntos"
+    ],
+    "search": "Buscar nombre o ID",
+    "all": "Todas las categorías",
+    "sort": "Ordenar",
+    "options": [
+      "Más recientes",
+      "Precio ascendente",
+      "Precio descendente"
+    ],
+    "more": "Mostrar más",
+    "browse": "Ver productos",
+    "image": "Imagen",
+    "process": "EL PROCESO",
+    "cta": "ENCUENTRA TU PRÓXIMO FAVORITO"
+  },
+  "it": {
+    "category": [
+      "Scarpe",
+      "Felpe",
+      "T-shirt",
+      "Giacche",
+      "Pantaloni / shorts",
+      "Cappelli",
+      "Accessori",
+      "Maglie sportive",
+      "Elettronica",
+      "Altri",
+      "Completi"
+    ],
+    "search": "Cerca nome o ID",
+    "all": "Tutte le categorie",
+    "sort": "Ordina",
+    "options": [
+      "Più recenti",
+      "Prezzo crescente",
+      "Prezzo decrescente"
+    ],
+    "more": "Mostra altro",
+    "browse": "Esplora i prodotti",
+    "image": "Immagine",
+    "process": "IL PROCESSO",
+    "cta": "TROVA IL TUO PROSSIMO PREFERITO"
+  },
+  "pt": {
+    "category": [
+      "Calçados",
+      "Moletons",
+      "Camisetas",
+      "Jaquetas",
+      "Calças / shorts",
+      "Chapéus",
+      "Acessórios",
+      "Camisas esportivas",
+      "Eletrônicos",
+      "Outros",
+      "Conjuntos"
+    ],
+    "search": "Buscar nome ou ID",
+    "all": "Todas as categorias",
+    "sort": "Ordenar",
+    "options": [
+      "Mais recentes",
+      "Menor preço",
+      "Maior preço"
+    ],
+    "more": "Mostrar mais",
+    "browse": "Ver produtos",
+    "image": "Imagem",
+    "process": "O PROCESSO",
+    "cta": "ENCONTRE SEU PRÓXIMO FAVORITO"
+  },
+  "nl": {
+    "category": [
+      "Schoenen",
+      "Hoodies",
+      "T-shirts",
+      "Jassen",
+      "Broeken / shorts",
+      "Hoofddeksels",
+      "Accessoires",
+      "Sportshirts",
+      "Elektronica",
+      "Overige",
+      "Sets"
+    ],
+    "search": "Zoek naam of ID",
+    "all": "Alle categorieën",
+    "sort": "Sorteren",
+    "options": [
+      "Nieuwste",
+      "Prijs oplopend",
+      "Prijs aflopend"
+    ],
+    "more": "Meer tonen",
+    "browse": "Bekijk producten",
+    "image": "Afbeelding",
+    "process": "HET PROCES",
+    "cta": "VIND JE VOLGENDE FAVORIET"
+  },
+  "pl": {
+    "category": [
+      "Buty",
+      "Bluzy / swetry",
+      "T-shirty",
+      "Kurtki",
+      "Spodnie / szorty",
+      "Nakrycia głowy",
+      "Akcesoria",
+      "Koszulki sportowe",
+      "Elektronika",
+      "Inne",
+      "Komplety"
+    ],
+    "search": "Szukaj nazwy lub ID",
+    "all": "Wszystkie kategorie",
+    "sort": "Sortuj",
+    "options": [
+      "Najnowsze",
+      "Cena rosnąco",
+      "Cena malejąco"
+    ],
+    "more": "Pokaż więcej",
+    "browse": "Przeglądaj produkty",
+    "image": "Zdjęcie",
+    "process": "JAK TO DZIAŁA",
+    "cta": "ZNAJDŹ NOWY ULUBIONY PRODUKT"
+  },
+  "sv": {
+    "category": [
+      "Skor",
+      "Huvtröjor",
+      "T-shirts",
+      "Jackor",
+      "Byxor / shorts",
+      "Huvudbonader",
+      "Accessoarer",
+      "Tröjor",
+      "Elektronik",
+      "Övrigt",
+      "Set"
+    ],
+    "search": "Sök namn eller ID",
+    "all": "Alla kategorier",
+    "sort": "Sortera",
+    "options": [
+      "Nyaste",
+      "Pris stigande",
+      "Pris fallande"
+    ],
+    "more": "Visa fler",
+    "browse": "Bläddra bland produkter",
+    "image": "Bild",
+    "process": "SÅ FUNGERAR DET",
+    "cta": "HITTA DIN NÄSTA FAVORIT"
+  }
+}
