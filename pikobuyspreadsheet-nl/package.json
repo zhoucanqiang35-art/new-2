@@ -1,0 +1,13 @@
+{
+  "name": "pikobuyspreadsheet-nl",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "astro build",
+    "dev": "astro dev",
+    "postbuild": "node scripts/sitemap.mjs"
+  },
+  "dependencies": {
+    "astro": "7.4.4"
+  }
+}

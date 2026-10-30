@@ -1,0 +1,212 @@
+{
+  "pikobuy-spreadsheet-guide": {
+    "title": "PikoBuy Spreadsheet: como encontrar e comparar produtos",
+    "intro": "Use uma lista de produtos como ponto de partida para pesquisar artigos PikoBuy.",
+    "sections": [
+      [
+        "O que é um achado da planilha?",
+        "Uma planilha PikoBuy reúne anúncios e links de diferentes vendedores. Nosso catálogo independente usa um retrato dos dados do FindSpreadsheet, organizado em categorias como calçados, roupas e acessórios. É uma ferramenta de pesquisa: o anúncio pertence ao vendedor e um registro salvo não garante estoque, preço ou qualidade atuais.",
+        "Comece por uma categoria ou busque o nome de um produto. Abra vários artigos e compare fotos, descrições, variantes e links de origem. Um preço menor não prova que dois anúncios incluam o mesmo produto ou as mesmas opções. Verifique a página atual do vendedor antes de decidir."
+      ],
+      [
+        "Confira os detalhes antes de comprar",
+        "Veja medidas, materiais, cores e condições do vendedor. Anote o tamanho e a versão desejados. Se o anúncio não estiver claro, peça esclarecimentos pelo PikoBuy antes da compra, sem supor que a foto represente todas as opções.",
+        "Os preços do catálogo são estimativas em dólares americanos baseadas no retrato dos dados e em uma taxa de câmbio. Podem mudar e não representam o custo total entregue. Fretes nacional e internacional, impostos e outras cobranças podem ser separados. Consulte o anúncio atual e o checkout do PikoBuy para o valor real."
+      ],
+      [
+        "Da descoberta à inspeção",
+        "Depois de escolher, siga o link de compra disponível ou use a URL original no PikoBuy. O guia oficial descreve um pagamento inicial do produto, inspeção e confirmação por fotos no armazém e, depois, pagamento separado do frete internacional. Confira o artigo e as opções em cada etapa.",
+        "Guarde os dados do pedido e as fotos juntos para comparar o artigo no armazém com sua escolha. Fotos QC ajudam a examinar detalhes visíveis, mas não provam autenticidade nem garantem caimento ou durabilidade. Se faltar um detalhe necessário, contate o suporte antes de enviar o pacote."
+      ]
+    ]
+  },
+  "how-to-order-pikobuy": {
+    "title": "Como comprar pelo PikoBuy: guia passo a passo",
+    "intro": "Acompanhe o processo desde o anúncio do vendedor até a entrega internacional.",
+    "sections": [
+      [
+        "Escolha o anúncio correto",
+        "Comece com um produto da planilha e abra o anúncio original ou o link de compra PikoBuy disponível. Compare fotos, tabela de tamanhos, cor, versão e quantidade. Guarde a URL original e confira se a opção escolhida corresponde ao que deseja comprar.",
+        "O guia oficial do PikoBuy informa que é possível colar um link de produto ou palavras-chave na busca. Ele cita mercados como Taobao, Tmall, 1688 e Weidian. A disponibilidade e a importação podem variar; confira o resultado sem supor que todo link funcione automaticamente."
+      ],
+      [
+        "Faça o pedido",
+        "Selecione as especificações e envie o pedido pelo PikoBuy. O primeiro pagamento cobre a compra conforme o valor mostrado nessa etapa. Preço e disponibilidade dependem da compra efetiva; segundo o guia oficial, pedidos sem estoque são reembolsados. Leia os detalhes na conta e contate o PikoBuy em caso de dúvida.",
+        "Registre o número do pedido e as opções escolhidas. Acompanhe mensagens sobre falta de estoque, diferenças de preço ou dúvidas do vendedor. Uma observação útil é específica: informe, por exemplo, cor e medidas em vez de uma instrução vaga como «melhor qualidade»."
+      ],
+      [
+        "Confira e envie",
+        "Quando o produto chega ao armazém, o PikoBuy descreve registro, confirmação por fotos e inspeção de defeitos. Examine rapidamente as fotos disponíveis e compare-as com o pedido e o anúncio. Se algo parecer errado, contate o suporte e confira as condições de devolução antes do envio internacional.",
+        "Quando estiver pronto, escolha uma rota disponível, solicite o envio do pacote e pague o frete internacional. Compare destino, valor cotado, restrições e eventuais exigências tributárias ou aduaneiras. O rastreamento começa após o despacho; prazos e rotas dependem do pacote e destino."
+      ]
+    ]
+  },
+  "pikobuy-product-links": {
+    "title": "Links de produtos PikoBuy: Weidian, Taobao e 1688",
+    "intro": "Entenda os links de origem e confira o anúncio real antes de comprar.",
+    "sections": [
+      [
+        "Por que o link de origem importa",
+        "Uma entrada da planilha aponta para um produto, mas o anúncio do vendedor contém as opções e condições atuais. Ele pode estar em mercados como Weidian, Taobao ou 1688. O guia do PikoBuy cita essas fontes e informa que é possível buscar por link ou palavras-chave.",
+        "Abra o anúncio original quando disponível e compare com o registro da planilha. As fotos podem mostrar várias variantes e o preço inicial exibido pode valer apenas para um tamanho ou versão. Confira a opção exata, quantidade, preço e estoque antes de pedir."
+      ],
+      [
+        "Usar um link de compra PikoBuy",
+        "Alguns cartões têm um botão direto que abre o produto original no PikoBuy. Nossos links usam o identificador da fonte quando o catálogo fornece um ID Weidian verificado. Sem um ID utilizável, o site não pode criar um link direto seguro; use os detalhes disponíveis ou a fonte original.",
+        "Nunca deduza um ID de um número de catálogo sem relação. Mesmo um link que abre pode levar a outro artigo se o identificador estiver errado. Antes de pagar, confirme título, imagens e variante escolhida no PikoBuy e guarde o anúncio original como referência."
+      ],
+      [
+        "Quando um link não funciona",
+        "Anúncios podem ser removidos, ficar indisponíveis ou mudar. Se uma página importada estiver vazia ou incompleta, tente o anúncio original ou contate o suporte PikoBuy com a URL completa e a opção desejada. Não pague por outro produto apenas porque a imagem é parecida.",
+        "O anúncio original e o retrato da planilha podem mostrar preços ou fotos diferentes. Para a compra, considere as telas atuais do vendedor e do pedido PikoBuy. Esclareça condições importantes antes de fazer o pedido."
+      ]
+    ]
+  },
+  "pikobuy-qc-photos": {
+    "title": "Fotos QC do PikoBuy: como inspecionar o pedido no armazém",
+    "intro": "Use fotos do armazém para conferir detalhes visíveis antes de solicitar o envio do pacote.",
+    "sections": [
+      [
+        "Comece pelos dados do pedido",
+        "O guia oficial do PikoBuy diz que os artigos são registrados, fotografados e inspecionados ao chegar ao armazém. Compare as fotos QC disponíveis com seu pedido: tipo de produto, cor, etiqueta de tamanho, quantidade e detalhes distintivos. Mantenha o anúncio do vendedor e a confirmação do pedido à mão.",
+        "Examine cada vista, sem depender apenas da primeira imagem. Procure manchas, furos, danos, peças incompatíveis ou uma versão claramente incorreta. Luz e ângulo podem alterar a cor, portanto uma diferença aparente pode exigir esclarecimento. Faça uma pergunta específica se a foto não mostrar a área necessária."
+      ],
+      [
+        "Medidas e detalhes adicionais",
+        "Para roupas, compare medidas visíveis com uma peça que sirva bem e com a tabela do vendedor. Métodos de medição e tecidos podem causar variações. Para calçados, confira a etiqueta e qualquer medida de comprimento disponível. Um tamanho conhecido não garante o mesmo ajuste entre vendedores.",
+        "As condições de encaminhamento do PikoBuy mencionam a compra de fotos detalhadas adicionais. Confirme na conta disponibilidade, escopo e custo para o pedido específico. Peça uma imagem clara do detalhe relevante sem supor que ele esteja nas fotos padrão."
+      ],
+      [
+        "O que uma foto não pode provar",
+        "Imagens QC mostram apenas o que está visível em cada foto. Elas não comprovam autenticidade, não testam todas as funções eletrônicas nem garantem durabilidade ou ajuste. As condições de encaminhamento também dizem que não há inspeção profissional para produtos especiais e profissionais.",
+        "Revise as fotos rapidamente, pois elegibilidade e prazos de devolução podem ser limitados. Se houver problema, contate o PikoBuy antes do envio internacional e guarde os dados e imagens relevantes. Leia a política atual e as condições do vendedor: uma foto é evidência útil, não promessa automática de reembolso."
+      ]
+    ]
+  },
+  "pikobuy-shipping-cost": {
+    "title": "Frete PikoBuy: peso, dimensões e opções de rota",
+    "intro": "Entenda os fatores que afetam o frete internacional antes de solicitar o envio de um pacote.",
+    "sections": [
+      [
+        "O preço do artigo é apenas o começo",
+        "O preço do catálogo é uma estimativa do produto, não um orçamento entregue. O orçamento total pode incluir transporte do vendedor ao armazém, frete internacional, impostos e outras cobranças. O guia oficial do PikoBuy descreve o frete internacional como pagamento separado após a chegada ao armazém e a solicitação do pacote.",
+        "Não conte com um custo fixo por artigo. Um produto pequeno pode ter embalagem volumosa, enquanto vários itens compactos podem ser embalados juntos com eficiência. O valor final depende das opções disponíveis para o destino e das características do pacote embalado."
+      ],
+      [
+        "Peso, tamanho e rota",
+        "As rotas podem usar métodos diferentes de cobrança. Peso real, dimensões, destino e restrições podem afetar a disponibilidade ou o valor cotado. Algumas usam cálculos volumétricos; confira a descrição e o orçamento sem presumir que só o peso real importa.",
+        "Compare as opções mostradas pelo PikoBuy para seu pacote. Considere preço, estimativa de trânsito, rastreamento, restrições e proteção disponível. A embalagem pode afetar tamanho ou proteção; entenda a escolha antes de solicitar alterações."
+      ],
+      [
+        "Planeje custos adicionais",
+        "Verifique as regras de importação do destino e possíveis impostos, tarifas ou cobranças da transportadora. Dependem das suas circunstâncias e não podem ser previstos com segurança apenas pelo preço do catálogo. Garanta que o conteúdo cumpra as regras da rota, especialmente para baterias, líquidos ou outros materiais restritos.",
+        "Use a estimativa atual da plataforma para planejar e confira o orçamento real antes de pagar. Estimativas e rotas disponíveis podem mudar. Guarde os dados finais do pacote e pagamento caso precise de ajuda com rastreamento ou entrega."
+      ]
+    ]
+  },
+  "pikobuy-warehouse-consolidation": {
+    "title": "Armazém PikoBuy: inspecionar artigos e preparar um pacote",
+    "intro": "Organize seus pedidos no armazém e escolha a embalagem com informações suficientes.",
+    "sections": [
+      [
+        "Do vendedor ao armazém",
+        "Após o pedido de compra, o vendedor envia o artigo ao armazém. O guia do PikoBuy descreve registro, confirmação por fotos e inspeção de defeitos na chegada. Os tempos de processamento e entrega nacional variam conforme vendedor e produto; consulte o status para informações atuais.",
+        "Quando o artigo constar como recebido, compare rapidamente fotos e dados disponíveis. Confira tamanho, cor, quantidade e estado visível. Informe problemas antes de solicitar o envio internacional e revise as condições de devolução aplicáveis."
+      ],
+      [
+        "Prepare seus artigos",
+        "Mantenha uma lista dos produtos que enviará, números de pedido e problemas pendentes. Verifique se cada artigo está presente e se destino e rota aceitam o conteúdo. Se enviar vários itens juntos, confira as opções reais de pacote na conta PikoBuy.",
+        "O guia menciona pedidos de embalagem mínima ou reforçada. Mais proteção pode aumentar dimensões ou peso; menos embalagem pode reduzir volume, mas deixar o artigo mais vulnerável. Confirme opções e custos antes de solicitar."
+      ],
+      [
+        "Antes de pagar o frete",
+        "Confira conteúdo, endereço, rota escolhida e valor cotado. Verifique restrições a baterias, líquidos, categorias ou tamanho do pacote. A entrega internacional pode envolver procedimentos aduaneiros, impostos ou taxas da transportadora conforme o destino.",
+        "As condições de encaminhamento descrevem riscos logísticos e distinguem encaminhamento de compra, inclusive no atendimento pós-venda. Leia as regras para seu tipo de pedido. Uma inspeção ou escolha de embalagem não garante um resultado específico no transporte."
+      ]
+    ]
+  },
+  "pikobuy-size-guide": {
+    "title": "Guia de tamanhos PikoBuy: compare as medidas antes de comprar",
+    "intro": "Use tabelas do vendedor, medidas das peças e fotos QC para escolher melhor o tamanho.",
+    "sections": [
+      [
+        "Comece pelas medidas",
+        "Os tamanhos não são uniformes entre vendedores. Um M pode vestir de forma diferente conforme o anúncio, e fotos não mostram como a peça ficará em você. Procure as medidas reais e o método do vendedor antes de escolher.",
+        "Meça uma peça semelhante que você já tenha e goste. Para uma blusa, compare largura do peito e ombros, comprimento e mangas; para calças, cintura, gancho e entreperna quando disponíveis. Deixe a peça estendida e use as unidades da tabela. Converta unidades com cuidado antes de comparar."
+      ],
+      [
+        "Entenda o anúncio",
+        "Confira se a tabela descreve a peça ou medidas corporais sugeridas. Analise material, ajuste pretendido e tolerância indicada. Uma jaqueta larga e uma camisa justa podem precisar de folgas diferentes mesmo com números parecidos. Peça a medida ausente antes de comprar.",
+        "Para calçados, compare as orientações do vendedor e os dados disponíveis de comprimento do pé ou palmilha. Marcas e modelos podem usar conversões diferentes. A etiqueta não garante conforto e uma foto não revela a sensação ao usar o calçado."
+      ],
+      [
+        "Revise as fotos do armazém",
+        "Quando disponíveis, compare etiquetas e medidas visíveis com o pedido. Verifique se a medição segue a borda esperada e se a peça está estendida. Se faltar uma medida importante ou ela estiver pouco clara, pergunte ao PikoBuy se uma foto detalhada pode ser solicitada e quanto custa.",
+        "Uma foto de inspeção pode mostrar uma diferença evidente, mas não garante o ajuste. Avalie problemas rapidamente e confira as condições de devolução antes do envio. Guarde os dados do pedido e a tabela do anúncio para explicar uma possível divergência."
+      ]
+    ]
+  },
+  "pikobuy-returns-refunds": {
+    "title": "Devoluções e reembolsos PikoBuy: o que verificar",
+    "intro": "Entenda por que regras do vendedor, estado e prazo importam quando há um problema.",
+    "sections": [
+      [
+        "Verifique cedo a elegibilidade",
+        "O PikoBuy publica uma política de devoluções e trocas que distingue produtos elegíveis e não elegíveis. Sua garantia publicada de cinco dias depende da participação do vendedor, condição do produto e prazo. Restrições incluem itens personalizados, certos produtos íntimos e artigos cujas etiquetas ou embalagens foram removidas a pedido do cliente.",
+        "A política descreve um prazo de solicitação após a entrada no armazém e informa que pedidos tardios podem não ser aceitos. Regras e elegibilidade podem mudar; confira a política atual e seu pedido assim que o item chegar. Não suponha devolução incondicional para toda compra."
+      ],
+      [
+        "Se houver um problema",
+        "Compare anúncio, opções escolhidas, dados do pedido e fotos do armazém. Se o artigo parecer danificado ou incorreto, contate o PikoBuy com o número e uma descrição clara. Identifique a foto relevante e explique o que esperava. A política exige consentimento do vendedor para devoluções.",
+        "Para produtos sem garantia de devolução, a política diz que o PikoBuy verificará o problema de qualidade com o vendedor; o resultado depende das circunstâncias. Para produtos encaminhados, as condições indicam tratar o pós-venda com remetente ou vendedor. Confira qual serviço se aplica ao pedido."
+      ],
+      [
+        "Custos e condição",
+        "A política atual trata do frete de devolução e de uma taxa de serviço em algumas devoluções solicitadas pelo cliente. Quem paga pode depender do motivo e da resposta do vendedor. Mantenha etiquetas, acessórios e embalagem na condição exigida e confirme custos antes de autorizar a devolução.",
+        "Este guia não promete elegibilidade, reembolso ou prazo específico. Leia as condições oficiais mais recentes e as do vendedor e, em caso de disputa, peça esclarecimentos ao suporte antes do envio internacional."
+      ]
+    ]
+  },
+  "pikobuy-tracking-guide": {
+    "title": "Rastreamento PikoBuy: da compra à entrega",
+    "intro": "Saiba em que etapa está o pedido e o que verificar quando faltar atualização de rastreamento.",
+    "sections": [
+      [
+        "Entenda as etapas",
+        "Uma compra pode passar por várias etapas: o vendedor prepara e envia o artigo dentro do país, o armazém recebe e inspeciona, e você solicita um pacote internacional. O status de um item individual é diferente do número de rastreamento do pacote internacional final.",
+        "Confira as informações na conta PikoBuy e guarde os números de pedido e pacote. O andamento do envio nacional do vendedor não significa que o pacote internacional já foi despachado. Resolva itens faltantes ou incorretos antes de solicitar o envio final."
+      ],
+      [
+        "Após o despacho",
+        "O guia do PikoBuy informa que o rastreamento estará disponível em até três dias após o envio. É a orientação da plataforma, não uma garantia de data de entrega ou de atualizações contínuas. O rastreamento internacional pode parar entre transferências, processamento aduaneiro e eventos da transportadora local.",
+        "Confira rota e transportadora na conta. Se o número não atualizar após um prazo razoável, compare o status com as orientações atuais e contate o suporte com o número do pacote. Não compartilhe credenciais ou dados de pagamento em uma discussão pública."
+      ],
+      [
+        "Entrega e problemas",
+        "Confira cuidadosamente o endereço antes do despacho e siga instruções da transportadora. Conforme destino e rota, podem existir cobranças aduaneiras ou da transportadora local. Revise as informações da remessa e guarde recibos ou avisos que expliquem pagamentos solicitados.",
+        "As condições de encaminhamento do PikoBuy explicam que terceiros transportam os pacotes e que a logística internacional envolve riscos. Se um pacote parecer atrasado, danificado ou perdido, registre os eventos e contate rapidamente o suporte adequado. Cobertura e solução dependem do serviço e das condições aplicáveis."
+      ]
+    ]
+  },
+  "pikobuy-order-budget": {
+    "title": "Orçamento PikoBuy: preços, frete e taxas adicionais",
+    "intro": "Faça uma estimativa realista do gasto total antes de escolher produtos.",
+    "sections": [
+      [
+        "Leia corretamente o preço",
+        "Nosso catálogo mostra preços estimados em dólares convertidos de um retrato do FindSpreadsheet. Ele ajuda na comparação, mas pode estar desatualizado e a conversão pode diferir do valor cobrado. Confirme preço real e opções na tela atual do pedido PikoBuy.",
+        "Um anúncio com variantes pode mostrar preço inicial que não vale para sua escolha. Confira cor, tamanho e quantidade. Registre o valor aprovado e o eventual frete nacional do vendedor ao armazém."
+      ],
+      [
+        "Acrescente o pacote internacional",
+        "O guia do PikoBuy apresenta o frete internacional como etapa separada após a chegada ao armazém. O valor depende da rota e das características do pacote. Confira a cotação para destino, peso e dimensões embaladas antes de confirmar o envio.",
+        "Pedidos de embalagem ou serviços opcionais podem alterar o preço. Para vários artigos, compare as opções de pacote na conta e verifique restrições. Uma estimativa antes da embalagem ajuda no planejamento; a cotação real e as condições da conta determinam o pagamento."
+      ],
+      [
+        "Reserve margem para incertezas",
+        "Conforme o destino, podem ser cobrados impostos, taxas alfandegárias ou da transportadora. Conversão de pagamento e outras taxas também podem variar. Inclua uma margem no orçamento e confira as cobranças reais em cada etapa, sem tratar o preço do catálogo como custo final entregue.",
+        "Antes de comprar, confira as condições de devolução do vendedor e a política atual do PikoBuy. Uma devolução pode envolver custos de frete ou serviço conforme as circunstâncias. Se uma rota ou taxa estiver pouco clara, peça explicação à plataforma enquanto o artigo estiver em uma etapa adequada para decidir."
+      ]
+    ]
+  }
+}

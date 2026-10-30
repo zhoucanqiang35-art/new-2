@@ -1,0 +1,12 @@
+---
+import { articles } from '../data/editorial.js';
+const { home = false } = Astro.props;
+---
+<div class="article-list">
+  {articles.map((article, index) => <article data-article={article.slug} class="article-entry" id={home ? `home-${article.slug}` : article.slug}>
+    <details class="responsive-article" open>
+      <summary><span class="article-number">{String(index + 1).padStart(2, '0')}</span><h2 data-article-field="title">{article.title}</h2></summary>
+      <div class="article-body"><p data-article-field="intro" class="article-intro">{article.intro}</p>{article.sections.map(([heading, ...paragraphs], i) => <section><h3 data-article-field={`sections.${i}.0`}>{heading}</h3>{paragraphs.map((paragraph, j) => <p data-article-field={`sections.${i}.${j + 1}`}>{paragraph}</p>)}</section>)}<a class="guide-link" href={`/articles/${article.slug}/`} data-i="article-open">Open this article →</a></div>
+    </details>
+  </article>)}
+</div>

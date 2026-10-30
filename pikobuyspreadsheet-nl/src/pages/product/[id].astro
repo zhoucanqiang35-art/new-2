@@ -1,0 +1,10 @@
+---
+import Base from '../../layouts/Base.astro';
+import data from '../../../public/data/catalog.json';
+export function getStaticPaths(){return data.products.map(product=>({params:{id:String(product.id)},props:{product}}));}
+const {product:p}=Astro.props;
+const weidian=/^\d+$/.test(String(p.weidianId||''))?`https://weidian.com/item.html?itemID=${p.weidianId}`:null;
+const usdPrice = Number.isFinite(Number(p.price)) ? (Number(p.price) / 6.6615).toFixed(2) : null;
+const purchase=weidian?`https://www.pikobuy.com/product/detail?productUrl=${encodeURIComponent(weidian)}`:null;
+---
+<Base title={p.name} page="product"><section class="inner container product-detail"><a href="/discover/">← <span data-i="Discover">Discover</span></a><div class="detail-grid"><div><img class="detail-image" src={p.image} alt={p.name}/></div><div><div class="eyebrow">FINDSPREADSHEET / <span data-product-category={p.category}>{p.category}</span></div><h1 data-product-name={p.id}>{p.name}</h1><p class="detail-price">{usdPrice ? `$${usdPrice} USD` : <span data-i="Price unavailable">Price unavailable</span>} <small data-i="estimate">estimate</small></p><p class="lead"><span data-i="Product ID">Product ID</span>: {p.id}</p><p class="lead" data-i="productNotice">Review the current listing and available options before ordering. The displayed USD price is an estimate based on the catalogue price; the exchange rate, price and availability can change.</p>{purchase ? <a class="primary" href={purchase} data-i="Buy through PikoBuy ↗">Buy through PikoBuy ↗</a> : <a class="primary" href={`https://findspreadsheet.com${p.sourcePath}`} data-i="View source listing ↗">View source listing ↗</a>}<div class="editorial"><h2 data-i="Product photos & QC">Product photos &amp; QC</h2><p data-i="productQcNotice">The image shown is the product image from FindSpreadsheet. QC photographs are not included in this catalogue snapshot.</p></div></div></div></section></Base>

@@ -1,0 +1,5 @@
+---
+import Base from '../layouts/Base.astro';
+import { faqs } from '../data/faq.js';
+---
+<Base title="PikoBuy FAQ" page="faq"><section class="inner container"><div class="eyebrow" data-i="GOOD TO KNOW">GOOD TO KNOW</div><h1 data-i="FAQ heading">Frequently asked questions<span>.</span></h1><p class="lead" data-i="FAQ intro">Detailed answers about product finds, ordering, warehouse checks, shipping and returns.</p><div class="article faq">{faqs.map(([question, answer], index) => <details open={index === 0}><summary data-faq-question={index}>{question}</summary><p data-faq-answer={index}>{answer}</p></details>)}</div><p class="editorial-note"><span data-i="faq-official-intro">For the latest rules, read the </span><a href="https://www.pikobuy.com/guide" data-i="faq-official-guide">official guide</a> <span data-i="article-and">and</span> <a href="https://www.pikobuy.com/protocol/returns" data-i="article-returns">return policy</a>.</p></section></Base>

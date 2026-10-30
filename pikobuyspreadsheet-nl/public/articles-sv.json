@@ -1,0 +1,212 @@
+{
+  "pikobuy-spreadsheet-guide": {
+    "title": "PikoBuy Spreadsheet: hitta och jämför produkter",
+    "intro": "Använd en produktlista som utgångspunkt när du undersöker PikoBuy-fynd.",
+    "sections": [
+      [
+        "Vad är ett spreadsheet-fynd?",
+        "Ett PikoBuy-kalkylblad samlar produktannonser och länkar från olika säljare. Vår oberoende katalog använder en ögonblicksbild från FindSpreadsheet, indelad i bland annat skor, kläder och accessoarer. Den är ett verktyg för efterforskning: annonsen tillhör säljaren och en sparad post garanterar inte aktuellt lager, pris eller kvalitet.",
+        "Börja med en kategori eller sök på produktnamnet. Öppna flera relevanta artiklar och jämför bilder, beskrivningar, varianter och källänkar. Ett lägre pris bevisar inte att två annonser gäller samma produkt eller innehåller samma alternativ. Kontrollera säljarens aktuella sida innan du bestämmer dig."
+      ],
+      [
+        "Kontrollera detaljerna före beställning",
+        "Titta på mått, material, färger och säljarens villkor. Anteckna storlek och version du vill ha. Om annonsen är otydlig, be PikoBuy om förtydligande före köpet i stället för att anta att bilden visar alla alternativ.",
+        "Katalogens priser är uppskattningar i amerikanska dollar baserade på ögonblicksbilden och en växelkurs. De kan ändras och är inte den totala leveranskostnaden. Inrikes och internationell frakt, skatt och andra avgifter kan tillkomma separat. Kontrollera den aktuella annonsen och PikoBuys kassa för det faktiska beloppet."
+      ],
+      [
+        "Från upptäckt till kontroll",
+        "När du har valt en vara, följ den tillgängliga köplänken eller använd den ursprungliga produktadressen hos PikoBuy. Den officiella guiden beskriver först betalning för varan, lagerkontroll och bekräftelse med bilder, följt av en separat betalning för internationell frakt. Kontrollera varan och alternativen vid varje steg.",
+        "Spara beställningsuppgifter och bilder tillsammans så att du kan jämföra lagervaran med ditt val. QC-bilder hjälper dig att granska synliga detaljer men bevisar inte äkthet och garanterar inte passform eller hållbarhet. Om en viktig detalj saknas, kontakta supporten innan du skickar paketet."
+      ]
+    ]
+  },
+  "how-to-order-pikobuy": {
+    "title": "Beställ via PikoBuy: en steg-för-steg-guide",
+    "intro": "Följ vägen från säljarens annons till internationell leverans.",
+    "sections": [
+      [
+        "Välj rätt annons",
+        "Börja med en produkt i kalkylbladet och öppna originalannonsen eller den tillgängliga köplänken hos PikoBuy. Jämför bilder, storlekstabell, färg, version och antal. Spara originaladressen och kontrollera att valet motsvarar det du vill köpa.",
+        "PikoBuys officiella köpguide säger att du kan klistra in en produktlänk eller sökord i sökrutan. Guiden nämner bland annat Taobao, Tmall, 1688 och Weidian. Tillgänglighet och import kan variera, så kontrollera resultatet i stället för att anta att varje länk fungerar automatiskt."
+      ],
+      [
+        "Lägg beställningen",
+        "Välj specifikationer och skicka beställningen via PikoBuy. Den första betalningen täcker köpet enligt det belopp som visas i det steget. Pris och tillgänglighet beror på det faktiska köpet; enligt den officiella guiden återbetalas en beställning om varan är slut. Läs uppgifterna i kontot och kontakta PikoBuy om något är oklart.",
+        "Anteckna ordernummer och valda alternativ. Håll utkik efter meddelanden om slut i lager, prisskillnader eller frågor från säljaren. En användbar orderanteckning är specifik: ange exempelvis färg och mått i stället för en vag instruktion som ”bästa kvalitet”."
+      ],
+      [
+        "Granska och skicka",
+        "När produkten når lagret beskriver PikoBuy registrering, bildbekräftelse och kontroll av defekter. Granska de tillgängliga bilderna snabbt och jämför dem med beställningen och annonsen. Om något verkar fel, kontakta supporten och kontrollera returvillkoren före internationell frakt.",
+        "När du är redo, välj en tillgänglig fraktrutt, skicka in paketet och betala den internationella frakten. Jämför destination, offert, ruttbegränsningar och relevanta skatte- eller tullkrav. Spårning börjar efter avsändning; leveranstid och rutter beror på paket och destination."
+      ]
+    ]
+  },
+  "pikobuy-product-links": {
+    "title": "PikoBuy-produktlänkar: guide till Weidian, Taobao och 1688",
+    "intro": "Förstå källänkar och kontrollera den aktuella annonsen före köp.",
+    "sections": [
+      [
+        "Varför källänken är viktig",
+        "En post i kalkylbladet visar vägen till en produkt, men säljarens annons innehåller aktuella alternativ och villkor. Annonsen kan finnas på Weidian, Taobao eller 1688. PikoBuys köpguide nämner dessa källor och säger att användare kan söka med länk eller sökord.",
+        "Öppna originalannonsen när den finns och jämför med kalkylbladets post. Produktbilder kan visa flera varianter och startpriset kan gälla endast en viss storlek eller version. Kontrollera exakt alternativ, antal, pris och lager före beställning."
+      ],
+      [
+        "Använda en köplänk till PikoBuy",
+        "Vissa produktkort har en direkt köpknapp som öppnar källprodukten i PikoBuy. Våra länkar använder källans identifierare när katalogen innehåller ett verifierat Weidian-ID. Om en användbar identifierare saknas kan webbplatsen inte säkert skapa en direkt köplänk; använd tillgängliga produktuppgifter eller originalkällan.",
+        "Gissa aldrig ett ID utifrån ett orelaterat katalognummer. Även en länk som öppnas kan leda till en annan vara om identifieraren är fel. Bekräfta titel, bilder och vald variant på PikoBuy före betalning och behåll originalannonsen som referens."
+      ],
+      [
+        "När en länk inte fungerar",
+        "Annonser kan tas bort, bli otillgängliga eller ändras. Om en importerad sida är tom eller ofullständig, prova originalannonsen eller kontakta PikoBuys support med hela produktadressen och önskat alternativ. Betala inte för en annan vara bara för att bilden liknar den du sökte.",
+        "Källannonsen och kalkylbladets ögonblicksbild kan visa olika priser eller bilder. Använd säljarens aktuella uppgifter och PikoBuys beställningssidor för ditt köp. Red ut viktiga oklara villkor innan du beställer."
+      ]
+    ]
+  },
+  "pikobuy-qc-photos": {
+    "title": "PikoBuy QC-bilder: granska din lagerbeställning",
+    "intro": "Använd lagerbilder för att kontrollera synliga detaljer innan du skickar in ett paket.",
+    "sections": [
+      [
+        "Börja med orderuppgifterna",
+        "PikoBuys officiella guide säger att varor registreras, fotograferas och kontrolleras för fel vid ankomst till lagret. Jämför tillgängliga QC-bilder med beställningen: produkttyp, färg, storleksetikett, antal och särskiljande detaljer. Ha säljarens annons och orderbekräftelsen till hands.",
+        "Granska alla vyer i stället för bara den första. Leta efter fläckar, hål, skador, delar som inte stämmer eller en uppenbart felaktig version. Ljus och kameravinkel kan påverka färgen, så en skenbar skillnad kan behöva förklaras. Ställ en specifik fråga om bilden inte visar det område du behöver."
+      ],
+      [
+        "Mått och extra detaljer",
+        "För kläder, jämför synliga mått med ett plagg som passar och med säljarens storlekstabell. Mätmetoder och tyger kan ge variationer. För skor, kontrollera storleksetikett och eventuellt längdmått. En välkänd storlek garanterar inte samma passform hos alla säljare.",
+        "PikoBuys vidarebefordringsvillkor nämner möjligheten att köpa extra detaljbilder. Kontrollera tillgänglighet, omfattning och avgift i kontot för den aktuella beställningen. Be om en tydlig bild av den relevanta detaljen i stället för att anta att standardbilderna visar den."
+      ],
+      [
+        "Vad en bild inte kan bevisa",
+        "QC-bilder visar bara det som syns på respektive bild. De bevisar inte äkthet, testar inte alla elektroniska funktioner och garanterar varken lång hållbarhet eller passform. Vidarebefordringsvillkoren säger också att professionell kontroll av särskilda och professionella produkter inte är tillgänglig.",
+        "Granska bilderna snabbt eftersom returrätt och tidsfrister kan vara begränsade. Om du ser ett problem, kontakta PikoBuy före internationell frakt och spara orderuppgifter och relevanta bilder. Läs aktuell returpolicy och säljarens villkor: en lagerbild är användbar dokumentation, inte ett automatiskt löfte om återbetalning."
+      ]
+    ]
+  },
+  "pikobuy-shipping-cost": {
+    "title": "PikoBuy-fraktkostnad: vikt, mått och val av rutt",
+    "intro": "Förstå faktorerna bakom internationell frakt innan du skickar in ett paket.",
+    "sections": [
+      [
+        "Varupriset är bara början",
+        "Katalogpriset är ett uppskattat produktpris, inte en offert inklusive leverans. Totalbudgeten kan även innehålla transport från säljaren till lagret, internationell frakt, skatt och andra avgifter. PikoBuys officiella guide beskriver internationell frakt som en separat betalning efter att varorna nått lagret och paketet skickats in.",
+        "Räkna inte med ett fast belopp per vara. En liten produkt kan ha skrymmande förpackning, medan flera kompakta varor kan packas effektivt tillsammans. Slutbeloppet beror på tillgängliga alternativ för destinationen och det packade paketets egenskaper."
+      ],
+      [
+        "Vikt, storlek och rutt",
+        "Rutter kan använda olika debiteringsmetoder. Faktisk vikt, paketmått, destination och produktbegränsningar kan påverka tillgänglighet eller offert. Vissa rutter använder volymberäkning; kontrollera beskrivning och offert i stället för att anta att bara faktisk vikt räknas.",
+        "Jämför PikoBuys alternativ för paketet. Väg kostnad mot uppskattad transportinformation, spårning, begränsningar och tillgängligt skydd. Förpackningen kan påverka storlek eller skydd, så förstå avvägningen innan du begär ändringar."
+      ],
+      [
+        "Planera för extra kostnader",
+        "Kontrollera destinationens importregler samt möjliga skatter, tullar och transportörsavgifter. De beror på omständigheterna och kan inte förutsägas tillförlitligt enbart från katalogpriset. Se till att innehållet följer ruttens regler, särskilt för batterier, vätskor och andra begränsade material.",
+        "Använd plattformens aktuella fraktuppskattning för planering och granska den faktiska offerten före betalning. Uppskattningar och tillgängliga rutter kan ändras. Spara slutliga paket- och betalningsuppgifter om du behöver hjälp med spårning eller leverans."
+      ]
+    ]
+  },
+  "pikobuy-warehouse-consolidation": {
+    "title": "PikoBuy-lager: granska varor och förbereda ett paket",
+    "intro": "Organisera dina lagerbeställningar och välj förpackning med god information.",
+    "sections": [
+      [
+        "Från säljare till lager",
+        "När köpet har skickats in skickar säljaren varan till lagret. PikoBuys köpguide beskriver registrering, bildbekräftelse och felkontroll vid ankomst. Handläggning och inrikes leverans kan ta olika lång tid beroende på säljare och produkt; se orderstatus för aktuella uppgifter.",
+        "När en vara markerats som mottagen, jämför snabbt bilder och tillgängliga orderuppgifter. Kontrollera storlek, färg, antal och synligt skick. Ta upp problem innan du begär internationell frakt och läs tillämpliga returvillkor."
+      ],
+      [
+        "Förbered varorna",
+        "För en enkel lista över produkter du ska skicka, ordernummer och problem som behöver lösas. Kontrollera att varje vara finns och att destination och rutt tillåter innehållet. Om du vill skicka flera varor tillsammans, kontrollera de faktiska paketalternativen i ditt PikoBuy-konto.",
+        "Guiden nämner önskemål om minimal eller förstärkt förpackning. Mer skydd kan öka mått eller vikt; mindre förpackning kan minska volymen men göra varan mer sårbar. Bekräfta tillgängliga val och kostnader innan du skickar en begäran."
+      ],
+      [
+        "Innan du betalar frakten",
+        "Granska innehåll, adress, vald rutt och offertbelopp. Kontrollera begränsningar för batterier, vätskor, produktkategorier eller paketstorlek. Internationell leverans kan innebära tullförfaranden, skatter eller transportörsavgifter beroende på destination.",
+        "Plattformens vidarebefordringsvillkor beskriver logistikrisker och skiljer vidarebefordran från inköpstjänster, även vad gäller service efter köp. Läs reglerna för din ordertyp. En kontroll eller ett förpackningsval garanterar inte ett visst resultat under transporten."
+      ]
+    ]
+  },
+  "pikobuy-size-guide": {
+    "title": "PikoBuy-storleksguide: jämför mått före köp",
+    "intro": "Använd säljarens tabeller, plaggmått och QC-bilder för ett bättre storleksval.",
+    "sections": [
+      [
+        "Börja med måtten",
+        "Storlekar är inte enhetliga mellan säljare. Medium kan passa olika i olika annonser och bilder visar inte hur varan sitter på din kropp. Leta efter säljarens faktiska mått och mätmetod innan du väljer.",
+        "Mät ett liknande plagg du redan har och tycker om. För en överdel jämför bröst- och axelbredd, längd och ärmlängd; för byxor midja, grenhöjd och innerbenslängd om de finns. Lägg plagget plant och använd samma enheter som i säljarens tabell. Omvandla enheter noggrant före jämförelsen."
+      ],
+      [
+        "Förstå annonsen",
+        "Kontrollera om tabellen beskriver plagget eller rekommenderade kroppsmått. Granska material, avsedd passform och angiven tolerans. En lös jacka och en åtsittande skjorta kan behöva olika rörelsevidd även om måtten liknar varandra. Fråga efter saknade mått före beställning.",
+        "För skor, jämför säljarens storleksråd och tillgängliga uppgifter om fot- eller innersulslängd. Märken och modeller kan använda olika omräkningar. En etikett garanterar inte komfort och en bild visar inte hur skon känns på foten."
+      ],
+      [
+        "Granska lagerbilderna",
+        "Jämför synliga etiketter och mått med beställningen när de finns. Kontrollera att mätningen görs längs rätt kant och att varan ligger plant. Om ett viktigt mått saknas eller är oklart, fråga PikoBuy om en detaljbild kan beställas och vad den kostar.",
+        "En kontrollbild kan visa en tydlig avvikelse men garanterar inte passform. Granska problem snabbt och kontrollera aktuella returvillkor före frakt. Spara orderuppgifter och annonsens tabell om du behöver förklara skillnaden."
+      ]
+    ]
+  },
+  "pikobuy-returns-refunds": {
+    "title": "PikoBuy-returer och återbetalningar: kontrollera före köp",
+    "intro": "Förstå varför säljarens regler, skick och tidsfrister spelar roll om en vara behöver åtgärdas.",
+    "sections": [
+      [
+        "Kontrollera villkoren tidigt",
+        "PikoBuy publicerar en retur- och bytespolicy som skiljer mellan berättigade och undantagna produkter. Den publicerade femdagarsgarantin beror på säljarens deltagande, varans skick och tidsfristen. Begränsningar omfattar bland annat specialanpassade varor, vissa intimprodukter och varor vars etiketter eller förpackning tagits bort på kundens begäran.",
+        "Policyn anger en ansökningsperiod efter att varan kommit till lagret och säger att sena ansökningar kan avvisas. Regler och behörighet kan ändras; kontrollera aktuell policy och din beställning så snart varan anländer. Anta inte att alla köp har ovillkorlig returrätt."
+      ],
+      [
+        "Om det finns ett problem",
+        "Jämför säljarens annons, valda alternativ, orderuppgifter och lagerbilder. Om varan verkar skadad eller felaktig, kontakta PikoBuy med ordernummer och en tydlig beskrivning. Ange den relevanta bilden och förklara vad du förväntade dig. Policyn anger att retur kräver säljarens godkännande.",
+        "För varor utan returgaranti säger policyn att PikoBuy kontrollerar kvalitetsproblemet med säljaren; resultatet beror på omständigheterna. För vidarebefordrade varor anger villkoren att service efter köp ska hanteras med avsändare eller säljare. Kontrollera vilken tjänst som gäller din beställning."
+      ],
+      [
+        "Kostnader och skick",
+        "Den aktuella policyn behandlar returfrakt och en serviceavgift för vissa returer på kundens begäran. Vem som betalar kan bero på orsaken och säljarens svar. Behåll etiketter, tillbehör och förpackning i föreskrivet skick och bekräfta kostnader innan du godkänner en retur.",
+        "Guiden lovar inte behörighet, ersättning eller en viss återbetalningstid. Läs de senaste officiella villkoren och säljarens regler och be supporten om klarhet före internationell frakt vid en tvist."
+      ]
+    ]
+  },
+  "pikobuy-tracking-guide": {
+    "title": "PikoBuy-spårning: följ beställningen till leverans",
+    "intro": "Se vilket steg beställningen befinner sig i och vad du kan kontrollera när spårning saknas.",
+    "sections": [
+      [
+        "Förstå stegen",
+        "Ett köp kan gå genom flera steg: säljaren förbereder och skickar varan inom landet, lagret tar emot och kontrollerar den, och du skickar in ett paket för internationell leverans. Status för en enskild vara skiljer sig från spårningsnumret för det slutliga internationella paketet.",
+        "Kontrollera uppgifterna i ditt PikoBuy-konto och spara order- och paketnummer. Säljarens inrikes leveransstatus betyder inte att det internationella paketet har skickats. Lös problem med saknade eller felaktiga varor före den slutliga försändelsen."
+      ],
+      [
+        "Efter paketets avsändning",
+        "PikoBuys guide säger att spårningsinformation blir tillgänglig inom tre dagar efter försändelsen. Det är plattformens riktlinje, inte en garanti för leveransdatum eller kontinuerliga skanningar. Internationell spårning kan pausas mellan överlämningar, tullhantering och händelser hos den lokala transportören.",
+        "Granska rutt och transportör i kontot. Om numret inte uppdaterats efter rimlig tid, jämför status med aktuella riktlinjer och kontakta supporten med paketnumret. Dela inte inloggnings- eller betalningsuppgifter i en offentlig spårningsdiskussion."
+      ],
+      [
+        "Leverans och problem",
+        "Kontrollera adressen noggrant före avsändning och följ transportörens leveransinstruktioner. Beroende på destination och rutt kan tull eller lokala transportörsavgifter tillkomma. Granska försändelsens information och spara kvitton eller meddelanden om begärda betalningar.",
+        "PikoBuys vidarebefordringsvillkor förklarar att externa leverantörer transporterar paketen och att gränsöverskridande logistik innebär risker. Om ett paket verkar försenat, skadat eller förlorat, dokumentera spårningshändelserna och kontakta rätt support snabbt. Skydd och lösning beror på tjänsten och gällande villkor."
+      ]
+    ]
+  },
+  "pikobuy-order-budget": {
+    "title": "PikoBuy-budget: produktpriser, frakt och extra avgifter",
+    "intro": "Gör en realistisk uppskattning av dina totala utgifter innan du väljer produkter.",
+    "sections": [
+      [
+        "Läs produktpriset rätt",
+        "Vår katalog visar uppskattade priser i amerikanska dollar omräknade från en FindSpreadsheet-ögonblicksbild. Den är användbar för jämförelse men kan vara inaktuell, och valutaomräkningen kan skilja sig från det debiterade beloppet. Bekräfta faktiskt pris och tillgängliga alternativ på den aktuella PikoBuy-ordersidan.",
+        "En annons med flera varianter kan visa ett startpris som inte gäller ditt val. Kontrollera färg, storlek och antal. Anteckna beloppet du godkänner och eventuell inrikes frakt från säljaren till lagret."
+      ],
+      [
+        "Lägg till det internationella paketet",
+        "PikoBuys köpguide beskriver internationell frakt som ett separat steg efter ankomst till lagret. Beloppet beror på tillgänglig rutt och paketets egenskaper. Kontrollera offerten för destination, packad vikt och mått innan du bekräftar försändelsen.",
+        "Förpackningsönskemål eller valfria tjänster kan ändra priset. Om du skickar flera varor, jämför paketalternativen i kontot och kontrollera begränsningar. En uppskattning före packning hjälper planeringen; den faktiska offerten och kontovillkoren bestämmer betalningen."
+      ],
+      [
+        "Lämna utrymme för osäkerhet",
+        "Beroende på destination kan skatter, tullar eller transportörsavgifter tillkomma. Betalningsomräkning och andra serviceavgifter kan också variera. Lägg in en buffert och granska faktiska avgifter i varje steg i stället för att se katalogpriset som ett slutligt levererat pris.",
+        "Kontrollera säljarens returvillkor och PikoBuys aktuella policy före köp. En retur kan medföra frakt- eller servicekostnader beroende på omständigheterna. Om en rutt eller avgift är oklar, be plattformen förklara medan varan fortfarande är i ett lämpligt skede för beslut."
+      ]
+    ]
+  }
+}
