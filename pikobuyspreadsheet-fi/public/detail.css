@@ -5,3 +5,4 @@
 
 /* Keep the category and item introductions close to their content. */
 main{padding-top:20px}.breadcrumbs{margin-bottom:14px}.heading h1{margin:8px 0}.heading p{margin:8px 0 14px}@media(max-width:700px){main{padding-top:14px}.breadcrumbs{margin-bottom:8px}.heading h1{margin:6px 0}.heading p{margin:6px 0 10px}}
+.qc-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.qc-gallery a{display:block;min-width:0}.qc-gallery img,.qc-gallery video{display:block;width:100%;aspect-ratio:1;object-fit:cover;background:#f0e6eb}.qc-gallery span{display:block;font-size:11px;overflow-wrap:anywhere;margin-top:4px}@media(max-width:700px){.qc-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
