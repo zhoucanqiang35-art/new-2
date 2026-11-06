@@ -1,4 +1,5 @@
 import {expandedEnglish} from './articles-expanded.js';
+import {articleCompletion} from './article-completion.js';
 import {articlesDe} from './articles-de.js';
 import {articlesFr} from './articles-fr.js';
 import {articlesEs} from './articles-es.js';
@@ -119,7 +120,7 @@ sv:[
 ['Använda produktdetaljer och QC','Öppna produktsidan och använd köpknappen när en giltig länk finns. QC-bilder visas bara när källan tillhandahåller dem; kontrollera pris, lager och alternativ innan du beställer.']
 ]
 };
-data.en.forEach((entry,i)=>{ const sentences=expandedEnglish[i].match(/[^.!?]+[.!?]+(?:\s|$)/g) || [expandedEnglish[i]]; let selected=[]; for (const sentence of sentences) { if ((selected.join(' ')+' '+sentence).trim().split(/\s+/).length>175) break; selected.push(sentence.trim()); } entry[1]=selected.join(' '); });
+data.en.forEach((entry,i)=>{entry[1]=expandedEnglish[i]});
 data.de.forEach((entry,i)=>{entry[1]=articlesDe[i]});
 data.fr.forEach((entry,i)=>{entry[1]=articlesFr[i]});
 data.es.forEach((entry,i)=>{entry[1]=articlesEs[i]});
@@ -128,6 +129,7 @@ data.pt.forEach((entry,i)=>{entry[1]=articlesPt[i]});
 data.nl.forEach((entry,i)=>{entry[1]=articlesNl[i]});
 data.pl.forEach((entry,i)=>{entry[1]=articlesPl[i]});
 data.sv.forEach((entry,i)=>{entry[1]=articlesSv[i]});
+for (const lang of Object.keys(articleCompletion)) data[lang].forEach((entry,i)=>{entry[1]+=' '+articleCompletion[lang][i]});
 export const guides = data;
 const questions={
 en:['What is this PikoBuy spreadsheet?','How do I place an order?','How should I choose a size?','What do QC photos show?','What costs should I budget for?','How can I estimate shipping?','Can all products use the same shipping route?','How do I prepare and track a parcel?','What if an item is out of stock or has a problem?','Why is a purchase link or QC photo missing?'],
