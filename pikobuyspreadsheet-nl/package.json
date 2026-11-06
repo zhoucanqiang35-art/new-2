@@ -5,9 +5,10 @@
   "scripts": {
     "build": "astro build",
     "dev": "astro dev",
-    "postbuild": "node scripts/sitemap.mjs"
+    "postbuild": "node scripts/localize.mjs && node scripts/sitemap.mjs"
   },
   "dependencies": {
-    "astro": "7.4.4"
+    "astro": "7.4.4",
+    "parse5": "^8.1.0"
   }
 }
