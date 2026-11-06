@@ -1,5 +1,6 @@
 import {writeFile} from 'node:fs/promises';
-import {articles, articlesFor} from '../src/data/articles.js';
+import {articlesFor} from '../src/data/articles.js';
+const articles=articlesFor('en');
 
 const languages=['fi','de','fr','es','pt','it','nl','pl'];
 const missing=[];

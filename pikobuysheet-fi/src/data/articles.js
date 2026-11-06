@@ -1,3 +1,4 @@
+import { practicalAdditions } from './seo-practical-additions.js';
 import batchTranslations from './batch-article-translations.json' with { type: 'json' };
 import {categoriesArticlePt} from './categories-article-pt.js';
 import {categoriesArticleEs} from './categories-article-es.js';
@@ -41,7 +42,7 @@ category.sections.push(
 export const articles=[...prior.map(a=>({slug:a.slug,title:a.title,deck:a.deck,sections:a.sections})),...additions];
 const introTitles={de:'Einführung',fr:'Introduction',es:'Introducción',it:'Introduzione',pt:'Introdução',nl:'Inleiding',pl:'Wprowadzenie'};
 const postOrderTranslations={fi:postOrderFi,de:postOrderDe,fr:postOrderFr,es:postOrderEs,it:postOrderIt,pt:postOrderPt,nl:postOrderNl,pl:postOrderPl};
-export function articlesFor(lang){
+function baseArticlesFor(lang){
   const translated=verifiedTranslations[lang] || {};
   return articles.map(article=>{
     if (batchTranslations[lang]?.[article.slug]) return {...batchTranslations[lang][article.slug],translated:true};
@@ -69,6 +70,17 @@ export function articlesFor(lang){
     const a=translated[article.slug];
     if(!a)return {...article,translated:lang==='en'};
     return {slug:article.slug,title:a.title,deck:a.description,translated:true,sections:[{title:introTitles[lang],paragraphs:a.intro},...a.sections.map(s=>({title:s.heading,paragraphs:s.paragraphs,bullets:s.checklist}))]};
+  });
+}
+// The same localized additions appear wherever article data is rendered.
+export function articlesFor(lang) {
+  const slugs = ['pikobuy-tracking-status-guide', 'pikobuy-shipping-to-us-real-estimate', 'pikobuy-qc-photos-category-checklist', 'how-to-find-pikobuy-product-links'];
+  const additions = practicalAdditions[lang] || practicalAdditions.en;
+  return baseArticlesFor(lang).map(article => {
+    const index = slugs.indexOf(article.slug);
+    if (index < 0) return article;
+    const [title, paragraph] = additions[index];
+    return { ...article, sections: [...article.sections, { title, paragraphs: [paragraph] }] };
   });
 }
 export const officialSources=[['Pikobuy shopping guide','https://www.pikobuy.com/guide'],['Pikobuy shipping estimator','https://www.pikobuy.com/shipping-cost'],['Pikobuy returns and exchanges','https://www.pikobuy.com/protocol/returns'],['Pikobuy shipping terms','https://www.pikobuy.com/protocol/shipping']];
