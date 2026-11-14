@@ -1,0 +1,214 @@
+{
+  "items": [
+    {
+      "name": "Men's Everyday Crossbody Bag",
+      "source": "Men's Everyday Crossbody Bag",
+      "suffix": "",
+      "translations": {
+        "fi": "Miesten arkinen olkalaukku",
+        "da": "Crossbodytaske til mænd til hverdag",
+        "nb": "Crossbodyveske for menn til hverdags",
+        "cs": "Pánská crossbody taška na každý den",
+        "sk": "Pánska crossbody taška na každý deň",
+        "hu": "Férfi mindennapi keresztpántos táska",
+        "ro": "Geantă crossbody pentru bărbați, de zi cu zi",
+        "el": "Ανδρική καθημερινή χιαστί τσάντα",
+        "tr": "Erkek günlük çapraz çanta",
+        "uk": "Чоловіча повсякденна сумка через плече",
+        "ar": "حقيبة كروس بودي يومية للرجال",
+        "ja": "メンズデイリークロスボディバッグ",
+        "ko": "남성 데일리 크로스백",
+        "vi": "Túi đeo chéo nam thường ngày"
+      }
+    },
+    {
+      "name": "Longchamp Mini Crossbody Bag",
+      "source": "Longchamp Mini Crossbody Bag",
+      "suffix": "",
+      "translations": {
+        "fi": "Longchamp-pieni olkalaukku",
+        "da": "Longchamp mini-crossbodytaske",
+        "nb": "Longchamp mini-crossbodyveske",
+        "cs": "Mini crossbody kabelka Longchamp",
+        "sk": "Mini crossbody kabelka Longchamp",
+        "hu": "Longchamp mini keresztpántos táska",
+        "ro": "Mini geantă crossbody Longchamp",
+        "el": "Μίνι χιαστί τσάντα Longchamp",
+        "tr": "Longchamp mini çapraz çanta",
+        "uk": "Мінісумка Longchamp через плече",
+        "ar": "حقيبة كروس بودي صغيرة Longchamp",
+        "ja": "Longchamp ミニクロスボディバッグ",
+        "ko": "Longchamp 미니 크로스백",
+        "vi": "Túi đeo chéo mini Longchamp"
+      }
+    },
+    {
+      "name": "Everyday Bag Collection",
+      "source": "Everyday Bag Collection",
+      "suffix": "",
+      "translations": {
+        "fi": "Arkilaukkujen valikoima",
+        "da": "Kollektion af hverdagstasker",
+        "nb": "Kolleksjon med hverdagsvesker",
+        "cs": "Kolekce tašek na každý den",
+        "sk": "Kolekcia tašiek na každý deň",
+        "hu": "Mindennapi táskák kollekciója",
+        "ro": "Colecție de genți pentru fiecare zi",
+        "el": "Συλλογή καθημερινών τσαντών",
+        "tr": "Günlük çanta koleksiyonu",
+        "uk": "Колекція повсякденних сумок",
+        "ar": "تشكيلة حقائب يومية",
+        "ja": "デイリーバッグコレクション",
+        "ko": "데일리 가방 컬렉션",
+        "vi": "Bộ sưu tập túi thường ngày"
+      }
+    },
+    {
+      "name": "Goyard Tote Bag",
+      "source": "Goyard Tote Bag",
+      "suffix": "",
+      "translations": {
+        "fi": "Goyard-tote-laukku",
+        "da": "Goyard totebag",
+        "nb": "Goyard toteveske",
+        "cs": "Taška tote Goyard",
+        "sk": "Taška tote Goyard",
+        "hu": "Goyard tote táska",
+        "ro": "Geantă tote Goyard",
+        "el": "Τσάντα tote Goyard",
+        "tr": "Goyard tote çanta",
+        "uk": "Сумка-тоут Goyard",
+        "ar": "حقيبة توت Goyard",
+        "ja": "Goyard トートバッグ",
+        "ko": "Goyard 토트백",
+        "vi": "Túi tote Goyard"
+      }
+    },
+    {
+      "name": "Cross Patch Travel Handbag",
+      "source": "Cross Patch Travel Handbag",
+      "suffix": "",
+      "translations": {
+        "fi": "Matkakäsilaukku ristipaikoilla",
+        "da": "Rejsehåndtaske med korsmærker",
+        "nb": "Reisehåndveske med korsmerker",
+        "cs": "Cestovní kabelka s křížovou nášivkou",
+        "sk": "Cestovná kabelka s krížovou nášivkou",
+        "hu": "Keresztfelvarrós utazó kézitáska",
+        "ro": "Geantă de mână pentru călătorie cu petic în formă de cruce",
+        "el": "Ταξιδιωτική τσάντα χειρός με μπάλωμα σταυρού",
+        "tr": "Haç yamalı seyahat el çantası",
+        "uk": "Дорожня сумка з нашивкою-хрестом",
+        "ar": "حقيبة سفر يدوية برقعة صليب",
+        "ja": "クロスパッチトラベルハンドバッグ",
+        "ko": "십자가 패치 여행용 핸드백",
+        "vi": "Túi xách du lịch đắp hình chữ thập"
+      }
+    },
+    {
+      "name": "Longchamp Mini Top Handle Bag",
+      "source": "Longchamp Mini Top Handle Bag",
+      "suffix": "",
+      "translations": {
+        "fi": "Longchamp-pieni yläkahvallinen laukku",
+        "da": "Longchamp minitaske med tophåndtag",
+        "nb": "Longchamp miniveske med topphåndtak",
+        "cs": "Mini kabelka Longchamp s horním držadlem",
+        "sk": "Mini kabelka Longchamp s horným držadlom",
+        "hu": "Longchamp mini felső fülű táska",
+        "ro": "Mini geantă Longchamp cu mâner superior",
+        "el": "Μίνι τσάντα Longchamp με πάνω λαβή",
+        "tr": "Longchamp mini üst saplı çanta",
+        "uk": "Мінісумка Longchamp із верхньою ручкою",
+        "ar": "حقيبة Longchamp صغيرة بمقبض علوي",
+        "ja": "Longchamp ミニトップハンドルバッグ",
+        "ko": "Longchamp 미니 탑 핸들 백",
+        "vi": "Túi mini quai trên Longchamp"
+      }
+    },
+    {
+      "name": "Large Capacity Casual Backpack",
+      "source": "Large Capacity Casual Backpack",
+      "suffix": "",
+      "translations": {
+        "fi": "Tilava rento reppu",
+        "da": "Casual rygsæk med stor kapacitet",
+        "nb": "Uformell ryggsekk med stor kapasitet",
+        "cs": "Volnočasový batoh s velkou kapacitou",
+        "sk": "Voľnočasový batoh s veľkou kapacitou",
+        "hu": "Nagy kapacitású szabadidős hátizsák",
+        "ro": "Rucsac casual cu capacitate mare",
+        "el": "Καθημερινό σακίδιο μεγάλης χωρητικότητας",
+        "tr": "Geniş kapasiteli günlük sırt çantası",
+        "uk": "Місткий повсякденний рюкзак",
+        "ar": "حقيبة ظهر كاجوال كبيرة السعة",
+        "ja": "大容量カジュアルバックパック",
+        "ko": "대용량 캐주얼 백팩",
+        "vi": "Ba lô thường ngày dung tích lớn"
+      }
+    },
+    {
+      "name": "Women's Monogram Shoulder Bag",
+      "source": "Women's Monogram Shoulder Bag",
+      "suffix": "",
+      "translations": {
+        "fi": "Naisten monogrammikuosinen olkalaukku",
+        "da": "Skuldertaske med monogram til kvinder",
+        "nb": "Skulderveske med monogram for kvinner",
+        "cs": "Dámská kabelka přes rameno s monogramem",
+        "sk": "Dámska kabelka cez plece s monogramom",
+        "hu": "Női monogramos válltáska",
+        "ro": "Geantă de umăr pentru femei cu monogramă",
+        "el": "Γυναικεία τσάντα ώμου με μονόγραμμα",
+        "tr": "Kadın monogramlı omuz çantası",
+        "uk": "Жіноча сумка на плече з монограмою",
+        "ar": "حقيبة كتف نسائية بحروف متداخلة",
+        "ja": "レディースモノグラムショルダーバッグ",
+        "ko": "여성 모노그램 숄더백",
+        "vi": "Túi đeo vai nữ họa tiết chữ lồng"
+      }
+    },
+    {
+      "name": "Three-Piece Crossbody Bag Set",
+      "source": "Three-Piece Crossbody Bag Set",
+      "suffix": "",
+      "translations": {
+        "fi": "Kolmiosainen olkalaukkusetti",
+        "da": "Crossbodytaskesæt i tre dele",
+        "nb": "Crossbodyveskesett i tre deler",
+        "cs": "Třídílná sada crossbody kabelek",
+        "sk": "Trojdielna súprava crossbody kabeliek",
+        "hu": "Háromrészes keresztpántos táskaszett",
+        "ro": "Set de genți crossbody din trei piese",
+        "el": "Σετ χιαστί τσαντών τριών τεμαχίων",
+        "tr": "Üç parçalı çapraz çanta takımı",
+        "uk": "Комплект сумок через плече з трьох предметів",
+        "ar": "طقم حقائب كروس بودي من ثلاث قطع",
+        "ja": "3点セットのクロスボディバッグ",
+        "ko": "3피스 크로스백 세트",
+        "vi": "Bộ túi đeo chéo ba món"
+      }
+    },
+    {
+      "name": "Patterned Handbag Collection",
+      "source": "Patterned Handbag Collection",
+      "suffix": "",
+      "translations": {
+        "fi": "Kuviollisten käsilaukkujen valikoima",
+        "da": "Kollektion af mønstrede håndtasker",
+        "nb": "Kolleksjon med mønstrede håndvesker",
+        "cs": "Kolekce vzorovaných kabelek",
+        "sk": "Kolekcia vzorovaných kabeliek",
+        "hu": "Mintás kézitáskák kollekciója",
+        "ro": "Colecție de genți de mână cu model",
+        "el": "Συλλογή τσαντών χειρός με σχέδια",
+        "tr": "Desenli el çantası koleksiyonu",
+        "uk": "Колекція сумок із візерунком",
+        "ar": "تشكيلة حقائب يد بنقشات",
+        "ja": "柄入りハンドバッグコレクション",
+        "ko": "패턴 핸드백 컬렉션",
+        "vi": "Bộ sưu tập túi xách họa tiết"
+      }
+    }
+  ]
+}

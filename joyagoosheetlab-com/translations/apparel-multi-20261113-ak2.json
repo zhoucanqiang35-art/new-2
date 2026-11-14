@@ -1,0 +1,193 @@
+{
+  "items": [
+    {
+      "name": "Corteiz Hoodie and Pants Set",
+      "translations": {
+        "fi": "Corteiz-huppari- ja housusetti",
+        "da": "Corteiz-sæt med hættetrøje og bukser",
+        "nb": "Corteiz-sett med hettegenser og bukser",
+        "cs": "Komplet mikiny s kapucí a kalhot Corteiz",
+        "sk": "Komplet mikiny s kapucňou a nohavíc Corteiz",
+        "hu": "Corteiz kapucnis pulóver és nadrág szett",
+        "ro": "Set Corteiz de hanorac și pantaloni",
+        "el": "Σετ Corteiz με φούτερ με κουκούλα και παντελόνι",
+        "uk": "Комплект Corteiz із худі та штанів",
+        "ar": "طقم Corteiz من هودي وبنطال",
+        "ja": "Corteizパーカーとパンツのセット",
+        "ko": "Corteiz 후드티와 바지 세트",
+        "vi": "Bộ hoodie và quần dài Corteiz",
+        "tr": "Corteiz kapüşonlu üst ve pantolon takımı"
+      }
+    },
+    {
+      "name": "Stussy 8-Ball Graphic Hoodie",
+      "translations": {
+        "fi": "Stussy 8-Ball -kuvioinen huppari",
+        "da": "Stussy 8-Ball-hættetrøje med grafik",
+        "nb": "Stussy 8-Ball-hettegenser med grafikk",
+        "cs": "Mikina Stussy 8-Ball s kapucí a potiskem",
+        "sk": "Mikina Stussy 8-Ball s kapucňou a potlačou",
+        "hu": "Stussy 8-Ball mintás kapucnis pulóver",
+        "ro": "Hanorac Stussy 8-Ball cu imprimeu",
+        "el": "Φούτερ Stussy 8-Ball με κουκούλα και σχέδιο",
+        "uk": "Худі Stussy 8-Ball з принтом",
+        "ar": "هودي Stussy 8-Ball برسمة",
+        "ja": "Stussy 8-Ballグラフィックパーカー",
+        "ko": "Stussy 8-Ball 그래픽 후드티",
+        "vi": "Áo hoodie Stussy 8-Ball có họa tiết",
+        "tr": "Stussy 8-Ball grafik desenli kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Letter Print Pullover Hoodie",
+      "translations": {
+        "fi": "Kirjainpainatettu päälle puettava huppari",
+        "da": "Hættetrøje uden lynlås med bogstavprint",
+        "nb": "Hettegenser uten glidelås med bokstavtrykk",
+        "cs": "Mikina s kapucí bez zipu a potiskem písmen",
+        "sk": "Mikina s kapucňou bez zipsu a potlačou písmen",
+        "hu": "Betűmintás bebújós kapucnis pulóver",
+        "ro": "Hanorac fără fermoar cu imprimeu cu litere",
+        "el": "Φούτερ με κουκούλα χωρίς φερμουάρ και τύπωμα γραμμάτων",
+        "uk": "Худі без блискавки з літерним принтом",
+        "ar": "هودي دون سحاب بطبعة حروف",
+        "ja": "文字プリント入りプルオーバーパーカー",
+        "ko": "레터 프린트 풀오버 후드티",
+        "vi": "Áo hoodie chui đầu in chữ",
+        "tr": "Harf baskılı fermuarsız kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Classic Printed Beach Shorts",
+      "translations": {
+        "fi": "Klassiset painetut rantashortsit",
+        "da": "Klassiske strandshorts med print",
+        "nb": "Klassisk strandshorts med trykk",
+        "cs": "Klasické plážové šortky s potiskem",
+        "sk": "Klasické plážové šortky s potlačou",
+        "hu": "Klasszikus mintás strandshort",
+        "ro": "Pantaloni scurți de plajă clasici cu imprimeu",
+        "el": "Κλασικό σορτς παραλίας με τύπωμα",
+        "uk": "Класичні пляжні шорти з принтом",
+        "ar": "شورت شاطئ كلاسيكي مطبوع",
+        "ja": "クラシックプリントビーチショーツ",
+        "ko": "클래식 프린트 비치 반바지",
+        "vi": "Quần short đi biển cổ điển có họa tiết",
+        "tr": "Klasik baskılı plaj şortu"
+      }
+    },
+    {
+      "name": "Denim Cross Patchwork Shorts",
+      "translations": {
+        "fi": "Farkkushortsit ristiaiheisella tilkkutyöllä",
+        "da": "Denimshorts med korspatchwork",
+        "nb": "Denimshorts med korslappverk",
+        "cs": "Džínové šortky s křížovým patchworkem",
+        "sk": "Džínsové šortky s krížovým patchworkom",
+        "hu": "Keresztes patchwork farmershort",
+        "ro": "Pantaloni scurți din denim cu patchwork în formă de cruce",
+        "el": "Τζιν σορτς με πατσγουόρκ σταυρού",
+        "uk": "Джинсові шорти з клаптевим візерунком-хрестом",
+        "ar": "شورت جينز بترقيع على شكل صليب",
+        "ja": "クロスパッチワークデニムショーツ",
+        "ko": "데님 크로스 패치워크 반바지",
+        "vi": "Quần short denim ghép vải hình chữ thập",
+        "tr": "Haç patchwork kot şort"
+      }
+    },
+    {
+      "name": "Palm Print Crew Neck T-Shirt",
+      "translations": {
+        "fi": "Palmupainatettu pyöreäkauluksinen T-paita",
+        "da": "T-shirt med rund hals og palmeprint",
+        "nb": "T-skjorte med rund hals og palmetrykk",
+        "cs": "Tričko s kulatým výstřihem a potiskem palmy",
+        "sk": "Tričko s okrúhlym výstrihom a potlačou palmy",
+        "hu": "Pálmamintás kerek nyakú póló",
+        "ro": "Tricou cu guler rotund și imprimeu cu palmier",
+        "el": "Μπλουζάκι με στρογγυλή λαιμόκοψη και τύπωμα φοίνικα",
+        "uk": "Футболка з круглим вирізом і принтом пальми",
+        "ar": "تيشيرت برقبة دائرية وطبعة نخلة",
+        "ja": "パームプリントクルーネックTシャツ",
+        "ko": "야자수 프린트 크루넥 티셔츠",
+        "vi": "Áo thun cổ tròn in hình cây cọ",
+        "tr": "Palmiye baskılı bisiklet yaka tişört"
+      }
+    },
+    {
+      "name": "AM1 Heart Embroidered Shorts",
+      "translations": {
+        "fi": "AM1-sydänkirjaillut shortsit",
+        "da": "AM1-shorts med hjertebroderi",
+        "nb": "AM1-shorts med hjertebroderi",
+        "cs": "Šortky AM1 s výšivkou srdce",
+        "sk": "Šortky AM1 s výšivkou srdca",
+        "hu": "AM1 szívhímzéses rövidnadrág",
+        "ro": "Pantaloni scurți AM1 cu inimă brodată",
+        "el": "Σορτς AM1 με κεντημένη καρδιά",
+        "uk": "Шорти AM1 з вишитим серцем",
+        "ar": "شورت AM1 بتطريز قلب",
+        "ja": "AM1ハート刺繍ショーツ",
+        "ko": "AM1 하트 자수 반바지",
+        "vi": "Quần short AM1 thêu trái tim",
+        "tr": "AM1 kalp işlemeli şort"
+      }
+    },
+    {
+      "name": "Stussy Streetwear Shorts 006",
+      "translations": {
+        "fi": "Stussy-streetwear-shortsit 006",
+        "da": "Stussy-streetwear-shorts 006",
+        "nb": "Stussy-streetwear-shorts 006",
+        "cs": "Streetwearové šortky Stussy 006",
+        "sk": "Streetwearové šortky Stussy 006",
+        "hu": "Stussy utcai short 006",
+        "el": "Σορτς streetwear Stussy 006",
+        "uk": "Шорти вуличного стилю Stussy 006",
+        "ar": "شورت Stussy ستريت وير 006",
+        "ja": "Stussyストリートウェアショーツ 006",
+        "ko": "Stussy 스트리트웨어 반바지 006",
+        "vi": "Quần short streetwear Stussy 006",
+        "tr": "Stussy sokak stili şort 006"
+      }
+    },
+    {
+      "name": "Black Gothic Graphic T-Shirt",
+      "translations": {
+        "fi": "Musta goottikuviollinen T-paita",
+        "da": "Sort T-shirt med gotisk grafik",
+        "nb": "Svart T-skjorte med gotisk grafikk",
+        "cs": "Černé tričko s gotickým potiskem",
+        "sk": "Čierne tričko s gotickou potlačou",
+        "hu": "Fekete gótikus mintás póló",
+        "ro": "Tricou negru cu imprimeu gotic",
+        "el": "Μαύρο μπλουζάκι με γοτθικό σχέδιο",
+        "uk": "Чорна футболка з готичним принтом",
+        "ar": "تيشيرت أسود برسمة قوطية",
+        "ja": "ゴシックグラフィック入りブラックTシャツ",
+        "ko": "블랙 고딕 그래픽 티셔츠",
+        "vi": "Áo thun đen họa tiết Gothic",
+        "tr": "Siyah gotik grafik desenli tişört"
+      }
+    },
+    {
+      "name": "Grey Drawstring Sweat Shorts",
+      "translations": {
+        "fi": "Harmaat kiristysnyörilliset collegeshortsit",
+        "da": "Grå sweatshorts med snøre",
+        "nb": "Grå sweatshorts med snøring",
+        "cs": "Šedé teplákové šortky se stahovací šňůrkou",
+        "sk": "Sivé teplákové šortky so sťahovacou šnúrkou",
+        "hu": "Szürke húzózsinóros szabadidőshort",
+        "ro": "Pantaloni scurți gri tip trening cu șnur",
+        "el": "Γκρι σορτς φούτερ με κορδόνι",
+        "uk": "Сірі трикотажні шорти зі шнурком",
+        "ar": "شورت سويت رمادي برباط",
+        "ja": "グレーのドローコード付きスウェットショーツ",
+        "ko": "그레이 드로스트링 스웨트 반바지",
+        "vi": "Quần short nỉ xám có dây rút",
+        "tr": "Gri büzme ipli eşofman şortu"
+      }
+    }
+  ]
+}

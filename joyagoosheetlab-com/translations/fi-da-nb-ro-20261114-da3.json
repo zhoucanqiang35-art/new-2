@@ -1,0 +1,425 @@
+{
+  "6633": {
+    "name": "Red Cartoon Patch Casual Short",
+    "translations": {
+      "fi": "Rennot shortsit punaisella sarjakuvamerkillä",
+      "da": "Afslappede shorts med rødt tegneseriemærke",
+      "nb": "Avslappede shorts med rødt tegneseriemerke"
+    }
+  },
+  "6634": {
+    "name": "Navy Crocodile Patch Cargo Sho",
+    "translations": {
+      "fi": "Laivastonsiniset cargoshortsit krokotiilimerkillä",
+      "da": "Marineblå cargoshorts med krokodillemærke",
+      "nb": "Marineblå cargoshorts med krokodillemerke",
+      "ro": "Pantaloni scurți cargo bleumarin cu aplicație crocodil"
+    }
+  },
+  "6648": {
+    "name": "Multi-Color Minimal Casual Sho",
+    "translations": {
+      "fi": "Moniväriset minimalistiset vapaa-ajan shortsit",
+      "da": "Flerfarvede minimalistiske fritidsshorts",
+      "nb": "Flerfargede minimalistiske fritidsshorts",
+      "ro": "Pantaloni scurți casual multicolori cu design minimalist"
+    }
+  },
+  "6658": {
+    "name": "Multi-Color Graphic Sports Sho",
+    "translations": {
+      "fi": "Moniväriset urheilushortsit kuviolla",
+      "da": "Flerfarvede sportsshorts med grafik",
+      "nb": "Flerfargede sportsshorts med grafikk",
+      "ro": "Pantaloni scurți sport multicolori cu imprimeu"
+    }
+  },
+  "6660": {
+    "name": "Colorblock Quick-Dry Swim Shor",
+    "translations": {
+      "fi": "Nopeasti kuivuvat värilohkoidut uimashortsit",
+      "da": "Hurtigtørrende badeshorts med farveblokke",
+      "nb": "Hurtigtørkende badeshorts med fargeblokker",
+      "ro": "Pantaloni scurți de baie cu blocuri de culoare și uscare rapidă"
+    }
+  },
+  "6754": {
+    "name": "Hellstar Flame Print Washed Sh",
+    "translations": {
+      "fi": "Pestyt Hellstar-shortsit liekkikuviolla",
+      "da": "Vaskede Hellstar shorts med flammeprint",
+      "nb": "Vaskede Hellstar shorts med flammetrykk",
+      "ro": "Pantaloni scurți Hellstar cu aspect spălat și imprimeu flăcări"
+    }
+  },
+  "6762": {
+    "name": "ESS Flocked Letter Print Short",
+    "translations": {
+      "fi": "ESS-shortsit flock-tekstipainatuksella",
+      "da": "ESS shorts med flocktrykte bogstaver",
+      "nb": "ESS shorts med flokktrykte bokstaver",
+      "ro": "Pantaloni scurți ESS cu litere imprimate catifelat"
+    }
+  },
+  "6769": {
+    "name": "Eric Emanuel West Coast Sports",
+    "translations": {
+      "fi": "Eric Emanuel West Coast -urheilushortsit",
+      "da": "Eric Emanuel West Coast sportsshorts",
+      "nb": "Eric Emanuel West Coast sportsshorts",
+      "ro": "Pantaloni scurți sport Eric Emanuel West Coast"
+    }
+  },
+  "6812": {
+    "name": "Jasonreps ESS Double Row Flock",
+    "translations": {
+      "fi": "Jasonreps ESS -shortsit kaksirivisellä flock-painatuksella",
+      "da": "Jasonreps ESS shorts med flockprint i to rækker",
+      "nb": "Jasonreps ESS shorts med flokktrykk i to rader",
+      "ro": "Pantaloni scurți Jasonreps ESS cu imprimeu catifelat pe două rânduri"
+    }
+  },
+  "6830": {
+    "name": "Corteiz Street Print Casual Sh",
+    "translations": {
+      "fi": "Rennot Corteiz-shortsit Street-kuviolla",
+      "da": "Afslappede Corteiz shorts med Street-print",
+      "nb": "Avslappede Corteiz shorts med Street-trykk",
+      "ro": "Pantaloni scurți casual Corteiz cu imprimeu Street"
+    }
+  },
+  "6836": {
+    "name": "Double Layer Basketball Traini",
+    "translations": {
+      "fi": "Kaksikerroksiset koripallotreenishortsit",
+      "da": "Dobbeltlagede basketballtræningsshorts",
+      "nb": "Tolags basketballtreningsshorts"
+    }
+  },
+  "6867": {
+    "name": "Stone Island Multi Pocket Carg",
+    "translations": {
+      "fi": "Stone Island -cargoshortsit useilla taskuilla",
+      "da": "Stone Island cargoshorts med flere lommer",
+      "nb": "Stone Island cargoshorts med flere lommer"
+    }
+  },
+  "6893": {
+    "name": "Hellstar Flame Print Washed Sh",
+    "translations": {
+      "fi": "Pestyt Hellstar-shortsit liekkikuviolla",
+      "da": "Vaskede Hellstar shorts med flammeprint",
+      "nb": "Vaskede Hellstar shorts med flammetrykk",
+      "ro": "Pantaloni scurți Hellstar cu aspect spălat și imprimeu flăcări"
+    }
+  },
+  "6895": {
+    "name": "Mertra Logo Print Casual Short",
+    "translations": {
+      "fi": "Rennot Mertra-shortsit logopainatuksella",
+      "da": "Afslappede Mertra shorts med logoprint",
+      "nb": "Avslappede Mertra shorts med logotrykk"
+    }
+  },
+  "6900": {
+    "name": "Premium Summer Shorts Collecti",
+    "translations": {
+      "fi": "Laadukkaiden kesäshortsien mallisto",
+      "da": "Kollektion af premium sommershorts",
+      "nb": "Kolleksjon av premium sommershorts",
+      "ro": "Colecție premium de pantaloni scurți de vară"
+    }
+  },
+  "6906": {
+    "name": "Corteiz Cruise Print Beach Sho",
+    "translations": {
+      "fi": "Corteiz-rantashortsit Cruise-kuviolla",
+      "da": "Corteiz badeshorts med Cruise-print",
+      "nb": "Corteiz badeshorts med Cruise-trykk",
+      "ro": "Pantaloni scurți de plajă Corteiz cu imprimeu Cruise"
+    }
+  },
+  "6916": {
+    "name": "Vale Valley Studded Denim Shor",
+    "translations": {
+      "fi": "Vale Valley -farkkushortsit niiteillä",
+      "da": "Vale Valley denimshorts med nitter",
+      "nb": "Vale Valley denimshorts med nagler",
+      "ro": "Pantaloni scurți din denim Vale Valley cu nituri"
+    }
+  },
+  "7516": {
+    "name": "Real Madrid Dragon Football Je",
+    "translations": {
+      "fi": "Real Madrid -jalkapallopaita lohikäärmekuviolla",
+      "da": "Real Madrid-fodboldtrøje med dragemotiv",
+      "nb": "Real Madrid-fotballdrakt med dragemotiv",
+      "ro": "Tricou de fotbal Real Madrid cu motiv dragon"
+    }
+  },
+  "7528": {
+    "name": "Fan Edition Football Jersey Co",
+    "translations": {
+      "fi": "Faniversion jalkapallopaitojen mallisto",
+      "nb": "Kolleksjon av fotballdrakter i fanutgave",
+      "ro": "Colecție de tricouri de fotbal ediția pentru suporteri"
+    }
+  },
+  "8266": {
+    "name": "Cable-Knit Beanie and Scarf Co",
+    "translations": {
+      "fi": "Palmikkoneuleisten pipojen ja huivien mallisto",
+      "da": "Kollektion af kabelstrikkede huer og halstørklæder",
+      "nb": "Kolleksjon av kabelstrikkede luer og skjerf"
+    }
+  },
+  "8399": {
+    "name": "Monogram Denim Jeans Collectio",
+    "translations": {
+      "fi": "Monogrammifarkkujen mallisto",
+      "da": "Kollektion af jeans med monogram",
+      "nb": "Kolleksjon av jeans med monogram"
+    }
+  },
+  "8436": {
+    "name": "Cross-Patch Jeans Collection -",
+    "translations": {
+      "fi": "Farkkumallisto ristipaikoilla 001",
+      "da": "Jeanskollektion med korsmærker 001",
+      "nb": "Jeanskolleksjon med korsmerker 001"
+    }
+  },
+  "8467": {
+    "name": "Aeroswift Running Pants Collec",
+    "translations": {
+      "fi": "Aeroswift-juoksuhousujen mallisto",
+      "da": "Kollektion af Aeroswift-løbebukser",
+      "nb": "Kolleksjon av Aeroswift-løpebukser",
+      "ro": "Colecție de pantaloni de alergare Aeroswift"
+    }
+  },
+  "8517": {
+    "name": "Vintage-Wash Relaxed Flared Je",
+    "translations": {
+      "fi": "Rennot levenevät farkut vintage-pesulla",
+      "da": "Afslappede jeans med svaj og vintagevask",
+      "nb": "Avslappede jeans med sleng og vintagevask",
+      "ro": "Blugi evazați cu croială lejeră și spălare vintage"
+    }
+  },
+  "8527": {
+    "name": "Distressed Skinny Jeans Collec",
+    "translations": {
+      "fi": "Kapeiden kulutettujen farkkujen mallisto",
+      "da": "Kollektion af slidte skinny jeans",
+      "nb": "Kolleksjon av slitte skinny jeans"
+    }
+  },
+  "8536": {
+    "name": "Yellow Paint-Splatter Track Pa",
+    "translations": {
+      "fi": "Verryttelyhousut keltaisilla maalitahroilla 328",
+      "da": "Træningsbukser med gule malerstænk 328",
+      "nb": "Treningsbukser med gul malingssprut 328",
+      "ro": "Pantaloni sport cu stropi de vopsea galbenă 328"
+    }
+  },
+  "8538": {
+    "name": "Distressed Paint-Splatter Jean",
+    "translations": {
+      "fi": "Kulutettujen maalitahrafarkkujen mallisto Top",
+      "da": "Kollektion af slidte jeans med malerstænk Top",
+      "nb": "Kolleksjon av slitte jeans med malingssprut Top"
+    }
+  },
+  "8543": {
+    "name": "Paint-Splatter Track Pants Col",
+    "translations": {
+      "fi": "Verryttelyhousujen mallisto maalitahroilla SS23",
+      "da": "Kollektion af træningsbukser med malerstænk SS23",
+      "nb": "Kolleksjon av treningsbukser med malingssprut SS23"
+    }
+  },
+  "8545": {
+    "name": "Distressed Denim Collection -",
+    "translations": {
+      "fi": "Kulutettujen farkkujen mallisto 7A8–21C",
+      "da": "Kollektion af slidte jeans 7A8–21C",
+      "nb": "Kolleksjon av slitte jeans 7A8–21C"
+    }
+  },
+  "8555": {
+    "name": "Paint-Splatter Paneled Sweatpa",
+    "translations": {
+      "fi": "Paneelilliset collegehousut maalitahroilla Top",
+      "da": "Joggingbukser med paneler og malerstænk Top",
+      "nb": "Joggebukser med paneler og malingssprut Top"
+    }
+  },
+  "8569": {
+    "name": "Paint-Splatter Wide-Leg Denim",
+    "translations": {
+      "fi": "Leveälahkeiset farkut maalitahroilla MVT",
+      "da": "Jeans med brede ben og malerstænk MVT",
+      "nb": "Jeans med vide ben og malingssprut MVT"
+    }
+  },
+  "8593": {
+    "name": "Distressed Paint-Splatter Flar",
+    "translations": {
+      "fi": "Kulutetut levenevät farkut maalitahroilla 25SS",
+      "da": "Slidte jeans med svaj og malerstænk 25SS",
+      "nb": "Slitte jeans med sleng og malingssprut 25SS"
+    }
+  },
+  "8597": {
+    "name": "Zip-Detail Distressed Denim Je",
+    "translations": {
+      "fi": "Kulutetut farkut vetoketjuyksityiskohdalla",
+      "da": "Slidte jeans med lynlåsdetalje",
+      "nb": "Slitte jeans med glidelåsdetalj"
+    }
+  },
+  "8651": {
+    "name": "Distressed Slim Jeans Collecti",
+    "translations": {
+      "fi": "Kapeiden kulutettujen farkkujen mallisto",
+      "da": "Kollektion af slidte slim fit-jeans",
+      "nb": "Kolleksjon av slitte slim fit-jeans"
+    }
+  },
+  "8726": {
+    "name": "Chain-Print Triangle Bikini Se",
+    "translations": {
+      "fi": "Kolmiobikinit ketjukuviolla 010",
+      "da": "Trekantsbikini med kædeprint 010",
+      "nb": "Trekantbikini med kjedetrykk 010",
+      "ro": "Bikini triunghiular cu imprimeu lanț 010"
+    }
+  },
+  "8728": {
+    "name": "Cross-Graphic Boxer Briefs Col",
+    "translations": {
+      "fi": "Ristikuviollisten bokserien mallisto",
+      "da": "Kollektion af boxershorts med korsmotiv",
+      "nb": "Kolleksjon av boksershorts med korsmotiv"
+    }
+  },
+  "8732": {
+    "name": "Boxer Briefs Gift Box Collecti",
+    "translations": {
+      "fi": "Bokserilahjapakkausten mallisto",
+      "nb": "Kolleksjon av gaveesker med boksershorts",
+      "ro": "Colecție de cutii cadou cu boxeri"
+    }
+  },
+  "8734": {
+    "name": "Stretch Boxer Briefs Collectio",
+    "translations": {
+      "fi": "Joustavien bokserien mallisto",
+      "da": "Kollektion af elastiske boxershorts",
+      "nb": "Kolleksjon av elastiske boksershorts"
+    }
+  },
+  "8748": {
+    "name": "Brooklyn Graphic Long-Leg Boxe",
+    "translations": {
+      "da": "Langbenede boxershorts med Brooklyn-print",
+      "nb": "Boksershorts med lange ben og Brooklyn-trykk",
+      "ro": "Boxeri cu picior lung și imprimeu Brooklyn"
+    }
+  },
+  "8759": {
+    "name": "Athletic Boxer Briefs Collecti",
+    "translations": {
+      "fi": "Urheilubokserien mallisto",
+      "da": "Kollektion af sportsboxershorts",
+      "nb": "Kolleksjon av sportsboksershorts",
+      "ro": "Colecție de boxeri sport"
+    }
+  },
+  "8775": {
+    "name": "Low-Rise Boxer Briefs Color Co",
+    "translations": {
+      "fi": "Matalavyötäröisten bokserien värimallisto",
+      "da": "Farvekollektion af lavtaljede boxershorts",
+      "nb": "Fargekolleksjon av boksershorts med lavt liv"
+    }
+  },
+  "8784": {
+    "name": "Everyday Boxer Briefs Collecti",
+    "translations": {
+      "fi": "Arkibokserien mallisto",
+      "da": "Kollektion af boxershorts til hverdagsbrug",
+      "nb": "Kolleksjon av boksershorts til hverdagsbruk",
+      "ro": "Colecție de boxeri pentru fiecare zi"
+    }
+  },
+  "8823": {
+    "name": "Patch Detail Flat-Brim Cap Col",
+    "translations": {
+      "fi": "Tasalippaisten lippalakkien mallisto merkkikoristeella",
+      "da": "Kollektion af kasketter med flad skygge og mærke",
+      "nb": "Kolleksjon av capser med flat brem og merke"
+    }
+  },
+  "8836": {
+    "name": "Stripe-Accent Monogram Basebal",
+    "translations": {
+      "fi": "Monogrammilippalakki raitakoristeella",
+      "da": "Baseballkasket med monogram og stribedetalje",
+      "nb": "Baseballcaps med monogram og stripedetalj",
+      "ro": "Șapcă de baseball cu monogramă și detaliu în dungi"
+    }
+  },
+  "8851": {
+    "name": "Team Patch Baseball Cap Collec",
+    "translations": {
+      "fi": "Lippalakkimallisto joukkuemerkkikoristeella",
+      "da": "Kollektion af baseballkasketter med holdmærke",
+      "nb": "Kolleksjon av baseballcapser med lagmerke",
+      "ro": "Colecție de șepci de baseball cu emblemă de echipă"
+    }
+  },
+  "8862": {
+    "name": "Patch Detail Flat-Brim Cap Col",
+    "translations": {
+      "fi": "Tasalippaisten lippalakkien mallisto merkkikoristeella",
+      "da": "Kollektion af kasketter med flad skygge og mærke",
+      "nb": "Kolleksjon av capser med flat brem og merke"
+    }
+  },
+  "8897": {
+    "name": "Cross Detail Trucker Cap Colle",
+    "translations": {
+      "fi": "Verkkolippalakkimallisto ristikoristeella",
+      "da": "Kollektion af truckerkasketter med korsdetalje",
+      "nb": "Kolleksjon av truckercapser med korsdetalj"
+    }
+  },
+  "8901": {
+    "name": "Bird Graphic Knit Beanie Colle",
+    "translations": {
+      "fi": "Neulepipomallisto lintukuviolla",
+      "da": "Kollektion af strikhuer med fuglemotiv",
+      "nb": "Kolleksjon av strikkeluer med fuglemotiv",
+      "ro": "Colecție de căciuli tricotate cu motiv pasăre"
+    }
+  },
+  "8920": {
+    "name": "Patch Detail Trucker Cap Colle",
+    "translations": {
+      "fi": "Merkkikoristeltujen verkkolippalakkien mallisto",
+      "da": "Kollektion af truckerkasketter med mærke",
+      "nb": "Kolleksjon av truckercapser med merke"
+    }
+  },
+  "8943": {
+    "name": "Monogram Baseball Cap Collecti",
+    "translations": {
+      "fi": "Monogrammillisten lippalakkien mallisto",
+      "da": "Kollektion af baseballkasketter med monogram",
+      "nb": "Kolleksjon av baseballcapser med monogram"
+    }
+  }
+}

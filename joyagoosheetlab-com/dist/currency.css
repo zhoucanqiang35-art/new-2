@@ -1,0 +1,2 @@
+.currency{background:#282b20;color:#fff;border:1px solid #73764d;min-height:44px;padding:0 8px;max-width:80px}.currency-status{position:absolute;right:0;top:100%;z-index:15;background:#25291d;color:#fff;font:12px/1.35 sans-serif;padding:5px 9px;border-radius:0 0 4px 4px;max-width:240px}.nav-actions{position:relative}@media(max-width:700px){.currency{min-height:38px;max-width:66px;font-size:12px;padding:0 3px}.currency-status{font-size:10px;max-width:190px}}
+.browse-note,.live-price-note,.guide-note{display:none!important}

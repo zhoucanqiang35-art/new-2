@@ -1,0 +1,99 @@
+{
+  "items": [
+    {
+      "name": "Slip-On Casual Shoes",
+      "translations": {
+        "fi": "Jalkaan sujautettavat vapaa-ajan kengät",
+        "da": "Slip-on fritidssko",
+        "nb": "Slip-on fritidssko",
+        "sk": "Nazúvacia voľnočasová obuv",
+        "ro": "Încălțăminte casual fără șireturi",
+        "vi": "Giày thường ngày dễ xỏ"
+      }
+    },
+    {
+      "name": "Comfortable Sports Shoes",
+      "translations": {
+        "fi": "Mukavat urheilukengät",
+        "da": "Komfortable sportssko",
+        "nb": "Komfortable sportssko",
+        "sk": "Pohodlná športová obuv",
+        "ro": "Încălțăminte sport confortabilă",
+        "vi": "Giày thể thao thoải mái"
+      }
+    },
+    {
+      "name": "High-Quality Sports Shoes",
+      "translations": {
+        "fi": "Laadukkaat urheilukengät",
+        "da": "Sportssko af høj kvalitet",
+        "nb": "Sportssko av høy kvalitet",
+        "sk": "Kvalitná športová obuv",
+        "ro": "Încălțăminte sport de calitate",
+        "vi": "Giày thể thao chất lượng cao"
+      }
+    },
+    {
+      "name": "Classic Casual Running Shoes",
+      "translations": {
+        "fi": "Klassiset vapaa-ajan juoksukengät",
+        "da": "Klassiske løbesko til hverdagsbrug",
+        "nb": "Klassiske løpesko til hverdags",
+        "sk": "Klasická voľnočasová bežecká obuv",
+        "ro": "Încălțăminte clasică de alergare pentru uz casual",
+        "vi": "Giày chạy bộ thường ngày cổ điển"
+      }
+    },
+    {
+      "name": "Extended-Size Casual Shoes",
+      "translations": {
+        "fi": "Vapaa-ajan kengät laajalla kokovalikoimalla",
+        "sk": "Voľnočasová obuv v rozšírených veľkostiach",
+        "vi": "Giày thường ngày với dải cỡ mở rộng"
+      }
+    },
+    {
+      "name": "Quick-Dry Sportswear Set",
+      "translations": {
+        "fi": "Nopeasti kuivuva urheiluvaatesetti",
+        "da": "Hurtigtørrende sportstøjssæt",
+        "sk": "Rýchloschnúca športová súprava",
+        "vi": "Bộ đồ thể thao nhanh khô"
+      }
+    },
+    {
+      "name": "Casual Top and Pants Set",
+      "translations": {
+        "fi": "Rento yläosa- ja housusetti",
+        "da": "Afslappet sæt med overdel og bukser",
+        "nb": "Avslappet sett med overdel og bukse",
+        "sk": "Voľnočasová súprava vrchného dielu a nohavíc",
+        "vi": "Bộ áo và quần thường ngày"
+      }
+    },
+    {
+      "name": "Premium Casual Zip Hoodie",
+      "translations": {
+        "sk": "Prémiová voľnočasová mikina s kapucňou na zips",
+        "vi": "Áo hoodie thường ngày cao cấp khóa kéo"
+      }
+    },
+    {
+      "name": "Aqua Summer Sandals",
+      "translations": {
+        "fi": "Aqua-kesäsandaalit",
+        "da": "Aqua sommersandaler",
+        "nb": "Aqua sommersandaler",
+        "sk": "Letné sandále Aqua",
+        "vi": "Sandal mùa hè Aqua"
+      }
+    },
+    {
+      "name": "American Style Sports Shorts",
+      "translations": {
+        "sk": "Športové šortky v americkom štýle",
+        "vi": "Quần short thể thao phong cách Mỹ"
+      }
+    }
+  ]
+}

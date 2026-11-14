@@ -1,0 +1,194 @@
+{
+  "items": [
+    {
+      "name": "Athletic Top and Woven Shorts",
+      "translations": {
+        "fi": "Urheilullinen yläosa ja kudotut shortsit",
+        "da": "Sportstop og vævede shorts",
+        "nb": "Sportstopp og vevd shorts",
+        "cs": "Sportovní vršek a tkané šortky",
+        "sk": "Športový vrch a tkané šortky",
+        "hu": "Sportfelső és szövött rövidnadrág",
+        "ro": "Bluză sport și pantaloni scurți din țesătură",
+        "el": "Αθλητικό τοπ και υφαντό σορτς",
+        "uk": "Спортивний верх і ткані шорти",
+        "ar": "بلوزة رياضية وشورت من نسيج منسوج",
+        "ja": "スポーツトップスと織物ショーツ",
+        "ko": "운동용 상의와 우븐 반바지",
+        "vi": "Áo thể thao và quần short vải dệt",
+        "tr": "Spor üst ve dokuma şort"
+      }
+    },
+    {
+      "name": "Short-Sleeve Shirt and Shorts",
+      "translations": {
+        "fi": "Lyhythihainen paita ja shortsit",
+        "da": "Kortærmet skjorte og shorts",
+        "nb": "Kortermet skjorte og shorts",
+        "cs": "Košile s krátkým rukávem a šortky",
+        "sk": "Košeľa s krátkym rukávom a šortky",
+        "hu": "Rövid ujjú ing és rövidnadrág",
+        "ro": "Cămașă cu mânecă scurtă și pantaloni scurți",
+        "el": "Κοντομάνικο πουκάμισο και σορτς",
+        "uk": "Сорочка з короткими рукавами та шорти",
+        "ar": "قميص قصير الأكمام وشورت",
+        "ja": "半袖シャツとショーツ",
+        "ko": "반소매 셔츠와 반바지",
+        "vi": "Áo sơ mi ngắn tay và quần short",
+        "tr": "Kısa kollu gömlek ve şort"
+      }
+    },
+    {
+      "name": "FA Hoodie and Sweatpants Set",
+      "translations": {
+        "fi": "FA-huppari- ja collegehoususetti",
+        "da": "FA-sæt med hættetrøje og joggingbukser",
+        "nb": "FA-sett med hettegenser og joggebukser",
+        "cs": "Komplet FA s mikinou s kapucí a tepláky",
+        "sk": "Komplet FA s mikinou s kapucňou a teplákmi",
+        "hu": "FA kapucnis pulóver és melegítőnadrág szett",
+        "ro": "Set FA de hanorac și pantaloni de trening",
+        "el": "Σετ FA με φούτερ με κουκούλα και παντελόνι φόρμας",
+        "uk": "Комплект FA із худі та спортивних штанів",
+        "ar": "طقم FA من هودي وبنطال رياضي",
+        "ja": "FAパーカーとスウェットパンツのセット",
+        "ko": "FA 후드티와 스웨트팬츠 세트",
+        "vi": "Bộ hoodie và quần nỉ FA",
+        "tr": "FA kapüşonlu üst ve eşofman altı takımı"
+      }
+    },
+    {
+      "name": "Cotton T-Shirt and Shorts Set",
+      "translations": {
+        "fi": "Puuvillainen T-paita ja shortsit -setti",
+        "da": "Sæt med bomulds-T-shirt og shorts",
+        "nb": "Sett med bomulls-T-skjorte og shorts",
+        "cs": "Komplet bavlněného trička a šortek",
+        "sk": "Komplet bavlneného trička a šortiek",
+        "hu": "Pamut póló és rövidnadrág szett",
+        "ro": "Set de tricou din bumbac și pantaloni scurți",
+        "el": "Σετ βαμβακερού μπλουζακίου και σορτς",
+        "uk": "Комплект бавовняної футболки та шортів",
+        "ar": "طقم تيشيرت قطني وشورت",
+        "ja": "コットンTシャツとショーツのセット",
+        "ko": "면 티셔츠와 반바지 세트",
+        "vi": "Bộ áo thun cotton và quần short",
+        "tr": "Pamuklu tişört ve şort takımı"
+      }
+    },
+    {
+      "name": "Classic BB Knee-Length Shorts",
+      "translations": {
+        "fi": "Klassiset BB-polvipituiset shortsit",
+        "da": "Klassiske BB-knælange shorts",
+        "nb": "Klassisk BB-knelang shorts",
+        "cs": "Klasické šortky BB po kolena",
+        "sk": "Klasické šortky BB po kolená",
+        "hu": "Klasszikus BB térdig érő rövidnadrág",
+        "ro": "Pantaloni scurți clasici BB până la genunchi",
+        "el": "Κλασικό σορτς BB μέχρι το γόνατο",
+        "uk": "Класичні шорти BB до колін",
+        "ar": "شورت BB كلاسيكي بطول الركبة",
+        "ja": "クラシックBB膝丈ショーツ",
+        "ko": "클래식 BB 무릎 길이 반바지",
+        "vi": "Quần short BB cổ điển dài đến gối",
+        "tr": "Klasik BB diz boyu şort"
+      }
+    },
+    {
+      "name": "DJ AGT Summer Fashion T-Shirt",
+      "translations": {
+        "fi": "DJ AGT -kesäinen muoti-T-paita",
+        "da": "DJ AGT-sommermode-T-shirt",
+        "nb": "DJ AGT-sommermote-T-skjorte",
+        "cs": "Letní módní tričko DJ AGT",
+        "sk": "Letné módne tričko DJ AGT",
+        "hu": "DJ AGT nyári divatpóló",
+        "ro": "Tricou de vară la modă DJ AGT",
+        "el": "Καλοκαιρινό μοντέρνο μπλουζάκι DJ AGT",
+        "uk": "Літня модна футболка DJ AGT",
+        "ar": "تيشيرت صيفي عصري DJ AGT",
+        "ja": "DJ AGTサマーファッションTシャツ",
+        "ko": "DJ AGT 여름 패션 티셔츠",
+        "vi": "Áo thun thời trang mùa hè DJ AGT",
+        "tr": "DJ AGT yazlık moda tişört"
+      }
+    },
+    {
+      "name": "Spring/Summer Fashion T-Shirt",
+      "translations": {
+        "fi": "Kevät-/kesämuoti-T-paita",
+        "da": "Forårs-/sommermode-T-shirt",
+        "nb": "Vår-/sommermote-T-skjorte",
+        "cs": "Jarní/letní módní tričko",
+        "sk": "Jarné/letné módne tričko",
+        "hu": "Tavaszi/nyári divatpóló",
+        "ro": "Tricou de modă pentru primăvară/vară",
+        "el": "Μοντέρνο μπλουζάκι άνοιξης/καλοκαιριού",
+        "uk": "Модна футболка на весну/літо",
+        "ar": "تيشيرت عصري للربيع / الصيف",
+        "ja": "春夏ファッションTシャツ",
+        "ko": "봄/여름 패션 티셔츠",
+        "vi": "Áo thun thời trang xuân/hè",
+        "tr": "İlkbahar/yaz moda tişörtü"
+      }
+    },
+    {
+      "name": "Quick Dry Summer Beach Shorts",
+      "translations": {
+        "fi": "Nopeasti kuivuvat kesärantashortsit",
+        "da": "Hurtigtørrende sommerstrandshorts",
+        "nb": "Hurtigtørkende sommerstrandshorts",
+        "cs": "Rychleschnoucí letní plážové šortky",
+        "sk": "Rýchloschnúce letné plážové šortky",
+        "hu": "Gyorsan száradó nyári strandshort",
+        "ro": "Pantaloni scurți de plajă de vară cu uscare rapidă",
+        "el": "Καλοκαιρινό σορτς παραλίας που στεγνώνει γρήγορα",
+        "uk": "Швидковисихаючі літні пляжні шорти",
+        "ar": "شورت شاطئ صيفي سريع الجفاف",
+        "ja": "速乾サマービーチショーツ",
+        "ko": "속건 여름 비치 반바지",
+        "vi": "Quần short đi biển mùa hè nhanh khô",
+        "tr": "Hızlı kuruyan yazlık plaj şortu"
+      }
+    },
+    {
+      "name": "Dual Print Compression Shorts",
+      "translations": {
+        "fi": "Kaksoispainatuksella varustetut kompressioshortsit",
+        "da": "Kompressionsshorts med dobbelt print",
+        "nb": "Kompresjonsshorts med dobbelt trykk",
+        "cs": "Kompresní šortky s dvojitým potiskem",
+        "sk": "Kompresné šortky s dvojitou potlačou",
+        "hu": "Dupla mintás kompressziós rövidnadrág",
+        "ro": "Pantaloni scurți de compresie cu imprimeu dublu",
+        "el": "Σορτς συμπίεσης με διπλό τύπωμα",
+        "uk": "Компресійні шорти з подвійним принтом",
+        "ar": "شورت ضاغط بطبعتين",
+        "ja": "ダブルプリントコンプレッションショーツ",
+        "ko": "듀얼 프린트 압박 반바지",
+        "vi": "Quần short bó có hai hình in",
+        "tr": "Çift baskılı kompresyon şortu"
+      }
+    },
+    {
+      "name": "DX28 Quick Dry Sports T-Shirt",
+      "translations": {
+        "fi": "DX28-nopeasti kuivuva urheilu-T-paita",
+        "da": "DX28-hurtigtørrende sports-T-shirt",
+        "nb": "DX28-hurtigtørkende sports-T-skjorte",
+        "cs": "Rychleschnoucí sportovní tričko DX28",
+        "sk": "Rýchloschnúce športové tričko DX28",
+        "hu": "DX28 gyorsan száradó sportpóló",
+        "ro": "Tricou sport DX28 cu uscare rapidă",
+        "el": "Αθλητικό μπλουζάκι DX28 που στεγνώνει γρήγορα",
+        "uk": "Швидковисихаюча спортивна футболка DX28",
+        "ar": "تيشيرت رياضي سريع الجفاف DX28",
+        "ja": "DX28速乾スポーツTシャツ",
+        "ko": "DX28 속건 스포츠 티셔츠",
+        "vi": "Áo thun thể thao nhanh khô DX28",
+        "tr": "DX28 hızlı kuruyan spor tişört"
+      }
+    }
+  ]
+}

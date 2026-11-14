@@ -1,0 +1,409 @@
+{
+  "234": {
+    "name": "Ralph Lauren polo T-shirts",
+    "translations": {
+      "nb": "Ralph Lauren polo T-skjorter",
+      "ro": "Tricouri polo Ralph Lauren"
+    }
+  },
+  "312": {
+    "name": "Ralph Lauren polo T-shirts",
+    "translations": {
+      "nb": "Ralph Lauren polo T-skjorter",
+      "ro": "Tricouri polo Ralph Lauren"
+    }
+  },
+  "393": {
+    "name": "ior Walk'n'Dior Shoes",
+    "translations": {
+      "fi": "ior Walk'n'Dior -kengät",
+      "da": "ior Walk'n'Dior Sko",
+      "nb": "ior Walk'n'Dior Sko",
+      "ro": "Pantofi ior Walk'n'Dior"
+    }
+  },
+  "500": {
+    "name": "amiri、veja 、Valentino shoes",
+    "translations": {
+      "fi": "amiri、veja 、Valentino-kengät",
+      "da": "amiri、veja 、Valentino sko",
+      "nb": "amiri、veja 、Valentino sko",
+      "ro": "amiri、veja 、Valentino pantofi"
+    }
+  },
+  "513": {
+    "name": "Dolce & Gabbana (DG)shoes",
+    "translations": {
+      "fi": "Dolce & Gabbana (DG) -kengät",
+      "da": "Dolce & Gabbana (DG) sko",
+      "nb": "Dolce & Gabbana (DG)-sko",
+      "ro": "Pantofi Dolce & Gabbana (DG)."
+    }
+  },
+  "777": {
+    "name": "Bape x Miami T-shirt",
+    "translations": {
+      "fi": "Bape x Miami T-paita",
+      "nb": "Bape x Miami T-skjorte",
+      "ro": "Tricou Bape x Miami"
+    }
+  },
+  "780": {
+    "name": "Hellstar Sp⑤der T-shirts",
+    "translations": {
+      "nb": "Hellstar Sp⑤der T-skjorter",
+      "ro": "Tricouri Hellstar Sp⑤der"
+    }
+  },
+  "840": {
+    "name": "Stone lsland T-shirt",
+    "translations": {
+      "fi": "Stone lsland T-paita",
+      "nb": "Stone lsland T-skjorte",
+      "ro": "Tricou Stone lsland"
+    }
+  },
+  "870": {
+    "name": "New Balances 530 shoes",
+    "translations": {
+      "fi": "New Balances 530 -kengät",
+      "da": "New Balances 530 sko",
+      "nb": "New Balances 530 sko",
+      "ro": "Pantofi New Balances 530"
+    }
+  },
+  "1088": {
+    "name": "Porsche SunGlasses",
+    "translations": {
+      "fi": "Porsche aurinkolasit",
+      "da": "Porsche Solbriller",
+      "nb": "Porsche solbriller",
+      "ro": "Ochelari de soare Porsche"
+    }
+  },
+  "1161": {
+    "name": "adidas nike socks",
+    "translations": {
+      "fi": "adidas nike sukat",
+      "da": "adidas nike sokker",
+      "nb": "adidas nike sokker",
+      "ro": "sosete adidas nike"
+    }
+  },
+  "1470": {
+    "name": "MRalph Lauren T-shirt",
+    "translations": {
+      "fi": "MRalph Lauren T-paita",
+      "nb": "MRalph Lauren T-skjorte",
+      "ro": "Tricou MRalph Lauren"
+    }
+  },
+  "1474": {
+    "name": "MLBDescente T-Shirt",
+    "translations": {
+      "fi": "MLBDescente T-paita",
+      "nb": "MLBDescente T-skjorte",
+      "ro": "Tricou MLBDescente"
+    }
+  },
+  "1485": {
+    "name": "Ray sunglasses",
+    "translations": {
+      "fi": "Ray-aurinkolasit",
+      "da": "Ray solbriller",
+      "nb": "Ray solbriller",
+      "ro": "Ochelari de soare Ray"
+    }
+  },
+  "2255": {
+    "name": "Maison Margiela shoes",
+    "translations": {
+      "fi": "Maison Margiela kengät",
+      "da": "Maison Margiela sko",
+      "nb": "Maison Margiela sko",
+      "ro": "Pantofi Maison Margiela"
+    }
+  },
+  "2298": {
+    "name": "Golden Goose shoes",
+    "translations": {
+      "fi": "Golden Goose -kengät",
+      "da": "Golden Goose sko",
+      "nb": "Golden Goose sko",
+      "ro": "Pantofi Golden Goose"
+    }
+  },
+  "2420": {
+    "name": "Lanvin shoes",
+    "translations": {
+      "fi": "Lanvin kengät",
+      "da": "Lanvin sko",
+      "nb": "Lanvin sko",
+      "ro": "Pantofi Lanvin"
+    }
+  },
+  "2428": {
+    "name": "Dsquared T-shirt",
+    "translations": {
+      "nb": "Dsquared T-skjorte",
+      "ro": "Tricou Dsquared"
+    }
+  },
+  "2671": {
+    "name": "DC Shoes",
+    "translations": {
+      "fi": "DC-kengät",
+      "da": "DC Sko",
+      "nb": "DC-sko"
+    }
+  },
+  "2673": {
+    "name": "Stone lsland T-shirt",
+    "translations": {
+      "fi": "Stone lsland T-paita",
+      "nb": "Stone lsland T-skjorte",
+      "ro": "Tricou Stone lsland"
+    }
+  },
+  "2730": {
+    "name": "PRADA POLO T-SHIRT",
+    "translations": {
+      "fi": "PRADA POLO T-PAITA"
+    }
+  },
+  "2756": {
+    "name": "Lululemon T-shirt",
+    "translations": {
+      "fi": "Lululemon T-paita",
+      "nb": "Lululemon T-skjorte",
+      "ro": "Tricou Lululemon"
+    }
+  },
+  "2918": {
+    "name": "Lacoste Polo/T-shirt",
+    "translations": {
+      "nb": "Lacoste polo t-skjorte",
+      "ro": "Tricou polo Lacoste"
+    }
+  },
+  "2920": {
+    "name": "RayBan Sunglasses",
+    "translations": {
+      "fi": "RayBan aurinkolasit",
+      "da": "RayBan solbriller",
+      "nb": "RayBan solbriller",
+      "ro": "Ochelari de soare RayBan"
+    }
+  },
+  "2957": {
+    "name": "Dg SunGlasses",
+    "translations": {
+      "fi": "DG aurinkolasit",
+      "da": "DG solbriller",
+      "nb": "DG solbriller",
+      "ro": "Ochelari de soare DG"
+    }
+  },
+  "3136": {
+    "name": "PB Air Jordan 4 Sneakers",
+    "translations": {
+      "fi": "PB Air Jordan 4 lenkkarit",
+      "nb": "PB Air Jordan 4 joggesko",
+      "ro": "Tenisi PB Air Jordan 4"
+    }
+  },
+  "3175": {
+    "name": "CC V18 Sneakers",
+    "translations": {
+      "fi": "CC V18 tennarit",
+      "nb": "CC V18 joggesko",
+      "ro": "Tenisi CC V18"
+    }
+  },
+  "3197": {
+    "name": "AS-14 Sneakers",
+    "translations": {
+      "fi": "AS-14 tennarit",
+      "nb": "AS-14 Joggesko",
+      "ro": "Adidași AS-14"
+    }
+  },
+  "3206": {
+    "name": "GODB Dad Sneakers",
+    "translations": {
+      "fi": "GODB Dad lenkkarit",
+      "ro": "Tenisi GODB Dad"
+    }
+  },
+  "3209": {
+    "name": "9.9 Second-Kill Sneakers",
+    "translations": {
+      "fi": "9 9 Second Kill -lenkkarit"
+    }
+  },
+  "3320": {
+    "name": "WO round-toe sneakers",
+    "translations": {
+      "fi": "Wo Round Toe -lenkkarit",
+      "nb": "Wo Round Toe joggesko",
+      "ro": "Pantofi Wo Round Toe"
+    }
+  },
+  "3517": {
+    "name": "GODB Stock Shoes",
+    "translations": {
+      "ro": "GODB Stock Pantofi"
+    }
+  },
+  "3643": {
+    "name": "MM02 Saucony Sneakers",
+    "translations": {
+      "fi": "MM02 Saucony lenkkarit",
+      "nb": "MM02 Saucony joggesko",
+      "ro": "Tenisi Saucony MM02"
+    }
+  },
+  "3669": {
+    "name": "Mind 001 Sneakers",
+    "translations": {
+      "fi": "Mind 001 lenkkarit",
+      "nb": "Mind 001 Joggesko",
+      "ro": "Tenisi Mind 001"
+    }
+  },
+  "3723": {
+    "name": "Track 3.0 LED Sneakers",
+    "translations": {
+      "fi": "Track 3.0 LED -lenkkarit",
+      "ro": "Pantofi sport Track 3.0 LED"
+    }
+  },
+  "3764": {
+    "name": "FS Train Sneakers",
+    "translations": {
+      "fi": "FS Train Tennarit",
+      "ro": "Tenisi FS Train"
+    }
+  },
+  "3792": {
+    "name": "European Designer Shoes",
+    "translations": {
+      "fi": "European Designer -kengät",
+      "ro": "Pantofi de designer european"
+    }
+  },
+  "3802": {
+    "name": "Designer 11A1 Sneakers",
+    "translations": {
+      "fi": "Designer 11A1 -lenkkarit",
+      "nb": "Designer 11A1 joggesko",
+      "ro": "Adidași de designer 11A1"
+    }
+  },
+  "3809": {
+    "name": "MILA Gats Desun Shoes",
+    "translations": {
+      "fi": "MILA Gats Desun -kengät",
+      "da": "MILA Gats Desun Sko",
+      "nb": "MILA Gats Desun Sko",
+      "ro": "MILA Gats Desun Pantofi"
+    }
+  },
+  "3865": {
+    "name": "Designer Platform Sneakers",
+    "translations": {
+      "fi": "Designer Platform Tennarit",
+      "ro": "Adidași cu platformă de designer"
+    }
+  },
+  "3960": {
+    "name": "SSS Trail Sneakers",
+    "translations": {
+      "fi": "SSS Trail -lenkkarit",
+      "ro": "Pantofi SSS Trail"
+    }
+  },
+  "4291": {
+    "name": "SK8 Low-Top Skate Sneakers",
+    "translations": {
+      "da": "SK8 Low-Top Skatesneakers",
+      "nb": "SK8 Low-Top Skate Joggesko",
+      "ro": "Pantofi SK8 Low-Top Skate"
+    }
+  },
+  "4354": {
+    "name": "G.X Max 95 Sneakers",
+    "translations": {
+      "fi": "G.X Max 95 -lenkkarit",
+      "nb": "G.X Max 95 joggesko",
+      "ro": "Tenisi G.X Max 95"
+    }
+  },
+  "4358": {
+    "name": "T6D Low-Top Skate Sneakers",
+    "translations": {
+      "da": "T6D Low-Top Skatesneakers",
+      "nb": "T6D Low-Top Skate Joggesko",
+      "ro": "Adidași T6D Low-Top Skate"
+    }
+  },
+  "4362": {
+    "name": "Replica Low-Top Sneakers",
+    "translations": {
+      "fi": "Replica Low-Top lenkkarit"
+    }
+  },
+  "4364": {
+    "name": "Athletic Sneakers",
+    "translations": {
+      "fi": "Athletic lenkkarit"
+    }
+  },
+  "4431": {
+    "name": "Ape Head Camouflage T-Shirt",
+    "translations": {
+      "nb": "Ape Head Camouflage T-skjorte"
+    }
+  },
+  "4481": {
+    "name": "350 Angel Colorway Sneakers",
+    "translations": {
+      "fi": "350 Angel Colorway -lenkkarit",
+      "ro": "Tenisi 350 Angel Colorway"
+    }
+  },
+  "4509": {
+    "name": "Runner Sneakers",
+    "translations": {
+      "fi": "Runner lenkkarit"
+    }
+  },
+  "5227": {
+    "name": "Carhartt Navy Pocket T-Shirt",
+    "translations": {
+      "fi": "Carhartt Navy Pocket T-paita",
+      "nb": "Carhartt Navy Pocket T-skjorte"
+    }
+  },
+  "5270": {
+    "name": "Essentials Coral T-Shirt",
+    "translations": {
+      "fi": "Essentials Coral T-paita",
+      "nb": "Essentials Coral T-skjorte"
+    }
+  },
+  "5598": {
+    "name": "Stone Island Compass T-Shirt",
+    "translations": {
+      "fi": "Stone Island Compass T-paita",
+      "nb": "Stone Island Compass T-skjorte"
+    }
+  },
+  "5611": {
+    "name": "Chrome Hearts Cross T-Shirt",
+    "translations": {
+      "fi": "Chrome Hearts Cross T-paita",
+      "nb": "Chrome Hearts Cross T-skjorte"
+    }
+  }
+}

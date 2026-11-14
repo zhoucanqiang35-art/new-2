@@ -1,0 +1,55 @@
+{
+  "items": [
+    {
+      "name": "Casual Fashion Tracksuit 002",
+      "sourceId": "6030",
+      "translations": {
+        "fi": "Rento muoti verryttelypuku 002",
+        "da": "Casual Fashion træningsdragt 002",
+        "nb": "Uformell treningsdress 002"
+      }
+    },
+    {
+      "name": "Hooded Zip Sportswear Set",
+      "sourceId": "6028",
+      "translations": {
+        "fi": "Hupullinen vetoketjullinen urheiluvaatesarja",
+        "da": "Sportstøjsæt med hætte med lynlås",
+        "nb": "Sportsklærsett med hette med glidelås"
+      }
+    },
+    {
+      "name": "Tazz Sand Slippers",
+      "sourceId": "5913",
+      "translations": {
+        "fi": "Tazz Sand Tossut",
+        "da": "Tazz Sand Hjemmesko"
+      }
+    },
+    {
+      "name": "BIR Walk Comfort Shoes",
+      "sourceId": "5908",
+      "translations": {
+        "fi": "BIR Walk Comfort -kengät",
+        "da": "BIR Walk Comfort Sko",
+        "nb": "BIR Walk Comfort Sko"
+      }
+    },
+    {
+      "name": "Trendy Casual Shoes PHB",
+      "sourceId": "5929",
+      "translations": {
+        "da": "Trendy fritidssko PHB",
+        "nb": "Trendy fritidssko PHB"
+      }
+    },
+    {
+      "name": "Unisex Summer Sandal Slides",
+      "sourceId": "5907",
+      "translations": {
+        "da": "Unisex sommersandaler",
+        "nb": "Unisex sommersandaler"
+      }
+    }
+  ]
+}

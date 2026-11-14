@@ -1,0 +1,520 @@
+{
+  "7048": {
+    "name": "Double G Monogram Knit Zip-Up",
+    "translations": {
+      "sk": "Pletený kardigán na zips s monogramom dvojitého G",
+      "vi": "Áo cardigan dệt kim khóa kéo họa tiết monogram chữ G kép"
+    }
+  },
+  "7049": {
+    "name": "Heart Graphic Black Zip-Up Hoo",
+    "translations": {
+      "sk": "Čierna mikina na zips s grafikou srdca 005 KEB",
+      "vi": "Áo hoodie khóa kéo đen họa tiết trái tim 005 KEB"
+    }
+  },
+  "7050": {
+    "name": "Assorted Premium Knit Sweaters",
+    "translations": {
+      "sk": "Rôzne prémiové pletené svetre",
+      "vi": "Các mẫu áo len cao cấp"
+    }
+  },
+  "7052": {
+    "name": "FW22 Black Bunny Graphic Knit",
+    "translations": {
+      "sk": "Čierny pletený sveter s grafikou králika FW22",
+      "vi": "Áo len đen họa tiết thỏ FW22"
+    }
+  },
+  "7056": {
+    "name": "Versatile Autumn Winter Knit S",
+    "translations": {
+      "sk": "Univerzálny jesenný a zimný pletený sveter 007",
+      "vi": "Áo len thu đông dễ phối đồ 007"
+    }
+  },
+  "7058": {
+    "name": "Premium Fashion Knit Sweater",
+    "translations": {
+      "sk": "Prémiový módny pletený sveter",
+      "vi": "Áo len thời trang cao cấp"
+    }
+  },
+  "7060": {
+    "name": "Embroidered Pony Zip-Up Hoodie",
+    "translations": {
+      "sk": "Mikina na zips s výšivkou jazdca",
+      "vi": "Áo hoodie khóa kéo thêu hình người cưỡi ngựa"
+    }
+  },
+  "7064": {
+    "name": "ERD Gray Logo Print Pullover H",
+    "translations": {
+      "sk": "Sivá mikina ERD cez hlavu s potlačou loga",
+      "vi": "Áo hoodie chui đầu ERD xám in logo"
+    }
+  },
+  "7066": {
+    "name": "Heavyweight Short-Sleeve Pullo",
+    "translations": {
+      "sk": "Hrubá mikina cez hlavu s krátkym rukávom",
+      "vi": "Áo hoodie chui đầu tay ngắn vải dày"
+    }
+  },
+  "7069": {
+    "name": "RL Embroidered Cable-Knit Crew",
+    "translations": {
+      "sk": "Vyšívaný sveter RL s vrkočovým úpletom a okrúhlym výstrihom",
+      "vi": "Áo len RL cổ tròn đan bím có thêu"
+    }
+  },
+  "7070": {
+    "name": "Men’s Wool Knit Sweater",
+    "translations": {
+      "sk": "Pánsky vlnený pletený sveter",
+      "vi": "Áo len dệt kim nam bằng len"
+    }
+  },
+  "7071": {
+    "name": "Streetwear Pullover Sweatshirt",
+    "translations": {
+      "sk": "Streetwearová mikina cez hlavu",
+      "vi": "Áo nỉ chui đầu phong cách đường phố"
+    }
+  },
+  "7073": {
+    "name": "Embroidered Zip-Up Jogger Pant",
+    "translations": {
+      "sk": "Vyšívané džogery so zipsom",
+      "vi": "Quần jogger thêu có khóa kéo"
+    }
+  },
+  "7074": {
+    "name": "Premium Mohair Long-Sleeve Swe",
+    "translations": {
+      "sk": "Prémiový mohérový sveter s dlhým rukávom",
+      "vi": "Áo len mohair cao cấp dài tay"
+    }
+  },
+  "7075": {
+    "name": "Embroidered Hoodie and Pants S",
+    "translations": {
+      "sk": "Súprava vyšívanej mikiny s kapucňou a nohavíc",
+      "vi": "Bộ áo hoodie thêu và quần dài"
+    }
+  },
+  "7076": {
+    "name": "YHH10 Versatile Crewneck Sweat",
+    "translations": {
+      "sk": "Univerzálna mikina s okrúhlym výstrihom YHH10",
+      "vi": "Áo nỉ cổ tròn dễ phối đồ YHH10"
+    }
+  },
+  "7078": {
+    "name": "Long-Sleeve Streetwear T-Shirt",
+    "translations": {
+      "sk": "Streetwearové tričko s dlhým rukávom 1 CPSP01",
+      "vi": "Áo thun dài tay phong cách đường phố 1 CPSP01"
+    }
+  },
+  "7079": {
+    "name": "Classic Versatile Knit Sweater",
+    "translations": {
+      "sk": "Klasický univerzálny pletený sveter 008",
+      "vi": "Áo len cổ điển dễ phối đồ 008"
+    }
+  },
+  "7082": {
+    "name": "Jacquard Pattern Wool Knit Swe",
+    "translations": {
+      "sk": "Vlnený pletený sveter so žakárovým vzorom",
+      "vi": "Áo len dệt jacquard họa tiết"
+    }
+  },
+  "7084": {
+    "name": "RL Embroidered Pony Cotton Kni",
+    "translations": {
+      "sk": "Bavlnený pletený sveter RL s výšivkou jazdca 0535",
+      "vi": "Áo len cotton RL thêu hình người cưỡi ngựa 0535"
+    }
+  },
+  "7086": {
+    "name": "Fleece Dog Graphic Crewneck Sw",
+    "translations": {
+      "sk": "Flísová mikina s okrúhlym výstrihom a grafikou psa",
+      "vi": "Áo nỉ lông cổ tròn họa tiết chó"
+    }
+  },
+  "7089": {
+    "name": "Loose Streetwear Pullover Knit",
+    "translations": {
+      "sk": "Voľný streetwearový pletený sveter cez hlavu",
+      "vi": "Áo len chui đầu dáng rộng phong cách đường phố"
+    }
+  },
+  "7090": {
+    "name": "Men’s Cable-Knit Half-Zip Swea",
+    "translations": {
+      "sk": "Pánsky sveter s vrkočovým úpletom a polovičným zipsom",
+      "vi": "Áo len nam đan bím khóa kéo nửa thân"
+    }
+  },
+  "7093": {
+    "name": "Derschutze Blossom Floral Embr",
+    "translations": {
+      "sk": "Pletený sveter Derschutze Blossom s kvetinovou výšivkou",
+      "vi": "Áo len Derschutze Blossom thêu hoa"
+    }
+  },
+  "7095": {
+    "name": "Blue Gray Camo Stripe Knit Swe",
+    "translations": {
+      "sk": "Modrosivý pletený sveter s maskovacím vzorom a pruhmi",
+      "vi": "Áo len xanh xám họa tiết ngụy trang và sọc"
+    }
+  },
+  "7096": {
+    "name": "Versatile Autumn Pullover Hood",
+    "translations": {
+      "sk": "Univerzálna jesenná mikina cez hlavu 069T",
+      "vi": "Áo hoodie chui đầu mùa thu dễ phối đồ 069T"
+    }
+  },
+  "7099": {
+    "name": "Versatile Autumn Winter Knit S",
+    "translations": {
+      "sk": "Univerzálny jesenný a zimný pletený sveter 004",
+      "vi": "Áo len thu đông dễ phối đồ 004"
+    }
+  },
+  "7100": {
+    "name": "Black Letter Graphic Faux-Mink",
+    "translations": {
+      "sk": "Čierny pletený sveter z imitácie norka s grafikou písmen",
+      "vi": "Áo len đen giả lông chồn họa tiết chữ"
+    }
+  },
+  "7105": {
+    "name": "Black Minimal Graphic Pullover",
+    "translations": {
+      "sk": "Čierna mikina cez hlavu s minimalistickou grafikou 003 KEB",
+      "vi": "Áo hoodie chui đầu đen họa tiết tối giản 003 KEB"
+    }
+  },
+  "7107": {
+    "name": "Premium Fashion Knit Sweater",
+    "translations": {
+      "sk": "Prémiový módny pletený sveter",
+      "vi": "Áo len thời trang cao cấp"
+    }
+  },
+  "7108": {
+    "name": "Casual Crewneck Sweatshirt 008",
+    "translations": {
+      "sk": "Voľnočasová mikina s okrúhlym výstrihom 008",
+      "vi": "Áo nỉ cổ tròn thường ngày 008"
+    }
+  },
+  "7109": {
+    "name": "Black MM10 Graphic Pullover Ho",
+    "translations": {
+      "sk": "Čierna mikina cez hlavu s grafikou MM10 003 KEB",
+      "vi": "Áo hoodie chui đầu đen họa tiết MM10 003 KEB"
+    }
+  },
+  "7114": {
+    "name": "Streetwear Crewneck Sweatshirt",
+    "translations": {
+      "sk": "Streetwearová mikina s okrúhlym výstrihom DX14",
+      "vi": "Áo nỉ cổ tròn phong cách đường phố DX14"
+    }
+  },
+  "7115": {
+    "name": "Graphic Crewneck Sweatshirt Co",
+    "translations": {
+      "sk": "Kolekcia mikín s okrúhlym výstrihom a grafikou",
+      "vi": "Bộ sưu tập áo nỉ cổ tròn họa tiết"
+    }
+  },
+  "7116": {
+    "name": "Five-Color Crewneck Sweatshirt",
+    "translations": {
+      "sk": "Mikina s okrúhlym výstrihom v piatich farbách LF",
+      "vi": "Áo nỉ cổ tròn năm màu LF"
+    }
+  },
+  "7117": {
+    "name": "Letter and Paint-Splatter Grap",
+    "translations": {
+      "sk": "Mikina s kapucňou, nápisom a grafikou fŕkanej farby",
+      "vi": "Áo hoodie họa tiết chữ và vẩy sơn"
+    }
+  },
+  "7119": {
+    "name": "Heavyweight Fleece Pullover Ho",
+    "translations": {
+      "sk": "Mikina cez hlavu z hrubého flísu",
+      "vi": "Áo hoodie chui đầu nỉ lông dày"
+    }
+  },
+  "7120": {
+    "name": "Heart Emblem Crewneck Sweatshi",
+    "translations": {
+      "sk": "Mikina s okrúhlym výstrihom a znakom srdca 005 KEB",
+      "vi": "Áo nỉ cổ tròn huy hiệu trái tim 005 KEB"
+    }
+  },
+  "7121": {
+    "name": "Washed Letter Print Hoodie 199",
+    "translations": {
+      "sk": "Praná mikina s kapucňou a potlačou písmen 1996",
+      "vi": "Áo hoodie hiệu ứng giặt in chữ 1996"
+    }
+  },
+  "7123": {
+    "name": "2025 Bear Graphic Crewneck Swe",
+    "translations": {
+      "sk": "Sveter s okrúhlym výstrihom a grafikou medveďa 2025",
+      "vi": "Áo len cổ tròn họa tiết gấu 2025"
+    }
+  },
+  "7126": {
+    "name": "Graphic Fleece Hoodie Collecti",
+    "translations": {
+      "sk": "Kolekcia flísových mikín s kapucňou a grafikou",
+      "vi": "Bộ sưu tập áo hoodie nỉ lông họa tiết"
+    }
+  },
+  "7128": {
+    "name": "Casual Crewneck Sweatshirt wit",
+    "translations": {
+      "sk": "Voľnočasová mikina s okrúhlym výstrihom a detailom na rukáve",
+      "vi": "Áo nỉ cổ tròn thường ngày có chi tiết ở tay"
+    }
+  },
+  "7131": {
+    "name": "Camouflage Embellished Pullove",
+    "translations": {
+      "sk": "Mikina cez hlavu s maskovacím zdobením",
+      "vi": "Áo hoodie chui đầu trang trí họa tiết ngụy trang"
+    }
+  },
+  "7132": {
+    "name": "All-Over Letter Logo Knit Swea",
+    "translations": {
+      "sk": "Pletený sveter s celoplošným vzorom písmen a loga",
+      "vi": "Áo len phủ họa tiết chữ và logo"
+    }
+  },
+  "7134": {
+    "name": "Supreme Long-Sleeve Crewneck S",
+    "translations": {
+      "sk": "Mikina Supreme s dlhým rukávom a okrúhlym výstrihom",
+      "vi": "Áo nỉ Supreme dài tay cổ tròn"
+    }
+  },
+  "7135": {
+    "name": "Flag Graphic Crewneck Knit Swe",
+    "translations": {
+      "sk": "Pletený sveter s okrúhlym výstrihom a grafikou vlajky",
+      "vi": "Áo len cổ tròn họa tiết lá cờ"
+    }
+  },
+  "7136": {
+    "name": "Logo Crewneck Knit Sweater YHH",
+    "translations": {
+      "sk": "Pletený sveter s okrúhlym výstrihom a logom YHH35",
+      "vi": "Áo len cổ tròn logo YHH35"
+    }
+  },
+  "7139": {
+    "name": "Hellstar Graphic Washed Hoodie",
+    "translations": {
+      "sk": "Praná mikina Hellstar s kapucňou a grafikou",
+      "vi": "Áo hoodie Hellstar họa tiết hiệu ứng giặt"
+    }
+  },
+  "7140": {
+    "name": "Heart Emblem Crewneck Sweatshi",
+    "translations": {
+      "sk": "Kolekcia mikín s okrúhlym výstrihom a znakom srdca a džogerov",
+      "vi": "Bộ sưu tập áo nỉ cổ tròn huy hiệu trái tim và quần jogger"
+    }
+  },
+  "7142": {
+    "name": "Tiger Graphic Crewneck Sweatsh",
+    "translations": {
+      "sk": "Mikina s okrúhlym výstrihom a grafikou tigra",
+      "vi": "Áo nỉ cổ tròn họa tiết hổ"
+    }
+  },
+  "7144": {
+    "name": "Streetwear Zip-Up Hoodie Set 0",
+    "translations": {
+      "sk": "Streetwearová súprava s mikinou na zips 03",
+      "vi": "Bộ đồ phong cách đường phố với áo hoodie khóa kéo 03"
+    }
+  },
+  "7146": {
+    "name": "Classic Graphic Crewneck Sweat",
+    "translations": {
+      "sk": "Klasická mikina s okrúhlym výstrihom a grafikou 006",
+      "vi": "Áo nỉ cổ tròn cổ điển họa tiết 006"
+    }
+  },
+  "7147": {
+    "name": "Moncler Graphic Crewneck Sweat",
+    "translations": {
+      "sk": "Mikina Moncler s okrúhlym výstrihom a grafikou",
+      "vi": "Áo nỉ cổ tròn Moncler họa tiết"
+    }
+  },
+  "7148": {
+    "name": "Swirl Graphic Crewneck Sweatsh",
+    "translations": {
+      "sk": "Kolekcia mikín s okrúhlym výstrihom a špirálovou grafikou",
+      "vi": "Bộ sưu tập áo nỉ cổ tròn họa tiết xoáy"
+    }
+  },
+  "7149": {
+    "name": "Streetwear Graphic Hoodie Coll",
+    "translations": {
+      "sk": "Kolekcia streetwearových mikín s kapucňou a grafikou",
+      "vi": "Bộ sưu tập áo hoodie phong cách đường phố có họa tiết"
+    }
+  },
+  "7151": {
+    "name": "Bear Graphic Long-Sleeve Knit",
+    "translations": {
+      "sk": "Pletený sveter s dlhým rukávom a grafikou medveďa",
+      "vi": "Áo len dài tay họa tiết gấu"
+    }
+  },
+  "7152": {
+    "name": "Casual Hoodie and Sweatshirt C",
+    "translations": {
+      "sk": "Kolekcia voľnočasových mikín s kapucňou a bez kapucne FA",
+      "vi": "Bộ sưu tập áo hoodie và áo nỉ thường ngày FA"
+    }
+  },
+  "7154": {
+    "name": "Horse Graphic Crewneck Sweatsh",
+    "translations": {
+      "sk": "Mikina s okrúhlym výstrihom a grafikou koňa",
+      "vi": "Áo nỉ cổ tròn họa tiết ngựa"
+    }
+  },
+  "7158": {
+    "name": "2025 Heart Jacquard Knit Sweat",
+    "translations": {
+      "sk": "Kolekcia žakárových pletených svetrov so srdcom 2025",
+      "vi": "Bộ sưu tập áo len dệt jacquard họa tiết trái tim 2025"
+    }
+  },
+  "7159": {
+    "name": "Bear Graphic Crewneck Knit Swe",
+    "translations": {
+      "sk": "Pletený sveter s okrúhlym výstrihom a grafikou medveďa 001",
+      "vi": "Áo len cổ tròn họa tiết gấu 001"
+    }
+  },
+  "7160": {
+    "name": "Black Embroidered Crewneck Swe",
+    "translations": {
+      "sk": "Čierna vyšívaná mikina s okrúhlym výstrihom 090875",
+      "vi": "Áo nỉ cổ tròn màu đen có thêu 090875"
+    }
+  },
+  "7161": {
+    "name": "Pony Embroidered Crewneck Swea",
+    "translations": {
+      "sk": "Sveter s okrúhlym výstrihom a výšivkou jazdca SS23",
+      "vi": "Áo len cổ tròn thêu hình người cưỡi ngựa SS23"
+    }
+  },
+  "7162": {
+    "name": "Gray Ribbed Hooded Knit Sweate",
+    "translations": {
+      "sk": "Sivý rebrovaný pletený sveter s kapucňou 005 KEB",
+      "vi": "Áo len gân màu xám có mũ 005 KEB"
+    }
+  },
+  "7163": {
+    "name": "Pony Embroidered Half-Zip Swea",
+    "translations": {
+      "sk": "Mikina s polovičným zipsom a výšivkou jazdca 202612403",
+      "vi": "Áo nỉ khóa kéo nửa thân thêu hình người cưỡi ngựa 202612403"
+    }
+  },
+  "7164": {
+    "name": "Compass Badge Crewneck Sweatsh",
+    "translations": {
+      "sk": "Mikina s okrúhlym výstrihom a nášivkou kompasu SYXWYXSTD004",
+      "vi": "Áo nỉ cổ tròn có huy hiệu la bàn SYXWYXSTD004"
+    }
+  },
+  "7165": {
+    "name": "Stussy 8-Ball Crewneck Sweatsh",
+    "translations": {
+      "sk": "Mikina Stüssy 8 Ball s okrúhlym výstrihom 513",
+      "vi": "Áo nỉ cổ tròn Stüssy 8 Ball 513"
+    }
+  },
+  "7166": {
+    "name": "Bear Graphic Crewneck Sweatshi",
+    "translations": {
+      "sk": "Mikina s okrúhlym výstrihom a grafikou medveďa",
+      "vi": "Áo nỉ cổ tròn họa tiết gấu"
+    }
+  },
+  "7167": {
+    "name": "It Is What It Is Letter Print",
+    "translations": {
+      "sk": "Mikina s nápisom It Is What It Is",
+      "vi": "Áo nỉ in chữ It Is What It Is"
+    }
+  },
+  "7168": {
+    "name": "Lacoste Graphic Crewneck Sweat",
+    "translations": {
+      "sk": "Mikina Lacoste s okrúhlym výstrihom a grafikou HOT SQ002",
+      "vi": "Áo nỉ cổ tròn Lacoste họa tiết HOT SQ002"
+    }
+  },
+  "7169": {
+    "name": "Lacoste Zip-Up Hoodie Collecti",
+    "translations": {
+      "sk": "Kolekcia mikín Lacoste na zips FA",
+      "vi": "Bộ sưu tập áo hoodie khóa kéo Lacoste FA"
+    }
+  },
+  "7172": {
+    "name": "Pony Embroidered Cable-Knit Sw",
+    "translations": {
+      "sk": "Sveter s vrkočovým úpletom a výšivkou jazdca 020 KEB",
+      "vi": "Áo len đan bím thêu hình người cưỡi ngựa 020 KEB"
+    }
+  },
+  "7173": {
+    "name": "Heart Emblem Turtleneck Knit S",
+    "translations": {
+      "sk": "Pletený rolák so znakom srdca HYRED",
+      "vi": "Áo len cổ lọ huy hiệu trái tim HYRED"
+    }
+  },
+  "7177": {
+    "name": "Pony Embroidered Cable-Knit Sw",
+    "translations": {
+      "sk": "Sveter s vrkočovým úpletom a výšivkou jazdca 24",
+      "vi": "Áo len đan bím thêu hình người cưỡi ngựa 24"
+    }
+  },
+  "7178": {
+    "name": "Heart Emblem Crewneck Sweatshi",
+    "translations": {
+      "sk": "Mikina s okrúhlym výstrihom a znakom srdca 023",
+      "vi": "Áo nỉ cổ tròn huy hiệu trái tim 023"
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "keys": [
+    "1. Find a product and identify the original listing",
+    "2. Review the product before ordering",
+    "3. Create an account or sign in",
+    "4. Select your options and review the order",
+    "5. Check your item at the warehouse",
+    "6. Submit your parcel and pay for shipping",
+    "7. Track the delivery and keep your records"
+  ],
+  "rows": {
+    "fi": [
+      "1. Etsi tuote ja tunnista alkuperäinen ilmoitus",
+      "2. Tarkista tuote ennen tilaamista",
+      "3. Luo tili tai kirjaudu sisään",
+      "4. Valitse vaihtoehdot ja tarkista tilaus",
+      "5. Tarkista tuotteesi varastolla",
+      "6. Lähetä pakettipyyntö ja maksa toimitus",
+      "7. Seuraa toimitusta ja säilytä tiedot"
+    ],
+    "da": [
+      "1. Find et produkt og identificer den oprindelige annonce",
+      "2. Gennemgå produktet før bestilling",
+      "3. Opret en konto eller log ind",
+      "4. Vælg muligheder og gennemgå ordren",
+      "5. Kontroller din vare på lageret",
+      "6. Indsend din pakke og betal for fragt",
+      "7. Følg leveringen og gem dine oplysninger"
+    ],
+    "nb": [
+      "1. Finn et produkt og identifiser originalannonsen",
+      "2. Se gjennom produktet før du bestiller",
+      "3. Opprett en konto eller logg inn",
+      "4. Velg alternativer og kontroller bestillingen",
+      "5. Kontroller varen på lageret",
+      "6. Send inn pakken og betal for frakt",
+      "7. Spor leveringen og ta vare på opplysningene"
+    ],
+    "cs": [
+      "1. Najděte produkt a původní nabídku",
+      "2. Před objednáním produkt zkontrolujte",
+      "3. Vytvořte si účet nebo se přihlaste",
+      "4. Vyberte možnosti a zkontrolujte objednávku",
+      "5. Zkontrolujte zboží ve skladu",
+      "6. Odešlete žádost o zásilku a zaplaťte dopravu",
+      "7. Sledujte doručení a uschovejte si záznamy"
+    ],
+    "sk": [
+      "1. Nájdite produkt a pôvodnú ponuku",
+      "2. Pred objednaním produkt skontrolujte",
+      "3. Vytvorte si účet alebo sa prihláste",
+      "4. Vyberte možnosti a skontrolujte objednávku",
+      "5. Skontrolujte tovar v sklade",
+      "6. Odošlite žiadosť o zásielku a zaplaťte dopravu",
+      "7. Sledujte doručenie a uschovajte si záznamy"
+    ],
+    "hu": [
+      "1. Keressen terméket és azonosítsa az eredeti hirdetést",
+      "2. Rendelés előtt ellenőrizze a terméket",
+      "3. Hozzon létre fiókot vagy jelentkezzen be",
+      "4. Válassza ki az opciókat és ellenőrizze a rendelést",
+      "5. Ellenőrizze a terméket a raktárban",
+      "6. Adja fel a csomagkérelmet és fizesse ki a szállítást",
+      "7. Kövesse a kézbesítést és őrizze meg az adatokat"
+    ],
+    "ro": [
+      "1. Găsiți un produs și identificați anunțul original",
+      "2. Verificați produsul înainte de comandă",
+      "3. Creați un cont sau conectați-vă",
+      "4. Selectați opțiunile și verificați comanda",
+      "5. Verificați produsul la depozit",
+      "6. Trimiteți coletul și plătiți transportul",
+      "7. Urmăriți livrarea și păstrați evidențele"
+    ],
+    "el": [
+      "1. Βρείτε ένα προϊόν και την αρχική καταχώριση",
+      "2. Ελέγξτε το προϊόν πριν από την παραγγελία",
+      "3. Δημιουργήστε λογαριασμό ή συνδεθείτε",
+      "4. Επιλέξτε επιλογές και ελέγξτε την παραγγελία",
+      "5. Ελέγξτε το προϊόν στην αποθήκη",
+      "6. Υποβάλετε το δέμα και πληρώστε τα μεταφορικά",
+      "7. Παρακολουθήστε την παράδοση και κρατήστε τα στοιχεία"
+    ],
+    "tr": [
+      "1. Ürünü ve orijinal ilanı bulun",
+      "2. Sipariş vermeden önce ürünü inceleyin",
+      "3. Hesap oluşturun veya giriş yapın",
+      "4. Seçenekleri belirleyin ve siparişi kontrol edin",
+      "5. Ürününüzü depoda kontrol edin",
+      "6. Paket talebinizi gönderin ve kargo ücretini ödeyin",
+      "7. Teslimatı takip edin ve kayıtlarınızı saklayın"
+    ],
+    "uk": [
+      "1. Знайдіть товар і визначте оригінальне оголошення",
+      "2. Перевірте товар перед замовленням",
+      "3. Створіть обліковий запис або увійдіть",
+      "4. Виберіть параметри та перевірте замовлення",
+      "5. Перевірте товар на складі",
+      "6. Подайте заявку на посилку й оплатіть доставку",
+      "7. Відстежуйте доставку та зберігайте дані"
+    ],
+    "ar": [
+      "1. اعثر على منتج وحدد الإعلان الأصلي",
+      "2. راجع المنتج قبل الطلب",
+      "3. أنشئ حساباً أو سجل الدخول",
+      "4. اختر الخيارات وراجع الطلب",
+      "5. افحص منتجك في المستودع",
+      "6. قدم طلب الشحنة وادفع رسوم الشحن",
+      "7. تتبع التسليم واحتفظ بسجلاتك"
+    ],
+    "ja": [
+      "1. 商品と元の出品を探す",
+      "2. 注文前に商品を確認する",
+      "3. アカウントを作成するかログインする",
+      "4. オプションを選び注文を確認する",
+      "5. 倉庫で商品を確認する",
+      "6. 荷物を申請して送料を支払う",
+      "7. 配送を追跡し記録を保管する"
+    ],
+    "ko": [
+      "1. 상품과 원래 판매 페이지 찾기",
+      "2. 주문 전에 상품 확인하기",
+      "3. 계정을 만들거나 로그인하기",
+      "4. 옵션을 선택하고 주문 확인하기",
+      "5. 창고에서 상품 확인하기",
+      "6. 소포를 신청하고 배송비 결제하기",
+      "7. 배송을 추적하고 기록 보관하기"
+    ],
+    "vi": [
+      "1. Tìm sản phẩm và xác định trang bán gốc",
+      "2. Kiểm tra sản phẩm trước khi đặt hàng",
+      "3. Tạo tài khoản hoặc đăng nhập",
+      "4. Chọn tùy chọn và kiểm tra đơn hàng",
+      "5. Kiểm tra sản phẩm tại kho",
+      "6. Gửi yêu cầu kiện hàng và thanh toán phí vận chuyển",
+      "7. Theo dõi giao hàng và lưu lại thông tin"
+    ]
+  }
+}

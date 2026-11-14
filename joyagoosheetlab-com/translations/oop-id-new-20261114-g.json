@@ -1,0 +1,860 @@
+{
+  "3429": {
+    "name": "NEW Foshan Link1 Sk8",
+    "translations": {
+      "cs": "nový Foshan odkaz 1 Sk8",
+      "hu": "új Foshan link 1 Sk8",
+      "el": "νέο Foshan σύνδεσμος 1 Sk8",
+      "tr": "yeni Foshan bağlantı 1 Sk8",
+      "uk": "новий Foshan посилання 1 Sk8",
+      "ja": "新しい Foshan リンク 1 Sk8",
+      "ko": "새로운 Foshan 링크 1 Sk8",
+      "ar": "جديد Foshan رابط 1 Sk8"
+    }
+  },
+  "3406": {
+    "name": "KB version K * obe 6 ZK6 colle",
+    "translations": {
+      "cs": "Kb K Obe 6 Zk6 verze kolekce vlastních zakázkových stylů bez značky",
+      "hu": "Kb K Obe 6 Zk6 változat saját egyedi, márka nélküli stílusok kollekciója",
+      "el": "Kb K Obe 6 Zk6 έκδοση συλλογή εξατομικευμένων σχεδίων χωρίς μάρκα",
+      "tr": "Kb K Obe 6 Zk6 sürüm özel yapım markasız modeller koleksiyonu",
+      "uk": "Kb K Obe 6 Zk6 версія колекція власних індивідуальних моделей без бренду",
+      "ja": "Kb K Obe 6 Zk6 バージョン 独自カスタムのノーブランドスタイルコレクション",
+      "ko": "Kb K Obe 6 Zk6 버전 자체 맞춤형 무브랜드 스타일 컬렉션",
+      "ar": "Kb K Obe 6 Zk6 نسخة مجموعة أنماط مخصصة دون علامة تجارية"
+    }
+  },
+  "3399": {
+    "name": "[PK Special Edition] TS Barbed",
+    "translations": {
+      "cs": "Pk Ts Barbed Dk speciální edice a speciální cena",
+      "hu": "Pk Ts Barbed Dk különleges kiadás és különleges ár",
+      "el": "Pk Ts Barbed Dk ειδική έκδοση και ειδική τιμή",
+      "tr": "Pk Ts Barbed Dk özel seri ve özel fiyat",
+      "uk": "Pk Ts Barbed Dk спеціальне видання та спеціальна ціна",
+      "ja": "Pk Ts Barbed Dk 特別版と特別価格",
+      "ko": "Pk Ts Barbed Dk 스페셜 에디션 및 특별 가격",
+      "ar": "Pk Ts Barbed Dk إصدار خاص وسعر خاص"
+    }
+  },
+  "3391": {
+    "name": "Stylish pairings for the lates",
+    "translations": {
+      "cs": "stylové kombinace pro nejnovější sportovní volnočasové tenisky",
+      "hu": "stílusos párosítások a legújabb sportos hétköznapi tornacipőkhöz",
+      "el": "κομψοί συνδυασμοί για τα πιο πρόσφατα σπορ καθημερινά αθλητικά παπούτσια",
+      "tr": "en yeni sportif günlük spor ayakkabılar için şık kombinler",
+      "uk": "стильні поєднання для найновіших спортивних повсякденних кросівок",
+      "ja": "最新のスポーティーカジュアルスニーカーに合うスタイリッシュなコーデ",
+      "ko": "최신 스포티 캐주얼 스니커즈를 위한 스타일링",
+      "ar": "تنسيقات أنيقة لأحدث الأحذية الرياضية الكاجوال"
+    }
+  },
+  "3386": {
+    "name": "[OWF Edition] OW Series “The T",
+    "translations": {
+      "cs": "Owf Ow The Ten Ow edice, série a kolaborační kolekce",
+      "hu": "Owf Ow The Ten Ow kiadás, sorozat és együttműködéses kollekció",
+      "el": "Owf Ow The Ten Ow έκδοση, σειρά και συλλογή συνεργασίας",
+      "tr": "Owf Ow The Ten Ow edisyon, seri ve iş birliği koleksiyonu",
+      "uk": "Owf Ow The Ten Ow видання, серія та колекція співпраці",
+      "ja": "Owf Ow The Ten Ow エディション、シリーズ、コラボコレクション",
+      "ko": "Owf Ow The Ten Ow 에디션, 시리즈 및 협업 컬렉션",
+      "ar": "Owf Ow The Ten Ow إصدار وسلسلة ومجموعة تعاون"
+    }
+  },
+  "3382": {
+    "name": "The RS‑version UB5/10.0 series",
+    "translations": {
+      "cs": "RS UB5/10.0 verze, série: pravé materiály, špičkový model na trhu, výhradně pro export, do velikosti 48",
+      "hu": "RS UB5/10.0 változat, sorozat: valódi anyagok, csúcskategóriás piaci modell, kizárólag exportra, 48-as méretig",
+      "el": "RS UB5/10.0 έκδοση, σειρά: γνήσια υλικά, κορυφαίο μοντέλο της αγοράς, αποκλειστικά για εξαγωγή, έως μέγεθος 48",
+      "tr": "RS UB5/10.0 sürüm, seri: gerçek malzemeler, üst düzey piyasa modeli, yalnızca ihracat için, 48 numaraya kadar",
+      "uk": "RS UB5/10.0 версія, серія: справжні матеріали, топова модель на ринку, лише для експорту, до розміру 48",
+      "ja": "RS UB5/10.0 バージョン、シリーズ：本物の素材、市場トップクラスのモデル、輸出専用、サイズ48まで",
+      "ko": "RS UB5/10.0 버전, 시리즈: 실제 소재, 최고급 시장 모델, 수출 전용, 최대 48 사이즈",
+      "ar": "RS UB5/10.0 نسخة، سلسلة: مواد أصلية، طراز من الفئة العليا في السوق، للتصدير فقط، حتى مقاس 48"
+    }
+  },
+  "3371": {
+    "name": "New Christmas-style versatile",
+    "translations": {
+      "cs": "nové univerzální módní pánské volnočasové tenisky ve vánočním stylu",
+      "hu": "új, könnyen kombinálható divatos férfi hétköznapi tornacipő karácsonyi stílusban",
+      "el": "νέα ευκολοσυνδύαστα μοντέρνα ανδρικά καθημερινά αθλητικά παπούτσια σε χριστουγεννιάτικο στιλ",
+      "tr": "yeni kolay kombinlenen moda erkek günlük spor ayakkabısı, Noel tarzı",
+      "uk": "нові універсальні модні чоловічі повсякденні кросівки в різдвяному стилі",
+      "ja": "新しいクリスマススタイルの着回しやすいメンズカジュアルスニーカー",
+      "ko": "새로운 크리스마스 스타일의 활용도 높은 남성 캐주얼 스니커즈",
+      "ar": "حذاء رياضي رجالي كاجوال عصري سهل التنسيق بطراز عيد الميلاد"
+    }
+  },
+  "3370": {
+    "name": "Sneaker D-I-O * R B- 2*2",
+    "translations": {
+      "cs": "D I O R B 2 2 tenisky",
+      "hu": "D I O R B 2 2 tornacipő",
+      "el": "D I O R B 2 2 αθλητικά παπούτσια",
+      "tr": "D I O R B 2 2 spor ayakkabı",
+      "uk": "D I O R B 2 2 кросівки",
+      "ja": "D I O R B 2 2 スニーカー",
+      "ko": "D I O R B 2 2 스니커즈",
+      "ar": "D I O R B 2 2 حذاء رياضي"
+    }
+  },
+  "3366": {
+    "name": "[TG Batch] Vej*a Campo Chrom S",
+    "translations": {
+      "cs": "Tg Vej A Campo Chrom šarže, série bílých tenisek",
+      "hu": "Tg Vej A Campo Chrom széria, fehér tornacipők sorozata",
+      "el": "Tg Vej A Campo Chrom παρτίδα, σειρά λευκών αθλητικών παπουτσιών",
+      "tr": "Tg Vej A Campo Chrom parti, beyaz spor ayakkabı serisi",
+      "uk": "Tg Vej A Campo Chrom партія, серія білих кросівок",
+      "ja": "Tg Vej A Campo Chrom バッチ、白いスニーカーのシリーズ",
+      "ko": "Tg Vej A Campo Chrom 배치, 화이트 스니커즈 시리즈",
+      "ar": "Tg Vej A Campo Chrom دفعة، سلسلة أحذية رياضية بيضاء"
+    }
+  },
+  "3365": {
+    "name": "PH High-Quality Trendy Casual",
+    "translations": {
+      "cs": "Ph kvalitní módní volnočasová obuv pro muže a ženy Sy",
+      "hu": "Ph kiváló minőségű divatos hétköznapi cipő férfiaknak és nőknek Sy",
+      "el": "Ph μοντέρνα καθημερινά παπούτσια υψηλής ποιότητας για άνδρες και γυναίκες Sy",
+      "tr": "Ph erkek ve kadınlar için yüksek kaliteli moda günlük ayakkabı Sy",
+      "uk": "Ph високоякісне модне повсякденне взуття для чоловіків і жінок Sy",
+      "ja": "Ph メンズ・レディース用の高品質でトレンディなカジュアルシューズ Sy",
+      "ko": "Ph 남녀 고품질 트렌디 캐주얼화 Sy",
+      "ar": "Ph حذاء كاجوال عصري عالي الجودة للرجال والنساء Sy"
+    }
+  },
+  "3359": {
+    "name": "D*G2.0 1s collection, LJR‑comp",
+    "translations": {
+      "cs": "D*G2.0 1s kolekce, kompatibilní s LJR, plná forma ET z Qingyuan",
+      "hu": "D*G2.0 1s kollekció, LJR-kompatibilis, Qingyuan teljes ET forma",
+      "el": "D*G2.0 1s συλλογή, συμβατή με LJR, πλήρες καλούπι ET Qingyuan",
+      "tr": "D*G2.0 1s koleksiyon, LJR uyumlu, Qingyuan tam ET kalıbı",
+      "uk": "D*G2.0 1s колекція, сумісна з LJR, повна форма ET із Qingyuan",
+      "ja": "D*G2.0 1s コレクション、LJR互換、Qingyuan製フルET型",
+      "ko": "D*G2.0 1s 컬렉션, LJR 호환, Qingyuan 전체 ET 금형",
+      "ar": "D*G2.0 1s مجموعة متوافقة مع LJR، قالب ET كامل من Qingyuan"
+    }
+  },
+  "3358": {
+    "name": "N * K casual sneakers D * u-*",
+    "translations": {
+      "cs": "N K D U N K S B volnočasové tenisky",
+      "hu": "N K D U N K S B hétköznapi tornacipő",
+      "el": "N K D U N K S B καθημερινά αθλητικά παπούτσια",
+      "tr": "N K D U N K S B günlük spor ayakkabı",
+      "uk": "N K D U N K S B повсякденні кросівки",
+      "ja": "N K D U N K S B カジュアルスニーカー",
+      "ko": "N K D U N K S B 캐주얼 스니커즈",
+      "ar": "N K D U N K S B حذاء رياضي كاجوال"
+    }
+  },
+  "3350": {
+    "name": "WM J 8 Collection of independe",
+    "translations": {
+      "cs": "Wm J 8 kolekce nezávislých zakázkových stylů bez značky",
+      "hu": "Wm J 8 független egyedi, márka nélküli stílusok kollekciója",
+      "el": "Wm J 8 συλλογή ανεξάρτητων εξατομικευμένων σχεδίων χωρίς μάρκα",
+      "tr": "Wm J 8 bağımsız özel yapım markasız modeller koleksiyonu",
+      "uk": "Wm J 8 колекція незалежних індивідуальних моделей без бренду",
+      "ja": "Wm J 8 独自カスタムのノーブランドスタイルコレクション",
+      "ko": "Wm J 8 독립 맞춤형 무브랜드 스타일 컬렉션",
+      "ar": "Wm J 8 مجموعة أنماط مخصصة مستقلة دون علامة تجارية"
+    }
+  },
+  "3349": {
+    "name": "CBA Handsome, trendy basketbal",
+    "translations": {
+      "cs": "Cba módní basketbalová a skateová obuv 12",
+      "hu": "Cba divatos kosárlabda- és gördeszkás cipő 12",
+      "el": "Cba μοντέρνα παπούτσια μπάσκετ και σκέιτ 12",
+      "tr": "Cba moda basketbol ve kaykay ayakkabısı 12",
+      "uk": "Cba модне баскетбольне та скейт-взуття 12",
+      "ja": "Cba ファッショナブルなバスケットボール・スケートシューズ 12",
+      "ko": "Cba 멋진 농구화 및 스케이트화 12",
+      "ar": "Cba حذاء كرة سلة وتزلج عصري 12"
+    }
+  },
+  "3347": {
+    "name": "Z Classic Fashion Men's and Wo",
+    "translations": {
+      "cs": "Z klasická módní obuv / tenisky pro muže a ženy",
+      "hu": "Z klasszikus divatos férfi és női cipő / tornacipő",
+      "el": "Z κλασικά μοντέρνα παπούτσια / αθλητικά για άνδρες και γυναίκες",
+      "tr": "Z klasik moda erkek ve kadın ayakkabısı / spor ayakkabı",
+      "uk": "Z класичне модне взуття / кросівки для чоловіків і жінок",
+      "ja": "Z クラシックファッションのメンズ・レディースシューズ／スニーカー",
+      "ko": "Z 클래식 패션 남녀 신발 / 스니커즈",
+      "ar": "Z حذاء كلاسيكي عصري / حذاء رياضي للرجال والنساء"
+    }
+  },
+  "3346": {
+    "name": "B * lenc * aga A*re*n*a Collec",
+    "translations": {
+      "cs": "B Lenc Aga A Re N A kolekce",
+      "hu": "B Lenc Aga A Re N A kollekció",
+      "el": "B Lenc Aga A Re N A συλλογή",
+      "tr": "B Lenc Aga A Re N A koleksiyon",
+      "uk": "B Lenc Aga A Re N A колекція",
+      "ja": "B Lenc Aga A Re N A コレクション",
+      "ko": "B Lenc Aga A Re N A 컬렉션",
+      "ar": "B Lenc Aga A Re N A مجموعة"
+    }
+  },
+  "3342": {
+    "name": "Fanatic Knit “Pogba Exclusive”",
+    "translations": {
+      "cs": "pletené fotbalové kopačky FG Fanatic Knit, exkluzivní Pogba, Predator Freak",
+      "hu": "Fanatic Knit kötött FG futballcipő, Pogba exkluzív, Predator Freak",
+      "el": "πλεκτά ποδοσφαιρικά παπούτσια FG Fanatic Knit, αποκλειστικό Pogba, Predator Freak",
+      "tr": "Fanatic Knit örgü FG krampon, Pogba özel modeli, Predator Freak",
+      "uk": "в’язані футбольні бутси FG Fanatic Knit, ексклюзив Pogba, Predator Freak",
+      "ja": "Fanatic KnitのニットFGサッカースパイク、Pogba限定、Predator Freak",
+      "ko": "Fanatic Knit 니트 FG 축구화, Pogba 한정, Predator Freak",
+      "ar": "حذاء كرة قدم FG محبوك Fanatic Knit، إصدار Pogba حصري، Predator Freak"
+    }
+  },
+  "3338": {
+    "name": "High-end Joker Casual Sports S",
+    "translations": {
+      "cs": "Joker univerzální luxusní volnočasová sportovní obuv pro páry",
+      "hu": "Joker luxus könnyen kombinálható hétköznapi sportcipő pároknak",
+      "el": "Joker πολυτελή ευκολοσυνδύαστα καθημερινά αθλητικά παπούτσια για ζευγάρια",
+      "tr": "Joker üst segment, kolay kombinlenen çiftler için günlük spor ayakkabı",
+      "uk": "Joker преміальне універсальне повсякденне спортивне взуття для пар",
+      "ja": "Joker ペア向けの高級で合わせやすいカジュアルスポーツシューズ",
+      "ko": "Joker 커플용 프리미엄 코디하기 좋은 캐주얼 운동화",
+      "ar": "Joker حذاء رياضي كاجوال فاخر سهل التنسيق للأزواج"
+    }
+  },
+  "3337": {
+    "name": "A-*-1 Low-top sneakers men's a",
+    "translations": {
+      "cs": "A 1 nízké bílé tenisky pro muže a ženy, párový styl",
+      "hu": "A 1 alacsony szárú fehér tornacipő férfiaknak és nőknek, páros stílus",
+      "el": "A 1 χαμηλά λευκά αθλητικά παπούτσια για άνδρες και γυναίκες, στιλ για ζευγάρια",
+      "tr": "A 1 erkek ve kadınlar için alçak bilek beyaz spor ayakkabı, çift tarzı",
+      "uk": "A 1 низькі білі кросівки для чоловіків і жінок, парний стиль",
+      "ja": "A 1 メンズ・レディース用のペアスタイル白いローカットスニーカー",
+      "ko": "A 1 남녀 커플 스타일 화이트 로우탑 스니커즈",
+      "ar": "A 1 حذاء رياضي أبيض منخفض الرقبة للرجال والنساء بطراز للأزواج"
+    }
+  },
+  "3335": {
+    "name": "PK BATCH TRAINER",
+    "translations": {
+      "cs": "PK šarže tréninkové boty",
+      "hu": "PK széria edzőcipő",
+      "el": "PK παρτίδα παπούτσια προπόνησης",
+      "tr": "PK parti antrenman ayakkabısı",
+      "uk": "PK партія тренувальне взуття",
+      "ja": "PK バッチ トレーニングシューズ",
+      "ko": "PK 배치 트레이닝화",
+      "ar": "PK دفعة حذاء تدريب"
+    }
+  },
+  "3334": {
+    "name": "KZ KX Edition Comfortable, Ver",
+    "translations": {
+      "cs": "Kz Kx edice, pohodlná univerzální nízká volnočasová obuv s tlumením nárazů a odolností proti opotřebení Gd5",
+      "hu": "Kz Kx kiadás, kényelmes könnyen kombinálható alacsony szárú hétköznapi cipő ütéscsillapítással és kopásállósággal Gd5",
+      "el": "Kz Kx έκδοση, άνετα ευκολοσυνδύαστα χαμηλά καθημερινά παπούτσια με αντικραδασμική προστασία και αντοχή στη φθορά Gd5",
+      "tr": "Kz Kx seri, rahat ve kolay kombinlenen, darbe emici ve aşınmaya dayanıklı alçak bilek günlük ayakkabı Gd5",
+      "uk": "Kz Kx видання, зручне універсальне низьке повсякденне взуття з амортизацією та зносостійкістю Gd5",
+      "ja": "Kz Kx エディション、快適で合わせやすい衝撃吸収・耐摩耗ローカットカジュアルシューズ Gd5",
+      "ko": "Kz Kx 에디션, 편안하고 코디하기 좋은 충격 흡수 및 내마모성 로우탑 캐주얼화 Gd5",
+      "ar": "Kz Kx إصدار، حذاء كاجوال منخفض مريح وسهل التنسيق وممتص للصدمات ومقاوم للتآكل Gd5"
+    }
+  },
+  "3332": {
+    "name": "K*Z Guangdong-made authentic J",
+    "translations": {
+      "cs": "K*Z J1 vyrobeno v Guangdongu, speciální nabídka ve 30 barevných variantách, zakázkové styly",
+      "hu": "K*Z J1 Guangdongban készült, különleges ajánlat 30 színváltozatban, egyedi stílusok",
+      "el": "K*Z J1 κατασκευασμένο στο Guangdong, ειδική προσφορά σε 30 χρωματισμούς, εξατομικευμένα σχέδια",
+      "tr": "K*Z J1 Guangdong üretimi, 30 renk seçeneğinde özel teklif, özel yapım modeller",
+      "uk": "K*Z J1 виготовлено в Guangdong, спеціальна пропозиція у 30 кольорах, індивідуальні моделі",
+      "ja": "K*Z J1 Guangdong製、30色の特別オファー、カスタムスタイル",
+      "ko": "K*Z J1 Guangdong 제조, 30가지 색상의 특별 할인, 맞춤 제작 스타일",
+      "ar": "K*Z J1 صنع في Guangdong، عرض خاص بـ30 لوناً، أنماط مخصصة"
+    }
+  },
+  "3328": {
+    "name": "[OT Version] Air Vapormax Plus",
+    "translations": {
+      "cs": "Ot verze Air Vapormax Plus kolekce 36 48 5",
+      "hu": "Ot változat Air Vapormax Plus kollekció 36 48 5",
+      "el": "Ot έκδοση Air Vapormax Plus συλλογή 36 48 5",
+      "tr": "Ot sürüm Air Vapormax Plus koleksiyon 36 48 5",
+      "uk": "Ot версія Air Vapormax Plus колекція 36 48 5",
+      "ja": "Ot バージョン Air Vapormax Plus コレクション 36 48 5",
+      "ko": "Ot 버전 Air Vapormax Plus 컬렉션 36 48 5",
+      "ar": "Ot نسخة Air Vapormax Plus مجموعة 36 48 5"
+    }
+  },
+  "3326": {
+    "name": "[XY/PB Version] A/F1 Series",
+    "translations": {
+      "cs": "XY/PB verze A/F1",
+      "hu": "XY/PB változat A/F1",
+      "el": "XY/PB έκδοση A/F1",
+      "tr": "XY/PB sürüm A/F1",
+      "uk": "XY/PB версія A/F1",
+      "ja": "XY/PB バージョン A/F1",
+      "ko": "XY/PB 버전 A/F1",
+      "ar": "XY/PB نسخة A/F1"
+    }
+  },
+  "3323": {
+    "name": "High-quality fashion brand cas",
+    "translations": {
+      "cs": "Agt kvalitní značková módní volnočasová obuv, akce",
+      "hu": "Agt kiváló minőségű márkás divatos hétköznapi cipő, akció",
+      "el": "Agt καθημερινά παπούτσια μόδας επώνυμης μάρκας υψηλής ποιότητας, προσφορά",
+      "tr": "Agt yüksek kaliteli markalı moda günlük ayakkabı, etkinlik",
+      "uk": "Agt високоякісне брендове модне повсякденне взуття, акція",
+      "ja": "Agt 高品質ブランドファッションカジュアルシューズ、キャンペーン",
+      "ko": "Agt 고품질 브랜드 패션 캐주얼화, 행사",
+      "ar": "Agt حذاء كاجوال عصري من علامة تجارية بجودة عالية، عرض"
+    }
+  },
+  "3321": {
+    "name": "Shock-absorbing outdoor casual",
+    "translations": {
+      "cs": "venkovní volnočasové jarní běžecké boty s tlumením nárazů",
+      "hu": "kültéri hétköznapi tavaszi futócipő ütéscsillapítással",
+      "el": "καθημερινά ανοιξιάτικα παπούτσια τρεξίματος εξωτερικού χώρου με αντικραδασμική προστασία",
+      "tr": "darbe emici açık hava günlük ilkbahar koşu ayakkabısı",
+      "uk": "повсякденне весняне бігове взуття для вулиці з амортизацією",
+      "ja": "衝撃吸収の屋外用春向けカジュアルランニングシューズ",
+      "ko": "충격 흡수 야외 캐주얼 봄 러닝화",
+      "ar": "حذاء جري ربيعي كاجوال للأنشطة الخارجية ممتص للصدمات"
+    }
+  },
+  "3313": {
+    "name": "S2 version A * F1 collection s",
+    "translations": {
+      "cs": "S2 A F1 verze kolekce vlastních zakázkových stylů bez značky",
+      "hu": "S2 A F1 változat saját egyedi, márka nélküli stílusok kollekciója",
+      "el": "S2 A F1 έκδοση συλλογή εξατομικευμένων σχεδίων χωρίς μάρκα",
+      "tr": "S2 A F1 sürüm özel yapım markasız modeller koleksiyonu",
+      "uk": "S2 A F1 версія колекція власних індивідуальних моделей без бренду",
+      "ja": "S2 A F1 バージョン 独自カスタムのノーブランドスタイルコレクション",
+      "ko": "S2 A F1 버전 자체 맞춤형 무브랜드 스타일 컬렉션",
+      "ar": "S2 A F1 نسخة مجموعة أنماط مخصصة دون علامة تجارية"
+    }
+  },
+  "3310": {
+    "name": "WM Version J 11 Collection of",
+    "translations": {
+      "cs": "Wm J 11 verze kolekce nezávislých zakázkových stylů bez značky",
+      "hu": "Wm J 11 változat független egyedi, márka nélküli stílusok kollekciója",
+      "el": "Wm J 11 έκδοση συλλογή ανεξάρτητων εξατομικευμένων σχεδίων χωρίς μάρκα",
+      "tr": "Wm J 11 sürüm bağımsız özel yapım markasız modeller koleksiyonu",
+      "uk": "Wm J 11 версія колекція незалежних індивідуальних моделей без бренду",
+      "ja": "Wm J 11 バージョン 独自カスタムのノーブランドスタイルコレクション",
+      "ko": "Wm J 11 버전 독립 맞춤형 무브랜드 스타일 컬렉션",
+      "ar": "Wm J 11 نسخة مجموعة أنماط مخصصة مستقلة دون علامة تجارية"
+    }
+  },
+  "3308": {
+    "name": "D * I * o * r B * 3*0 welfare",
+    "translations": {
+      "cs": "D I O R B 3 0 speciální zvýhodněné nabídky",
+      "hu": "D I O R B 3 0 kedvezményes különleges ajánlatok",
+      "el": "D I O R B 3 0 ειδικές προσφορές σε προνομιακές τιμές",
+      "tr": "D I O R B 3 0 özel avantajlı teklifler",
+      "uk": "D I O R B 3 0 спеціальні вигідні пропозиції",
+      "ja": "D I O R B 3 0 お得な特別オファー",
+      "ko": "D I O R B 3 0 특별 혜택",
+      "ar": "D I O R B 3 0 عروض خاصة مخفضة"
+    }
+  },
+  "3306": {
+    "name": "LT3 Comfortable, Stylish, Non-",
+    "translations": {
+      "cs": "Lt3 pohodlné stylové nízké běžecké boty s protiskluzovou podrážkou a tlumením nárazů",
+      "hu": "Lt3 kényelmes, stílusos, csúszásmentes, ütéscsillapító alacsony szárú futócipő",
+      "el": "Lt3 άνετα κομψά χαμηλά παπούτσια τρεξίματος με αντιολισθητική και αντικραδασμική προστασία",
+      "tr": "Lt3 rahat, şık, kaymaz ve darbe emici alçak bilek koşu ayakkabısı",
+      "uk": "Lt3 зручне стильне низьке бігове взуття з протиковзанням і амортизацією",
+      "ja": "Lt3 快適でスタイリッシュ、滑りにくく衝撃を吸収するローカットランニングシューズ",
+      "ko": "Lt3 편안하고 세련된 미끄럼 방지 충격 흡수 로우탑 러닝화",
+      "ar": "Lt3 حذاء جري منخفض مريح وأنيق ومقاوم للانزلاق وممتص للصدمات"
+    }
+  },
+  "3303": {
+    "name": "Limited-Time Clearance N-Shoes",
+    "translations": {
+      "cs": "časově omezený výprodej obuvi N",
+      "hu": "időben korlátozott N-cipő kiárusítás",
+      "el": "εκκαθάριση παπουτσιών N για περιορισμένο χρόνο",
+      "tr": "sınırlı süreli N ayakkabı tasfiyesi",
+      "uk": "обмежений у часі розпродаж взуття N",
+      "ja": "期間限定Nシューズクリアランス",
+      "ko": "기간 한정 N 신발 재고 정리",
+      "ar": "تصفية محدودة الوقت لأحذية N"
+    }
+  },
+  "3301": {
+    "name": "H*P‑version Bad Bunny x AD Gaz",
+    "translations": {
+      "cs": "H*P Bad Bunny x AD Gazelle verze kolekce vlastních zakázkových stylů bez značky",
+      "hu": "H*P Bad Bunny x AD Gazelle változat saját egyedi, márka nélküli stílusok kollekciója",
+      "el": "H*P Bad Bunny x AD Gazelle έκδοση συλλογή εξατομικευμένων σχεδίων χωρίς μάρκα",
+      "tr": "H*P Bad Bunny x AD Gazelle sürüm özel yapım markasız modeller koleksiyonu",
+      "uk": "H*P Bad Bunny x AD Gazelle версія колекція власних індивідуальних моделей без бренду",
+      "ja": "H*P Bad Bunny x AD Gazelle バージョン 独自カスタムのノーブランドスタイルコレクション",
+      "ko": "H*P Bad Bunny x AD Gazelle 버전 자체 맞춤형 무브랜드 스타일 컬렉션",
+      "ar": "H*P Bad Bunny x AD Gazelle نسخة مجموعة أنماط مخصصة دون علامة تجارية"
+    }
+  },
+  "3300": {
+    "name": "[GZ Edition] Link 1 RO, unmark",
+    "translations": {
+      "cs": "Gz edice odkaz 1 Ro bez označení",
+      "hu": "Gz kiadás link 1 Ro jelöletlen",
+      "el": "Gz έκδοση σύνδεσμος 1 Ro χωρίς σήμανση",
+      "tr": "Gz edisyon bağlantı 1 Ro işaretsiz",
+      "uk": "Gz видання посилання 1 Ro без позначення",
+      "ja": "Gz エディション リンク 1 Ro 無印",
+      "ko": "Gz 에디션 링크 1 Ro 표시 없음",
+      "ar": "Gz إصدار رابط 1 Ro دون علامة"
+    }
+  },
+  "3299": {
+    "name": "Inventory clearance",
+    "translations": {
+      "cs": "výprodej zásob",
+      "hu": "készletkisöprés",
+      "el": "εκκαθάριση αποθέματος",
+      "tr": "stok tasfiyesi",
+      "uk": "розпродаж запасів",
+      "ja": "在庫一掃",
+      "ko": "재고 정리",
+      "ar": "تصفية المخزون"
+    }
+  },
+  "3292": {
+    "name": "YH/S Edition NK Pegasus Collec",
+    "translations": {
+      "cs": "Yh S edice Nk Pegasus kolekce",
+      "hu": "Yh S kiadás Nk Pegasus kollekció",
+      "el": "Yh S έκδοση Nk Pegasus συλλογή",
+      "tr": "Yh S edisyon Nk Pegasus koleksiyon",
+      "uk": "Yh S видання Nk Pegasus колекція",
+      "ja": "Yh S エディション Nk Pegasus コレクション",
+      "ko": "Yh S 에디션 Nk Pegasus 컬렉션",
+      "ar": "Yh S إصدار Nk Pegasus مجموعة"
+    }
+  },
+  "3286": {
+    "name": "XP Version 2.0 J1 Low-Price Sp",
+    "translations": {
+      "cs": "Xp 2 0 J1 verze, kolekce se speciální nabídkou za nízkou cenu",
+      "hu": "Xp 2 0 J1 változat, alacsony árú különleges ajánlat kollekció",
+      "el": "Xp 2 0 J1 έκδοση, συλλογή ειδικής προσφοράς σε χαμηλή τιμή",
+      "tr": "Xp 2 0 J1 sürüm, düşük fiyatlı özel teklif koleksiyonu",
+      "uk": "Xp 2 0 J1 версія, колекція спеціальної пропозиції за низькою ціною",
+      "ja": "Xp 2 0 J1 バージョン、低価格の特別オファーコレクション",
+      "ko": "Xp 2 0 J1 버전, 저가 특별 할인 컬렉션",
+      "ar": "Xp 2 0 J1 نسخة، مجموعة عرض خاص بسعر منخفض"
+    }
+  },
+  "3282": {
+    "name": "LO01-Comfortable Casual Shock",
+    "translations": {
+      "cs": "Lo01 pohodlné volnočasové boty s tlumením nárazů a protiskluzovou podrážkou",
+      "hu": "Lo01 kényelmes hétköznapi cipő ütéscsillapítással és csúszásgátló talppal",
+      "el": "Lo01 άνετα καθημερινά παπούτσια με αντικραδασμική και αντιολισθητική προστασία",
+      "tr": "Lo01 rahat günlük, darbe emici ve kaymaz ayakkabı",
+      "uk": "Lo01 зручне повсякденне взуття з амортизацією та протиковзанням",
+      "ja": "Lo01 快適で衝撃を吸収し滑りにくいカジュアルシューズ",
+      "ko": "Lo01 편안한 충격 흡수 및 미끄럼 방지 캐주얼화",
+      "ar": "Lo01 حذاء كاجوال مريح ممتص للصدمات ومقاوم للانزلاق"
+    }
+  },
+  "3281": {
+    "name": "TopB6D Comfortable and durable",
+    "translations": {
+      "cs": "Topb6D pohodlné a odolné nízké turistické boty, protiskluzové, nepromokavé a prodyšné",
+      "hu": "Topb6D kényelmes és tartós alacsony szárú túracipő, csúszásmentes, vízálló és légáteresztő",
+      "el": "Topb6D άνετα και ανθεκτικά χαμηλά παπούτσια πεζοπορίας, αντιολισθητικά, αδιάβροχα και διαπνέοντα",
+      "tr": "Topb6D rahat ve dayanıklı alçak bilek yürüyüş ayakkabısı, kaymaz, su geçirmez ve nefes alabilir",
+      "uk": "Topb6D зручне та міцне низьке туристичне взуття, нековзке, водонепроникне й дихаюче",
+      "ja": "Topb6D 快適で丈夫、滑りにくく防水・通気性のあるローカットハイキングシューズ",
+      "ko": "Topb6D 편안하고 내구성 있는 미끄럼 방지 방수 통기성 로우탑 하이킹화",
+      "ar": "Topb6D حذاء مشي منخفض مريح ومتين ومقاوم للانزلاق والماء وجيد التهوية"
+    }
+  },
+  "3276": {
+    "name": "TC 16-TOP quality Classic snea",
+    "translations": {
+      "cs": "Tc 16 klasické tenisky a volnočasová obuv nejvyšší kvality, unisex styl",
+      "hu": "Tc 16 csúcsminőségű klasszikus tornacipő és hétköznapi cipő, uniszex stílus",
+      "el": "Tc 16 κλασικά αθλητικά και καθημερινά παπούτσια κορυφαίας ποιότητας, unisex στιλ",
+      "tr": "Tc 16 üst kalite klasik spor ve günlük ayakkabı, unisex tarz",
+      "uk": "Tc 16 класичні кросівки та повсякденне взуття найвищої якості, стиль унісекс",
+      "ja": "Tc 16 最高品質のクラシックスニーカーとカジュアルシューズ、ユニセックススタイル",
+      "ko": "Tc 16 최상급 클래식 스니커즈와 캐주얼화, 유니섹스 스타일",
+      "ar": "Tc 16 حذاء رياضي كلاسيكي وكاجوال بجودة عالية وبطراز للجنسين"
+    }
+  },
+  "3266": {
+    "name": "WM Gift Box Edition Bad Bunny",
+    "translations": {
+      "cs": "Wm Bad Bunny X Ad Forum edice v dárkové krabici, nízké tenisky",
+      "hu": "Wm Bad Bunny X Ad Forum díszdobozos kiadás, alacsony szárú tornacipő",
+      "el": "Wm Bad Bunny X Ad Forum έκδοση σε κουτί δώρου, χαμηλά αθλητικά παπούτσια",
+      "tr": "Wm Bad Bunny X Ad Forum hediye kutulu seri, alçak bilek spor ayakkabı",
+      "uk": "Wm Bad Bunny X Ad Forum видання в подарунковій коробці, низькі кросівки",
+      "ja": "Wm Bad Bunny X Ad Forum ギフトボックス版、ローカットスニーカー",
+      "ko": "Wm Bad Bunny X Ad Forum 선물 상자 에디션, 로우탑 스니커즈",
+      "ar": "Wm Bad Bunny X Ad Forum إصدار بعلبة هدايا، حذاء رياضي منخفض الرقبة"
+    }
+  },
+  "3265": {
+    "name": "Doomsday/MAX Version JA3 Moran",
+    "translations": {
+      "cs": "Doomsday Max Ja3 Morant 3 verze, série třetí generace",
+      "hu": "Doomsday Max Ja3 Morant 3 változat, harmadik generációs sorozat",
+      "el": "Doomsday Max Ja3 Morant 3 έκδοση, σειρά τρίτης γενιάς",
+      "tr": "Doomsday Max Ja3 Morant 3 sürüm, üçüncü nesil seri",
+      "uk": "Doomsday Max Ja3 Morant 3 версія, серія третього покоління",
+      "ja": "Doomsday Max Ja3 Morant 3 バージョン、第3世代シリーズ",
+      "ko": "Doomsday Max Ja3 Morant 3 버전, 3세대 시리즈",
+      "ar": "Doomsday Max Ja3 Morant 3 نسخة، سلسلة الجيل الثالث"
+    }
+  },
+  "3247": {
+    "name": "[WZ Edition] ON",
+    "translations": {
+      "cs": "Wz edice On",
+      "hu": "Wz kiadás On",
+      "el": "Wz έκδοση On",
+      "tr": "Wz edisyon On",
+      "uk": "Wz видання On",
+      "ja": "Wz エディション On",
+      "ko": "Wz 에디션 On",
+      "ar": "Wz إصدار On"
+    }
+  },
+  "3241": {
+    "name": "GZ version RO / R*ick O*wens,",
+    "translations": {
+      "cs": "Gz Ro R Ick O Wens verze zakázkový styl, není značkovým výrobkem",
+      "hu": "Gz Ro R Ick O Wens változat egyedi stílus, nem márkás termék",
+      "el": "Gz Ro R Ick O Wens έκδοση εξατομικευμένο σχέδιο, δεν είναι επώνυμο προϊόν",
+      "tr": "Gz Ro R Ick O Wens sürüm özel yapım model, markalı ürün değildir",
+      "uk": "Gz Ro R Ick O Wens версія індивідуальний стиль, не є брендовим товаром",
+      "ja": "Gz Ro R Ick O Wens バージョン カスタムスタイル、ブランド品ではありません",
+      "ko": "Gz Ro R Ick O Wens 버전 맞춤형 스타일, 브랜드 제품이 아닙니다",
+      "ar": "Gz Ro R Ick O Wens نسخة تصميم مخصص، ليس منتجاً ذا علامة تجارية"
+    }
+  },
+  "3240": {
+    "name": "NB 1906 Non-slip, wear-resista",
+    "translations": {
+      "cs": "Nb 1906 nízká prodyšná volnočasová obuv pro páry, protiskluzová, odolná proti opotřebení, univerzální unisex tenisky s tlumením nárazů · dokonalé",
+      "hu": "Nb 1906 alacsony szárú légáteresztő hétköznapi cipő pároknak, csúszás- és kopásálló, sokoldalú uniszex tornacipő ütéscsillapítással · tökéletes",
+      "el": "Nb 1906 χαμηλά διαπνέοντα καθημερινά παπούτσια για ζευγάρια, αντιολισθητικά και ανθεκτικά στη φθορά, ευκολοσυνδύαστα unisex αθλητικά με αντικραδασμική προστασία · τέλειο",
+      "tr": "Nb 1906 çiftler için alçak bilek nefes alabilir günlük ayakkabı, kaymaz ve aşınmaya dayanıklı, darbe emici çok yönlü unisex spor ayakkabı · mükemmel",
+      "uk": "Nb 1906 низьке дихаюче повсякденне взуття для пар, нековзке й зносостійке, універсальні кросівки унісекс з амортизацією · ідеально",
+      "ja": "Nb 1906 ペア向けの滑りにくく耐摩耗性・通気性のあるローカットカジュアルシューズ、衝撃吸収付きユニセックススニーカー · 最適",
+      "ko": "Nb 1906 커플용 미끄럼 및 마모 방지 통기성 로우탑 캐주얼화, 충격 흡수 유니섹스 스니커즈 · 완벽",
+      "ar": "Nb 1906 حذاء كاجوال منخفض للأزواج جيد التهوية ومقاوم للانزلاق والتآكل، حذاء رياضي للجنسين ممتص للصدمات · مثالي"
+    }
+  },
+  "3239": {
+    "name": "TopB4D Comfortable all-match w",
+    "translations": {
+      "cs": "Topb4D pohodlné univerzální nízké běžecké boty odolné proti opotřebení, prodyšné a poskytující oporu",
+      "hu": "Topb4D kényelmes, könnyen kombinálható, kopásálló, légáteresztő és tartást nyújtó alacsony szárú futócipő",
+      "el": "Topb4D άνετα ευκολοσυνδύαστα χαμηλά παπούτσια τρεξίματος, ανθεκτικά στη φθορά, διαπνέοντα και υποστηρικτικά",
+      "tr": "Topb4D rahat, kolay kombinlenen, aşınmaya dayanıklı, nefes alabilir ve destekleyici alçak bilek koşu ayakkabısı",
+      "uk": "Topb4D зручне універсальне низьке бігове взуття, зносостійке, дихаюче та з підтримкою",
+      "ja": "Topb4D 快適で合わせやすく耐摩耗性・通気性・サポート性のあるローカットランニングシューズ",
+      "ko": "Topb4D 편안하고 코디하기 좋은 내마모성 통기성 지지력 로우탑 러닝화",
+      "ar": "Topb4D حذاء جري منخفض مريح وسهل التنسيق ومقاوم للتآكل وجيد التهوية وداعم"
+    }
+  },
+  "3236": {
+    "name": "AGT1 new colorway low-top tren",
+    "translations": {
+      "cs": "Agt1 nová barevná varianta módních nízkých volnočasových skate bot Agt",
+      "hu": "Agt1 új színváltozatú divatos alacsony szárú hétköznapi gördeszkás cipő Agt",
+      "el": "Agt1 νέα χρωματική επιλογή σε μοντέρνα χαμηλά καθημερινά παπούτσια σκέιτ Agt",
+      "tr": "Agt1 yeni renk seçeneğinde moda alçak bilek günlük kaykay ayakkabısı Agt",
+      "uk": "Agt1 нова кольорова версія модного низького повсякденного скейт-взуття Agt",
+      "ja": "Agt1 新色のトレンディなローカットカジュアルスケートシューズ Agt",
+      "ko": "Agt1 새 컬러웨이 트렌디 로우탑 캐주얼 스케이트화 Agt",
+      "ar": "Agt1 حذاء تزلج كاجوال عصري منخفض الرقبة بلون جديد Agt"
+    }
+  },
+  "3231": {
+    "name": "Z‑Edition MIHARAYASUHIROMMY Mi",
+    "translations": {
+      "cs": "Z Miharayasuhirommy Mihara Yasuhiro edice, plátěné boty, zakázkový styl, nejde o značkový výrobek",
+      "hu": "Z Miharayasuhirommy Mihara Yasuhiro kiadás, vászoncipő, egyedi stílus, nem márkás termék",
+      "el": "Z Miharayasuhirommy Mihara Yasuhiro έκδοση, πάνινα παπούτσια, εξατομικευμένο σχέδιο, δεν είναι επώνυμο προϊόν",
+      "tr": "Z Miharayasuhirommy Mihara Yasuhiro seri, kanvas ayakkabı, özel yapım model, markalı ürün değildir",
+      "uk": "Z Miharayasuhirommy Mihara Yasuhiro видання, полотняне взуття, індивідуальний стиль, не є брендовим товаром",
+      "ja": "Z Miharayasuhirommy Mihara Yasuhiro エディション、キャンバスシューズ、カスタムスタイル、ブランド品ではありません",
+      "ko": "Z Miharayasuhirommy Mihara Yasuhiro 에디션, 캔버스 신발, 맞춤형 스타일, 브랜드 제품이 아닙니다",
+      "ar": "Z Miharayasuhirommy Mihara Yasuhiro إصدار، حذاء قماشي بتصميم مخصص، ليس منتجاً ذا علامة تجارية"
+    }
+  },
+  "3230": {
+    "name": "jump 5-Youth sports shoes dird",
+    "translations": {
+      "cs": "Jump 5 mládežnická sportovní obuv Dird",
+      "hu": "Jump 5 ifjúsági sportcipő Dird",
+      "el": "Jump 5 νεανικά αθλητικά παπούτσια Dird",
+      "tr": "Jump 5 genç spor ayakkabısı Dird",
+      "uk": "Jump 5 молодіжне спортивне взуття Dird",
+      "ja": "Jump 5 ジュニアスポーツシューズ Dird",
+      "ko": "Jump 5 청소년 스포츠화 Dird",
+      "ar": "Jump 5 حذاء رياضي للشباب Dird"
+    }
+  },
+  "3221": {
+    "name": "Mercurial 15-16-17 Football Sh",
+    "translations": {
+      "cs": "Mercurial 15 16 17 fotbalové boty v tajemném balení, náhodný výběr",
+      "hu": "Mercurial 15 16 17 futballcipő meglepetésdobozban, véletlenszerű kiszállítás",
+      "el": "Mercurial 15 16 17 παπούτσια ποδοσφαίρου σε κουτί έκπληξη, τυχαία αποστολή",
+      "tr": "Mercurial 15 16 17 gizemli kutuda futbol ayakkabısı, rastgele gönderim",
+      "uk": "Mercurial 15 16 17 футбольне взуття в коробці-сюрпризі, випадкове відправлення",
+      "ja": "Mercurial 15 16 17 サッカーシューズのミステリーブラインドボックス、ランダム配送",
+      "ko": "Mercurial 15 16 17 축구화 미스터리 블라인드 박스, 무작위 배송",
+      "ar": "Mercurial 15 16 17 حذاء كرة قدم في صندوق مفاجأة، إرسال عشوائي"
+    }
+  },
+  "3220": {
+    "name": "TOP/OWF Version AF 1 Series Co",
+    "translations": {
+      "cs": "Top Owf verze Af 1 série kolekce",
+      "hu": "Top Owf változat Af 1 sorozat kollekció",
+      "el": "Top Owf έκδοση Af 1 σειρά συλλογή",
+      "tr": "Top Owf sürüm Af 1 seri koleksiyon",
+      "uk": "Top Owf версія Af 1 серія колекція",
+      "ja": "Top Owf バージョン Af 1 シリーズ コレクション",
+      "ko": "Top Owf 버전 Af 1 시리즈 컬렉션",
+      "ar": "Top Owf نسخة Af 1 سلسلة مجموعة"
+    }
+  },
+  "3127": {
+    "name": "Air Jordan 1 Low Travis Scott",
+    "translations": {
+      "cs": "párové tenisky ve stylu Air Jordan 1 Low Travis Scott",
+      "hu": "páros tornacipő Air Jordan 1 Low Travis Scott stílusban",
+      "el": "αθλητικά παπούτσια για ζευγάρια σε στιλ Air Jordan 1 Low Travis Scott",
+      "tr": "Air Jordan 1 Low Travis Scott tarzı çift spor ayakkabısı",
+      "uk": "парні кросівки в стилі Air Jordan 1 Low Travis Scott",
+      "ja": "Air Jordan 1 Low Travis Scottスタイルのペアスニーカー",
+      "ko": "Air Jordan 1 Low Travis Scott 스타일 커플 스니커즈",
+      "ar": "حذاء رياضي للأزواج بطراز Air Jordan 1 Low Travis Scott"
+    }
+  },
+  "3126": {
+    "name": "Assassin Low-Top Waterproof FG",
+    "translations": {
+      "cs": "Assassin kolekce nízkých nepromokavých fotbalových kopaček FG 2",
+      "hu": "Assassin alacsony szárú vízálló FG futballcipők kollekciója 2",
+      "el": "Assassin συλλογή χαμηλών αδιάβροχων ποδοσφαιρικών παπουτσιών FG 2",
+      "tr": "Assassin alçak bilek su geçirmez FG krampon koleksiyonu 2",
+      "uk": "Assassin колекція низьких водонепроникних футбольних бутс FG 2",
+      "ja": "Assassin ローカット防水FGサッカースパイクコレクション 2",
+      "ko": "Assassin 로우탑 방수 FG 축구화 컬렉션 2",
+      "ar": "Assassin مجموعة أحذية كرة قدم FG منخفضة الرقبة ومقاومة للماء 2"
+    }
+  },
+  "3119": {
+    "name": "Louis Vuitton Skate Series Ret",
+    "translations": {
+      "cs": "Louis Vuitton Skate série maloobchodní krabice",
+      "hu": "Louis Vuitton Skate sorozat kiskereskedelmi doboz",
+      "el": "Louis Vuitton Skate σειρά κουτί λιανικής",
+      "tr": "Louis Vuitton Skate seri perakende kutusu",
+      "uk": "Louis Vuitton Skate серія роздрібна коробка",
+      "ja": "Louis Vuitton Skate シリーズ 小売用ボックス",
+      "ko": "Louis Vuitton Skate 시리즈 소매용 박스",
+      "ar": "Louis Vuitton Skate سلسلة علبة بيع بالتجزئة"
+    }
+  },
+  "3105": {
+    "name": "[GZ Edition] Link 1 RO, unmark",
+    "translations": {
+      "cs": "Gz edice odkaz 1 Ro bez označení",
+      "hu": "Gz kiadás link 1 Ro jelöletlen",
+      "el": "Gz έκδοση σύνδεσμος 1 Ro χωρίς σήμανση",
+      "tr": "Gz edisyon bağlantı 1 Ro işaretsiz",
+      "uk": "Gz видання посилання 1 Ro без позначення",
+      "ja": "Gz エディション リンク 1 Ro 無印",
+      "ko": "Gz 에디션 링크 1 Ro 표시 없음",
+      "ar": "Gz إصدار رابط 1 Ro دون علامة"
+    }
+  },
+  "3102": {
+    "name": "New sports shoes, men’s and wo",
+    "translations": {
+      "cs": "nová sportovní obuv, volnočasová obuv a basketbalová obuv pro muže a ženy",
+      "hu": "új sportcipő, férfi és női hétköznapi cipő és kosárlabdacipő",
+      "el": "νέα αθλητικά παπούτσια, καθημερινά παπούτσια για άνδρες και γυναίκες και παπούτσια μπάσκετ",
+      "tr": "yeni spor ayakkabı, erkek ve kadın günlük ayakkabısı ve basketbol ayakkabısı",
+      "uk": "нове спортивне взуття, повсякденне взуття для чоловіків і жінок та баскетбольне взуття",
+      "ja": "新しいスポーツシューズ、メンズ・レディース用カジュアルシューズ、バスケットボールシューズ",
+      "ko": "새 운동화, 남녀 캐주얼화 및 농구화",
+      "ar": "أحذية رياضية جديدة وأحذية كاجوال للرجال والنساء وأحذية كرة سلة"
+    }
+  },
+  "3093": {
+    "name": "Cloudtilt shock-absorbing, wea",
+    "translations": {
+      "cs": "Cloudtilt volnočasová obuv pro každodenní nošení s tlumením nárazů a odolností proti opotřebení",
+      "hu": "Cloudtilt mindennapi használatra való hétköznapi cipő ütéscsillapítással és kopásállósággal",
+      "el": "Cloudtilt καθημερινά παπούτσια με αντικραδασμική προστασία και αντοχή στη φθορά",
+      "tr": "Cloudtilt günlük kullanım için darbe emici ve aşınmaya dayanıklı ayakkabı",
+      "uk": "Cloudtilt повсякденне взуття з амортизацією та зносостійкістю",
+      "ja": "Cloudtilt 衝撃吸収と耐摩耗性のある普段使いのカジュアルシューズ",
+      "ko": "Cloudtilt 충격 흡수 및 내마모성 일상 캐주얼화",
+      "ar": "Cloudtilt حذاء كاجوال يومي ممتص للصدمات ومقاوم للتآكل"
+    }
+  },
+  "3055": {
+    "name": "*did*s Superst*r XLG Collectio",
+    "translations": {
+      "cs": "Did S Superst R Xlg kolekce",
+      "hu": "Did S Superst R Xlg kollekció",
+      "el": "Did S Superst R Xlg συλλογή",
+      "tr": "Did S Superst R Xlg koleksiyon",
+      "uk": "Did S Superst R Xlg колекція",
+      "ja": "Did S Superst R Xlg コレクション",
+      "ko": "Did S Superst R Xlg 컬렉션",
+      "ar": "Did S Superst R Xlg مجموعة"
+    }
+  },
+  "3040": {
+    "name": "【TOP version】 001 002- OMGBUY",
+    "translations": {
+      "cs": "špičková verze 001 002 Omgbuy",
+      "hu": "csúcsminőségű változat 001 002 Omgbuy",
+      "el": "κορυφαία έκδοση 001 002 Omgbuy",
+      "tr": "üst düzey sürüm 001 002 Omgbuy",
+      "uk": "топова версія 001 002 Omgbuy",
+      "ja": "トップバージョン 001 002 Omgbuy",
+      "ko": "최고급 버전 001 002 Omgbuy",
+      "ar": "نسخة عالية المستوى 001 002 Omgbuy"
+    }
+  },
+  "2932": {
+    "name": "OMEG (Seamaster series) SIZE:4",
+    "translations": {
+      "cs": "Omeg Seamaster série velikost 43Mm",
+      "hu": "Omeg Seamaster sorozat méret 43Mm",
+      "el": "Omeg Seamaster σειρά μέγεθος 43Mm",
+      "tr": "Omeg Seamaster seri beden 43Mm",
+      "uk": "Omeg Seamaster серія розмір 43Mm",
+      "ja": "Omeg Seamaster シリーズ サイズ 43Mm",
+      "ko": "Omeg Seamaster 시리즈 사이즈 43Mm",
+      "ar": "Omeg Seamaster سلسلة مقاس 43Mm"
+    }
+  },
+  "2921": {
+    "name": "E batch Samba Size:35-45",
+    "translations": {
+      "cs": "E šarže Samba velikost 35 45",
+      "hu": "E széria Samba méret 35 45",
+      "el": "E παρτίδα Samba μέγεθος 35 45",
+      "tr": "E parti Samba beden 35 45",
+      "uk": "E партія Samba розмір 35 45",
+      "ja": "E バッチ Samba サイズ 35 45",
+      "ko": "E 배치 Samba 사이즈 35 45",
+      "ar": "E دفعة Samba مقاس 35 45"
+    }
+  },
+  "2857": {
+    "name": "Stussy Jersey series",
+    "translations": {
+      "cs": "Stussy dres série",
+      "hu": "Stussy mez sorozat",
+      "el": "Stussy φανέλα σειρά",
+      "tr": "Stussy forma seri",
+      "uk": "Stussy джерсі серія",
+      "ja": "Stussy ジャージ シリーズ",
+      "ko": "Stussy 저지 시리즈",
+      "ar": "Stussy قميص رياضي سلسلة"
+    }
+  },
+  "1114": {
+    "name": "Chrome Hearts Glasses series",
+    "translations": {
+      "cs": "Chrome Hearts brýle série",
+      "hu": "Chrome Hearts szemüveg sorozat",
+      "el": "Chrome Hearts γυαλιά σειρά",
+      "tr": "Chrome Hearts gözlük seri",
+      "uk": "Chrome Hearts окуляри серія",
+      "ja": "Chrome Hearts 眼鏡 シリーズ",
+      "ko": "Chrome Hearts 안경 시리즈",
+      "ar": "Chrome Hearts نظارات سلسلة"
+    }
+  },
+  "1109": {
+    "name": "Brand Perfumes series",
+    "translations": {
+      "cs": "značkové parfémy série",
+      "hu": "márkás parfümök sorozat",
+      "el": "επώνυμα αρώματα σειρά",
+      "tr": "markalı parfümler seri",
+      "uk": "брендові парфуми серія",
+      "ja": "ブランド 香水 シリーズ",
+      "ko": "브랜드 향수 시리즈",
+      "ar": "من علامات تجارية عطور سلسلة"
+    }
+  },
+  "1037": {
+    "name": "OG Batch Air Jordan 4 Retro",
+    "translations": {
+      "cs": "OG šarže Air Jordan 4 Retro",
+      "hu": "OG széria Air Jordan 4 Retro",
+      "el": "OG παρτίδα Air Jordan 4 Retro",
+      "tr": "OG parti Air Jordan 4 Retro",
+      "uk": "OG партія Air Jordan 4 Retro",
+      "ja": "OG バッチ Air Jordan 4 Retro",
+      "ko": "OG 배치 Air Jordan 4 Retro",
+      "ar": "OG دفعة Air Jordan 4 Retro"
+    }
+  },
+  "374": {
+    "name": "OG batch Special Offer",
+    "translations": {
+      "cs": "OG šarže speciální nabídka",
+      "hu": "OG széria különleges ajánlat",
+      "el": "OG παρτίδα ειδική προσφορά",
+      "tr": "OG parti özel teklif",
+      "uk": "OG партія спеціальна пропозиція",
+      "ja": "OG バッチ 特別オファー",
+      "ko": "OG 배치 특별 할인",
+      "ar": "OG دفعة عرض خاص"
+    }
+  },
+  "301": {
+    "name": "[OG Batch] M1B SHOES",
+    "translations": {
+      "cs": "[OG šarže] M1B boty",
+      "hu": "[OG széria] M1B cipő",
+      "el": "[OG παρτίδα] M1B παπούτσια",
+      "tr": "[OG parti] M1B ayakkabı",
+      "uk": "[OG партія] M1B взуття",
+      "ja": "[OG バッチ] M1B シューズ",
+      "ko": "[OG 배치] M1B 신발",
+      "ar": "[OG دفعة] M1B أحذية"
+    }
+  }
+}

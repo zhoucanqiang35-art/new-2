@@ -1,0 +1,79 @@
+{
+  "keys": [
+    "How to review QC photos",
+    "Planning a parcel",
+    "Choosing a category"
+  ],
+  "rows": {
+    "fi": [
+      "QC-kuvien tarkistaminen",
+      "Paketin suunnittelu",
+      "Kategorian valinta"
+    ],
+    "da": [
+      "Sådan gennemgår du QC-billeder",
+      "Planlægning af en pakke",
+      "Valg af kategori"
+    ],
+    "nb": [
+      "Slik gjennomgår du QC-bilder",
+      "Planlegging av en pakke",
+      "Velg en kategori"
+    ],
+    "cs": [
+      "Jak kontrolovat fotografie QC",
+      "Plánování zásilky",
+      "Výběr kategorie"
+    ],
+    "sk": [
+      "Ako skontrolovať fotografie QC",
+      "Plánovanie zásielky",
+      "Výber kategórie"
+    ],
+    "hu": [
+      "A QC-fotók ellenőrzése",
+      "Csomag tervezése",
+      "Kategória kiválasztása"
+    ],
+    "ro": [
+      "Cum verifici fotografiile QC",
+      "Planificarea unui colet",
+      "Alegerea unei categorii"
+    ],
+    "el": [
+      "Πώς να ελέγξετε τις φωτογραφίες QC",
+      "Σχεδιασμός δέματος",
+      "Επιλογή κατηγορίας"
+    ],
+    "tr": [
+      "QC fotoğrafları nasıl incelenir",
+      "Paket planlama",
+      "Kategori seçimi"
+    ],
+    "uk": [
+      "Як перевіряти фото QC",
+      "Планування посилки",
+      "Вибір категорії"
+    ],
+    "ar": [
+      "كيفية مراجعة صور فحص الجودة",
+      "التخطيط للشحنة",
+      "اختيار فئة"
+    ],
+    "ja": [
+      "QC写真の確認方法",
+      "荷物の計画",
+      "カテゴリーの選び方"
+    ],
+    "ko": [
+      "QC 사진 확인 방법",
+      "배송 소포 계획하기",
+      "카테고리 선택하기"
+    ],
+    "vi": [
+      "Cách kiểm tra ảnh QC",
+      "Lập kế hoạch gửi kiện hàng",
+      "Chọn danh mục"
+    ]
+  }
+}

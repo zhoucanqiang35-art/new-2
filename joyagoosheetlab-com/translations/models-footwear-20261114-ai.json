@@ -1,0 +1,125 @@
+{
+  "items": [
+    {
+      "name": "Air Jordan 4 OG Batch Sneakers",
+      "translations": {
+        "fi": "Air Jordan 4 OG Batch tennarit",
+        "da": "Air Jordan 4 OG Batch sneakers",
+        "nb": "Air Jordan 4 OG Batch sneakers",
+        "sk": "Air Jordan 4 OG Batch tenisky",
+        "ro": "pantofi sport Air Jordan 4 OG Batch",
+        "vi": "giày sneaker Air Jordan 4 OG Batch"
+      }
+    },
+    {
+      "name": "Air Jordan 4 Sneakers",
+      "translations": {
+        "fi": "Air Jordan 4 tennarit",
+        "da": "Air Jordan 4 sneakers",
+        "nb": "Air Jordan 4 sneakers",
+        "sk": "Air Jordan 4 tenisky",
+        "ro": "pantofi sport Air Jordan 4",
+        "vi": "giày sneaker Air Jordan 4"
+      }
+    },
+    {
+      "name": "Air Jordan 1 Low Sneakers",
+      "translations": {
+        "da": "Air Jordan 1 Low sneakers",
+        "nb": "Air Jordan 1 Low sneakers",
+        "sk": "Air Jordan 1 Low tenisky",
+        "vi": "giày sneaker Air Jordan 1 Low"
+      }
+    },
+    {
+      "name": "Air Jordan 11 Basketball Shoes",
+      "translations": {
+        "fi": "Air Jordan 11 koripallokengät",
+        "da": "Air Jordan 11 basketballsko",
+        "nb": "Air Jordan 11 basketballsko",
+        "cs": "Air Jordan 11 basketbalové boty",
+        "sk": "Air Jordan 11 basketbalová obuv",
+        "hu": "Air Jordan 11 kosárlabdacipő",
+        "ro": "pantofi de baschet Air Jordan 11",
+        "el": "παπούτσια μπάσκετ Air Jordan 11",
+        "tr": "Air Jordan 11 basketbol ayakkabısı",
+        "uk": "баскетбольне взуття Air Jordan 11",
+        "ar": "حذاء كرة سلة Air Jordan 11",
+        "ja": "Air Jordan 11 バスケットボールシューズ",
+        "ko": "Air Jordan 11 농구화",
+        "vi": "giày bóng rổ Air Jordan 11"
+      }
+    },
+    {
+      "name": "Air Jordan 4 Basketball Shoes",
+      "translations": {
+        "fi": "Air Jordan 4 koripallokengät",
+        "da": "Air Jordan 4 basketballsko",
+        "nb": "Air Jordan 4 basketballsko",
+        "cs": "Air Jordan 4 basketbalové boty",
+        "sk": "Air Jordan 4 basketbalová obuv",
+        "hu": "Air Jordan 4 kosárlabdacipő",
+        "ro": "pantofi de baschet Air Jordan 4",
+        "el": "παπούτσια μπάσκετ Air Jordan 4",
+        "tr": "Air Jordan 4 basketbol ayakkabısı",
+        "uk": "баскетбольне взуття Air Jordan 4",
+        "ar": "حذاء كرة سلة Air Jordan 4",
+        "ja": "Air Jordan 4 バスケットボールシューズ",
+        "ko": "Air Jordan 4 농구화",
+        "vi": "giày bóng rổ Air Jordan 4"
+      }
+    },
+    {
+      "name": "Air Jordan 4 High Sneakers",
+      "translations": {
+        "fi": "Air Jordan 4 High tennarit",
+        "da": "Air Jordan 4 High sneakers",
+        "nb": "Air Jordan 4 High sneakers",
+        "sk": "Air Jordan 4 High tenisky",
+        "ro": "pantofi sport Air Jordan 4 High",
+        "vi": "giày sneaker Air Jordan 4 High"
+      }
+    },
+    {
+      "name": "Air Max 90 Running Shoes",
+      "translations": {
+        "fi": "Air Max 90 juoksukengät",
+        "da": "Air Max 90 løbesko",
+        "nb": "Air Max 90 løpesko",
+        "sk": "Air Max 90 bežecká obuv",
+        "ro": "pantofi de alergare Air Max 90",
+        "vi": "giày chạy bộ Air Max 90"
+      }
+    },
+    {
+      "name": "Air Max Plus TN Running Shoes",
+      "translations": {
+        "fi": "Air Max Plus TN juoksukengät",
+        "da": "Air Max Plus TN løbesko",
+        "nb": "Air Max Plus TN løpesko",
+        "sk": "Air Max Plus TN bežecká obuv",
+        "ro": "pantofi de alergare Air Max Plus TN",
+        "vi": "giày chạy bộ Air Max Plus TN"
+      }
+    },
+    {
+      "name": "Air Max Plus TN Retro Sneakers",
+      "translations": {
+        "fi": "Air Max Plus TN Retro tennarit",
+        "da": "Air Max Plus TN Retro sneakers",
+        "nb": "Air Max Plus TN Retro sneakers",
+        "sk": "Air Max Plus TN Retro tenisky",
+        "ro": "pantofi sport Air Max Plus TN Retro",
+        "vi": "giày sneaker Air Max Plus TN Retro"
+      }
+    },
+    {
+      "name": "Air Jordan 3 Retro Sneakers",
+      "translations": {
+        "da": "Air Jordan 3 Retro sneakers",
+        "sk": "Air Jordan 3 Retro tenisky",
+        "vi": "giày sneaker Air Jordan 3 Retro"
+      }
+    }
+  ]
+}

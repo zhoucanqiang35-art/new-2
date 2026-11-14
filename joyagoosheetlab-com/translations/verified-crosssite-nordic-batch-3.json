@@ -1,0 +1,218 @@
+{
+  "items": [
+    {
+      "name": "Black Smartwatch",
+      "sourceId": "7384",
+      "translations": {
+        "fi": "Musta älykello",
+        "nb": "Svart Smartklokke"
+      }
+    },
+    {
+      "name": "Black Zip-Up Hoodie 005",
+      "sourceId": "7215",
+      "translations": {
+        "fi": "Musta vetoketjullinen huppari 005",
+        "da": "Sort hættetrøje med lynlås 005",
+        "nb": "Svart hettegenser med glidelås 005"
+      }
+    },
+    {
+      "name": "Fashion Knit Sweater",
+      "sourceId": "7111",
+      "translations": {
+        "fi": "Muotineulepusero",
+        "da": "Modestriktrøje",
+        "nb": "Mote strikket genser"
+      }
+    },
+    {
+      "name": "SU Tracksuit Set",
+      "sourceId": "7110",
+      "translations": {
+        "fi": "SU Verryttelypukusarja",
+        "da": "SU Træningsdragt Sæt",
+        "nb": "SU treningsdresssett"
+      }
+    },
+    {
+      "name": "Cotton Zip-Up Hoodie Jacket",
+      "sourceId": "7085",
+      "translations": {
+        "fi": "Puuvillainen vetoketjullinen hupparitakki",
+        "da": "Hættejakke i bomuld med lynlås",
+        "nb": "Hettegenserjakke i bomull med glidelås"
+      }
+    },
+    {
+      "name": "Men’s Wool Knit Sweater",
+      "sourceId": "7070",
+      "translations": {
+        "fi": "Miesten villaneulepusero",
+        "da": "Herre uld striktrøje",
+        "nb": "Ullstrikket genser for menn"
+      }
+    },
+    {
+      "name": "Casual Zip-Up Hoodie Jacket",
+      "sourceId": "7053",
+      "translations": {
+        "fi": "Rento vetoketjullinen hupparitakki"
+      }
+    },
+    {
+      "name": "Premium Knit Sweater",
+      "sourceId": "7041",
+      "translations": {
+        "fi": "Ensiluokkainen neulepusero",
+        "da": "Premium striktrøje",
+        "nb": "Premium strikket genser"
+      }
+    },
+    {
+      "name": "Sixth Generation (USB-C)",
+      "sourceId": "6996",
+      "translations": {
+        "fi": "Kuudes sukupolvi (USB-C)",
+        "da": "Sjette generation (USB-C)",
+        "nb": "Sjette generasjon (USB-C)"
+      }
+    },
+    {
+      "name": "MZ77 High-Quality Earphones",
+      "sourceId": "6995",
+      "translations": {
+        "fi": "Laadukkaat MZ77-kuulokkeet",
+        "da": "MZ77 Høretelefoner af høj kvalitet",
+        "nb": "MZ77 høykvalitets øretelefoner"
+      }
+    },
+    {
+      "name": "040919 AMG Sports Shorts",
+      "sourceId": "6971",
+      "translations": {
+        "fi": "040919 AMG-urheilushortsit",
+        "da": "040919 AMG Sportshorts",
+        "nb": "040919 AMG Sportshorts"
+      }
+    },
+    {
+      "name": "Unisex Shorts, 40 Styles",
+      "sourceId": "6963",
+      "translations": {
+        "fi": "Unisex-shortsit, 40 tyyliä",
+        "da": "Unisex shorts, 40 stilarter",
+        "nb": "Unisex-shorts, 40 stiler"
+      }
+    },
+    {
+      "name": "MI Unisex Outfit Set",
+      "sourceId": "6944",
+      "translations": {
+        "fi": "MI Unisex -asusetti",
+        "nb": "MI Unisex antrekkssett"
+      }
+    },
+    {
+      "name": "SY T-Shirt and Shorts Set",
+      "sourceId": "6936",
+      "translations": {
+        "fi": "SY T-paita ja shortsit -setti",
+        "da": "SY T-Shirt og Shorts Sæt",
+        "nb": "SY T-skjorte og shortssett"
+      }
+    },
+    {
+      "name": "RM/W Phone Case",
+      "sourceId": "6931",
+      "translations": {
+        "fi": "RM/W-puhelinkotelo"
+      }
+    },
+    {
+      "name": "American Style Sports Shorts",
+      "sourceId": "6924",
+      "translations": {
+        "fi": "Amerikkalaistyyliset urheilushortsit",
+        "da": "Sportsshorts i amerikansk stil",
+        "nb": "Sportsshorts i amerikansk stil"
+      }
+    },
+    {
+      "name": "Summer Denim Shorts",
+      "sourceId": "6910",
+      "translations": {
+        "fi": "Kesäiset farkkushortsit"
+      }
+    },
+    {
+      "name": "Pendant Watch with Gift Box",
+      "sourceId": "7381",
+      "translations": {
+        "da": "Vedhængsur med gaveæske"
+      }
+    },
+    {
+      "name": "RL Half-Zip Knit Sweater",
+      "sourceId": "7333",
+      "translations": {
+        "da": "RL Striktrøje med halv lynlås",
+        "nb": "RL Strikkegenser med halv glidelås"
+      }
+    },
+    {
+      "name": "Cable-Knit Crewneck Sweater",
+      "sourceId": "7176",
+      "translations": {
+        "da": "Kabelstrikket trøje med rund hals",
+        "nb": "Kabelstrikket genser med rund hals"
+      }
+    },
+    {
+      "name": "Heart Emblem Knit Cardigan",
+      "sourceId": "7141",
+      "translations": {
+        "da": "Hjerteemblem strik cardigan",
+        "nb": "Hjerteemblem strikket cardigan"
+      }
+    },
+    {
+      "name": "Premium Fashion Knit Sweater",
+      "sourceId": "7107",
+      "translations": {
+        "da": "Premium mode striktrøje"
+      }
+    },
+    {
+      "name": "Trendy Headphones 002",
+      "sourceId": "7025",
+      "translations": {
+        "da": "Trendy hovedtelefoner 002",
+        "nb": "Trendy hodetelefoner 002"
+      }
+    },
+    {
+      "name": "Wireless earphone series",
+      "sourceId": "7023",
+      "translations": {
+        "da": "Trådløs høretelefonserie",
+        "nb": "Trådløs øretelefonserie"
+      }
+    },
+    {
+      "name": "Classic Everyday Shorts 16",
+      "sourceId": "6923",
+      "translations": {
+        "da": "Klassiske hverdagsshorts 16",
+        "nb": "Klassiske hverdagsshorts 16"
+      }
+    },
+    {
+      "name": "Sweatshirt and Pants Set",
+      "sourceId": "7310",
+      "translations": {
+        "nb": "Genser og buksesett"
+      }
+    }
+  ]
+}

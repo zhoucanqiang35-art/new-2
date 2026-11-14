@@ -1,0 +1,445 @@
+{
+  "items": [
+    {
+      "name": "National Team Football Jerseys",
+      "translations": {
+        "fi": "maajoukkueiden jalkapallopaidat",
+        "da": "landsholdsfodboldtrøjer",
+        "nb": "landslagsfotballdrakter",
+        "cs": "fotbalové dresy národních týmů",
+        "sk": "futbalové dresy národných tímov",
+        "hu": "válogatott futballmezek",
+        "ro": "tricouri de fotbal ale echipelor naționale",
+        "el": "φανέλες ποδοσφαίρου εθνικών ομάδων",
+        "uk": "футбольні майки національних збірних",
+        "ar": "قمصان كرة قدم للمنتخبات الوطنية",
+        "ja": "代表チームのサッカージャージ",
+        "ko": "국가대표 축구 저지",
+        "vi": "Áo bóng đá đội tuyển quốc gia",
+        "tr": "milli takım futbol formaları"
+      }
+    },
+    {
+      "name": "Football Jerseys",
+      "translations": {
+        "fi": "jalkapallopaidat",
+        "da": "fodboldtrøjer",
+        "nb": "fotballdrakter",
+        "cs": "fotbalové dresy",
+        "sk": "futbalové dresy",
+        "hu": "futballmezek",
+        "ro": "tricouri de fotbal",
+        "el": "φανέλες ποδοσφαίρου",
+        "uk": "футбольні майки",
+        "ar": "قمصان كرة قدم",
+        "ja": "サッカージャージ",
+        "ko": "축구 저지",
+        "vi": "Áo bóng đá",
+        "tr": "futbol formaları"
+      }
+    },
+    {
+      "name": "NBA Basketball Jerseys",
+      "translations": {
+        "fi": "NBA koripallopaidat",
+        "da": "NBA basketballtrøjer",
+        "nb": "NBA basketballdrakter",
+        "cs": "NBA basketbalové dresy",
+        "sk": "NBA basketbalové dresy",
+        "hu": "NBA kosárlabdamezek",
+        "ro": "NBA tricouri de baschet",
+        "el": "NBA φανέλες μπάσκετ",
+        "uk": "NBA баскетбольні майки",
+        "ar": "NBA قمصان كرة سلة",
+        "ja": "NBA バスケットボールジャージ",
+        "ko": "NBA 농구 저지",
+        "vi": "NBA Áo bóng rổ",
+        "tr": "NBA basketbol formaları"
+      }
+    },
+    {
+      "name": "Madrid jersey",
+      "translations": {
+        "fi": "Madrid pelipaita",
+        "da": "Madrid spilletrøje",
+        "nb": "Madrid drakt",
+        "cs": "Madrid dres",
+        "sk": "Madrid dres",
+        "hu": "Madrid mez",
+        "ro": "Madrid tricou sport",
+        "el": "Madrid αθλητική φανέλα",
+        "uk": "Madrid спортивна майка",
+        "ar": "Madrid قميص رياضي",
+        "ja": "Madrid ジャージ",
+        "ko": "Madrid 저지",
+        "vi": "Madrid Áo thi đấu",
+        "tr": "Madrid forma"
+      }
+    },
+    {
+      "name": "jersey",
+      "translations": {
+        "fi": "pelipaita",
+        "da": "spilletrøje",
+        "nb": "drakt",
+        "cs": "dres",
+        "sk": "dres",
+        "hu": "mez",
+        "ro": "tricou sport",
+        "el": "αθλητική φανέλα",
+        "uk": "спортивна майка",
+        "ar": "قميص رياضي",
+        "ja": "ジャージ",
+        "ko": "저지",
+        "vi": "Áo thi đấu",
+        "tr": "forma"
+      }
+    },
+    {
+      "name": "Football Training Jersey Set",
+      "translations": {
+        "fi": "jalkapalloharjoituspaitasetti",
+        "da": "sæt med fodboldtræningstrøje",
+        "nb": "sett med fotballtreningstrøye",
+        "cs": "sada fotbalového tréninkového dresu",
+        "sk": "sada futbalového tréningového dresu",
+        "hu": "futballedzőmez-szett",
+        "ro": "set cu tricou de antrenament pentru fotbal",
+        "el": "σετ φανέλας προπόνησης ποδοσφαίρου",
+        "uk": "комплект футбольної тренувальної майки",
+        "ar": "طقم قميص تدريب كرة قدم",
+        "ja": "サッカートレーニングジャージセット",
+        "ko": "축구 훈련 저지 세트",
+        "vi": "Bộ áo tập bóng đá",
+        "tr": "futbol antrenman forması takımı"
+      }
+    },
+    {
+      "name": "Versace Italy Football Jersey",
+      "translations": {
+        "fi": "Versace Italy jalkapallopaita",
+        "da": "Versace Italy fodboldtrøje",
+        "nb": "Versace Italy fotballdrakt",
+        "cs": "Versace Italy fotbalový dres",
+        "sk": "Versace Italy futbalový dres",
+        "hu": "Versace Italy futballmez",
+        "ro": "Versace Italy tricou de fotbal",
+        "el": "Versace Italy φανέλα ποδοσφαίρου",
+        "uk": "Versace Italy футбольна майка",
+        "ar": "Versace Italy قميص كرة قدم",
+        "ja": "Versace Italy サッカージャージ",
+        "ko": "Versace Italy 축구 저지",
+        "vi": "Versace Italy Áo bóng đá",
+        "tr": "Versace Italy futbol forması"
+      }
+    },
+    {
+      "name": "Various Brands Football Jersey",
+      "translations": {
+        "fi": "eri merkkien jalkapallopaita",
+        "da": "fodboldtrøje fra forskellige mærker",
+        "nb": "fotballdrakt fra ulike merker",
+        "cs": "fotbalový dres různých značek",
+        "sk": "futbalový dres rôznych značiek",
+        "hu": "különböző márkájú futballmez",
+        "ro": "tricou de fotbal de la diverse mărci",
+        "el": "φανέλα ποδοσφαίρου από διάφορες μάρκες",
+        "uk": "футбольна майка різних брендів",
+        "ar": "قميص كرة قدم من علامات متنوعة",
+        "ja": "各種ブランドのサッカージャージ",
+        "ko": "여러 브랜드 축구 저지",
+        "vi": "Áo bóng đá nhiều thương hiệu",
+        "tr": "çeşitli marka futbol forması"
+      }
+    },
+    {
+      "name": "Chrome Heart Football jersey",
+      "translations": {
+        "fi": "Chrome Heart jalkapallopaita",
+        "da": "Chrome Heart fodboldtrøje",
+        "nb": "Chrome Heart fotballdrakt",
+        "cs": "Chrome Heart fotbalový dres",
+        "sk": "Chrome Heart futbalový dres",
+        "hu": "Chrome Heart futballmez",
+        "ro": "Chrome Heart tricou de fotbal",
+        "el": "Chrome Heart φανέλα ποδοσφαίρου",
+        "uk": "Chrome Heart футбольна майка",
+        "ar": "Chrome Heart قميص كرة قدم",
+        "ja": "Chrome Heart サッカージャージ",
+        "ko": "Chrome Heart 축구 저지",
+        "vi": "Chrome Heart Áo bóng đá",
+        "tr": "Chrome Heart futbol forması"
+      }
+    },
+    {
+      "name": "NBA jersey",
+      "translations": {
+        "fi": "NBA pelipaita",
+        "da": "NBA spilletrøje",
+        "nb": "NBA drakt",
+        "cs": "NBA dres",
+        "sk": "NBA dres",
+        "hu": "NBA mez",
+        "ro": "NBA tricou sport",
+        "el": "NBA αθλητική φανέλα",
+        "uk": "NBA спортивна майка",
+        "ar": "NBA قميص رياضي",
+        "ja": "NBA ジャージ",
+        "ko": "NBA 저지",
+        "vi": "NBA Áo thi đấu",
+        "tr": "NBA forma"
+      }
+    },
+    {
+      "name": "football jerseys",
+      "translations": {
+        "fi": "jalkapallopaidat",
+        "da": "fodboldtrøjer",
+        "nb": "fotballdrakter",
+        "cs": "fotbalové dresy",
+        "sk": "futbalové dresy",
+        "hu": "futballmezek",
+        "ro": "tricouri de fotbal",
+        "el": "φανέλες ποδοσφαίρου",
+        "uk": "футбольні майки",
+        "ar": "قمصان كرة قدم",
+        "ja": "サッカージャージ",
+        "ko": "축구 저지",
+        "vi": "Áo bóng đá",
+        "tr": "futbol formaları"
+      }
+    },
+    {
+      "name": "Manchester United Jersey",
+      "translations": {
+        "fi": "Manchester United pelipaita",
+        "da": "Manchester United spilletrøje",
+        "nb": "Manchester United drakt",
+        "cs": "Manchester United dres",
+        "sk": "Manchester United dres",
+        "hu": "Manchester United mez",
+        "ro": "Manchester United tricou sport",
+        "el": "Manchester United αθλητική φανέλα",
+        "uk": "Manchester United спортивна майка",
+        "ar": "Manchester United قميص رياضي",
+        "ja": "Manchester United ジャージ",
+        "ko": "Manchester United 저지",
+        "vi": "Manchester United Áo thi đấu",
+        "tr": "Manchester United forma"
+      }
+    },
+    {
+      "name": "Santos jerseys",
+      "translations": {
+        "fi": "Santos pelipaidat",
+        "da": "Santos spilletrøjer",
+        "nb": "Santos drakter",
+        "cs": "Santos dresy",
+        "sk": "Santos dresy",
+        "hu": "Santos mezek",
+        "ro": "Santos tricouri sport",
+        "el": "Santos αθλητικές φανέλες",
+        "uk": "Santos спортивні майки",
+        "ar": "Santos قمصان رياضية",
+        "ja": "Santos ジャージ",
+        "ko": "Santos 저지",
+        "vi": "Santos Áo thi đấu",
+        "tr": "Santos formalar"
+      }
+    },
+    {
+      "name": "Corteiz Football Jersey",
+      "translations": {
+        "fi": "Corteiz jalkapallopaita",
+        "da": "Corteiz fodboldtrøje",
+        "nb": "Corteiz fotballdrakt",
+        "cs": "Corteiz fotbalový dres",
+        "sk": "Corteiz futbalový dres",
+        "hu": "Corteiz futballmez",
+        "el": "Corteiz φανέλα ποδοσφαίρου",
+        "uk": "Corteiz футбольна майка",
+        "ar": "Corteiz قميص كرة قدم",
+        "ja": "Corteiz サッカージャージ",
+        "ko": "Corteiz 축구 저지",
+        "vi": "Corteiz Áo bóng đá",
+        "tr": "Corteiz futbol forması"
+      }
+    },
+    {
+      "name": "Soccer Jersey Collection",
+      "translations": {
+        "fi": "jalkapallopaitakokoelma",
+        "cs": "kolekce fotbalových dresů",
+        "sk": "kolekcia futbalových dresov",
+        "hu": "futballmez-kollekció",
+        "el": "συλλογή φανελών ποδοσφαίρου",
+        "uk": "колекція футбольних майок",
+        "ar": "مجموعة قمصان كرة قدم",
+        "ja": "サッカージャージコレクション",
+        "ko": "축구 저지 컬렉션",
+        "vi": "Bộ sưu tập áo bóng đá",
+        "tr": "futbol forması koleksiyonu"
+      }
+    },
+    {
+      "name": "Barmenia Football Jersey",
+      "translations": {
+        "fi": "Barmenia jalkapallopaita",
+        "cs": "Barmenia fotbalový dres",
+        "sk": "Barmenia futbalový dres",
+        "hu": "Barmenia futballmez",
+        "el": "Barmenia φανέλα ποδοσφαίρου",
+        "uk": "Barmenia футбольна майка",
+        "ar": "Barmenia قميص كرة قدم",
+        "ja": "Barmenia サッカージャージ",
+        "ko": "Barmenia 축구 저지",
+        "vi": "Barmenia Áo bóng đá",
+        "tr": "Barmenia futbol forması"
+      }
+    },
+    {
+      "name": "National Team Football Jersey",
+      "translations": {
+        "fi": "maajoukkueen jalkapallopaita",
+        "da": "landsholdsfodboldtrøje",
+        "nb": "landslagsfotballdrakt",
+        "cs": "fotbalový dres národního týmu",
+        "sk": "futbalový dres národného tímu",
+        "hu": "válogatott futballmez",
+        "ro": "tricou de fotbal al echipei naționale",
+        "el": "φανέλα ποδοσφαίρου εθνικής ομάδας",
+        "uk": "футбольна майка національної збірної",
+        "ar": "قميص كرة قدم للمنتخب الوطني",
+        "ja": "代表チームのサッカージャージ",
+        "ko": "국가대표 축구 저지",
+        "vi": "Áo bóng đá đội tuyển quốc gia",
+        "tr": "milli takım futbol forması"
+      }
+    },
+    {
+      "name": "Premier League Football Jersey",
+      "translations": {
+        "fi": "Premier League jalkapallopaita",
+        "da": "Premier League fodboldtrøje",
+        "nb": "Premier League fotballdrakt",
+        "cs": "Premier League fotbalový dres",
+        "sk": "Premier League futbalový dres",
+        "hu": "Premier League futballmez",
+        "ro": "Premier League tricou de fotbal",
+        "el": "Premier League φανέλα ποδοσφαίρου",
+        "uk": "Premier League футбольна майка",
+        "ar": "Premier League قميص كرة قدم",
+        "ja": "Premier League サッカージャージ",
+        "ko": "Premier League 축구 저지",
+        "vi": "Premier League Áo bóng đá",
+        "tr": "Premier League futbol forması"
+      }
+    },
+    {
+      "name": "Custom Number Football Jersey",
+      "translations": {
+        "fi": "jalkapallopaita omalla numerolla",
+        "da": "fodboldtrøje med valgfrit nummer",
+        "nb": "fotballdrakt med valgt nummer",
+        "cs": "fotbalový dres s vlastním číslem",
+        "sk": "futbalový dres s vlastným číslom",
+        "hu": "egyedi számos futballmez",
+        "ro": "tricou de fotbal cu număr personalizat",
+        "el": "φανέλα ποδοσφαίρου με προσαρμοσμένο αριθμό",
+        "uk": "футбольна майка з індивідуальним номером",
+        "ar": "قميص كرة قدم برقم مخصص",
+        "ja": "番号を指定できるサッカージャージ",
+        "ko": "번호 지정 축구 저지",
+        "vi": "Áo bóng đá số tùy chọn",
+        "tr": "özel numaralı futbol forması"
+      }
+    },
+    {
+      "name": "Player Edition Football Jersey",
+      "translations": {
+        "fi": "pelaajaversion jalkapallopaita",
+        "da": "fodboldtrøje i spillerudgave",
+        "nb": "fotballdrakt i spillerutgave",
+        "cs": "fotbalový dres v hráčské edici",
+        "sk": "futbalový dres v hráčskej edícii",
+        "hu": "játékos kiadású futballmez",
+        "ro": "tricou de fotbal ediția jucător",
+        "el": "φανέλα ποδοσφαίρου έκδοσης παίκτη",
+        "uk": "футбольна майка версії гравця",
+        "ar": "قميص كرة قدم بإصدار اللاعبين",
+        "ja": "プレーヤー版サッカージャージ",
+        "ko": "선수 버전 축구 저지",
+        "vi": "Áo bóng đá phiên bản cầu thủ",
+        "tr": "oyuncu sürümü futbol forması"
+      }
+    },
+    {
+      "name": "Football Jersey 86A7-8c",
+      "translations": {
+        "cs": "fotbalový dres 86A7-8c",
+        "sk": "futbalový dres 86A7-8c",
+        "hu": "futballmez 86A7-8c",
+        "el": "φανέλα ποδοσφαίρου 86A7-8c",
+        "uk": "футбольна майка 86A7-8c",
+        "ar": "قميص كرة قدم 86A7-8c",
+        "ja": "サッカージャージ 86A7-8c",
+        "ko": "축구 저지 86A7-8c",
+        "vi": "Áo bóng đá 86A7-8c",
+        "tr": "futbol forması 86A7-8c"
+      }
+    },
+    {
+      "name": "Football Jersey 86A7-11c",
+      "translations": {
+        "cs": "fotbalový dres 86A7-11c",
+        "sk": "futbalový dres 86A7-11c",
+        "hu": "futballmez 86A7-11c",
+        "el": "φανέλα ποδοσφαίρου 86A7-11c",
+        "uk": "футбольна майка 86A7-11c",
+        "ar": "قميص كرة قدم 86A7-11c",
+        "ja": "サッカージャージ 86A7-11c",
+        "ko": "축구 저지 86A7-11c",
+        "vi": "Áo bóng đá 86A7-11c",
+        "tr": "futbol forması 86A7-11c"
+      }
+    },
+    {
+      "name": "Black No. 9 Long Sleeve Jersey",
+      "translations": {
+        "fi": "musta nro 9 pitkähihainen pelipaita",
+        "da": "sort langærmet spilletrøje nr. 9",
+        "nb": "svart langermet drakt nr. 9",
+        "cs": "černý dres s dlouhým rukávem č. 9",
+        "sk": "čierny dres s dlhým rukávom č. 9",
+        "hu": "fekete 9-es hosszú ujjú mez",
+        "ro": "tricou sport negru cu mânecă lungă nr. 9",
+        "el": "μαύρη μακρυμάνικη φανέλα αρ. 9",
+        "uk": "чорна майка з довгим рукавом № 9",
+        "ar": "قميص أسود طويل الأكمام رقم 9",
+        "ja": "ブラックの長袖ジャージ No. 9",
+        "ko": "블랙 9번 긴소매 저지",
+        "vi": "Áo thi đấu đen dài tay số 9",
+        "tr": "siyah 9 numaralı uzun kollu forma"
+      }
+    },
+    {
+      "name": "24-25 Club Jersey Set",
+      "translations": {
+        "fi": "24-25 seuran pelipaitasetti",
+        "da": "24-25 klubtrøjesæt",
+        "nb": "24-25 klubbdraktsett",
+        "cs": "24-25 sada klubových dresů",
+        "sk": "24-25 sada klubových dresov",
+        "hu": "24-25 klubmez-szett",
+        "ro": "24-25 set de tricouri de club",
+        "el": "24-25 σετ φανέλας συλλόγου",
+        "uk": "24-25 комплект клубних майок",
+        "ar": "24-25 طقم قميص نادٍ",
+        "ja": "24-25 クラブジャージセット",
+        "ko": "24-25 클럽 저지 세트",
+        "vi": "24-25 Bộ áo thi đấu câu lạc bộ",
+        "tr": "24-25 kulüp forması takımı"
+      }
+    }
+  ]
+}

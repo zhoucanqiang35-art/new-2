@@ -1,0 +1,589 @@
+{
+  "items": [
+    {
+      "name": "Balenciaga Sweaters",
+      "translations": {
+        "fi": "Balenciaga neulepuserot",
+        "da": "Balenciaga sweatre",
+        "nb": "Balenciaga gensere",
+        "cs": "Balenciaga svetry",
+        "sk": "Balenciaga svetre",
+        "hu": "Balenciaga pulóverek",
+        "ro": "Balenciaga pulovere",
+        "el": "Balenciaga πουλόβερ",
+        "uk": "Balenciaga светри",
+        "ar": "Balenciaga كنزات",
+        "ja": "Balenciaga セーター",
+        "ko": "Balenciaga 스웨터",
+        "vi": "Balenciaga áo len",
+        "tr": "Balenciaga kazaklar"
+      }
+    },
+    {
+      "name": "Moncler Sweater [37 styles]",
+      "translations": {
+        "fi": "Moncler neulepusero [37 mallia]",
+        "da": "Moncler sweater [37 modeller]",
+        "nb": "Moncler genser [37 modeller]",
+        "cs": "Moncler svetr [37 variant]",
+        "sk": "Moncler sveter [37 variantov]",
+        "hu": "Moncler pulóver [37 változat]",
+        "ro": "Moncler pulover [37 modele]",
+        "el": "Moncler πουλόβερ [37 σχέδια]",
+        "uk": "Moncler светр [37 варіантів]",
+        "ar": "Moncler كنزة [37 تصميمًا]",
+        "ja": "Moncler セーター [37 種類]",
+        "ko": "Moncler 스웨터 [37 종]",
+        "vi": "Moncler áo len [37 mẫu]",
+        "tr": "Moncler kazak [37 model]"
+      }
+    },
+    {
+      "name": "Gucci Bags",
+      "translations": {
+        "fi": "Gucci laukut",
+        "da": "Gucci tasker",
+        "nb": "Gucci vesker",
+        "cs": "Gucci tašky",
+        "sk": "Gucci tašky",
+        "hu": "Gucci táskák",
+        "ro": "Gucci genți",
+        "el": "Gucci τσάντες",
+        "uk": "Gucci сумки",
+        "ar": "Gucci حقائب",
+        "ja": "Gucci バッグ",
+        "ko": "Gucci 가방",
+        "vi": "Gucci túi",
+        "tr": "Gucci çantalar"
+      }
+    },
+    {
+      "name": "Hellstar Tracksuit",
+      "translations": {
+        "fi": "Hellstar verryttelyasu",
+        "da": "Hellstar træningsdragt",
+        "nb": "Hellstar treningsdress",
+        "cs": "Hellstar tepláková souprava",
+        "sk": "Hellstar tepláková súprava",
+        "hu": "Hellstar melegítőszett",
+        "ro": "Hellstar trening",
+        "el": "Hellstar φόρμα",
+        "uk": "Hellstar спортивний костюм",
+        "ar": "Hellstar بدلة رياضية",
+        "ja": "Hellstar トラックスーツ",
+        "ko": "Hellstar 트레이닝복",
+        "vi": "Hellstar bộ đồ thể thao",
+        "tr": "Hellstar eşofman takımı"
+      }
+    },
+    {
+      "name": "Denim Tears Sweater",
+      "translations": {
+        "fi": "Denim Tears neulepusero",
+        "da": "Denim Tears sweater",
+        "nb": "Denim Tears genser",
+        "cs": "Denim Tears svetr",
+        "sk": "Denim Tears sveter",
+        "hu": "Denim Tears pulóver",
+        "ro": "Denim Tears pulover",
+        "el": "Denim Tears πουλόβερ",
+        "uk": "Denim Tears светр",
+        "ar": "Denim Tears كنزة",
+        "ja": "Denim Tears セーター",
+        "ko": "Denim Tears 스웨터",
+        "vi": "Denim Tears áo len",
+        "tr": "Denim Tears kazak"
+      }
+    },
+    {
+      "name": "AMIRI T-Shirt [6 styles]",
+      "translations": {
+        "fi": "AMIRI T-paita [6 mallia]",
+        "da": "AMIRI T-shirt [6 modeller]",
+        "nb": "AMIRI T-skjorte [6 modeller]",
+        "cs": "AMIRI tričko [6 variant]",
+        "sk": "AMIRI tričko [6 variantov]",
+        "hu": "AMIRI póló [6 változat]",
+        "ro": "AMIRI tricou [6 modele]",
+        "el": "AMIRI μπλουζάκι [6 σχέδια]",
+        "uk": "AMIRI футболка [6 варіантів]",
+        "ar": "AMIRI تيشيرت [6 تصميمًا]",
+        "ja": "AMIRI Tシャツ [6 種類]",
+        "ko": "AMIRI 티셔츠 [6 종]",
+        "vi": "AMIRI áo thun [6 mẫu]",
+        "tr": "AMIRI tişört [6 model]"
+      }
+    },
+    {
+      "name": "Stussy Hoodies [40 styles]",
+      "translations": {
+        "fi": "Stussy hupparit [40 mallia]",
+        "da": "Stussy hættetrøjer [40 modeller]",
+        "nb": "Stussy hettegensere [40 modeller]",
+        "cs": "Stussy mikiny s kapucí [40 variant]",
+        "sk": "Stussy mikiny s kapucňou [40 variantov]",
+        "hu": "Stussy kapucnis pulóverek [40 változat]",
+        "ro": "Stussy hanorace [40 modele]",
+        "el": "Stussy φούτερ με κουκούλα [40 σχέδια]",
+        "uk": "Stussy худі [40 варіантів]",
+        "ar": "Stussy هوديات [40 تصميمًا]",
+        "ja": "Stussy パーカー [40 種類]",
+        "ko": "Stussy 후드티 [40 종]",
+        "vi": "Stussy áo hoodie [40 mẫu]",
+        "tr": "Stussy kapüşonlu sweatshirtler [40 model]"
+      }
+    },
+    {
+      "name": "Moncler Hoodie [6 styles]",
+      "translations": {
+        "fi": "Moncler huppari [6 mallia]",
+        "da": "Moncler hættetrøje [6 modeller]",
+        "nb": "Moncler hettegenser [6 modeller]",
+        "cs": "Moncler mikina s kapucí [6 variant]",
+        "sk": "Moncler mikina s kapucňou [6 variantov]",
+        "hu": "Moncler kapucnis pulóver [6 változat]",
+        "ro": "Moncler hanorac [6 modele]",
+        "el": "Moncler φούτερ με κουκούλα [6 σχέδια]",
+        "uk": "Moncler худі [6 варіантів]",
+        "ar": "Moncler هودي [6 تصميمًا]",
+        "ja": "Moncler パーカー [6 種類]",
+        "ko": "Moncler 후드티 [6 종]",
+        "vi": "Moncler áo hoodie [6 mẫu]",
+        "tr": "Moncler kapüşonlu sweatshirt [6 model]"
+      }
+    },
+    {
+      "name": "Burberry T-Shirts [40 styles]",
+      "translations": {
+        "fi": "Burberry T-paidat [40 mallia]",
+        "da": "Burberry T-shirts [40 modeller]",
+        "nb": "Burberry T-skjorter [40 modeller]",
+        "cs": "Burberry trička [40 variant]",
+        "sk": "Burberry tričká [40 variantov]",
+        "hu": "Burberry pólók [40 változat]",
+        "ro": "Burberry tricouri [40 modele]",
+        "el": "Burberry μπλουζάκια [40 σχέδια]",
+        "uk": "Burberry футболки [40 варіантів]",
+        "ar": "Burberry تيشيرتات [40 تصميمًا]",
+        "ja": "Burberry Tシャツ [40 種類]",
+        "ko": "Burberry 티셔츠 [40 종]",
+        "vi": "Burberry áo thun [40 mẫu]",
+        "tr": "Burberry tişörtler [40 model]"
+      }
+    },
+    {
+      "name": "Carhartt Jackets [38 styles]",
+      "translations": {
+        "fi": "Carhartt takit [38 mallia]",
+        "da": "Carhartt jakker [38 modeller]",
+        "nb": "Carhartt jakker [38 modeller]",
+        "cs": "Carhartt bundy [38 variant]",
+        "sk": "Carhartt bundy [38 variantov]",
+        "hu": "Carhartt dzsekik [38 változat]",
+        "ro": "Carhartt jachete [38 modele]",
+        "el": "Carhartt μπουφάν [38 σχέδια]",
+        "uk": "Carhartt куртки [38 варіантів]",
+        "ar": "Carhartt سترات [38 تصميمًا]",
+        "ja": "Carhartt ジャケット [38 種類]",
+        "ko": "Carhartt 재킷 [38 종]",
+        "vi": "Carhartt áo khoác [38 mẫu]",
+        "tr": "Carhartt ceketler [38 model]"
+      }
+    },
+    {
+      "name": "Burberry Hoodies",
+      "translations": {
+        "fi": "Burberry hupparit",
+        "da": "Burberry hættetrøjer",
+        "nb": "Burberry hettegensere",
+        "cs": "Burberry mikiny s kapucí",
+        "sk": "Burberry mikiny s kapucňou",
+        "hu": "Burberry kapucnis pulóverek",
+        "ro": "Burberry hanorace",
+        "el": "Burberry φούτερ με κουκούλα",
+        "uk": "Burberry худі",
+        "ar": "Burberry هوديات",
+        "ja": "Burberry パーカー",
+        "ko": "Burberry 후드티",
+        "vi": "Burberry áo hoodie",
+        "tr": "Burberry kapüşonlu sweatshirtler"
+      }
+    },
+    {
+      "name": "Louis Vuitton Bags",
+      "translations": {
+        "fi": "Louis Vuitton laukut",
+        "da": "Louis Vuitton tasker",
+        "nb": "Louis Vuitton vesker",
+        "cs": "Louis Vuitton tašky",
+        "sk": "Louis Vuitton tašky",
+        "hu": "Louis Vuitton táskák",
+        "ro": "Louis Vuitton genți",
+        "el": "Louis Vuitton τσάντες",
+        "uk": "Louis Vuitton сумки",
+        "ar": "Louis Vuitton حقائب",
+        "ja": "Louis Vuitton バッグ",
+        "ko": "Louis Vuitton 가방",
+        "vi": "Louis Vuitton túi",
+        "tr": "Louis Vuitton çantalar"
+      }
+    },
+    {
+      "name": "Dsquared2 T-Shirts [40 styles]",
+      "translations": {
+        "fi": "Dsquared2 T-paidat [40 mallia]",
+        "da": "Dsquared2 T-shirts [40 modeller]",
+        "nb": "Dsquared2 T-skjorter [40 modeller]",
+        "cs": "Dsquared2 trička [40 variant]",
+        "sk": "Dsquared2 tričká [40 variantov]",
+        "hu": "Dsquared2 pólók [40 változat]",
+        "ro": "Dsquared2 tricouri [40 modele]",
+        "el": "Dsquared2 μπλουζάκια [40 σχέδια]",
+        "uk": "Dsquared2 футболки [40 варіантів]",
+        "ar": "Dsquared2 تيشيرتات [40 تصميمًا]",
+        "ja": "Dsquared2 Tシャツ [40 種類]",
+        "ko": "Dsquared2 티셔츠 [40 종]",
+        "vi": "Dsquared2 áo thun [40 mẫu]",
+        "tr": "Dsquared2 tişörtler [40 model]"
+      }
+    },
+    {
+      "name": "Vlone T-Shirt [40 styles]",
+      "translations": {
+        "fi": "Vlone T-paita [40 mallia]",
+        "da": "Vlone T-shirt [40 modeller]",
+        "nb": "Vlone T-skjorte [40 modeller]",
+        "cs": "Vlone tričko [40 variant]",
+        "sk": "Vlone tričko [40 variantov]",
+        "hu": "Vlone póló [40 változat]",
+        "ro": "Vlone tricou [40 modele]",
+        "el": "Vlone μπλουζάκι [40 σχέδια]",
+        "uk": "Vlone футболка [40 варіантів]",
+        "ar": "Vlone تيشيرت [40 تصميمًا]",
+        "ja": "Vlone Tシャツ [40 種類]",
+        "ko": "Vlone 티셔츠 [40 종]",
+        "vi": "Vlone áo thun [40 mẫu]",
+        "tr": "Vlone tişört [40 model]"
+      }
+    },
+    {
+      "name": "Prada T-Shirt [38 styles]",
+      "translations": {
+        "fi": "Prada T-paita [38 mallia]",
+        "da": "Prada T-shirt [38 modeller]",
+        "nb": "Prada T-skjorte [38 modeller]",
+        "cs": "Prada tričko [38 variant]",
+        "sk": "Prada tričko [38 variantov]",
+        "hu": "Prada póló [38 változat]",
+        "ro": "Prada tricou [38 modele]",
+        "el": "Prada μπλουζάκι [38 σχέδια]",
+        "uk": "Prada футболка [38 варіантів]",
+        "ar": "Prada تيشيرت [38 تصميمًا]",
+        "ja": "Prada Tシャツ [38 種類]",
+        "ko": "Prada 티셔츠 [38 종]",
+        "vi": "Prada áo thun [38 mẫu]",
+        "tr": "Prada tişört [38 model]"
+      }
+    },
+    {
+      "name": "Hellstar Shorts [21 styles]",
+      "translations": {
+        "fi": "Hellstar shortsit [21 mallia]",
+        "da": "Hellstar shorts [21 modeller]",
+        "nb": "Hellstar shorts [21 modeller]",
+        "cs": "Hellstar šortky [21 variant]",
+        "sk": "Hellstar šortky [21 variantov]",
+        "hu": "Hellstar rövidnadrágok [21 változat]",
+        "ro": "Hellstar pantaloni scurți [21 modele]",
+        "el": "Hellstar σορτς [21 σχέδια]",
+        "uk": "Hellstar шорти [21 варіантів]",
+        "ar": "Hellstar شورتات [21 تصميمًا]",
+        "ja": "Hellstar ショーツ [21 種類]",
+        "ko": "Hellstar 반바지 [21 종]",
+        "vi": "Hellstar quần short [21 mẫu]",
+        "tr": "Hellstar şort [21 model]"
+      }
+    },
+    {
+      "name": "Supreme Jackets [31 styles]",
+      "translations": {
+        "fi": "Supreme takit [31 mallia]",
+        "da": "Supreme jakker [31 modeller]",
+        "nb": "Supreme jakker [31 modeller]",
+        "cs": "Supreme bundy [31 variant]",
+        "sk": "Supreme bundy [31 variantov]",
+        "hu": "Supreme dzsekik [31 változat]",
+        "ro": "Supreme jachete [31 modele]",
+        "el": "Supreme μπουφάν [31 σχέδια]",
+        "uk": "Supreme куртки [31 варіантів]",
+        "ar": "Supreme سترات [31 تصميمًا]",
+        "ja": "Supreme ジャケット [31 種類]",
+        "ko": "Supreme 재킷 [31 종]",
+        "vi": "Supreme áo khoác [31 mẫu]",
+        "tr": "Supreme ceketler [31 model]"
+      }
+    },
+    {
+      "name": "Stussy Jackets [40 styles]",
+      "translations": {
+        "fi": "Stussy takit [40 mallia]",
+        "da": "Stussy jakker [40 modeller]",
+        "nb": "Stussy jakker [40 modeller]",
+        "cs": "Stussy bundy [40 variant]",
+        "sk": "Stussy bundy [40 variantov]",
+        "hu": "Stussy dzsekik [40 változat]",
+        "ro": "Stussy jachete [40 modele]",
+        "el": "Stussy μπουφάν [40 σχέδια]",
+        "uk": "Stussy куртки [40 варіантів]",
+        "ar": "Stussy سترات [40 تصميمًا]",
+        "ja": "Stussy ジャケット [40 種類]",
+        "ko": "Stussy 재킷 [40 종]",
+        "vi": "Stussy áo khoác [40 mẫu]",
+        "tr": "Stussy ceketler [40 model]"
+      }
+    },
+    {
+      "name": "Palm Angels Hoodies [8 styles]",
+      "translations": {
+        "fi": "Palm Angels hupparit [8 mallia]",
+        "da": "Palm Angels hættetrøjer [8 modeller]",
+        "nb": "Palm Angels hettegensere [8 modeller]",
+        "cs": "Palm Angels mikiny s kapucí [8 variant]",
+        "sk": "Palm Angels mikiny s kapucňou [8 variantov]",
+        "hu": "Palm Angels kapucnis pulóverek [8 változat]",
+        "ro": "Palm Angels hanorace [8 modele]",
+        "el": "Palm Angels φούτερ με κουκούλα [8 σχέδια]",
+        "uk": "Palm Angels худі [8 варіантів]",
+        "ar": "Palm Angels هوديات [8 تصميمًا]",
+        "ja": "Palm Angels パーカー [8 種類]",
+        "ko": "Palm Angels 후드티 [8 종]",
+        "vi": "Palm Angels áo hoodie [8 mẫu]",
+        "tr": "Palm Angels kapüşonlu sweatshirtler [8 model]"
+      }
+    },
+    {
+      "name": "Moncler Sneakers [13 styles]",
+      "translations": {
+        "fi": "Moncler tennarit [13 mallia]",
+        "da": "Moncler sneakers [13 modeller]",
+        "nb": "Moncler sneakers [13 modeller]",
+        "cs": "Moncler tenisky [13 variant]",
+        "sk": "Moncler tenisky [13 variantov]",
+        "hu": "Moncler sportcipők [13 változat]",
+        "ro": "Moncler sneakers [13 modele]",
+        "el": "Moncler sneakers [13 σχέδια]",
+        "uk": "Moncler кросівки [13 варіантів]",
+        "ar": "Moncler أحذية رياضية [13 تصميمًا]",
+        "ja": "Moncler スニーカー [13 種類]",
+        "ko": "Moncler 스니커즈 [13 종]",
+        "vi": "Moncler giày sneaker [13 mẫu]",
+        "tr": "Moncler spor ayakkabı [13 model]"
+      }
+    },
+    {
+      "name": "ESSENTIALS Hoodie [20 styles]",
+      "translations": {
+        "fi": "ESSENTIALS huppari [20 mallia]",
+        "da": "ESSENTIALS hættetrøje [20 modeller]",
+        "nb": "ESSENTIALS hettegenser [20 modeller]",
+        "cs": "ESSENTIALS mikina s kapucí [20 variant]",
+        "sk": "ESSENTIALS mikina s kapucňou [20 variantov]",
+        "hu": "ESSENTIALS kapucnis pulóver [20 változat]",
+        "ro": "ESSENTIALS hanorac [20 modele]",
+        "el": "ESSENTIALS φούτερ με κουκούλα [20 σχέδια]",
+        "uk": "ESSENTIALS худі [20 варіантів]",
+        "ar": "ESSENTIALS هودي [20 تصميمًا]",
+        "ja": "ESSENTIALS パーカー [20 種類]",
+        "ko": "ESSENTIALS 후드티 [20 종]",
+        "vi": "ESSENTIALS áo hoodie [20 mẫu]",
+        "tr": "ESSENTIALS kapüşonlu sweatshirt [20 model]"
+      }
+    },
+    {
+      "name": "VLONE Hoodie [40 styles]",
+      "translations": {
+        "fi": "VLONE huppari [40 mallia]",
+        "da": "VLONE hættetrøje [40 modeller]",
+        "nb": "VLONE hettegenser [40 modeller]",
+        "cs": "VLONE mikina s kapucí [40 variant]",
+        "sk": "VLONE mikina s kapucňou [40 variantov]",
+        "hu": "VLONE kapucnis pulóver [40 változat]",
+        "ro": "VLONE hanorac [40 modele]",
+        "el": "VLONE φούτερ με κουκούλα [40 σχέδια]",
+        "uk": "VLONE худі [40 варіантів]",
+        "ar": "VLONE هودي [40 تصميمًا]",
+        "ja": "VLONE パーカー [40 種類]",
+        "ko": "VLONE 후드티 [40 종]",
+        "vi": "VLONE áo hoodie [40 mẫu]",
+        "tr": "VLONE kapüşonlu sweatshirt [40 model]"
+      }
+    },
+    {
+      "name": "ESSENTIALS Hoodie [33 styles]",
+      "translations": {
+        "fi": "ESSENTIALS huppari [33 mallia]",
+        "da": "ESSENTIALS hættetrøje [33 modeller]",
+        "nb": "ESSENTIALS hettegenser [33 modeller]",
+        "cs": "ESSENTIALS mikina s kapucí [33 variant]",
+        "sk": "ESSENTIALS mikina s kapucňou [33 variantov]",
+        "hu": "ESSENTIALS kapucnis pulóver [33 változat]",
+        "ro": "ESSENTIALS hanorac [33 modele]",
+        "el": "ESSENTIALS φούτερ με κουκούλα [33 σχέδια]",
+        "uk": "ESSENTIALS худі [33 варіантів]",
+        "ar": "ESSENTIALS هودي [33 تصميمًا]",
+        "ja": "ESSENTIALS パーカー [33 種類]",
+        "ko": "ESSENTIALS 후드티 [33 종]",
+        "vi": "ESSENTIALS áo hoodie [33 mẫu]",
+        "tr": "ESSENTIALS kapüşonlu sweatshirt [33 model]"
+      }
+    },
+    {
+      "name": "Carhartt Hoodie [31 styles]",
+      "translations": {
+        "fi": "Carhartt huppari [31 mallia]",
+        "da": "Carhartt hættetrøje [31 modeller]",
+        "nb": "Carhartt hettegenser [31 modeller]",
+        "cs": "Carhartt mikina s kapucí [31 variant]",
+        "sk": "Carhartt mikina s kapucňou [31 variantov]",
+        "hu": "Carhartt kapucnis pulóver [31 változat]",
+        "ro": "Carhartt hanorac [31 modele]",
+        "el": "Carhartt φούτερ με κουκούλα [31 σχέδια]",
+        "uk": "Carhartt худі [31 варіантів]",
+        "ar": "Carhartt هودي [31 تصميمًا]",
+        "ja": "Carhartt パーカー [31 種類]",
+        "ko": "Carhartt 후드티 [31 종]",
+        "vi": "Carhartt áo hoodie [31 mẫu]",
+        "tr": "Carhartt kapüşonlu sweatshirt [31 model]"
+      }
+    },
+    {
+      "name": "Amiri Hoodies [35 styles]",
+      "translations": {
+        "fi": "Amiri hupparit [35 mallia]",
+        "da": "Amiri hættetrøjer [35 modeller]",
+        "nb": "Amiri hettegensere [35 modeller]",
+        "cs": "Amiri mikiny s kapucí [35 variant]",
+        "sk": "Amiri mikiny s kapucňou [35 variantov]",
+        "hu": "Amiri kapucnis pulóverek [35 változat]",
+        "ro": "Amiri hanorace [35 modele]",
+        "el": "Amiri φούτερ με κουκούλα [35 σχέδια]",
+        "uk": "Amiri худі [35 варіантів]",
+        "ar": "Amiri هوديات [35 تصميمًا]",
+        "ja": "Amiri パーカー [35 種類]",
+        "ko": "Amiri 후드티 [35 종]",
+        "vi": "Amiri áo hoodie [35 mẫu]",
+        "tr": "Amiri kapüşonlu sweatshirtler [35 model]"
+      }
+    },
+    {
+      "name": "Carhartt Sweater",
+      "translations": {
+        "fi": "Carhartt neulepusero",
+        "da": "Carhartt sweater",
+        "nb": "Carhartt genser",
+        "cs": "Carhartt svetr",
+        "sk": "Carhartt sveter",
+        "hu": "Carhartt pulóver",
+        "ro": "Carhartt pulover",
+        "el": "Carhartt πουλόβερ",
+        "uk": "Carhartt светр",
+        "ar": "Carhartt كنزة",
+        "ja": "Carhartt セーター",
+        "ko": "Carhartt 스웨터",
+        "vi": "Carhartt áo len",
+        "tr": "Carhartt kazak"
+      }
+    },
+    {
+      "name": "AMIRI Sweater [40 styles]",
+      "translations": {
+        "fi": "AMIRI neulepusero [40 mallia]",
+        "da": "AMIRI sweater [40 modeller]",
+        "nb": "AMIRI genser [40 modeller]",
+        "cs": "AMIRI svetr [40 variant]",
+        "sk": "AMIRI sveter [40 variantov]",
+        "hu": "AMIRI pulóver [40 változat]",
+        "ro": "AMIRI pulover [40 modele]",
+        "el": "AMIRI πουλόβερ [40 σχέδια]",
+        "uk": "AMIRI светр [40 варіантів]",
+        "ar": "AMIRI كنزة [40 تصميمًا]",
+        "ja": "AMIRI セーター [40 種類]",
+        "ko": "AMIRI 스웨터 [40 종]",
+        "vi": "AMIRI áo len [40 mẫu]",
+        "tr": "AMIRI kazak [40 model]"
+      }
+    },
+    {
+      "name": "AMIRI Hoodies",
+      "translations": {
+        "fi": "AMIRI hupparit",
+        "da": "AMIRI hættetrøjer",
+        "nb": "AMIRI hettegensere",
+        "cs": "AMIRI mikiny s kapucí",
+        "sk": "AMIRI mikiny s kapucňou",
+        "hu": "AMIRI kapucnis pulóverek",
+        "ro": "AMIRI hanorace",
+        "el": "AMIRI φούτερ με κουκούλα",
+        "uk": "AMIRI худі",
+        "ar": "AMIRI هوديات",
+        "ja": "AMIRI パーカー",
+        "ko": "AMIRI 후드티",
+        "vi": "AMIRI áo hoodie",
+        "tr": "AMIRI kapüşonlu sweatshirtler"
+      }
+    },
+    {
+      "name": "Gallery Dept Hoodies",
+      "translations": {
+        "fi": "Gallery Dept hupparit",
+        "da": "Gallery Dept hættetrøjer",
+        "nb": "Gallery Dept hettegensere",
+        "cs": "Gallery Dept mikiny s kapucí",
+        "sk": "Gallery Dept mikiny s kapucňou",
+        "hu": "Gallery Dept kapucnis pulóverek",
+        "ro": "Gallery Dept hanorace",
+        "el": "Gallery Dept φούτερ με κουκούλα",
+        "uk": "Gallery Dept худі",
+        "ar": "Gallery Dept هوديات",
+        "ja": "Gallery Dept パーカー",
+        "ko": "Gallery Dept 후드티",
+        "vi": "Gallery Dept áo hoodie",
+        "tr": "Gallery Dept kapüşonlu sweatshirtler"
+      }
+    },
+    {
+      "name": "Nike Tracksuit",
+      "translations": {
+        "fi": "Nike verryttelyasu",
+        "da": "Nike træningsdragt",
+        "nb": "Nike treningsdress",
+        "cs": "Nike tepláková souprava",
+        "sk": "Nike tepláková súprava",
+        "hu": "Nike melegítőszett",
+        "ro": "Nike trening",
+        "el": "Nike φόρμα",
+        "uk": "Nike спортивний костюм",
+        "ar": "Nike بدلة رياضية",
+        "ja": "Nike トラックスーツ",
+        "ko": "Nike 트레이닝복",
+        "vi": "Nike bộ đồ thể thao",
+        "tr": "Nike eşofman takımı"
+      }
+    },
+    {
+      "name": "Denim Tears Shorts",
+      "translations": {
+        "cs": "Denim Tears šortky",
+        "sk": "Denim Tears šortky",
+        "hu": "Denim Tears rövidnadrágok",
+        "el": "Denim Tears σορτς",
+        "uk": "Denim Tears шорти",
+        "ar": "Denim Tears شورتات",
+        "ja": "Denim Tears ショーツ",
+        "ko": "Denim Tears 반바지",
+        "vi": "Denim Tears quần short",
+        "tr": "Denim Tears şort"
+      }
+    }
+  ]
+}

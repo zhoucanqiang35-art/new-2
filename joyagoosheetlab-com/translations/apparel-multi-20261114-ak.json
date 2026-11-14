@@ -1,0 +1,109 @@
+{
+  "items": [
+    {
+      "name": "Graphic Logo Black T-Shirt",
+      "translations": {
+        "fi": "Musta T-paita graafisella logolla",
+        "da": "Sort T-shirt med grafisk logo",
+        "nb": "Svart T-skjorte med grafisk logo",
+        "sk": "Čierne tričko s grafickým logom",
+        "vi": "Áo thun đen có logo đồ họa"
+      }
+    },
+    {
+      "name": "Classic Pony Black Polo Shirt",
+      "translations": {
+        "fi": "Klassinen musta poolopaita ponikuviolla",
+        "da": "Klassisk sort poloshirt med pony",
+        "nb": "Klassisk svart poloskjorte med ponni",
+        "sk": "Klasická čierna polokošeľa s poníkom",
+        "ro": "Tricou polo clasic negru cu ponei",
+        "vi": "Áo polo đen cổ điển họa tiết ngựa pony"
+      }
+    },
+    {
+      "name": "Play Heart Logo Black T-Shirt",
+      "translations": {
+        "fi": "Musta T-paita Play-sydänlogolla",
+        "da": "Sort T-shirt med Play-hjertelogo",
+        "nb": "Svart T-skjorte med Play-hjertelogo",
+        "sk": "Čierne tričko s logom srdca Play",
+        "ro": "Tricou negru cu logo inimă Play",
+        "vi": "Áo thun đen logo trái tim Play"
+      }
+    },
+    {
+      "name": "Number Graphic White T-Shirt",
+      "translations": {
+        "fi": "Valkoinen T-paita numerokuviolla",
+        "da": "Hvid T-shirt med talgrafik",
+        "nb": "Hvit T-skjorte med tallgrafikk",
+        "sk": "Biele tričko s číselnou grafikou",
+        "ro": "Tricou alb cu grafică numerică",
+        "vi": "Áo thun trắng họa tiết số"
+      }
+    },
+    {
+      "name": "Alien Graphic Black T-Shirt",
+      "translations": {
+        "fi": "Musta T-paita avaruusoliokuviolla",
+        "da": "Sort T-shirt med rumvæsengrafik",
+        "nb": "Svart T-skjorte med romvesenmotiv",
+        "sk": "Čierne tričko s grafikou mimozemšťana",
+        "vi": "Áo thun đen họa tiết người ngoài hành tinh"
+      }
+    },
+    {
+      "name": "Racing Graphic White T-Shirt",
+      "translations": {
+        "fi": "Valkoinen T-paita kilpa-ajokuviolla",
+        "da": "Hvid T-shirt med racergrafik",
+        "nb": "Hvit T-skjorte med racingmotiv",
+        "sk": "Biele tričko s pretekárskou grafikou",
+        "ro": "Tricou alb cu grafică de curse",
+        "vi": "Áo thun trắng họa tiết đua xe"
+      }
+    },
+    {
+      "name": "Photo Graphic White T-Shirt",
+      "translations": {
+        "fi": "Valkoinen T-paita valokuvaprintillä",
+        "da": "Hvid T-shirt med fotoprint",
+        "nb": "Hvit T-skjorte med fototrykk",
+        "sk": "Biele tričko s fotografickou potlačou",
+        "vi": "Áo thun trắng in hình ảnh"
+      }
+    },
+    {
+      "name": "Love Graphic White T-Shirt",
+      "translations": {
+        "fi": "Valkoinen T-paita Love-kuviolla",
+        "da": "Hvid T-shirt med Love-grafik",
+        "nb": "Hvit T-skjorte med Love-motiv",
+        "sk": "Biele tričko s grafikou Love",
+        "vi": "Áo thun trắng họa tiết Love"
+      }
+    },
+    {
+      "name": "Porsche Graphic White T-Shirt",
+      "translations": {
+        "fi": "Valkoinen T-paita Porsche-kuviolla",
+        "da": "Hvid T-shirt med Porsche-grafik",
+        "nb": "Hvit T-skjorte med Porsche-motiv",
+        "sk": "Biele tričko s grafikou Porsche",
+        "ro": "Tricou alb cu grafică Porsche",
+        "vi": "Áo thun trắng họa tiết Porsche"
+      }
+    },
+    {
+      "name": "Letter Graphic T-Shirt",
+      "translations": {
+        "fi": "T-paita kirjainkuviolla",
+        "da": "T-shirt med bogstavgrafik",
+        "nb": "T-skjorte med bokstavgrafikk",
+        "sk": "Tričko s písmenovou grafikou",
+        "vi": "Áo thun họa tiết chữ"
+      }
+    }
+  ]
+}

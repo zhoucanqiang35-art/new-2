@@ -1,0 +1,270 @@
+{
+  "items": [
+    {
+      "name": "Gucci T-Shirts (25+)",
+      "translations": {
+        "fi": "Gucci-T-paidat (25+)",
+        "da": "Gucci-T-shirts (25+)",
+        "nb": "Gucci-T-skjorter (25+)",
+        "cs": "Trička Gucci (25+)",
+        "sk": "Tričká Gucci (25+)",
+        "hu": "Gucci pólók (25+)",
+        "ro": "Tricouri Gucci (25+)",
+        "el": "Μπλουζάκια Gucci (25+)",
+        "uk": "Футболки Gucci (25+)",
+        "ar": "تيشيرتات Gucci ‏(25+)",
+        "ja": "Gucci Tシャツ（25+）",
+        "ko": "Gucci 티셔츠 (25+)",
+        "vi": "Áo thun Gucci (25+)",
+        "tr": "Gucci tişörtler (25+)"
+      }
+    },
+    {
+      "name": "Stussy Hoodie/Sweatshirt",
+      "translations": {
+        "fi": "Stussy-huppari / collegepaita",
+        "da": "Stussy-hættetrøje / sweatshirt",
+        "nb": "Stussy-hettegenser / genser",
+        "cs": "Mikina Stussy s kapucí / mikina",
+        "sk": "Mikina Stussy s kapucňou / mikina",
+        "hu": "Stussy kapucnis pulóver / pulóver",
+        "ro": "Hanorac / bluză sport Stussy",
+        "el": "Φούτερ Stussy με κουκούλα / μπλούζα φούτερ",
+        "uk": "Худі / світшот Stussy",
+        "ar": "هودي / سويت شيرت Stussy",
+        "ja": "Stussyパーカー／スウェット",
+        "ko": "Stussy 후드티 / 스웨트셔츠",
+        "vi": "Áo hoodie / áo nỉ Stussy",
+        "tr": "Stussy kapüşonlu sweatshirt / sweatshirt"
+      }
+    },
+    {
+      "name": "Boss Dsquared2 Shorts",
+      "translations": {
+        "fi": "Boss Dsquared2 -shortsit",
+        "da": "Boss Dsquared2-shorts",
+        "nb": "Boss Dsquared2-shorts",
+        "cs": "Šortky Boss Dsquared2",
+        "sk": "Šortky Boss Dsquared2",
+        "hu": "Boss Dsquared2 rövidnadrág",
+        "ro": "Pantaloni scurți Boss Dsquared2",
+        "el": "Σορτς Boss Dsquared2",
+        "uk": "Шорти Boss Dsquared2",
+        "ar": "شورت Boss Dsquared2",
+        "ja": "Boss Dsquared2ショーツ",
+        "ko": "Boss Dsquared2 반바지",
+        "vi": "Quần short Boss Dsquared2",
+        "tr": "Boss Dsquared2 şort"
+      }
+    },
+    {
+      "name": "4Tune Hoodie",
+      "translations": {
+        "fi": "4Tune-huppari",
+        "da": "4Tune-hættetrøje",
+        "nb": "4Tune-hettegenser",
+        "cs": "Mikina 4Tune s kapucí",
+        "sk": "Mikina 4Tune s kapucňou",
+        "hu": "4Tune kapucnis pulóver",
+        "ro": "Hanorac 4Tune",
+        "el": "Φούτερ 4Tune με κουκούλα",
+        "uk": "Худі 4Tune",
+        "ar": "هودي 4Tune",
+        "ja": "4Tuneパーカー",
+        "ko": "4Tune 후드티",
+        "vi": "Áo hoodie 4Tune",
+        "tr": "4Tune kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "NIKE X NOC Hoodie",
+      "translations": {
+        "fi": "NIKE X NOC -huppari",
+        "da": "NIKE X NOC-hættetrøje",
+        "nb": "NIKE X NOC-hettegenser",
+        "cs": "Mikina NIKE X NOC s kapucí",
+        "sk": "Mikina NIKE X NOC s kapucňou",
+        "hu": "NIKE X NOC kapucnis pulóver",
+        "ro": "Hanorac NIKE X NOC",
+        "el": "Φούτερ NIKE X NOC με κουκούλα",
+        "uk": "Худі NIKE X NOC",
+        "ar": "هودي NIKE X NOC",
+        "ja": "NIKE X NOCパーカー",
+        "ko": "NIKE X NOC 후드티",
+        "vi": "Áo hoodie NIKE X NOC",
+        "tr": "NIKE X NOC kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Eric Emanuel Shorts (30+)",
+      "translations": {
+        "fi": "Eric Emanuel -shortsit (30+)",
+        "da": "Eric Emanuel-shorts (30+)",
+        "nb": "Eric Emanuel-shorts (30+)",
+        "cs": "Šortky Eric Emanuel (30+)",
+        "sk": "Šortky Eric Emanuel (30+)",
+        "hu": "Eric Emanuel rövidnadrág (30+)",
+        "ro": "Pantaloni scurți Eric Emanuel (30+)",
+        "el": "Σορτς Eric Emanuel (30+)",
+        "uk": "Шорти Eric Emanuel (30+)",
+        "ar": "شورت Eric Emanuel ‏(30+)",
+        "ja": "Eric Emanuelショーツ（30+）",
+        "ko": "Eric Emanuel 반바지 (30+)",
+        "vi": "Quần short Eric Emanuel (30+)",
+        "tr": "Eric Emanuel şort (30+)"
+      }
+    },
+    {
+      "name": "LV Hoodie（20+）",
+      "translations": {
+        "fi": "LV-huppari (20+)",
+        "da": "LV-hættetrøje (20+)",
+        "nb": "LV-hettegenser (20+)",
+        "cs": "Mikina LV s kapucí (20+)",
+        "sk": "Mikina LV s kapucňou (20+)",
+        "hu": "LV kapucnis pulóver (20+)",
+        "ro": "Hanorac LV (20+)",
+        "el": "Φούτερ LV με κουκούλα (20+)",
+        "uk": "Худі LV (20+)",
+        "ar": "هودي LV ‏(20+)",
+        "ja": "LVパーカー（20+）",
+        "ko": "LV 후드티 (20+)",
+        "vi": "Áo hoodie LV (20+)",
+        "tr": "LV kapüşonlu sweatshirt (20+)"
+      }
+    },
+    {
+      "name": "Ralph Lauren Shorts (40+)",
+      "translations": {
+        "fi": "Ralph Lauren -shortsit (40+)",
+        "da": "Ralph Lauren-shorts (40+)",
+        "nb": "Ralph Lauren-shorts (40+)",
+        "cs": "Šortky Ralph Lauren (40+)",
+        "sk": "Šortky Ralph Lauren (40+)",
+        "hu": "Ralph Lauren rövidnadrág (40+)",
+        "ro": "Pantaloni scurți Ralph Lauren (40+)",
+        "el": "Σορτς Ralph Lauren (40+)",
+        "uk": "Шорти Ralph Lauren (40+)",
+        "ar": "شورت Ralph Lauren ‏(40+)",
+        "ja": "Ralph Laurenショーツ（40+）",
+        "ko": "Ralph Lauren 반바지 (40+)",
+        "vi": "Quần short Ralph Lauren (40+)",
+        "tr": "Ralph Lauren şort (40+)"
+      }
+    },
+    {
+      "name": "UnderArmour Jacket",
+      "translations": {
+        "fi": "UnderArmour-takki",
+        "da": "UnderArmour-jakke",
+        "nb": "UnderArmour-jakke",
+        "cs": "Bunda UnderArmour",
+        "sk": "Bunda UnderArmour",
+        "hu": "UnderArmour dzseki",
+        "ro": "Jachetă UnderArmour",
+        "el": "Μπουφάν UnderArmour",
+        "uk": "Куртка UnderArmour",
+        "ar": "سترة UnderArmour",
+        "ja": "UnderArmourジャケット",
+        "ko": "UnderArmour 재킷",
+        "vi": "Áo khoác UnderArmour",
+        "tr": "UnderArmour ceket"
+      }
+    },
+    {
+      "name": "Parisian Family Hoodie",
+      "translations": {
+        "fi": "Parisian Family -huppari",
+        "da": "Parisian Family-hættetrøje",
+        "nb": "Parisian Family-hettegenser",
+        "cs": "Mikina Parisian Family s kapucí",
+        "sk": "Mikina Parisian Family s kapucňou",
+        "hu": "Parisian Family kapucnis pulóver",
+        "ro": "Hanorac Parisian Family",
+        "el": "Φούτερ Parisian Family με κουκούλα",
+        "uk": "Худі Parisian Family",
+        "ar": "هودي Parisian Family",
+        "ja": "Parisian Familyパーカー",
+        "ko": "Parisian Family 후드티",
+        "vi": "Áo hoodie Parisian Family",
+        "tr": "Parisian Family kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Burberry Fashion Shorts",
+      "translations": {
+        "fi": "Burberry-muotishortsit",
+        "da": "Burberry-modeshorts",
+        "nb": "Burberry-moteshorts",
+        "cs": "Módní šortky Burberry",
+        "sk": "Módne šortky Burberry",
+        "hu": "Burberry divatshort",
+        "ro": "Pantaloni scurți de modă Burberry",
+        "el": "Μοντέρνο σορτς Burberry",
+        "uk": "Модні шорти Burberry",
+        "ar": "شورت عصري Burberry",
+        "ja": "Burberryファッションショーツ",
+        "ko": "Burberry 패션 반바지",
+        "vi": "Quần short thời trang Burberry",
+        "tr": "Burberry moda şortu"
+      }
+    },
+    {
+      "name": "SYNA T-Shirt Collection",
+      "translations": {
+        "fi": "SYNA-T-paitakokoelma",
+        "da": "SYNA-T-shirtkollektion",
+        "nb": "SYNA-T-skjortekolleksjon",
+        "cs": "Kolekce triček SYNA",
+        "sk": "Kolekcia tričiek SYNA",
+        "hu": "SYNA pólókollekció",
+        "ro": "Colecție de tricouri SYNA",
+        "el": "Συλλογή μπλουζών SYNA",
+        "uk": "Колекція футболок SYNA",
+        "ar": "مجموعة تيشيرتات SYNA",
+        "ja": "SYNA Tシャツコレクション",
+        "ko": "SYNA 티셔츠 컬렉션",
+        "vi": "Bộ sưu tập áo thun SYNA",
+        "tr": "SYNA tişört koleksiyonu"
+      }
+    },
+    {
+      "name": "Nike UA Jacket",
+      "translations": {
+        "fi": "Nike UA -takki",
+        "da": "Nike UA-jakke",
+        "nb": "Nike UA-jakke",
+        "cs": "Bunda Nike UA",
+        "sk": "Bunda Nike UA",
+        "hu": "Nike UA dzseki",
+        "ro": "Jachetă Nike UA",
+        "el": "Μπουφάν Nike UA",
+        "uk": "Куртка Nike UA",
+        "ar": "سترة Nike UA",
+        "ja": "Nike UAジャケット",
+        "ko": "Nike UA 재킷",
+        "vi": "Áo khoác Nike UA",
+        "tr": "Nike UA ceket"
+      }
+    },
+    {
+      "name": "vintage Hoodie",
+      "translations": {
+        "fi": "Vintage-huppari",
+        "da": "Vintagehættetrøje",
+        "nb": "Vintagehettegenser",
+        "cs": "Vintage mikina s kapucí",
+        "sk": "Vintage mikina s kapucňou",
+        "hu": "Vintage kapucnis pulóver",
+        "ro": "Hanorac vintage",
+        "el": "Vintage φούτερ με κουκούλα",
+        "uk": "Вінтажне худі",
+        "ar": "هودي بطابع قديم",
+        "ja": "ヴィンテージパーカー",
+        "ko": "빈티지 후드티",
+        "vi": "Áo hoodie phong cách cổ điển",
+        "tr": "Vintage kapüşonlu sweatshirt"
+      }
+    }
+  ]
+}

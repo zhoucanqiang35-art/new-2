@@ -1,0 +1,274 @@
+{
+  "items": [
+    {
+      "name": "America's Cup Sneakers",
+      "translations": {
+        "fi": "America’s Cup -tennarit",
+        "da": "America’s Cup-sneakers",
+        "nb": "America’s Cup-sneakers",
+        "cs": "Tenisky America’s Cup",
+        "sk": "Tenisky America’s Cup",
+        "hu": "America’s Cup sportcipő",
+        "el": "Sneakers America’s Cup",
+        "uk": "Кросівки America’s Cup",
+        "ar": "حذاء رياضي America’s Cup",
+        "ja": "America’s Cupスニーカー",
+        "ko": "America’s Cup 스니커즈",
+        "vi": "Giày sneaker America’s Cup",
+        "tr": "America’s Cup spor ayakkabı"
+      }
+    },
+    {
+      "name": "DGC Custom Casual Sneakers",
+      "translations": {
+        "fi": "DGC-mukautetut vapaa-ajan tennarit",
+        "da": "DGC-tilpassede afslappede sneakers",
+        "nb": "DGC-tilpassede uformelle sneakers",
+        "cs": "Přizpůsobené volnočasové tenisky DGC",
+        "sk": "Prispôsobené voľnočasové tenisky DGC",
+        "hu": "DGC egyedi hétköznapi sportcipő",
+        "el": "Προσαρμοσμένα καθημερινά sneakers DGC",
+        "uk": "Індивідуальні повсякденні кросівки DGC",
+        "ar": "حذاء رياضي كاجوال مخصص DGC",
+        "ja": "DGCカスタムカジュアルスニーカー",
+        "ko": "DGC 커스텀 캐주얼 스니커즈",
+        "vi": "Giày sneaker thường ngày tùy chỉnh DGC",
+        "tr": "DGC özel günlük spor ayakkabı"
+      }
+    },
+    {
+      "name": "Leather Cookie Sneakers",
+      "translations": {
+        "fi": "Nahkaiset Cookie-tennarit",
+        "da": "Cookie-sneakers i læder",
+        "nb": "Cookie-sneakers i skinn",
+        "cs": "Kožené tenisky Cookie",
+        "sk": "Kožené tenisky Cookie",
+        "hu": "Bőr Cookie sportcipő",
+        "el": "Δερμάτινα sneakers Cookie",
+        "uk": "Шкіряні кросівки Cookie",
+        "ar": "حذاء رياضي Cookie جلدي",
+        "ja": "レザーCookieスニーカー",
+        "ko": "가죽 Cookie 스니커즈",
+        "vi": "Giày sneaker Cookie bằng da",
+        "tr": "Deri Cookie spor ayakkabı"
+      }
+    },
+    {
+      "name": "Rivet Low-Top Sneakers",
+      "translations": {
+        "fi": "Niittikoristeiset matalavartiset tennarit",
+        "da": "Lave sneakers med nitter",
+        "nb": "Lave sneakers med nagler",
+        "cs": "Nízké tenisky s nýty",
+        "sk": "Nízke tenisky s nitmi",
+        "hu": "Szegecses alacsony szárú sportcipő",
+        "el": "Χαμηλά sneakers με τρουκς",
+        "uk": "Низькі кросівки із заклепками",
+        "ar": "حذاء رياضي منخفض الرقبة ببرشام",
+        "ja": "リベット付きローカットスニーカー",
+        "ko": "리벳 로우탑 스니커즈",
+        "vi": "Giày sneaker cổ thấp có đinh tán",
+        "tr": "Perçinli alçak bilekli spor ayakkabı"
+      }
+    },
+    {
+      "name": "VG Runner Sneakers",
+      "translations": {
+        "fi": "VG Runner -tennarit",
+        "da": "VG Runner-sneakers",
+        "nb": "VG Runner-sneakers",
+        "cs": "Tenisky VG Runner",
+        "sk": "Tenisky VG Runner",
+        "hu": "VG Runner sportcipő",
+        "el": "Sneakers VG Runner",
+        "uk": "Кросівки VG Runner",
+        "ar": "حذاء رياضي VG Runner",
+        "ja": "VG Runnerスニーカー",
+        "ko": "VG Runner 스니커즈",
+        "vi": "Giày sneaker VG Runner",
+        "tr": "VG Runner spor ayakkabı"
+      }
+    },
+    {
+      "name": "GO 7.0 Sneakers Collection",
+      "translations": {
+        "fi": "GO 7.0 -tennarikokoelma",
+        "da": "GO 7.0-sneakerkollektion",
+        "nb": "GO 7.0-sneakerkolleksjon",
+        "cs": "Kolekce tenisek GO 7.0",
+        "sk": "Kolekcia tenisiek GO 7.0",
+        "hu": "GO 7.0 sportcipő-kollekció",
+        "el": "Συλλογή sneakers GO 7.0",
+        "uk": "Колекція кросівок GO 7.0",
+        "ar": "مجموعة أحذية رياضية GO 7.0",
+        "ja": "GO 7.0スニーカーコレクション",
+        "ko": "GO 7.0 스니커즈 컬렉션",
+        "vi": "Bộ sưu tập sneaker GO 7.0",
+        "tr": "GO 7.0 spor ayakkabı koleksiyonu"
+      }
+    },
+    {
+      "name": "Curb Sneakers Collection",
+      "translations": {
+        "fi": "Curb-tennarikokoelma",
+        "da": "Curb-sneakerkollektion",
+        "nb": "Curb-sneakerkolleksjon",
+        "cs": "Kolekce tenisek Curb",
+        "sk": "Kolekcia tenisiek Curb",
+        "hu": "Curb sportcipő-kollekció",
+        "el": "Συλλογή sneakers Curb",
+        "uk": "Колекція кросівок Curb",
+        "ar": "مجموعة أحذية رياضية Curb",
+        "ja": "Curbスニーカーコレクション",
+        "ko": "Curb 스니커즈 컬렉션",
+        "vi": "Bộ sưu tập sneaker Curb",
+        "tr": "Curb spor ayakkabı koleksiyonu"
+      }
+    },
+    {
+      "name": "PK D10R Sneakers",
+      "translations": {
+        "fi": "PK D10R -tennarit",
+        "da": "PK D10R-sneakers",
+        "nb": "PK D10R-sneakers",
+        "cs": "Tenisky PK D10R",
+        "sk": "Tenisky PK D10R",
+        "hu": "PK D10R sportcipő",
+        "el": "Sneakers PK D10R",
+        "uk": "Кросівки PK D10R",
+        "ar": "حذاء رياضي PK D10R",
+        "ja": "PK D10Rスニーカー",
+        "ko": "PK D10R 스니커즈",
+        "vi": "Giày sneaker PK D10R",
+        "tr": "PK D10R spor ayakkabı"
+      }
+    },
+    {
+      "name": "Baby 350 Sneakers",
+      "translations": {
+        "fi": "Baby 350 -tennarit",
+        "da": "Baby 350-sneakers",
+        "nb": "Baby 350-sneakers",
+        "cs": "Tenisky Baby 350",
+        "sk": "Tenisky Baby 350",
+        "hu": "Baby 350 sportcipő",
+        "el": "Sneakers Baby 350",
+        "uk": "Кросівки Baby 350",
+        "ar": "حذاء رياضي Baby 350",
+        "ja": "Baby 350スニーカー",
+        "ko": "Baby 350 스니커즈",
+        "vi": "Giày sneaker Baby 350",
+        "tr": "Baby 350 spor ayakkabı"
+      }
+    },
+    {
+      "name": "N-MiuMiu Casual Sneakers",
+      "translations": {
+        "fi": "N-MiuMiu-vapaa-ajan tennarit",
+        "da": "N-MiuMiu-afslappede sneakers",
+        "nb": "N-MiuMiu-uformelle sneakers",
+        "cs": "Volnočasové tenisky N-MiuMiu",
+        "sk": "Voľnočasové tenisky N-MiuMiu",
+        "hu": "N-MiuMiu hétköznapi sportcipő",
+        "el": "Καθημερινά sneakers N-MiuMiu",
+        "uk": "Повсякденні кросівки N-MiuMiu",
+        "ar": "حذاء رياضي كاجوال N-MiuMiu",
+        "ja": "N-MiuMiuカジュアルスニーカー",
+        "ko": "N-MiuMiu 캐주얼 스니커즈",
+        "vi": "Giày sneaker thường ngày N-MiuMiu",
+        "tr": "N-MiuMiu günlük spor ayakkabı"
+      }
+    },
+    {
+      "name": "Match Casual Sneakers",
+      "translations": {
+        "fi": "Match-vapaa-ajan tennarit",
+        "da": "Match-afslappede sneakers",
+        "nb": "Match-uformelle sneakers",
+        "cs": "Volnočasové tenisky Match",
+        "sk": "Voľnočasové tenisky Match",
+        "hu": "Match hétköznapi sportcipő",
+        "el": "Καθημερινά sneakers Match",
+        "uk": "Повсякденні кросівки Match",
+        "ar": "حذاء رياضي كاجوال Match",
+        "ja": "Matchカジュアルスニーカー",
+        "ko": "Match 캐주얼 스니커즈",
+        "vi": "Giày sneaker thường ngày Match",
+        "tr": "Match günlük spor ayakkabı"
+      }
+    },
+    {
+      "name": "Freps Premium Casual Shoes",
+      "translations": {
+        "fi": "Freps-laadukkaat vapaa-ajan kengät",
+        "da": "Freps premium hverdagssko",
+        "nb": "Freps premium hverdagssko",
+        "cs": "Prémiové volnočasové boty Freps",
+        "sk": "Prémiová voľnočasová obuv Freps",
+        "hu": "Freps prémium hétköznapi cipő",
+        "el": "Premium καθημερινά παπούτσια Freps",
+        "uk": "Преміальне повсякденне взуття Freps",
+        "ar": "حذاء كاجوال فاخر Freps",
+        "ja": "Frepsプレミアムカジュアルシューズ",
+        "ko": "Freps 프리미엄 캐주얼 신발",
+        "vi": "Giày thường ngày cao cấp Freps",
+        "tr": "Freps premium günlük ayakkabı"
+      }
+    },
+    {
+      "name": "Retro 4 Athletic Shoes",
+      "translations": {
+        "fi": "Retro 4 -urheilukengät",
+        "da": "Retro 4-sportssko",
+        "nb": "Retro 4-sportssko",
+        "cs": "Sportovní boty Retro 4",
+        "sk": "Športová obuv Retro 4",
+        "hu": "Retro 4 sportcipő",
+        "el": "Αθλητικά παπούτσια Retro 4",
+        "uk": "Спортивне взуття Retro 4",
+        "ar": "حذاء رياضي Retro 4",
+        "ja": "Retro 4スポーツシューズ",
+        "ko": "Retro 4 스포츠 신발",
+        "vi": "Giày thể thao Retro 4",
+        "tr": "Retro 4 spor ayakkabı"
+      }
+    },
+    {
+      "name": "Paris 3.0 LED Sneakers",
+      "translations": {
+        "fi": "Paris 3.0 LED -tennarit",
+        "da": "Paris 3.0 LED-sneakers",
+        "nb": "Paris 3.0 LED-sneakers",
+        "cs": "Tenisky Paris 3.0 s LED",
+        "sk": "Tenisky Paris 3.0 s LED",
+        "hu": "Paris 3.0 LED sportcipő",
+        "el": "Sneakers Paris 3.0 με LED",
+        "uk": "Кросівки Paris 3.0 зі світлодіодами",
+        "ar": "حذاء رياضي Paris 3.0 بإضاءة LED",
+        "ja": "Paris 3.0 LEDスニーカー",
+        "ko": "Paris 3.0 LED 스니커즈",
+        "vi": "Giày sneaker Paris 3.0 có đèn LED",
+        "tr": "Paris 3.0 LED spor ayakkabı"
+      }
+    },
+    {
+      "name": "Top8BD Low-Top Skate Shoes",
+      "translations": {
+        "fi": "Top8BD-matalavartiset skeittikengät",
+        "da": "Top8BD-lave skatesko",
+        "nb": "Top8BD-lave skatesko",
+        "cs": "Nízké skate boty Top8BD",
+        "sk": "Nízka skate obuv Top8BD",
+        "hu": "Top8BD alacsony szárú gördeszkás cipő",
+        "el": "Χαμηλά παπούτσια skate Top8BD",
+        "uk": "Низьке взуття для скейтбордингу Top8BD",
+        "ar": "حذاء تزلج منخفض الرقبة Top8BD",
+        "ja": "Top8BDローカットスケートシューズ",
+        "ko": "Top8BD 로우탑 스케이트화",
+        "vi": "Giày trượt ván cổ thấp Top8BD",
+        "tr": "Top8BD alçak bilekli kaykay ayakkabısı"
+      }
+    }
+  ]
+}

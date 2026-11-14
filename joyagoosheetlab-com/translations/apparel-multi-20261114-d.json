@@ -1,0 +1,184 @@
+{
+  "items": [
+    {
+      "name": "Denim Jacket and Pants Set",
+      "translations": {
+        "cs": "Souprava džínové bundy a kalhot",
+        "sk": "Súprava džínsovej bundy a nohavíc",
+        "hu": "Farmerdzseki és nadrág szett",
+        "el": "Σετ τζιν μπουφάν και παντελονιού",
+        "tr": "Kot ceket ve pantolon takımı",
+        "uk": "Комплект джинсової куртки та штанів",
+        "ar": "طقم سترة وبنطال من الدنيم",
+        "ja": "デニムジャケットとパンツのセット",
+        "ko": "데님 재킷과 팬츠 세트",
+        "vi": "Bộ áo khoác và quần denim"
+      }
+    },
+    {
+      "name": "Classic Denim Two-Piece Set",
+      "translations": {
+        "fi": "Klassinen kaksiosainen farkkusetti",
+        "da": "Klassisk todelt denimsæt",
+        "nb": "Klassisk todelt denimsett",
+        "cs": "Klasická dvoudílná džínová souprava",
+        "sk": "Klasická dvojdielna džínsová súprava",
+        "hu": "Klasszikus kétrészes farmerszett",
+        "el": "Κλασικό τζιν σετ δύο τεμαχίων",
+        "tr": "Klasik iki parçalı kot takım",
+        "uk": "Класичний джинсовий комплект із двох частин",
+        "ar": "طقم دنيم كلاسيكي من قطعتين",
+        "ja": "クラシックなデニムツーピースセット",
+        "ko": "클래식 데님 투피스 세트",
+        "vi": "Bộ denim hai món cổ điển"
+      }
+    },
+    {
+      "name": "Fleece Zip Jacket and Vest",
+      "translations": {
+        "fi": "Vetoketjullinen fleecetakki ja liivi",
+        "da": "Fleecejakke med lynlås og vest",
+        "nb": "Fleecejakke med glidelås og vest",
+        "cs": "Fleecová bunda na zip a vesta",
+        "sk": "Flísová bunda na zips a vesta",
+        "hu": "Cipzáras polárdzseki és mellény",
+        "el": "Ζακέτα φλις με φερμουάρ και γιλέκο",
+        "tr": "Fermuarlı polar ceket ve yelek",
+        "uk": "Флісова куртка на блискавці та жилет",
+        "ar": "سترة فليس بسحاب وصديري",
+        "ja": "ジップフリースジャケットとベスト",
+        "ko": "플리스 집업 재킷과 베스트",
+        "vi": "Áo khoác nỉ lông khóa kéo và áo gile"
+      }
+    },
+    {
+      "name": "Fleece-Lined Leather Loafers",
+      "translations": {
+        "fi": "Fleecevuoratut nahkaloaferit",
+        "da": "Læderloafers med fleecefor",
+        "nb": "Skinnloafers med fleecefôr",
+        "cs": "Kožené mokasíny s fleecovou podšívkou",
+        "sk": "Kožené mokasíny s flísovou podšívkou",
+        "hu": "Polárbéléses bőr loafer cipő",
+        "ro": "Mocasini din piele căptușiți cu fleece",
+        "el": "Δερμάτινα loafers με επένδυση φλις",
+        "tr": "Polar astarlı deri loafer ayakkabı",
+        "uk": "Шкіряні лофери з флісовою підкладкою",
+        "ar": "حذاء لوفر جلدي مبطن بالفليس",
+        "ja": "フリース裏地付きレザーローファー",
+        "ko": "플리스 안감 가죽 로퍼",
+        "vi": "Giày loafer da lót nỉ lông"
+      }
+    },
+    {
+      "name": "Unisex Summer Sandal Slides",
+      "translations": {
+        "fi": "Unisex kesäsandaalit",
+        "cs": "Unisex letní nazouvací sandály",
+        "sk": "Unisex letné nazúvacie sandále",
+        "hu": "Uniszex nyári papucsszandál",
+        "el": "Unisex καλοκαιρινά σανδάλια τύπου slide",
+        "tr": "Unisex yazlık sandalet terlik",
+        "uk": "Унісекс літні сандалі-шльопанці",
+        "ar": "صندل صيفي سهل الارتداء للجنسين",
+        "ja": "ユニセックスの夏用スライドサンダル",
+        "ko": "유니섹스 여름 슬라이드 샌들",
+        "vi": "Dép sandal mùa hè unisex"
+      }
+    },
+    {
+      "name": "Unisex Platform Summer Slides",
+      "translations": {
+        "fi": "Unisex korokepohjaiset kesäpistokkaat",
+        "da": "Unisex sommersandaler med plateau",
+        "nb": "Unisex sommersandaler med platåsåle",
+        "cs": "Unisex letní pantofle na platformě",
+        "sk": "Unisex letné šľapky na platforme",
+        "hu": "Uniszex nyári platformpapucs",
+        "ro": "Papuci unisex de vară cu platformă",
+        "el": "Unisex καλοκαιρινά slides με πλατφόρμα",
+        "tr": "Unisex platform yazlık terlik",
+        "uk": "Унісекс літні шльопанці на платформі",
+        "ar": "شبشب صيفي بنعل مرتفع للجنسين",
+        "ja": "ユニセックスの厚底サマーサンダル",
+        "ko": "유니섹스 플랫폼 여름 슬라이드",
+        "vi": "Dép mùa hè đế cao unisex"
+      }
+    },
+    {
+      "name": "Unisex Molded Summer Slides",
+      "translations": {
+        "fi": "Unisex muotoillut kesäpistokkaat",
+        "da": "Formstøbte unisex sommersandaler",
+        "nb": "Formstøpte unisex sommersandaler",
+        "cs": "Unisex tvarované letní pantofle",
+        "sk": "Unisex tvarované letné šľapky",
+        "hu": "Uniszex formázott nyári papucs",
+        "ro": "Papuci unisex de vară mulați",
+        "el": "Unisex μορφοποιημένα καλοκαιρινά slides",
+        "tr": "Unisex kalıplı yazlık terlik",
+        "uk": "Унісекс формовані літні шльопанці",
+        "ar": "شبشب صيفي مصبوب للجنسين",
+        "ja": "ユニセックスの成形サマーサンダル",
+        "ko": "유니섹스 몰드형 여름 슬라이드",
+        "vi": "Dép mùa hè đúc khuôn unisex"
+      }
+    },
+    {
+      "name": "Summer Printed Hawaiian Shirt",
+      "translations": {
+        "fi": "Kesäinen kuviollinen havaijipaita",
+        "da": "Sommerlig hawaiiskjorte med print",
+        "nb": "Hawaiiskjorte med sommertrykk",
+        "cs": "Letní havajská košile s potiskem",
+        "sk": "Letná havajská košeľa s potlačou",
+        "hu": "Nyári mintás hawaii ing",
+        "ro": "Cămașă hawaiană de vară cu imprimeu",
+        "el": "Καλοκαιρινό χαβανέζικο πουκάμισο με στάμπα",
+        "tr": "Yazlık desenli Hawaii gömlek",
+        "uk": "Літня гавайська сорочка з принтом",
+        "ar": "قميص هاواي صيفي مطبوع",
+        "ja": "夏向けプリント入りハワイアンシャツ",
+        "ko": "프린트 여름 하와이안 셔츠",
+        "vi": "Áo sơ mi Hawaii mùa hè in họa tiết"
+      }
+    },
+    {
+      "name": "Classic High-Top Sneakers",
+      "translations": {
+        "fi": "Klassiset korkeavartiset tennarit",
+        "da": "Klassiske højskaftede sneakers",
+        "nb": "Klassiske høye sneakers",
+        "cs": "Klasické kotníkové tenisky",
+        "sk": "Klasické členkové tenisky",
+        "hu": "Klasszikus magas szárú sportcipő",
+        "ro": "Pantofi sport clasici cu gleznă înaltă",
+        "el": "Κλασικά ψηλά sneakers",
+        "tr": "Klasik bilekli spor ayakkabı",
+        "uk": "Класичні високі кросівки",
+        "ar": "حذاء رياضي كلاسيكي مرتفع",
+        "ja": "クラシックなハイカットスニーカー",
+        "ko": "클래식 하이탑 스니커즈",
+        "vi": "Giày sneaker cổ cao cổ điển"
+      }
+    },
+    {
+      "name": "Classic Winter Snow Boots",
+      "translations": {
+        "fi": "Klassiset talvilumikengät",
+        "da": "Klassiske vinterstøvler til sne",
+        "nb": "Klassiske vinterstøvler for snø",
+        "cs": "Klasické zimní sněhule",
+        "sk": "Klasické zimné snehule",
+        "hu": "Klasszikus téli hócsizma",
+        "el": "Κλασικές χειμερινές μπότες χιονιού",
+        "tr": "Klasik kışlık kar botu",
+        "uk": "Класичні зимові чоботи для снігу",
+        "ar": "حذاء ثلج شتوي كلاسيكي",
+        "ja": "クラシックな冬用スノーブーツ",
+        "ko": "클래식 겨울 스노 부츠",
+        "vi": "Bốt tuyết mùa đông cổ điển"
+      }
+    }
+  ]
+}

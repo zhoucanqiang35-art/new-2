@@ -1,0 +1,484 @@
+{
+  "items": [
+    {
+      "name": "Minimal Logo Blue T-Shirt",
+      "translations": {
+        "fi": "Sininen minimalistisella logolla varustettu T-paita",
+        "da": "Blå T-shirt med minimalistisk logo",
+        "nb": "Blå T-skjorte med minimalistisk logo"
+      }
+    },
+    {
+      "name": "Minimal Logo Black T-Shirt",
+      "translations": {
+        "fi": "Musta minimalistisella logolla varustettu T-paita",
+        "da": "Sort T-shirt med minimalistisk logo",
+        "nb": "Svart T-skjorte med minimalistisk logo"
+      }
+    },
+    {
+      "name": "Sky Blue Pullover Hoodie",
+      "translations": {
+        "fi": "Taivaansininen päälle puettava huppari",
+        "da": "Himmelblå hættetrøje uden lynlås",
+        "nb": "Himmelblå hettegenser uten glidelås"
+      }
+    },
+    {
+      "name": "Classic Pony Gray T-Shirt",
+      "translations": {
+        "fi": "Klassinen harmaa poni-T-paita",
+        "da": "Klassisk grå T-shirt med pony",
+        "nb": "Klassisk grå T-skjorte med ponni"
+      }
+    },
+    {
+      "name": "Loro Piana Knit Polo Shirt",
+      "translations": {
+        "fi": "Loro Piana -neulepoolopaita",
+        "da": "Loro Piana-strikket poloshirt",
+        "nb": "Loro Piana-strikket poloskjorte"
+      }
+    },
+    {
+      "name": "Stussy Zip Hoodie",
+      "translations": {
+        "fi": "Stussy-vetoketjuhuppari",
+        "da": "Stussy-hættetrøje med lynlås",
+        "nb": "Stussy-hettegenser med glidelås"
+      }
+    },
+    {
+      "name": "Paris Crest Polo Shirt",
+      "translations": {
+        "fi": "Paris-vaakunalla varustettu poolopaita",
+        "da": "Poloshirt med Paris-emblem",
+        "nb": "Poloskjorte med Paris-emblem"
+      }
+    },
+    {
+      "name": "Champion Crest Polo Shirt",
+      "translations": {
+        "fi": "Champion-vaakunalla varustettu poolopaita",
+        "da": "Poloshirt med Champion-emblem",
+        "nb": "Poloskjorte med Champion-emblem"
+      }
+    },
+    {
+      "name": "Minimal Logo White T-Shirt",
+      "translations": {
+        "fi": "Valkoinen minimalistisella logolla varustettu T-paita",
+        "da": "Hvid T-shirt med minimalistisk logo",
+        "nb": "Hvit T-skjorte med minimalistisk logo"
+      }
+    },
+    {
+      "name": "Racing Graphic Zip Hoodie",
+      "translations": {
+        "fi": "Kilpailukuvioinen vetoketjuhuppari",
+        "da": "Hættetrøje med lynlås og racergrafik",
+        "nb": "Hettegenser med glidelås og racingmotiv"
+      }
+    },
+    {
+      "name": "London Crest Polo Shirt",
+      "translations": {
+        "fi": "London-vaakunalla varustettu poolopaita",
+        "da": "Poloshirt med London-emblem",
+        "nb": "Poloskjorte med London-emblem"
+      }
+    },
+    {
+      "name": "Minimal Black Logo T-Shirt",
+      "translations": {
+        "fi": "T-paita minimalistisella mustalla logolla",
+        "da": "T-shirt med minimalistisk sort logo",
+        "nb": "T-skjorte med minimalistisk svart logo"
+      }
+    },
+    {
+      "name": "Moncler Trim Polo Shirt",
+      "translations": {
+        "fi": "Moncler-poolopaita koristeyksityiskohdilla",
+        "da": "Moncler-poloshirt med kantdetaljer",
+        "nb": "Moncler-poloskjorte med kantdetaljer"
+      }
+    },
+    {
+      "name": "Supreme Logo Track Jacket",
+      "translations": {
+        "fi": "Supreme-logollinen verryttelytakki",
+        "da": "Træningsjakke med Supreme-logo",
+        "nb": "Treningsjakke med Supreme-logo"
+      }
+    },
+    {
+      "name": "Burberry Pocket Polo Shirt",
+      "translations": {
+        "fi": "Burberry-poolopaita taskulla",
+        "da": "Burberry-poloshirt med lomme",
+        "nb": "Burberry-poloskjorte med lomme"
+      }
+    },
+    {
+      "name": "AMI Heart Graphic T-Shirt",
+      "translations": {
+        "fi": "AMI-sydänkuvioinen T-paita",
+        "da": "AMI-T-shirt med hjertegrafik",
+        "nb": "AMI-T-skjorte med hjertemotiv"
+      }
+    },
+    {
+      "name": "Atlanta Web Graphic Hoodie",
+      "translations": {
+        "fi": "Atlanta Web -kuvioinen huppari",
+        "da": "Hættetrøje med Atlanta Web-grafik",
+        "nb": "Hettegenser med Atlanta Web-motiv"
+      }
+    },
+    {
+      "name": "AMI Heart Logo T-Shirt",
+      "translations": {
+        "fi": "AMI-sydänlogollinen T-paita",
+        "da": "AMI-T-shirt med hjertelogo",
+        "nb": "AMI-T-skjorte med hjertelogo"
+      }
+    },
+    {
+      "name": "Paris 1964 Pullover Hoodie",
+      "translations": {
+        "fi": "Paris 1964 -päälle puettava huppari",
+        "da": "Paris 1964-hættetrøje uden lynlås",
+        "nb": "Paris 1964-hettegenser uten glidelås"
+      }
+    },
+    {
+      "name": "Stussy Crest Polo Shirt",
+      "translations": {
+        "fi": "Stussy-vaakunalla varustettu poolopaita",
+        "da": "Poloshirt med Stussy-emblem",
+        "nb": "Poloskjorte med Stussy-emblem"
+      }
+    },
+    {
+      "name": "LV Brush Graphic T-Shirt",
+      "translations": {
+        "fi": "LV-sivellinkuvioinen T-paita",
+        "da": "LV-T-shirt med penselgrafik",
+        "nb": "LV-T-skjorte med penselmotiv"
+      }
+    },
+    {
+      "name": "Stone Sleeve Patch T-Shirt",
+      "translations": {
+        "fi": "Stone-T-paita hihamerkillä",
+        "da": "Stone-T-shirt med ærmelap",
+        "nb": "Stone-T-skjorte med ermelapp"
+      }
+    },
+    {
+      "name": "Munich City Polo Shirt",
+      "translations": {
+        "fi": "Munich City -poolopaita",
+        "da": "Munich City-poloshirt",
+        "nb": "Munich City-poloskjorte"
+      }
+    },
+    {
+      "name": "1977 Pullover Hoodie",
+      "translations": {
+        "fi": "1977-päälle puettava huppari",
+        "da": "1977-hættetrøje uden lynlås",
+        "nb": "1977-hettegenser uten glidelås"
+      }
+    },
+    {
+      "name": "Classic Mint Polo Shirt",
+      "translations": {
+        "fi": "Klassinen mintunvärinen poolopaita",
+        "da": "Klassisk mintgrøn poloshirt",
+        "nb": "Klassisk mintgrønn poloskjorte"
+      }
+    },
+    {
+      "name": "Trail Graphic T-Shirt",
+      "translations": {
+        "fi": "Trail-kuvioinen T-paita",
+        "da": "T-shirt med Trail-grafik",
+        "nb": "T-skjorte med Trail-motiv"
+      }
+    },
+    {
+      "name": "Scuffers Casual Hoodie Set",
+      "translations": {
+        "fi": "Scuffers-rento hupparisetti",
+        "da": "Scuffers-afslappet hættetrøjesæt",
+        "nb": "Scuffers-uformelt hettegenser-sett"
+      }
+    },
+    {
+      "name": "Check-Lined Zip Hoodie",
+      "translations": {
+        "fi": "Ruutuvuorattu vetoketjuhuppari",
+        "da": "Hættetrøje med lynlås og ternet for",
+        "nb": "Hettegenser med glidelås og rutete fôr"
+      }
+    },
+    {
+      "name": "Premium Crew-Neck T-Shirt",
+      "translations": {
+        "fi": "Laadukas pyöreäkauluksinen T-paita",
+        "da": "Premium T-shirt med rund hals",
+        "nb": "Premium T-skjorte med rund hals"
+      }
+    },
+    {
+      "name": "Essentials Fleece Hoodie",
+      "translations": {
+        "fi": "Essentials-fleecehuppari",
+        "da": "Essentials-fleecehættetrøje",
+        "nb": "Essentials-fleecehettegenser"
+      }
+    },
+    {
+      "name": "Angel Graphic Zip Hoodie",
+      "translations": {
+        "fi": "Enkelikuvioinen vetoketjuhuppari",
+        "da": "Hættetrøje med lynlås og englegrafik",
+        "nb": "Hettegenser med glidelås og englemotiv"
+      }
+    },
+    {
+      "name": "X Logo T-Shirt",
+      "translations": {
+        "fi": "X-logollinen T-paita",
+        "da": "T-shirt med X-logo",
+        "nb": "T-skjorte med X-logo"
+      }
+    },
+    {
+      "name": "Milan City Polo Shirt",
+      "translations": {
+        "fi": "Milan City -poolopaita",
+        "da": "Milan City-poloshirt",
+        "nb": "Milan City-poloskjorte"
+      }
+    },
+    {
+      "name": "Cross Print Denim Shorts",
+      "translations": {
+        "fi": "Ristikuvioiset farkkushortsit",
+        "da": "Denimshorts med korsprint",
+        "nb": "Denimshorts med korstrykk"
+      }
+    },
+    {
+      "name": "Minimal Logo T-Shirt",
+      "translations": {
+        "fi": "Minimalistisella logolla varustettu T-paita",
+        "da": "T-shirt med minimalistisk logo",
+        "nb": "T-skjorte med minimalistisk logo"
+      }
+    },
+    {
+      "name": "Script Logo Zip Sweatshirt",
+      "translations": {
+        "fi": "Vetoketjullinen collegepaita kirjoituslogolla",
+        "da": "Sweatshirt med lynlås og skriftlogo",
+        "nb": "Genser med glidelås og skriftlogo"
+      }
+    },
+    {
+      "name": "Ape Head Graphic T-Shirt",
+      "translations": {
+        "fi": "Apinanpääkuvioinen T-paita",
+        "da": "T-shirt med abehovedgrafik",
+        "nb": "T-skjorte med apehodemotiv"
+      }
+    },
+    {
+      "name": "Box Logo Summer T-Shirt",
+      "translations": {
+        "fi": "Kesäinen T-paita laatikkologolla",
+        "da": "Sommer-T-shirt med bokslogo",
+        "nb": "Sommer-T-skjorte med bokslogo"
+      }
+    },
+    {
+      "name": "Classic Trim Polo Shirt",
+      "translations": {
+        "fi": "Klassinen poolopaita koristeyksityiskohdilla",
+        "da": "Klassisk poloshirt med kantdetaljer",
+        "nb": "Klassisk poloskjorte med kantdetaljer"
+      }
+    },
+    {
+      "name": "Sketch Graphic T-Shirt",
+      "translations": {
+        "fi": "Luonnoskuvioinen T-paita",
+        "da": "T-shirt med skitsegrafik",
+        "nb": "T-skjorte med skissegrafikk"
+      }
+    },
+    {
+      "name": "Coconut Casual Sneakers",
+      "translations": {
+        "fi": "Coconut-vapaa-ajan tennarit",
+        "da": "Coconut-afslappede sneakers",
+        "nb": "Coconut-uformelle sneakers"
+      }
+    },
+    {
+      "name": "BS DK Low-Top Sneakers",
+      "translations": {
+        "fi": "BS DK -matalavartiset tennarit",
+        "da": "BS DK-lave sneakers",
+        "nb": "BS DK-lave sneakers"
+      }
+    },
+    {
+      "name": "OOO Low-Top Sneakers",
+      "translations": {
+        "fi": "OOO-matalavartiset tennarit",
+        "da": "OOO-lave sneakers",
+        "nb": "OOO-lave sneakers"
+      }
+    },
+    {
+      "name": "K14 Low-Top Running Shoes",
+      "translations": {
+        "fi": "K14-matalavartiset juoksukengät",
+        "da": "K14-lave løbesko",
+        "nb": "K14-lave løpesko"
+      }
+    },
+    {
+      "name": "Knit Leather Running Shoes",
+      "translations": {
+        "fi": "Neuloksesta ja nahasta tehdyt juoksukengät",
+        "da": "Løbesko i strik og læder",
+        "nb": "Løpesko i strikk og skinn"
+      }
+    },
+    {
+      "name": "BF Batch Low-Top Sneakers",
+      "translations": {
+        "fi": "BF Batch -matalavartiset tennarit",
+        "da": "BF Batch-lave sneakers",
+        "nb": "BF Batch-lave sneakers"
+      }
+    },
+    {
+      "name": "R1 Casual Cups Sneakers",
+      "translations": {
+        "fi": "R1 Cups -vapaa-ajan tennarit",
+        "da": "R1 Cups-afslappede sneakers",
+        "nb": "R1 Cups-uformelle sneakers"
+      }
+    },
+    {
+      "name": "M Batch Fashion Sneakers",
+      "translations": {
+        "fi": "M Batch -muotitennarit",
+        "da": "M Batch-modesneakers",
+        "nb": "M Batch-motesneakers"
+      }
+    },
+    {
+      "name": "Boxy Fit Basic T-Shirt",
+      "translations": {
+        "fi": "Laatikkomallinen perus-T-paita",
+        "da": "Basis-T-shirt med boxy pasform",
+        "nb": "Basis-T-skjorte med boxy passform"
+      }
+    },
+    {
+      "name": "OW Fashion Sneakers",
+      "translations": {
+        "fi": "OW-muotitennarit",
+        "da": "OW-modesneakers",
+        "nb": "OW-motesneakers"
+      }
+    },
+    {
+      "name": "Longline Casual T-Shirt",
+      "translations": {
+        "fi": "Pitkämallinen vapaa-ajan T-paita",
+        "da": "Lang afslappet T-shirt",
+        "nb": "Lang uformell T-skjorte"
+      }
+    },
+    {
+      "name": "GOAT Sports T-Shirt",
+      "translations": {
+        "fi": "GOAT-urheilu-T-paita",
+        "da": "GOAT-sports-T-shirt",
+        "nb": "GOAT-sports-T-skjorte"
+      }
+    },
+    {
+      "name": "Racing Print Zip Hoodie",
+      "translations": {
+        "fi": "Kilpailupainatuksella varustettu vetoketjuhuppari",
+        "da": "Hættetrøje med lynlås og racerprint",
+        "nb": "Hettegenser med glidelås og racingtrykk"
+      }
+    },
+    {
+      "name": "Logo Box Summer T-Shirt",
+      "translations": {
+        "fi": "Kesäinen T-paita laatikkologolla",
+        "da": "Sommer-T-shirt med bokslogo",
+        "nb": "Sommer-T-skjorte med bokslogo"
+      }
+    },
+    {
+      "name": "Retro 1 High-Top Sneakers",
+      "translations": {
+        "fi": "Retro 1 -korkeavartiset tennarit",
+        "da": "Retro 1-højskaftede sneakers",
+        "nb": "Retro 1-høye sneakers"
+      }
+    },
+    {
+      "name": "Pulse Casual Sneakers",
+      "translations": {
+        "fi": "Pulse-vapaa-ajan tennarit",
+        "da": "Pulse-afslappede sneakers",
+        "nb": "Pulse-uformelle sneakers"
+      }
+    },
+    {
+      "name": "Leather Athletic Sneakers",
+      "translations": {
+        "fi": "Nahkaiset urheilutennarit",
+        "da": "Sportssneakers i læder",
+        "nb": "Sportssneakers i skinn"
+      }
+    },
+    {
+      "name": "LX10 530 Sneakers",
+      "translations": {
+        "fi": "LX10 530 -tennarit",
+        "da": "LX10 530-sneakers",
+        "nb": "LX10 530-sneakers"
+      }
+    },
+    {
+      "name": "700 Boost Sneakers",
+      "translations": {
+        "fi": "700 Boost -tennarit",
+        "da": "700 Boost-sneakers",
+        "nb": "700 Boost-sneakers"
+      }
+    },
+    {
+      "name": "Track 2 Sneakers",
+      "translations": {
+        "fi": "Track 2 -tennarit",
+        "da": "Track 2-sneakers",
+        "nb": "Track 2-sneakers"
+      }
+    }
+  ]
+}

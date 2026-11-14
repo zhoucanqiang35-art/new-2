@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "name": "Cork Casual Sandals",
+      "translations": {
+        "fi": "Rennot korkkisandaalit",
+        "da": "Afslappede korksandaler",
+        "nb": "Uformelle korksandaler",
+        "cs": "Volnočasové korkové sandály",
+        "sk": "Voľnočasové korkové sandále",
+        "hu": "Hétköznapi parafa szandál",
+        "el": "Καθημερινά σανδάλια από φελλό",
+        "uk": "Повсякденні коркові сандалі",
+        "ar": "صندل فلين كاجوال",
+        "ja": "カジュアルコルクサンダル",
+        "ko": "캐주얼 코르크 샌들",
+        "vi": "Xăng đan nút bần thường ngày",
+        "tr": "Günlük mantar sandalet"
+      }
+    },
+    {
+      "name": "OG Foam Slides",
+      "translations": {
+        "fi": "OG-vaahtopistokkaat",
+        "da": "OG-slippers i skum",
+        "nb": "OG-slippers i skum",
+        "cs": "Pěnové pantofle OG",
+        "sk": "Penové šľapky OG",
+        "hu": "OG habpapucs",
+        "el": "Παντόφλες OG από αφρό",
+        "uk": "Шльопанці OG з піни",
+        "ar": "شبشب OG من الفوم",
+        "ja": "OGフォームスライドサンダル",
+        "ko": "OG 폼 슬라이드",
+        "vi": "Dép lê xốp OG",
+        "tr": "OG köpük terlik"
+      }
+    },
+    {
+      "name": "Premium Logo Slides",
+      "translations": {
+        "fi": "Laadukkaat logolliset pistokkaat",
+        "da": "Premium slippers med logo",
+        "nb": "Premium slippers med logo",
+        "cs": "Prémiové pantofle s logem",
+        "sk": "Prémiové šľapky s logom",
+        "hu": "Prémium logós papucs",
+        "el": "Premium παντόφλες με λογότυπο",
+        "uk": "Преміальні шльопанці з логотипом",
+        "ar": "شبشب فاخر بشعار",
+        "ja": "ロゴ入りプレミアムスライドサンダル",
+        "ko": "프리미엄 로고 슬라이드",
+        "vi": "Dép lê cao cấp có logo",
+        "tr": "Premium logolu terlik"
+      }
+    },
+    {
+      "name": "Classic Casual Slides",
+      "translations": {
+        "fi": "Klassiset vapaa-ajan pistokkaat",
+        "da": "Klassiske afslappede slippers",
+        "nb": "Klassiske uformelle slippers",
+        "cs": "Klasické volnočasové pantofle",
+        "sk": "Klasické voľnočasové šľapky",
+        "hu": "Klasszikus hétköznapi papucs",
+        "el": "Κλασικές καθημερινές παντόφλες",
+        "uk": "Класичні повсякденні шльопанці",
+        "ar": "شبشب كاجوال كلاسيكي",
+        "ja": "クラシックカジュアルスライドサンダル",
+        "ko": "클래식 캐주얼 슬라이드",
+        "vi": "Dép lê thường ngày cổ điển",
+        "tr": "Klasik günlük terlik"
+      }
+    },
+    {
+      "name": "Premium Non-Slip Slides",
+      "translations": {
+        "fi": "Laadukkaat liukuesteelliset pistokkaat",
+        "da": "Premium skridsikre slippers",
+        "nb": "Premium sklisikre slippers",
+        "cs": "Prémiové protiskluzové pantofle",
+        "sk": "Prémiové protišmykové šľapky",
+        "hu": "Prémium csúszásmentes papucs",
+        "el": "Premium αντιολισθητικές παντόφλες",
+        "uk": "Преміальні нековзкі шльопанці",
+        "ar": "شبشب فاخر مانع للانزلاق",
+        "ja": "滑りにくいプレミアムスライドサンダル",
+        "ko": "프리미엄 미끄럼 방지 슬라이드",
+        "vi": "Dép lê cao cấp chống trượt",
+        "tr": "Premium kaymaz terlik"
+      }
+    },
+    {
+      "name": "Youth Casual Slides",
+      "translations": {
+        "fi": "Nuorten vapaa-ajan pistokkaat",
+        "da": "Afslappede slippers til unge",
+        "nb": "Uformelle slippers for ungdom",
+        "cs": "Volnočasové pantofle pro mládež",
+        "sk": "Voľnočasové šľapky pre mládež",
+        "hu": "Hétköznapi ifjúsági papucs",
+        "el": "Καθημερινές παντόφλες για νέους",
+        "uk": "Повсякденні шльопанці для молоді",
+        "ar": "شبشب كاجوال للشباب",
+        "ja": "ユース用カジュアルスライドサンダル",
+        "ko": "청소년 캐주얼 슬라이드",
+        "vi": "Dép lê thường ngày cho thiếu niên",
+        "tr": "Gençler için günlük terlik"
+      }
+    },
+    {
+      "name": "Classic Foam Slides",
+      "translations": {
+        "fi": "Klassiset vaahtopistokkaat",
+        "da": "Klassiske slippers i skum",
+        "nb": "Klassiske slippers i skum",
+        "cs": "Klasické pěnové pantofle",
+        "sk": "Klasické penové šľapky",
+        "hu": "Klasszikus habpapucs",
+        "el": "Κλασικές παντόφλες από αφρό",
+        "uk": "Класичні шльопанці з піни",
+        "ar": "شبشب كلاسيكي من الفوم",
+        "ja": "クラシックフォームスライドサンダル",
+        "ko": "클래식 폼 슬라이드",
+        "vi": "Dép lê xốp cổ điển",
+        "tr": "Klasik köpük terlik"
+      }
+    },
+    {
+      "name": "Printed Beach Slides",
+      "translations": {
+        "fi": "Kuvioidut rantapistokkaat",
+        "da": "Strandslippers med print",
+        "nb": "Strandslippers med trykk",
+        "cs": "Plážové pantofle s potiskem",
+        "sk": "Plážové šľapky s potlačou",
+        "hu": "Mintás strandpapucs",
+        "el": "Παντόφλες παραλίας με σχέδιο",
+        "uk": "Пляжні шльопанці з принтом",
+        "ar": "شبشب شاطئ مطبوع",
+        "ja": "プリント入りビーチサンダル",
+        "ko": "프린트 비치 슬라이드",
+        "vi": "Dép lê đi biển có họa tiết",
+        "tr": "Baskılı plaj terliği"
+      }
+    }
+  ]
+}

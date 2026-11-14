@@ -1,0 +1,154 @@
+{
+  "items": [
+    {
+      "name": "Casual Fashion Q2",
+      "translations": {
+        "cs": "Volnočasová móda Q2",
+        "sk": "Voľnočasová móda Q2",
+        "hu": "Hétköznapi divat Q2",
+        "el": "Καθημερινή μόδα Q2",
+        "uk": "Повсякденна мода Q2",
+        "ar": "أزياء كاجوال Q2",
+        "ja": "カジュアルファッション Q2",
+        "ko": "캐주얼 패션 Q2",
+        "vi": "Thời trang thường ngày Q2",
+        "tr": "Günlük moda Q2"
+      }
+    },
+    {
+      "name": "RL Casual Trend Shorts",
+      "translations": {
+        "cs": "Moderní volnočasové šortky RL",
+        "sk": "Moderné voľnočasové šortky RL",
+        "hu": "RL divatos hétköznapi short",
+        "el": "Μοντέρνο καθημερινό σορτς RL",
+        "uk": "Модні повсякденні шорти RL",
+        "ar": "شورت RL كاجوال عصري",
+        "ja": "RLカジュアルトレンドショーツ",
+        "ko": "RL 캐주얼 트렌드 반바지",
+        "vi": "Quần short thường ngày thời thượng RL",
+        "tr": "RL günlük trend şort"
+      }
+    },
+    {
+      "name": "AI Casual Trend Pants 1-29",
+      "translations": {
+        "cs": "Moderní volnočasové kalhoty AI 1-29",
+        "sk": "Moderné voľnočasové nohavice AI 1-29",
+        "hu": "AI divatos hétköznapi nadrág 1-29",
+        "el": "Μοντέρνο καθημερινό παντελόνι AI 1-29",
+        "uk": "Модні повсякденні штани AI 1-29",
+        "ar": "بنطال AI كاجوال عصري 1-29",
+        "ja": "AIカジュアルトレンドパンツ 1-29",
+        "ko": "AI 캐주얼 트렌드 바지 1-29",
+        "vi": "Quần dài thường ngày thời thượng AI 1-29",
+        "tr": "AI günlük trend pantolon 1-29"
+      }
+    },
+    {
+      "name": "X09 Casual Trend Shorts",
+      "translations": {
+        "cs": "Moderní volnočasové šortky X09",
+        "sk": "Moderné voľnočasové šortky X09",
+        "hu": "X09 divatos hétköznapi short",
+        "el": "Μοντέρνο καθημερινό σορτς X09",
+        "uk": "Модні повсякденні шорти X09",
+        "ar": "شورت X09 كاجوال عصري",
+        "ja": "X09カジュアルトレンドショーツ",
+        "ko": "X09 캐주얼 트렌드 반바지",
+        "vi": "Quần short thường ngày thời thượng X09",
+        "tr": "X09 günlük trend şort"
+      }
+    },
+    {
+      "name": "FF Classic Fashion Shorts",
+      "translations": {
+        "cs": "Klasické módní šortky FF",
+        "sk": "Klasické módne šortky FF",
+        "hu": "FF klasszikus divatshort",
+        "el": "Κλασικό μοντέρνο σορτς FF",
+        "uk": "Класичні модні шорти FF",
+        "ar": "شورت FF كلاسيكي عصري",
+        "ja": "FFクラシックファッションショーツ",
+        "ko": "FF 클래식 패션 반바지",
+        "vi": "Quần short thời trang cổ điển FF",
+        "tr": "FF klasik moda şort"
+      }
+    },
+    {
+      "name": "Factory Casual Shorts",
+      "translations": {
+        "cs": "Volnočasové šortky Factory",
+        "sk": "Voľnočasové šortky Factory",
+        "hu": "Factory hétköznapi short",
+        "el": "Καθημερινό σορτς Factory",
+        "uk": "Повсякденні шорти Factory",
+        "ar": "شورت Factory كاجوال",
+        "ja": "Factoryカジュアルショーツ",
+        "ko": "Factory 캐주얼 반바지",
+        "vi": "Quần short thường ngày Factory",
+        "tr": "Factory günlük şort"
+      }
+    },
+    {
+      "name": "Casual Shorts XJXPCS",
+      "translations": {
+        "cs": "Volnočasové šortky XJXPCS",
+        "sk": "Voľnočasové šortky XJXPCS",
+        "hu": "Hétköznapi short XJXPCS",
+        "el": "Καθημερινό σορτς XJXPCS",
+        "uk": "Повсякденні шорти XJXPCS",
+        "ar": "شورت كاجوال XJXPCS",
+        "ja": "カジュアルショーツ XJXPCS",
+        "ko": "캐주얼 반바지 XJXPCS",
+        "vi": "Quần short thường ngày XJXPCS",
+        "tr": "Günlük şort XJXPCS"
+      }
+    },
+    {
+      "name": "Short Pants 809",
+      "translations": {
+        "cs": "Krátké kalhoty 809",
+        "sk": "Krátke nohavice 809",
+        "hu": "Rövidnadrág 809",
+        "el": "Κοντό παντελόνι 809",
+        "uk": "Короткі штани 809",
+        "ar": "بنطال قصير 809",
+        "ja": "ショートパンツ 809",
+        "ko": "반바지 809",
+        "vi": "Quần ngắn 809",
+        "tr": "Kısa pantolon 809"
+      }
+    },
+    {
+      "name": "Summer Sports Shorts Q",
+      "translations": {
+        "cs": "Letní sportovní šortky Q",
+        "sk": "Letné športové šortky Q",
+        "hu": "Nyári sportshort Q",
+        "el": "Καλοκαιρινό αθλητικό σορτς Q",
+        "uk": "Літні спортивні шорти Q",
+        "ar": "شورت رياضي صيفي Q",
+        "ja": "サマースポーツショーツ Q",
+        "ko": "여름 스포츠 반바지 Q",
+        "vi": "Quần short thể thao mùa hè Q",
+        "tr": "Yazlık spor şort Q"
+      }
+    },
+    {
+      "name": "Quick-Dry Mesh Beach Shorts",
+      "translations": {
+        "cs": "Rychleschnoucí plážové šortky ze síťoviny",
+        "sk": "Rýchloschnúce plážové šortky zo sieťoviny",
+        "hu": "Gyorsan száradó hálós strandshort",
+        "el": "Διχτυωτό σορτς παραλίας που στεγνώνει γρήγορα",
+        "uk": "Швидковисихаючі сітчасті пляжні шорти",
+        "ar": "شورت شاطئ شبكي سريع الجفاف",
+        "ja": "速乾メッシュビーチショーツ",
+        "ko": "속건 메시 비치 반바지",
+        "vi": "Quần short đi biển lưới nhanh khô",
+        "tr": "Hızlı kuruyan file plaj şortu"
+      }
+    }
+  ]
+}

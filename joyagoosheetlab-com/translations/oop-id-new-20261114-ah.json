@@ -1,0 +1,638 @@
+{
+  "7199": {
+    "name": "Gray Compass Badge Crewneck Sw",
+    "translations": {
+      "cs": "šedá mikina s kulatým výstřihem a odznakem kompasu…",
+      "hu": "szürke kerek nyakú pulóver iránytű jelvénnyel…",
+      "el": "γκρι μπλούζα με στρογγυλή λαιμόκοψη και σήμα πυξίδας…",
+      "tr": "gri pusula rozetli bisiklet yaka sweatshirt…",
+      "uk": "сіра кофта з круглим вирізом і значком компаса…",
+      "ja": "グレーのコンパスバッジ付きクルーネックスウェット…",
+      "ko": "회색 나침반 배지 크루넥 스웨트셔츠…",
+      "ar": "كنزة رمادية بياقة مستديرة وشارة بوصلة…"
+    }
+  },
+  "6977": {
+    "name": "GH8274 Men’s Cotton Drawstring",
+    "translations": {
+      "cs": "GH8274 pánské bavlněné se stahovací šňůrkou…",
+      "hu": "GH8274 férfi pamut, húzózsinóros…",
+      "el": "GH8274 ανδρικό βαμβακερό με κορδόνι περίσφιξης…",
+      "tr": "GH8274 erkek pamuklu, büzme ipli…",
+      "uk": "GH8274 чоловіче бавовняне зі шнурком…",
+      "ja": "GH8274 メンズ綿素材、ドローコード付き…",
+      "ko": "GH8274 남성용 면 드로스트링…",
+      "ar": "GH8274 قطني رجالي برباط…"
+    }
+  },
+  "6973": {
+    "name": "BL Loose Streetwear Shorts wit",
+    "translations": {
+      "cs": "BL volné streetwearové šortky s…",
+      "hu": "BL bő streetwear rövidnadrág …",
+      "el": "BL φαρδύ streetwear σορτς με…",
+      "tr": "BL bol sokak stili şort, …",
+      "uk": "BL вільні шорти у вуличному стилі з…",
+      "ja": "BL ゆったりストリートウェアショーツ、…付き",
+      "ko": "BL 루즈한 스트리트웨어 반바지, …",
+      "ar": "BL شورت واسع بأسلوب الشارع مع…"
+    }
+  },
+  "6968": {
+    "name": "Solid-Color Sports Shorts with",
+    "translations": {
+      "cs": "jednobarevné sportovní šortky s…",
+      "hu": "egyszínű sport rövidnadrág …",
+      "el": "μονόχρωμο αθλητικό σορτς με…",
+      "tr": "düz renk spor şort, …",
+      "uk": "однотонні спортивні шорти з…",
+      "ja": "無地のスポーツショーツ、…付き",
+      "ko": "단색 스포츠 반바지, …",
+      "ar": "شورت رياضي بلون سادة مع…"
+    }
+  },
+  "6959": {
+    "name": "Men’s Loose Quick-Dry Summer S",
+    "translations": {
+      "cs": "pánské volné rychleschnoucí letní…",
+      "hu": "férfi bő, gyorsan száradó nyári…",
+      "el": "ανδρικό φαρδύ καλοκαιρινό που στεγνώνει γρήγορα…",
+      "tr": "erkek bol hızlı kuruyan yazlık…",
+      "uk": "чоловіче вільне швидкосохнуче літнє…",
+      "ja": "メンズゆったり速乾サマー…",
+      "ko": "남성 루즈핏 속건 여름…",
+      "ar": "رجالي صيفي واسع سريع الجفاف…"
+    }
+  },
+  "6947": {
+    "name": "Premium Versatile Casual Short",
+    "translations": {
+      "cs": "prémiové univerzální volnočasové šortky…",
+      "hu": "prémium sokoldalú alkalmi rövidnadrág…",
+      "el": "ποιοτικό ευκολοσυνδύαστο καθημερινό σορτς…",
+      "tr": "premium çok yönlü günlük şort…",
+      "uk": "преміальні універсальні повсякденні шорти…",
+      "ja": "プレミアムな合わせやすいカジュアルショーツ…",
+      "ko": "프리미엄 만능 캐주얼 반바지…",
+      "ar": "شورت كاجوال فاخر متعدد الاستخدام…"
+    }
+  },
+  "6946": {
+    "name": "Quick-Dry Ice Silk Fitness T-S",
+    "translations": {
+      "cs": "rychleschnoucí fitness tričko z ledového hedvábí…",
+      "hu": "gyorsan száradó jégselyem fitnesz póló…",
+      "el": "γρήγορα στεγνό μπλουζάκι γυμναστικής από δροσερό μετάξι…",
+      "tr": "hızlı kuruyan buz ipeği fitness tişörtü…",
+      "uk": "швидкосохнуча фітнес-футболка з холодного шовку…",
+      "ja": "速乾アイスシルクフィットネスTシャツ…",
+      "ko": "속건 아이스 실크 피트니스 티셔츠…",
+      "ar": "قميص لياقة من الحرير البارد سريع الجفاف…"
+    }
+  },
+  "6934": {
+    "name": "Lightweight Ice Silk Quick-Dry",
+    "translations": {
+      "cs": "lehké rychleschnoucí ledové hedvábí…",
+      "hu": "könnyű, gyorsan száradó jégselyem…",
+      "el": "ελαφρύ δροσερό μετάξι που στεγνώνει γρήγορα…",
+      "tr": "hafif hızlı kuruyan buz ipeği…",
+      "uk": "легкий швидкосохнучий холодний шовк…",
+      "ja": "軽量速乾アイスシルク…",
+      "ko": "가벼운 속건 아이스 실크…",
+      "ar": "حرير بارد خفيف سريع الجفاف…"
+    }
+  },
+  "6287": {
+    "name": "Black and Yellow Sports Windbr",
+    "translations": {
+      "cs": "černožlutá sportovní větrovka…",
+      "hu": "fekete-sárga sport széldzseki…",
+      "el": "μαύρο και κίτρινο αθλητικό αντιανεμικό…",
+      "tr": "siyah ve sarı spor rüzgarlık…",
+      "uk": "чорно-жовта спортивна вітровка…",
+      "ja": "黒と黄色のスポーツウィンドブレーカー…",
+      "ko": "검정과 노랑 스포츠 윈드브레이커…",
+      "ar": "سترة رياضية واقية من الرياح بالأسود والأصفر…"
+    }
+  },
+  "6235": {
+    "name": "Floral Embroidered Pullover Ho",
+    "translations": {
+      "cs": "mikina přes hlavu s květinovou výšivkou…",
+      "hu": "virághímzéses bebújós pulóver…",
+      "el": "φούτερ που φοριέται από το κεφάλι με κέντημα λουλουδιών…",
+      "tr": "çiçek işlemeli baştan geçirmeli üst…",
+      "uk": "світшот через голову з квітковою вишивкою…",
+      "ja": "花の刺繍入りプルオーバー…",
+      "ko": "꽃 자수 풀오버…",
+      "ar": "كنزة تلبس من الرأس مع تطريز زهور…"
+    }
+  },
+  "6233": {
+    "name": "Colorblock Hooded Tracksuit Se",
+    "translations": {
+      "cs": "barevně blokovaná sportovní souprava s kapucí…",
+      "hu": "színblokkolt kapucnis melegítő szett…",
+      "el": "αθλητικό σετ με κουκούλα και χρωματικούς συνδυασμούς…",
+      "tr": "renk bloklu kapüşonlu eşofman takımı…",
+      "uk": "спортивний комплект з капюшоном і кольоровими блоками…",
+      "ja": "カラーブロックのフード付きトラックスーツ…",
+      "ko": "컬러블록 후드 트랙수트…",
+      "ar": "طقم رياضي بغطاء رأس وألوان متباينة…"
+    }
+  },
+  "6116": {
+    "name": "Collaboration Print Zip-Up Spo",
+    "translations": {
+      "cs": "sportovní oblečení na zip s potiskem ze spolupráce…",
+      "hu": "együttműködéses mintás cipzáras sport…",
+      "el": "αθλητικό με φερμουάρ και στάμπα συνεργασίας…",
+      "tr": "iş birliği baskılı fermuarlı spor…",
+      "uk": "спортивний одяг на блискавці з принтом колаборації…",
+      "ja": "コラボプリント入りジップアップスポーツ…",
+      "ko": "협업 프린트 지퍼 스포츠…",
+      "ar": "ملابس رياضية بسحاب وطبعة تعاون…"
+    }
+  },
+  "6110": {
+    "name": "TNF 1996 US Edition Puffer Jac",
+    "translations": {
+      "cs": "TNF 1996 edice USA, péřová bunda…",
+      "hu": "TNF 1996 amerikai kiadás, pufidzseki…",
+      "el": "TNF 1996 αμερικανική έκδοση, φουσκωτό μπουφάν…",
+      "tr": "TNF 1996 ABD sürümü şişme mont…",
+      "uk": "TNF 1996 американське видання, пуховик…",
+      "ja": "TNF 1996 米国版パファージャケット…",
+      "ko": "TNF 1996 미국판 패딩 재킷…",
+      "ar": "TNF 1996 إصدار الولايات المتحدة، سترة منفوشة…"
+    }
+  },
+  "6098": {
+    "name": "WQ1 2025 Quick-Dry Running Tra",
+    "translations": {
+      "cs": "WQ1 2025 rychleschnoucí běžecké tréninkové…",
+      "hu": "WQ1 2025 gyorsan száradó futóedzés…",
+      "el": "WQ1 2025 προπόνηση τρεξίματος που στεγνώνει γρήγορα…",
+      "tr": "WQ1 2025 hızlı kuruyan koşu antrenman…",
+      "uk": "WQ1 2025 швидкосохнуче бігове тренувальне…",
+      "ja": "WQ1 2025 速乾ランニングトレーニング…",
+      "ko": "WQ1 2025 속건 러닝 트레이닝…",
+      "ar": "WQ1 2025 تدريب جري سريع الجفاف…"
+    }
+  },
+  "6091": {
+    "name": "Collaboration Print Zip-Up Spo",
+    "translations": {
+      "cs": "sportovní oblečení na zip s potiskem ze spolupráce…",
+      "hu": "együttműködéses mintás cipzáras sport…",
+      "el": "αθλητικό με φερμουάρ και στάμπα συνεργασίας…",
+      "tr": "iş birliği baskılı fermuarlı spor…",
+      "uk": "спортивний одяг на блискавці з принтом колаборації…",
+      "ja": "コラボプリント入りジップアップスポーツ…",
+      "ko": "협업 프린트 지퍼 스포츠…",
+      "ar": "ملابس رياضية بسحاب وطبعة تعاون…"
+    }
+  },
+  "6089": {
+    "name": "D 04SS Waxed Distressed Denim",
+    "translations": {
+      "cs": "D 04SS voskovaný obnošený denim",
+      "hu": "D 04SS viaszolt koptatott farmer",
+      "el": "D 04SS κερωμένο φθαρμένο τζιν",
+      "tr": "D 04SS mumlu eskitilmiş denim",
+      "uk": "D 04SS вощений потертий денім",
+      "ja": "D 04SS ワックス加工のダメージデニム",
+      "ko": "D 04SS 왁스 처리된 디스트레스드 데님",
+      "ar": "D 04SS دنيم مشمع بتأثير مهترئ"
+    }
+  },
+  "6083": {
+    "name": "Unisex Embossed Letter Puffer",
+    "translations": {
+      "cs": "unisex péřová bunda s reliéfními písmeny…",
+      "hu": "uniszex dombornyomott betűs pufidzseki…",
+      "el": "unisex φουσκωτό μπουφάν με ανάγλυφα γράμματα…",
+      "tr": "unisex kabartmalı harfli şişme mont…",
+      "uk": "унісекс пуховик із рельєфними літерами…",
+      "ja": "ユニセックスの立体文字パファー…",
+      "ko": "남녀공용 양각 글자 패딩…",
+      "ar": "سترة منفوشة للجنسين بحروف بارزة…"
+    }
+  },
+  "6053": {
+    "name": "Yuzhou-087007 Kids 1996 Puffer",
+    "translations": {
+      "cs": "Yuzhou-087007 1996 dětská péřová bunda…",
+      "hu": "Yuzhou-087007 1996 gyermek pufidzseki…",
+      "el": "Yuzhou-087007 1996 παιδικό φουσκωτό μπουφάν…",
+      "tr": "Yuzhou-087007 1996 çocuk şişme mont…",
+      "uk": "Yuzhou-087007 1996 дитячий пуховик…",
+      "ja": "Yuzhou-087007 1996 子供用パファージャケット…",
+      "ko": "Yuzhou-087007 1996 아동 패딩 재킷…",
+      "ar": "Yuzhou-087007 1996 سترة منفوشة للأطفال…"
+    }
+  },
+  "6049": {
+    "name": "RL Detachable Hood Waterproof",
+    "translations": {
+      "cs": "RL odnímatelná kapuce, nepromokavé…",
+      "hu": "RL levehető kapucni, vízálló…",
+      "el": "RL αποσπώμενη κουκούλα, αδιάβροχο…",
+      "tr": "RL çıkarılabilir kapüşon, su geçirmez…",
+      "uk": "RL знімний капюшон, водонепроникне…",
+      "ja": "RL 取り外し可能なフード、防水…",
+      "ko": "RL 탈착식 후드, 방수…",
+      "ar": "RL غطاء رأس قابل للإزالة، مقاوم للماء…"
+    }
+  },
+  "3232": {
+    "name": "* ir * orce 1 Low price",
+    "translations": {
+      "cs": "Ir Orce 1 nízká cena",
+      "hu": "Ir Orce 1 alacsony ár",
+      "el": "Ir Orce 1 χαμηλή τιμή",
+      "tr": "Ir Orce 1 düşük fiyat",
+      "uk": "Ir Orce 1 низька ціна",
+      "ja": "Ir Orce 1 低価格",
+      "ko": "Ir Orce 1 저렴한 가격",
+      "ar": "Ir Orce 1 سعر منخفض"
+    }
+  },
+  "3086": {
+    "name": "PH Customized DD Shoes1ph",
+    "translations": {
+      "cs": "Ph Dd boty na zakázku 1Ph",
+      "hu": "Ph Dd egyedi készítésű cipő 1Ph",
+      "el": "Ph Dd παπούτσια κατά παραγγελία 1Ph",
+      "tr": "Ph Dd özel yapım ayakkabı 1Ph",
+      "uk": "Ph Dd взуття на замовлення 1Ph",
+      "ja": "Ph Dd カスタムシューズ 1Ph",
+      "ko": "Ph Dd 맞춤 제작 신발 1Ph",
+      "ar": "Ph Dd أحذية مخصصة 1Ph"
+    }
+  },
+  "3074": {
+    "name": "Customized DD Shoes1ph",
+    "translations": {
+      "cs": "Dd boty na zakázku 1Ph",
+      "hu": "Dd egyedi készítésű cipő 1Ph",
+      "el": "Dd παπούτσια κατά παραγγελία 1Ph",
+      "tr": "Dd özel yapım ayakkabı 1Ph",
+      "uk": "Dd взуття на замовлення 1Ph",
+      "ja": "Dd カスタムシューズ 1Ph",
+      "ko": "Dd 맞춤 제작 신발 1Ph",
+      "ar": "Dd أحذية مخصصة 1Ph"
+    }
+  },
+  "3044": {
+    "name": "Topshoes-ph0550501WhatsAPP+852",
+    "translations": {
+      "cs": "nabídka produktu",
+      "hu": "terméklista",
+      "el": "καταχώριση προϊόντος",
+      "tr": "ürün ilanı",
+      "uk": "оголошення про товар",
+      "ja": "商品掲載",
+      "ko": "상품 목록",
+      "ar": "قائمة المنتج"
+    }
+  },
+  "2636": {
+    "name": "One free",
+    "translations": {
+      "cs": "jeden zdarma",
+      "hu": "egy ingyen",
+      "el": "ένα δωρεάν",
+      "tr": "bir adet ücretsiz",
+      "uk": "один безкоштовно",
+      "ko": "하나 무료",
+      "ar": "واحد مجاناً"
+    }
+  },
+  "1519": {
+    "name": "Stussy Varsity Bomber",
+    "translations": {
+      "cs": "Stussy univerzitní bomber",
+      "hu": "Stussy egyetemi bomberdzseki",
+      "el": "Stussy μπόμπερ πανεπιστημιακού στυλ",
+      "tr": "Stussy varsity bomber ceket",
+      "uk": "Stussy бомбер у стилі varsity",
+      "ja": "Stussy バーシティボンバー",
+      "ko": "Stussy 바시티 보머 재킷",
+      "ar": "Stussy سترة بومبر جامعية"
+    }
+  },
+  "1515": {
+    "name": "MLBWomen's casual bags",
+    "translations": {
+      "cs": "MLB dámské volnočasové tašky",
+      "hu": "MLB női alkalmi táskák",
+      "el": "MLB γυναικείες καθημερινές τσάντες",
+      "tr": "MLB kadın günlük çantalar",
+      "uk": "MLB жіночі повсякденні сумки",
+      "ja": "MLB レディースカジュアルバッグ",
+      "ko": "MLB 여성 캐주얼 가방",
+      "ar": "MLB حقائب كاجوال نسائية"
+    }
+  },
+  "1495": {
+    "name": "DIO B35 sneaker",
+    "translations": {
+      "cs": "DIO B35 tenisky",
+      "hu": "DIO B35 tornacipő",
+      "el": "DIO B35 αθλητικά παπούτσια",
+      "tr": "DIO B35 spor ayakkabı",
+      "uk": "DIO B35 кросівки",
+      "ja": "DIO B35 スニーカー",
+      "ko": "DIO B35 스니커즈",
+      "ar": "DIO B35 حذاء رياضي"
+    }
+  },
+  "1494": {
+    "name": "Gucc Run sneaker",
+    "translations": {
+      "cs": "Gucc Run tenisky",
+      "hu": "Gucc Run tornacipő",
+      "el": "Gucc Run αθλητικά παπούτσια",
+      "tr": "Gucc Run spor ayakkabı",
+      "uk": "Gucc Run кросівки",
+      "ja": "Gucc Run スニーカー",
+      "ko": "Gucc Run 스니커즈",
+      "ar": "Gucc Run حذاء رياضي"
+    }
+  },
+  "1331": {
+    "name": "number nine brand cap",
+    "translations": {
+      "cs": "čepice značky number nine",
+      "hu": "number nine márkájú sapka",
+      "el": "καπέλο μάρκας number nine",
+      "tr": "number nine marka şapka",
+      "uk": "кепка бренду number nine",
+      "ja": "number nineブランドのキャップ",
+      "ko": "number nine 브랜드 캡",
+      "ar": "قبعة من علامة number nine"
+    }
+  },
+  "1277": {
+    "name": "LV Backpack bags Card Holder",
+    "translations": {
+      "cs": "LV batohy, tašky a pouzdro na karty",
+      "hu": "LV hátizsákok, táskák és kártyatartó",
+      "el": "LV σακίδια, τσάντες και θήκη καρτών",
+      "tr": "LV sırt çantaları, çantalar ve kartlık",
+      "uk": "LV рюкзаки, сумки та картхолдер",
+      "ja": "LV リュック、バッグ、カードケース",
+      "ko": "LV 백팩, 가방 및 카드 지갑",
+      "ar": "LV حقائب ظهر وحقائب وحافظة بطاقات"
+    }
+  },
+  "1199": {
+    "name": "Gucci minimalist short sleeve",
+    "translations": {
+      "cs": "Gucci minimalistický krátký rukáv",
+      "hu": "Gucci minimalista rövid ujjú",
+      "el": "Gucci μινιμαλιστικό κοντομάνικο",
+      "tr": "Gucci minimalist kısa kollu",
+      "uk": "Gucci мінімалістичний короткий рукав",
+      "ja": "Gucci ミニマルな半袖",
+      "ko": "Gucci 미니멀 반소매",
+      "ar": "Gucci أكمام قصيرة بتصميم بسيط"
+    }
+  },
+  "945": {
+    "name": "Luxury Coinpurse",
+    "translations": {
+      "cs": "luxusní peněženka na mince",
+      "hu": "luxus aprópénztárca",
+      "el": "πολυτελές πορτοφολάκι κερμάτων",
+      "tr": "lüks bozuk para cüzdanı",
+      "uk": "розкішна монетниця",
+      "ja": "ラグジュアリーなコインケース",
+      "ko": "럭셔리 동전 지갑",
+      "ar": "محفظة عملات فاخرة"
+    }
+  },
+  "936": {
+    "name": "Bose ultra open earbuds",
+    "translations": {
+      "cs": "Bose otevřená sluchátka ultra",
+      "hu": "Bose ultra nyitott fülhallgató",
+      "el": "Bose ανοιχτά ακουστικά ultra",
+      "tr": "Bose ultra açık kulaklık",
+      "uk": "Bose відкриті навушники ultra",
+      "ja": "Bose ウルトラオープンイヤホン",
+      "ko": "Bose 울트라 오픈 이어버드",
+      "ar": "Bose سماعات أذن مفتوحة ultra"
+    }
+  },
+  "880": {
+    "name": "LV, Chinese Zodiac Perfume",
+    "translations": {
+      "cs": "LV parfém čínský zvěrokruh",
+      "hu": "LV kínai állatöv parfüm",
+      "el": "LV άρωμα κινεζικού ζωδιακού κύκλου",
+      "tr": "LV Çin burcu parfümü",
+      "uk": "LV парфум «Китайський зодіак»",
+      "ja": "LV 中国の干支の香水",
+      "ko": "LV 중국 십이지 향수",
+      "ar": "LV عطر الأبراج الصينية"
+    }
+  },
+  "857": {
+    "name": "Crampons Nike Elite",
+    "translations": {
+      "cs": "Nike Elite kopačky",
+      "hu": "Nike Elite futballstoplis",
+      "el": "Nike Elite παπούτσια ποδοσφαίρου με τάπες",
+      "tr": "Nike Elite krampon",
+      "uk": "Nike Elite футбольні бутси",
+      "ja": "Nike Elite サッカースパイク",
+      "ko": "Nike Elite 축구 스터드화",
+      "ar": "Nike Elite حذاء كرة قدم بمسامير"
+    }
+  },
+  "829": {
+    "name": "Yeezy 350 and Yeezy slippers",
+    "translations": {
+      "cs": "Yeezy 350 a pantofle Yeezy",
+      "hu": "Yeezy 350 és Yeezy papucs",
+      "el": "Yeezy 350 και παντόφλες Yeezy",
+      "tr": "Yeezy 350 ve Yeezy terlik",
+      "uk": "Yeezy 350 та капці Yeezy",
+      "ja": "Yeezy 350 と Yeezyスリッパ",
+      "ko": "Yeezy 350 및 Yeezy 슬리퍼",
+      "ar": "Yeezy 350 و شبشب Yeezy"
+    }
+  },
+  "782": {
+    "name": "Club Football jerseys Training",
+    "translations": {
+      "cs": "tréninkové fotbalové dresy klubu",
+      "hu": "klub futball edzőmezek",
+      "el": "προπονητικές ποδοσφαιρικές φανέλες συλλόγου",
+      "tr": "kulüp futbol antrenman formaları",
+      "uk": "клубні тренувальні футбольні футболки",
+      "ja": "クラブのサッカートレーニングジャージ",
+      "ko": "클럽 축구 트레이닝 유니폼",
+      "ar": "قمصان تدريب كرة القدم للنادي"
+    }
+  },
+  "710": {
+    "name": "GIVENCH High Heeled Boots",
+    "translations": {
+      "cs": "GIVENCH vysoké boty na podpatku",
+      "hu": "GIVENCH magas sarkú csizma",
+      "el": "GIVENCH ψηλοτάκουνες μπότες",
+      "tr": "GIVENCH yüksek topuklu bot",
+      "uk": "GIVENCH чоботи на високих підборах",
+      "ja": "GIVENCH ハイヒールブーツ",
+      "ko": "GIVENCH 하이힐 부츠",
+      "ar": "GIVENCH أحذية بوت بكعب عالٍ"
+    }
+  },
+  "670": {
+    "name": "Hermes H Pattern Slide Sandals",
+    "translations": {
+      "cs": "Hermes pantofle a sandály se vzorem H",
+      "hu": "Hermes H mintás papucs és szandál",
+      "el": "Hermes παντόφλες και σανδάλια με μοτίβο H",
+      "tr": "Hermes H desenli açık terlik ve sandalet",
+      "uk": "Hermes слайди та сандалі з візерунком H",
+      "ja": "Hermes H柄のスライドサンダル",
+      "ko": "Hermes H 패턴 슬라이드 샌들",
+      "ar": "Hermes شبشب وصنادل بنمط H"
+    }
+  },
+  "525": {
+    "name": "Burberry knitted hat caps",
+    "translations": {
+      "cs": "Burberry pletený kulich a čepice",
+      "hu": "Burberry kötött sapka és kalap",
+      "el": "Burberry πλεκτός σκούφος και καπέλα",
+      "tr": "Burberry örgü bere ve şapkalar",
+      "uk": "Burberry в’язана шапка та кепки",
+      "ja": "Burberry ニット帽とキャップ",
+      "ko": "Burberry 니트 비니 및 모자",
+      "ar": "Burberry قبعة محبوكة وقبعات"
+    }
+  },
+  "497": {
+    "name": "ralph lauren zip up",
+    "translations": {
+      "cs": "ralph lauren na zip",
+      "hu": "ralph lauren cipzáras",
+      "el": "ralph lauren με φερμουάρ",
+      "tr": "ralph lauren fermuarlı",
+      "uk": "ralph lauren на блискавці",
+      "ja": "ralph lauren ジップアップ",
+      "ko": "ralph lauren 지퍼형",
+      "ar": "ralph lauren بسحاب"
+    }
+  },
+  "410": {
+    "name": "Fashion sandals and slippers",
+    "translations": {
+      "cs": "módní sandály a pantofle",
+      "hu": "divatos szandál és papucs",
+      "el": "μοντέρνα σανδάλια και παντόφλες",
+      "tr": "moda sandalet ve terlik",
+      "uk": "модні сандалі та капці",
+      "ja": "ファッションサンダルとスリッパ",
+      "ko": "패션 샌들과 슬리퍼",
+      "ar": "صنادل وشباشب عصرية"
+    }
+  },
+  "336": {
+    "name": "PLP electric toothbrush",
+    "translations": {
+      "cs": "PLP elektrický zubní kartáček",
+      "hu": "PLP elektromos fogkefe",
+      "el": "PLP ηλεκτρική οδοντόβουρτσα",
+      "tr": "PLP elektrikli diş fırçası",
+      "uk": "PLP електрична зубна щітка",
+      "ja": "PLP 電動歯ブラシ",
+      "ko": "PLP 전동 칫솔",
+      "ar": "PLP فرشاة أسنان كهربائية"
+    }
+  },
+  "335": {
+    "name": "GH-d v platinum+ straightener",
+    "translations": {
+      "cs": "GH-d v platinum+ žehlička na vlasy",
+      "hu": "GH-d v platinum+ hajvasaló",
+      "el": "GH-d v platinum+ ισιωτική μαλλιών",
+      "tr": "GH-d v platinum+ saç düzleştirici",
+      "uk": "GH-d v platinum+ випрямляч для волосся",
+      "ja": "GH-d v platinum+ ヘアアイロン",
+      "ko": "GH-d v platinum+ 헤어 스트레이트너",
+      "ar": "GH-d v platinum+ مملس شعر"
+    }
+  },
+  "331": {
+    "name": "Foldable thermal earmuffs",
+    "translations": {
+      "cs": "skládací teplé klapky na uši",
+      "hu": "összecsukható meleg fülvédő",
+      "el": "αναδιπλούμενα θερμικά καλύμματα αυτιών",
+      "tr": "katlanabilir sıcak tutan kulaklık",
+      "uk": "складані утеплені навушники",
+      "ja": "折りたたみ式防寒イヤーマフ",
+      "ko": "접이식 보온 귀마개",
+      "ar": "واقي أذن حراري قابل للطي"
+    }
+  },
+  "281": {
+    "name": "customized",
+    "translations": {
+      "cs": "přizpůsobené",
+      "hu": "testreszabott",
+      "el": "προσαρμοσμένο",
+      "tr": "özelleştirilmiş",
+      "uk": "налаштовано",
+      "ja": "カスタマイズ",
+      "ko": "맞춤 제작",
+      "ar": "مخصص"
+    }
+  },
+  "259": {
+    "name": "Loro plana loafers",
+    "translations": {
+      "cs": "Loro plana mokasíny",
+      "hu": "Loro plana loafer cipő",
+      "el": "Loro plana μοκασίνια",
+      "tr": "Loro plana loafer ayakkabı",
+      "uk": "Loro plana лофери",
+      "ja": "Loro plana ローファー",
+      "ko": "Loro plana 로퍼",
+      "ar": "Loro plana حذاء لوفر"
+    }
+  },
+  "225": {
+    "name": "Dior B22 shose",
+    "translations": {
+      "cs": "Dior B22 boty",
+      "hu": "Dior B22 cipő",
+      "el": "Dior B22 παπούτσια",
+      "tr": "Dior B22 ayakkabı",
+      "uk": "Dior B22 взуття",
+      "ja": "Dior B22 シューズ",
+      "ko": "Dior B22 신발",
+      "ar": "Dior B22 أحذية"
+    }
+  },
+  "140": {
+    "name": "Apple Battery Pack 5000mAh",
+    "translations": {
+      "cs": "Apple baterie 5000mAh",
+      "hu": "Apple akkumulátor 5000mAh",
+      "el": "Apple μπαταρία 5000mAh",
+      "tr": "Apple batarya 5000mAh",
+      "uk": "Apple акумулятор 5000mAh",
+      "ja": "Apple バッテリーパック 5000mAh",
+      "ko": "Apple 배터리 팩 5000mAh",
+      "ar": "Apple حزمة بطارية 5000mAh"
+    }
+  }
+}

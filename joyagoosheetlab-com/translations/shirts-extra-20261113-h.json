@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "name": "Heart Logo Gray Hoodie",
+      "translations": {
+        "fi": "Harmaa sydänlogohuppari",
+        "da": "Grå hættetrøje med hjertelogo",
+        "nb": "Grå hettegenser med hjertelogo",
+        "cs": "Šedá mikina s kapucí a logem srdce",
+        "sk": "Sivá mikina s kapucňou a logom srdca",
+        "hu": "Szürke szívlogós kapucnis pulóver",
+        "el": "Γκρι φούτερ με κουκούλα και λογότυπο καρδιάς",
+        "uk": "Сіре худі з логотипом-серцем",
+        "ar": "هودي رمادي بشعار قلب",
+        "ja": "ハートロゴ入りグレーパーカー",
+        "ko": "하트 로고 그레이 후드티",
+        "vi": "Áo hoodie xám logo trái tim",
+        "tr": "Kalp logolu gri kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Heart Logo White T-Shirt",
+      "translations": {
+        "fi": "Valkoinen sydänlogollinen T-paita",
+        "da": "Hvid T-shirt med hjertelogo",
+        "nb": "Hvit T-skjorte med hjertelogo",
+        "cs": "Bílé tričko s logem srdce",
+        "sk": "Biele tričko s logom srdca",
+        "hu": "Fehér szívlogós póló",
+        "el": "Λευκό μπλουζάκι με λογότυπο καρδιάς",
+        "uk": "Біла футболка з логотипом-серцем",
+        "ar": "تيشيرت أبيض بشعار قلب",
+        "ja": "ハートロゴ入り白Tシャツ",
+        "ko": "하트 로고 화이트 티셔츠",
+        "vi": "Áo thun trắng logo trái tim",
+        "tr": "Kalp logolu beyaz tişört"
+      }
+    },
+    {
+      "name": "Ribbed Cropped Tank Top",
+      "translations": {
+        "fi": "Ribbineulottu lyhyt toppi",
+        "da": "Kort ribstrikket tanktop",
+        "nb": "Kort ribbestrikket singlet",
+        "cs": "Krátké žebrované tílko",
+        "sk": "Krátke rebrované tielko",
+        "hu": "Bordázott rövidített trikó",
+        "el": "Κοντό ριμπ αμάνικο τοπ",
+        "uk": "Укорочений рубчастий топ",
+        "ar": "بلوزة قصيرة مضلعة بلا أكمام",
+        "ja": "リブ編みクロップドタンクトップ",
+        "ko": "골지 크롭 탱크톱",
+        "vi": "Áo ba lỗ croptop dệt gân",
+        "tr": "Fitilli kısa atlet"
+      }
+    },
+    {
+      "name": "Minimal Letter T-Shirt",
+      "translations": {
+        "fi": "Minimalistisella kirjaimella varustettu T-paita",
+        "da": "T-shirt med minimalistiske bogstaver",
+        "nb": "T-skjorte med minimalistiske bokstaver",
+        "cs": "Tričko s minimalistickými písmeny",
+        "sk": "Tričko s minimalistickými písmenami",
+        "hu": "Minimalista betűs póló",
+        "el": "Μπλουζάκι με λιτά γράμματα",
+        "uk": "Футболка з мінімалістичними літерами",
+        "ar": "تيشيرت بحروف بسيطة",
+        "ja": "シンプルな文字入りTシャツ",
+        "ko": "미니멀 레터 티셔츠",
+        "vi": "Áo thun chữ tối giản",
+        "tr": "Minimal harfli tişört"
+      }
+    },
+    {
+      "name": "Star Logo T-Shirt",
+      "translations": {
+        "fi": "Tähtilogollinen T-paita",
+        "da": "T-shirt med stjernelogo",
+        "nb": "T-skjorte med stjernelogo",
+        "cs": "Tričko s logem hvězdy",
+        "sk": "Tričko s logom hviezdy",
+        "hu": "Csillaglogós póló",
+        "el": "Μπλουζάκι με λογότυπο αστεριού",
+        "uk": "Футболка з логотипом-зіркою",
+        "ar": "تيشيرت بشعار نجمة",
+        "ja": "スターロゴTシャツ",
+        "ko": "스타 로고 티셔츠",
+        "vi": "Áo thun logo ngôi sao",
+        "tr": "Yıldız logolu tişört"
+      }
+    },
+    {
+      "name": "Monogram Logo T-Shirt",
+      "translations": {
+        "fi": "Monogrammilogollinen T-paita",
+        "da": "T-shirt med monogramlogo",
+        "nb": "T-skjorte med monogramlogo",
+        "cs": "Tričko s logem monogramu",
+        "sk": "Tričko s logom monogramu",
+        "hu": "Monogramlogós póló",
+        "el": "Μπλουζάκι με λογότυπο μονόγραμμα",
+        "uk": "Футболка з логотипом-монограмою",
+        "ar": "تيشيرت بشعار أحرف متداخلة",
+        "ja": "モノグラムロゴTシャツ",
+        "ko": "모노그램 로고 티셔츠",
+        "vi": "Áo thun logo chữ lồng",
+        "tr": "Monogram logolu tişört"
+      }
+    },
+    {
+      "name": "Cotton Crew-Neck T-Shirt",
+      "translations": {
+        "fi": "Puuvillainen pyöreäkauluksinen T-paita",
+        "da": "T-shirt i bomuld med rund hals",
+        "nb": "T-skjorte i bomull med rund hals",
+        "cs": "Bavlněné tričko s kulatým výstřihem",
+        "sk": "Bavlnené tričko s okrúhlym výstrihom",
+        "hu": "Pamut kerek nyakú póló",
+        "el": "Βαμβακερό μπλουζάκι με στρογγυλή λαιμόκοψη",
+        "uk": "Бавовняна футболка з круглим вирізом",
+        "ar": "تيشيرت قطني برقبة دائرية",
+        "ja": "コットンクルーネックTシャツ",
+        "ko": "면 크루넥 티셔츠",
+        "vi": "Áo thun cotton cổ tròn",
+        "tr": "Pamuklu bisiklet yaka tişört"
+      }
+    },
+    {
+      "name": "Classic Athletic Sneakers",
+      "translations": {
+        "fi": "Klassiset urheilutennarit",
+        "da": "Klassiske sportssneakers",
+        "nb": "Klassiske sportslige sneakers",
+        "cs": "Klasické sportovní tenisky",
+        "sk": "Klasické športové tenisky",
+        "hu": "Klasszikus sportcipő",
+        "el": "Κλασικά αθλητικά sneakers",
+        "uk": "Класичні спортивні кросівки",
+        "ar": "حذاء رياضي كلاسيكي",
+        "ja": "クラシックスポーツスニーカー",
+        "ko": "클래식 운동화",
+        "vi": "Giày sneaker thể thao cổ điển",
+        "tr": "Klasik spor ayakkabı"
+      }
+    }
+  ]
+}

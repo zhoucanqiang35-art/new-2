@@ -1,0 +1,526 @@
+{
+  "items": [
+    {
+      "name": "Tech Fleece Zip Tracksuit",
+      "translations": {
+        "ro": "Trening Tech Fleece cu fermoar"
+      }
+    },
+    {
+      "name": "Color-Block Casual Vest",
+      "translations": {
+        "ro": "Vestă casual în blocuri de culoare"
+      }
+    },
+    {
+      "name": "CAR Casual Suit Set",
+      "translations": {
+        "ro": "Set casual tip costum CAR"
+      }
+    },
+    {
+      "name": "Wool Outdoor Shell Jacket",
+      "translations": {
+        "ro": "Jachetă exterioară din lână pentru exterior"
+      }
+    },
+    {
+      "name": "Autumn Knit Sweater 07HW",
+      "translations": {
+        "ro": "Pulover tricotat de toamnă 07HW"
+      }
+    },
+    {
+      "name": "ME Waterproof Shell Jacket",
+      "translations": {
+        "ro": "Jachetă exterioară impermeabilă ME"
+      }
+    },
+    {
+      "name": "CaW Knit Sweater",
+      "translations": {
+        "ro": "Pulover tricotat CaW"
+      }
+    },
+    {
+      "name": "Casual Clothing Jacket",
+      "translations": {
+        "ro": "Jachetă vestimentară casual"
+      }
+    },
+    {
+      "name": "Winter Puffer Jacket 001",
+      "translations": {
+        "ro": "Geacă matlasată de iarnă 001"
+      }
+    },
+    {
+      "name": "Premium Matching Set",
+      "translations": {
+        "ro": "Set asortat premium"
+      }
+    },
+    {
+      "name": "Montreal Tonal Down Vest",
+      "translations": {
+        "ro": "Vestă Montreal cu puf în tonuri asortate"
+      }
+    },
+    {
+      "name": "Premium Knit Down Jacket",
+      "translations": {
+        "ro": "Geacă premium cu puf și tricot"
+      }
+    },
+    {
+      "name": "Premium Matching Set 002",
+      "translations": {
+        "ro": "Set asortat premium 002"
+      }
+    },
+    {
+      "name": "Casual Fashion Down Jacket",
+      "translations": {
+        "ro": "Geacă casual la modă cu puf"
+      }
+    },
+    {
+      "name": "Dream Batch Sneakers",
+      "translations": {
+        "ro": "Sneakers Dream Batch"
+      }
+    },
+    {
+      "name": "Stand Collar Jacket Set",
+      "translations": {
+        "ro": "Set cu jachetă cu guler ridicat"
+      }
+    },
+    {
+      "name": "Zip-Up and Pullover Hoodie",
+      "translations": {
+        "ro": "Hanorac cu fermoar și hanorac fără fermoar"
+      }
+    },
+    {
+      "name": "Premium Sweatshirt Set",
+      "translations": {
+        "ro": "Set premium de bluze sport"
+      }
+    },
+    {
+      "name": "31A8-9C Denim Outfit",
+      "translations": {
+        "ro": "Ținută din denim 31A8-9C"
+      }
+    },
+    {
+      "name": "M Knit-Panel Puffer Jacket",
+      "translations": {
+        "ro": "Geacă matlasată M cu panouri tricotate"
+      }
+    },
+    {
+      "name": "Alcatraz Star Denim Shorts",
+      "translations": {
+        "ro": "Pantaloni scurți din denim Alcatraz cu stea"
+      }
+    },
+    {
+      "name": "3M Reflective Coach Jacket",
+      "translations": {
+        "ro": "Jachetă tip coach reflectorizantă 3M"
+      }
+    },
+    {
+      "name": "Casual Performance Set",
+      "translations": {
+        "ro": "Set casual pentru activitate"
+      }
+    },
+    {
+      "name": "Colorblock Knit Track Set",
+      "translations": {
+        "ro": "Trening tricotat în blocuri de culoare"
+      }
+    },
+    {
+      "name": "Palm Moose Fur Hood Parka",
+      "translations": {
+        "ro": "Parka Palm Moose cu glugă cu blană"
+      }
+    },
+    {
+      "name": "Moncler Knit Down Cardigan",
+      "translations": {
+        "ro": "Cardigan Moncler tricotat cu puf"
+      }
+    },
+    {
+      "name": "CT WIP Hooded Sweat Jacket",
+      "translations": {
+        "ro": "Jachetă sport CT WIP cu glugă"
+      }
+    },
+    {
+      "name": "Outdoor Hard Shell Jacket",
+      "translations": {
+        "ro": "Jachetă exterioară rigidă pentru activități în aer liber"
+      }
+    },
+    {
+      "name": "8010 Varsity Jacket",
+      "translations": {
+        "ro": "Jachetă varsity 8010"
+      }
+    },
+    {
+      "name": "Men's Hooded Down Jacket",
+      "translations": {
+        "ro": "Geacă cu puf și glugă pentru bărbați"
+      }
+    },
+    {
+      "name": "Shark Camo Zip Hoodie",
+      "translations": {
+        "ro": "Hanorac cu fermoar și imprimeu camuflaj cu rechin"
+      }
+    },
+    {
+      "name": "Fashion Couple Jacket",
+      "translations": {
+        "ro": "Jachetă la modă pentru cuplu"
+      }
+    },
+    {
+      "name": "9887 Slim Zip Sweatshirt",
+      "translations": {
+        "ro": "Bluză sport subțire cu fermoar 9887"
+      }
+    },
+    {
+      "name": "ME Grid Pullover Jacket",
+      "translations": {
+        "ro": "Jachetă ME fără fermoar cu model caro"
+      }
+    },
+    {
+      "name": "L Fashion Down Jacket",
+      "translations": {
+        "ro": "Geacă la modă cu puf L"
+      }
+    },
+    {
+      "name": "Premium Knit Panel Jacket",
+      "translations": {
+        "ro": "Jachetă premium cu panouri tricotate"
+      }
+    },
+    {
+      "name": "Women's Fitted Yoga Jacket",
+      "translations": {
+        "ro": "Jachetă de yoga cambrată pentru femei"
+      }
+    },
+    {
+      "name": "Comfort Foam Slides RS337",
+      "translations": {
+        "ro": "Papuci comozi din spumă RS337"
+      }
+    },
+    {
+      "name": "Trendy Casual Slides 005",
+      "translations": {
+        "ro": "Papuci casual la modă 005"
+      }
+    },
+    {
+      "name": "Closed-Toe Cork Slides X1",
+      "translations": {
+        "ro": "Papuci din plută cu vârf închis X1"
+      }
+    },
+    {
+      "name": "Waterfront Summer Slides",
+      "translations": {
+        "ro": "Papuci de vară Waterfront"
+      }
+    },
+    {
+      "name": "MIND001 Massage Clog Shoes",
+      "translations": {
+        "ro": "Saboti de masaj MIND001"
+      }
+    },
+    {
+      "name": "Floral Print Pool Slides",
+      "translations": {
+        "ro": "Papuci de piscină cu imprimeu floral"
+      }
+    },
+    {
+      "name": "Value Fashion Slides 08",
+      "translations": {
+        "ro": "Papuci la modă la preț accesibil 08"
+      }
+    },
+    {
+      "name": "Premium Casual Slides X",
+      "translations": {
+        "ro": "Papuci casual premium X"
+      }
+    },
+    {
+      "name": "Sculpted Platform Slides",
+      "translations": {
+        "ro": "Papuci cu platformă sculptată"
+      }
+    },
+    {
+      "name": "Premium Fashion Slides",
+      "translations": {
+        "ro": "Papuci premium la modă"
+      }
+    },
+    {
+      "name": "Premium Casual Slides LF",
+      "translations": {
+        "ro": "Papuci casual premium LF"
+      }
+    },
+    {
+      "name": "Men's Outdoor Sport Slides",
+      "translations": {
+        "ro": "Papuci sport de exterior pentru bărbați"
+      }
+    },
+    {
+      "name": "Premium Casual Slides",
+      "translations": {
+        "ro": "Papuci casual premium"
+      }
+    },
+    {
+      "name": "Cork Casual Sandals",
+      "translations": {
+        "ro": "Sandale casual din plută"
+      }
+    },
+    {
+      "name": "OG Foam Slides",
+      "translations": {
+        "ro": "Papuci din spumă OG"
+      }
+    },
+    {
+      "name": "Calm Cushioned Slides",
+      "translations": {
+        "ro": "Papuci amortizați Calm"
+      }
+    },
+    {
+      "name": "Premium Logo Slides",
+      "translations": {
+        "ro": "Papuci premium cu logo"
+      }
+    },
+    {
+      "name": "Tasman Mustard Slippers",
+      "translations": {
+        "ro": "Papuci Tasman de culoare muștar"
+      }
+    },
+    {
+      "name": "WM Massage Shoe Collection",
+      "translations": {
+        "ro": "Colecție de încălțăminte de masaj WM"
+      }
+    },
+    {
+      "name": "Classic Casual Slides",
+      "translations": {
+        "ro": "Papuci casual clasici"
+      }
+    },
+    {
+      "name": "YZ Everyday Slides",
+      "translations": {
+        "ro": "Papuci YZ pentru fiecare zi"
+      }
+    },
+    {
+      "name": "AGT Comfort Massage Slides",
+      "translations": {
+        "ro": "Papuci de masaj AGT Comfort"
+      }
+    },
+    {
+      "name": "GX Foam Slide Collection",
+      "translations": {
+        "ro": "Colecție de papuci din spumă GX"
+      }
+    },
+    {
+      "name": "Value Foam Slides",
+      "translations": {
+        "ro": "Papuci din spumă la preț accesibil"
+      }
+    },
+    {
+      "name": "Private Order Check Slides",
+      "translations": {
+        "ro": "Papuci de verificat pentru comandă privată"
+      }
+    },
+    {
+      "name": "BD Cork Slide Collection 1",
+      "translations": {
+        "ro": "Colecție de papuci din plută BD 1"
+      }
+    },
+    {
+      "name": "Star Platform Slippers",
+      "translations": {
+        "ro": "Papuci cu platformă și stea"
+      }
+    },
+    {
+      "name": "3DC Casual House Shoes",
+      "translations": {
+        "ro": "Încălțăminte casual de casă 3DC"
+      }
+    },
+    {
+      "name": "Classic Everyday Slides",
+      "translations": {
+        "ro": "Papuci clasici pentru fiecare zi"
+      }
+    },
+    {
+      "name": "Premium Non-Slip Slides",
+      "translations": {
+        "ro": "Papuci premium antiderapanți"
+      }
+    },
+    {
+      "name": "Youth Casual Slides",
+      "translations": {
+        "ro": "Papuci casual pentru tineri"
+      }
+    },
+    {
+      "name": "Minimalist Slide Sandals",
+      "translations": {
+        "ro": "Sandale tip papuc minimaliste"
+      }
+    },
+    {
+      "name": "Ollie Leather Sneakers",
+      "translations": {
+        "ro": "Sneakers Ollie din piele"
+      }
+    },
+    {
+      "name": "Paris Logo Slides",
+      "translations": {
+        "ro": "Papuci Paris cu logo"
+      }
+    },
+    {
+      "name": "Everyday Casual Slides",
+      "translations": {
+        "ro": "Papuci casual pentru fiecare zi"
+      }
+    },
+    {
+      "name": "Fashion Comfort Slides",
+      "translations": {
+        "ro": "Papuci comozi la modă"
+      }
+    },
+    {
+      "name": "Classic Foam Slides",
+      "translations": {
+        "ro": "Papuci clasici din spumă"
+      }
+    },
+    {
+      "name": "Printed Beach Slides",
+      "translations": {
+        "ro": "Papuci de plajă cu imprimeu"
+      }
+    },
+    {
+      "name": "YZ Slide Collection",
+      "translations": {
+        "ro": "Colecție de papuci YZ"
+      }
+    },
+    {
+      "name": "Classic Summer Slides",
+      "translations": {
+        "ro": "Papuci clasici de vară"
+      }
+    },
+    {
+      "name": "Stussy Graphic Shorts",
+      "translations": {
+        "ro": "Pantaloni scurți Stussy cu imprimeu"
+      }
+    },
+    {
+      "name": "Bape Graphic Gray Hoodie",
+      "translations": {
+        "ro": "Hanorac gri Bape cu imprimeu"
+      }
+    },
+    {
+      "name": "Stussy Dice Navy T-Shirt",
+      "translations": {
+        "ro": "Tricou bleumarin Stussy Dice"
+      }
+    },
+    {
+      "name": "City Graphic Black T-Shirt",
+      "translations": {
+        "ro": "Tricou negru cu imprimeu City"
+      }
+    },
+    {
+      "name": "Gallery Dept Olive T-Shirt",
+      "translations": {
+        "ro": "Tricou verde măsliniu Gallery Dept"
+      }
+    },
+    {
+      "name": "Stussy Graphic Blue Hoodie",
+      "translations": {
+        "ro": "Hanorac albastru Stussy cu imprimeu"
+      }
+    },
+    {
+      "name": "Umbro Logo Gray Hoodie",
+      "translations": {
+        "ro": "Hanorac gri cu logo Umbro"
+      }
+    },
+    {
+      "name": "Classic Pony Blue T-Shirt",
+      "translations": {
+        "ro": "Tricou albastru clasic cu ponei"
+      }
+    },
+    {
+      "name": "Stussy 8-Ball Blue T-Shirt",
+      "translations": {
+        "ro": "Tricou albastru Stussy 8-Ball"
+      }
+    },
+    {
+      "name": "Gallery Dept White T-Shirt",
+      "translations": {
+        "ro": "Tricou alb Gallery Dept"
+      }
+    }
+  ]
+}

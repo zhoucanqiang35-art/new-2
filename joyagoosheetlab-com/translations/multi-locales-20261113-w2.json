@@ -1,0 +1,194 @@
+{
+  "items": [
+    {
+      "name": "LA25 New Sweatshirt Jacket",
+      "translations": {
+        "fi": "LA25-uusi collegepaitatakki",
+        "da": "LA25-ny sweatjakke",
+        "nb": "LA25-ny sweatjakke",
+        "cs": "Nová mikinová bunda LA25",
+        "sk": "Nová mikinová bunda LA25",
+        "hu": "LA25 új melegítődzseki",
+        "ro": "Jachetă sport nouă LA25",
+        "el": "Νέο μπουφάν φούτερ LA25",
+        "uk": "Нова трикотажна куртка LA25",
+        "ar": "سترة سويت جديدة LA25",
+        "ja": "LA25新作スウェットジャケット",
+        "ko": "LA25 신상 스웨트 재킷",
+        "vi": "Áo khoác nỉ mới LA25",
+        "tr": "LA25 yeni sweatshirt ceket"
+      }
+    },
+    {
+      "name": "Alcatraz Fleece Zip Hoodie",
+      "translations": {
+        "fi": "Alcatraz-fleecevetoketjuhuppari",
+        "da": "Alcatraz-fleecehættetrøje med lynlås",
+        "nb": "Alcatraz-fleecehettegenser med glidelås",
+        "cs": "Fleecová mikina Alcatraz s kapucí na zip",
+        "sk": "Flísová mikina Alcatraz s kapucňou na zips",
+        "hu": "Alcatraz polár cipzáras kapucnis pulóver",
+        "ro": "Hanorac Alcatraz din fleece cu fermoar",
+        "el": "Φλις φούτερ Alcatraz με κουκούλα και φερμουάρ",
+        "uk": "Флісове худі Alcatraz на блискавці",
+        "ar": "هودي Alcatraz من الفليس بسحاب",
+        "ja": "Alcatrazフリースジップパーカー",
+        "ko": "Alcatraz 플리스 집업 후드티",
+        "vi": "Áo hoodie nỉ lông khóa kéo Alcatraz",
+        "tr": "Alcatraz polar fermuarlı kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "UF Fashion Puffer Jacket",
+      "translations": {
+        "fi": "UF-muotitoppatakki",
+        "da": "UF-modepufferjakke",
+        "nb": "UF-motepufferjakke",
+        "cs": "Módní prošívaná bunda UF",
+        "sk": "Módna prešívaná bunda UF",
+        "hu": "UF divatos pufi kabát",
+        "ro": "Geacă matlasată la modă UF",
+        "el": "Μοντέρνο φουσκωτό μπουφάν UF",
+        "uk": "Модна дута куртка UF",
+        "ar": "سترة منتفخة عصرية UF",
+        "ja": "UFファッションパファージャケット",
+        "ko": "UF 패션 패딩 재킷",
+        "vi": "Áo khoác phao thời trang UF",
+        "tr": "UF moda şişme mont"
+      }
+    },
+    {
+      "name": "Amiri Logo Pullover Hoodie",
+      "translations": {
+        "fi": "Amiri-logollinen päälle puettava huppari",
+        "da": "Amiri-hættetrøje uden lynlås med logo",
+        "nb": "Amiri-hettegenser uten glidelås med logo",
+        "cs": "Mikina Amiri s kapucí bez zipu a logem",
+        "sk": "Mikina Amiri s kapucňou bez zipsu a logom",
+        "hu": "Amiri logós bebújós kapucnis pulóver",
+        "ro": "Hanorac Amiri fără fermoar cu logo",
+        "el": "Φούτερ Amiri με κουκούλα χωρίς φερμουάρ και λογότυπο",
+        "uk": "Худі Amiri без блискавки з логотипом",
+        "ar": "هودي Amiri دون سحاب بشعار",
+        "ja": "Amiriロゴプルオーバーパーカー",
+        "ko": "Amiri 로고 풀오버 후드티",
+        "vi": "Áo hoodie chui đầu logo Amiri",
+        "tr": "Amiri logolu fermuarsız kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Lacoste Swim Shorts",
+      "translations": {
+        "fi": "Lacoste-uimashortsit",
+        "da": "Lacoste-badeshorts",
+        "nb": "Lacoste-badeshorts",
+        "cs": "Plavecké šortky Lacoste",
+        "sk": "Plavecké šortky Lacoste",
+        "hu": "Lacoste úszóshort",
+        "ro": "Pantaloni scurți de baie Lacoste",
+        "el": "Μαγιό σορτς Lacoste",
+        "uk": "Плавальні шорти Lacoste",
+        "ar": "شورت سباحة Lacoste",
+        "ja": "Lacosteスイムショーツ",
+        "ko": "Lacoste 수영 반바지",
+        "vi": "Quần short bơi Lacoste",
+        "tr": "Lacoste yüzme şortu"
+      }
+    },
+    {
+      "name": "Fendi Fashion Shorts",
+      "translations": {
+        "fi": "Fendi-muotishortsit",
+        "da": "Fendi-modeshorts",
+        "nb": "Fendi-moteshorts",
+        "cs": "Módní šortky Fendi",
+        "sk": "Módne šortky Fendi",
+        "hu": "Fendi divatshort",
+        "ro": "Pantaloni scurți la modă Fendi",
+        "el": "Μοντέρνο σορτς Fendi",
+        "uk": "Модні шорти Fendi",
+        "ar": "شورت عصري Fendi",
+        "ja": "Fendiファッションショーツ",
+        "ko": "Fendi 패션 반바지",
+        "vi": "Quần short thời trang Fendi",
+        "tr": "Fendi moda şortu"
+      }
+    },
+    {
+      "name": "Hellstar Eyeball T-Shirt",
+      "translations": {
+        "fi": "Hellstar-silmämuna-T-paita",
+        "da": "Hellstar-T-shirt med øje",
+        "nb": "Hellstar-T-skjorte med øye",
+        "cs": "Tričko Hellstar s okem",
+        "sk": "Tričko Hellstar s okom",
+        "hu": "Hellstar szemgolyós póló",
+        "ro": "Tricou Hellstar cu ochi",
+        "el": "Μπλουζάκι Hellstar με μάτι",
+        "uk": "Футболка Hellstar з оком",
+        "ar": "تيشيرت Hellstar برسمة عين",
+        "ja": "HellstarアイボールTシャツ",
+        "ko": "Hellstar 눈알 티셔츠",
+        "vi": "Áo thun Hellstar hình mắt",
+        "tr": "Hellstar göz desenli tişört"
+      }
+    },
+    {
+      "name": "Valentino Shorts",
+      "translations": {
+        "fi": "Valentino-shortsit",
+        "da": "Valentino-shorts",
+        "nb": "Valentino-shorts",
+        "cs": "Šortky Valentino",
+        "sk": "Šortky Valentino",
+        "hu": "Valentino rövidnadrág",
+        "ro": "Pantaloni scurți Valentino",
+        "el": "Σορτς Valentino",
+        "uk": "Шорти Valentino",
+        "ar": "شورت Valentino",
+        "ja": "Valentinoショーツ",
+        "ko": "Valentino 반바지",
+        "vi": "Quần short Valentino",
+        "tr": "Valentino şort"
+      }
+    },
+    {
+      "name": "Hugo Boss Polo/Shorts",
+      "translations": {
+        "fi": "Hugo Boss -poolopaita / shortsit",
+        "da": "Hugo Boss-poloshirt / shorts",
+        "nb": "Hugo Boss-poloskjorte / shorts",
+        "cs": "Polo tričko / šortky Hugo Boss",
+        "sk": "Polo tričko / šortky Hugo Boss",
+        "hu": "Hugo Boss galléros póló / rövidnadrág",
+        "ro": "Tricou polo / pantaloni scurți Hugo Boss",
+        "el": "Πόλο μπλουζάκι / σορτς Hugo Boss",
+        "uk": "Поло / шорти Hugo Boss",
+        "ar": "قميص بولو / شورت Hugo Boss",
+        "ja": "Hugo Bossポロシャツ／ショーツ",
+        "ko": "Hugo Boss 폴로 셔츠 / 반바지",
+        "vi": "Áo polo / quần short Hugo Boss",
+        "tr": "Hugo Boss polo tişört / şort"
+      }
+    },
+    {
+      "name": "Palm Angels Shorts",
+      "translations": {
+        "fi": "Palm Angels -shortsit",
+        "da": "Palm Angels-shorts",
+        "nb": "Palm Angels-shorts",
+        "cs": "Šortky Palm Angels",
+        "sk": "Šortky Palm Angels",
+        "hu": "Palm Angels rövidnadrág",
+        "ro": "Pantaloni scurți Palm Angels",
+        "el": "Σορτς Palm Angels",
+        "uk": "Шорти Palm Angels",
+        "ar": "شورت Palm Angels",
+        "ja": "Palm Angelsショーツ",
+        "ko": "Palm Angels 반바지",
+        "vi": "Quần short Palm Angels",
+        "tr": "Palm Angels şort"
+      }
+    }
+  ]
+}

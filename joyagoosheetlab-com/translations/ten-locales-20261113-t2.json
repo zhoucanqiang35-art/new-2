@@ -1,0 +1,109 @@
+{
+  "items": [
+    {
+      "name": "Classic Puffer Jacket 007",
+      "translations": {
+        "cs": "Klasická prošívaná bunda 007",
+        "sk": "Klasická prešívaná bunda 007",
+        "hu": "Klasszikus pufi kabát 007",
+        "el": "Κλασικό φουσκωτό μπουφάν 007",
+        "uk": "Класична дута куртка 007",
+        "ar": "سترة منتفخة كلاسيكية 007",
+        "ja": "クラシックパファージャケット 007",
+        "ko": "클래식 패딩 재킷 007",
+        "vi": "Áo khoác phao cổ điển 007",
+        "tr": "Klasik şişme mont 007"
+      }
+    },
+    {
+      "name": "Gradient Streetwear Hoodie",
+      "translations": {
+        "cs": "Streetwearová mikina s kapucí s barevným přechodem",
+        "sk": "Streetwearová mikina s kapucňou s farebným prechodom",
+        "hu": "Színátmenetes utcai kapucnis pulóver",
+        "el": "Φούτερ streetwear με κουκούλα και διαβαθμισμένο χρώμα",
+        "uk": "Худі вуличного стилю з градієнтом",
+        "ar": "هودي ستريت وير بتدرج لوني",
+        "ja": "グラデーションストリートウェアパーカー",
+        "ko": "그라데이션 스트리트웨어 후드티",
+        "vi": "Áo hoodie streetwear chuyển màu",
+        "tr": "Degrade sokak stili kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Embroidered Sweatshirt Set",
+      "translations": {
+        "cs": "Komplet mikin s výšivkou",
+        "sk": "Komplet mikín s výšivkou",
+        "hu": "Hímzett pulóverszett",
+        "el": "Σετ μπλουζών φούτερ με κέντημα",
+        "uk": "Комплект світшотів із вишивкою",
+        "ar": "طقم سويت شيرت مطرز",
+        "ja": "刺繍入りスウェットセット",
+        "ko": "자수 스웨트셔츠 세트",
+        "vi": "Bộ áo nỉ thêu",
+        "tr": "İşlemeli sweatshirt takımı"
+      }
+    },
+    {
+      "name": "Headphones",
+      "translations": {
+        "cs": "Sluchátka",
+        "sk": "Slúchadlá",
+        "hu": "Fejhallgató",
+        "el": "Ακουστικά",
+        "uk": "Навушники",
+        "ar": "سماعات رأس",
+        "ja": "ヘッドホン",
+        "ko": "헤드폰",
+        "vi": "Tai nghe",
+        "tr": "Kulaklık"
+      }
+    },
+    {
+      "name": "OKSTORE Phone Case 0075",
+      "translations": {
+        "cs": "Pouzdro na telefon OKSTORE 0075",
+        "sk": "Puzdro na telefón OKSTORE 0075",
+        "hu": "OKSTORE telefontok 0075",
+        "el": "Θήκη τηλεφώνου OKSTORE 0075",
+        "uk": "Чохол для телефона OKSTORE 0075",
+        "ar": "غطاء هاتف OKSTORE 0075",
+        "ja": "OKSTOREスマホケース 0075",
+        "ko": "OKSTORE 휴대폰 케이스 0075",
+        "vi": "Ốp điện thoại OKSTORE 0075",
+        "tr": "OKSTORE telefon kılıfı 0075"
+      }
+    },
+    {
+      "name": "DJ RM/W Phone Case",
+      "translations": {
+        "cs": "Pouzdro na telefon DJ RM/W",
+        "sk": "Puzdro na telefón DJ RM/W",
+        "hu": "DJ RM/W telefontok",
+        "el": "Θήκη τηλεφώνου DJ RM/W",
+        "uk": "Чохол для телефона DJ RM/W",
+        "ar": "غطاء هاتف DJ RM/W",
+        "ja": "DJ RM/Wスマホケース",
+        "ko": "DJ RM/W 휴대폰 케이스",
+        "vi": "Ốp điện thoại DJ RM/W",
+        "tr": "DJ RM/W telefon kılıfı"
+      }
+    },
+    {
+      "name": "Men's Graphic Shorts 2025",
+      "translations": {
+        "cs": "Pánské šortky s potiskem 2025",
+        "sk": "Pánske šortky s potlačou 2025",
+        "hu": "Férfi mintás rövidnadrág 2025",
+        "el": "Ανδρικό σορτς με σχέδιο 2025",
+        "uk": "Чоловічі шорти з принтом 2025",
+        "ar": "شورت رجالي برسمة 2025",
+        "ja": "メンズグラフィックショーツ 2025",
+        "ko": "남성 그래픽 반바지 2025",
+        "vi": "Quần short nam có họa tiết 2025",
+        "tr": "Erkek grafik desenli şort 2025"
+      }
+    }
+  ]
+}

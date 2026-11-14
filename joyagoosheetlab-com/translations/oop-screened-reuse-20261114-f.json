@@ -1,0 +1,109 @@
+{
+  "items": [
+    {
+      "name": "Unisex Warm Winter Jacket",
+      "translations": {
+        "fi": "Unisex lämmin talvitakki",
+        "da": "Unisex varm vinterjakke",
+        "nb": "Unisex varm vinterjakke"
+      }
+    },
+    {
+      "name": "X4 BD Performance Sneakers",
+      "translations": {
+        "fi": "X4 BD Performance -lenkkarit",
+        "ro": "Adidasi X4 BD Performance"
+      }
+    },
+    {
+      "name": "AM1 Low-Top Sneakers",
+      "translations": {
+        "fi": "AM1 matalat tennarit",
+        "nb": "AM1 Low-Top joggesko",
+        "ro": "Adidași AM1 Low-Top"
+      }
+    },
+    {
+      "name": "Air Jordan 1 Low Sneakers",
+      "translations": {
+        "fi": "Air Jordan 1 matalat tennarit",
+        "ro": "Adidași Air Jordan 1 Low"
+      }
+    },
+    {
+      "name": "Air Max 97 Collection",
+      "translations": {
+        "ro": "Colecția Air Max 97"
+      }
+    },
+    {
+      "name": "Fashion Running Sneakers",
+      "translations": {
+        "fi": "Muodikkaat juoksulenkkarit",
+        "da": "Modeløbesneakers",
+        "nb": "Mote joggesko",
+        "ro": "Tenisi de alergare la modă"
+      }
+    },
+    {
+      "name": "Air Jordan 4 White and Blue",
+      "translations": {
+        "fi": "Air Jordan 4 valkoinen ja sininen",
+        "da": "Air Jordan 4 hvid og blå",
+        "nb": "Air Jordan 4 Hvit og Blå",
+        "ro": "Air Jordan 4 Alb și Albastru"
+      }
+    },
+    {
+      "name": "J11 Retro Basketball Shoes",
+      "translations": {
+        "fi": "J11 Retro koripallokengät",
+        "da": "J11 Retro Basketball Sko",
+        "nb": "J11 Retro Basketball Sko",
+        "ro": "Pantofi de baschet retro J11"
+      }
+    },
+    {
+      "name": "Tom Ford Sunglasses",
+      "translations": {
+        "fi": "Tom Fordin aurinkolasit",
+        "da": "Tom Ford Solbriller",
+        "nb": "Tom Ford solbriller",
+        "ro": "Ochelari de soare Tom Ford"
+      }
+    },
+    {
+      "name": "COACH bag high quality",
+      "translations": {
+        "fi": "laadukas COACH-laukku",
+        "da": "COACH taske høj kvalitet",
+        "ro": "Geanta COACH de inalta calitate"
+      }
+    },
+    {
+      "name": "Sweater Collection",
+      "translations": {
+        "fi": "Neulemallisto",
+        "nb": "Genserkolleksjon",
+        "ro": "Colecția de pulovere"
+      }
+    },
+    {
+      "name": "Moncler POLO Tee",
+      "translations": {
+        "fi": "Moncler POLO T-paita",
+        "nb": "Moncler POLO T-skjorte",
+        "ro": "Tricou Moncler POLO"
+      }
+    },
+    {
+      "name": "Dolce＆Gabbana Shoes",
+      "translations": {
+        "fi": "Dolce＆Gabbana-kengät",
+        "da": "Dolce & Gabbana Sko",
+        "nb": "Dolce & Gabbana sko",
+        "ro": "Pantofi Dolce＆Gabbana"
+      }
+    }
+  ]
+}

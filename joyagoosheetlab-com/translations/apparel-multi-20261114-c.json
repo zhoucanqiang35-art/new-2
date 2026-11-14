@@ -1,0 +1,202 @@
+{
+  "items": [
+    {
+      "name": "Graphic White T-Shirt",
+      "translations": {
+        "fi": "Valkoinen T-paita kuviolla",
+        "da": "Hvid T-shirt med grafik",
+        "nb": "Hvit T-skjorte med grafikk",
+        "cs": "Bílé tričko s grafikou",
+        "sk": "Biele tričko s grafikou",
+        "hu": "Fehér grafikus mintás póló",
+        "el": "Λευκό T-shirt με γραφικό σχέδιο",
+        "tr": "Grafik desenli beyaz tişört",
+        "uk": "Біла футболка з графічним малюнком",
+        "ar": "تي شيرت أبيض بطبعة رسومية",
+        "ja": "グラフィック入り白Tシャツ",
+        "ko": "그래픽 화이트 티셔츠",
+        "vi": "Áo thun trắng họa tiết đồ họa"
+      }
+    },
+    {
+      "name": "Floral Graphic White T-Shirt",
+      "translations": {
+        "fi": "Valkoinen T-paita kukkakuviolla",
+        "cs": "Bílé tričko s květinovou grafikou",
+        "sk": "Biele tričko s kvetinovou grafikou",
+        "hu": "Fehér póló virágos grafikával",
+        "el": "Λευκό T-shirt με φλοράλ γραφικό σχέδιο",
+        "tr": "Çiçek grafik desenli beyaz tişört",
+        "uk": "Біла футболка з квітковим графічним малюнком",
+        "ar": "تي شيرت أبيض بطبعة زهور",
+        "ja": "フローラルグラフィック入り白Tシャツ",
+        "ko": "플로럴 그래픽 화이트 티셔츠",
+        "vi": "Áo thun trắng họa tiết hoa"
+      }
+    },
+    {
+      "name": "Floral Graphic Black T-Shirt",
+      "translations": {
+        "fi": "Musta T-paita kukkakuviolla",
+        "da": "Sort T-shirt med blomstergrafik",
+        "nb": "Svart T-skjorte med blomstermotiv",
+        "cs": "Černé tričko s květinovou grafikou",
+        "sk": "Čierne tričko s kvetinovou grafikou",
+        "hu": "Fekete póló virágos grafikával",
+        "el": "Μαύρο T-shirt με φλοράλ γραφικό σχέδιο",
+        "tr": "Çiçek grafik desenli siyah tişört",
+        "uk": "Чорна футболка з квітковим графічним малюнком",
+        "ar": "تي شيرت أسود بطبعة زهور",
+        "ja": "フローラルグラフィック入り黒Tシャツ",
+        "ko": "플로럴 그래픽 블랙 티셔츠",
+        "vi": "Áo thun đen họa tiết hoa"
+      }
+    },
+    {
+      "name": "Classic Navy T-Shirt",
+      "translations": {
+        "fi": "Klassinen laivastonsininen T-paita",
+        "da": "Klassisk marineblå T-shirt",
+        "nb": "Klassisk marineblå T-skjorte",
+        "cs": "Klasické námořnicky modré tričko",
+        "sk": "Klasické námornícky modré tričko",
+        "hu": "Klasszikus tengerészkék póló",
+        "el": "Κλασικό ναυτικό μπλε T-shirt",
+        "tr": "Klasik lacivert tişört",
+        "uk": "Класична темно-синя футболка",
+        "ar": "تي شيرت كحلي كلاسيكي",
+        "ja": "クラシックなネイビーTシャツ",
+        "ko": "클래식 네이비 티셔츠",
+        "vi": "Áo thun xanh navy cổ điển"
+      }
+    },
+    {
+      "name": "Classic Gray Polo Shirt",
+      "translations": {
+        "fi": "Klassinen harmaa poolopaita",
+        "da": "Klassisk grå poloshirt",
+        "nb": "Klassisk grå poloskjorte",
+        "cs": "Klasická šedá polokošile",
+        "sk": "Klasická sivá polokošeľa",
+        "hu": "Klasszikus szürke galléros póló",
+        "el": "Κλασική γκρι μπλούζα πόλο",
+        "tr": "Klasik gri polo tişört",
+        "uk": "Класична сіра сорочка поло",
+        "ar": "قميص بولو رمادي كلاسيكي",
+        "ja": "クラシックなグレーのポロシャツ",
+        "ko": "클래식 그레이 폴로 셔츠",
+        "vi": "Áo polo xám cổ điển"
+      }
+    },
+    {
+      "name": "Classic Green Polo Shirt",
+      "translations": {
+        "cs": "Klasická zelená polokošile",
+        "sk": "Klasická zelená polokošeľa",
+        "hu": "Klasszikus zöld galléros póló",
+        "el": "Κλασική πράσινη μπλούζα πόλο",
+        "tr": "Klasik yeşil polo tişört",
+        "uk": "Класична зелена сорочка поло",
+        "ar": "قميص بولو أخضر كلاسيكي",
+        "ja": "クラシックなグリーンのポロシャツ",
+        "ko": "클래식 그린 폴로 셔츠",
+        "vi": "Áo polo xanh lá cổ điển"
+      }
+    },
+    {
+      "name": "Classic Red Polo Shirt",
+      "translations": {
+        "cs": "Klasická červená polokošile",
+        "sk": "Klasická červená polokošeľa",
+        "hu": "Klasszikus piros galléros póló",
+        "el": "Κλασική κόκκινη μπλούζα πόλο",
+        "tr": "Klasik kırmızı polo tişört",
+        "uk": "Класична червона сорочка поло",
+        "ar": "قميص بولو أحمر كلاسيكي",
+        "ja": "クラシックなレッドのポロシャツ",
+        "ko": "클래식 레드 폴로 셔츠",
+        "vi": "Áo polo đỏ cổ điển"
+      }
+    },
+    {
+      "name": "Classic Winter Down Jacket",
+      "translations": {
+        "cs": "Klasická zimní péřová bunda",
+        "sk": "Klasická zimná páperová bunda",
+        "hu": "Klasszikus téli pehelykabát",
+        "el": "Κλασικό χειμερινό πουπουλένιο μπουφάν",
+        "tr": "Klasik kışlık kuş tüyü mont",
+        "uk": "Класична зимова пухова куртка",
+        "ar": "سترة ريش شتوية كلاسيكية",
+        "ja": "クラシックな冬用ダウンジャケット",
+        "ko": "클래식 겨울 다운 재킷",
+        "vi": "Áo khoác lông vũ mùa đông cổ điển"
+      }
+    },
+    {
+      "name": "Classic Plaid Jacket",
+      "translations": {
+        "da": "Klassisk ternet jakke",
+        "cs": "Klasická kostkovaná bunda",
+        "sk": "Klasická károvaná bunda",
+        "hu": "Klasszikus kockás kabát",
+        "el": "Κλασικό καρό μπουφάν",
+        "tr": "Klasik ekose ceket",
+        "uk": "Класична куртка в клітинку",
+        "ar": "سترة كلاسيكية بنقشة مربعات",
+        "ja": "クラシックなチェック柄ジャケット",
+        "ko": "클래식 체크 재킷",
+        "vi": "Áo khoác caro cổ điển"
+      }
+    },
+    {
+      "name": "Classic Down Vest",
+      "translations": {
+        "cs": "Klasická péřová vesta",
+        "sk": "Klasická páperová vesta",
+        "hu": "Klasszikus pehelymellény",
+        "el": "Κλασικό πουπουλένιο γιλέκο",
+        "tr": "Klasik kuş tüyü yelek",
+        "uk": "Класичний пуховий жилет",
+        "ar": "صديري ريش كلاسيكي",
+        "ja": "クラシックなダウンベスト",
+        "ko": "클래식 다운 베스트",
+        "vi": "Áo gile lông vũ cổ điển"
+      }
+    },
+    {
+      "name": "Classic White Button-Up Shirt",
+      "translations": {
+        "fi": "Klassinen valkoinen napillinen kauluspaita",
+        "da": "Klassisk hvid skjorte med knapper",
+        "nb": "Klassisk hvit skjorte med knapper",
+        "cs": "Klasická bílá košile na knoflíky",
+        "sk": "Klasická biela košeľa na gombíky",
+        "hu": "Klasszikus fehér gombos ing",
+        "ro": "Cămașă albă clasică cu nasturi",
+        "el": "Κλασικό λευκό πουκάμισο με κουμπιά",
+        "tr": "Klasik beyaz düğmeli gömlek",
+        "uk": "Класична біла сорочка на ґудзиках",
+        "ar": "قميص أبيض كلاسيكي بأزرار",
+        "ja": "クラシックな白いボタンシャツ",
+        "ko": "클래식 화이트 버튼 셔츠",
+        "vi": "Áo sơ mi trắng cài cúc cổ điển"
+      }
+    },
+    {
+      "name": "Classic Black Jogger Pants",
+      "translations": {
+        "cs": "Klasické černé jogger kalhoty",
+        "sk": "Klasické čierne jogger nohavice",
+        "hu": "Klasszikus fekete joggernadrág",
+        "el": "Κλασικό μαύρο παντελόνι τζόγκερ",
+        "tr": "Klasik siyah jogger pantolon",
+        "uk": "Класичні чорні штани-джогери",
+        "ar": "بنطال جوغر أسود كلاسيكي",
+        "ja": "クラシックな黒のジョガーパンツ",
+        "ko": "클래식 블랙 조거 팬츠",
+        "vi": "Quần jogger đen cổ điển"
+      }
+    }
+  ]
+}

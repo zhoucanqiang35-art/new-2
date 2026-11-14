@@ -1,0 +1,136 @@
+{
+  "items": [
+    {
+      "name": "Lightweight Logo Sports Shorts",
+      "translations": {
+        "fi": "Kevyet urheilushortsit logolla",
+        "da": "Lette sportsshorts med logo",
+        "nb": "Lett sportsshorts med logo",
+        "sk": "Ľahké športové šortky s logom",
+        "ro": "Pantaloni scurți sport ușori cu logo",
+        "vi": "Quần short thể thao nhẹ có logo"
+      }
+    },
+    {
+      "name": "Multi-Print Mesh Sports Shorts",
+      "translations": {
+        "fi": "Verkkokankaiset urheilushortsit useilla printeillä",
+        "da": "Sportsmeshshorts med flere print",
+        "nb": "Sportsshorts i mesh med flere trykk",
+        "sk": "Sieťované športové šortky s viacerými potlačami",
+        "ro": "Pantaloni scurți sport din plasă cu imprimeuri multiple",
+        "vi": "Quần short thể thao lưới nhiều họa tiết"
+      }
+    },
+    {
+      "name": "Grey Streetwear Graphic Shorts",
+      "translations": {
+        "fi": "Harmaat streetwear-shortsit kuviolla",
+        "da": "Grå streetwear-shorts med grafik",
+        "nb": "Grå streetwear-shorts med grafikk",
+        "sk": "Sivé streetwearové šortky s grafikou",
+        "ro": "Pantaloni scurți gri streetwear cu grafică",
+        "vi": "Quần short streetwear xám họa tiết đồ họa"
+      }
+    },
+    {
+      "name": "Navy Side-Stripe Sports Shorts",
+      "translations": {
+        "fi": "Laivastonsiniset urheilushortsit sivuraidoilla",
+        "da": "Marineblå sportsshorts med sidestriber",
+        "nb": "Marineblå sportsshorts med sidestriper",
+        "sk": "Tmavomodré športové šortky s bočným pruhom",
+        "ro": "Pantaloni scurți sport bleumarin cu dungă laterală",
+        "vi": "Quần short thể thao xanh navy có sọc bên"
+      }
+    },
+    {
+      "name": "Khaki Logo Belted Cargo Shorts",
+      "translations": {
+        "fi": "Khakinväriset cargoshortsit logolla ja vyöllä",
+        "da": "Khakifarvede cargoshorts med logo og bælte",
+        "nb": "Khakifarget cargoshorts med logo og belte",
+        "sk": "Khaki cargo šortky s logom a opaskom",
+        "ro": "Pantaloni scurți cargo kaki cu logo și curea",
+        "vi": "Quần short cargo màu kaki có logo và thắt lưng"
+      }
+    },
+    {
+      "name": "Essentials 22SS Casual Shorts",
+      "translations": {
+        "fi": "Essentials 22SS vapaa-ajan shortsit",
+        "da": "Essentials 22SS fritidsshorts",
+        "nb": "Essentials 22SS fritidsshorts",
+        "sk": "Voľnočasové šortky Essentials 22SS",
+        "ro": "Pantaloni scurți casual Essentials 22SS",
+        "vi": "Quần short thường ngày Essentials 22SS"
+      }
+    },
+    {
+      "name": "Check Pattern Quick-Dry Shorts",
+      "translations": {
+        "fi": "Nopeasti kuivuvat ruutukuvioiset shortsit",
+        "da": "Hurtigtørrende shorts med ternet mønster",
+        "nb": "Hurtigtørkende shorts med rutemønster",
+        "sk": "Rýchloschnúce kárované šortky",
+        "ro": "Pantaloni scurți cu model în carouri și uscare rapidă",
+        "vi": "Quần short kẻ ô nhanh khô"
+      }
+    },
+    {
+      "name": "Cotton Drawstring Sweat Shorts",
+      "translations": {
+        "fi": "Puuvillaiset collegeshortsit kiristysnauhalla",
+        "da": "Sweatshorts i bomuld med snøre",
+        "nb": "Sweatshorts i bomull med snøring",
+        "sk": "Bavlnené teplákové šortky so šnúrkou",
+        "ro": "Pantaloni scurți de trening din bumbac cu șnur",
+        "vi": "Quần short nỉ cotton có dây rút"
+      }
+    },
+    {
+      "name": "Flocked Logo Drawstring Shorts",
+      "translations": {
+        "fi": "Shortsit kiristysnauhalla ja nukkapainetulla logolla",
+        "da": "Shorts med snøre og flocket logo",
+        "nb": "Shorts med snøring og flokket logo",
+        "sk": "Šortky so šnúrkou a vločkovaným logom",
+        "ro": "Pantaloni scurți cu șnur și logo flocat",
+        "vi": "Quần short dây rút có logo in nổi nhung"
+      }
+    },
+    {
+      "name": "Blue Hoodie with White Graphic",
+      "translations": {
+        "fi": "Sininen huppari valkoisella kuviolla",
+        "da": "Blå hættetrøje med hvid grafik",
+        "nb": "Blå hettegenser med hvit grafikk",
+        "sk": "Modrá mikina s kapucňou a bielou grafikou",
+        "ro": "Hanorac albastru cu grafică albă",
+        "vi": "Áo hoodie xanh dương họa tiết trắng"
+      }
+    },
+    {
+      "name": "Burgundy Hoodie and Sweatpants",
+      "translations": {
+        "fi": "Viininpunainen huppari ja collegehousut",
+        "da": "Bordeaux hættetrøje og joggingbukser",
+        "nb": "Burgunder hettegenser og joggebukse",
+        "sk": "Bordová mikina s kapucňou a tepláky",
+        "ro": "Hanorac și pantaloni de trening vișinii",
+        "vi": "Áo hoodie và quần nỉ màu đỏ burgundy"
+      }
+    },
+    {
+      "name": "Plain Hoodie and Jogger Set -",
+      "translations": {
+        "fi": "Yksivärinen huppari- ja joggerhoususetti -",
+        "da": "Ensfarvet sæt med hættetrøje og joggingbukser -",
+        "nb": "Ensfarget sett med hettegenser og joggebukse -",
+        "sk": "Jednofarebná súprava mikiny s kapucňou a jogger nohavíc -",
+        "ro": "Set simplu cu hanorac și pantaloni jogger -",
+        "vi": "Bộ áo hoodie trơn và quần jogger -"
+      }
+    }
+  ]
+}

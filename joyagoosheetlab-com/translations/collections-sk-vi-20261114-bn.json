@@ -1,0 +1,354 @@
+{
+  "items": [
+    {
+      "name": "PRADA Sunglasses Collection",
+      "translations": {
+        "sk": "Kolekcia slnečných okuliarov PRADA",
+        "vi": "Bộ sưu tập kính râm PRADA"
+      }
+    },
+    {
+      "name": "Bearbrick Keychain Collection",
+      "translations": {
+        "sk": "Kolekcia príveskov na kľúče Bearbrick",
+        "vi": "Bộ sưu tập móc khóa Bearbrick"
+      }
+    },
+    {
+      "name": "Rabbit Jeans Collection",
+      "translations": {
+        "sk": "Kolekcia džínsov Rabbit",
+        "vi": "Bộ sưu tập quần jeans Rabbit"
+      }
+    },
+    {
+      "name": "LEGO 11 Collection",
+      "translations": {
+        "sk": "Kolekcia LEGO 11",
+        "vi": "Bộ sưu tập LEGO 11"
+      }
+    },
+    {
+      "name": "Rick Owens Collection",
+      "translations": {
+        "sk": "Kolekcia Rick Owens",
+        "vi": "Bộ sưu tập Rick Owens"
+      }
+    },
+    {
+      "name": "NB 2000 Series Collection",
+      "translations": {
+        "sk": "Kolekcia série NB 2000",
+        "vi": "Bộ sưu tập dòng NB 2000"
+      }
+    },
+    {
+      "name": "Air Force 1 Collection",
+      "translations": {
+        "sk": "Kolekcia Air Force 1",
+        "vi": "Bộ sưu tập Air Force 1"
+      }
+    },
+    {
+      "name": "Adidas Forum 84 Collection",
+      "translations": {
+        "sk": "Kolekcia Adidas Forum 84",
+        "vi": "Bộ sưu tập Adidas Forum 84"
+      }
+    },
+    {
+      "name": "Dior B30 Sneakers Collection",
+      "translations": {
+        "sk": "Kolekcia tenisiek Dior B30",
+        "vi": "Bộ sưu tập giày sneaker Dior B30"
+      }
+    },
+    {
+      "name": "ASICS Gel-Kayano 14 Collection",
+      "translations": {
+        "sk": "Kolekcia ASICS Gel-Kayano 14",
+        "vi": "Bộ sưu tập ASICS Gel-Kayano 14"
+      }
+    },
+    {
+      "name": "Air Max 90 Sneaker Collection",
+      "translations": {
+        "sk": "Kolekcia tenisiek Air Max 90",
+        "vi": "Bộ sưu tập giày sneaker Air Max 90"
+      }
+    },
+    {
+      "name": "Air Jordan 1 Mid Collection",
+      "translations": {
+        "sk": "Kolekcia Air Jordan 1 Mid",
+        "vi": "Bộ sưu tập Air Jordan 1 Mid"
+      }
+    },
+    {
+      "name": "Air Max DN Collection",
+      "translations": {
+        "sk": "Kolekcia Air Max DN",
+        "vi": "Bộ sưu tập Air Max DN"
+      }
+    },
+    {
+      "name": "ASICS Gel-NYC Collection",
+      "translations": {
+        "sk": "Kolekcia ASICS Gel-NYC",
+        "vi": "Bộ sưu tập ASICS Gel-NYC"
+      }
+    },
+    {
+      "name": "ASICS Gel-1130 Collection",
+      "translations": {
+        "sk": "Kolekcia ASICS Gel-1130",
+        "vi": "Bộ sưu tập ASICS Gel-1130"
+      }
+    },
+    {
+      "name": "UGG Casual Shoes Collection",
+      "translations": {
+        "sk": "Kolekcia voľnočasovej obuvi UGG",
+        "vi": "Bộ sưu tập giày thường ngày UGG"
+      }
+    },
+    {
+      "name": "Air Jordan 3 Retro Collection",
+      "translations": {
+        "sk": "Kolekcia Air Jordan 3 Retro",
+        "vi": "Bộ sưu tập Air Jordan 3 Retro"
+      }
+    },
+    {
+      "name": "Air Max 95 Collection",
+      "translations": {
+        "sk": "Kolekcia Air Max 95",
+        "vi": "Bộ sưu tập Air Max 95"
+      }
+    },
+    {
+      "name": "Vans Casual Shoes Collection",
+      "translations": {
+        "sk": "Kolekcia voľnočasovej obuvi Vans",
+        "vi": "Bộ sưu tập giày thường ngày Vans"
+      }
+    },
+    {
+      "name": "Air Jordan 4 Collection",
+      "translations": {
+        "sk": "Kolekcia Air Jordan 4",
+        "vi": "Bộ sưu tập Air Jordan 4"
+      }
+    },
+    {
+      "name": "ASICS GEL-Kayano 14 Collection",
+      "translations": {
+        "sk": "Kolekcia ASICS GEL-Kayano 14",
+        "vi": "Bộ sưu tập ASICS GEL-Kayano 14"
+      }
+    },
+    {
+      "name": "New Balance 1906 Collection",
+      "translations": {
+        "sk": "Kolekcia New Balance 1906",
+        "vi": "Bộ sưu tập New Balance 1906"
+      }
+    },
+    {
+      "name": "Nike Air Max 90 Collection",
+      "translations": {
+        "sk": "Kolekcia Nike Air Max 90",
+        "vi": "Bộ sưu tập Nike Air Max 90"
+      }
+    },
+    {
+      "name": "Air Max 97 Collection",
+      "translations": {
+        "sk": "Kolekcia Air Max 97",
+        "vi": "Bộ sưu tập Air Max 97"
+      }
+    },
+    {
+      "name": "Yeezy Boost 350 Collection",
+      "translations": {
+        "sk": "Kolekcia Yeezy Boost 350",
+        "vi": "Bộ sưu tập Yeezy Boost 350"
+      }
+    },
+    {
+      "name": "On Running x Loewe Collection",
+      "translations": {
+        "sk": "Kolekcia On Running x Loewe",
+        "vi": "Bộ sưu tập On Running x Loewe"
+      }
+    },
+    {
+      "name": "OWF The Ten Collection",
+      "translations": {
+        "sk": "Kolekcia OWF The Ten",
+        "vi": "Bộ sưu tập OWF The Ten"
+      }
+    },
+    {
+      "name": "TN Sneakers Collection",
+      "translations": {
+        "sk": "Kolekcia tenisiek TN",
+        "vi": "Bộ sưu tập giày sneaker TN"
+      }
+    },
+    {
+      "name": "Balenciaga Runner Collection",
+      "translations": {
+        "sk": "Kolekcia Balenciaga Runner",
+        "vi": "Bộ sưu tập Balenciaga Runner"
+      }
+    },
+    {
+      "name": "Y Sandals Collection",
+      "translations": {
+        "sk": "Kolekcia sandálov Y",
+        "vi": "Bộ sưu tập sandal Y"
+      }
+    },
+    {
+      "name": "Air Max Collection",
+      "translations": {
+        "sk": "Kolekcia Air Max",
+        "vi": "Bộ sưu tập Air Max"
+      }
+    },
+    {
+      "name": "Dior B22 Series Collection",
+      "translations": {
+        "sk": "Kolekcia série Dior B22",
+        "vi": "Bộ sưu tập dòng Dior B22"
+      }
+    },
+    {
+      "name": "350 V2 Sneakers Collection",
+      "translations": {
+        "sk": "Kolekcia tenisiek 350 V2",
+        "vi": "Bộ sưu tập giày sneaker 350 V2"
+      }
+    },
+    {
+      "name": "Air Max Dn Sneakers Collection",
+      "translations": {
+        "sk": "Kolekcia tenisiek Air Max Dn",
+        "vi": "Bộ sưu tập giày sneaker Air Max Dn"
+      }
+    },
+    {
+      "name": "Air Max Sneakers Collection",
+      "translations": {
+        "sk": "Kolekcia tenisiek Air Max",
+        "vi": "Bộ sưu tập giày sneaker Air Max"
+      }
+    },
+    {
+      "name": "B30 Casual Sneakers Collection",
+      "translations": {
+        "sk": "Kolekcia voľnočasových tenisiek B30",
+        "vi": "Bộ sưu tập giày sneaker thường ngày B30"
+      }
+    },
+    {
+      "name": "Gel 1130 Sneakers Collection",
+      "translations": {
+        "sk": "Kolekcia tenisiek Gel 1130",
+        "vi": "Bộ sưu tập giày sneaker Gel 1130"
+      }
+    },
+    {
+      "name": "Replica Sneakers Collection",
+      "translations": {
+        "sk": "Kolekcia tenisiek replika",
+        "vi": "Bộ sưu tập giày sneaker bản sao"
+      }
+    },
+    {
+      "name": "GO 3.0 Sneakers Collection",
+      "translations": {
+        "sk": "Kolekcia tenisiek GO 3.0",
+        "vi": "Bộ sưu tập giày sneaker GO 3.0"
+      }
+    },
+    {
+      "name": "Air Max 90 Sneakers Collection",
+      "translations": {
+        "sk": "Kolekcia tenisiek Air Max 90",
+        "vi": "Bộ sưu tập giày sneaker Air Max 90"
+      }
+    },
+    {
+      "name": "Track 3 Sneakers Collection",
+      "translations": {
+        "sk": "Kolekcia tenisiek Track 3",
+        "vi": "Bộ sưu tập giày sneaker Track 3"
+      }
+    },
+    {
+      "name": "Gel-NYC Sneakers Collection",
+      "translations": {
+        "sk": "Kolekcia tenisiek Gel-NYC",
+        "vi": "Bộ sưu tập giày sneaker Gel-NYC"
+      }
+    },
+    {
+      "name": "Dior B23 Sneakers Collection",
+      "translations": {
+        "sk": "Kolekcia tenisiek Dior B23",
+        "vi": "Bộ sưu tập giày sneaker Dior B23"
+      }
+    },
+    {
+      "name": "Dior B22 Collection",
+      "translations": {
+        "sk": "Kolekcia Dior B22",
+        "vi": "Bộ sưu tập Dior B22"
+      }
+    },
+    {
+      "name": "ASICS Running Shoes Collection",
+      "translations": {
+        "sk": "Kolekcia bežeckej obuvi ASICS",
+        "vi": "Bộ sưu tập giày chạy bộ ASICS"
+      }
+    },
+    {
+      "name": "Numeris Sneakers Collection",
+      "translations": {
+        "sk": "Kolekcia tenisiek Numeris",
+        "vi": "Bộ sưu tập giày sneaker Numeris"
+      }
+    },
+    {
+      "name": "Air Force 1 Low Collection",
+      "translations": {
+        "sk": "Kolekcia Air Force 1 Low",
+        "vi": "Bộ sưu tập Air Force 1 Low"
+      }
+    },
+    {
+      "name": "Nike Shox PD OG Collection",
+      "translations": {
+        "sk": "Kolekcia Nike Shox PD OG",
+        "vi": "Bộ sưu tập Nike Shox PD OG"
+      }
+    },
+    {
+      "name": "Track 2 Sneakers Collection",
+      "translations": {
+        "sk": "Kolekcia tenisiek Track 2",
+        "vi": "Bộ sưu tập giày sneaker Track 2"
+      }
+    },
+    {
+      "name": "LV Trainer Sneakers Collection",
+      "translations": {
+        "sk": "Kolekcia tenisiek LV Trainer",
+        "vi": "Bộ sưu tập giày sneaker LV Trainer"
+      }
+    }
+  ]
+}

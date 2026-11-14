@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "name": "Premium Knit Panel Jacket",
+      "translations": {
+        "fi": "Laadukas neulepaneelinen takki",
+        "da": "Premium jakke med strikpaneler",
+        "nb": "Premium jakke med strikkepaneler",
+        "cs": "Prémiová bunda s pletenými panely",
+        "sk": "Prémiová bunda s pletenými panelmi",
+        "hu": "Prémium kötött betétes dzseki",
+        "el": "Premium μπουφάν με πλεκτά πάνελ",
+        "uk": "Преміальна куртка з в’язаними вставками",
+        "ar": "سترة فاخرة بأجزاء محبوكة",
+        "ja": "プレミアムニットパネルジャケット",
+        "ko": "프리미엄 니트 패널 재킷",
+        "vi": "Áo khoác cao cấp phối mảng dệt kim",
+        "tr": "Premium örgü panelli ceket"
+      }
+    },
+    {
+      "name": "Shark Camo Zip Hoodie",
+      "translations": {
+        "fi": "Hain maastokuviollinen vetoketjuhuppari",
+        "da": "Hættetrøje med lynlås og haj-camouflage",
+        "nb": "Hettegenser med glidelås og haikamuflasje",
+        "cs": "Mikina s kapucí na zip a žraločím maskáčovým potiskem",
+        "sk": "Mikina s kapucňou na zips a žraločou maskáčovou potlačou",
+        "hu": "Cápás terepmintás cipzáras kapucnis pulóver",
+        "el": "Φούτερ με κουκούλα, φερμουάρ και παραλλαγή καρχαρία",
+        "uk": "Худі на блискавці з камуфляжним принтом акули",
+        "ar": "هودي بسحاب ونقشة تمويه مع قرش",
+        "ja": "シャークカモ柄ジップパーカー",
+        "ko": "상어 카모 집업 후드티",
+        "vi": "Áo hoodie khóa kéo họa tiết rằn ri cá mập",
+        "tr": "Köpek balıklı kamuflaj desenli fermuarlı kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "9887 Slim Zip Sweatshirt",
+      "translations": {
+        "fi": "9887-kapea vetoketjullinen collegepaita",
+        "da": "9887-slim sweatshirt med lynlås",
+        "nb": "9887-smal genser med glidelås",
+        "cs": "Úzká mikina na zip 9887",
+        "sk": "Úzka mikina na zips 9887",
+        "hu": "9887 karcsú cipzáras pulóver",
+        "el": "Στενή μπλούζα φούτερ 9887 με φερμουάρ",
+        "uk": "Приталений світшот на блискавці 9887",
+        "ar": "سويت شيرت 9887 بقصة ضيقة وسحاب",
+        "ja": "9887スリムジップスウェット",
+        "ko": "9887 슬림 집업 스웨트셔츠",
+        "vi": "Áo nỉ khóa kéo dáng ôm 9887",
+        "tr": "9887 dar kesim fermuarlı sweatshirt"
+      }
+    },
+    {
+      "name": "L Fashion Down Jacket",
+      "translations": {
+        "fi": "L-muotituntuvatakki",
+        "da": "L-modedunjakke",
+        "nb": "L-motedunjakke",
+        "cs": "Módní péřová bunda L",
+        "sk": "Módna páperová bunda L",
+        "hu": "L divatos pehelykabát",
+        "el": "Μοντέρνο πουπουλένιο μπουφάν L",
+        "uk": "Модна пухова куртка L",
+        "ar": "سترة داون عصرية L",
+        "ja": "Lファッションダウンジャケット",
+        "ko": "L 패션 다운 재킷",
+        "vi": "Áo khoác lông vũ thời trang L",
+        "tr": "L moda kuş tüyü mont"
+      }
+    },
+    {
+      "name": "Comfort Foam Slides RS337",
+      "translations": {
+        "fi": "Mukavat vaahtopistokkaat RS337",
+        "da": "Komfortable skumslippers RS337",
+        "nb": "Komfortable skumslippers RS337",
+        "cs": "Pohodlné pěnové pantofle RS337",
+        "sk": "Pohodlné penové šľapky RS337",
+        "hu": "Kényelmes habpapucs RS337",
+        "el": "Άνετες παντόφλες από αφρό RS337",
+        "uk": "Зручні шльопанці з піни RS337",
+        "ar": "شبشب فوم مريح RS337",
+        "ja": "快適なフォームスライド RS337",
+        "ko": "편안한 폼 슬라이드 RS337",
+        "vi": "Dép lê xốp êm ái RS337",
+        "tr": "Rahat köpük terlik RS337"
+      }
+    },
+    {
+      "name": "Trendy Casual Slides 005",
+      "translations": {
+        "fi": "Trendikkäät vapaa-ajan pistokkaat 005",
+        "da": "Trendy afslappede slippers 005",
+        "nb": "Trendy uformelle slippers 005",
+        "cs": "Moderní volnočasové pantofle 005",
+        "sk": "Moderné voľnočasové šľapky 005",
+        "hu": "Divatos hétköznapi papucs 005",
+        "el": "Μοντέρνες καθημερινές παντόφλες 005",
+        "uk": "Модні повсякденні шльопанці 005",
+        "ar": "شبشب كاجوال عصري 005",
+        "ja": "トレンドカジュアルスライド 005",
+        "ko": "트렌디 캐주얼 슬라이드 005",
+        "vi": "Dép lê thường ngày thời trang 005",
+        "tr": "Trend günlük terlik 005"
+      }
+    },
+    {
+      "name": "Floral Print Pool Slides",
+      "translations": {
+        "fi": "Kukkakuviolliset allaspistokkaat",
+        "da": "Poolslippers med blomsterprint",
+        "nb": "Bassengslippers med blomstertrykk",
+        "cs": "Pantofle k bazénu s květinovým potiskem",
+        "sk": "Šľapky k bazénu s kvetinovou potlačou",
+        "hu": "Virágmintás medencepapucs",
+        "el": "Παντόφλες πισίνας με φλοράλ τύπωμα",
+        "uk": "Шльопанці для басейну з квітковим принтом",
+        "ar": "شبشب مسبح بطبعة زهور",
+        "ja": "花柄プールスライド",
+        "ko": "플로럴 프린트 풀 슬라이드",
+        "vi": "Dép hồ bơi in hoa",
+        "tr": "Çiçek baskılı havuz terliği"
+      }
+    },
+    {
+      "name": "Value Foam Slides",
+      "translations": {
+        "fi": "Edulliset vaahtopistokkaat",
+        "da": "Prisvenlige skumslippers",
+        "nb": "Rimelige skumslippers",
+        "cs": "Cenově dostupné pěnové pantofle",
+        "sk": "Cenovo dostupné penové šľapky",
+        "hu": "Kedvező árú habpapucs",
+        "el": "Οικονομικές παντόφλες από αφρό",
+        "uk": "Доступні шльопанці з піни",
+        "ar": "شبشب فوم بسعر مناسب",
+        "ja": "お手頃フォームスライド",
+        "ko": "합리적인 가격의 폼 슬라이드",
+        "vi": "Dép lê xốp giá hợp lý",
+        "tr": "Uygun fiyatlı köpük terlik"
+      }
+    }
+  ]
+}

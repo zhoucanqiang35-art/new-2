@@ -1,0 +1,47 @@
+{
+  "244": {
+    "name": "Golden Goose Shoes (GGDB) &",
+    "translations": {
+      "cs": "Boty Golden Goose (GGDB) a Ball Star",
+      "hu": "Golden Goose (GGDB) és Ball Star cipők",
+      "el": "Παπούτσια Golden Goose (GGDB) και Ball Star",
+      "tr": "Golden Goose (GGDB) ve Ball Star ayakkabılar",
+      "uk": "Взуття Golden Goose (GGDB) та Ball Star",
+      "ar": "أحذية Golden Goose (GGDB) وBall Star",
+      "ja": "Golden Goose（GGDB）とBall Starのシューズ",
+      "ko": "Golden Goose(GGDB)와 Ball Star 신발",
+      "ru": "Обувь Golden Goose (GGDB) и Ball Star",
+      "id": "Sepatu Golden Goose (GGDB) dan Ball Star"
+    }
+  },
+  "3159": {
+    "name": "Adidas Gazelle Samba OG S2/TOP",
+    "translations": {
+      "cs": "Adidas Gazelle Samba OG, série S2/TOP",
+      "hu": "Adidas Gazelle Samba OG, S2/TOP széria",
+      "el": "Adidas Gazelle Samba OG, παρτίδα S2/TOP",
+      "tr": "Adidas Gazelle Samba OG, S2/TOP serisi",
+      "uk": "Adidas Gazelle Samba OG, партія S2/TOP",
+      "ar": "Adidas Gazelle Samba OG، دفعة S2/TOP",
+      "ja": "Adidas Gazelle Samba OG S2/TOPバッチ",
+      "ko": "Adidas Gazelle Samba OG S2/TOP 배치",
+      "ru": "Adidas Gazelle Samba OG, партия S2/TOP",
+      "id": "Adidas Gazelle Samba OG, batch S2/TOP"
+    }
+  },
+  "6993": {
+    "name": "P*D*2*0*W*ou*gui*cha*tou*shi*p",
+    "translations": {
+      "cs": "Napájecí adaptér PD 20 W s EU zástrčkou pro iPhone",
+      "hu": "PD 20 W-os EU csatlakozós töltőadapter iPhone-hoz",
+      "el": "Φορτιστής PD 20 W με ευρωπαϊκό βύσμα για iPhone",
+      "tr": "iPhone için PD 20 W AB fişli şarj adaptörü",
+      "uk": "Зарядний адаптер PD 20 Вт із вилкою ЄС для iPhone",
+      "ar": "محول شحن PD بقدرة 20 واط بقابس أوروبي لهاتف iPhone",
+      "ja": "iPhone用 PD 20W EUプラグ充電アダプター",
+      "ko": "iPhone용 PD 20W EU 플러그 충전 어댑터",
+      "ru": "Зарядный адаптер PD 20 Вт с вилкой ЕС для iPhone",
+      "id": "Adaptor pengisi daya PD 20 W colokan EU untuk iPhone"
+    }
+  }
+}

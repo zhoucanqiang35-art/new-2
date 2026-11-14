@@ -1,0 +1,219 @@
+{
+  "items": [
+    {
+      "name": "Goggle Knit Beanie",
+      "translations": {
+        "da": "Strikket hue med goggles",
+        "nb": "Strikket lue med goggles"
+      }
+    },
+    {
+      "name": "Graphic Full-Face Balaclava",
+      "translations": {
+        "fi": "Koko kasvot peittävä kuviollinen balaclava",
+        "da": "Grafisk balaclava, der dækker hele ansigtet",
+        "nb": "Mønstret balaklava som dekker hele ansiktet"
+      }
+    },
+    {
+      "name": "Zip-Detail Flared Trousers",
+      "translations": {
+        "fi": "Vetoketjuyksityiskohdilla varustetut levenevät housut",
+        "da": "Udsvingede bukser med lynlåsdetalje",
+        "nb": "Utsvingte bukser med glidelåsdetalj"
+      }
+    },
+    {
+      "name": "Wide Link Bracelet - 21 cm",
+      "translations": {
+        "fi": "Leveä lenkkirannekoru - 21 cm",
+        "da": "Armbånd med brede led - 21 cm",
+        "nb": "Armbånd med brede lenker - 21 cm"
+      }
+    },
+    {
+      "name": "Gothic Charm Bracelet 032",
+      "translations": {
+        "fi": "Goottilainen riipusrannekoru 032",
+        "da": "Gotisk charmearmbånd 032",
+        "nb": "Gotisk armbånd med anheng 032"
+      }
+    },
+    {
+      "name": "Orb Pendant Necklace 024",
+      "translations": {
+        "fi": "Palloriipuskaulakoru 024",
+        "da": "Halskæde med kuglevedhæng 024",
+        "nb": "Halskjede med kuleanheng 024"
+      }
+    },
+    {
+      "name": "Woven Tote Bag 003",
+      "translations": {
+        "fi": "Kudottu kantolaukku 003",
+        "da": "Vævet mulepose 003",
+        "nb": "Vevd handlenett 003"
+      }
+    },
+    {
+      "name": "Logo Sports Backpack 002",
+      "translations": {
+        "fi": "Logollinen urheilureppu 002",
+        "da": "Sportsrygsæk med logo 002",
+        "nb": "Sportsryggsekk med logo 002"
+      }
+    },
+    {
+      "name": "Supreme Backpack W2C-060",
+      "translations": {
+        "fi": "Supreme-reppu W2C-060",
+        "da": "Supreme-rygsæk W2C-060",
+        "nb": "Supreme-ryggsekk W2C-060"
+      }
+    },
+    {
+      "name": "Shoulder Bag Collection 008",
+      "translations": {
+        "fi": "Olkalaukkukokoelma 008",
+        "da": "Skuldertaskekollektion 008",
+        "nb": "Skulderveskekolleksjon 008"
+      }
+    },
+    {
+      "name": "Hoodie and Pants Set DJ",
+      "translations": {
+        "fi": "Huppari- ja housusetti DJ",
+        "da": "Sæt med hættetrøje og bukser DJ",
+        "nb": "Sett med hettegenser og bukser DJ"
+      }
+    },
+    {
+      "name": "1994 Graphic Zip-Up Hoodie",
+      "translations": {
+        "fi": "1994-kuviollinen vetoketjuhuppari",
+        "da": "Hættetrøje med lynlås og 1994-grafik",
+        "nb": "Hettegenser med glidelås og 1994-motiv"
+      }
+    },
+    {
+      "name": "FW24 Crewneck Sweater",
+      "translations": {
+        "fi": "FW24-paita pyöreällä pääntiellä",
+        "da": "FW24-sweater med rund hals",
+        "nb": "FW24-genser med rund hals"
+      }
+    },
+    {
+      "name": "SLL Knit Sweater",
+      "translations": {
+        "fi": "SLL-neulepusero",
+        "da": "SLL-striktrøje",
+        "nb": "SLL-strikkegenser"
+      }
+    },
+    {
+      "name": "Headphones",
+      "translations": {
+        "fi": "Kuulokkeet",
+        "da": "Hovedtelefoner",
+        "nb": "Hodetelefoner"
+      }
+    },
+    {
+      "name": "OKSTORE Phone Case 0075",
+      "translations": {
+        "fi": "OKSTORE-puhelinkotelo 0075",
+        "da": "OKSTORE-telefoncover 0075",
+        "nb": "OKSTORE-telefondeksel 0075"
+      }
+    },
+    {
+      "name": "DJ RM/W Phone Case",
+      "translations": {
+        "fi": "DJ RM/W -puhelinkotelo",
+        "da": "DJ RM/W-telefoncover",
+        "nb": "DJ RM/W-telefondeksel"
+      }
+    },
+    {
+      "name": "Fashion Shorts OMGBUY",
+      "translations": {
+        "fi": "Muotishortsit OMGBUY",
+        "da": "Modeshorts OMGBUY",
+        "nb": "Moteshorts OMGBUY"
+      }
+    },
+    {
+      "name": "Assorted Brand Shorts",
+      "translations": {
+        "fi": "Erimerkkisiä shortseja",
+        "da": "Shorts fra forskellige mærker",
+        "nb": "Shorts fra ulike merker"
+      }
+    },
+    {
+      "name": "Premium Fashion Shorts 65",
+      "translations": {
+        "fi": "Laadukkaat muotishortsit 65",
+        "da": "Premium modeshorts 65",
+        "nb": "Premium moteshorts 65"
+      }
+    },
+    {
+      "name": "Men's MMA Training Shorts",
+      "translations": {
+        "fi": "Miesten MMA-harjoitusshortsit",
+        "da": "MMA-træningsshorts til mænd",
+        "nb": "MMA-treningsshorts for menn"
+      }
+    },
+    {
+      "name": "Color-Block Beach Shorts",
+      "translations": {
+        "fi": "Värilohkoillut rantashortsit",
+        "da": "Strandshorts med farvefelter",
+        "nb": "Strandshorts med fargeblokker"
+      }
+    },
+    {
+      "name": "DX53 3D Print Sports Shorts",
+      "translations": {
+        "fi": "DX53-urheilushortsit 3D-kuviolla",
+        "da": "DX53-sportsshorts med 3D-print",
+        "nb": "DX53-sportsshorts med 3D-trykk"
+      }
+    },
+    {
+      "name": "Men's Graphic Shorts 2025",
+      "translations": {
+        "fi": "Miesten kuviolliset shortsit 2025",
+        "da": "Shorts med grafik til mænd 2025",
+        "nb": "Shorts med grafikk for menn 2025"
+      }
+    },
+    {
+      "name": "Zip Jacket and Shorts Set",
+      "translations": {
+        "fi": "Vetoketjutakin ja shortsien setti",
+        "da": "Sæt med lynlåsjakke og shorts",
+        "nb": "Sett med glidelåsjakke og shorts"
+      }
+    },
+    {
+      "name": "Classic Puffer Jacket 007",
+      "translations": {
+        "fi": "Klassinen toppatakki 007",
+        "da": "Klassisk pufferjakke 007",
+        "nb": "Klassisk pufferjakke 007"
+      }
+    },
+    {
+      "name": "Embroidered Sweatshirt Set",
+      "translations": {
+        "fi": "Kirjailtu collegepaitasetti",
+        "da": "Broderet sweatshirt-sæt",
+        "nb": "Brodert gensersett"
+      }
+    }
+  ]
+}

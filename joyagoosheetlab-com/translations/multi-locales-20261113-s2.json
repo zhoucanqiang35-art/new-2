@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "name": "Gel-Kayano Running Shoes",
+      "translations": {
+        "fi": "Gel-Kayano-juoksukengät",
+        "da": "Gel-Kayano-løbesko",
+        "nb": "Gel-Kayano-løpesko",
+        "cs": "Běžecké boty Gel-Kayano",
+        "sk": "Bežecká obuv Gel-Kayano",
+        "hu": "Gel-Kayano futócipő",
+        "el": "Παπούτσια τρεξίματος Gel-Kayano",
+        "uk": "Бігове взуття Gel-Kayano",
+        "ar": "حذاء جري Gel-Kayano",
+        "ja": "Gel-Kayanoランニングシューズ",
+        "ko": "Gel-Kayano 러닝화",
+        "vi": "Giày chạy bộ Gel-Kayano",
+        "tr": "Gel-Kayano koşu ayakkabısı"
+      }
+    },
+    {
+      "name": "Air Max Plus Sneakers",
+      "translations": {
+        "fi": "Air Max Plus -tennarit",
+        "da": "Air Max Plus-sneakers",
+        "nb": "Air Max Plus-sneakers",
+        "cs": "Tenisky Air Max Plus",
+        "sk": "Tenisky Air Max Plus",
+        "hu": "Air Max Plus sportcipő",
+        "el": "Sneakers Air Max Plus",
+        "uk": "Кросівки Air Max Plus",
+        "ar": "حذاء رياضي Air Max Plus",
+        "ja": "Air Max Plusスニーカー",
+        "ko": "Air Max Plus 스니커즈",
+        "vi": "Giày sneaker Air Max Plus",
+        "tr": "Air Max Plus spor ayakkabı"
+      }
+    },
+    {
+      "name": "Air Max 95 Sneakers",
+      "translations": {
+        "fi": "Air Max 95 -tennarit",
+        "da": "Air Max 95-sneakers",
+        "nb": "Air Max 95-sneakers",
+        "cs": "Tenisky Air Max 95",
+        "sk": "Tenisky Air Max 95",
+        "hu": "Air Max 95 sportcipő",
+        "el": "Sneakers Air Max 95",
+        "uk": "Кросівки Air Max 95",
+        "ar": "حذاء رياضي Air Max 95",
+        "ja": "Air Max 95スニーカー",
+        "ko": "Air Max 95 스니커즈",
+        "vi": "Giày sneaker Air Max 95",
+        "tr": "Air Max 95 spor ayakkabı"
+      }
+    },
+    {
+      "name": "Samba Classic Sneakers",
+      "translations": {
+        "fi": "Samba Classic -tennarit",
+        "da": "Samba Classic-sneakers",
+        "nb": "Samba Classic-sneakers",
+        "cs": "Tenisky Samba Classic",
+        "sk": "Tenisky Samba Classic",
+        "hu": "Samba Classic sportcipő",
+        "el": "Sneakers Samba Classic",
+        "uk": "Кросівки Samba Classic",
+        "ar": "حذاء رياضي Samba Classic",
+        "ja": "Samba Classicスニーカー",
+        "ko": "Samba Classic 스니커즈",
+        "vi": "Giày sneaker Samba Classic",
+        "tr": "Samba Classic spor ayakkabı"
+      }
+    },
+    {
+      "name": "Premium Casual Slides LF",
+      "translations": {
+        "fi": "Laadukkaat vapaa-ajan pistokkaat LF",
+        "da": "Premium afslappede slippers LF",
+        "nb": "Premium uformelle slippers LF",
+        "cs": "Prémiové volnočasové pantofle LF",
+        "sk": "Prémiové voľnočasové šľapky LF",
+        "hu": "Prémium hétköznapi papucs LF",
+        "el": "Premium καθημερινές παντόφλες LF",
+        "uk": "Преміальні повсякденні шльопанці LF",
+        "ar": "شبشب كاجوال فاخر LF",
+        "ja": "プレミアムカジュアルスライド LF",
+        "ko": "프리미엄 캐주얼 슬라이드 LF",
+        "vi": "Dép lê thường ngày cao cấp LF",
+        "tr": "Premium günlük terlik LF"
+      }
+    }
+  ]
+}

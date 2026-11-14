@@ -1,0 +1,102 @@
+{
+  "items": [
+    {
+      "name": "headwear",
+      "translations": {
+        "fi": "Päähineet",
+        "da": "Hovedbeklædning",
+        "nb": "Hodeplagg",
+        "sk": "Pokrývky hlavy",
+        "ro": "Articole pentru acoperirea capului",
+        "vi": "Đồ đội đầu"
+      }
+    },
+    {
+      "name": "Premium Knit Down Jacket",
+      "translations": {
+        "fi": "Laadukas neulottu untuvatakki",
+        "da": "Premium strikket dunjakke",
+        "nb": "Strikket dunjakke i premium kvalitet"
+      }
+    },
+    {
+      "name": "Tasman Winter Slip-On Boots",
+      "translations": {
+        "fi": "Tasman-talvinilkkurit ilman nauhoja",
+        "da": "Tasman vinterstøvler til at stikke foden i",
+        "nb": "Tasman vinterstøvler uten lisser",
+        "sk": "Nazúvacie zimné čižmy Tasman",
+        "ro": "Cizme de iarnă Tasman ușor de încălțat",
+        "vi": "Bốt mùa đông Tasman dễ xỏ"
+      }
+    },
+    {
+      "name": "Retro Mesh Running Shoes",
+      "translations": {
+        "fi": "Retrotyyliset verkkojuoksukengät",
+        "da": "Retro løbesko med mesh",
+        "nb": "Retro løpesko med mesh",
+        "sk": "Retro bežecká obuv so sieťovinou",
+        "ro": "Pantofi de alergare retro cu plasă",
+        "vi": "Giày chạy bộ lưới phong cách cổ điển"
+      }
+    },
+    {
+      "name": "N-Logo Mesh Sneakers",
+      "translations": {
+        "fi": "N-logolliset verkkotennarit",
+        "da": "Sneakers med mesh og N-logo",
+        "nb": "Sneakers med mesh og N-logo",
+        "sk": "Sieťované tenisky s logom N",
+        "ro": "Pantofi sport din plasă cu logo N",
+        "vi": "Giày sneaker lưới có logo N"
+      }
+    },
+    {
+      "name": "Winter Puffer Jacket 001",
+      "translations": {
+        "fi": "Topattu talvitakki 001",
+        "da": "Vinterpufferjakke 001",
+        "nb": "Vinterpufferjakke 001"
+      }
+    },
+    {
+      "name": "Premium Fashion Casual Shoes",
+      "translations": {
+        "fi": "Laadukkaat muodikkaat vapaa-ajan kengät",
+        "da": "Moderigtige premium fritidssko",
+        "nb": "Moteriktige fritidssko i premium kvalitet",
+        "sk": "Prémiová módna voľnočasová obuv",
+        "vi": "Giày thường ngày thời trang cao cấp"
+      }
+    },
+    {
+      "name": "Premium Sneakers A Batch",
+      "translations": {
+        "fi": "Laadukkaat tennarit, erä A",
+        "da": "Premium sneakers, parti A",
+        "nb": "Sneakers i premium kvalitet, parti A",
+        "sk": "Prémiové tenisky, šarža A",
+        "ro": "Pantofi sport premium, lotul A",
+        "vi": "Giày sneaker cao cấp, lô A"
+      }
+    },
+    {
+      "name": "Casual Sport Sweatshirt 326",
+      "translations": {
+        "fi": "Rento urheilucollegepaita 326",
+        "da": "Afslappet sportssweatshirt 326",
+        "nb": "Avslappet sportsgenser 326",
+        "sk": "Voľnočasová športová mikina 326",
+        "vi": "Áo sweatshirt thể thao thường ngày 326"
+      }
+    },
+    {
+      "name": "Classic Handbag Collection",
+      "translations": {
+        "sk": "Kolekcia klasických kabeliek",
+        "vi": "Bộ sưu tập túi xách cổ điển"
+      }
+    }
+  ]
+}

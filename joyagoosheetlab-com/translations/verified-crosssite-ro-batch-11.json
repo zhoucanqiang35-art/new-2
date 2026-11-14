@@ -1,0 +1,172 @@
+{
+  "items": [
+    {
+      "name": "015 Classic Puffer Jacket",
+      "sourceId": "6157",
+      "translations": {
+        "ro": "015 Jachetă pufă clasică"
+      }
+    },
+    {
+      "name": "Classic Everyday Jacket",
+      "sourceId": "6151",
+      "translations": {
+        "ro": "Jachetă clasică de zi cu zi"
+      }
+    },
+    {
+      "name": "002 Casual Tracksuit Set",
+      "sourceId": "6150",
+      "translations": {
+        "ro": "002 Set de trening casual"
+      }
+    },
+    {
+      "name": "Casual Print Zip Hoodie",
+      "sourceId": "6148",
+      "translations": {
+        "ro": "Hanorac casual imprimat cu fermoar"
+      }
+    },
+    {
+      "name": "JMS-0926107 Puffer Jacket",
+      "sourceId": "6119",
+      "translations": {
+        "ro": "JMS-0926107 Jachetă puf"
+      }
+    },
+    {
+      "name": "Outdoor Windbreaker Jacket",
+      "sourceId": "6107",
+      "translations": {
+        "ro": "Jachetă de vânt în aer liber"
+      }
+    },
+    {
+      "name": "M MAYA Puffer Jacket",
+      "sourceId": "6048",
+      "translations": {
+        "ro": "Jachetă pufă M MAYA"
+      }
+    },
+    {
+      "name": "Classic Fashion Jacket 088",
+      "sourceId": "6017",
+      "translations": {
+        "ro": "Jachetă de modă clasică 088"
+      }
+    },
+    {
+      "name": "NFC Thick Winter Down Jacket",
+      "sourceId": "6014",
+      "translations": {
+        "ro": "Jachetă groasă de puf de iarnă NFC"
+      }
+    },
+    {
+      "name": "Premium Quilted Down Jacket",
+      "sourceId": "6013",
+      "translations": {
+        "ro": "Jachetă de puf matlasată premium"
+      }
+    },
+    {
+      "name": "Thick Unisex Down Jacket",
+      "sourceId": "6012",
+      "translations": {
+        "ro": "Jachetă groasă de puf unisex"
+      }
+    },
+    {
+      "name": "Classic Premium Down Jacket",
+      "sourceId": "6010",
+      "translations": {
+        "ro": "Jachetă clasică de puf premium"
+      }
+    },
+    {
+      "name": "Detachable-Hood Padded Vest",
+      "sourceId": "6009",
+      "translations": {
+        "ro": "Vestă căptușită cu glugă detașabilă"
+      }
+    },
+    {
+      "name": "Premium Fashion Down Jacket",
+      "sourceId": "6000",
+      "translations": {
+        "ro": "Jachetă de puf de modă premium"
+      }
+    },
+    {
+      "name": "Casual Sport Sweatshirt 326",
+      "sourceId": "5999",
+      "translations": {
+        "ro": "Hanorac sport casual 326"
+      }
+    },
+    {
+      "name": "Hooded Padded Winter Jacket",
+      "sourceId": "5991",
+      "translations": {
+        "ro": "Jachetă de iarnă căptușită cu glugă"
+      }
+    },
+    {
+      "name": "Men's Tech Fleece Tracksuit",
+      "sourceId": "5986",
+      "translations": {
+        "ro": "Trening pentru bărbați Tech Fleece"
+      }
+    },
+    {
+      "name": "Everyday Casual Shoes AGT",
+      "sourceId": "5975",
+      "translations": {
+        "ro": "Pantofi casual de zi cu zi AGT"
+      }
+    },
+    {
+      "name": "Everyday Fashion Sandals 07",
+      "sourceId": "5968",
+      "translations": {
+        "ro": "Sandale de modă de zi cu zi 07"
+      }
+    },
+    {
+      "name": "Versatile Summer Sandals",
+      "sourceId": "5964",
+      "translations": {
+        "ro": "Sandale de vară versatile"
+      }
+    },
+    {
+      "name": "Big Buckle Madrid Sandals",
+      "sourceId": "5950",
+      "translations": {
+        "ro": "Sandale Madrid cu cataramă mare"
+      }
+    },
+    {
+      "name": "Round-Toe Flat Slides TD4",
+      "sourceId": "5948",
+      "translations": {
+        "ro": "Sandale plate cu vârf rotund TD4"
+      }
+    },
+    {
+      "name": "Home Leisure Slippers TD3",
+      "sourceId": "5942",
+      "translations": {
+        "ro": "Papuci de casă pentru agrement TD3"
+      }
+    },
+    {
+      "name": "Classic Women's Casual Flats",
+      "sourceId": "5935",
+      "translations": {
+        "ro": "Pantofi casual clasici pentru femei"
+      }
+    }
+  ]
+}

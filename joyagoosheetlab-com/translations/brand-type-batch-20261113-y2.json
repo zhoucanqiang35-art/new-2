@@ -1,0 +1,1334 @@
+{
+  "items": [
+    {
+      "name": "Stussy sweaters",
+      "translations": {
+        "fi": "Stussy neulepuserot",
+        "da": "Stussy sweatre",
+        "nb": "Stussy gensere",
+        "cs": "Stussy svetry",
+        "sk": "Stussy svetre",
+        "hu": "Stussy pulóverek",
+        "ro": "Stussy pulovere",
+        "el": "Stussy πουλόβερ",
+        "uk": "Stussy светри",
+        "ar": "Stussy كنزات",
+        "ja": "Stussy セーター",
+        "ko": "Stussy 스웨터",
+        "vi": "Stussy áo len",
+        "tr": "Stussy kazaklar"
+      }
+    },
+    {
+      "name": "LV T-Shirt（20 STYLE TOP）",
+      "translations": {
+        "fi": "LV T-paita [20 mallia] TOP",
+        "da": "LV T-shirt [20 modeller] TOP",
+        "nb": "LV T-skjorte [20 modeller] TOP",
+        "cs": "LV tričko [20 variant] TOP",
+        "sk": "LV tričko [20 variantov] TOP",
+        "hu": "LV póló [20 változat] TOP",
+        "ro": "LV tricou [20 modele] TOP",
+        "el": "LV μπλουζάκι [20 σχέδια] TOP",
+        "uk": "LV футболка [20 варіантів] TOP",
+        "ar": "LV تيشيرت [20 تصميمًا] TOP",
+        "ja": "LV Tシャツ [20 種類] TOP",
+        "ko": "LV 티셔츠 [20 종] TOP",
+        "vi": "LV áo thun [20 mẫu] TOP",
+        "tr": "LV tişört [20 model] TOP"
+      }
+    },
+    {
+      "name": "AMIRI hoodie (20 + styles）",
+      "translations": {
+        "fi": "AMIRI huppari [20+ mallia]",
+        "da": "AMIRI hættetrøje [20+ modeller]",
+        "nb": "AMIRI hettegenser [20+ modeller]",
+        "cs": "AMIRI mikina s kapucí [20+ variant]",
+        "sk": "AMIRI mikina s kapucňou [20+ variantov]",
+        "hu": "AMIRI kapucnis pulóver [20+ változat]",
+        "ro": "AMIRI hanorac [20+ modele]",
+        "el": "AMIRI φούτερ με κουκούλα [20+ σχέδια]",
+        "uk": "AMIRI худі [20+ варіантів]",
+        "ar": "AMIRI هودي [20+ تصميمًا]",
+        "ja": "AMIRI パーカー [20+ 種類]",
+        "ko": "AMIRI 후드티 [20+ 종]",
+        "vi": "AMIRI áo hoodie [20+ mẫu]",
+        "tr": "AMIRI kapüşonlu sweatshirt [20+ model]"
+      }
+    },
+    {
+      "name": "DIOR bags",
+      "translations": {
+        "fi": "DIOR laukut",
+        "da": "DIOR tasker",
+        "nb": "DIOR vesker",
+        "cs": "DIOR tašky",
+        "sk": "DIOR tašky",
+        "hu": "DIOR táskák",
+        "ro": "DIOR genți",
+        "el": "DIOR τσάντες",
+        "uk": "DIOR сумки",
+        "ar": "DIOR حقائب",
+        "ja": "DIOR バッグ",
+        "ko": "DIOR 가방",
+        "vi": "DIOR túi",
+        "tr": "DIOR çantalar"
+      }
+    },
+    {
+      "name": "Jordan backpack",
+      "translations": {
+        "fi": "Jordan reppu",
+        "da": "Jordan rygsæk",
+        "nb": "Jordan ryggsekk",
+        "cs": "Jordan batoh",
+        "sk": "Jordan batoh",
+        "hu": "Jordan hátizsák",
+        "ro": "Jordan rucsac",
+        "el": "Jordan σακίδιο",
+        "uk": "Jordan рюкзак",
+        "ar": "Jordan حقيبة ظهر",
+        "ja": "Jordan バックパック",
+        "ko": "Jordan 백팩",
+        "vi": "Jordan ba lô",
+        "tr": "Jordan sırt çantası"
+      }
+    },
+    {
+      "name": "LV sweater",
+      "translations": {
+        "fi": "LV neulepusero",
+        "da": "LV sweater",
+        "nb": "LV genser",
+        "cs": "LV svetr",
+        "sk": "LV sveter",
+        "hu": "LV pulóver",
+        "ro": "LV pulover",
+        "el": "LV πουλόβερ",
+        "uk": "LV светр",
+        "ar": "LV كنزة",
+        "ja": "LV セーター",
+        "ko": "LV 스웨터",
+        "vi": "LV áo len",
+        "tr": "LV kazak"
+      }
+    },
+    {
+      "name": "Jordan jacket",
+      "translations": {
+        "fi": "Jordan takki",
+        "da": "Jordan jakke",
+        "nb": "Jordan jakke",
+        "cs": "Jordan bunda",
+        "sk": "Jordan bunda",
+        "hu": "Jordan dzseki",
+        "ro": "Jordan jachetă",
+        "el": "Jordan μπουφάν",
+        "uk": "Jordan куртка",
+        "ar": "Jordan سترة",
+        "ja": "Jordan ジャケット",
+        "ko": "Jordan 재킷",
+        "vi": "Jordan áo khoác",
+        "tr": "Jordan ceket"
+      }
+    },
+    {
+      "name": "Adidas T-shirt",
+      "translations": {
+        "fi": "Adidas T-paita",
+        "da": "Adidas T-shirt",
+        "nb": "Adidas T-skjorte",
+        "cs": "Adidas tričko",
+        "sk": "Adidas tričko",
+        "hu": "Adidas póló",
+        "ro": "Adidas tricou",
+        "el": "Adidas μπλουζάκι",
+        "uk": "Adidas футболка",
+        "ar": "Adidas تيشيرت",
+        "ja": "Adidas Tシャツ",
+        "ko": "Adidas 티셔츠",
+        "vi": "Adidas áo thun",
+        "tr": "Adidas tişört"
+      }
+    },
+    {
+      "name": "Palm angels Shorts",
+      "translations": {
+        "fi": "Palm angels shortsit",
+        "da": "Palm angels shorts",
+        "nb": "Palm angels shorts",
+        "cs": "Palm angels šortky",
+        "sk": "Palm angels šortky",
+        "hu": "Palm angels rövidnadrágok",
+        "ro": "Palm angels pantaloni scurți",
+        "el": "Palm angels σορτς",
+        "uk": "Palm angels шорти",
+        "ar": "Palm angels شورتات",
+        "ja": "Palm angels ショーツ",
+        "ko": "Palm angels 반바지",
+        "vi": "Palm angels quần short",
+        "tr": "Palm angels şort"
+      }
+    },
+    {
+      "name": "STUSSY T-shirt",
+      "translations": {
+        "fi": "STUSSY T-paita",
+        "da": "STUSSY T-shirt",
+        "nb": "STUSSY T-skjorte",
+        "cs": "STUSSY tričko",
+        "sk": "STUSSY tričko",
+        "hu": "STUSSY póló",
+        "ro": "STUSSY tricou",
+        "el": "STUSSY μπλουζάκι",
+        "uk": "STUSSY футболка",
+        "ar": "STUSSY تيشيرت",
+        "ja": "STUSSY Tシャツ",
+        "ko": "STUSSY 티셔츠",
+        "vi": "STUSSY áo thun",
+        "tr": "STUSSY tişört"
+      }
+    },
+    {
+      "name": "Corteiz jacket",
+      "translations": {
+        "fi": "Corteiz takki",
+        "da": "Corteiz jakke",
+        "nb": "Corteiz jakke",
+        "cs": "Corteiz bunda",
+        "sk": "Corteiz bunda",
+        "hu": "Corteiz dzseki",
+        "ro": "Corteiz jachetă",
+        "el": "Corteiz μπουφάν",
+        "uk": "Corteiz куртка",
+        "ar": "Corteiz سترة",
+        "ja": "Corteiz ジャケット",
+        "ko": "Corteiz 재킷",
+        "vi": "Corteiz áo khoác",
+        "tr": "Corteiz ceket"
+      }
+    },
+    {
+      "name": "LV Bags",
+      "translations": {
+        "fi": "LV laukut",
+        "da": "LV tasker",
+        "nb": "LV vesker",
+        "cs": "LV tašky",
+        "sk": "LV tašky",
+        "hu": "LV táskák",
+        "ro": "LV genți",
+        "el": "LV τσάντες",
+        "uk": "LV сумки",
+        "ar": "LV حقائب",
+        "ja": "LV バッグ",
+        "ko": "LV 가방",
+        "vi": "LV túi",
+        "tr": "LV çantalar"
+      }
+    },
+    {
+      "name": "Balenciaga t-shirt",
+      "translations": {
+        "fi": "Balenciaga T-paita",
+        "da": "Balenciaga T-shirt",
+        "nb": "Balenciaga T-skjorte",
+        "cs": "Balenciaga tričko",
+        "sk": "Balenciaga tričko",
+        "hu": "Balenciaga póló",
+        "ro": "Balenciaga tricou",
+        "el": "Balenciaga μπλουζάκι",
+        "uk": "Balenciaga футболка",
+        "ar": "Balenciaga تيشيرت",
+        "ja": "Balenciaga Tシャツ",
+        "ko": "Balenciaga 티셔츠",
+        "vi": "Balenciaga áo thun",
+        "tr": "Balenciaga tişört"
+      }
+    },
+    {
+      "name": "Ralph Lauren hoodie",
+      "translations": {
+        "fi": "Ralph Lauren huppari",
+        "da": "Ralph Lauren hættetrøje",
+        "nb": "Ralph Lauren hettegenser",
+        "cs": "Ralph Lauren mikina s kapucí",
+        "sk": "Ralph Lauren mikina s kapucňou",
+        "hu": "Ralph Lauren kapucnis pulóver",
+        "ro": "Ralph Lauren hanorac",
+        "el": "Ralph Lauren φούτερ με κουκούλα",
+        "uk": "Ralph Lauren худі",
+        "ar": "Ralph Lauren هودي",
+        "ja": "Ralph Lauren パーカー",
+        "ko": "Ralph Lauren 후드티",
+        "vi": "Ralph Lauren áo hoodie",
+        "tr": "Ralph Lauren kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Louis Vuitton sweater",
+      "translations": {
+        "fi": "Louis Vuitton neulepusero",
+        "da": "Louis Vuitton sweater",
+        "nb": "Louis Vuitton genser",
+        "cs": "Louis Vuitton svetr",
+        "sk": "Louis Vuitton sveter",
+        "hu": "Louis Vuitton pulóver",
+        "ro": "Louis Vuitton pulover",
+        "el": "Louis Vuitton πουλόβερ",
+        "uk": "Louis Vuitton светр",
+        "ar": "Louis Vuitton كنزة",
+        "ja": "Louis Vuitton セーター",
+        "ko": "Louis Vuitton 스웨터",
+        "vi": "Louis Vuitton áo len",
+        "tr": "Louis Vuitton kazak"
+      }
+    },
+    {
+      "name": "Dior shorts",
+      "translations": {
+        "fi": "Dior shortsit",
+        "da": "Dior shorts",
+        "nb": "Dior shorts",
+        "cs": "Dior šortky",
+        "sk": "Dior šortky",
+        "hu": "Dior rövidnadrágok",
+        "ro": "Dior pantaloni scurți",
+        "el": "Dior σορτς",
+        "uk": "Dior шорти",
+        "ar": "Dior شورتات",
+        "ja": "Dior ショーツ",
+        "ko": "Dior 반바지",
+        "vi": "Dior quần short",
+        "tr": "Dior şort"
+      }
+    },
+    {
+      "name": "CARHARTT JACKET",
+      "translations": {
+        "fi": "CARHARTT takki",
+        "da": "CARHARTT jakke",
+        "nb": "CARHARTT jakke",
+        "cs": "CARHARTT bunda",
+        "sk": "CARHARTT bunda",
+        "hu": "CARHARTT dzseki",
+        "ro": "CARHARTT jachetă",
+        "el": "CARHARTT μπουφάν",
+        "uk": "CARHARTT куртка",
+        "ar": "CARHARTT سترة",
+        "ja": "CARHARTT ジャケット",
+        "ko": "CARHARTT 재킷",
+        "vi": "CARHARTT áo khoác",
+        "tr": "CARHARTT ceket"
+      }
+    },
+    {
+      "name": "CP Hoodie",
+      "translations": {
+        "fi": "CP huppari",
+        "da": "CP hættetrøje",
+        "nb": "CP hettegenser",
+        "cs": "CP mikina s kapucí",
+        "sk": "CP mikina s kapucňou",
+        "hu": "CP kapucnis pulóver",
+        "ro": "CP hanorac",
+        "el": "CP φούτερ με κουκούλα",
+        "uk": "CP худі",
+        "ar": "CP هودي",
+        "ja": "CP パーカー",
+        "ko": "CP 후드티",
+        "vi": "CP áo hoodie",
+        "tr": "CP kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "vlone t-shirt",
+      "translations": {
+        "fi": "vlone T-paita",
+        "da": "vlone T-shirt",
+        "nb": "vlone T-skjorte",
+        "cs": "vlone tričko",
+        "sk": "vlone tričko",
+        "hu": "vlone póló",
+        "ro": "vlone tricou",
+        "el": "vlone μπλουζάκι",
+        "uk": "vlone футболка",
+        "ar": "vlone تيشيرت",
+        "ja": "vlone Tシャツ",
+        "ko": "vlone 티셔츠",
+        "vi": "vlone áo thun",
+        "tr": "vlone tişört"
+      }
+    },
+    {
+      "name": "Dior bags",
+      "translations": {
+        "fi": "Dior laukut",
+        "da": "Dior tasker",
+        "nb": "Dior vesker",
+        "cs": "Dior tašky",
+        "sk": "Dior tašky",
+        "hu": "Dior táskák",
+        "ro": "Dior genți",
+        "el": "Dior τσάντες",
+        "uk": "Dior сумки",
+        "ar": "Dior حقائب",
+        "ja": "Dior バッグ",
+        "ko": "Dior 가방",
+        "vi": "Dior túi",
+        "tr": "Dior çantalar"
+      }
+    },
+    {
+      "name": "Ralph Lauren sweaters",
+      "translations": {
+        "fi": "Ralph Lauren neulepuserot",
+        "da": "Ralph Lauren sweatre",
+        "nb": "Ralph Lauren gensere",
+        "cs": "Ralph Lauren svetry",
+        "sk": "Ralph Lauren svetre",
+        "hu": "Ralph Lauren pulóverek",
+        "ro": "Ralph Lauren pulovere",
+        "el": "Ralph Lauren πουλόβερ",
+        "uk": "Ralph Lauren светри",
+        "ar": "Ralph Lauren كنزات",
+        "ja": "Ralph Lauren セーター",
+        "ko": "Ralph Lauren 스웨터",
+        "vi": "Ralph Lauren áo len",
+        "tr": "Ralph Lauren kazaklar"
+      }
+    },
+    {
+      "name": "Gucci shorts",
+      "translations": {
+        "fi": "Gucci shortsit",
+        "da": "Gucci shorts",
+        "nb": "Gucci shorts",
+        "cs": "Gucci šortky",
+        "sk": "Gucci šortky",
+        "hu": "Gucci rövidnadrágok",
+        "ro": "Gucci pantaloni scurți",
+        "el": "Gucci σορτς",
+        "uk": "Gucci шорти",
+        "ar": "Gucci شورتات",
+        "ja": "Gucci ショーツ",
+        "ko": "Gucci 반바지",
+        "vi": "Gucci quần short",
+        "tr": "Gucci şort"
+      }
+    },
+    {
+      "name": "LV backpack",
+      "translations": {
+        "fi": "LV reppu",
+        "da": "LV rygsæk",
+        "nb": "LV ryggsekk",
+        "cs": "LV batoh",
+        "sk": "LV batoh",
+        "hu": "LV hátizsák",
+        "ro": "LV rucsac",
+        "el": "LV σακίδιο",
+        "uk": "LV рюкзак",
+        "ar": "LV حقيبة ظهر",
+        "ja": "LV バックパック",
+        "ko": "LV 백팩",
+        "vi": "LV ba lô",
+        "tr": "LV sırt çantası"
+      }
+    },
+    {
+      "name": "Fendi hoodie",
+      "translations": {
+        "fi": "Fendi huppari",
+        "da": "Fendi hættetrøje",
+        "nb": "Fendi hettegenser",
+        "cs": "Fendi mikina s kapucí",
+        "sk": "Fendi mikina s kapucňou",
+        "hu": "Fendi kapucnis pulóver",
+        "ro": "Fendi hanorac",
+        "el": "Fendi φούτερ με κουκούλα",
+        "uk": "Fendi худі",
+        "ar": "Fendi هودي",
+        "ja": "Fendi パーカー",
+        "ko": "Fendi 후드티",
+        "vi": "Fendi áo hoodie",
+        "tr": "Fendi kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Balenciaga hoodie",
+      "translations": {
+        "fi": "Balenciaga huppari",
+        "da": "Balenciaga hættetrøje",
+        "nb": "Balenciaga hettegenser",
+        "cs": "Balenciaga mikina s kapucí",
+        "sk": "Balenciaga mikina s kapucňou",
+        "hu": "Balenciaga kapucnis pulóver",
+        "ro": "Balenciaga hanorac",
+        "el": "Balenciaga φούτερ με κουκούλα",
+        "uk": "Balenciaga худі",
+        "ar": "Balenciaga هودي",
+        "ja": "Balenciaga パーカー",
+        "ko": "Balenciaga 후드티",
+        "vi": "Balenciaga áo hoodie",
+        "tr": "Balenciaga kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Burberry T-Shirt( 10 + styles)",
+      "translations": {
+        "fi": "Burberry T-paita [10+ mallia]",
+        "da": "Burberry T-shirt [10+ modeller]",
+        "nb": "Burberry T-skjorte [10+ modeller]",
+        "cs": "Burberry tričko [10+ variant]",
+        "sk": "Burberry tričko [10+ variantov]",
+        "hu": "Burberry póló [10+ változat]",
+        "ro": "Burberry tricou [10+ modele]",
+        "el": "Burberry μπλουζάκι [10+ σχέδια]",
+        "uk": "Burberry футболка [10+ варіантів]",
+        "ar": "Burberry تيشيرت [10+ تصميمًا]",
+        "ja": "Burberry Tシャツ [10+ 種類]",
+        "ko": "Burberry 티셔츠 [10+ 종]",
+        "vi": "Burberry áo thun [10+ mẫu]",
+        "tr": "Burberry tişört [10+ model]"
+      }
+    },
+    {
+      "name": "Burberry T-Shirt( 21 + styles)",
+      "translations": {
+        "fi": "Burberry T-paita [21+ mallia]",
+        "da": "Burberry T-shirt [21+ modeller]",
+        "nb": "Burberry T-skjorte [21+ modeller]",
+        "cs": "Burberry tričko [21+ variant]",
+        "sk": "Burberry tričko [21+ variantov]",
+        "hu": "Burberry póló [21+ változat]",
+        "ro": "Burberry tricou [21+ modele]",
+        "el": "Burberry μπλουζάκι [21+ σχέδια]",
+        "uk": "Burberry футболка [21+ варіантів]",
+        "ar": "Burberry تيشيرت [21+ تصميمًا]",
+        "ja": "Burberry Tシャツ [21+ 種類]",
+        "ko": "Burberry 티셔츠 [21+ 종]",
+        "vi": "Burberry áo thun [21+ mẫu]",
+        "tr": "Burberry tişört [21+ model]"
+      }
+    },
+    {
+      "name": "LV T-Shirt( 20 + styles)",
+      "translations": {
+        "fi": "LV T-paita [20+ mallia]",
+        "da": "LV T-shirt [20+ modeller]",
+        "nb": "LV T-skjorte [20+ modeller]",
+        "cs": "LV tričko [20+ variant]",
+        "sk": "LV tričko [20+ variantov]",
+        "hu": "LV póló [20+ változat]",
+        "ro": "LV tricou [20+ modele]",
+        "el": "LV μπλουζάκι [20+ σχέδια]",
+        "uk": "LV футболка [20+ варіантів]",
+        "ar": "LV تيشيرت [20+ تصميمًا]",
+        "ja": "LV Tシャツ [20+ 種類]",
+        "ko": "LV 티셔츠 [20+ 종]",
+        "vi": "LV áo thun [20+ mẫu]",
+        "tr": "LV tişört [20+ model]"
+      }
+    },
+    {
+      "name": "Lacoste T-shirt ( 26 + styles)",
+      "translations": {
+        "fi": "Lacoste T-paita [26+ mallia]",
+        "da": "Lacoste T-shirt [26+ modeller]",
+        "nb": "Lacoste T-skjorte [26+ modeller]",
+        "cs": "Lacoste tričko [26+ variant]",
+        "sk": "Lacoste tričko [26+ variantov]",
+        "hu": "Lacoste póló [26+ változat]",
+        "ro": "Lacoste tricou [26+ modele]",
+        "el": "Lacoste μπλουζάκι [26+ σχέδια]",
+        "uk": "Lacoste футболка [26+ варіантів]",
+        "ar": "Lacoste تيشيرت [26+ تصميمًا]",
+        "ja": "Lacoste Tシャツ [26+ 種類]",
+        "ko": "Lacoste 티셔츠 [26+ 종]",
+        "vi": "Lacoste áo thun [26+ mẫu]",
+        "tr": "Lacoste tişört [26+ model]"
+      }
+    },
+    {
+      "name": "Stussy jacket",
+      "translations": {
+        "fi": "Stussy takki",
+        "da": "Stussy jakke",
+        "nb": "Stussy jakke",
+        "cs": "Stussy bunda",
+        "sk": "Stussy bunda",
+        "hu": "Stussy dzseki",
+        "ro": "Stussy jachetă",
+        "el": "Stussy μπουφάν",
+        "uk": "Stussy куртка",
+        "ar": "Stussy سترة",
+        "ja": "Stussy ジャケット",
+        "ko": "Stussy 재킷",
+        "vi": "Stussy áo khoác",
+        "tr": "Stussy ceket"
+      }
+    },
+    {
+      "name": "MONCLER SWEATER",
+      "translations": {
+        "fi": "MONCLER neulepusero",
+        "da": "MONCLER sweater",
+        "nb": "MONCLER genser",
+        "cs": "MONCLER svetr",
+        "sk": "MONCLER sveter",
+        "hu": "MONCLER pulóver",
+        "ro": "MONCLER pulover",
+        "el": "MONCLER πουλόβερ",
+        "uk": "MONCLER светр",
+        "ar": "MONCLER كنزة",
+        "ja": "MONCLER セーター",
+        "ko": "MONCLER 스웨터",
+        "vi": "MONCLER áo len",
+        "tr": "MONCLER kazak"
+      }
+    },
+    {
+      "name": "Chrome Hearts jacket",
+      "translations": {
+        "fi": "Chrome Hearts takki",
+        "da": "Chrome Hearts jakke",
+        "nb": "Chrome Hearts jakke",
+        "cs": "Chrome Hearts bunda",
+        "sk": "Chrome Hearts bunda",
+        "hu": "Chrome Hearts dzseki",
+        "ro": "Chrome Hearts jachetă",
+        "el": "Chrome Hearts μπουφάν",
+        "uk": "Chrome Hearts куртка",
+        "ar": "Chrome Hearts سترة",
+        "ja": "Chrome Hearts ジャケット",
+        "ko": "Chrome Hearts 재킷",
+        "vi": "Chrome Hearts áo khoác",
+        "tr": "Chrome Hearts ceket"
+      }
+    },
+    {
+      "name": "Nike jacket",
+      "translations": {
+        "fi": "Nike takki",
+        "da": "Nike jakke",
+        "nb": "Nike jakke",
+        "cs": "Nike bunda",
+        "sk": "Nike bunda",
+        "hu": "Nike dzseki",
+        "ro": "Nike jachetă",
+        "el": "Nike μπουφάν",
+        "uk": "Nike куртка",
+        "ar": "Nike سترة",
+        "ja": "Nike ジャケット",
+        "ko": "Nike 재킷",
+        "vi": "Nike áo khoác",
+        "tr": "Nike ceket"
+      }
+    },
+    {
+      "name": "Burberry T-shirts",
+      "translations": {
+        "fi": "Burberry T-paidat",
+        "da": "Burberry T-shirts",
+        "nb": "Burberry T-skjorter",
+        "cs": "Burberry trička",
+        "sk": "Burberry tričká",
+        "hu": "Burberry pólók",
+        "ro": "Burberry tricouri",
+        "el": "Burberry μπλουζάκια",
+        "uk": "Burberry футболки",
+        "ar": "Burberry تيشيرتات",
+        "ja": "Burberry Tシャツ",
+        "ko": "Burberry 티셔츠",
+        "vi": "Burberry áo thun",
+        "tr": "Burberry tişörtler"
+      }
+    },
+    {
+      "name": "Nike hoodie",
+      "translations": {
+        "fi": "Nike huppari",
+        "da": "Nike hættetrøje",
+        "nb": "Nike hettegenser",
+        "cs": "Nike mikina s kapucí",
+        "sk": "Nike mikina s kapucňou",
+        "hu": "Nike kapucnis pulóver",
+        "ro": "Nike hanorac",
+        "el": "Nike φούτερ με κουκούλα",
+        "uk": "Nike худі",
+        "ar": "Nike هودي",
+        "ja": "Nike パーカー",
+        "ko": "Nike 후드티",
+        "vi": "Nike áo hoodie",
+        "tr": "Nike kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "AMIRI T-Shirt ( 39 + styles)",
+      "translations": {
+        "fi": "AMIRI T-paita [39+ mallia]",
+        "da": "AMIRI T-shirt [39+ modeller]",
+        "nb": "AMIRI T-skjorte [39+ modeller]",
+        "cs": "AMIRI tričko [39+ variant]",
+        "sk": "AMIRI tričko [39+ variantov]",
+        "hu": "AMIRI póló [39+ változat]",
+        "ro": "AMIRI tricou [39+ modele]",
+        "el": "AMIRI μπλουζάκι [39+ σχέδια]",
+        "uk": "AMIRI футболка [39+ варіантів]",
+        "ar": "AMIRI تيشيرت [39+ تصميمًا]",
+        "ja": "AMIRI Tシャツ [39+ 種類]",
+        "ko": "AMIRI 티셔츠 [39+ 종]",
+        "vi": "AMIRI áo thun [39+ mẫu]",
+        "tr": "AMIRI tişört [39+ model]"
+      }
+    },
+    {
+      "name": "amiri jacket",
+      "translations": {
+        "fi": "amiri takki",
+        "da": "amiri jakke",
+        "nb": "amiri jakke",
+        "cs": "amiri bunda",
+        "sk": "amiri bunda",
+        "hu": "amiri dzseki",
+        "ro": "amiri jachetă",
+        "el": "amiri μπουφάν",
+        "uk": "amiri куртка",
+        "ar": "amiri سترة",
+        "ja": "amiri ジャケット",
+        "ko": "amiri 재킷",
+        "vi": "amiri áo khoác",
+        "tr": "amiri ceket"
+      }
+    },
+    {
+      "name": "LV T-shirts",
+      "translations": {
+        "fi": "LV T-paidat",
+        "da": "LV T-shirts",
+        "nb": "LV T-skjorter",
+        "cs": "LV trička",
+        "sk": "LV tričká",
+        "hu": "LV pólók",
+        "ro": "LV tricouri",
+        "el": "LV μπλουζάκια",
+        "uk": "LV футболки",
+        "ar": "LV تيشيرتات",
+        "ja": "LV Tシャツ",
+        "ko": "LV 티셔츠",
+        "vi": "LV áo thun",
+        "tr": "LV tişörtler"
+      }
+    },
+    {
+      "name": "VLONE T-shirt",
+      "translations": {
+        "fi": "VLONE T-paita",
+        "da": "VLONE T-shirt",
+        "nb": "VLONE T-skjorte",
+        "cs": "VLONE tričko",
+        "sk": "VLONE tričko",
+        "hu": "VLONE póló",
+        "ro": "VLONE tricou",
+        "el": "VLONE μπλουζάκι",
+        "uk": "VLONE футболка",
+        "ar": "VLONE تيشيرت",
+        "ja": "VLONE Tシャツ",
+        "ko": "VLONE 티셔츠",
+        "vi": "VLONE áo thun",
+        "tr": "VLONE tişört"
+      }
+    },
+    {
+      "name": "AMIRI T-shirt",
+      "translations": {
+        "fi": "AMIRI T-paita",
+        "da": "AMIRI T-shirt",
+        "nb": "AMIRI T-skjorte",
+        "cs": "AMIRI tričko",
+        "sk": "AMIRI tričko",
+        "hu": "AMIRI póló",
+        "ro": "AMIRI tricou",
+        "el": "AMIRI μπλουζάκι",
+        "uk": "AMIRI футболка",
+        "ar": "AMIRI تيشيرت",
+        "ja": "AMIRI Tシャツ",
+        "ko": "AMIRI 티셔츠",
+        "vi": "AMIRI áo thun",
+        "tr": "AMIRI tişört"
+      }
+    },
+    {
+      "name": "Lacoste T-shirt",
+      "translations": {
+        "fi": "Lacoste T-paita",
+        "da": "Lacoste T-shirt",
+        "nb": "Lacoste T-skjorte",
+        "cs": "Lacoste tričko",
+        "sk": "Lacoste tričko",
+        "hu": "Lacoste póló",
+        "ro": "Lacoste tricou",
+        "el": "Lacoste μπλουζάκι",
+        "uk": "Lacoste футболка",
+        "ar": "Lacoste تيشيرت",
+        "ja": "Lacoste Tシャツ",
+        "ko": "Lacoste 티셔츠",
+        "vi": "Lacoste áo thun",
+        "tr": "Lacoste tişört"
+      }
+    },
+    {
+      "name": "Balenciaga T-shirt",
+      "translations": {
+        "fi": "Balenciaga T-paita",
+        "da": "Balenciaga T-shirt",
+        "nb": "Balenciaga T-skjorte",
+        "cs": "Balenciaga tričko",
+        "sk": "Balenciaga tričko",
+        "hu": "Balenciaga póló",
+        "ro": "Balenciaga tricou",
+        "el": "Balenciaga μπλουζάκι",
+        "uk": "Balenciaga футболка",
+        "ar": "Balenciaga تيشيرت",
+        "ja": "Balenciaga Tシャツ",
+        "ko": "Balenciaga 티셔츠",
+        "vi": "Balenciaga áo thun",
+        "tr": "Balenciaga tişört"
+      }
+    },
+    {
+      "name": "Dior T-shirt",
+      "translations": {
+        "fi": "Dior T-paita",
+        "da": "Dior T-shirt",
+        "nb": "Dior T-skjorte",
+        "cs": "Dior tričko",
+        "sk": "Dior tričko",
+        "hu": "Dior póló",
+        "ro": "Dior tricou",
+        "el": "Dior μπλουζάκι",
+        "uk": "Dior футболка",
+        "ar": "Dior تيشيرت",
+        "ja": "Dior Tシャツ",
+        "ko": "Dior 티셔츠",
+        "vi": "Dior áo thun",
+        "tr": "Dior tişört"
+      }
+    },
+    {
+      "name": "FENDI SHORTS",
+      "translations": {
+        "fi": "FENDI shortsit",
+        "da": "FENDI shorts",
+        "nb": "FENDI shorts",
+        "cs": "FENDI šortky",
+        "sk": "FENDI šortky",
+        "hu": "FENDI rövidnadrágok",
+        "ro": "FENDI pantaloni scurți",
+        "el": "FENDI σορτς",
+        "uk": "FENDI шорти",
+        "ar": "FENDI شورتات",
+        "ja": "FENDI ショーツ",
+        "ko": "FENDI 반바지",
+        "vi": "FENDI quần short",
+        "tr": "FENDI şort"
+      }
+    },
+    {
+      "name": "carhartt SHORTS",
+      "translations": {
+        "fi": "carhartt shortsit",
+        "da": "carhartt shorts",
+        "nb": "carhartt shorts",
+        "cs": "carhartt šortky",
+        "sk": "carhartt šortky",
+        "hu": "carhartt rövidnadrágok",
+        "ro": "carhartt pantaloni scurți",
+        "el": "carhartt σορτς",
+        "uk": "carhartt шорти",
+        "ar": "carhartt شورتات",
+        "ja": "carhartt ショーツ",
+        "ko": "carhartt 반바지",
+        "vi": "carhartt quần short",
+        "tr": "carhartt şort"
+      }
+    },
+    {
+      "name": "ADIDAS SHORTS",
+      "translations": {
+        "fi": "ADIDAS shortsit",
+        "da": "ADIDAS shorts",
+        "nb": "ADIDAS shorts",
+        "cs": "ADIDAS šortky",
+        "sk": "ADIDAS šortky",
+        "hu": "ADIDAS rövidnadrágok",
+        "ro": "ADIDAS pantaloni scurți",
+        "el": "ADIDAS σορτς",
+        "uk": "ADIDAS шорти",
+        "ar": "ADIDAS شورتات",
+        "ja": "ADIDAS ショーツ",
+        "ko": "ADIDAS 반바지",
+        "vi": "ADIDAS quần short",
+        "tr": "ADIDAS şort"
+      }
+    },
+    {
+      "name": "Valentino T-shirt",
+      "translations": {
+        "fi": "Valentino T-paita",
+        "da": "Valentino T-shirt",
+        "nb": "Valentino T-skjorte",
+        "cs": "Valentino tričko",
+        "sk": "Valentino tričko",
+        "hu": "Valentino póló",
+        "ro": "Valentino tricou",
+        "el": "Valentino μπλουζάκι",
+        "uk": "Valentino футболка",
+        "ar": "Valentino تيشيرت",
+        "ja": "Valentino Tシャツ",
+        "ko": "Valentino 티셔츠",
+        "vi": "Valentino áo thun",
+        "tr": "Valentino tişört"
+      }
+    },
+    {
+      "name": "Essentials T-shirt",
+      "translations": {
+        "fi": "Essentials T-paita",
+        "da": "Essentials T-shirt",
+        "nb": "Essentials T-skjorte",
+        "cs": "Essentials tričko",
+        "sk": "Essentials tričko",
+        "hu": "Essentials póló",
+        "ro": "Essentials tricou",
+        "el": "Essentials μπλουζάκι",
+        "uk": "Essentials футболка",
+        "ar": "Essentials تيشيرت",
+        "ja": "Essentials Tシャツ",
+        "ko": "Essentials 티셔츠",
+        "vi": "Essentials áo thun",
+        "tr": "Essentials tişört"
+      }
+    },
+    {
+      "name": "Louis Vuitton hoodie",
+      "translations": {
+        "fi": "Louis Vuitton huppari",
+        "da": "Louis Vuitton hættetrøje",
+        "nb": "Louis Vuitton hettegenser",
+        "cs": "Louis Vuitton mikina s kapucí",
+        "sk": "Louis Vuitton mikina s kapucňou",
+        "hu": "Louis Vuitton kapucnis pulóver",
+        "ro": "Louis Vuitton hanorac",
+        "el": "Louis Vuitton φούτερ με κουκούλα",
+        "uk": "Louis Vuitton худі",
+        "ar": "Louis Vuitton هودي",
+        "ja": "Louis Vuitton パーカー",
+        "ko": "Louis Vuitton 후드티",
+        "vi": "Louis Vuitton áo hoodie",
+        "tr": "Louis Vuitton kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Carhartt T-shirt",
+      "translations": {
+        "fi": "Carhartt T-paita",
+        "da": "Carhartt T-shirt",
+        "nb": "Carhartt T-skjorte",
+        "cs": "Carhartt tričko",
+        "sk": "Carhartt tričko",
+        "hu": "Carhartt póló",
+        "ro": "Carhartt tricou",
+        "el": "Carhartt μπλουζάκι",
+        "uk": "Carhartt футболка",
+        "ar": "Carhartt تيشيرت",
+        "ja": "Carhartt Tシャツ",
+        "ko": "Carhartt 티셔츠",
+        "vi": "Carhartt áo thun",
+        "tr": "Carhartt tişört"
+      }
+    },
+    {
+      "name": "Burberry T-shirt",
+      "translations": {
+        "fi": "Burberry T-paita",
+        "da": "Burberry T-shirt",
+        "nb": "Burberry T-skjorte",
+        "cs": "Burberry tričko",
+        "sk": "Burberry tričko",
+        "hu": "Burberry póló",
+        "ro": "Burberry tricou",
+        "el": "Burberry μπλουζάκι",
+        "uk": "Burberry футболка",
+        "ar": "Burberry تيشيرت",
+        "ja": "Burberry Tシャツ",
+        "ko": "Burberry 티셔츠",
+        "vi": "Burberry áo thun",
+        "tr": "Burberry tişört"
+      }
+    },
+    {
+      "name": "GALLERY DEPT T-shirt",
+      "translations": {
+        "fi": "GALLERY DEPT T-paita",
+        "da": "GALLERY DEPT T-shirt",
+        "nb": "GALLERY DEPT T-skjorte",
+        "cs": "GALLERY DEPT tričko",
+        "sk": "GALLERY DEPT tričko",
+        "hu": "GALLERY DEPT póló",
+        "ro": "GALLERY DEPT tricou",
+        "el": "GALLERY DEPT μπλουζάκι",
+        "uk": "GALLERY DEPT футболка",
+        "ar": "GALLERY DEPT تيشيرت",
+        "ja": "GALLERY DEPT Tシャツ",
+        "ko": "GALLERY DEPT 티셔츠",
+        "vi": "GALLERY DEPT áo thun",
+        "tr": "GALLERY DEPT tişört"
+      }
+    },
+    {
+      "name": "Prada T-shirt",
+      "translations": {
+        "fi": "Prada T-paita",
+        "da": "Prada T-shirt",
+        "nb": "Prada T-skjorte",
+        "cs": "Prada tričko",
+        "sk": "Prada tričko",
+        "hu": "Prada póló",
+        "ro": "Prada tricou",
+        "el": "Prada μπλουζάκι",
+        "uk": "Prada футболка",
+        "ar": "Prada تيشيرت",
+        "ja": "Prada Tシャツ",
+        "ko": "Prada 티셔츠",
+        "vi": "Prada áo thun",
+        "tr": "Prada tişört"
+      }
+    },
+    {
+      "name": "Palm Angels T-shirt",
+      "translations": {
+        "fi": "Palm Angels T-paita",
+        "da": "Palm Angels T-shirt",
+        "nb": "Palm Angels T-skjorte",
+        "cs": "Palm Angels tričko",
+        "sk": "Palm Angels tričko",
+        "hu": "Palm Angels póló",
+        "ro": "Palm Angels tricou",
+        "el": "Palm Angels μπλουζάκι",
+        "uk": "Palm Angels футболка",
+        "ar": "Palm Angels تيشيرت",
+        "ja": "Palm Angels Tシャツ",
+        "ko": "Palm Angels 티셔츠",
+        "vi": "Palm Angels áo thun",
+        "tr": "Palm Angels tişört"
+      }
+    },
+    {
+      "name": "GALLERY DEPT T-SHIRTS",
+      "translations": {
+        "fi": "GALLERY DEPT T-paidat",
+        "da": "GALLERY DEPT T-shirts",
+        "nb": "GALLERY DEPT T-skjorter",
+        "cs": "GALLERY DEPT trička",
+        "sk": "GALLERY DEPT tričká",
+        "hu": "GALLERY DEPT pólók",
+        "ro": "GALLERY DEPT tricouri",
+        "el": "GALLERY DEPT μπλουζάκια",
+        "uk": "GALLERY DEPT футболки",
+        "ar": "GALLERY DEPT تيشيرتات",
+        "ja": "GALLERY DEPT Tシャツ",
+        "ko": "GALLERY DEPT 티셔츠",
+        "vi": "GALLERY DEPT áo thun",
+        "tr": "GALLERY DEPT tişörtler"
+      }
+    },
+    {
+      "name": "Amiri T-shirt",
+      "translations": {
+        "fi": "Amiri T-paita",
+        "da": "Amiri T-shirt",
+        "nb": "Amiri T-skjorte",
+        "cs": "Amiri tričko",
+        "sk": "Amiri tričko",
+        "hu": "Amiri póló",
+        "ro": "Amiri tricou",
+        "el": "Amiri μπλουζάκι",
+        "uk": "Amiri футболка",
+        "ar": "Amiri تيشيرت",
+        "ja": "Amiri Tシャツ",
+        "ko": "Amiri 티셔츠",
+        "vi": "Amiri áo thun",
+        "tr": "Amiri tişört"
+      }
+    },
+    {
+      "name": "Jordan shorts",
+      "translations": {
+        "fi": "Jordan shortsit",
+        "da": "Jordan shorts",
+        "nb": "Jordan shorts",
+        "cs": "Jordan šortky",
+        "sk": "Jordan šortky",
+        "hu": "Jordan rövidnadrágok",
+        "ro": "Jordan pantaloni scurți",
+        "el": "Jordan σορτς",
+        "uk": "Jordan шорти",
+        "ar": "Jordan شورتات",
+        "ja": "Jordan ショーツ",
+        "ko": "Jordan 반바지",
+        "vi": "Jordan quần short",
+        "tr": "Jordan şort"
+      }
+    },
+    {
+      "name": "Supreme T-shirts",
+      "translations": {
+        "fi": "Supreme T-paidat",
+        "da": "Supreme T-shirts",
+        "nb": "Supreme T-skjorter",
+        "cs": "Supreme trička",
+        "sk": "Supreme tričká",
+        "hu": "Supreme pólók",
+        "ro": "Supreme tricouri",
+        "el": "Supreme μπλουζάκια",
+        "uk": "Supreme футболки",
+        "ar": "Supreme تيشيرتات",
+        "ja": "Supreme Tシャツ",
+        "ko": "Supreme 티셔츠",
+        "vi": "Supreme áo thun",
+        "tr": "Supreme tişörtler"
+      }
+    },
+    {
+      "name": "Gucci T-Shirt（40 style TOP）",
+      "translations": {
+        "fi": "Gucci T-paita [40 mallia] TOP",
+        "da": "Gucci T-shirt [40 modeller] TOP",
+        "nb": "Gucci T-skjorte [40 modeller] TOP",
+        "cs": "Gucci tričko [40 variant] TOP",
+        "sk": "Gucci tričko [40 variantov] TOP",
+        "hu": "Gucci póló [40 változat] TOP",
+        "ro": "Gucci tricou [40 modele] TOP",
+        "el": "Gucci μπλουζάκι [40 σχέδια] TOP",
+        "uk": "Gucci футболка [40 варіантів] TOP",
+        "ar": "Gucci تيشيرت [40 تصميمًا] TOP",
+        "ja": "Gucci Tシャツ [40 種類] TOP",
+        "ko": "Gucci 티셔츠 [40 종] TOP",
+        "vi": "Gucci áo thun [40 mẫu] TOP",
+        "tr": "Gucci tişört [40 model] TOP"
+      }
+    },
+    {
+      "name": "AMIRI shorts",
+      "translations": {
+        "fi": "AMIRI shortsit",
+        "da": "AMIRI shorts",
+        "nb": "AMIRI shorts",
+        "cs": "AMIRI šortky",
+        "sk": "AMIRI šortky",
+        "hu": "AMIRI rövidnadrágok",
+        "ro": "AMIRI pantaloni scurți",
+        "el": "AMIRI σορτς",
+        "uk": "AMIRI шорти",
+        "ar": "AMIRI شورتات",
+        "ja": "AMIRI ショーツ",
+        "ko": "AMIRI 반바지",
+        "vi": "AMIRI quần short",
+        "tr": "AMIRI şort"
+      }
+    },
+    {
+      "name": "Dior hoodies",
+      "translations": {
+        "fi": "Dior hupparit",
+        "da": "Dior hættetrøjer",
+        "nb": "Dior hettegensere",
+        "cs": "Dior mikiny s kapucí",
+        "sk": "Dior mikiny s kapucňou",
+        "hu": "Dior kapucnis pulóverek",
+        "ro": "Dior hanorace",
+        "el": "Dior φούτερ με κουκούλα",
+        "uk": "Dior худі",
+        "ar": "Dior هوديات",
+        "ja": "Dior パーカー",
+        "ko": "Dior 후드티",
+        "vi": "Dior áo hoodie",
+        "tr": "Dior kapüşonlu sweatshirtler"
+      }
+    },
+    {
+      "name": "SUPREME HOODIES （20 styles）",
+      "translations": {
+        "fi": "SUPREME hupparit [20 mallia]",
+        "da": "SUPREME hættetrøjer [20 modeller]",
+        "nb": "SUPREME hettegensere [20 modeller]",
+        "cs": "SUPREME mikiny s kapucí [20 variant]",
+        "sk": "SUPREME mikiny s kapucňou [20 variantov]",
+        "hu": "SUPREME kapucnis pulóverek [20 változat]",
+        "ro": "SUPREME hanorace [20 modele]",
+        "el": "SUPREME φούτερ με κουκούλα [20 σχέδια]",
+        "uk": "SUPREME худі [20 варіантів]",
+        "ar": "SUPREME هوديات [20 تصميمًا]",
+        "ja": "SUPREME パーカー [20 種類]",
+        "ko": "SUPREME 후드티 [20 종]",
+        "vi": "SUPREME áo hoodie [20 mẫu]",
+        "tr": "SUPREME kapüşonlu sweatshirtler [20 model]"
+      }
+    },
+    {
+      "name": "Fendi shorts",
+      "translations": {
+        "fi": "Fendi shortsit",
+        "da": "Fendi shorts",
+        "nb": "Fendi shorts",
+        "cs": "Fendi šortky",
+        "sk": "Fendi šortky",
+        "hu": "Fendi rövidnadrágok",
+        "ro": "Fendi pantaloni scurți",
+        "el": "Fendi σορτς",
+        "uk": "Fendi шорти",
+        "ar": "Fendi شورتات",
+        "ja": "Fendi ショーツ",
+        "ko": "Fendi 반바지",
+        "vi": "Fendi quần short",
+        "tr": "Fendi şort"
+      }
+    },
+    {
+      "name": "Louis Vuitton jacket",
+      "translations": {
+        "fi": "Louis Vuitton takki",
+        "da": "Louis Vuitton jakke",
+        "nb": "Louis Vuitton jakke",
+        "cs": "Louis Vuitton bunda",
+        "sk": "Louis Vuitton bunda",
+        "hu": "Louis Vuitton dzseki",
+        "ro": "Louis Vuitton jachetă",
+        "el": "Louis Vuitton μπουφάν",
+        "uk": "Louis Vuitton куртка",
+        "ar": "Louis Vuitton سترة",
+        "ja": "Louis Vuitton ジャケット",
+        "ko": "Louis Vuitton 재킷",
+        "vi": "Louis Vuitton áo khoác",
+        "tr": "Louis Vuitton ceket"
+      }
+    },
+    {
+      "name": "ESSENTIALS Shorts( 7 + styles)",
+      "translations": {
+        "fi": "ESSENTIALS shortsit [7+ mallia]",
+        "da": "ESSENTIALS shorts [7+ modeller]",
+        "nb": "ESSENTIALS shorts [7+ modeller]",
+        "cs": "ESSENTIALS šortky [7+ variant]",
+        "sk": "ESSENTIALS šortky [7+ variantov]",
+        "hu": "ESSENTIALS rövidnadrágok [7+ változat]",
+        "ro": "ESSENTIALS pantaloni scurți [7+ modele]",
+        "el": "ESSENTIALS σορτς [7+ σχέδια]",
+        "uk": "ESSENTIALS шорти [7+ варіантів]",
+        "ar": "ESSENTIALS شورتات [7+ تصميمًا]",
+        "ja": "ESSENTIALS ショーツ [7+ 種類]",
+        "ko": "ESSENTIALS 반바지 [7+ 종]",
+        "vi": "ESSENTIALS quần short [7+ mẫu]",
+        "tr": "ESSENTIALS şort [7+ model]"
+      }
+    },
+    {
+      "name": "Moncler T-shirt",
+      "translations": {
+        "fi": "Moncler T-paita",
+        "da": "Moncler T-shirt",
+        "nb": "Moncler T-skjorte",
+        "cs": "Moncler tričko",
+        "sk": "Moncler tričko",
+        "hu": "Moncler póló",
+        "ro": "Moncler tricou",
+        "el": "Moncler μπλουζάκι",
+        "uk": "Moncler футболка",
+        "ar": "Moncler تيشيرت",
+        "ja": "Moncler Tシャツ",
+        "ko": "Moncler 티셔츠",
+        "vi": "Moncler áo thun",
+        "tr": "Moncler tişört"
+      }
+    },
+    {
+      "name": "Dior T-shirt( 36 + styles)",
+      "translations": {
+        "fi": "Dior T-paita [36+ mallia]",
+        "da": "Dior T-shirt [36+ modeller]",
+        "nb": "Dior T-skjorte [36+ modeller]",
+        "cs": "Dior tričko [36+ variant]",
+        "sk": "Dior tričko [36+ variantov]",
+        "hu": "Dior póló [36+ változat]",
+        "ro": "Dior tricou [36+ modele]",
+        "el": "Dior μπλουζάκι [36+ σχέδια]",
+        "uk": "Dior футболка [36+ варіантів]",
+        "ar": "Dior تيشيرت [36+ تصميمًا]",
+        "ja": "Dior Tシャツ [36+ 種類]",
+        "ko": "Dior 티셔츠 [36+ 종]",
+        "vi": "Dior áo thun [36+ mẫu]",
+        "tr": "Dior tişört [36+ model]"
+      }
+    },
+    {
+      "name": "Moncler T-shirt ( 18 + styles)",
+      "translations": {
+        "fi": "Moncler T-paita [18+ mallia]",
+        "da": "Moncler T-shirt [18+ modeller]",
+        "nb": "Moncler T-skjorte [18+ modeller]",
+        "cs": "Moncler tričko [18+ variant]",
+        "sk": "Moncler tričko [18+ variantov]",
+        "hu": "Moncler póló [18+ változat]",
+        "ro": "Moncler tricou [18+ modele]",
+        "el": "Moncler μπλουζάκι [18+ σχέδια]",
+        "uk": "Moncler футболка [18+ варіантів]",
+        "ar": "Moncler تيشيرت [18+ تصميمًا]",
+        "ja": "Moncler Tシャツ [18+ 種類]",
+        "ko": "Moncler 티셔츠 [18+ 종]",
+        "vi": "Moncler áo thun [18+ mẫu]",
+        "tr": "Moncler tişört [18+ model]"
+      }
+    },
+    {
+      "name": "Stussy t-shirt (40 styles)",
+      "translations": {
+        "fi": "Stussy T-paita [40 mallia]",
+        "da": "Stussy T-shirt [40 modeller]",
+        "nb": "Stussy T-skjorte [40 modeller]",
+        "cs": "Stussy tričko [40 variant]",
+        "sk": "Stussy tričko [40 variantov]",
+        "hu": "Stussy póló [40 változat]",
+        "ro": "Stussy tricou [40 modele]",
+        "el": "Stussy μπλουζάκι [40 σχέδια]",
+        "uk": "Stussy футболка [40 варіантів]",
+        "ar": "Stussy تيشيرت [40 تصميمًا]",
+        "ja": "Stussy Tシャツ [40 種類]",
+        "ko": "Stussy 티셔츠 [40 종]",
+        "vi": "Stussy áo thun [40 mẫu]",
+        "tr": "Stussy tişört [40 model]"
+      }
+    },
+    {
+      "name": "Dior T-shirt (40 style TOP)",
+      "translations": {
+        "fi": "Dior T-paita [40 mallia] TOP",
+        "da": "Dior T-shirt [40 modeller] TOP",
+        "nb": "Dior T-skjorte [40 modeller] TOP",
+        "cs": "Dior tričko [40 variant] TOP",
+        "sk": "Dior tričko [40 variantov] TOP",
+        "hu": "Dior póló [40 változat] TOP",
+        "ro": "Dior tricou [40 modele] TOP",
+        "el": "Dior μπλουζάκι [40 σχέδια] TOP",
+        "uk": "Dior футболка [40 варіантів] TOP",
+        "ar": "Dior تيشيرت [40 تصميمًا] TOP",
+        "ja": "Dior Tシャツ [40 種類] TOP",
+        "ko": "Dior 티셔츠 [40 종] TOP",
+        "vi": "Dior áo thun [40 mẫu] TOP",
+        "tr": "Dior tişört [40 model] TOP"
+      }
+    }
+  ]
+}

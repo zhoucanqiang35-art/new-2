@@ -1,0 +1,229 @@
+{
+  "items": [
+    {
+      "name": "Hoodie and Pants Set DJ",
+      "translations": {
+        "cs": "Komplet mikiny s kapucí a kalhot DJ",
+        "sk": "Komplet mikiny s kapucňou a nohavíc DJ",
+        "hu": "DJ kapucnis pulóver és nadrág szett",
+        "el": "Σετ φούτερ με κουκούλα και παντελονιού DJ",
+        "uk": "Комплект худі та штанів DJ",
+        "ar": "طقم هودي وبنطال DJ",
+        "ja": "DJパーカーとパンツのセット",
+        "ko": "DJ 후드티와 바지 세트",
+        "vi": "Bộ hoodie và quần dài DJ",
+        "tr": "DJ kapüşonlu üst ve pantolon takımı"
+      }
+    },
+    {
+      "name": "1994 Graphic Zip-Up Hoodie",
+      "translations": {
+        "cs": "Mikina s kapucí na zip a potiskem 1994",
+        "sk": "Mikina s kapucňou na zips a potlačou 1994",
+        "hu": "1994 mintás cipzáras kapucnis pulóver",
+        "el": "Φούτερ με κουκούλα, φερμουάρ και σχέδιο 1994",
+        "uk": "Худі на блискавці з принтом 1994",
+        "ar": "هودي بسحاب وطبعة 1994",
+        "ja": "1994グラフィック入りジップパーカー",
+        "ko": "1994 그래픽 집업 후드티",
+        "vi": "Áo hoodie khóa kéo họa tiết 1994",
+        "tr": "1994 desenli fermuarlı kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Riverside Graphic Hoodie",
+      "translations": {
+        "cs": "Mikina s kapucí a potiskem Riverside",
+        "sk": "Mikina s kapucňou a potlačou Riverside",
+        "hu": "Riverside mintás kapucnis pulóver",
+        "el": "Φούτερ με κουκούλα και σχέδιο Riverside",
+        "uk": "Худі з принтом Riverside",
+        "ar": "هودي برسمة Riverside",
+        "ja": "Riversideグラフィックパーカー",
+        "ko": "Riverside 그래픽 후드티",
+        "vi": "Áo hoodie họa tiết Riverside",
+        "tr": "Riverside desenli kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Tiger Graphic Zip-Up Hoodie",
+      "translations": {
+        "cs": "Mikina s kapucí na zip a potiskem tygra",
+        "sk": "Mikina s kapucňou na zips a potlačou tigra",
+        "hu": "Tigrismintás cipzáras kapucnis pulóver",
+        "el": "Φούτερ με κουκούλα, φερμουάρ και σχέδιο τίγρης",
+        "uk": "Худі на блискавці з принтом тигра",
+        "ar": "هودي بسحاب ورسمة نمر",
+        "ja": "タイガーグラフィック入りジップパーカー",
+        "ko": "호랑이 그래픽 집업 후드티",
+        "vi": "Áo hoodie khóa kéo họa tiết hổ",
+        "tr": "Kaplan desenli fermuarlı kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "LV Knit Sweater Collection",
+      "translations": {
+        "cs": "Kolekce pletených svetrů LV",
+        "sk": "Kolekcia pletených svetrov LV",
+        "hu": "LV kötött pulóver kollekció",
+        "el": "Συλλογή πλεκτών πουλόβερ LV",
+        "uk": "Колекція в’язаних светрів LV",
+        "ar": "مجموعة كنزات LV المحبوكة",
+        "ja": "LVニットセーターコレクション",
+        "ko": "LV 니트 스웨터 컬렉션",
+        "vi": "Bộ sưu tập áo len dệt kim LV",
+        "tr": "LV örgü kazak koleksiyonu"
+      }
+    },
+    {
+      "name": "Zip-Up Hoodie and Pants Set",
+      "translations": {
+        "cs": "Komplet mikiny s kapucí na zip a kalhot",
+        "sk": "Komplet mikiny s kapucňou na zips a nohavíc",
+        "hu": "Cipzáras kapucnis pulóver és nadrág szett",
+        "el": "Σετ φούτερ με κουκούλα και φερμουάρ και παντελονιού",
+        "uk": "Комплект худі на блискавці та штанів",
+        "ar": "طقم هودي بسحاب وبنطال",
+        "ja": "ジップパーカーとパンツのセット",
+        "ko": "집업 후드티와 바지 세트",
+        "vi": "Bộ hoodie khóa kéo và quần dài",
+        "tr": "Fermuarlı kapüşonlu üst ve pantolon takımı"
+      }
+    },
+    {
+      "name": "RL Crewneck Knit Sweater",
+      "translations": {
+        "cs": "Pletený svetr RL s kulatým výstřihem",
+        "sk": "Pletený sveter RL s okrúhlym výstrihom",
+        "hu": "RL kerek nyakú kötött pulóver",
+        "el": "Πλεκτό πουλόβερ RL με στρογγυλή λαιμόκοψη",
+        "uk": "В’язаний светр RL з круглим вирізом",
+        "ar": "كنزة RL محبوكة برقبة دائرية",
+        "ja": "RLクルーネックニットセーター",
+        "ko": "RL 크루넥 니트 스웨터",
+        "vi": "Áo len dệt kim cổ tròn RL",
+        "tr": "RL bisiklet yaka örgü kazak"
+      }
+    },
+    {
+      "name": "Letter Print Zip-Up Hoodie",
+      "translations": {
+        "cs": "Mikina s kapucí na zip a potiskem písmen",
+        "sk": "Mikina s kapucňou na zips a potlačou písmen",
+        "hu": "Betűmintás cipzáras kapucnis pulóver",
+        "el": "Φούτερ με κουκούλα, φερμουάρ και τύπωμα γραμμάτων",
+        "uk": "Худі на блискавці з літерним принтом",
+        "ar": "هودي بسحاب وطبعة حروف",
+        "ja": "文字プリント入りジップパーカー",
+        "ko": "레터 프린트 집업 후드티",
+        "vi": "Áo hoodie khóa kéo in chữ",
+        "tr": "Harf baskılı fermuarlı kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "SLL Knit Sweater",
+      "translations": {
+        "cs": "Pletený svetr SLL",
+        "sk": "Pletený sveter SLL",
+        "hu": "SLL kötött pulóver",
+        "el": "Πλεκτό πουλόβερ SLL",
+        "uk": "В’язаний светр SLL",
+        "ar": "كنزة SLL محبوكة",
+        "ja": "SLLニットセーター",
+        "ko": "SLL 니트 스웨터",
+        "vi": "Áo len dệt kim SLL",
+        "tr": "SLL örgü kazak"
+      }
+    },
+    {
+      "name": "AGT Premium Casual Shorts",
+      "translations": {
+        "cs": "Prémiové volnočasové šortky AGT",
+        "sk": "Prémiové voľnočasové šortky AGT",
+        "hu": "AGT prémium hétköznapi rövidnadrág",
+        "el": "Premium καθημερινό σορτς AGT",
+        "uk": "Преміальні повсякденні шорти AGT",
+        "ar": "شورت AGT كاجوال فاخر",
+        "ja": "AGTプレミアムカジュアルショーツ",
+        "ko": "AGT 프리미엄 캐주얼 반바지",
+        "vi": "Quần short thường ngày cao cấp AGT",
+        "tr": "AGT premium günlük şort"
+      }
+    },
+    {
+      "name": "SV1 Shorts Collection",
+      "translations": {
+        "cs": "Kolekce šortek SV1",
+        "sk": "Kolekcia šortiek SV1",
+        "hu": "SV1 rövidnadrág-kollekció",
+        "el": "Συλλογή σορτς SV1",
+        "uk": "Колекція шортів SV1",
+        "ar": "مجموعة شورتات SV1",
+        "ja": "SV1ショーツコレクション",
+        "ko": "SV1 반바지 컬렉션",
+        "vi": "Bộ sưu tập quần short SV1",
+        "tr": "SV1 şort koleksiyonu"
+      }
+    },
+    {
+      "name": "CBA Casual Outfit Set",
+      "translations": {
+        "cs": "Volnočasový komplet oblečení CBA",
+        "sk": "Voľnočasový komplet oblečenia CBA",
+        "hu": "CBA hétköznapi ruhaszett",
+        "el": "Καθημερινό σετ ρούχων CBA",
+        "uk": "Повсякденний комплект одягу CBA",
+        "ar": "طقم ملابس CBA كاجوال",
+        "ja": "CBAカジュアルコーディネートセット",
+        "ko": "CBA 캐주얼 의상 세트",
+        "vi": "Bộ trang phục thường ngày CBA",
+        "tr": "CBA günlük kıyafet takımı"
+      }
+    },
+    {
+      "name": "Planet Basic Casual Shorts",
+      "translations": {
+        "cs": "Základní volnočasové šortky Planet",
+        "sk": "Základné voľnočasové šortky Planet",
+        "hu": "Planet Basic hétköznapi rövidnadrág",
+        "el": "Βασικό καθημερινό σορτς Planet",
+        "uk": "Базові повсякденні шорти Planet",
+        "ar": "شورت Planet Basic كاجوال",
+        "ja": "Planet Basicカジュアルショーツ",
+        "ko": "Planet Basic 캐주얼 반바지",
+        "vi": "Quần short thường ngày cơ bản Planet",
+        "tr": "Planet Basic günlük şort"
+      }
+    },
+    {
+      "name": "Supreme Casual Sweatpants",
+      "translations": {
+        "cs": "Volnočasové tepláky Supreme",
+        "sk": "Voľnočasové tepláky Supreme",
+        "hu": "Supreme hétköznapi melegítőnadrág",
+        "el": "Καθημερινό παντελόνι φόρμας Supreme",
+        "uk": "Повсякденні спортивні штани Supreme",
+        "ar": "بنطال رياضي Supreme كاجوال",
+        "ja": "Supremeカジュアルスウェットパンツ",
+        "ko": "Supreme 캐주얼 스웨트팬츠",
+        "vi": "Quần nỉ thường ngày Supreme",
+        "tr": "Supreme günlük eşofman altı"
+      }
+    },
+    {
+      "name": "Corteiz Street Print Shorts",
+      "translations": {
+        "cs": "Šortky Corteiz s potiskem Street",
+        "sk": "Šortky Corteiz s potlačou Street",
+        "hu": "Corteiz Street mintás rövidnadrág",
+        "el": "Σορτς Corteiz με τύπωμα Street",
+        "uk": "Шорти Corteiz з принтом Street",
+        "ar": "شورت Corteiz بطبعة Street",
+        "ja": "Corteiz Streetプリントショーツ",
+        "ko": "Corteiz Street 프린트 반바지",
+        "vi": "Quần short Corteiz in chữ Street",
+        "tr": "Corteiz Street baskılı şort"
+      }
+    }
+  ]
+}

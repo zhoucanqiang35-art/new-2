@@ -1,0 +1,268 @@
+{
+  "items": [
+    {
+      "name": "Striped Crewneck Knit Sweater",
+      "translations": {
+        "fi": "Raidallinen pyöreäkauluksinen neule",
+        "da": "Stribet striktrøje med rund hals",
+        "nb": "Stripete strikkegenser med rund hals",
+        "cs": "Pruhovaný pletený svetr s kulatým výstřihem",
+        "sk": "Pásikavý pletený sveter s okrúhlym výstrihom",
+        "hu": "Csíkos kötött pulóver kerek nyakkal",
+        "ro": "Pulover tricotat în dungi cu decolteu rotund",
+        "el": "Ριγέ πλεκτό πουλόβερ με στρογγυλή λαιμόκοψη",
+        "tr": "Çizgili bisiklet yaka örgü kazak",
+        "uk": "Смугастий в’язаний светр із круглим вирізом",
+        "ar": "كنزة محبوكة مخططة بياقة مستديرة",
+        "ja": "ストライプ柄クルーネックニット",
+        "ko": "스트라이프 크루넥 니트 스웨터",
+        "vi": "Áo len cổ tròn kẻ sọc"
+      }
+    },
+    {
+      "name": "Relaxed Crewneck Knit Sweater",
+      "translations": {
+        "fi": "Rento pyöreäkauluksinen neule",
+        "da": "Afslappet striktrøje med rund hals",
+        "nb": "Avslappet strikkegenser med rund hals",
+        "cs": "Volný pletený svetr s kulatým výstřihem",
+        "sk": "Voľný pletený sveter s okrúhlym výstrihom",
+        "hu": "Laza kötött pulóver kerek nyakkal",
+        "ro": "Pulover tricotat lejer cu decolteu rotund",
+        "el": "Άνετο πλεκτό πουλόβερ με στρογγυλή λαιμόκοψη",
+        "tr": "Rahat kesim bisiklet yaka örgü kazak",
+        "uk": "Вільний в’язаний светр із круглим вирізом",
+        "ar": "كنزة محبوكة بقصة مريحة وياقة مستديرة",
+        "ja": "リラックスフィットのクルーネックニット",
+        "ko": "여유로운 핏의 크루넥 니트 스웨터",
+        "vi": "Áo len cổ tròn dáng thoải mái"
+      }
+    },
+    {
+      "name": "Wool Boucle Crewneck Sweater",
+      "translations": {
+        "fi": "Villainen bouclé-neule pyöreällä kaula-aukolla",
+        "da": "Boucléstrik i uld med rund hals",
+        "nb": "Boucléstrikk i ull med rund hals",
+        "cs": "Vlněný buklé svetr s kulatým výstřihem",
+        "sk": "Vlnený buklé sveter s okrúhlym výstrihom",
+        "hu": "Gyapjú buklé pulóver kerek nyakkal",
+        "ro": "Pulover bouclé din lână cu decolteu rotund",
+        "el": "Μάλλινο μπουκλέ πουλόβερ με στρογγυλή λαιμόκοψη",
+        "tr": "Yün buklet bisiklet yaka kazak",
+        "uk": "Вовняний светр букле з круглим вирізом",
+        "ar": "كنزة بوكليه صوفية بياقة مستديرة",
+        "ja": "ウールブークレのクルーネックニット",
+        "ko": "울 부클 크루넥 스웨터",
+        "vi": "Áo len bouclé lông cừu cổ tròn"
+      }
+    },
+    {
+      "name": "Vintage Graphic Washed Shorts",
+      "translations": {
+        "fi": "Pestyt vintage-shortsit kuviolla",
+        "da": "Vaskede vintage shorts med grafik",
+        "nb": "Vaskede vintage shorts med grafikk",
+        "cs": "Prané vintage šortky s grafikou",
+        "sk": "Prané vintage šortky s grafikou",
+        "hu": "Mosott vintage rövidnadrág grafikával",
+        "ro": "Pantaloni scurți vintage spălați cu grafică",
+        "el": "Ξεβαμμένο vintage σορτς με γραφικό σχέδιο",
+        "tr": "Grafik desenli yıkamalı vintage şort",
+        "uk": "Випрані вінтажні шорти з графічним малюнком",
+        "ar": "شورت بطابع عتيق ومظهر مغسول مع رسم",
+        "ja": "ウォッシュ加工のヴィンテージグラフィックショーツ",
+        "ko": "워싱 빈티지 그래픽 쇼츠",
+        "vi": "Quần short wash họa tiết phong cách cổ điển"
+      }
+    },
+    {
+      "name": "Star-Embroidered Denim Shorts",
+      "translations": {
+        "fi": "Tähtikirjaillut farkkushortsit",
+        "da": "Denimshorts med stjernebroderi",
+        "nb": "Denimshorts med stjernebroderi",
+        "cs": "Džínové šortky s výšivkou hvězd",
+        "sk": "Džínsové šortky s výšivkou hviezd",
+        "hu": "Csillaghímzéses farmer rövidnadrág",
+        "ro": "Pantaloni scurți din denim cu stele brodate",
+        "el": "Τζιν σορτς με κεντημένα αστέρια",
+        "tr": "Yıldız işlemeli kot şort",
+        "uk": "Джинсові шорти з вишитими зірками",
+        "ar": "شورت جينز مطرز بالنجوم",
+        "ja": "星刺繍デニムショーツ",
+        "ko": "별 자수 데님 쇼츠",
+        "vi": "Quần short denim thêu sao"
+      }
+    },
+    {
+      "name": "Vintage Splatter Denim Shorts",
+      "translations": {
+        "fi": "Vintage-farkkushortsit roiskekuvioinnilla",
+        "da": "Vintage denimshorts med stænkmønster",
+        "nb": "Vintage denimshorts med sprutmønster",
+        "cs": "Vintage džínové šortky s cákanci",
+        "sk": "Vintage džínsové šortky s fŕkancami",
+        "hu": "Vintage farmer rövidnadrág fröccsenésmintával",
+        "ro": "Pantaloni scurți vintage din denim cu model stropit",
+        "el": "Vintage τζιν σορτς με πιτσιλιές",
+        "tr": "Boya sıçratma desenli vintage kot şort",
+        "uk": "Вінтажні джинсові шорти з бризками",
+        "ar": "شورت جينز بطابع عتيق ونقشة متناثرة",
+        "ja": "ペイント風ヴィンテージデニムショーツ",
+        "ko": "스플래터 무늬 빈티지 데님 쇼츠",
+        "vi": "Quần short denim cổ điển họa tiết vẩy màu"
+      }
+    },
+    {
+      "name": "Premium Windproof Down Jacket",
+      "translations": {
+        "fi": "Laadukas tuulenpitävä untuvatakki",
+        "da": "Vindafvisende premium dunjakke",
+        "nb": "Vindavvisende dunjakke i premium kvalitet",
+        "cs": "Prémiová větruodolná péřová bunda",
+        "sk": "Prémiová vetruodolná páperová bunda",
+        "hu": "Prémium szélálló pehelykabát",
+        "ro": "Geacă premium din puf rezistentă la vânt",
+        "el": "Premium πουπουλένιο μπουφάν αντιανεμικό",
+        "tr": "Premium rüzgar geçirmez kuş tüyü mont",
+        "uk": "Преміальна вітрозахисна пухова куртка",
+        "ar": "سترة ريش فاخرة مقاومة للرياح",
+        "ja": "防風プレミアムダウンジャケット",
+        "ko": "프리미엄 방풍 다운 재킷",
+        "vi": "Áo khoác lông vũ cao cấp chống gió"
+      }
+    },
+    {
+      "name": "Classic Fleece Outdoor Jacket",
+      "translations": {
+        "fi": "Klassinen fleece-ulkoilutakki",
+        "da": "Klassisk fleecejakke til udendørs brug",
+        "nb": "Klassisk fleecejakke til friluft",
+        "cs": "Klasická outdoorová fleecová bunda",
+        "sk": "Klasická outdoorová flísová bunda",
+        "hu": "Klasszikus kültéri polárkabát",
+        "ro": "Jachetă clasică fleece pentru exterior",
+        "el": "Κλασικό φλις μπουφάν εξωτερικού χώρου",
+        "tr": "Klasik dış mekan polar mont",
+        "uk": "Класична флісова куртка для активного відпочинку",
+        "ar": "سترة فليس كلاسيكية للأنشطة الخارجية",
+        "ja": "クラシックなアウトドア用フリースジャケット",
+        "ko": "클래식 아웃도어 플리스 재킷",
+        "vi": "Áo khoác nỉ lông ngoài trời cổ điển"
+      }
+    },
+    {
+      "name": "Thick Insulated Winter Jacket",
+      "translations": {
+        "fi": "Paksu eristetty talvitakki",
+        "da": "Tyk isoleret vinterjakke",
+        "nb": "Tykk isolert vinterjakke",
+        "cs": "Silná zateplená zimní bunda",
+        "sk": "Hrubá zateplená zimná bunda",
+        "hu": "Vastag bélelt télikabát",
+        "ro": "Geacă groasă de iarnă izolată",
+        "el": "Χοντρό μονωμένο χειμερινό μπουφάν",
+        "tr": "Kalın yalıtımlı kışlık mont",
+        "uk": "Товста утеплена зимова куртка",
+        "ar": "سترة شتوية سميكة ومعزولة",
+        "ja": "厚手の防寒ウィンタージャケット",
+        "ko": "두꺼운 보온 겨울 재킷",
+        "vi": "Áo khoác mùa đông dày giữ nhiệt"
+      }
+    },
+    {
+      "name": "Women's Premium Winter Jacket",
+      "translations": {
+        "fi": "Naisten laadukas talvitakki",
+        "da": "Premium vinterjakke til kvinder",
+        "nb": "Vinterjakke i premium kvalitet for kvinner",
+        "cs": "Dámská prémiová zimní bunda",
+        "sk": "Dámska prémiová zimná bunda",
+        "hu": "Női prémium télikabát",
+        "ro": "Geacă premium de iarnă pentru femei",
+        "el": "Γυναικείο premium χειμερινό μπουφάν",
+        "tr": "Kadın premium kışlık mont",
+        "uk": "Жіноча преміальна зимова куртка",
+        "ar": "سترة شتوية نسائية فاخرة",
+        "ja": "レディースプレミアムウィンタージャケット",
+        "ko": "여성 프리미엄 겨울 재킷",
+        "vi": "Áo khoác mùa đông nữ cao cấp"
+      }
+    },
+    {
+      "name": "Premium Sherpa Fleece Jacket",
+      "translations": {
+        "fi": "Laadukas sherpa-fleecetakki",
+        "da": "Premium sherpa-fleecejakke",
+        "nb": "Sherpa-fleecejakke i premium kvalitet",
+        "cs": "Prémiová bunda ze sherpa fleecu",
+        "sk": "Prémiová bunda zo sherpa flísu",
+        "hu": "Prémium sherpa polárkabát",
+        "ro": "Jachetă premium din fleece sherpa",
+        "el": "Premium μπουφάν από φλις sherpa",
+        "tr": "Premium sherpa polar mont",
+        "uk": "Преміальна куртка з флісу шерпа",
+        "ar": "سترة فليس شيربا فاخرة",
+        "ja": "プレミアムシェルパフリースジャケット",
+        "ko": "프리미엄 셰르파 플리스 재킷",
+        "vi": "Áo khoác nỉ lông sherpa cao cấp"
+      }
+    },
+    {
+      "name": "Unisex Technical Shell Jacket",
+      "translations": {
+        "fi": "Unisex tekninen kuoritakki",
+        "da": "Unisex teknisk skaljakke",
+        "nb": "Unisex teknisk skalljakke",
+        "cs": "Unisex technická svrchní bunda",
+        "sk": "Unisex technická vrchná bunda",
+        "hu": "Uniszex technikai héjkabát",
+        "ro": "Jachetă tehnică unisex de exterior",
+        "el": "Unisex τεχνικό μπουφάν εξωτερικού στρώματος",
+        "tr": "Unisex teknik dış katman ceketi",
+        "uk": "Унісекс технічна зовнішня куртка",
+        "ar": "سترة تقنية خارجية للجنسين",
+        "ja": "ユニセックスのテクニカルシェルジャケット",
+        "ko": "유니섹스 테크니컬 셸 재킷",
+        "vi": "Áo khoác ngoài kỹ thuật unisex"
+      }
+    },
+    {
+      "name": "Zip-Up Knit Sweater 0980",
+      "translations": {
+        "fi": "Vetoketjullinen neule 0980",
+        "da": "Striktrøje med lynlås 0980",
+        "nb": "Strikkegenser med glidelås 0980",
+        "cs": "Pletený svetr na zip 0980",
+        "sk": "Pletený sveter na zips 0980",
+        "hu": "Cipzáras kötött pulóver 0980",
+        "el": "Πλεκτό πουλόβερ με φερμουάρ 0980",
+        "tr": "Fermuarlı örgü kazak 0980",
+        "uk": "В’язаний светр на блискавці 0980",
+        "ar": "كنزة محبوكة بسحاب 0980",
+        "ja": "ジップアップニット 0980",
+        "ko": "집업 니트 스웨터 0980",
+        "vi": "Áo len khóa kéo 0980"
+      }
+    },
+    {
+      "name": "Badge Hoodie and Shorts Set",
+      "translations": {
+        "fi": "Huppari- ja shortsisetti merkillä",
+        "da": "Hættetrøje og shorts-sæt med mærke",
+        "nb": "Sett med hettegenser og shorts med merke",
+        "cs": "Souprava mikiny s kapucí a šortek s nášivkou",
+        "sk": "Súprava mikiny s kapucňou a šortiek s nášivkou",
+        "hu": "Kapucnis pulóver és rövidnadrág szett jelvénnyel",
+        "el": "Σετ φούτερ με κουκούλα και σορτς με σήμα",
+        "tr": "Armalı kapüşonlu üst ve şort takımı",
+        "uk": "Комплект худі та шортів з нашивкою",
+        "ar": "طقم هودي وشورت بشارة",
+        "ja": "バッジ付きパーカーとショーツのセット",
+        "ko": "배지 후드티와 쇼츠 세트",
+        "vi": "Bộ áo hoodie và quần short có huy hiệu"
+      }
+    }
+  ]
+}

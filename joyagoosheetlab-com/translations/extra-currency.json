@@ -1,0 +1,72 @@
+{
+  "fi": [
+    "Valuutta",
+    "Arvioidut hinnat; valuuttakurssien päivämäärä",
+    "Valuuttakursseja ei ole saatavilla; näytetään USD-arviot."
+  ],
+  "da": [
+    "Valuta",
+    "Anslåede priser; valutakurser opdateret",
+    "Valutakurser er utilgængelige; USD-estimater vises."
+  ],
+  "nb": [
+    "Valuta",
+    "Anslåtte priser; valutakurser oppdatert",
+    "Valutakurser er utilgjengelige; USD-estimater vises."
+  ],
+  "cs": [
+    "Měna",
+    "Odhadované ceny; kurz aktualizován",
+    "Kurzy nejsou dostupné; zobrazují se odhady v USD."
+  ],
+  "sk": [
+    "Mena",
+    "Odhadované ceny; kurz aktualizovaný",
+    "Kurzy nie sú dostupné; zobrazujú sa odhady v USD."
+  ],
+  "hu": [
+    "Pénznem",
+    "Becsült árak; árfolyamok frissítve",
+    "Az árfolyamok nem érhetők el; becsült USD-árak láthatók."
+  ],
+  "ro": [
+    "Monedă",
+    "Prețuri estimate; cursuri actualizate",
+    "Cursurile nu sunt disponibile; se afișează estimări în USD."
+  ],
+  "el": [
+    "Νόμισμα",
+    "Εκτιμώμενες τιμές· ενημέρωση ισοτιμιών",
+    "Οι ισοτιμίες δεν είναι διαθέσιμες· εμφανίζονται εκτιμήσεις σε USD."
+  ],
+  "tr": [
+    "Para birimi",
+    "Tahmini fiyatlar; döviz kurları güncellendi",
+    "Kurlar kullanılamıyor; tahmini USD fiyatları gösteriliyor."
+  ],
+  "uk": [
+    "Валюта",
+    "Орієнтовні ціни; курси оновлено",
+    "Курси недоступні; показано орієнтовні ціни в USD."
+  ],
+  "ar": [
+    "العملة",
+    "أسعار تقديرية؛ تاريخ تحديث أسعار الصرف",
+    "أسعار الصرف غير متاحة؛ تُعرض تقديرات بالدولار الأمريكي."
+  ],
+  "ja": [
+    "通貨",
+    "参考価格・為替レート更新日",
+    "為替レートを取得できないため、米ドルの参考価格を表示しています。"
+  ],
+  "ko": [
+    "통화",
+    "예상 가격; 환율 업데이트 날짜",
+    "환율을 사용할 수 없어 미국 달러 예상 가격을 표시합니다."
+  ],
+  "vi": [
+    "Tiền tệ",
+    "Giá ước tính; tỷ giá được cập nhật",
+    "Không có tỷ giá; đang hiển thị giá ước tính bằng USD."
+  ]
+}

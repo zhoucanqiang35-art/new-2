@@ -1,0 +1,172 @@
+{
+  "items": [
+    {
+      "name": "Embroidered Cap Collection",
+      "source": "Embroidered Cap Collection",
+      "suffix": "",
+      "translations": {
+        "fi": "Kirjailtujen lippisten valikoima",
+        "da": "Kollektion af broderede caps",
+        "nb": "Kolleksjon med broderte capser",
+        "cs": "Kolekce vyšívaných kšiltovek",
+        "sk": "Kolekcia vyšívaných šiltoviek",
+        "hu": "Hímzett baseballsapkák kollekciója",
+        "ro": "Colecție de șepci brodate",
+        "el": "Συλλογή κεντημένων καπέλων",
+        "tr": "İşlemeli şapka koleksiyonu",
+        "uk": "Колекція вишитих кепок",
+        "ar": "تشكيلة قبعات مطرزة",
+        "ja": "刺繍入りキャップコレクション",
+        "ko": "자수 캡 컬렉션",
+        "vi": "Bộ sưu tập mũ lưỡi trai thêu"
+      }
+    },
+    {
+      "name": "Patterned Swimwear Collection",
+      "source": "Patterned Swimwear Collection",
+      "suffix": "",
+      "translations": {
+        "fi": "Kuviollisten uima-asujen valikoima",
+        "da": "Kollektion af mønstret badetøj",
+        "nb": "Kolleksjon med mønstret badetøy",
+        "cs": "Kolekce vzorovaných plavek",
+        "sk": "Kolekcia vzorovaných plaviek",
+        "hu": "Mintás fürdőruhák kollekciója",
+        "ro": "Colecție de costume de baie cu model",
+        "el": "Συλλογή μαγιό με σχέδια",
+        "tr": "Desenli mayo koleksiyonu",
+        "uk": "Колекція купальників із візерунком",
+        "ar": "تشكيلة ملابس سباحة بنقشات",
+        "ja": "柄入り水着コレクション",
+        "ko": "패턴 수영복 컬렉션",
+        "vi": "Bộ sưu tập đồ bơi họa tiết"
+      }
+    },
+    {
+      "name": "Wireless Earbuds Collection",
+      "source": "Wireless Earbuds Collection",
+      "suffix": "",
+      "translations": {
+        "fi": "Langattomien nappikuulokkeiden valikoima",
+        "da": "Kollektion af trådløse øretelefoner",
+        "nb": "Kolleksjon med trådløse ørepropper",
+        "cs": "Kolekce bezdrátových sluchátek do uší",
+        "sk": "Kolekcia bezdrôtových slúchadiel do uší",
+        "hu": "Vezeték nélküli fülhallgatók kollekciója",
+        "ro": "Colecție de căști intraauriculare fără fir",
+        "el": "Συλλογή ασύρματων ακουστικών ψείρες",
+        "tr": "Kablosuz kulak içi kulaklık koleksiyonu",
+        "uk": "Колекція бездротових навушників-вкладишів",
+        "ar": "تشكيلة سماعات أذن لاسلكية",
+        "ja": "ワイヤレスイヤホンコレクション",
+        "ko": "무선 이어버드 컬렉션",
+        "vi": "Bộ sưu tập tai nghe nhét tai không dây"
+      }
+    },
+    {
+      "name": "Portable Light-Up Speakers",
+      "source": "Portable Light-Up Speakers",
+      "suffix": "",
+      "translations": {
+        "fi": "Kannettavat valaisevat kaiuttimet",
+        "da": "Bærbare højttalere med lys",
+        "nb": "Bærbare høyttalere med lys",
+        "cs": "Přenosné svítící reproduktory",
+        "sk": "Prenosné svietiace reproduktory",
+        "hu": "Hordozható világító hangszórók",
+        "ro": "Difuzoare portabile cu lumini",
+        "el": "Φορητά ηχεία με φωτισμό",
+        "tr": "Işıklı taşınabilir hoparlörler",
+        "uk": "Портативні колонки з підсвічуванням",
+        "ar": "مكبرات صوت محمولة مضيئة",
+        "ja": "光るポータブルスピーカー",
+        "ko": "조명이 있는 휴대용 스피커",
+        "vi": "Loa di động phát sáng"
+      }
+    },
+    {
+      "name": "Game Controller Collection",
+      "source": "Game Controller Collection",
+      "suffix": "",
+      "translations": {
+        "fi": "Peliohjainten valikoima",
+        "da": "Kollektion af spilcontrollere",
+        "nb": "Kolleksjon med spillkontrollere",
+        "cs": "Kolekce herních ovladačů",
+        "sk": "Kolekcia herných ovládačov",
+        "hu": "Játékvezérlők kollekciója",
+        "ro": "Colecție de controllere de joc",
+        "el": "Συλλογή χειριστηρίων παιχνιδιών",
+        "tr": "Oyun kumandası koleksiyonu",
+        "uk": "Колекція ігрових контролерів",
+        "ar": "تشكيلة وحدات تحكم للألعاب",
+        "ja": "ゲームコントローラーコレクション",
+        "ko": "게임 컨트롤러 컬렉션",
+        "vi": "Bộ sưu tập tay cầm chơi game"
+      }
+    },
+    {
+      "name": "Mini Portable Light-Up Speaker",
+      "source": "Mini Portable Light-Up Speaker",
+      "suffix": "",
+      "translations": {
+        "fi": "Pieni kannettava valaiseva kaiutin",
+        "da": "Lille bærbar højttaler med lys",
+        "nb": "Liten bærbar høyttaler med lys",
+        "cs": "Malý přenosný svítící reproduktor",
+        "sk": "Malý prenosný svietiaci reproduktor",
+        "hu": "Mini hordozható világító hangszóró",
+        "ro": "Mini difuzor portabil cu lumini",
+        "el": "Μίνι φορητό ηχείο με φωτισμό",
+        "tr": "Mini ışıklı taşınabilir hoparlör",
+        "uk": "Мініпортативна колонка з підсвічуванням",
+        "ar": "مكبر صوت صغير محمول مضيء",
+        "ja": "光るミニポータブルスピーカー",
+        "ko": "조명이 있는 미니 휴대용 스피커",
+        "vi": "Loa di động mini phát sáng"
+      }
+    },
+    {
+      "name": "Spider-Man Figure Keychain",
+      "source": "Spider-Man Figure Keychain",
+      "suffix": "",
+      "translations": {
+        "fi": "Spider-Man-hahmoavaimenperä",
+        "da": "Spider-Man figurnøglering",
+        "nb": "Spider-Man figurnøkkelring",
+        "cs": "Přívěsek na klíče s figurkou Spider-Mana",
+        "sk": "Prívesok na kľúče s figúrkou Spider-Mana",
+        "hu": "Pókember figura kulcstartó",
+        "ro": "Breloc cu figurină Spider-Man",
+        "el": "Μπρελόκ με φιγούρα Spider-Man",
+        "tr": "Spider-Man figürlü anahtarlık",
+        "uk": "Брелок із фігуркою Людини-павука",
+        "ar": "ميدالية مفاتيح بشخصية Spider-Man",
+        "ja": "スパイダーマンフィギュアキーホルダー",
+        "ko": "스파이더맨 피규어 키링",
+        "vi": "Móc khóa mô hình Spider-Man"
+      }
+    },
+    {
+      "name": "Over-Ear Headphone Collection",
+      "source": "Over-Ear Headphone Collection",
+      "suffix": "",
+      "translations": {
+        "fi": "Korvan ympärille asettuvien kuulokkeiden valikoima",
+        "da": "Kollektion af hovedtelefoner over øret",
+        "nb": "Kolleksjon med hodetelefoner som dekker ørene",
+        "cs": "Kolekce náhlavních sluchátek přes uši",
+        "sk": "Kolekcia náhlavných slúchadiel cez uši",
+        "hu": "Fület körülölelő fejhallgatók kollekciója",
+        "ro": "Colecție de căști circumaurale",
+        "el": "Συλλογή ακουστικών που καλύπτουν τα αυτιά",
+        "tr": "Kulak çevreleyen kulaklık koleksiyonu",
+        "uk": "Колекція повнорозмірних навушників",
+        "ar": "تشكيلة سماعات رأس تحيط بالأذن",
+        "ja": "オーバーイヤーヘッドホンコレクション",
+        "ko": "오버이어 헤드폰 컬렉션",
+        "vi": "Bộ sưu tập tai nghe trùm tai"
+      }
+    }
+  ]
+}

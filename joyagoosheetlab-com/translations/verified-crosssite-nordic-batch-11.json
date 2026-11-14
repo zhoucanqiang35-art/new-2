@@ -1,0 +1,216 @@
+{
+  "items": [
+    {
+      "name": "Trefoil Logo T-Shirt",
+      "sourceId": "4585",
+      "translations": {
+        "fi": "Trefoil-logo T-paita"
+      }
+    },
+    {
+      "name": "Heart Print T-Shirt",
+      "sourceId": "4583",
+      "translations": {
+        "fi": "Sydänkuvioinen T-paita",
+        "da": "T-shirt med hjertetryk",
+        "nb": "T-skjorte med hjertetrykk"
+      }
+    },
+    {
+      "name": "Classic Green Polo Shirt",
+      "sourceId": "4579",
+      "translations": {
+        "fi": "Klassinen vihreä poolopaita",
+        "da": "Klassisk grøn poloshirt",
+        "nb": "Klassisk grønn poloskjorte"
+      }
+    },
+    {
+      "name": "Lightweight Hooded Jacket",
+      "sourceId": "4575",
+      "translations": {
+        "fi": "Kevyt hupullinen takki",
+        "da": "Letvægts hættejakke",
+        "nb": "Lett hettejakke"
+      }
+    },
+    {
+      "name": "Classic Red Polo Shirt",
+      "sourceId": "4561",
+      "translations": {
+        "fi": "Klassinen punainen poolopaita",
+        "da": "Klassisk rød poloshirt",
+        "nb": "Klassisk rød poloskjorte"
+      }
+    },
+    {
+      "name": "Embossed Logo T-Shirt",
+      "sourceId": "4553",
+      "translations": {
+        "fi": "Kohokuvioitu logo T-paita",
+        "da": "T-shirt med præget logo",
+        "nb": "T-skjorte med preget logo"
+      }
+    },
+    {
+      "name": "Sport T-Shirt and Shorts Set",
+      "sourceId": "4552",
+      "translations": {
+        "fi": "Urheilu T-paita ja shortsit -setti",
+        "da": "Sports T-shirt og shorts sæt",
+        "nb": "Sport T-skjorte og shortssett"
+      }
+    },
+    {
+      "name": "Chicago City Polo Shirt",
+      "sourceId": "4536",
+      "translations": {
+        "fi": "Chicago City poolopaita",
+        "da": "Chicago City polotrøje",
+        "nb": "Chicago City poloskjorte"
+      }
+    },
+    {
+      "name": "9OESH Printed Zip Hoodie",
+      "sourceId": "4530",
+      "translations": {
+        "fi": "9OESH painettu vetoketjuhuppari"
+      }
+    },
+    {
+      "name": "DUNE 2026 Cotton T-Shirt",
+      "sourceId": "4520",
+      "translations": {
+        "fi": "DUNE 2026 puuvillainen T-paita",
+        "da": "DUNE 2026 Bomuld T-Shirt",
+        "nb": "DUNE 2026 T-skjorte i bomull"
+      }
+    },
+    {
+      "name": "350 V2 Boost Sneakers",
+      "sourceId": "4506",
+      "translations": {
+        "fi": "350 V2 Boost -lenkkarit"
+      }
+    },
+    {
+      "name": "Fashion Versatile Sneakers",
+      "sourceId": "4505",
+      "translations": {
+        "fi": "Muodikkaat monipuoliset tennarit"
+      }
+    },
+    {
+      "name": "Embroidered Canvas Sneakers",
+      "sourceId": "4503",
+      "translations": {
+        "fi": "Brodeeratut Canvas-lenkkarit",
+        "da": "Broderede Canvas Sneakers",
+        "nb": "Broderte lerretssko"
+      }
+    },
+    {
+      "name": "Gel-NYC Running Sneakers",
+      "sourceId": "4502",
+      "translations": {
+        "fi": "Gel-NYC juoksukengät",
+        "da": "Gel-NYC løbesneakers",
+        "nb": "Gel-NYC joggesko"
+      }
+    },
+    {
+      "name": "VaporMax Plus Sneakers",
+      "sourceId": "4497",
+      "translations": {
+        "fi": "VaporMax Plus -lenkkarit",
+        "nb": "VaporMax Plus joggesko"
+      }
+    },
+    {
+      "name": "BF B30 Sneakers",
+      "sourceId": "4492",
+      "translations": {
+        "fi": "BF B30 Tennarit",
+        "nb": "BF B30 Joggesko"
+      }
+    },
+    {
+      "name": "Max 90 Sneakers",
+      "sourceId": "4488",
+      "translations": {
+        "fi": "Max 90 tennarit",
+        "nb": "Max 90 Joggesko"
+      }
+    },
+    {
+      "name": "Retro 4 Basketball Shoes",
+      "sourceId": "4467",
+      "translations": {
+        "fi": "Retro 4 -koripallokengät",
+        "da": "Retro 4 Basketball Sko",
+        "nb": "Retro 4 Basketballsko"
+      }
+    },
+    {
+      "name": "Premium Short-Sleeve T-Shirt",
+      "sourceId": "4447",
+      "translations": {
+        "fi": "Premium lyhythihainen T-paita",
+        "da": "Premium kortærmet T-shirt",
+        "nb": "Premium kortermet T-skjorte"
+      }
+    },
+    {
+      "name": "Fashion Versatile T-Shirt 33",
+      "sourceId": "4442",
+      "translations": {
+        "fi": "Muodikas monipuolinen T-paita 33"
+      }
+    },
+    {
+      "name": "Kobe 5/6 Basketball Shoes",
+      "sourceId": "4439",
+      "translations": {
+        "fi": "Kobe 5/6 koripallokengät"
+      }
+    },
+    {
+      "name": "Stu 2026 Casual T-Shirt",
+      "sourceId": "4438",
+      "translations": {
+        "fi": "Stu 2026 rento T-paita"
+      }
+    },
+    {
+      "name": "AF1 Classic White Sneakers",
+      "sourceId": "4421",
+      "translations": {
+        "fi": "AF1 Classic valkoiset tennarit"
+      }
+    },
+    {
+      "name": "Barmenia Football Jersey",
+      "sourceId": "4539",
+      "translations": {
+        "da": "Barmenia fodboldtrøje",
+        "nb": "Barmenia fotballdrakt"
+      }
+    },
+    {
+      "name": "Heavyweight Cotton T-Shirt",
+      "sourceId": "4533",
+      "translations": {
+        "da": "T-shirt i kraftig bomuld",
+        "nb": "T-skjorte i tung bomull"
+      }
+    },
+    {
+      "name": "Extended-Size Casual Shoes",
+      "sourceId": "4504",
+      "translations": {
+        "da": "Fritidssko i udvidet størrelse",
+        "nb": "Fritidssko i utvidet størrelse"
+      }
+    }
+  ]
+}

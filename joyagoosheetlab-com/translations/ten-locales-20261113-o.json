@@ -1,0 +1,184 @@
+{
+  "items": [
+    {
+      "name": "Goggle Knit Beanie",
+      "translations": {
+        "cs": "Pletená čepice s brýlemi",
+        "sk": "Pletená čiapka s okuliarmi",
+        "hu": "Szemüveges kötött sapka",
+        "el": "Πλεκτός σκούφος με γυαλιά",
+        "uk": "В’язана шапка з окулярами",
+        "ar": "قبعة محبوكة بنظارات",
+        "ja": "ゴーグル付きニットビーニー",
+        "ko": "고글 니트 비니",
+        "vi": "Mũ len có kính",
+        "tr": "Gözlüklü örgü bere"
+      }
+    },
+    {
+      "name": "Graphic Full-Face Balaclava",
+      "translations": {
+        "cs": "Kukla s potiskem přes celý obličej",
+        "sk": "Kukla s potlačou cez celú tvár",
+        "hu": "Teljes arcot takaró mintás balaklava",
+        "el": "Μπαλακλάβα πλήρους προσώπου με σχέδιο",
+        "uk": "Балаклава на все обличчя з принтом",
+        "ar": "قناع بالاكلافا برسمة يغطي الوجه بالكامل",
+        "ja": "グラフィック入りフルフェイスバラクラバ",
+        "ko": "그래픽 풀페이스 바라클라바",
+        "vi": "Khăn trùm đầu kín mặt có họa tiết",
+        "tr": "Grafik desenli tam yüz balaklava"
+      }
+    },
+    {
+      "name": "Zip-Detail Flared Trousers",
+      "translations": {
+        "cs": "Rozšířené kalhoty s detailem zipu",
+        "sk": "Rozšírené nohavice s detailom zipsu",
+        "hu": "Cipzárrészletes bővülő nadrág",
+        "el": "Καμπάνα παντελόνι με λεπτομέρεια φερμουάρ",
+        "uk": "Розкльошені штани з деталлю-блискавкою",
+        "ar": "بنطال واسع من الأسفل بتفصيل سحاب",
+        "ja": "ジップディテールのフレアパンツ",
+        "ko": "지퍼 디테일 플레어 팬츠",
+        "vi": "Quần ống loe có chi tiết khóa kéo",
+        "tr": "Fermuar detaylı İspanyol paça pantolon"
+      }
+    },
+    {
+      "name": "Slim Screw Motif Bangle",
+      "translations": {
+        "cs": "Úzký pevný náramek se šroubovým motivem",
+        "sk": "Úzky pevný náramok so skrutkovým motívom",
+        "hu": "Vékony merev karkötő csavarmotívummal",
+        "el": "Λεπτό άκαμπτο βραχιόλι με μοτίβο βίδας",
+        "uk": "Тонкий жорсткий браслет із мотивом гвинта",
+        "ar": "سوار صلب نحيف بنقشة برغي",
+        "ja": "スクリューモチーフの細身バングル",
+        "ko": "슬림 스크루 모티프 뱅글",
+        "vi": "Vòng tay cứng bản mảnh họa tiết vít",
+        "tr": "Vida motifli ince bilezik"
+      }
+    },
+    {
+      "name": "YSL Chain Shoulder Bag 004",
+      "translations": {
+        "cs": "Taška přes rameno YSL s řetízkem 004",
+        "sk": "Taška cez rameno YSL s retiazkou 004",
+        "hu": "YSL láncos válltáska 004",
+        "el": "Τσάντα ώμου YSL με αλυσίδα 004",
+        "uk": "Сумка на плече YSL із ланцюжком 004",
+        "ar": "حقيبة كتف YSL بسلسلة 004",
+        "ja": "YSLチェーンショルダーバッグ 004",
+        "ko": "YSL 체인 숄더백 004",
+        "vi": "Túi đeo vai YSL dây xích 004",
+        "tr": "YSL zincirli omuz çantası 004"
+      }
+    },
+    {
+      "name": "Coach City 33 Tote Bag",
+      "translations": {
+        "cs": "Nákupní taška Coach City 33",
+        "sk": "Nákupná taška Coach City 33",
+        "hu": "Coach City 33 bevásárlótáska",
+        "el": "Τσάντα tote Coach City 33",
+        "uk": "Сумка-тоут Coach City 33",
+        "ar": "حقيبة توت Coach City 33",
+        "ja": "Coach City 33トートバッグ",
+        "ko": "Coach City 33 토트백",
+        "vi": "Túi tote Coach City 33",
+        "tr": "Coach City 33 tote çanta"
+      }
+    },
+    {
+      "name": "Diesel Mini Bag Collection",
+      "translations": {
+        "cs": "Kolekce mini tašek Diesel",
+        "sk": "Kolekcia mini tašiek Diesel",
+        "hu": "Diesel minitáska-kollekció",
+        "el": "Συλλογή μικρών τσαντών Diesel",
+        "uk": "Колекція мінісумок Diesel",
+        "ar": "مجموعة حقائب صغيرة Diesel",
+        "ja": "Dieselミニバッグコレクション",
+        "ko": "Diesel 미니백 컬렉션",
+        "vi": "Bộ sưu tập túi mini Diesel",
+        "tr": "Diesel mini çanta koleksiyonu"
+      }
+    },
+    {
+      "name": "YSL Mini Chain Shoulder Bag",
+      "translations": {
+        "cs": "Mini taška přes rameno YSL s řetízkem",
+        "sk": "Mini taška cez rameno YSL s retiazkou",
+        "hu": "YSL mini láncos válltáska",
+        "el": "Μικρή τσάντα ώμου YSL με αλυσίδα",
+        "uk": "Мінісумка на плече YSL із ланцюжком",
+        "ar": "حقيبة كتف صغيرة YSL بسلسلة",
+        "ja": "YSLミニチェーンショルダーバッグ",
+        "ko": "YSL 미니 체인 숄더백",
+        "vi": "Túi đeo vai mini YSL dây xích",
+        "tr": "YSL mini zincirli omuz çantası"
+      }
+    },
+    {
+      "name": "Distressed Patch Backpack",
+      "translations": {
+        "cs": "Batoh s nášivkami a obnošeným vzhledem",
+        "sk": "Batoh s nášivkami a obnoseným vzhľadom",
+        "hu": "Koptatott hatású hátizsák foltokkal",
+        "el": "Σακίδιο με μπαλώματα και φθαρμένη όψη",
+        "uk": "Рюкзак із нашивками та зістареним виглядом",
+        "ar": "حقيبة ظهر برقع ومظهر معتق",
+        "ja": "ダメージ加工のパッチ付きバックパック",
+        "ko": "빈티지 패치 백팩",
+        "vi": "Ba lô có miếng vá và hiệu ứng sờn",
+        "tr": "Yıpranmış görünümlü yamalı sırt çantası"
+      }
+    },
+    {
+      "name": "Shoulder Bag Collection 008",
+      "translations": {
+        "cs": "Kolekce tašek přes rameno 008",
+        "sk": "Kolekcia tašiek cez rameno 008",
+        "hu": "Válltáska-kollekció 008",
+        "el": "Συλλογή τσαντών ώμου 008",
+        "uk": "Колекція сумок на плече 008",
+        "ar": "مجموعة حقائب كتف 008",
+        "ja": "ショルダーバッグコレクション 008",
+        "ko": "숄더백 컬렉션 008",
+        "vi": "Bộ sưu tập túi đeo vai 008",
+        "tr": "Omuz çantası koleksiyonu 008"
+      }
+    },
+    {
+      "name": "Supreme Belt Bag Collection",
+      "translations": {
+        "cs": "Kolekce ledvinek Supreme",
+        "sk": "Kolekcia ľadviniek Supreme",
+        "hu": "Supreme övtáska-kollekció",
+        "el": "Συλλογή τσαντών μέσης Supreme",
+        "uk": "Колекція поясних сумок Supreme",
+        "ar": "مجموعة حقائب خصر Supreme",
+        "ja": "Supremeベルトバッグコレクション",
+        "ko": "Supreme 벨트백 컬렉션",
+        "vi": "Bộ sưu tập túi đeo hông Supreme",
+        "tr": "Supreme bel çantası koleksiyonu"
+      }
+    },
+    {
+      "name": "AP Accessories Collection",
+      "translations": {
+        "cs": "Kolekce doplňků AP",
+        "sk": "Kolekcia doplnkov AP",
+        "hu": "AP kiegészítőkollekció",
+        "el": "Συλλογή αξεσουάρ AP",
+        "uk": "Колекція аксесуарів AP",
+        "ar": "مجموعة إكسسوارات AP",
+        "ja": "APアクセサリーコレクション",
+        "ko": "AP 액세서리 컬렉션",
+        "vi": "Bộ sưu tập phụ kiện AP",
+        "tr": "AP aksesuar koleksiyonu"
+      }
+    }
+  ]
+}

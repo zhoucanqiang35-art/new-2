@@ -1,0 +1,229 @@
+{
+  "items": [
+    {
+      "name": "Quick Dry Sports Jersey",
+      "translations": {
+        "cs": "Rychleschnoucí sportovní dres",
+        "sk": "Rýchloschnúci športový dres",
+        "hu": "Gyorsan száradó sportmez",
+        "el": "Αθλητική φανέλα που στεγνώνει γρήγορα",
+        "uk": "Швидковисихаюча спортивна майка",
+        "ar": "قميص رياضي سريع الجفاف",
+        "ja": "速乾スポーツジャージ",
+        "ko": "속건 스포츠 저지",
+        "vi": "Áo thể thao nhanh khô",
+        "tr": "Hızlı kuruyan spor forması"
+      }
+    },
+    {
+      "name": "Youth Casual Shorts CD004",
+      "translations": {
+        "cs": "Volnočasové šortky pro mládež CD004",
+        "sk": "Voľnočasové šortky pre mládež CD004",
+        "hu": "Hétköznapi ifjúsági rövidnadrág CD004",
+        "el": "Καθημερινό σορτς για νέους CD004",
+        "uk": "Повсякденні шорти для молоді CD004",
+        "ar": "شورت كاجوال للشباب CD004",
+        "ja": "ユース用カジュアルショーツ CD004",
+        "ko": "청소년 캐주얼 반바지 CD004",
+        "vi": "Quần short thường ngày cho thiếu niên CD004",
+        "tr": "Gençler için günlük şort CD004"
+      }
+    },
+    {
+      "name": "DX19 Quick Dry Surf Shorts",
+      "translations": {
+        "cs": "Rychleschnoucí surfařské šortky DX19",
+        "sk": "Rýchloschnúce surferské šortky DX19",
+        "hu": "DX19 gyorsan száradó szörfshort",
+        "el": "Σορτς σερφ DX19 που στεγνώνει γρήγορα",
+        "uk": "Швидковисихаючі шорти для серфінгу DX19",
+        "ar": "شورت ركوب أمواج سريع الجفاف DX19",
+        "ja": "DX19速乾サーフショーツ",
+        "ko": "DX19 속건 서핑 반바지",
+        "vi": "Quần short lướt sóng nhanh khô DX19",
+        "tr": "DX19 hızlı kuruyan sörf şortu"
+      }
+    },
+    {
+      "name": "Casual Hoodie and Pants Set",
+      "translations": {
+        "cs": "Volnočasový komplet s mikinou a kalhotami",
+        "sk": "Voľnočasový komplet s mikinou a nohavicami",
+        "hu": "Hétköznapi kapucnis pulóver és nadrág szett",
+        "el": "Καθημερινό σετ με φούτερ και παντελόνι",
+        "uk": "Повсякденний комплект худі та штанів",
+        "ar": "طقم كاجوال من هودي وبنطال",
+        "ja": "カジュアルパーカーとパンツのセット",
+        "ko": "캐주얼 후드티와 바지 세트",
+        "vi": "Bộ hoodie và quần dài thường ngày",
+        "tr": "Günlük kapüşonlu üst ve pantolon takımı"
+      }
+    },
+    {
+      "name": "Fashion Short Sleeve T-Shirt",
+      "translations": {
+        "cs": "Módní tričko s krátkým rukávem",
+        "sk": "Módne tričko s krátkym rukávom",
+        "hu": "Divatos rövid ujjú póló",
+        "el": "Μοντέρνο κοντομάνικο μπλουζάκι",
+        "uk": "Модна футболка з короткими рукавами",
+        "ar": "تيشيرت عصري قصير الأكمام",
+        "ja": "ファッション半袖Tシャツ",
+        "ko": "패션 반소매 티셔츠",
+        "vi": "Áo thun thời trang ngắn tay",
+        "tr": "Moda kısa kollu tişört"
+      }
+    },
+    {
+      "name": "DX48 Quick Dry Swim Shorts",
+      "translations": {
+        "cs": "Rychleschnoucí plavecké šortky DX48",
+        "sk": "Rýchloschnúce plavecké šortky DX48",
+        "hu": "DX48 gyorsan száradó úszóshort",
+        "el": "Μαγιό σορτς DX48 που στεγνώνει γρήγορα",
+        "uk": "Швидковисихаючі плавальні шорти DX48",
+        "ar": "شورت سباحة سريع الجفاف DX48",
+        "ja": "DX48速乾スイムショーツ",
+        "ko": "DX48 속건 수영 반바지",
+        "vi": "Quần short bơi nhanh khô DX48",
+        "tr": "DX48 hızlı kuruyan yüzme şortu"
+      }
+    },
+    {
+      "name": "ZZW31 Denim Shorts",
+      "translations": {
+        "cs": "Džínové šortky ZZW31",
+        "sk": "Džínsové šortky ZZW31",
+        "hu": "ZZW31 farmershort",
+        "el": "Τζιν σορτς ZZW31",
+        "uk": "Джинсові шорти ZZW31",
+        "ar": "شورت جينز ZZW31",
+        "ja": "ZZW31デニムショーツ",
+        "ko": "ZZW31 데님 반바지",
+        "vi": "Quần short denim ZZW31",
+        "tr": "ZZW31 kot şort"
+      }
+    },
+    {
+      "name": "BP Shark Head Shorts",
+      "translations": {
+        "cs": "Šortky BP s motivem žraločí hlavy",
+        "sk": "Šortky BP s motívom žraločej hlavy",
+        "hu": "BP cápafejes rövidnadrág",
+        "el": "Σορτς BP με κεφάλι καρχαρία",
+        "uk": "Шорти BP з головою акули",
+        "ar": "شورت BP برسمة رأس قرش",
+        "ja": "BPシャークヘッドショーツ",
+        "ko": "BP 상어 머리 반바지",
+        "vi": "Quần short BP họa tiết đầu cá mập",
+        "tr": "BP köpek balığı başı desenli şort"
+      }
+    },
+    {
+      "name": "L Animal Print Shorts",
+      "translations": {
+        "cs": "Šortky L se zvířecím potiskem",
+        "sk": "Šortky L so zvieracou potlačou",
+        "hu": "L állatmintás rövidnadrág",
+        "el": "Σορτς L με ζωικό μοτίβο",
+        "uk": "Шорти L з анімалістичним принтом",
+        "ar": "شورت L بطبعة حيوانية",
+        "ja": "Lアニマル柄ショーツ",
+        "ko": "L 동물 무늬 반바지",
+        "vi": "Quần short L họa tiết động vật",
+        "tr": "L hayvan desenli şort"
+      }
+    },
+    {
+      "name": "Shorts 15A7-1c-22",
+      "translations": {
+        "cs": "Šortky 15A7-1c-22",
+        "sk": "Šortky 15A7-1c-22",
+        "hu": "Rövidnadrág 15A7-1c-22",
+        "el": "Σορτς 15A7-1c-22",
+        "uk": "Шорти 15A7-1c-22",
+        "ar": "شورت 15A7-1c-22",
+        "ja": "ショーツ 15A7-1c-22",
+        "ko": "반바지 15A7-1c-22",
+        "vi": "Quần short 15A7-1c-22",
+        "tr": "Şort 15A7-1c-22"
+      }
+    },
+    {
+      "name": "PB Denim Shorts PB91-PB131",
+      "translations": {
+        "cs": "Džínové šortky PB PB91-PB131",
+        "sk": "Džínsové šortky PB PB91-PB131",
+        "hu": "PB farmershort PB91-PB131",
+        "el": "Τζιν σορτς PB PB91-PB131",
+        "uk": "Джинсові шорти PB PB91-PB131",
+        "ar": "شورت جينز PB PB91-PB131",
+        "ja": "PBデニムショーツ PB91-PB131",
+        "ko": "PB 데님 반바지 PB91-PB131",
+        "vi": "Quần short denim PB PB91-PB131",
+        "tr": "PB kot şort PB91-PB131"
+      }
+    },
+    {
+      "name": "DNA Basketball Shorts DX38-1",
+      "translations": {
+        "cs": "Basketbalové šortky DNA DX38-1",
+        "sk": "Basketbalové šortky DNA DX38-1",
+        "hu": "DNA kosárlabdashort DX38-1",
+        "el": "Σορτς μπάσκετ DNA DX38-1",
+        "uk": "Баскетбольні шорти DNA DX38-1",
+        "ar": "شورت كرة سلة DNA DX38-1",
+        "ja": "DNAバスケットボールショーツ DX38-1",
+        "ko": "DNA 농구 반바지 DX38-1",
+        "vi": "Quần short bóng rổ DNA DX38-1",
+        "tr": "DNA basketbol şortu DX38-1"
+      }
+    },
+    {
+      "name": "ME Camouflage Shorts",
+      "translations": {
+        "cs": "Maskáčové šortky ME",
+        "sk": "Maskáčové šortky ME",
+        "hu": "ME terepmintás rövidnadrág",
+        "el": "Σορτς παραλλαγής ME",
+        "uk": "Камуфляжні шорти ME",
+        "ar": "شورت مموه ME",
+        "ja": "MEカモフラージュショーツ",
+        "ko": "ME 위장무늬 반바지",
+        "vi": "Quần short rằn ri ME",
+        "tr": "ME kamuflaj şort"
+      }
+    },
+    {
+      "name": "Casual Matching Set 006",
+      "translations": {
+        "cs": "Volnočasový sladěný komplet 006",
+        "sk": "Voľnočasový zladený komplet 006",
+        "hu": "Hétköznapi összeillő szett 006",
+        "el": "Καθημερινό ασορτί σετ 006",
+        "uk": "Повсякденний комплект 006",
+        "ar": "طقم كاجوال متناسق 006",
+        "ja": "カジュアルセットアップ 006",
+        "ko": "캐주얼 매칭 세트 006",
+        "vi": "Bộ đồ thường ngày đồng bộ 006",
+        "tr": "Günlük uyumlu takım 006"
+      }
+    },
+    {
+      "name": "Premium Shorts XT10",
+      "translations": {
+        "cs": "Prémiové šortky XT10",
+        "sk": "Prémiové šortky XT10",
+        "hu": "Prémium rövidnadrág XT10",
+        "el": "Premium σορτς XT10",
+        "uk": "Преміальні шорти XT10",
+        "ar": "شورت فاخر XT10",
+        "ja": "プレミアムショーツ XT10",
+        "ko": "프리미엄 반바지 XT10",
+        "vi": "Quần short cao cấp XT10",
+        "tr": "Premium şort XT10"
+      }
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "items": [
+    {
+      "name": "Patterned Flap Backpack 8852",
+      "source": "Patterned Flap Backpack",
+      "suffix": " 8852",
+      "translations": {
+        "da": "Mønstret rygsæk med klap 8852",
+        "cs": "Vzorovaný batoh s klopou 8852",
+        "sk": "Vzorovaný batoh s chlopňou 8852",
+        "hu": "Mintás hajtókás hátizsák 8852",
+        "el": "Σακίδιο με σχέδιο και καπάκι 8852",
+        "tr": "Desenli kapaklı sırt çantası 8852",
+        "uk": "Рюкзак із візерунком і клапаном 8852",
+        "ar": "حقيبة ظهر بنقشة وغطاء 8852",
+        "ja": "柄入りフラップバックパック 8852",
+        "ko": "패턴 플랩 백팩 8852",
+        "vi": "Ba lô họa tiết có nắp 8852"
+      }
+    },
+    {
+      "name": "Quilted Top Handle Bag 7736",
+      "source": "Quilted Top Handle Bag",
+      "suffix": " 7736",
+      "translations": {
+        "cs": "Prošívaná kabelka s horním držadlem 7736",
+        "sk": "Prešívaná kabelka s horným držadlom 7736",
+        "hu": "Steppelt felső fülű táska 7736",
+        "el": "Καπιτονέ τσάντα με πάνω λαβή 7736",
+        "tr": "Kapitone üst saplı çanta 7736",
+        "uk": "Стьобана сумка з верхньою ручкою 7736",
+        "ar": "حقيبة مبطنة بمقبض علوي 7736",
+        "ja": "キルティングトップハンドルバッグ 7736",
+        "ko": "퀼팅 탑 핸들 백 7736",
+        "vi": "Túi quai trên chần bông 7736"
+      }
+    },
+    {
+      "name": "Patterned Messenger Bag 8130",
+      "source": "Patterned Messenger Bag",
+      "suffix": " 8130",
+      "translations": {
+        "fi": "Kuviollinen lähettiolkalaukku 8130",
+        "da": "Mønstret messengerbag 8130",
+        "nb": "Mønstret messengerveske 8130",
+        "cs": "Vzorovaná messenger taška 8130",
+        "sk": "Vzorovaná messenger taška 8130",
+        "hu": "Mintás oldaltáska 8130",
+        "el": "Τσάντα messenger με σχέδιο 8130",
+        "tr": "Desenli postacı çantası 8130",
+        "uk": "Сумка-месенджер із візерунком 8130",
+        "ar": "حقيبة ماسنجر بنقشة 8130",
+        "ja": "柄入りメッセンジャーバッグ 8130",
+        "ko": "패턴 메신저백 8130",
+        "vi": "Túi messenger họa tiết 8130"
+      }
+    },
+    {
+      "name": "Braided Bracelet 732416",
+      "source": "Braided Bracelet",
+      "suffix": " 732416",
+      "translations": {
+        "fi": "Punottu rannekoru 732416",
+        "da": "Flettet armbånd 732416",
+        "nb": "Flettet armbånd 732416",
+        "cs": "Pletený náramek 732416",
+        "sk": "Pletený náramok 732416",
+        "hu": "Fonott karkötő 732416",
+        "ro": "Brățară împletită 732416",
+        "el": "Πλεκτό βραχιόλι 732416",
+        "tr": "Örgülü bileklik 732416",
+        "uk": "Плетений браслет 732416",
+        "ar": "سوار مضفر 732416",
+        "ja": "編み込みブレスレット 732416",
+        "ko": "땋은 팔찌 732416",
+        "vi": "Vòng tay bện 732416"
+      }
+    },
+    {
+      "name": "Skeleton Charm Bracelet 031",
+      "source": "Skeleton Charm Bracelet",
+      "suffix": " 031",
+      "translations": {
+        "fi": "Rannekoru luurankoriipuksella 031",
+        "da": "Armbånd med skeletvedhæng 031",
+        "nb": "Armbånd med skjelettanheng 031",
+        "cs": "Náramek s přívěskem kostry 031",
+        "sk": "Náramok s príveskom kostry 031",
+        "hu": "Csontváz medálos karkötő 031",
+        "ro": "Brățară cu pandantiv schelet 031",
+        "el": "Βραχιόλι με διακοσμητικό σκελετό 031",
+        "tr": "İskelet süslü bileklik 031",
+        "uk": "Браслет із підвіскою-скелетом 031",
+        "ar": "سوار بزينة هيكل عظمي 031",
+        "ja": "スケルトンチャームブレスレット 031",
+        "ko": "해골 참 팔찌 031",
+        "vi": "Vòng tay mặt bộ xương 031"
+      }
+    },
+    {
+      "name": "Orb Stud Earrings 008",
+      "source": "Orb Stud Earrings",
+      "suffix": " 008",
+      "translations": {
+        "fi": "Pallonappikorvakorut 008",
+        "da": "Ørestikker med kugle 008",
+        "nb": "Ørestikker med kule 008",
+        "cs": "Peckové náušnice s koulí 008",
+        "sk": "Napichovacie náušnice s guľou 008",
+        "hu": "Gömbös bedugós fülbevaló 008",
+        "ro": "Cercei tip știft cu sferă 008",
+        "el": "Καρφωτά σκουλαρίκια με σφαίρα 008",
+        "tr": "Küre çivili küpe 008",
+        "uk": "Сережки-гвіздки з кулею 008",
+        "ar": "أقراط مسمارية كروية 008",
+        "ja": "オーブスタッドピアス 008",
+        "ko": "오브 스터드 귀걸이 008",
+        "vi": "Bông tai đinh hình cầu 008"
+      }
+    }
+  ]
+}

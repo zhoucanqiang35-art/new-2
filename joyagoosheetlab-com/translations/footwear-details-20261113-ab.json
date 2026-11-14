@@ -1,0 +1,175 @@
+{
+  "items": [
+    {
+      "name": "Nike Air Force 1 Low Sneakers",
+      "translations": {
+        "fi": "Nike Air Force 1 Low -tennarit",
+        "da": "Nike Air Force 1 Low-sneakers",
+        "nb": "Nike Air Force 1 Low-sneakers",
+        "cs": "Tenisky Nike Air Force 1 Low",
+        "sk": "Tenisky Nike Air Force 1 Low",
+        "hu": "Nike Air Force 1 Low sportcipő",
+        "ro": "Sneakers Nike Air Force 1 Low",
+        "el": "Sneakers Nike Air Force 1 Low",
+        "uk": "Кросівки Nike Air Force 1 Low",
+        "ar": "حذاء رياضي Nike Air Force 1 Low",
+        "ja": "Nike Air Force 1 Lowスニーカー",
+        "ko": "Nike Air Force 1 Low 스니커즈",
+        "vi": "Giày sneaker Nike Air Force 1 Low",
+        "tr": "Nike Air Force 1 Low spor ayakkabı"
+      }
+    },
+    {
+      "name": "Nike Air Jordan 1 Low Sneakers",
+      "translations": {
+        "fi": "Nike Air Jordan 1 Low -tennarit",
+        "da": "Nike Air Jordan 1 Low-sneakers",
+        "nb": "Nike Air Jordan 1 Low-sneakers",
+        "cs": "Tenisky Nike Air Jordan 1 Low",
+        "sk": "Tenisky Nike Air Jordan 1 Low",
+        "hu": "Nike Air Jordan 1 Low sportcipő",
+        "ro": "Sneakers Nike Air Jordan 1 Low",
+        "el": "Sneakers Nike Air Jordan 1 Low",
+        "uk": "Кросівки Nike Air Jordan 1 Low",
+        "ar": "حذاء رياضي Nike Air Jordan 1 Low",
+        "ja": "Nike Air Jordan 1 Lowスニーカー",
+        "ko": "Nike Air Jordan 1 Low 스니커즈",
+        "vi": "Giày sneaker Nike Air Jordan 1 Low",
+        "tr": "Nike Air Jordan 1 Low spor ayakkabı"
+      }
+    },
+    {
+      "name": "Dior B25 Printed Sneakers",
+      "translations": {
+        "fi": "Dior B25 -kuvioidut tennarit",
+        "da": "Dior B25-sneakers med print",
+        "nb": "Dior B25-sneakers med trykk",
+        "cs": "Tenisky Dior B25 s potiskem",
+        "sk": "Tenisky Dior B25 s potlačou",
+        "hu": "Dior B25 mintás sportcipő",
+        "ro": "Sneakers Dior B25 cu imprimeu",
+        "el": "Sneakers Dior B25 με τύπωμα",
+        "uk": "Кросівки Dior B25 з принтом",
+        "ar": "حذاء رياضي Dior B25 بطبعة",
+        "ja": "Dior B25プリントスニーカー",
+        "ko": "Dior B25 프린트 스니커즈",
+        "vi": "Giày sneaker Dior B25 có họa tiết",
+        "tr": "Dior B25 baskılı spor ayakkabı"
+      }
+    },
+    {
+      "name": "Nike Metcon 10 Training Shoes",
+      "translations": {
+        "fi": "Nike Metcon 10 -treenikengät",
+        "da": "Nike Metcon 10-træningssko",
+        "nb": "Nike Metcon 10-treningssko",
+        "cs": "Tréninkové boty Nike Metcon 10",
+        "sk": "Tréningová obuv Nike Metcon 10",
+        "hu": "Nike Metcon 10 edzőcipő",
+        "ro": "Pantofi de antrenament Nike Metcon 10",
+        "el": "Παπούτσια προπόνησης Nike Metcon 10",
+        "uk": "Тренувальне взуття Nike Metcon 10",
+        "ar": "حذاء تدريب Nike Metcon 10",
+        "ja": "Nike Metcon 10トレーニングシューズ",
+        "ko": "Nike Metcon 10 트레이닝화",
+        "vi": "Giày tập luyện Nike Metcon 10",
+        "tr": "Nike Metcon 10 antrenman ayakkabısı"
+      }
+    },
+    {
+      "name": "Dior B22 Platform Sneakers",
+      "translations": {
+        "fi": "Dior B22 -korokepohjatennarit",
+        "da": "Dior B22-sneakers med plateau",
+        "nb": "Dior B22-sneakers med platå",
+        "cs": "Tenisky Dior B22 na platformě",
+        "sk": "Tenisky Dior B22 na platforme",
+        "hu": "Dior B22 platformos sportcipő",
+        "ro": "Sneakers Dior B22 cu platformă",
+        "el": "Sneakers Dior B22 με πλατφόρμα",
+        "uk": "Кросівки Dior B22 на платформі",
+        "ar": "حذاء رياضي Dior B22 بنعل مرتفع",
+        "ja": "Dior B22プラットフォームスニーカー",
+        "ko": "Dior B22 플랫폼 스니커즈",
+        "vi": "Giày sneaker Dior B22 đế cao",
+        "tr": "Dior B22 platform spor ayakkabı"
+      }
+    },
+    {
+      "name": "Dior B30 Mesh Sneakers",
+      "translations": {
+        "fi": "Dior B30 -verkkotennarit",
+        "da": "Dior B30-meshsneakers",
+        "nb": "Dior B30-nettingsneakers",
+        "cs": "Síťované tenisky Dior B30",
+        "sk": "Sieťované tenisky Dior B30",
+        "hu": "Dior B30 hálós sportcipő",
+        "ro": "Sneakers Dior B30 din plasă",
+        "el": "Διχτυωτά sneakers Dior B30",
+        "uk": "Сітчасті кросівки Dior B30",
+        "ar": "حذاء رياضي شبكي Dior B30",
+        "ja": "Dior B30メッシュスニーカー",
+        "ko": "Dior B30 메시 스니커즈",
+        "vi": "Giày sneaker Dior B30 lưới",
+        "tr": "Dior B30 file spor ayakkabı"
+      }
+    },
+    {
+      "name": "ASICS 14 Mesh Running Shoes",
+      "translations": {
+        "fi": "ASICS 14 -verkkojuoksukengät",
+        "da": "ASICS 14-løbesko i mesh",
+        "nb": "ASICS 14-løpesko i netting",
+        "cs": "Síťované běžecké boty ASICS 14",
+        "sk": "Sieťovaná bežecká obuv ASICS 14",
+        "hu": "ASICS 14 hálós futócipő",
+        "ro": "Pantofi de alergare ASICS 14 din plasă",
+        "el": "Διχτυωτά παπούτσια τρεξίματος ASICS 14",
+        "uk": "Сітчасте бігове взуття ASICS 14",
+        "ar": "حذاء جري شبكي ASICS 14",
+        "ja": "ASICS 14メッシュランニングシューズ",
+        "ko": "ASICS 14 메시 러닝화",
+        "vi": "Giày chạy bộ ASICS 14 lưới",
+        "tr": "ASICS 14 file koşu ayakkabısı"
+      }
+    },
+    {
+      "name": "Dior B22 and B30 Sports Shoes",
+      "translations": {
+        "fi": "Dior B22 ja B30 -urheilukengät",
+        "da": "Dior B22 og B30-sportssko",
+        "nb": "Dior B22 og B30-sportssko",
+        "cs": "Sportovní boty Dior B22 a B30",
+        "sk": "Športová obuv Dior B22 a B30",
+        "hu": "Dior B22 és B30 sportcipő",
+        "ro": "Pantofi sport Dior B22 și B30",
+        "el": "Αθλητικά παπούτσια Dior B22 και B30",
+        "uk": "Спортивне взуття Dior B22 і B30",
+        "ar": "حذاء رياضي Dior B22 وB30",
+        "ja": "Dior B22とB30のスポーツシューズ",
+        "ko": "Dior B22 및 B30 스포츠 신발",
+        "vi": "Giày thể thao Dior B22 và B30",
+        "tr": "Dior B22 ve B30 spor ayakkabı"
+      }
+    },
+    {
+      "name": "Dior B25 Low-Top Sneakers",
+      "translations": {
+        "fi": "Dior B25 -matalavartiset tennarit",
+        "da": "Dior B25-lave sneakers",
+        "nb": "Dior B25-lave sneakers",
+        "cs": "Nízké tenisky Dior B25",
+        "sk": "Nízke tenisky Dior B25",
+        "hu": "Dior B25 alacsony szárú sportcipő",
+        "ro": "Sneakers Dior B25 cu profil jos",
+        "el": "Χαμηλά sneakers Dior B25",
+        "uk": "Низькі кросівки Dior B25",
+        "ar": "حذاء رياضي منخفض الرقبة Dior B25",
+        "ja": "Dior B25ローカットスニーカー",
+        "ko": "Dior B25 로우탑 스니커즈",
+        "vi": "Giày sneaker cổ thấp Dior B25",
+        "tr": "Dior B25 alçak bilekli spor ayakkabı"
+      }
+    }
+  ]
+}

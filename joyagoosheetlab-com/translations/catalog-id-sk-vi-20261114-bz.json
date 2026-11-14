@@ -1,0 +1,576 @@
+{
+  "90": {
+    "name": "New Balance 1000 Sneakers [11",
+    "translations": {
+      "sk": "Tenisky New Balance 1000, 11 štýlov",
+      "vi": "Giày sneaker New Balance 1000, 11 kiểu"
+    }
+  },
+  "113": {
+    "name": "Miu Miu x New Balance 530 Snea",
+    "translations": {
+      "sk": "Tenisky Miu Miu × New Balance 530, 12 štýlov",
+      "vi": "Giày sneaker Miu Miu × New Balance 530, 12 kiểu"
+    }
+  },
+  "114": {
+    "name": "Prada Triangle Logo Belt [6 st",
+    "translations": {
+      "sk": "Opasok Prada s trojuholníkovým logom, 6 štýlov",
+      "vi": "Thắt lưng Prada logo tam giác, 6 kiểu"
+    }
+  },
+  "115": {
+    "name": "Givenchy B22 Sneakers [4 style",
+    "translations": {
+      "sk": "Tenisky Givenchy B22, 4 štýly",
+      "vi": "Giày sneaker Givenchy B22, 4 kiểu"
+    }
+  },
+  "116": {
+    "name": "Givenchy B22 Sneakers [12 styl",
+    "translations": {
+      "sk": "Tenisky Givenchy B22, 12 štýlov",
+      "vi": "Giày sneaker Givenchy B22, 12 kiểu"
+    }
+  },
+  "121": {
+    "name": "Prada Pointed Toe Slingback Hi",
+    "translations": {
+      "sk": "Lodičky Prada so špicatou špičkou a remienkom za pätou, 4 štýly",
+      "vi": "Giày cao gót Prada mũi nhọn quai hậu, 4 kiểu"
+    }
+  },
+  "143": {
+    "name": "Burberry 4277 Sunglasses [5 st",
+    "translations": {
+      "sk": "Slnečné okuliare Burberry 4277, 5 štýlov",
+      "vi": "Kính mát Burberry 4277, 5 kiểu"
+    }
+  },
+  "149": {
+    "name": "Gucci Web Slide Sandals [6 st",
+    "translations": {
+      "sk": "Šľapky Gucci Web, 6 štýlov",
+      "vi": "Dép quai ngang Gucci Web, 6 kiểu"
+    }
+  },
+  "1416": {
+    "name": "Dior Oblique Saddle Bags [40 s",
+    "translations": {
+      "sk": "Tašky Dior Oblique Saddle, 40 štýlov",
+      "vi": "Túi Dior Oblique Saddle, 40 kiểu"
+    }
+  },
+  "1451": {
+    "name": "Nike Heritage Waist Bag [9 sty",
+    "translations": {
+      "sk": "Ľadvinka Nike Heritage, 9 štýlov",
+      "vi": "Túi đeo hông Nike Heritage, 9 kiểu"
+    }
+  },
+  "1547": {
+    "name": "Cartier 5061 Sunglasses [29 st",
+    "translations": {
+      "sk": "Slnečné okuliare Cartier 5061, 29 štýlov",
+      "vi": "Kính mát Cartier 5061, 29 kiểu"
+    }
+  },
+  "1711": {
+    "name": "Supreme Box Logo Hoodies [28 s",
+    "translations": {
+      "sk": "Mikiny s kapucňou Supreme Box Logo, 28 štýlov",
+      "vi": "Áo hoodie Supreme Box Logo, 28 kiểu"
+    }
+  },
+  "1885": {
+    "name": "Gucci Dionysus GG Supreme Shou",
+    "translations": {
+      "sk": "Taška na rameno Gucci Dionysus GG Supreme, 27 štýlov",
+      "vi": "Túi đeo vai Gucci Dionysus GG Supreme, 27 kiểu"
+    }
+  },
+  "1935": {
+    "name": "Moncler MAYA Down Jacket [16 s",
+    "translations": {
+      "sk": "Páperová bunda Moncler Maya, 16 štýlov",
+      "vi": "Áo khoác lông vũ Moncler Maya, 16 kiểu"
+    }
+  },
+  "1953": {
+    "name": "Balenciaga Logo Hoodie [9 styl",
+    "translations": {
+      "sk": "Mikina s kapucňou Balenciaga s logom, 9 štýlov",
+      "vi": "Áo hoodie Balenciaga logo, 9 kiểu"
+    }
+  },
+  "1967": {
+    "name": "Dior Oblique Crossbody Bag [3",
+    "translations": {
+      "sk": "Taška cez telo Dior Oblique, 37 štýlov",
+      "vi": "Túi đeo chéo Dior Oblique, 37 kiểu"
+    }
+  },
+  "1970": {
+    "name": "Palm Angels Down Jacket [5 sty",
+    "translations": {
+      "sk": "Páperová bunda Palm Angels, 5 štýlov",
+      "vi": "Áo khoác lông vũ Palm Angels, 5 kiểu"
+    }
+  },
+  "1972": {
+    "name": "Moncler Maya Down Jacket [6 st",
+    "translations": {
+      "sk": "Páperová bunda Moncler Maya, 6 štýlov",
+      "vi": "Áo khoác lông vũ Moncler Maya, 6 kiểu"
+    }
+  },
+  "1975": {
+    "name": "Stone Island Compass Logo Hood",
+    "translations": {
+      "sk": "Mikina s kapucňou Stone Island s logom kompasu, 36 štýlov",
+      "vi": "Áo hoodie Stone Island logo la bàn, 36 kiểu"
+    }
+  },
+  "2014": {
+    "name": "AMIRI Varsity Jacket [40 style",
+    "translations": {
+      "sk": "Univerzitná bunda Amiri, 40 štýlov",
+      "vi": "Áo khoác varsity Amiri, 40 kiểu"
+    }
+  },
+  "2041": {
+    "name": "CARRERA 4011 Sunglasses [27 st",
+    "translations": {
+      "sk": "Slnečné okuliare Carrera 4011, 27 štýlov",
+      "vi": "Kính mát Carrera 4011, 27 kiểu"
+    }
+  },
+  "2072": {
+    "name": "Polo Ralph Lauren Hooded Jacke",
+    "translations": {
+      "sk": "Bunda s kapucňou Polo Ralph Lauren, 3 štýly",
+      "vi": "Áo khoác có mũ Polo Ralph Lauren, 3 kiểu"
+    }
+  },
+  "2073": {
+    "name": "Gucci GG Marmont Sunglasses [4",
+    "translations": {
+      "sk": "Slnečné okuliare Gucci GG Marmont, 40 štýlov",
+      "vi": "Kính mát Gucci GG Marmont, 40 kiểu"
+    }
+  },
+  "2106": {
+    "name": "Air Jordan 12 Sneakers [19 sty",
+    "translations": {
+      "sk": "Tenisky Air Jordan 12, 19 štýlov",
+      "vi": "Giày sneaker Air Jordan 12, 19 kiểu"
+    }
+  },
+  "2114": {
+    "name": "Adidas Forum Low Strap Sneaker",
+    "translations": {
+      "sk": "Tenisky Adidas Forum Low Strap, 5 štýlov",
+      "vi": "Giày sneaker Adidas Forum Low Strap, 5 kiểu"
+    }
+  },
+  "2134": {
+    "name": "Nike Dunk Low Sneakers [3 styl",
+    "translations": {
+      "sk": "Tenisky Nike Dunk Low, 3 štýly",
+      "vi": "Giày sneaker Nike Dunk Low, 3 kiểu"
+    }
+  },
+  "2141": {
+    "name": "Sacai Nike LDWaffle  VaporWaff",
+    "translations": {
+      "sk": "Tenisky Sacai Nike LDWaffle a VaporWaffle, 14 štýlov",
+      "vi": "Giày sneaker Sacai Nike LDWaffle và VaporWaffle, 14 kiểu"
+    }
+  },
+  "2145": {
+    "name": "Nike Air Force 1 Sneakers [32",
+    "translations": {
+      "sk": "Tenisky Nike Air Force 1, 32 štýlov",
+      "vi": "Giày sneaker Nike Air Force 1, 32 kiểu"
+    }
+  },
+  "2164": {
+    "name": "Louis Vuitton High-Top Sneaker",
+    "translations": {
+      "sk": "Členkové tenisky Louis Vuitton, 14 štýlov",
+      "vi": "Giày sneaker cổ cao Louis Vuitton, 14 kiểu"
+    }
+  },
+  "2166": {
+    "name": "Nike Wmns Air Force 1 Shadow",
+    "translations": {
+      "sk": "Tenisky Nike WMNS Air Force 1 Shadow, 29 štýlov",
+      "vi": "Giày sneaker Nike WMNS Air Force 1 Shadow, 29 kiểu"
+    }
+  },
+  "2167": {
+    "name": "Burberry 4277 Sunglasses [5 s",
+    "translations": {
+      "sk": "Slnečné okuliare Burberry 4277, 5 štýlov",
+      "vi": "Kính mát Burberry 4277, 5 kiểu"
+    }
+  },
+  "2170": {
+    "name": "Nike Benassi Slippers [10 styl",
+    "translations": {
+      "sk": "Šľapky Nike Benassi, 10 štýlov",
+      "vi": "Dép Nike Benassi, 10 kiểu"
+    }
+  },
+  "2172": {
+    "name": "Gucci Web Slide Sandals [6 st",
+    "translations": {
+      "sk": "Šľapky Gucci Web, 6 štýlov",
+      "vi": "Dép quai ngang Gucci Web, 6 kiểu"
+    }
+  },
+  "2173": {
+    "name": "New Balance 1000 Sneakers [11",
+    "translations": {
+      "sk": "Tenisky New Balance 1000, 11 štýlov",
+      "vi": "Giày sneaker New Balance 1000, 11 kiểu"
+    }
+  },
+  "2174": {
+    "name": "Miu Miu x New Balance 530 Snea",
+    "translations": {
+      "sk": "Tenisky Miu Miu × New Balance 530, 12 štýlov",
+      "vi": "Giày sneaker Miu Miu × New Balance 530, 12 kiểu"
+    }
+  },
+  "2175": {
+    "name": "Prada Triangle Logo Belt [6 st",
+    "translations": {
+      "sk": "Opasok Prada s trojuholníkovým logom, 6 štýlov",
+      "vi": "Thắt lưng Prada logo tam giác, 6 kiểu"
+    }
+  },
+  "2176": {
+    "name": "Hermes Oran Sandals [37 styles",
+    "translations": {
+      "sk": "Sandále Hermès Oran, 37 štýlov",
+      "vi": "Dép sandal Hermès Oran, 37 kiểu"
+    }
+  },
+  "2177": {
+    "name": "Givenchy B22 Sneakers [4 style",
+    "translations": {
+      "sk": "Tenisky Givenchy B22, 4 štýly",
+      "vi": "Giày sneaker Givenchy B22, 4 kiểu"
+    }
+  },
+  "2178": {
+    "name": "Givenchy B22 Sneakers [12 styl",
+    "translations": {
+      "sk": "Tenisky Givenchy B22, 12 štýlov",
+      "vi": "Giày sneaker Givenchy B22, 12 kiểu"
+    }
+  },
+  "2180": {
+    "name": "Prada Pointed Toe Slingback Hi",
+    "translations": {
+      "sk": "Lodičky Prada so špicatou špičkou a remienkom za pätou, 4 štýly",
+      "vi": "Giày cao gót Prada mũi nhọn quai hậu, 4 kiểu"
+    }
+  },
+  "2182": {
+    "name": "Chanel 25P Kelly Handbag [40 s",
+    "translations": {
+      "sk": "Kabelka Chanel 25P Kelly, 40 štýlov",
+      "vi": "Túi xách Chanel 25P Kelly, 40 kiểu"
+    }
+  },
+  "2355": {
+    "name": "Ralph Lauren down jacket (13 s",
+    "translations": {
+      "sk": "Páperová bunda Ralph Lauren, 13 štýlov",
+      "vi": "Áo khoác lông vũ Ralph Lauren, 13 kiểu"
+    }
+  },
+  "2492": {
+    "name": "Canada Goose Half-Zip Sweatshi",
+    "translations": {
+      "sk": "Mikina Canada Goose s polovičným zipsom, 29 štýlov",
+      "vi": "Áo nỉ Canada Goose khóa kéo nửa thân, 29 kiểu"
+    }
+  },
+  "2559": {
+    "name": "Palm Angels Arc Logo Hoodie [1",
+    "translations": {
+      "sk": "Mikina s kapucňou Palm Angels Arc Logo, 18 štýlov",
+      "vi": "Áo hoodie Palm Angels Arc Logo, 18 kiểu"
+    }
+  },
+  "2750": {
+    "name": "Gucci GG Marmont Sunglasses [4",
+    "translations": {
+      "sk": "Slnečné okuliare Gucci GG Marmont, 40 štýlov",
+      "vi": "Kính mát Gucci GG Marmont, 40 kiểu"
+    }
+  },
+  "3121": {
+    "name": "Nike Dunk Low VT Batch 11 Colo",
+    "translations": {
+      "sk": "Nike Dunk Low, verzia VT, 11 farieb",
+      "vi": "Nike Dunk Low phiên bản VT, 11 màu"
+    }
+  },
+  "3805": {
+    "name": "Nike Dunk Low FK Batch 9 Color",
+    "translations": {
+      "sk": "Nike Dunk Low, verzia FK, 9 farieb",
+      "vi": "Nike Dunk Low phiên bản FK, 9 màu"
+    }
+  },
+  "4401": {
+    "name": "B30 Casual Sneakers 20 Styles",
+    "translations": {
+      "sk": "Voľnočasové tenisky B30, 20 štýlov",
+      "vi": "Giày sneaker thường ngày B30, 20 kiểu"
+    }
+  },
+  "7039": {
+    "name": "AMI Heart Jacquard Crewneck Sw",
+    "translations": {
+      "sk": "Sveter AMI s okrúhlym výstrihom a žakárovým srdcom, 15 farieb",
+      "vi": "Áo len cổ tròn AMI dệt jacquard họa tiết trái tim, 15 màu"
+    }
+  },
+  "7124": {
+    "name": "Heart Jacquard Knit Sweater, 1",
+    "translations": {
+      "sk": "Žakárový pletený sveter so srdcom, 15 farieb",
+      "vi": "Áo len dệt jacquard họa tiết trái tim, 15 màu"
+    }
+  },
+  "7157": {
+    "name": "2025 Heart Jacquard Knit Sweat",
+    "translations": {
+      "sk": "Žakárový pletený sveter so srdcom 2025, 15 farieb",
+      "vi": "Áo len dệt jacquard họa tiết trái tim 2025, 15 màu"
+    }
+  },
+  "8516": {
+    "name": "Paint-Splatter Distressed Skin",
+    "translations": {
+      "sk": "Priliehavé džínsy s obnoseným vzhľadom a fŕkanou farbou D2",
+      "vi": "Quần jeans skinny hiệu ứng sờn và vẩy sơn D2"
+    }
+  },
+  "8517": {
+    "name": "Vintage-Wash Relaxed Flared Je",
+    "translations": {
+      "sk": "Voľné rozšírené džínsy s vintage praním",
+      "vi": "Quần jeans ống loe dáng rộng hiệu ứng giặt cổ điển"
+    }
+  },
+  "8518": {
+    "name": "Flared Jeans with Metal Hardwa",
+    "translations": {
+      "sk": "Rozšírené džínsy s kovovými detailmi MVT",
+      "vi": "Quần jeans ống loe có chi tiết kim loại MVT"
+    }
+  },
+  "8520": {
+    "name": "Black Archive-Style Wide-Leg J",
+    "translations": {
+      "sk": "Čierne džínsy so širokými nohavicami v archívnom štýle 017",
+      "vi": "Quần jeans đen ống rộng phong cách lưu trữ 017"
+    }
+  },
+  "8521": {
+    "name": "1977 Raglan-Sleeve Pullover Ho",
+    "translations": {
+      "sk": "Mikina cez hlavu s raglánovými rukávmi 1977",
+      "vi": "Áo hoodie chui đầu tay raglan 1977"
+    }
+  },
+  "8522": {
+    "name": "Relaxed Straight-Leg Sweatpant",
+    "translations": {
+      "sk": "Voľné tepláky s rovnými nohavicami 22SS",
+      "vi": "Quần nỉ dáng rộng ống đứng 22SS"
+    }
+  },
+  "8527": {
+    "name": "Distressed Skinny Jeans Collec",
+    "translations": {
+      "sk": "Kolekcia priliehavých džínsov s obnoseným vzhľadom",
+      "vi": "Bộ sưu tập quần jeans skinny hiệu ứng sờn"
+    }
+  },
+  "8529": {
+    "name": "Double-Faced Drawstring Sweatp",
+    "translations": {
+      "sk": "Obojstranné tepláky so sťahovacou šnúrkou",
+      "vi": "Quần nỉ hai mặt dây rút"
+    }
+  },
+  "8530": {
+    "name": "Graphic Fleece Cuffed Sweatpan",
+    "translations": {
+      "sk": "Flísové tepláky s grafikou a manžetami",
+      "vi": "Quần nỉ lông họa tiết bo ống"
+    }
+  },
+  "8531": {
+    "name": "Painted and Coated Straight-Le",
+    "translations": {
+      "sk": "Kolekcia maľovaných a povrchovo upravených džínsov s rovnými nohavicami",
+      "vi": "Bộ sưu tập quần jeans ống đứng sơn và phủ bề mặt"
+    }
+  },
+  "8532": {
+    "name": "Washed Patchwork Jeans Collect",
+    "translations": {
+      "sk": "Kolekcia praných patchworkových džínsov MM06",
+      "vi": "Bộ sưu tập quần jeans chắp vá hiệu ứng giặt MM06"
+    }
+  },
+  "8534": {
+    "name": "Puff-Print Lettering Pullover",
+    "translations": {
+      "sk": "Mikina cez hlavu s vystúpenou potlačou nápisu",
+      "vi": "Áo hoodie chui đầu in nổi chữ"
+    }
+  },
+  "8536": {
+    "name": "Yellow Paint-Splatter Track Pa",
+    "translations": {
+      "sk": "Športové nohavice so žltou fŕkanou farbou 328",
+      "vi": "Quần thể thao vẩy sơn vàng 328"
+    }
+  },
+  "8538": {
+    "name": "Distressed Paint-Splatter Jean",
+    "translations": {
+      "sk": "Kolekcia džínsov s obnoseným vzhľadom a fŕkanou farbou TOP",
+      "vi": "Bộ sưu tập quần jeans hiệu ứng sờn và vẩy sơn TOP"
+    }
+  },
+  "8541": {
+    "name": "Flame-Graphic Drawstring Sweat",
+    "translations": {
+      "sk": "Tepláky so šnúrkou a grafikou plameňov 336",
+      "vi": "Quần nỉ dây rút họa tiết ngọn lửa 336"
+    }
+  },
+  "8543": {
+    "name": "Paint-Splatter Track Pants Col",
+    "translations": {
+      "sk": "Kolekcia športových nohavíc s fŕkanou farbou SS23",
+      "vi": "Bộ sưu tập quần thể thao vẩy sơn SS23"
+    }
+  },
+  "8545": {
+    "name": "Distressed Denim Collection -",
+    "translations": {
+      "sk": "Kolekcia denimu s obnoseným vzhľadom 7A8-21C",
+      "vi": "Bộ sưu tập đồ denim hiệu ứng sờn 7A8-21C"
+    }
+  },
+  "8547": {
+    "name": "1977 Flocked Cuffed Sweatpants",
+    "translations": {
+      "sk": "Tepláky s manžetami a vločkovou potlačou 1977 SS22",
+      "vi": "Quần nỉ bo ống in nổi nhung 1977 SS22"
+    }
+  },
+  "8549": {
+    "name": "Drawstring Cuffed Sweatpants -",
+    "translations": {
+      "sk": "Tepláky so sťahovacou šnúrkou a manžetami 001",
+      "vi": "Quần nỉ dây rút bo ống 001"
+    }
+  },
+  "8551": {
+    "name": "Washed Ripped Relaxed Sweatpan",
+    "translations": {
+      "sk": "Prané voľné tepláky s roztrhaným efektom 25SS",
+      "vi": "Quần nỉ dáng rộng hiệu ứng giặt và rách 25SS"
+    }
+  },
+  "8552": {
+    "name": "Washed Distressed Patchwork Je",
+    "translations": {
+      "sk": "Prané patchworkové džínsy s obnoseným vzhľadom YHH28",
+      "vi": "Quần jeans chắp vá hiệu ứng giặt và sờn YHH28"
+    }
+  },
+  "8553": {
+    "name": "Gray Oval-Graphic Pullover Hoo",
+    "translations": {
+      "sk": "Sivá mikina cez hlavu s oválnou grafikou 31A2-3C",
+      "vi": "Áo hoodie chui đầu màu xám họa tiết hình bầu dục 31A2-3C"
+    }
+  },
+  "8554": {
+    "name": "Washed Wide-Leg Jeans with Cha",
+    "translations": {
+      "sk": "Prané džínsy so širokými nohavicami a detailom retiazky",
+      "vi": "Quần jeans ống rộng hiệu ứng giặt có chi tiết dây xích"
+    }
+  },
+  "8555": {
+    "name": "Paint-Splatter Paneled Sweatpa",
+    "translations": {
+      "sk": "Panelové tepláky s fŕkanou farbou TOP",
+      "vi": "Quần nỉ phối mảng vẩy sơn TOP"
+    }
+  },
+  "8558": {
+    "name": "Drawstring Jogger Collection -",
+    "translations": {
+      "sk": "Kolekcia džogerov so sťahovacou šnúrkou 27A10-3C",
+      "vi": "Bộ sưu tập quần jogger dây rút 27A10-3C"
+    }
+  },
+  "8563": {
+    "name": "Solid-Color Embroidered Full-Z",
+    "translations": {
+      "sk": "Jednofarebná vyšívaná mikina s celoprepínacím zipsom",
+      "vi": "Áo hoodie trơn thêu khóa kéo toàn thân"
+    }
+  },
+  "8567": {
+    "name": "Oval-Graphic Hoodie and Sweatp",
+    "translations": {
+      "sk": "Kolekcia mikín s oválnou grafikou a teplákov",
+      "vi": "Bộ sưu tập áo hoodie họa tiết hình bầu dục và quần nỉ"
+    }
+  },
+  "8569": {
+    "name": "Paint-Splatter Wide-Leg Denim",
+    "translations": {
+      "sk": "Džínsy so širokými nohavicami a fŕkanou farbou MVT",
+      "vi": "Quần jeans ống rộng vẩy sơn MVT"
+    }
+  },
+  "8570": {
+    "name": "Oval-Graphic Hoodie and Sweatp",
+    "translations": {
+      "sk": "Súprava mikiny s oválnou grafikou a teplákov",
+      "vi": "Bộ áo hoodie họa tiết hình bầu dục và quần nỉ"
+    }
+  },
+  "8571": {
+    "name": "High-Waist Wide-Leg Drawstring",
+    "translations": {
+      "sk": "Nohavice s vysokým pásom, širokými nohavicami a šnúrkou Subhuman",
+      "vi": "Quần cạp cao ống rộng dây rút Subhuman"
+    }
+  },
+  "8572": {
+    "name": "Paint-Splatter Distressed Jean",
+    "translations": {
+      "sk": "Džínsy s obnoseným vzhľadom a fŕkanou farbou 7A8-4C",
+      "vi": "Quần jeans hiệu ứng sờn và vẩy sơn 7A8-4C"
+    }
+  }
+}

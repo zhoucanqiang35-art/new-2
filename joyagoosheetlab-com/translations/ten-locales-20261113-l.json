@@ -1,0 +1,229 @@
+{
+  "items": [
+    {
+      "name": "Racing Graphic Zip Hoodie",
+      "translations": {
+        "cs": "Mikina s kapucí na zip a závodním potiskem",
+        "sk": "Mikina s kapucňou na zips a pretekárskou potlačou",
+        "hu": "Versenymintás cipzáras kapucnis pulóver",
+        "el": "Φούτερ με κουκούλα, φερμουάρ και σχέδιο αγώνων",
+        "uk": "Худі на блискавці з гоночним принтом",
+        "ar": "هودي بسحاب ورسمة سباقات",
+        "ja": "レーシンググラフィック入りジップパーカー",
+        "ko": "레이싱 그래픽 집업 후드티",
+        "vi": "Áo hoodie khóa kéo họa tiết đua xe",
+        "tr": "Yarış desenli fermuarlı kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Atlanta Web Graphic Hoodie",
+      "translations": {
+        "cs": "Mikina s kapucí a potiskem Atlanta Web",
+        "sk": "Mikina s kapucňou a potlačou Atlanta Web",
+        "hu": "Atlanta Web mintás kapucnis pulóver",
+        "el": "Φούτερ με κουκούλα και σχέδιο Atlanta Web",
+        "uk": "Худі з принтом Atlanta Web",
+        "ar": "هودي برسمة Atlanta Web",
+        "ja": "Atlanta Webグラフィックパーカー",
+        "ko": "Atlanta Web 그래픽 후드티",
+        "vi": "Áo hoodie họa tiết Atlanta Web",
+        "tr": "Atlanta Web desenli kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Paris 1964 Pullover Hoodie",
+      "translations": {
+        "cs": "Mikina s kapucí bez zipu Paris 1964",
+        "sk": "Mikina s kapucňou bez zipsu Paris 1964",
+        "hu": "Paris 1964 bebújós kapucnis pulóver",
+        "el": "Φούτερ Paris 1964 με κουκούλα χωρίς φερμουάρ",
+        "uk": "Худі Paris 1964 без блискавки",
+        "ar": "هودي Paris 1964 دون سحاب",
+        "ja": "Paris 1964プルオーバーパーカー",
+        "ko": "Paris 1964 풀오버 후드티",
+        "vi": "Áo hoodie chui đầu Paris 1964",
+        "tr": "Paris 1964 fermuarsız kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Check-Lined Zip Hoodie",
+      "translations": {
+        "cs": "Mikina s kapucí na zip a kostkovanou podšívkou",
+        "sk": "Mikina s kapucňou na zips a kockovanou podšívkou",
+        "hu": "Kockás bélésű cipzáras kapucnis pulóver",
+        "el": "Φούτερ με κουκούλα, φερμουάρ και καρό φόδρα",
+        "uk": "Худі на блискавці з картатою підкладкою",
+        "ar": "هودي بسحاب وبطانة مربعات",
+        "ja": "チェック柄裏地付きジップパーカー",
+        "ko": "체크 안감 집업 후드티",
+        "vi": "Áo hoodie khóa kéo lót vải kẻ ô",
+        "tr": "Ekose astarlı fermuarlı kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Essentials Fleece Hoodie",
+      "translations": {
+        "cs": "Fleecová mikina s kapucí Essentials",
+        "sk": "Flísová mikina s kapucňou Essentials",
+        "hu": "Essentials polár kapucnis pulóver",
+        "el": "Φλις φούτερ Essentials με κουκούλα",
+        "uk": "Флісове худі Essentials",
+        "ar": "هودي Essentials من الفليس",
+        "ja": "Essentialsフリースパーカー",
+        "ko": "Essentials 플리스 후드티",
+        "vi": "Áo hoodie nỉ lông Essentials",
+        "tr": "Essentials polar kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Angel Graphic Zip Hoodie",
+      "translations": {
+        "cs": "Mikina s kapucí na zip a potiskem anděla",
+        "sk": "Mikina s kapucňou na zips a potlačou anjela",
+        "hu": "Angyalmintás cipzáras kapucnis pulóver",
+        "el": "Φούτερ με κουκούλα, φερμουάρ και σχέδιο αγγέλου",
+        "uk": "Худі на блискавці з принтом ангела",
+        "ar": "هودي بسحاب ورسمة ملاك",
+        "ja": "エンジェルグラフィック入りジップパーカー",
+        "ko": "천사 그래픽 집업 후드티",
+        "vi": "Áo hoodie khóa kéo họa tiết thiên thần",
+        "tr": "Melek desenli fermuarlı kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Script Logo Zip Sweatshirt",
+      "translations": {
+        "cs": "Mikina na zip s psaným logem",
+        "sk": "Mikina na zips s písaným logom",
+        "hu": "Írott logós cipzáras pulóver",
+        "el": "Μπλούζα φούτερ με φερμουάρ και γραπτό λογότυπο",
+        "uk": "Світшот на блискавці з рукописним логотипом",
+        "ar": "سويت شيرت بسحاب وشعار كتابي",
+        "ja": "筆記体ロゴ入りジップスウェット",
+        "ko": "필기체 로고 집업 스웨트셔츠",
+        "vi": "Áo nỉ khóa kéo logo chữ viết",
+        "tr": "Yazı logolu fermuarlı sweatshirt"
+      }
+    },
+    {
+      "name": "Ape Head Graphic T-Shirt",
+      "translations": {
+        "cs": "Tričko s potiskem opičí hlavy",
+        "sk": "Tričko s potlačou opičej hlavy",
+        "hu": "Majomfej mintás póló",
+        "el": "Μπλουζάκι με σχέδιο κεφαλιού πιθήκου",
+        "uk": "Футболка з принтом голови мавпи",
+        "ar": "تيشيرت برسمة رأس قرد",
+        "ja": "エイプヘッドグラフィックTシャツ",
+        "ko": "원숭이 머리 그래픽 티셔츠",
+        "vi": "Áo thun họa tiết đầu khỉ",
+        "tr": "Maymun başı desenli tişört"
+      }
+    },
+    {
+      "name": "Box Logo Summer T-Shirt",
+      "translations": {
+        "cs": "Letní tričko s logem v rámečku",
+        "sk": "Letné tričko s logom v rámčeku",
+        "hu": "Dobozlogós nyári póló",
+        "el": "Καλοκαιρινό μπλουζάκι με λογότυπο σε πλαίσιο",
+        "uk": "Літня футболка з логотипом у рамці",
+        "ar": "تيشيرت صيفي بشعار داخل مربع",
+        "ja": "ボックスロゴサマーTシャツ",
+        "ko": "박스 로고 여름 티셔츠",
+        "vi": "Áo thun mùa hè logo hình hộp",
+        "tr": "Kutu logolu yazlık tişört"
+      }
+    },
+    {
+      "name": "Sketch Graphic T-Shirt",
+      "translations": {
+        "cs": "Tričko s potiskem skici",
+        "sk": "Tričko s potlačou skice",
+        "hu": "Vázlatmintás póló",
+        "el": "Μπλουζάκι με σχέδιο σκίτσου",
+        "uk": "Футболка з принтом-ескізом",
+        "ar": "تيشيرت برسمة تخطيطية",
+        "ja": "スケッチグラフィックTシャツ",
+        "ko": "스케치 그래픽 티셔츠",
+        "vi": "Áo thun họa tiết phác thảo",
+        "tr": "Eskiz desenli tişört"
+      }
+    },
+    {
+      "name": "BS DK Low-Top Sneakers",
+      "translations": {
+        "cs": "Nízké tenisky BS DK",
+        "sk": "Nízke tenisky BS DK",
+        "hu": "BS DK alacsony szárú sportcipő",
+        "el": "Χαμηλά sneakers BS DK",
+        "uk": "Низькі кросівки BS DK",
+        "ar": "حذاء رياضي منخفض الرقبة BS DK",
+        "ja": "BS DKローカットスニーカー",
+        "ko": "BS DK 로우탑 스니커즈",
+        "vi": "Giày sneaker cổ thấp BS DK",
+        "tr": "BS DK alçak bilekli spor ayakkabı"
+      }
+    },
+    {
+      "name": "OOO Low-Top Sneakers",
+      "translations": {
+        "cs": "Nízké tenisky OOO",
+        "sk": "Nízke tenisky OOO",
+        "hu": "OOO alacsony szárú sportcipő",
+        "el": "Χαμηλά sneakers OOO",
+        "uk": "Низькі кросівки OOO",
+        "ar": "حذاء رياضي منخفض الرقبة OOO",
+        "ja": "OOOローカットスニーカー",
+        "ko": "OOO 로우탑 스니커즈",
+        "vi": "Giày sneaker cổ thấp OOO",
+        "tr": "OOO alçak bilekli spor ayakkabı"
+      }
+    },
+    {
+      "name": "K14 Low-Top Running Shoes",
+      "translations": {
+        "cs": "Nízké běžecké boty K14",
+        "sk": "Nízke bežecké topánky K14",
+        "hu": "K14 alacsony szárú futócipő",
+        "el": "Χαμηλά παπούτσια τρεξίματος K14",
+        "uk": "Низькі бігові кросівки K14",
+        "ar": "حذاء جري منخفض الرقبة K14",
+        "ja": "K14ローカットランニングシューズ",
+        "ko": "K14 로우탑 러닝화",
+        "vi": "Giày chạy bộ cổ thấp K14",
+        "tr": "K14 alçak bilekli koşu ayakkabısı"
+      }
+    },
+    {
+      "name": "BF Batch Low-Top Sneakers",
+      "translations": {
+        "cs": "Nízké tenisky BF Batch",
+        "sk": "Nízke tenisky BF Batch",
+        "hu": "BF Batch alacsony szárú sportcipő",
+        "el": "Χαμηλά sneakers BF Batch",
+        "uk": "Низькі кросівки BF Batch",
+        "ar": "حذاء رياضي منخفض الرقبة BF Batch",
+        "ja": "BF Batchローカットスニーカー",
+        "ko": "BF Batch 로우탑 스니커즈",
+        "vi": "Giày sneaker cổ thấp BF Batch",
+        "tr": "BF Batch alçak bilekli spor ayakkabı"
+      }
+    },
+    {
+      "name": "Retro 1 High-Top Sneakers",
+      "translations": {
+        "cs": "Kotníkové tenisky Retro 1",
+        "sk": "Členkové tenisky Retro 1",
+        "hu": "Retro 1 magas szárú sportcipő",
+        "el": "Ψηλά sneakers Retro 1",
+        "uk": "Високі кросівки Retro 1",
+        "ar": "حذاء رياضي مرتفع الرقبة Retro 1",
+        "ja": "Retro 1ハイカットスニーカー",
+        "ko": "Retro 1 하이탑 스니커즈",
+        "vi": "Giày sneaker cổ cao Retro 1",
+        "tr": "Retro 1 yüksek bilekli spor ayakkabı"
+      }
+    }
+  ]
+}

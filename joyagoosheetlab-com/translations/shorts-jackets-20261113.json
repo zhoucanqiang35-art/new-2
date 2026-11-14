@@ -1,0 +1,259 @@
+{
+  "items": [
+    {
+      "name": "Cotton Crew Neck T-Shirt",
+      "translations": {
+        "fi": "Puuvillainen pyöreäkauluksinen T-paita",
+        "da": "T-shirt i bomuld med rund hals",
+        "nb": "T-skjorte i bomull med rund hals",
+        "cs": "Bavlněné tričko s kulatým výstřihem",
+        "sk": "Bavlnené tričko s okrúhlym výstrihom",
+        "hu": "Pamut kerek nyakú póló",
+        "ro": "Tricou din bumbac cu guler rotund",
+        "el": "Βαμβακερό μπλουζάκι με στρογγυλή λαιμόκοψη",
+        "uk": "Бавовняна футболка з круглим вирізом",
+        "ar": "تيشيرت قطني برقبة دائرية",
+        "ja": "コットンクルーネックTシャツ",
+        "ko": "면 크루넥 티셔츠",
+        "vi": "Áo thun cotton cổ tròn",
+        "tr": "Pamuklu bisiklet yaka tişört"
+      }
+    },
+    {
+      "name": "Quick Dry Sports Pants",
+      "translations": {
+        "fi": "Nopeasti kuivuvat urheiluhousut",
+        "da": "Hurtigtørrende sportsbukser",
+        "nb": "Hurtigtørkende sportsbukse",
+        "cs": "Rychleschnoucí sportovní kalhoty",
+        "sk": "Rýchloschnúce športové nohavice",
+        "hu": "Gyorsan száradó sportnadrág",
+        "el": "Αθλητικό παντελόνι που στεγνώνει γρήγορα",
+        "uk": "Швидковисихаючі спортивні штани",
+        "ar": "بنطال رياضي سريع الجفاف",
+        "ja": "速乾スポーツパンツ",
+        "ko": "속건 스포츠 바지",
+        "vi": "Quần thể thao nhanh khô",
+        "tr": "Hızlı kuruyan spor pantolonu"
+      }
+    },
+    {
+      "name": "Plaid Shorts",
+      "translations": {
+        "fi": "Ruudulliset shortsit",
+        "da": "Ternede shorts",
+        "nb": "Rutete shorts",
+        "cs": "Kostkované šortky",
+        "sk": "Kockované šortky",
+        "hu": "Kockás rövidnadrág",
+        "el": "Καρό σορτς",
+        "uk": "Картаті шорти",
+        "ar": "شورت بنقشة مربعات",
+        "ja": "チェック柄ショーツ",
+        "ko": "체크무늬 반바지",
+        "vi": "Quần short kẻ ô",
+        "tr": "Ekose şort"
+      }
+    },
+    {
+      "name": "Utility Cargo Shorts",
+      "translations": {
+        "fi": "Monitaskuiset cargoshortsit",
+        "da": "Praktiske cargoshorts",
+        "nb": "Praktisk cargoshorts",
+        "cs": "Praktické cargo šortky",
+        "sk": "Praktické cargo šortky",
+        "hu": "Praktikus cargo rövidnadrág",
+        "el": "Πρακτικό cargo σορτς",
+        "uk": "Практичні шорти карго",
+        "ar": "شورت كارغو عملي",
+        "ja": "ユーティリティカーゴショーツ",
+        "ko": "유틸리티 카고 반바지",
+        "vi": "Quần short cargo đa dụng",
+        "tr": "Kullanışlı kargo şort"
+      }
+    },
+    {
+      "name": "Graphic Denim Shorts",
+      "translations": {
+        "fi": "Kuviolliset farkkushortsit",
+        "da": "Denimshorts med grafik",
+        "nb": "Denimshorts med grafikk",
+        "cs": "Džínové šortky s potiskem",
+        "sk": "Džínsové šortky s potlačou",
+        "hu": "Mintás farmershort",
+        "ro": "Pantaloni scurți din denim cu imprimeu",
+        "el": "Τζιν σορτς με σχέδιο",
+        "uk": "Джинсові шорти з графічним принтом",
+        "ar": "شورت جينز برسمة",
+        "ja": "グラフィック入りデニムショーツ",
+        "ko": "그래픽 데님 반바지",
+        "vi": "Quần short denim họa tiết",
+        "tr": "Grafik desenli kot şort"
+      }
+    },
+    {
+      "name": "Patterned Beach Shorts",
+      "translations": {
+        "fi": "Kuviolliset rantashortsit",
+        "da": "Mønstrede strandshorts",
+        "nb": "Mønstrete strandshorts",
+        "cs": "Vzorované plážové šortky",
+        "sk": "Vzorované plážové šortky",
+        "hu": "Mintás strandshort",
+        "el": "Σορτς παραλίας με μοτίβο",
+        "uk": "Пляжні шорти з візерунком",
+        "ar": "شورت شاطئ بنقشة",
+        "ja": "柄入りビーチショーツ",
+        "ko": "패턴 비치 반바지",
+        "vi": "Quần short đi biển có họa tiết",
+        "tr": "Desenli plaj şortu"
+      }
+    },
+    {
+      "name": "Quick-Dry Training Shorts",
+      "translations": {
+        "fi": "Nopeasti kuivuvat treenishortsit",
+        "da": "Hurtigtørrende træningsshorts",
+        "nb": "Hurtigtørkende treningsshorts",
+        "cs": "Rychleschnoucí tréninkové šortky",
+        "sk": "Rýchloschnúce tréningové šortky",
+        "hu": "Gyorsan száradó edzőshort",
+        "el": "Σορτς προπόνησης που στεγνώνει γρήγορα",
+        "uk": "Швидковисихаючі тренувальні шорти",
+        "ar": "شورت تدريب سريع الجفاف",
+        "ja": "速乾トレーニングショーツ",
+        "ko": "속건 트레이닝 반바지",
+        "vi": "Quần short tập luyện nhanh khô",
+        "tr": "Hızlı kuruyan antrenman şortu"
+      }
+    },
+    {
+      "name": "Basketball Training Shorts",
+      "translations": {
+        "fi": "Koripallotreenishortsit",
+        "da": "Basketballtræningsshorts",
+        "nb": "Basketballtreningsshorts",
+        "cs": "Basketbalové tréninkové šortky",
+        "sk": "Basketbalové tréningové šortky",
+        "hu": "Kosárlabda edzőshort",
+        "el": "Σορτς προπόνησης μπάσκετ",
+        "uk": "Баскетбольні тренувальні шорти",
+        "ar": "شورت تدريب لكرة السلة",
+        "ja": "バスケットボール用トレーニングショーツ",
+        "ko": "농구 트레이닝 반바지",
+        "vi": "Quần short tập bóng rổ",
+        "tr": "Basketbol antrenman şortu"
+      }
+    },
+    {
+      "name": "Premium Down Jacket",
+      "translations": {
+        "fi": "Laadukas untuvatakki",
+        "da": "Premium dunjakke",
+        "nb": "Premium dunjakke",
+        "cs": "Prémiová péřová bunda",
+        "sk": "Prémiová páperová bunda",
+        "hu": "Prémium pehelykabát",
+        "el": "Πουπουλένιο μπουφάν premium",
+        "uk": "Преміальна пухова куртка",
+        "ar": "سترة داون فاخرة",
+        "ja": "プレミアムダウンジャケット",
+        "ko": "프리미엄 다운 재킷",
+        "vi": "Áo khoác lông vũ cao cấp",
+        "tr": "Premium kuş tüyü mont"
+      }
+    },
+    {
+      "name": "Outdoor Shell Jacket 0823264",
+      "translations": {
+        "fi": "Ulkoilun kuoritakki 0823264",
+        "da": "Skaljakke til udendørsbrug 0823264",
+        "nb": "Skalljakke til utendørsbruk 0823264",
+        "cs": "Outdoorová svrchní bunda 0823264",
+        "sk": "Outdoorová vrchná bunda 0823264",
+        "hu": "Kültéri héjkabát 0823264",
+        "ro": "Geacă exterioară pentru activități în aer liber 0823264",
+        "el": "Εξωτερικό μπουφάν υπαίθρου 0823264",
+        "uk": "Зовнішня куртка для активного відпочинку 0823264",
+        "ar": "سترة خارجية للأنشطة الخارجية 0823264",
+        "ja": "アウトドア用シェルジャケット 0823264",
+        "ko": "아웃도어 셸 재킷 0823264",
+        "vi": "Áo khoác ngoài cho hoạt động ngoài trời 0823264",
+        "tr": "Outdoor dış katman ceketi 0823264"
+      }
+    },
+    {
+      "name": "Classic Knit Cardigan",
+      "translations": {
+        "fi": "Klassinen neuletakki",
+        "da": "Klassisk strikket cardigan",
+        "nb": "Klassisk strikket cardigan",
+        "cs": "Klasický pletený kardigan",
+        "sk": "Klasický pletený kardigán",
+        "hu": "Klasszikus kötött kardigán",
+        "el": "Κλασική πλεκτή ζακέτα",
+        "uk": "Класичний в’язаний кардиган",
+        "ar": "كارديغان محبوك كلاسيكي",
+        "ja": "クラシックニットカーディガン",
+        "ko": "클래식 니트 카디건",
+        "vi": "Áo cardigan dệt kim cổ điển",
+        "tr": "Klasik örgü hırka"
+      }
+    },
+    {
+      "name": "Premium Down Jacket 0926103",
+      "translations": {
+        "fi": "Laadukas untuvatakki 0926103",
+        "da": "Premium dunjakke 0926103",
+        "nb": "Premium dunjakke 0926103",
+        "cs": "Prémiová péřová bunda 0926103",
+        "sk": "Prémiová páperová bunda 0926103",
+        "hu": "Prémium pehelykabát 0926103",
+        "el": "Πουπουλένιο μπουφάν premium 0926103",
+        "uk": "Преміальна пухова куртка 0926103",
+        "ar": "سترة داون فاخرة 0926103",
+        "ja": "プレミアムダウンジャケット 0926103",
+        "ko": "프리미엄 다운 재킷 0926103",
+        "vi": "Áo khoác lông vũ cao cấp 0926103",
+        "tr": "Premium kuş tüyü mont 0926103"
+      }
+    },
+    {
+      "name": "Outdoor Shell Jacket",
+      "translations": {
+        "fi": "Ulkoilun kuoritakki",
+        "da": "Skaljakke til udendørsbrug",
+        "nb": "Skalljakke til utendørsbruk",
+        "cs": "Outdoorová svrchní bunda",
+        "sk": "Outdoorová vrchná bunda",
+        "hu": "Kültéri héjkabát",
+        "ro": "Geacă exterioară pentru activități în aer liber",
+        "el": "Εξωτερικό μπουφάν υπαίθρου",
+        "uk": "Зовнішня куртка для активного відпочинку",
+        "ar": "سترة خارجية للأنشطة الخارجية",
+        "ja": "アウトドア用シェルジャケット",
+        "ko": "아웃도어 셸 재킷",
+        "vi": "Áo khoác ngoài cho hoạt động ngoài trời",
+        "tr": "Outdoor dış katman ceketi"
+      }
+    },
+    {
+      "name": "Summer Denim Shorts",
+      "translations": {
+        "da": "Denimshorts til sommer",
+        "nb": "Denimshorts til sommer",
+        "cs": "Letní džínové šortky",
+        "sk": "Letné džínsové šortky",
+        "hu": "Nyári farmershort",
+        "el": "Καλοκαιρινό τζιν σορτς",
+        "uk": "Літні джинсові шорти",
+        "ar": "شورت جينز صيفي",
+        "ja": "夏用デニムショーツ",
+        "ko": "여름 데님 반바지",
+        "vi": "Quần short denim mùa hè",
+        "tr": "Yazlık kot şort"
+      }
+    }
+  ]
+}

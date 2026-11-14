@@ -1,0 +1,194 @@
+{
+  "items": [
+    {
+      "name": "ASICS Gel-NYC Low-Top Sneakers",
+      "translations": {
+        "fi": "ASICS Gel-NYC -matalavartiset tennarit",
+        "da": "ASICS Gel-NYC-lave sneakers",
+        "nb": "ASICS Gel-NYC-lave sneakers",
+        "cs": "Nízké tenisky ASICS Gel-NYC",
+        "sk": "Nízke tenisky ASICS Gel-NYC",
+        "hu": "ASICS Gel-NYC alacsony szárú sportcipő",
+        "ro": "Sneakers ASICS Gel-NYC cu profil jos",
+        "el": "Χαμηλά sneakers ASICS Gel-NYC",
+        "uk": "Низькі кросівки ASICS Gel-NYC",
+        "ar": "حذاء رياضي منخفض الرقبة ASICS Gel-NYC",
+        "ja": "ASICS Gel-NYCローカットスニーカー",
+        "ko": "ASICS Gel-NYC 로우탑 스니커즈",
+        "vi": "Giày sneaker cổ thấp ASICS Gel-NYC",
+        "tr": "ASICS Gel-NYC alçak bilekli spor ayakkabı"
+      }
+    },
+    {
+      "name": "Adidas Retro Sneakers",
+      "translations": {
+        "fi": "Adidas-retrotennarit",
+        "da": "Adidas-retrosneakers",
+        "nb": "Adidas-retrosneakers",
+        "cs": "Retro tenisky Adidas",
+        "sk": "Retro tenisky Adidas",
+        "hu": "Adidas retró sportcipő",
+        "ro": "Sneakers Adidas retro",
+        "el": "Ρετρό sneakers Adidas",
+        "uk": "Ретро-кросівки Adidas",
+        "ar": "حذاء رياضي Adidas بطراز قديم",
+        "ja": "Adidasレトロスニーカー",
+        "ko": "Adidas 레트로 스니커즈",
+        "vi": "Giày sneaker Adidas phong cách retro",
+        "tr": "Adidas retro spor ayakkabı"
+      }
+    },
+    {
+      "name": "Balenciaga high-top shoes",
+      "translations": {
+        "fi": "Balenciaga-korkeavartiset kengät",
+        "da": "Balenciaga-højskaftede sko",
+        "nb": "Balenciaga-høye sko",
+        "cs": "Kotníkové boty Balenciaga",
+        "sk": "Členkové topánky Balenciaga",
+        "hu": "Balenciaga magas szárú cipő",
+        "ro": "Pantofi Balenciaga cu profil înalt",
+        "el": "Ψηλά παπούτσια Balenciaga",
+        "uk": "Високе взуття Balenciaga",
+        "ar": "حذاء مرتفع الرقبة Balenciaga",
+        "ja": "Balenciagaハイカットシューズ",
+        "ko": "Balenciaga 하이탑 신발",
+        "vi": "Giày cổ cao Balenciaga",
+        "tr": "Balenciaga yüksek bilekli ayakkabı"
+      }
+    },
+    {
+      "name": "Gucci Ace Bee Stripe Sneakers",
+      "translations": {
+        "fi": "Gucci Ace -mehiläisraidalliset tennarit",
+        "da": "Gucci Ace-sneakers med bistribe",
+        "nb": "Gucci Ace-sneakers med bistripe",
+        "cs": "Tenisky Gucci Ace s včelím pruhem",
+        "sk": "Tenisky Gucci Ace so včelím pruhom",
+        "hu": "Gucci Ace méhecskés csíkos sportcipő",
+        "ro": "Sneakers Gucci Ace cu dungă și albină",
+        "el": "Sneakers Gucci Ace με ρίγα και μέλισσα",
+        "uk": "Кросівки Gucci Ace зі смугою та бджолою",
+        "ar": "حذاء رياضي Gucci Ace بخط ونحلة",
+        "ja": "Gucci Aceビーとストライプのスニーカー",
+        "ko": "Gucci Ace 벌 스트라이프 스니커즈",
+        "vi": "Giày sneaker Gucci Ace sọc và hình ong",
+        "tr": "Gucci Ace arı şeritli spor ayakkabı"
+      }
+    },
+    {
+      "name": "Gucci Rhyton Leather Sneakers",
+      "translations": {
+        "fi": "Gucci Rhyton -nahkatennarit",
+        "da": "Gucci Rhyton-sneakers i læder",
+        "nb": "Gucci Rhyton-sneakers i skinn",
+        "cs": "Kožené tenisky Gucci Rhyton",
+        "sk": "Kožené tenisky Gucci Rhyton",
+        "hu": "Gucci Rhyton bőr sportcipő",
+        "ro": "Sneakers Gucci Rhyton din piele",
+        "el": "Δερμάτινα sneakers Gucci Rhyton",
+        "uk": "Шкіряні кросівки Gucci Rhyton",
+        "ar": "حذاء رياضي Gucci Rhyton جلدي",
+        "ja": "Gucci Rhytonレザースニーカー",
+        "ko": "Gucci Rhyton 가죽 스니커즈",
+        "vi": "Giày sneaker Gucci Rhyton bằng da",
+        "tr": "Gucci Rhyton deri spor ayakkabı"
+      }
+    },
+    {
+      "name": "NIKE AIR ZOOM SOCCER SHOES",
+      "translations": {
+        "fi": "NIKE AIR ZOOM -jalkapallokengät",
+        "da": "NIKE AIR ZOOM-fodboldstøvler",
+        "nb": "NIKE AIR ZOOM-fotballsko",
+        "cs": "Kopačky NIKE AIR ZOOM",
+        "sk": "Kopačky NIKE AIR ZOOM",
+        "hu": "NIKE AIR ZOOM focicipő",
+        "ro": "Ghete de fotbal NIKE AIR ZOOM",
+        "el": "Παπούτσια ποδοσφαίρου NIKE AIR ZOOM",
+        "uk": "Футбольне взуття NIKE AIR ZOOM",
+        "ar": "حذاء كرة قدم NIKE AIR ZOOM",
+        "ja": "NIKE AIR ZOOMサッカーシューズ",
+        "ko": "NIKE AIR ZOOM 축구화",
+        "vi": "Giày bóng đá NIKE AIR ZOOM",
+        "tr": "NIKE AIR ZOOM futbol ayakkabısı"
+      }
+    },
+    {
+      "name": "Nike Dunk Low Skateboard Shoe",
+      "translations": {
+        "fi": "Nike Dunk Low -skeittikenkä",
+        "da": "Nike Dunk Low-skatesko",
+        "nb": "Nike Dunk Low-skatesko",
+        "cs": "Skate bota Nike Dunk Low",
+        "sk": "Skate topánka Nike Dunk Low",
+        "hu": "Nike Dunk Low gördeszkás cipő",
+        "ro": "Pantof de skate Nike Dunk Low",
+        "el": "Παπούτσι skate Nike Dunk Low",
+        "uk": "Скейтове взуття Nike Dunk Low",
+        "ar": "حذاء تزلج Nike Dunk Low",
+        "ja": "Nike Dunk Lowスケートボードシューズ",
+        "ko": "Nike Dunk Low 스케이트보드화",
+        "vi": "Giày trượt ván Nike Dunk Low",
+        "tr": "Nike Dunk Low kaykay ayakkabısı"
+      }
+    },
+    {
+      "name": "Nike High Top Shoes",
+      "translations": {
+        "fi": "Nike-korkeavartiset kengät",
+        "da": "Nike-højskaftede sko",
+        "nb": "Nike-høye sko",
+        "cs": "Kotníkové boty Nike",
+        "sk": "Členkové topánky Nike",
+        "hu": "Nike magas szárú cipő",
+        "ro": "Pantofi Nike cu profil înalt",
+        "el": "Ψηλά παπούτσια Nike",
+        "uk": "Високе взуття Nike",
+        "ar": "حذاء مرتفع الرقبة Nike",
+        "ja": "Nikeハイカットシューズ",
+        "ko": "Nike 하이탑 신발",
+        "vi": "Giày cổ cao Nike",
+        "tr": "Nike yüksek bilekli ayakkabı"
+      }
+    },
+    {
+      "name": "Nike Mercurial Football Boots",
+      "translations": {
+        "fi": "Nike Mercurial -jalkapallokengät",
+        "da": "Nike Mercurial-fodboldstøvler",
+        "nb": "Nike Mercurial-fotballsko",
+        "cs": "Kopačky Nike Mercurial",
+        "sk": "Kopačky Nike Mercurial",
+        "hu": "Nike Mercurial focicipő",
+        "ro": "Ghete de fotbal Nike Mercurial",
+        "el": "Παπούτσια ποδοσφαίρου Nike Mercurial",
+        "uk": "Футбольне взуття Nike Mercurial",
+        "ar": "حذاء كرة قدم Nike Mercurial",
+        "ja": "Nike Mercurialサッカーシューズ",
+        "ko": "Nike Mercurial 축구화",
+        "vi": "Giày bóng đá Nike Mercurial",
+        "tr": "Nike Mercurial futbol ayakkabısı"
+      }
+    },
+    {
+      "name": "Nike Sports Shoes [31 styles]",
+      "translations": {
+        "fi": "Nike-urheilukengät [31 mallia]",
+        "da": "Nike-sportssko [31 modeller]",
+        "nb": "Nike-sportssko [31 modeller]",
+        "cs": "Sportovní boty Nike [31 variant]",
+        "sk": "Športové topánky Nike [31 variantov]",
+        "hu": "Nike sportcipő [31 változat]",
+        "ro": "Pantofi sport Nike [31 modele]",
+        "el": "Αθλητικά παπούτσια Nike [31 σχέδια]",
+        "uk": "Спортивне взуття Nike [31 варіант]",
+        "ar": "حذاء رياضي Nike [31 تصميمًا]",
+        "ja": "Nikeスポーツシューズ［31種類］",
+        "ko": "Nike 스포츠 신발 [31종]",
+        "vi": "Giày thể thao Nike [31 mẫu]",
+        "tr": "Nike spor ayakkabı [31 model]"
+      }
+    }
+  ]
+}

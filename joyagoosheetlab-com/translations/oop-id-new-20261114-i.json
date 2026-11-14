@@ -1,0 +1,626 @@
+{
+  "4400": {
+    "name": "350 V2 Angel Colorway Collecti",
+    "translations": {
+      "cs": "350 V2 Angel kolekce barevné varianty…",
+      "hu": "350 V2 Angel színváltozat-kollekció…",
+      "el": "350 V2 Angel συλλογή χρωματικής έκδοσης…",
+      "tr": "350 V2 Angel renk seçeneği koleksiyonu…",
+      "uk": "350 V2 Angel колекція кольорової версії…",
+      "ja": "350 V2 Angel カラーコレクション…",
+      "ko": "350 V2 Angel 컬러웨이 컬렉션…",
+      "ar": "350 V2 Angel مجموعة اللون…"
+    }
+  },
+  "4327": {
+    "name": "America's Cup Jade Batch Sneak",
+    "translations": {
+      "cs": "America's Cup Jade tenisky, šarže…",
+      "hu": "America's Cup Jade tornacipő, széria…",
+      "el": "America's Cup Jade αθλητικά παπούτσια, παρτίδα…",
+      "tr": "America's Cup Jade spor ayakkabı, parti…",
+      "uk": "America's Cup Jade кросівки, партія…",
+      "ja": "America's Cup Jade スニーカー、バッチ…",
+      "ko": "America's Cup Jade 스니커즈, 배치…",
+      "ar": "America's Cup Jade حذاء رياضي، دفعة…"
+    }
+  },
+  "4197": {
+    "name": "Louis Vuitton Skate Foshan Bat",
+    "translations": {
+      "cs": "Louis Vuitton Skate Foshan šarže…",
+      "hu": "Louis Vuitton Skate Foshan széria…",
+      "el": "Louis Vuitton Skate Foshan παρτίδα…",
+      "tr": "Louis Vuitton Skate Foshan parti…",
+      "uk": "Louis Vuitton Skate Foshan партія…",
+      "ja": "Louis Vuitton Skate Foshan バッチ…",
+      "ko": "Louis Vuitton Skate Foshan 배치…",
+      "ar": "Louis Vuitton Skate Foshan دفعة…"
+    }
+  },
+  "4113": {
+    "name": "Retro Mid-Top Sneakers XZX-YDX",
+    "translations": {
+      "cs": "retro tenisky se středně vysokým střihem XZX-YDX-AJX-001…",
+      "hu": "retro középmagas tornacipő XZX-YDX-AJX-001…",
+      "el": "ρετρό αθλητικά παπούτσια μεσαίου ύψους XZX-YDX-AJX-001…",
+      "tr": "retro orta bilek spor ayakkabı XZX-YDX-AJX-001…",
+      "uk": "ретро кросівки середньої висоти XZX-YDX-AJX-001…",
+      "ja": "レトロなミッドカットスニーカー XZX-YDX-AJX-001…",
+      "ko": "레트로 미드탑 스니커즈 XZX-YDX-AJX-001…",
+      "ar": "حذاء رياضي ريترو متوسط الرقبة XZX-YDX-AJX-001…"
+    }
+  },
+  "3969": {
+    "name": "Superstar Shell-Toe Sneakers X",
+    "translations": {
+      "cs": "Superstar tenisky se špičkou shell-toe, šarže XP…",
+      "hu": "Superstar shell-toe tornacipő, széria XP…",
+      "el": "Superstar αθλητικά παπούτσια με μύτη shell-toe, παρτίδα XP…",
+      "tr": "Superstar shell-toe spor ayakkabı, parti XP…",
+      "uk": "Superstar кросівки з носком shell-toe, партія XP…",
+      "ja": "Superstar シェルトゥスニーカー、バッチ XP…",
+      "ko": "Superstar 셸토 스니커즈, 배치 XP…",
+      "ar": "Superstar حذاء رياضي بمقدمة صدفية، دفعة XP…"
+    }
+  },
+  "3935": {
+    "name": "Retro Mid-Top Sneakers KZ KX G",
+    "translations": {
+      "cs": "kolekce retro tenisek se středně vysokým střihem KZ KX GD2 2…",
+      "hu": "retro középmagas tornacipők kollekciója KZ KX GD2 2…",
+      "el": "συλλογή ρετρό αθλητικών παπουτσιών μεσαίου ύψους KZ KX GD2 2…",
+      "tr": "retro orta bilek spor ayakkabı koleksiyonu KZ KX GD2 2…",
+      "uk": "колекція ретро кросівок середньої висоти KZ KX GD2 2…",
+      "ja": "レトロなミッドカットスニーカーコレクション KZ KX GD2 2…",
+      "ko": "레트로 미드탑 스니커즈 컬렉션 KZ KX GD2 2…",
+      "ar": "مجموعة أحذية رياضية ريترو متوسطة الرقبة KZ KX GD2 2…"
+    }
+  },
+  "3924": {
+    "name": "Custom Sneaker Collection S Ba",
+    "translations": {
+      "cs": "kolekce zakázkových tenisek, šarže S…",
+      "hu": "egyedi tornacipők kollekciója, széria S…",
+      "el": "συλλογή εξατομικευμένων αθλητικών παπουτσιών, παρτίδα S…",
+      "tr": "özel yapım spor ayakkabı koleksiyonu, parti S…",
+      "uk": "колекція кастомних кросівок, партія S…",
+      "ja": "カスタムスニーカーコレクション、バッチ S…",
+      "ko": "커스텀 스니커즈 컬렉션, 배치 S…",
+      "ar": "مجموعة أحذية رياضية مخصصة، دفعة S…"
+    }
+  },
+  "3868": {
+    "name": "Premium Casual Sneakers New Li",
+    "translations": {
+      "cs": "prémiové volnočasové tenisky, nový odkaz…",
+      "hu": "prémium hétköznapi tornacipő, új link…",
+      "el": "καθημερινά αθλητικά παπούτσια υψηλής ποιότητας, νέος σύνδεσμος…",
+      "tr": "üst kalite günlük spor ayakkabı, yeni bağlantı…",
+      "uk": "преміальні повсякденні кросівки, нове посилання…",
+      "ja": "プレミアムカジュアルスニーカー、新しいリンク…",
+      "ko": "프리미엄 캐주얼 스니커즈, 새 링크…",
+      "ar": "حذاء رياضي كاجوال فاخر، رابط جديد…"
+    }
+  },
+  "3863": {
+    "name": "Nike Dunk Low Grey FD0792-001",
+    "translations": {
+      "cs": "Nike Dunk Low šedá FD0792-001…",
+      "hu": "Nike Dunk Low szürke FD0792-001…",
+      "el": "Nike Dunk Low γκρι FD0792-001…",
+      "tr": "Nike Dunk Low gri FD0792-001…",
+      "uk": "Nike Dunk Low сірий FD0792-001…",
+      "ja": "Nike Dunk Low グレー FD0792-001…",
+      "ko": "Nike Dunk Low 그레이 FD0792-001…",
+      "ar": "Nike Dunk Low رمادي FD0792-001…"
+    }
+  },
+  "3716": {
+    "name": "Air Presto Off-White Black",
+    "translations": {
+      "cs": "Air Presto Off-White černá…",
+      "hu": "Air Presto Off-White fekete…",
+      "el": "Air Presto Off-White μαύρο…",
+      "tr": "Air Presto Off-White siyah…",
+      "uk": "Air Presto Off-White чорний…",
+      "ja": "Air Presto Off-White ブラック…",
+      "ko": "Air Presto Off-White 블랙…",
+      "ar": "Air Presto Off-White أسود…"
+    }
+  },
+  "3661": {
+    "name": "Original Sole Canvas Low Sneak",
+    "translations": {
+      "cs": "nízké plátěné tenisky s původní podrážkou…",
+      "hu": "alacsony szárú vászon tornacipő eredeti talppal…",
+      "el": "χαμηλά πάνινα αθλητικά παπούτσια με αρχική σόλα…",
+      "tr": "orijinal tabanlı alçak bilek kanvas spor ayakkabı…",
+      "uk": "низькі полотняні кросівки з оригінальною підошвою…",
+      "ja": "オリジナルソールのローカットキャンバススニーカー…",
+      "ko": "오리지널 밑창 로우탑 캔버스 스니커즈…",
+      "ar": "حذاء رياضي قماشي منخفض الرقبة بنعل أصلي…"
+    }
+  },
+  "3657": {
+    "name": "BF Batch New Balance 550 Colle",
+    "translations": {
+      "cs": "New Balance 550 BF kolekce, šarže…",
+      "hu": "New Balance 550 BF kollekció, széria…",
+      "el": "New Balance 550 BF συλλογή, παρτίδα…",
+      "tr": "New Balance 550 BF koleksiyon, parti…",
+      "uk": "New Balance 550 BF колекція, партія…",
+      "ja": "New Balance 550 BF コレクション、バッチ…",
+      "ko": "New Balance 550 BF 컬렉션, 배치…",
+      "ar": "New Balance 550 BF مجموعة، دفعة…"
+    }
+  },
+  "3652": {
+    "name": "Evo SL Carbon Plate Running Sh",
+    "translations": {
+      "cs": "Evo SL běžecké boty s karbonovou deskou…",
+      "hu": "Evo SL karbonlemezes futócipő…",
+      "el": "Evo SL παπούτσια τρεξίματος με πλάκα άνθρακα…",
+      "tr": "Evo SL karbon plakalı koşu ayakkabısı…",
+      "uk": "Evo SL бігове взуття з карбоновою пластиною…",
+      "ja": "Evo SL カーボンプレート入りランニングシューズ…",
+      "ko": "Evo SL 카본 플레이트 러닝화…",
+      "ar": "Evo SL حذاء جري بصفيحة كربون…"
+    }
+  },
+  "3648": {
+    "name": "AGT Adidas Superstar Gold Labe",
+    "translations": {
+      "cs": "AGT Adidas Superstar zlatý štítek…",
+      "hu": "AGT Adidas Superstar arany címke…",
+      "el": "AGT Adidas Superstar χρυσή ετικέτα…",
+      "tr": "AGT Adidas Superstar altın etiket…",
+      "uk": "AGT Adidas Superstar золота етикетка…",
+      "ja": "AGT Adidas Superstar ゴールドラベル…",
+      "ko": "AGT Adidas Superstar 골드 라벨…",
+      "ar": "AGT Adidas Superstar ملصق ذهبي…"
+    }
+  },
+  "3642": {
+    "name": "Louis Vuitton Skate Price Seri",
+    "translations": {
+      "cs": "Louis Vuitton Skate cenová série…",
+      "hu": "Louis Vuitton Skate ársorozat…",
+      "el": "Louis Vuitton Skate σειρά τιμών…",
+      "tr": "Louis Vuitton Skate fiyat serisi…",
+      "uk": "Louis Vuitton Skate цінова серія…",
+      "ja": "Louis Vuitton Skate 価格シリーズ…",
+      "ko": "Louis Vuitton Skate 가격 시리즈…",
+      "ar": "Louis Vuitton Skate سلسلة أسعار…"
+    }
+  },
+  "3599": {
+    "name": "MM Future Custom Sneakers Size",
+    "translations": {
+      "cs": "MM Future zakázkové tenisky, velikosti EU 40–48…",
+      "hu": "MM Future egyedi tornacipő, EU 40–48-as méret…",
+      "el": "MM Future αθλητικά παπούτσια κατά παραγγελία, μεγέθη ΕΕ 40–48…",
+      "tr": "MM Future özel yapım spor ayakkabı, EU 40–48 numara…",
+      "uk": "MM Future кастомні кросівки, розміри EU 40–48…",
+      "ja": "MM Future カスタムスニーカー、EUサイズ40〜48…",
+      "ko": "MM Future 커스텀 스니커즈, EU 사이즈 40–48…",
+      "ar": "MM Future حذاء رياضي مخصص، مقاسات EU 40–48…"
+    }
+  },
+  "3576": {
+    "name": "HL Batch Adidas Samba Custom S",
+    "translations": {
+      "cs": "Adidas Samba HL zakázková série, šarže…",
+      "hu": "Adidas Samba HL egyedi sorozat, széria…",
+      "el": "Adidas Samba HL εξατομικευμένη σειρά, παρτίδα…",
+      "tr": "Adidas Samba HL özel yapım seri, parti…",
+      "uk": "Adidas Samba HL кастомна серія, партія…",
+      "ja": "Adidas Samba HL カスタムシリーズ、バッチ…",
+      "ko": "Adidas Samba HL 커스텀 시리즈, 배치…",
+      "ar": "Adidas Samba HL سلسلة مخصصة، دفعة…"
+    }
+  },
+  "3555": {
+    "name": "NMR Batch Dunk Low Clearance C",
+    "translations": {
+      "cs": "Dunk Low NMR výprodejová kolekce, šarže…",
+      "hu": "Dunk Low NMR kiárusítási kollekció, széria…",
+      "el": "Dunk Low NMR συλλογή εκκαθάρισης, παρτίδα…",
+      "tr": "Dunk Low NMR tasfiye koleksiyonu, parti…",
+      "uk": "Dunk Low NMR розпродажна колекція, партія…",
+      "ja": "Dunk Low NMR クリアランスコレクション、バッチ…",
+      "ko": "Dunk Low NMR 재고 정리 컬렉션, 배치…",
+      "ar": "Dunk Low NMR مجموعة تصفية، دفعة…"
+    }
+  },
+  "3554": {
+    "name": "M Batch New Balance 327 Discou",
+    "translations": {
+      "cs": "New Balance 327 M zlevněná kolekce, šarže…",
+      "hu": "New Balance 327 M kedvezményes kollekció, széria…",
+      "el": "New Balance 327 M συλλογή με έκπτωση, παρτίδα…",
+      "tr": "New Balance 327 M indirimli koleksiyon, parti…",
+      "uk": "New Balance 327 M колекція зі знижкою, партія…",
+      "ja": "New Balance 327 M 割引コレクション、バッチ…",
+      "ko": "New Balance 327 M 할인 컬렉션, 배치…",
+      "ar": "New Balance 327 M مجموعة مخفضة، دفعة…"
+    }
+  },
+  "3551": {
+    "name": "GZ Batch MM6 German Trainer Co",
+    "translations": {
+      "cs": "MM6 GZ kolekce německých tréninkových bot, šarže…",
+      "hu": "MM6 GZ német edzőcipők kollekciója, széria…",
+      "el": "MM6 GZ συλλογή γερμανικών παπουτσιών προπόνησης, παρτίδα…",
+      "tr": "MM6 GZ Alman antrenman ayakkabısı koleksiyonu, parti…",
+      "uk": "MM6 GZ колекція німецького тренувального взуття, партія…",
+      "ja": "MM6 GZ ジャーマントレーナーシューズコレクション、バッチ…",
+      "ko": "MM6 GZ 독일 트레이너 신발 컬렉션, 배치…",
+      "ar": "MM6 GZ مجموعة أحذية تدريب ألمانية، دفعة…"
+    }
+  },
+  "3537": {
+    "name": "New VT Batch Dunk Low Retro Sn",
+    "translations": {
+      "cs": "nová VT šarže Dunk Low retro tenisky se středně vysokým střihem…",
+      "hu": "új VT széria Dunk Low retro középmagas tornacipő…",
+      "el": "νέα VT παρτίδα Dunk Low ρετρό αθλητικά παπούτσια μεσαίου ύψους…",
+      "tr": "yeni VT parti Dunk Low retro orta bilek spor ayakkabı…",
+      "uk": "нова VT партія Dunk Low ретро кросівки середньої висоти…",
+      "ja": "新しい VT バッチ Dunk Low レトロなミッドカットスニーカー…",
+      "ko": "새로운 VT 배치 Dunk Low 레트로 미드탑 스니커즈…",
+      "ar": "جديد VT دفعة Dunk Low حذاء رياضي ريترو متوسط الرقبة…"
+    }
+  },
+  "3513": {
+    "name": "Y3 Batch Jordan 3/4/5/11 Disco",
+    "translations": {
+      "cs": "Y3 Jordan 3/4/5/11 zlevněná kolekce, šarže…",
+      "hu": "Y3 Jordan 3/4/5/11 kedvezményes kollekció, széria…",
+      "el": "Y3 Jordan 3/4/5/11 συλλογή με έκπτωση, παρτίδα…",
+      "tr": "Y3 Jordan 3/4/5/11 indirimli koleksiyon, parti…",
+      "uk": "Y3 Jordan 3/4/5/11 колекція зі знижкою, партія…",
+      "ja": "Y3 Jordan 3/4/5/11 割引コレクション、バッチ…",
+      "ko": "Y3 Jordan 3/4/5/11 할인 컬렉션, 배치…",
+      "ar": "Y3 Jordan 3/4/5/11 مجموعة مخفضة، دفعة…"
+    }
+  },
+  "3497": {
+    "name": "Air Max 95 Series Real GX Batc",
+    "translations": {
+      "cs": "Air Max 95 Real GX série, šarže…",
+      "hu": "Air Max 95 Real GX sorozat, széria…",
+      "el": "Air Max 95 Real GX σειρά, παρτίδα…",
+      "tr": "Air Max 95 Real GX seri, parti…",
+      "uk": "Air Max 95 Real GX серія, партія…",
+      "ja": "Air Max 95 Real GX シリーズ、バッチ…",
+      "ko": "Air Max 95 Real GX 시리즈, 배치…",
+      "ar": "Air Max 95 Real GX سلسلة، دفعة…"
+    }
+  },
+  "3448": {
+    "name": "DG 2.0 Batch Jordan 8 Series C",
+    "translations": {
+      "cs": "DG 2.0 Jordan 8 série a kolekce, šarže…",
+      "hu": "DG 2.0 Jordan 8 sorozat és kollekció, széria…",
+      "el": "DG 2.0 Jordan 8 σειρά και συλλογή, παρτίδα…",
+      "tr": "DG 2.0 Jordan 8 seri ve koleksiyon, parti…",
+      "uk": "DG 2.0 Jordan 8 серія та колекція, партія…",
+      "ja": "DG 2.0 Jordan 8 シリーズとコレクション、バッチ…",
+      "ko": "DG 2.0 Jordan 8 시리즈 및 컬렉션, 배치…",
+      "ar": "DG 2.0 Jordan 8 سلسلة ومجموعة، دفعة…"
+    }
+  },
+  "3422": {
+    "name": "RMB Batch 14 Comfortable Casua",
+    "translations": {
+      "cs": "RMB 14 pohodlná volnočasová běžecká obuv, kolekce, šarže 1…",
+      "hu": "RMB 14 kényelmes hétköznapi futócipő, kollekció, széria 1…",
+      "el": "RMB 14 άνετα καθημερινά παπούτσια τρεξίματος, συλλογή, παρτίδα 1…",
+      "tr": "RMB 14 rahat günlük koşu ayakkabısı, koleksiyon, parti 1…",
+      "uk": "RMB 14 зручне повсякденне бігове взуття, колекція, партія 1…",
+      "ja": "RMB 14 快適なカジュアルランニングシューズ、コレクション、バッチ 1…",
+      "ko": "RMB 14 편안한 캐주얼 러닝화, 컬렉션, 배치 1…",
+      "ar": "RMB 14 حذاء جري كاجوال مريح، مجموعة، دفعة 1…"
+    }
+  },
+  "3329": {
+    "name": "REP C-L Version Casual Shoes S",
+    "translations": {
+      "cs": "Rep C L verze, volnočasové boty / tenisky, špičková verze 205",
+      "hu": "Rep C L változat, hétköznapi cipő / tornacipő, csúcsminőségű változat 205",
+      "el": "Rep C L έκδοση, καθημερινά παπούτσια / αθλητικά, κορυφαία έκδοση 205",
+      "tr": "Rep C L sürüm, günlük ayakkabı / spor ayakkabı, üst düzey sürüm 205",
+      "uk": "Rep C L версія, повсякденне взуття / кросівки, топова версія 205",
+      "ja": "Rep C L バージョン、カジュアルシューズ／スニーカー、トップバージョン 205",
+      "ko": "Rep C L 버전, 캐주얼화 / 스니커즈, 최고급 버전 205",
+      "ar": "Rep C L نسخة، أحذية كاجوال / رياضية، نسخة عالية المستوى 205"
+    }
+  },
+  "3307": {
+    "name": "[Green X Batch] AD Series Supe",
+    "translations": {
+      "cs": "Green X Ad Superstar šarže, série, klasická špička shell-toe",
+      "hu": "Green X Ad Superstar széria, sorozat, klasszikus shell-toe orr",
+      "el": "Green X Ad Superstar παρτίδα, σειρά, κλασική μύτη shell-toe",
+      "tr": "Green X Ad Superstar parti, seri, klasik shell-toe burun",
+      "uk": "Green X Ad Superstar партія, серія, класичний носок shell-toe",
+      "ja": "Green X Ad Superstar バッチ、シリーズ、クラシックシェルトゥ",
+      "ko": "Green X Ad Superstar 배치, 시리즈, 클래식 셸토",
+      "ar": "Green X Ad Superstar دفعة، سلسلة، مقدمة صدفية كلاسيكية"
+    }
+  },
+  "3285": {
+    "name": "H pure original batch BAP",
+    "translations": {
+      "cs": "H Bap čistě originální šarže",
+      "hu": "H Bap tiszta eredeti széria",
+      "el": "H Bap αμιγώς αρχική παρτίδα",
+      "tr": "H Bap saf orijinal parti",
+      "uk": "H Bap чиста оригінальна партія",
+      "ja": "H Bap 純正オリジナルバッチ",
+      "ko": "H Bap 순수 오리지널 배치",
+      "ar": "H Bap دفعة أصلية خالصة"
+    }
+  },
+  "3272": {
+    "name": "**Version of Timberland Series",
+    "translations": {
+      "cs": "Timberland verze kolekce série…",
+      "hu": "Timberland sorozatkollekció változata…",
+      "el": "Timberland έκδοση συλλογής σειράς…",
+      "tr": "Timberland seri koleksiyonu sürümü…",
+      "uk": "Timberland версія колекції серії…",
+      "ja": "Timberland シリーズコレクションのバージョン…",
+      "ko": "Timberland 시리즈 컬렉션 버전…",
+      "ar": "Timberland نسخة مجموعة السلسلة…"
+    }
+  },
+  "3271": {
+    "name": "【KZ Divine Edition】 Link 1 AD",
+    "translations": {
+      "cs": "Kz Ad Originals Samba Gezelle OG vznešená edice, odkaz, kolekce 1",
+      "hu": "Kz Ad Originals Samba Gezelle OG isteni kiadás, link, kollekció 1",
+      "el": "Kz Ad Originals Samba Gezelle OG θεϊκή έκδοση, σύνδεσμος, συλλογή 1",
+      "tr": "Kz Ad Originals Samba Gezelle OG ilahi seri, bağlantı, koleksiyon 1",
+      "uk": "Kz Ad Originals Samba Gezelle OG божественне видання, посилання, колекція 1",
+      "ja": "Kz Ad Originals Samba Gezelle OG ディバインエディション、リンク、コレクション 1",
+      "ko": "Kz Ad Originals Samba Gezelle OG 디바인 에디션, 링크, 컬렉션 1",
+      "ar": "Kz Ad Originals Samba Gezelle OG إصدار Divine، رابط، مجموعة 1"
+    }
+  },
+  "3256": {
+    "name": "【YH version】Pegasus Premium",
+    "translations": {
+      "cs": "YH Pegasus prémiová verze…",
+      "hu": "YH Pegasus prémium változat…",
+      "el": "YH Pegasus έκδοση υψηλής ποιότητας…",
+      "tr": "YH Pegasus üst kalite sürüm…",
+      "uk": "YH Pegasus преміальна версія…",
+      "ja": "YH Pegasus プレミアムバージョン…",
+      "ko": "YH Pegasus 프리미엄 버전…",
+      "ar": "YH Pegasus نسخة فاخرة…"
+    }
+  },
+  "3255": {
+    "name": "【HB BATCH】O*d S/ool 36 casual",
+    "translations": {
+      "cs": "Hb O D S Ool 36 volnočasové tenisky, šarže…",
+      "hu": "Hb O D S Ool 36 hétköznapi tornacipő, széria…",
+      "el": "Hb O D S Ool 36 καθημερινά αθλητικά παπούτσια, παρτίδα…",
+      "tr": "Hb O D S Ool 36 günlük spor ayakkabı, parti…",
+      "uk": "Hb O D S Ool 36 повсякденні кросівки, партія…",
+      "ja": "Hb O D S Ool 36 カジュアルスニーカー、バッチ…",
+      "ko": "Hb O D S Ool 36 캐주얼 스니커즈, 배치…",
+      "ar": "Hb O D S Ool 36 حذاء رياضي كاجوال، دفعة…"
+    }
+  },
+  "3249": {
+    "name": ">>G Multi Batch<<",
+    "translations": {
+      "cs": "Gt Gt G Lt Lt sportovní a volnočasová obuv, více šarží…",
+      "hu": "Gt Gt G Lt Lt sport- és szabadidőcipő, több széria…",
+      "el": "Gt Gt G Lt Lt αθλητικά και καθημερινά παπούτσια, πολλαπλές παρτίδες…",
+      "tr": "Gt Gt G Lt Lt spor ve günlük ayakkabı, çoklu parti…",
+      "uk": "Gt Gt G Lt Lt спортивне та повсякденне взуття, кілька партій…",
+      "ja": "Gt Gt G Lt Lt スポーツ・カジュアルシューズ、複数バッチ…",
+      "ko": "Gt Gt G Lt Lt 스포츠 및 캐주얼화, 다중 배치…",
+      "ar": "Gt Gt G Lt Lt أحذية رياضية وكاجوال، دفعات متعددة…"
+    }
+  },
+  "3224": {
+    "name": "TOP version N*B 1906 Integrate",
+    "translations": {
+      "cs": "N B 1906 špičková verze, integrovaný odkaz, odkaz 3",
+      "hu": "N B 1906 csúcsminőségű változat, integrált link, link 3",
+      "el": "N B 1906 κορυφαία έκδοση, ενσωματωμένος σύνδεσμος, σύνδεσμος 3",
+      "tr": "N B 1906 üst düzey sürüm, entegre bağlantı, bağlantı 3",
+      "uk": "N B 1906 топова версія, інтегроване посилання, посилання 3",
+      "ja": "N B 1906 トップバージョン、統合リンク、リンク 3",
+      "ko": "N B 1906 최고급 버전, 통합 링크, 링크 3",
+      "ar": "N B 1906 نسخة عالية المستوى، رابط مدمج، رابط 3"
+    }
+  },
+  "3186": {
+    "name": "WWTOP 1D High-Version Sneakers",
+    "translations": {
+      "cs": "WWTOP 1D tenisky vyšší verze…",
+      "hu": "WWTOP 1D magasabb változatú tornacipő…",
+      "el": "WWTOP 1D αθλητικά παπούτσια ανώτερης έκδοσης…",
+      "tr": "WWTOP 1D üst sürüm spor ayakkabı…",
+      "uk": "WWTOP 1D кросівки вищої версії…",
+      "ja": "WWTOP 1D ハイバージョンのスニーカー…",
+      "ko": "WWTOP 1D 상위 버전 스니커즈…",
+      "ar": "WWTOP 1D حذاء رياضي بإصدار أعلى…"
+    }
+  },
+  "3168": {
+    "name": "Onitsuka Tiger PH Batch Sneake",
+    "translations": {
+      "cs": "Onitsuka Tiger PH tenisky, šarže…",
+      "hu": "Onitsuka Tiger PH tornacipő, széria…",
+      "el": "Onitsuka Tiger PH αθλητικά παπούτσια, παρτίδα…",
+      "tr": "Onitsuka Tiger PH spor ayakkabı, parti…",
+      "uk": "Onitsuka Tiger PH кросівки, партія…",
+      "ja": "Onitsuka Tiger PH スニーカー、バッチ…",
+      "ko": "Onitsuka Tiger PH 스니커즈, 배치…",
+      "ar": "Onitsuka Tiger PH حذاء رياضي، دفعة…"
+    }
+  },
+  "3164": {
+    "name": "Rissue 36 HB 2.0 Batch Skate S",
+    "translations": {
+      "cs": "Rissue 36 Hb 2 0 skate boty, šarže…",
+      "hu": "Rissue 36 Hb 2 0 gördeszkás cipő, széria…",
+      "el": "Rissue 36 Hb 2 0 παπούτσια σκέιτ, παρτίδα…",
+      "tr": "Rissue 36 Hb 2 0 kaykay ayakkabısı, parti…",
+      "uk": "Rissue 36 Hb 2 0 скейт-взуття, партія…",
+      "ja": "Rissue 36 Hb 2 0 スケートシューズ、バッチ…",
+      "ko": "Rissue 36 Hb 2 0 스케이트화, 배치…",
+      "ar": "Rissue 36 Hb 2 0 حذاء تزلج، دفعة…"
+    }
+  },
+  "3049": {
+    "name": "[GC Value Edition] B30 CD Shoe",
+    "translations": {
+      "cs": "Gc B30 Cd cenově výhodná edice, boty, cenově dostupná šarže 39 5",
+      "hu": "Gc B30 Cd kedvező árú kiadás, cipő, kedvező árú széria 39 5",
+      "el": "Gc B30 Cd οικονομική έκδοση, παπούτσια, οικονομική παρτίδα 39 5",
+      "tr": "Gc B30 Cd uygun fiyatlı edisyon, ayakkabı, ekonomik parti 39 5",
+      "uk": "Gc B30 Cd вигідне видання, взуття, бюджетна партія 39 5",
+      "ja": "Gc B30 Cd お得なエディション、シューズ、お手頃価格のバッチ 39 5",
+      "ko": "Gc B30 Cd 가성비 에디션, 신발, 저가 배치 39 5",
+      "ar": "Gc B30 Cd إصدار اقتصادي، أحذية، دفعة بسعر مناسب 39 5"
+    }
+  },
+  "3032": {
+    "name": "[VG Edition] Runner 7.5 – The",
+    "translations": {
+      "cs": "Vg Runner 7 5 edice, sedmá a půltá generace",
+      "hu": "Vg Runner 7 5 kiadás, hetedik és feledik generáció",
+      "el": "Vg Runner 7 5 έκδοση, έβδομη και μισή γενιά",
+      "tr": "Vg Runner 7 5 edisyon, yedinci buçuk nesil",
+      "uk": "Vg Runner 7 5 видання, сьоме з половиною покоління",
+      "ja": "Vg Runner 7 5 エディション、第7.5世代",
+      "ko": "Vg Runner 7 5 에디션, 7.5세대",
+      "ar": "Vg Runner 7 5 إصدار، الجيل السابع والنصف"
+    }
+  },
+  "2923": {
+    "name": "[OG Batch] shoes of 9O60's",
+    "translations": {
+      "cs": "Og 9O60 S obuv, šarže",
+      "hu": "Og 9O60 S cipő, széria",
+      "el": "Og 9O60 S παπούτσια, παρτίδα",
+      "tr": "Og 9O60 S ayakkabı, parti",
+      "uk": "Og 9O60 S взуття, партія",
+      "ja": "Og 9O60 S シューズ、バッチ",
+      "ko": "Og 9O60 S 신발, 배치",
+      "ar": "Og 9O60 S أحذية، دفعة"
+    }
+  },
+  "2922": {
+    "name": "[OG Batch] shoes of PP's",
+    "translations": {
+      "cs": "Og Pp S obuv, šarže",
+      "hu": "Og Pp S cipő, széria",
+      "el": "Og Pp S παπούτσια, παρτίδα",
+      "tr": "Og Pp S ayakkabı, parti",
+      "uk": "Og Pp S взуття, партія",
+      "ja": "Og Pp S シューズ、バッチ",
+      "ko": "Og Pp S 신발, 배치",
+      "ar": "Og Pp S أحذية، دفعة"
+    }
+  },
+  "2914": {
+    "name": "Dior perfume-Other big names H",
+    "translations": {
+      "cs": "Dior parfém a další velké značky, vyšší verze",
+      "hu": "Dior parfüm és más nagy márkák, magasabb változat",
+      "el": "Dior άρωμα και άλλες μεγάλες μάρκες, ανώτερη έκδοση",
+      "tr": "Dior parfüm ve diğer büyük markalar, üst sürüm",
+      "uk": "Dior парфум та інші великі бренди, вища версія",
+      "ja": "Dior 香水とその他の大手ブランド、ハイバージョン",
+      "ko": "Dior 향수 및 기타 대형 브랜드, 상위 버전",
+      "ar": "Dior عطر وعلامات كبرى أخرى، إصدار أعلى"
+    }
+  },
+  "2532": {
+    "name": "2025ss D home T-shirt（High ver",
+    "translations": {
+      "cs": "2025Ss D Home tričko vyšší verze…",
+      "hu": "2025Ss D Home magasabb változatú póló…",
+      "el": "2025Ss D Home μπλουζάκι ανώτερης έκδοσης…",
+      "tr": "2025Ss D Home üst sürüm tişört…",
+      "uk": "2025Ss D Home футболка вищої версії…",
+      "ja": "2025Ss D Home ハイバージョンTシャツ…",
+      "ko": "2025Ss D Home 상위 버전 티셔츠…",
+      "ar": "2025Ss D Home تي شيرت بإصدار أعلى…"
+    }
+  },
+  "1911": {
+    "name": "V Gold High Version Clover Bra",
+    "translations": {
+      "cs": "V Gold jetelové náramky vyšší verze 40 stylů…",
+      "hu": "V Gold magasabb változatú lóherés karkötők 40 stílus…",
+      "el": "V Gold βραχιόλια με τριφύλλι ανώτερης έκδοσης 40 σχέδια…",
+      "tr": "V Gold üst sürüm yonca bileklikler 40 model…",
+      "uk": "V Gold браслети з конюшиною вищої версії 40 моделей…",
+      "ja": "V Gold ハイバージョンのクローバーブレスレット 40 種類…",
+      "ko": "V Gold 상위 버전 클로버 팔찌 40 종류…",
+      "ar": "V Gold أساور برسمة البرسيم بإصدار أعلى 40 تصميم…"
+    }
+  },
+  "1464": {
+    "name": "DIOR B30 B 30 TOP VERSION",
+    "translations": {
+      "cs": "DIOR B30 B 30 prémiová verze TOP…",
+      "hu": "DIOR B30 B 30 prémium változat TOP…",
+      "el": "DIOR B30 B 30 έκδοση υψηλής ποιότητας TOP…",
+      "tr": "DIOR B30 B 30 üst kalite sürüm TOP…",
+      "uk": "DIOR B30 B 30 преміальна версія TOP…",
+      "ja": "DIOR B30 B 30 プレミアムバージョン TOP…",
+      "ko": "DIOR B30 B 30 프리미엄 버전 TOP…",
+      "ar": "DIOR B30 B 30 نسخة فاخرة TOP…"
+    }
+  },
+  "1111": {
+    "name": "Prada hatFendi hatStone Islan",
+    "translations": {
+      "cs": "Prada Fendi Stone Island kolekce klobouků…",
+      "hu": "Prada Fendi Stone Island kalapkollekció…",
+      "el": "Prada Fendi Stone Island συλλογή καπέλων…",
+      "tr": "Prada Fendi Stone Island şapka koleksiyonu…",
+      "uk": "Prada Fendi Stone Island колекція капелюхів…",
+      "ja": "Prada Fendi Stone Island 帽子コレクション…",
+      "ko": "Prada Fendi Stone Island 모자 컬렉션…",
+      "ar": "Prada Fendi Stone Island مجموعة قبعات…"
+    }
+  },
+  "341": {
+    "name": "Rolex Watch high version（39 st",
+    "translations": {
+      "cs": "Rolex hodinky vyšší verze 39… stylů…",
+      "hu": "Rolex magasabb változatú óra 39… stílus…",
+      "el": "Rolex ρολόι ανώτερης έκδοσης 39… σχέδια…",
+      "tr": "Rolex üst sürüm saat 39… model…",
+      "uk": "Rolex годинник вищої версії 39… моделей…",
+      "ja": "Rolex ハイバージョン腕時計 39… 種類…",
+      "ko": "Rolex 상위 버전 시계 39… 종류…",
+      "ar": "Rolex ساعة بإصدار أعلى 39… تصميم…"
+    }
+  },
+  "305": {
+    "name": "Most powerful RO Series 2024 l",
+    "translations": {
+      "cs": "Ro 2024 nejvýkonnější série, kožené vylepšení…",
+      "hu": "Ro 2024 legerősebb sorozat, bőr továbbfejlesztés…",
+      "el": "Ro 2024 πιο ισχυρή σειρά, αναβάθμιση δέρματος…",
+      "tr": "Ro 2024 en güçlü seri, deri yükseltmesi…",
+      "uk": "Ro 2024 найпотужніша серія, шкіряне оновлення…",
+      "ja": "Ro 2024 最強シリーズ、レザーアップグレード…",
+      "ko": "Ro 2024 가장 강력한 시리즈, 가죽 업그레이드…",
+      "ar": "Ro 2024 السلسلة الأقوى، ترقية جلدية…"
+    }
+  }
+}

@@ -1,0 +1,235 @@
+{
+  "items": [
+    {
+      "name": "Denim Shorts PB91-PB131",
+      "source": "Denim Shorts",
+      "suffix": " PB91-PB131",
+      "translations": {
+        "fi": "Denimshortsit PB91-PB131",
+        "da": "Denimshorts PB91-PB131",
+        "nb": "Denimshorts PB91-PB131",
+        "cs": "Džínové šortky PB91-PB131",
+        "sk": "Džínsové šortky PB91-PB131",
+        "hu": "Farmerrövidnadrág PB91-PB131",
+        "ro": "Pantaloni scurți din denim PB91-PB131",
+        "el": "Τζιν σορτς PB91-PB131",
+        "tr": "Denim şort PB91-PB131",
+        "uk": "Джинсові шорти PB91-PB131",
+        "ar": "شورت دنيم PB91-PB131",
+        "ja": "デニムショーツ PB91-PB131",
+        "ko": "데님 반바지 PB91-PB131",
+        "vi": "Quần short denim PB91-PB131"
+      }
+    },
+    {
+      "name": "Denim Shorts",
+      "source": "Denim Shorts",
+      "suffix": "",
+      "translations": {
+        "fi": "Denimshortsit",
+        "da": "Denimshorts",
+        "nb": "Denimshorts",
+        "cs": "Džínové šortky",
+        "sk": "Džínsové šortky",
+        "hu": "Farmerrövidnadrág",
+        "ro": "Pantaloni scurți din denim",
+        "el": "Τζιν σορτς",
+        "tr": "Denim şort",
+        "uk": "Джинсові шорти",
+        "ar": "شورت دنيم",
+        "ja": "デニムショーツ",
+        "ko": "데님 반바지",
+        "vi": "Quần short denim"
+      }
+    },
+    {
+      "name": "Beach Shorts 68",
+      "source": "Beach Shorts",
+      "suffix": " 68",
+      "translations": {
+        "fi": "Rantashortsit 68",
+        "da": "Strandshorts 68",
+        "nb": "Strandshorts 68",
+        "cs": "Plážové šortky 68",
+        "sk": "Plážové šortky 68",
+        "hu": "Strandrövidnadrág 68",
+        "ro": "Pantaloni scurți de plajă 68",
+        "el": "Σορτς παραλίας 68",
+        "tr": "Plaj şortu 68",
+        "uk": "Пляжні шорти 68",
+        "ar": "شورت شاطئ 68",
+        "ja": "ビーチショーツ 68",
+        "ko": "비치 반바지 68",
+        "vi": "Quần short đi biển 68"
+      }
+    },
+    {
+      "name": "Sports Shorts 36",
+      "source": "Sports Shorts",
+      "suffix": " 36",
+      "translations": {
+        "fi": "Urheilushortsit 36",
+        "da": "Sportsshorts 36",
+        "nb": "Sportsshorts 36",
+        "cs": "Sportovní šortky 36",
+        "sk": "Športové šortky 36",
+        "hu": "Sportrövidnadrág 36",
+        "ro": "Pantaloni scurți sport 36",
+        "el": "Αθλητικό σορτς 36",
+        "tr": "Spor şort 36",
+        "uk": "Спортивні шорти 36",
+        "ar": "شورت رياضي 36",
+        "ja": "スポーツショーツ 36",
+        "ko": "스포츠 반바지 36",
+        "vi": "Quần short thể thao 36"
+      }
+    },
+    {
+      "name": "Knit Sports Shorts 172",
+      "source": "Knit Sports Shorts",
+      "suffix": " 172",
+      "translations": {
+        "fi": "Neulotut urheilushortsit 172",
+        "da": "Strikkede sportsshorts 172",
+        "nb": "Strikkede sportsshorts 172",
+        "cs": "Pletené sportovní šortky 172",
+        "sk": "Pletené športové šortky 172",
+        "hu": "Kötött sportrövidnadrág 172",
+        "ro": "Pantaloni scurți sport tricotați 172",
+        "el": "Πλεκτό αθλητικό σορτς 172",
+        "tr": "Örgü spor şort 172",
+        "uk": "В’язані спортивні шорти 172",
+        "ar": "شورت رياضي محبوك 172",
+        "ja": "ニットスポーツショーツ 172",
+        "ko": "니트 스포츠 반바지 172",
+        "vi": "Quần short thể thao dệt kim 172"
+      }
+    },
+    {
+      "name": "Knit Sports Shorts",
+      "source": "Knit Sports Shorts",
+      "suffix": "",
+      "translations": {
+        "fi": "Neulotut urheilushortsit",
+        "da": "Strikkede sportsshorts",
+        "nb": "Strikkede sportsshorts",
+        "cs": "Pletené sportovní šortky",
+        "sk": "Pletené športové šortky",
+        "hu": "Kötött sportrövidnadrág",
+        "ro": "Pantaloni scurți sport tricotați",
+        "el": "Πλεκτό αθλητικό σορτς",
+        "tr": "Örgü spor şort",
+        "uk": "В’язані спортивні шорти",
+        "ar": "شورت رياضي محبوك",
+        "ja": "ニットスポーツショーツ",
+        "ko": "니트 스포츠 반바지",
+        "vi": "Quần short thể thao dệt kim"
+      }
+    },
+    {
+      "name": "Casual Top and Shorts Set 22",
+      "source": "Casual Top and Shorts Set",
+      "suffix": " 22",
+      "translations": {
+        "fi": "Rennon yläosan ja shortsien setti 22",
+        "da": "Sæt med casual overdel og shorts 22",
+        "nb": "Sett med uformell overdel og shorts 22",
+        "cs": "Souprava volnočasového topu a šortek 22",
+        "sk": "Súprava voľnočasového topu a šortiek 22",
+        "hu": "Szabadidős felső és rövidnadrág szett 22",
+        "ro": "Set cu bluză casual și pantaloni scurți 22",
+        "el": "Σετ με καθημερινή μπλούζα και σορτς 22",
+        "tr": "Günlük üst ve şort takımı 22",
+        "uk": "Комплект повсякденного верху та шортів 22",
+        "ar": "طقم قطعة علوية كاجوال وشورت 22",
+        "ja": "カジュアルトップスとショーツのセット 22",
+        "ko": "캐주얼 상의와 반바지 세트 22",
+        "vi": "Bộ áo thường ngày và quần short 22"
+      }
+    },
+    {
+      "name": "Casual Top and Shorts Set",
+      "source": "Casual Top and Shorts Set",
+      "suffix": "",
+      "translations": {
+        "fi": "Rennon yläosan ja shortsien setti",
+        "da": "Sæt med casual overdel og shorts",
+        "nb": "Sett med uformell overdel og shorts",
+        "cs": "Souprava volnočasového topu a šortek",
+        "sk": "Súprava voľnočasového topu a šortiek",
+        "hu": "Szabadidős felső és rövidnadrág szett",
+        "ro": "Set cu bluză casual și pantaloni scurți",
+        "el": "Σετ με καθημερινή μπλούζα και σορτς",
+        "tr": "Günlük üst ve şort takımı",
+        "uk": "Комплект повсякденного верху та шортів",
+        "ar": "طقم قطعة علوية كاجوال وشورت",
+        "ja": "カジュアルトップスとショーツのセット",
+        "ko": "캐주얼 상의와 반바지 세트",
+        "vi": "Bộ áo thường ngày và quần short"
+      }
+    },
+    {
+      "name": "Premium Basketball Shorts C901",
+      "source": "Premium Basketball Shorts",
+      "suffix": " C901",
+      "translations": {
+        "fi": "Laadukkaat koripalloshortsit C901",
+        "da": "Premium basketshorts C901",
+        "nb": "Premium basketballshorts C901",
+        "cs": "Prémiové basketbalové šortky C901",
+        "sk": "Prémiové basketbalové šortky C901",
+        "hu": "Prémium kosárlabdarövidnadrág C901",
+        "ro": "Pantaloni scurți premium de baschet C901",
+        "el": "Premium σορτς μπάσκετ C901",
+        "tr": "Premium basketbol şortu C901",
+        "uk": "Баскетбольні шорти преміум C901",
+        "ar": "شورت كرة سلة فاخر C901",
+        "ja": "プレミアムバスケットボールショーツ C901",
+        "ko": "프리미엄 농구 반바지 C901",
+        "vi": "Quần short bóng rổ cao cấp C901"
+      }
+    },
+    {
+      "name": "Embroidered Shorts 4-10RI",
+      "source": "Embroidered Shorts",
+      "suffix": " 4-10RI",
+      "translations": {
+        "fi": "Kirjaillut shortsit 4-10RI",
+        "da": "Broderede shorts 4-10RI",
+        "nb": "Broderte shorts 4-10RI",
+        "cs": "Vyšívané šortky 4-10RI",
+        "sk": "Vyšívané šortky 4-10RI",
+        "hu": "Hímzett rövidnadrág 4-10RI",
+        "ro": "Pantaloni scurți brodați 4-10RI",
+        "el": "Κεντημένο σορτς 4-10RI",
+        "tr": "İşlemeli şort 4-10RI",
+        "uk": "Вишиті шорти 4-10RI",
+        "ar": "شورت مطرز 4-10RI",
+        "ja": "刺繍入りショーツ 4-10RI",
+        "ko": "자수 반바지 4-10RI",
+        "vi": "Quần short thêu 4-10RI"
+      }
+    },
+    {
+      "name": "Casual T-Shirt 001",
+      "source": "Casual T-Shirt",
+      "suffix": " 001",
+      "translations": {
+        "fi": "Rento T-paita 001",
+        "da": "Casual T-shirt 001",
+        "nb": "Uformell T-skjorte 001",
+        "cs": "Volnočasové tričko 001",
+        "sk": "Voľnočasové tričko 001",
+        "hu": "Szabadidős póló 001",
+        "ro": "Tricou casual 001",
+        "el": "Καθημερινό μπλουζάκι 001",
+        "tr": "Günlük tişört 001",
+        "uk": "Повсякденна футболка 001",
+        "ar": "تي شيرت كاجوال 001",
+        "ja": "カジュアルTシャツ 001",
+        "ko": "캐주얼 티셔츠 001",
+        "vi": "Áo phông thường ngày 001"
+      }
+    }
+  ]
+}

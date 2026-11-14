@@ -1,0 +1,562 @@
+{
+  "100": {
+    "name": "Nike Air Force 1 Sneakers [31",
+    "translations": {
+      "sk": "Tenisky Nike Air Force 1, 31 štýlov",
+      "vi": "Giày sneaker Nike Air Force 1, 31 kiểu"
+    }
+  },
+  "594": {
+    "name": "BAPE Bapesta Sneakers [19 styl",
+    "translations": {
+      "sk": "Tenisky BAPE Bapesta, 19 štýlov",
+      "vi": "Giày sneaker BAPE Bapesta, 19 kiểu"
+    }
+  },
+  "599": {
+    "name": "Nike Air Max TN Sneakers [31 s",
+    "translations": {
+      "sk": "Tenisky Nike Air Max TN, 31 štýlov",
+      "vi": "Giày sneaker Nike Air Max TN, 31 kiểu"
+    }
+  },
+  "626": {
+    "name": "New Balance 9060 Sneakers [40",
+    "translations": {
+      "sk": "Tenisky New Balance 9060, 40 štýlov",
+      "vi": "Giày sneaker New Balance 9060, 40 kiểu"
+    }
+  },
+  "641": {
+    "name": "New Balance 1906D Sneakers [1",
+    "translations": {
+      "sk": "Tenisky New Balance 1906D, 12 štýlov",
+      "vi": "Giày sneaker New Balance 1906D, 12 kiểu"
+    }
+  },
+  "644": {
+    "name": "Nike Air Zoom G.T. Cut Sneaker",
+    "translations": {
+      "sk": "Tenisky Nike Air Zoom G.T. Cut, 13 štýlov",
+      "vi": "Giày sneaker Nike Air Zoom G.T. Cut, 13 kiểu"
+    }
+  },
+  "647": {
+    "name": "Nike Dunk Low Sneakers [29 sty",
+    "translations": {
+      "sk": "Tenisky Nike Dunk Low, 29 štýlov",
+      "vi": "Giày sneaker Nike Dunk Low, 29 kiểu"
+    }
+  },
+  "649": {
+    "name": "Golden Goose Ballstar Sneakers",
+    "translations": {
+      "sk": "Tenisky Golden Goose Ballstar, 27 štýlov",
+      "vi": "Giày sneaker Golden Goose Ballstar, 27 kiểu"
+    }
+  },
+  "654": {
+    "name": "Prada Cups Sneakers [14 styles",
+    "translations": {
+      "sk": "Tenisky Prada Cups, 14 štýlov",
+      "vi": "Giày sneaker Prada Cups, 14 kiểu"
+    }
+  },
+  "655": {
+    "name": "Nike Dunk Low Sneakers [40 st",
+    "translations": {
+      "sk": "Tenisky Nike Dunk Low, 40 štýlov",
+      "vi": "Giày sneaker Nike Dunk Low, 40 kiểu"
+    }
+  },
+  "661": {
+    "name": "Adidas Yeezy 500 Sneakers [10",
+    "translations": {
+      "sk": "Tenisky Adidas Yeezy 500, 10 štýlov",
+      "vi": "Giày sneaker Adidas Yeezy 500, 10 kiểu"
+    }
+  },
+  "681": {
+    "name": "Off-White ODSY-2000 Sneakers [",
+    "translations": {
+      "sk": "Tenisky Off-White Odsy 2000, 11 štýlov",
+      "vi": "Giày sneaker Off-White Odsy 2000, 11 kiểu"
+    }
+  },
+  "685": {
+    "name": "Nike Air Max 95 Sneakers [8 st",
+    "translations": {
+      "sk": "Tenisky Nike Air Max 95, 8 štýlov",
+      "vi": "Giày sneaker Nike Air Max 95, 8 kiểu"
+    }
+  },
+  "1372": {
+    "name": "Nike ZoomX Vaporfly Next% Snea",
+    "translations": {
+      "sk": "Tenisky Nike ZoomX Vaporfly Next, 18 štýlov",
+      "vi": "Giày sneaker Nike ZoomX Vaporfly Next, 18 kiểu"
+    }
+  },
+  "1400": {
+    "name": "On Running Cloud Sneakers [29",
+    "translations": {
+      "sk": "Tenisky On Running Cloud, 29 štýlov",
+      "vi": "Giày sneaker On Running Cloud, 29 kiểu"
+    }
+  },
+  "1423": {
+    "name": "Nike x Nocta Hot Step 2 Sneake",
+    "translations": {
+      "sk": "Tenisky Nike x NOCTA Hot Step 2, 8 štýlov",
+      "vi": "Giày sneaker Nike x NOCTA Hot Step 2, 8 kiểu"
+    }
+  },
+  "1438": {
+    "name": "Lanvin B22 Sneakers [11 styles",
+    "translations": {
+      "sk": "Tenisky Lanvin B22, 11 štýlov",
+      "vi": "Giày sneaker Lanvin B22, 11 kiểu"
+    }
+  },
+  "1446": {
+    "name": "Louis Vuitton Trainer Sneaker",
+    "translations": {
+      "sk": "Tenisky Louis Vuitton Trainer, 40 štýlov",
+      "vi": "Giày sneaker Louis Vuitton Trainer, 40 kiểu"
+    }
+  },
+  "1524": {
+    "name": "Nike Air Jordan 4 Retro Sneake",
+    "translations": {
+      "sk": "Tenisky Nike Air Jordan 4 Retro, 27 štýlov",
+      "vi": "Giày sneaker Nike Air Jordan 4 Retro, 27 kiểu"
+    }
+  },
+  "1525": {
+    "name": "Nike Air Jordan 6 Sneakers [1",
+    "translations": {
+      "sk": "Tenisky Nike Air Jordan 6, 16 štýlov",
+      "vi": "Giày sneaker Nike Air Jordan 6, 16 kiểu"
+    }
+  },
+  "1527": {
+    "name": "Nike Air Jordan 1 High Sneaker",
+    "translations": {
+      "sk": "Tenisky Nike Air Jordan 1 High, 40 štýlov",
+      "vi": "Giày sneaker Nike Air Jordan 1 High, 40 kiểu"
+    }
+  },
+  "1554": {
+    "name": "Nike Dunk Low Sneakers [28 sty",
+    "translations": {
+      "sk": "Tenisky Nike Dunk Low, 28 štýlov",
+      "vi": "Giày sneaker Nike Dunk Low, 28 kiểu"
+    }
+  },
+  "1562": {
+    "name": "New Balance 70 Sneakers [31 st",
+    "translations": {
+      "sk": "Tenisky New Balance 70, 31 štýlov",
+      "vi": "Giày sneaker New Balance 70, 31 kiểu"
+    }
+  },
+  "1563": {
+    "name": "New Balance 990v3 Sneakers [9",
+    "translations": {
+      "sk": "Tenisky New Balance 990v3, 9 štýlov",
+      "vi": "Giày sneaker New Balance 990v3, 9 kiểu"
+    }
+  },
+  "1564": {
+    "name": "Nike Air Jordan 4 Sneakers [4",
+    "translations": {
+      "sk": "Tenisky Nike Air Jordan 4, 40 štýlov",
+      "vi": "Giày sneaker Nike Air Jordan 4, 40 kiểu"
+    }
+  },
+  "1583": {
+    "name": "Nike Dunk Low Sneakers [35 sty",
+    "translations": {
+      "sk": "Tenisky Nike Dunk Low, 35 štýlov",
+      "vi": "Giày sneaker Nike Dunk Low, 35 kiểu"
+    }
+  },
+  "1584": {
+    "name": "Valentino Garavani VLTN Sneake",
+    "translations": {
+      "sk": "Tenisky Valentino Garavani VLTN, 21 štýlov",
+      "vi": "Giày sneaker Valentino Garavani VLTN, 21 kiểu"
+    }
+  },
+  "1585": {
+    "name": "Nike Air Jordan 4 Retro Sneak",
+    "translations": {
+      "sk": "Tenisky Nike Air Jordan 4 Retro, 39 štýlov",
+      "vi": "Giày sneaker Nike Air Jordan 4 Retro, 39 kiểu"
+    }
+  },
+  "1588": {
+    "name": "Nike Air Jordan 3 Sneakers [25",
+    "translations": {
+      "sk": "Tenisky Nike Air Jordan 3, 25 štýlov",
+      "vi": "Giày sneaker Nike Air Jordan 3, 25 kiểu"
+    }
+  },
+  "1599": {
+    "name": "Adidas Yeezy Boost 350 V2 Snea",
+    "translations": {
+      "sk": "Tenisky Adidas Yeezy Boost 350 V2, 40 štýlov",
+      "vi": "Giày sneaker Adidas Yeezy Boost 350 V2, 40 kiểu"
+    }
+  },
+  "1600": {
+    "name": "Gucci Rhyton Sneakers [7 style",
+    "translations": {
+      "sk": "Tenisky Gucci Rhyton, 7 štýlov",
+      "vi": "Giày sneaker Gucci Rhyton, 7 kiểu"
+    }
+  },
+  "1602": {
+    "name": "AMIRI MAYA Sneakers [9 styles",
+    "translations": {
+      "sk": "Tenisky Amiri Maya, 9 štýlov",
+      "vi": "Giày sneaker Amiri Maya, 9 kiểu"
+    }
+  },
+  "1609": {
+    "name": "Nike Dunk Low Sneakers [15 st",
+    "translations": {
+      "sk": "Tenisky Nike Dunk Low, 15 štýlov",
+      "vi": "Giày sneaker Nike Dunk Low, 15 kiểu"
+    }
+  },
+  "1610": {
+    "name": "Golden Goose Super-Star Sneake",
+    "translations": {
+      "sk": "Tenisky Golden Goose Super-Star, 20 štýlov",
+      "vi": "Giày sneaker Golden Goose Super-Star, 20 kiểu"
+    }
+  },
+  "1612": {
+    "name": "Nike Air Jordan 4 Sneakers [39",
+    "translations": {
+      "sk": "Tenisky Nike Air Jordan 4, 39 štýlov",
+      "vi": "Giày sneaker Nike Air Jordan 4, 39 kiểu"
+    }
+  },
+  "1616": {
+    "name": "New Balance 990 Series Sneake",
+    "translations": {
+      "sk": "Tenisky New Balance 990 Series, 23 štýlov",
+      "vi": "Giày sneaker New Balance 990 Series, 23 kiểu"
+    }
+  },
+  "1617": {
+    "name": "New Balance 550 Sneakers [33 s",
+    "translations": {
+      "sk": "Tenisky New Balance 550, 33 štýlov",
+      "vi": "Giày sneaker New Balance 550, 33 kiểu"
+    }
+  },
+  "1623": {
+    "name": "Asics Gel-Kayano 5 OG Sneaker",
+    "translations": {
+      "sk": "Tenisky ASICS Gel-Kayano 5 OG, 11 štýlov",
+      "vi": "Giày sneaker ASICS Gel-Kayano 5 OG, 11 kiểu"
+    }
+  },
+  "1653": {
+    "name": "On Cloud 5 Sneakers [30 styles",
+    "translations": {
+      "sk": "Tenisky On Cloud 5, 30 štýlov",
+      "vi": "Giày sneaker On Cloud 5, 30 kiểu"
+    }
+  },
+  "1654": {
+    "name": "Amiri MAYA Sneakers [12 style",
+    "translations": {
+      "sk": "Tenisky Amiri Maya, 12 štýlov",
+      "vi": "Giày sneaker Amiri Maya, 12 kiểu"
+    }
+  },
+  "1661": {
+    "name": "Golden Goose Super-Star Sneake",
+    "translations": {
+      "sk": "Tenisky Golden Goose Super-Star, 35 štýlov",
+      "vi": "Giày sneaker Golden Goose Super-Star, 35 kiểu"
+    }
+  },
+  "1664": {
+    "name": "Nike Air Jordan 1 High Sneaker",
+    "translations": {
+      "sk": "Tenisky Nike Air Jordan 1 High, 35 štýlov",
+      "vi": "Giày sneaker Nike Air Jordan 1 High, 35 kiểu"
+    }
+  },
+  "1665": {
+    "name": "Golden Goose Superstar Sneaker",
+    "translations": {
+      "sk": "Tenisky Golden Goose Superstar, 27 štýlov",
+      "vi": "Giày sneaker Golden Goose Superstar, 27 kiểu"
+    }
+  },
+  "1666": {
+    "name": "Nike Air Force 1 Sneakers [40",
+    "translations": {
+      "sk": "Tenisky Nike Air Force 1, 40 štýlov",
+      "vi": "Giày sneaker Nike Air Force 1, 40 kiểu"
+    }
+  },
+  "1667": {
+    "name": "Nike Dunk Low Sneakers [14 st",
+    "translations": {
+      "sk": "Tenisky Nike Dunk Low, 14 štýlov",
+      "vi": "Giày sneaker Nike Dunk Low, 14 kiểu"
+    }
+  },
+  "1673": {
+    "name": "Air Jordan 5 Retro Sneakers [4",
+    "translations": {
+      "sk": "Tenisky Air Jordan 5 Retro, 40 štýlov",
+      "vi": "Giày sneaker Air Jordan 5 Retro, 40 kiểu"
+    }
+  },
+  "1694": {
+    "name": "Adidas Gazelle Sneakers [20 s",
+    "translations": {
+      "sk": "Tenisky Adidas Gazelle, 20 štýlov",
+      "vi": "Giày sneaker Adidas Gazelle, 20 kiểu"
+    }
+  },
+  "1696": {
+    "name": "Dior B30B31 Sneakers [34 style",
+    "translations": {
+      "sk": "Tenisky Dior B30/B31, 34 štýlov",
+      "vi": "Giày sneaker Dior B30/B31, 34 kiểu"
+    }
+  },
+  "1703": {
+    "name": "Nike Shox R4 Sneakers [40 sty",
+    "translations": {
+      "sk": "Tenisky Nike Shox R4, 40 štýlov",
+      "vi": "Giày sneaker Nike Shox R4, 40 kiểu"
+    }
+  },
+  "1713": {
+    "name": "Valentino Garavani Sneakers [5",
+    "translations": {
+      "sk": "Tenisky Valentino Garavani, 5 štýlov",
+      "vi": "Giày sneaker Valentino Garavani, 5 kiểu"
+    }
+  },
+  "1714": {
+    "name": "New Balance 1906R Sneakers [1",
+    "translations": {
+      "sk": "Tenisky New Balance 1906R, 14 štýlov",
+      "vi": "Giày sneaker New Balance 1906R, 14 kiểu"
+    }
+  },
+  "1716": {
+    "name": "Nike Air Max Plus Sneakers [24",
+    "translations": {
+      "sk": "Tenisky Nike Air Max Plus, 24 štýlov",
+      "vi": "Giày sneaker Nike Air Max Plus, 24 kiểu"
+    }
+  },
+  "1720": {
+    "name": "Adidas Originals Campus 00s Sn",
+    "translations": {
+      "sk": "Tenisky Adidas Originals Campus 00s, 25 štýlov",
+      "vi": "Giày sneaker Adidas Originals Campus 00s, 25 kiểu"
+    }
+  },
+  "1742": {
+    "name": "New Balance 2002 Sneakers [6 s",
+    "translations": {
+      "sk": "Tenisky New Balance 2002, 6 štýlov",
+      "vi": "Giày sneaker New Balance 2002, 6 kiểu"
+    }
+  },
+  "1753": {
+    "name": "New Balance 550 Sneakers [13 s",
+    "translations": {
+      "sk": "Tenisky New Balance 550, 13 štýlov",
+      "vi": "Giày sneaker New Balance 550, 13 kiểu"
+    }
+  },
+  "1754": {
+    "name": "Balenciaga Track Runner LED Sn",
+    "translations": {
+      "sk": "Tenisky Balenciaga Track Runner LED, 11 štýlov",
+      "vi": "Giày sneaker Balenciaga Track Runner LED, 11 kiểu"
+    }
+  },
+  "1759": {
+    "name": "Nike Air Max Terrascape Plus S",
+    "translations": {
+      "sk": "Tenisky Nike Air Max Terrascape Plus, 3 štýly",
+      "vi": "Giày sneaker Nike Air Max Terrascape Plus, 3 kiểu"
+    }
+  },
+  "1760": {
+    "name": "Air Jordan 5 Sneakers [9 styl",
+    "translations": {
+      "sk": "Tenisky Air Jordan 5, 9 štýlov",
+      "vi": "Giày sneaker Air Jordan 5, 9 kiểu"
+    }
+  },
+  "1763": {
+    "name": "Nike Air Max Plus Sneakers [33",
+    "translations": {
+      "sk": "Tenisky Nike Air Max Plus, 33 štýlov",
+      "vi": "Giày sneaker Nike Air Max Plus, 33 kiểu"
+    }
+  },
+  "1768": {
+    "name": "Amiri MAYA Sneakers [36 styles",
+    "translations": {
+      "sk": "Tenisky Amiri Maya, 36 štýlov",
+      "vi": "Giày sneaker Amiri Maya, 36 kiểu"
+    }
+  },
+  "1774": {
+    "name": "Balenciaga Speed Trainer Snea",
+    "translations": {
+      "sk": "Tenisky Balenciaga Speed Trainer, 9 štýlov",
+      "vi": "Giày sneaker Balenciaga Speed Trainer, 9 kiểu"
+    }
+  },
+  "1778": {
+    "name": "Nike Air Jordan 4 Sneakers [2",
+    "translations": {
+      "sk": "Tenisky Nike Air Jordan 4, 27 štýlov",
+      "vi": "Giày sneaker Nike Air Jordan 4, 27 kiểu"
+    }
+  },
+  "1779": {
+    "name": "Louis Vuitton Trainer Sneakers",
+    "translations": {
+      "sk": "Tenisky Louis Vuitton Trainer, 37 štýlov",
+      "vi": "Giày sneaker Louis Vuitton Trainer, 37 kiểu"
+    }
+  },
+  "1781": {
+    "name": "Asics Gel-Kayano Sneakers [5 s",
+    "translations": {
+      "sk": "Tenisky ASICS Gel-Kayano, 5 štýlov",
+      "vi": "Giày sneaker ASICS Gel-Kayano, 5 kiểu"
+    }
+  },
+  "1784": {
+    "name": "Nike Dunk Low Sneakers [23 sty",
+    "translations": {
+      "sk": "Tenisky Nike Dunk Low, 23 štýlov",
+      "vi": "Giày sneaker Nike Dunk Low, 23 kiểu"
+    }
+  },
+  "1789": {
+    "name": "Balenciaga Runner 7 Sneakers [",
+    "translations": {
+      "sk": "Tenisky Balenciaga Runner 7, 25 štýlov",
+      "vi": "Giày sneaker Balenciaga Runner 7, 25 kiểu"
+    }
+  },
+  "1796": {
+    "name": "Nike Air Force 1 Sneakers [24",
+    "translations": {
+      "sk": "Tenisky Nike Air Force 1, 24 štýlov",
+      "vi": "Giày sneaker Nike Air Force 1, 24 kiểu"
+    }
+  },
+  "1798": {
+    "name": "Nike Air Force 1 Sneakers [2",
+    "translations": {
+      "sk": "Tenisky Nike Air Force 1, 2 štýly",
+      "vi": "Giày sneaker Nike Air Force 1, 2 kiểu"
+    }
+  },
+  "1802": {
+    "name": "Nike Air Jordan 3 Sneakers [12",
+    "translations": {
+      "sk": "Tenisky Nike Air Jordan 3, 12 štýlov",
+      "vi": "Giày sneaker Nike Air Jordan 3, 12 kiểu"
+    }
+  },
+  "1829": {
+    "name": "Jordan Air Jordan 5 Retro Sne",
+    "translations": {
+      "sk": "Tenisky Jordan Air Jordan 5 Retro, 13 štýlov",
+      "vi": "Giày sneaker Jordan Air Jordan 5 Retro, 13 kiểu"
+    }
+  },
+  "1830": {
+    "name": "Nike Air Jordan 13 Sneakers [",
+    "translations": {
+      "sk": "Tenisky Nike Air Jordan 13, 22 štýlov",
+      "vi": "Giày sneaker Nike Air Jordan 13, 22 kiểu"
+    }
+  },
+  "1887": {
+    "name": "Nike Air Max 95 Sneakers [30 s",
+    "translations": {
+      "sk": "Tenisky Nike Air Max 95, 30 štýlov",
+      "vi": "Giày sneaker Nike Air Max 95, 30 kiểu"
+    }
+  },
+  "1888": {
+    "name": "Adidas Samba OG Sneakers [30 s",
+    "translations": {
+      "sk": "Tenisky Adidas Samba OG, 30 štýlov",
+      "vi": "Giày sneaker Adidas Samba OG, 30 kiểu"
+    }
+  },
+  "1889": {
+    "name": "Air Jordan 4 Red Thunder Snea",
+    "translations": {
+      "sk": "Tenisky Air Jordan 4 Red Thunder, 39 štýlov",
+      "vi": "Giày sneaker Air Jordan 4 Red Thunder, 39 kiểu"
+    }
+  },
+  "1898": {
+    "name": "LANVIN B22 Sneakers [11 styles",
+    "translations": {
+      "sk": "Tenisky Lanvin B22, 11 štýlov",
+      "vi": "Giày sneaker Lanvin B22, 11 kiểu"
+    }
+  },
+  "1908": {
+    "name": "Nike Air Max 1 Sneakers [30 st",
+    "translations": {
+      "sk": "Tenisky Nike Air Max 1, 30 štýlov",
+      "vi": "Giày sneaker Nike Air Max 1, 30 kiểu"
+    }
+  },
+  "1934": {
+    "name": "Nike Air Max 270 Sneakers [32",
+    "translations": {
+      "sk": "Tenisky Nike Air Max 270, 32 štýlov",
+      "vi": "Giày sneaker Nike Air Max 270, 32 kiểu"
+    }
+  },
+  "1937": {
+    "name": "Nike Hyperdunk X Low EP Sneake",
+    "translations": {
+      "sk": "Tenisky Nike Hyperdunk X Low EP, 25 štýlov",
+      "vi": "Giày sneaker Nike Hyperdunk X Low EP, 25 kiểu"
+    }
+  },
+  "1962": {
+    "name": "Off-White™ 'Be Right Back' Sne",
+    "translations": {
+      "sk": "Tenisky Off-White Be Right Back, 40 štýlov",
+      "vi": "Giày sneaker Off-White Be Right Back, 40 kiểu"
+    }
+  },
+  "2003": {
+    "name": "Balenciaga Triple S Sneakers [",
+    "translations": {
+      "sk": "Tenisky Balenciaga Triple S, 37 štýlov",
+      "vi": "Giày sneaker Balenciaga Triple S, 37 kiểu"
+    }
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "items": [
+    {
+      "name": "B Trendy Knee-Length Shorts",
+      "translations": {
+        "fi": "B-trendikkäät polvipituiset shortsit",
+        "da": "B-trendy knælange shorts",
+        "nb": "B-trendy knelange shorts",
+        "cs": "Moderní šortky B po kolena",
+        "sk": "Moderné šortky B po kolená",
+        "hu": "B divatos térdig érő rövidnadrág",
+        "ro": "Pantaloni scurți B moderni până la genunchi",
+        "el": "Μοντέρνο σορτς B μέχρι το γόνατο",
+        "uk": "Модні шорти B до колін",
+        "ar": "شورت B عصري بطول الركبة",
+        "ja": "Bトレンド膝丈ショーツ",
+        "ko": "B 트렌디 무릎 길이 반바지",
+        "vi": "Quần short B thời trang dài đến gối",
+        "tr": "B trend diz boyu şort"
+      }
+    },
+    {
+      "name": "Classic Loose Sports Shorts",
+      "translations": {
+        "fi": "Klassiset väljät urheilushortsit",
+        "da": "Klassiske løse sportsshorts",
+        "nb": "Klassisk løs sportsshorts",
+        "cs": "Klasické volné sportovní šortky",
+        "sk": "Klasické voľné športové šortky",
+        "hu": "Klasszikus bő sportshort",
+        "ro": "Pantaloni scurți sport clasici și largi",
+        "el": "Κλασικό φαρδύ αθλητικό σορτς",
+        "uk": "Класичні вільні спортивні шорти",
+        "ar": "شورت رياضي كلاسيكي واسع",
+        "ja": "クラシックルーズスポーツショーツ",
+        "ko": "클래식 루즈 스포츠 반바지",
+        "vi": "Quần short thể thao dáng rộng cổ điển",
+        "tr": "Klasik bol spor şort"
+      }
+    },
+    {
+      "name": "Cotton Graphic Sweat Shorts",
+      "translations": {
+        "fi": "Puuvillaiset kuviolliset collegeshortsit",
+        "da": "Sweatshorts i bomuld med grafik",
+        "nb": "Sweatshorts i bomull med grafikk",
+        "cs": "Bavlněné teplákové šortky s potiskem",
+        "sk": "Bavlnené teplákové šortky s potlačou",
+        "hu": "Pamut mintás szabadidőshort",
+        "ro": "Pantaloni scurți tip trening din bumbac cu imprimeu",
+        "el": "Βαμβακερό σορτς φούτερ με σχέδιο",
+        "uk": "Бавовняні трикотажні шорти з принтом",
+        "ar": "شورت سويت قطني برسمة",
+        "ja": "コットングラフィックスウェットショーツ",
+        "ko": "면 그래픽 스웨트 반바지",
+        "vi": "Quần short nỉ cotton có họa tiết",
+        "tr": "Pamuklu grafik desenli eşofman şortu"
+      }
+    },
+    {
+      "name": "Men's Street Graphic Shorts",
+      "translations": {
+        "fi": "Miesten katutyyliset kuviolliset shortsit",
+        "da": "Streetshorts til mænd med grafik",
+        "nb": "Streetshorts for menn med grafikk",
+        "cs": "Pánské streetové šortky s potiskem",
+        "sk": "Pánske streetové šortky s potlačou",
+        "hu": "Férfi utcai mintás rövidnadrág",
+        "ro": "Pantaloni scurți street pentru bărbați cu imprimeu",
+        "el": "Ανδρικό σορτς street με σχέδιο",
+        "uk": "Чоловічі шорти вуличного стилю з принтом",
+        "ar": "شورت رجالي بأسلوب الشارع مع رسمة",
+        "ja": "メンズストリートグラフィックショーツ",
+        "ko": "남성 스트리트 그래픽 반바지",
+        "vi": "Quần short nam phong cách đường phố có họa tiết",
+        "tr": "Erkek sokak stili grafik desenli şort"
+      }
+    },
+    {
+      "name": "SUBHUMAN Drop-Crotch Shorts",
+      "translations": {
+        "fi": "SUBHUMAN-alamittaiset shortsit",
+        "da": "SUBHUMAN-shorts med lavt skridt",
+        "nb": "SUBHUMAN-shorts med lavt skritt",
+        "cs": "Šortky SUBHUMAN se sníženým sedem",
+        "sk": "Šortky SUBHUMAN so zníženým sedom",
+        "hu": "SUBHUMAN ejtett ülepes rövidnadrág",
+        "ro": "Pantaloni scurți SUBHUMAN cu tur lăsat",
+        "el": "Σορτς SUBHUMAN με χαμηλό καβάλο",
+        "uk": "Шорти SUBHUMAN із заниженою посадкою крокового шва",
+        "ar": "شورت SUBHUMAN بحجر منخفض",
+        "ja": "SUBHUMANドロップクロッチショーツ",
+        "ko": "SUBHUMAN 드롭 크로치 반바지",
+        "vi": "Quần short SUBHUMAN đáy thụng",
+        "tr": "SUBHUMAN düşük ağlı şort"
+      }
+    },
+    {
+      "name": "Flame Graphic Washed Shorts",
+      "translations": {
+        "fi": "Pestyt liekkikuviolliset shortsit",
+        "da": "Vaskede shorts med flammegrafik",
+        "nb": "Vasket shorts med flammemotiv",
+        "cs": "Prané šortky s potiskem plamenů",
+        "sk": "Prané šortky s potlačou plameňov",
+        "hu": "Mosott lángmintás rövidnadrág",
+        "ro": "Pantaloni scurți spălați cu imprimeu cu flăcări",
+        "el": "Ξεβαμμένο σορτς με σχέδιο φλόγας",
+        "uk": "Випрані шорти з принтом полум’я",
+        "ar": "شورت مغسول برسمة لهب",
+        "ja": "炎グラフィック入りウォッシュドショーツ",
+        "ko": "불꽃 그래픽 워싱 반바지",
+        "vi": "Quần short wash họa tiết ngọn lửa",
+        "tr": "Alev desenli yıkanmış şort"
+      }
+    },
+    {
+      "name": "Brandon Washed Denim Shorts",
+      "translations": {
+        "fi": "Brandon-pestyt farkkushortsit",
+        "da": "Brandon-vaskede denimshorts",
+        "nb": "Brandon-vasket denimshorts",
+        "cs": "Prané džínové šortky Brandon",
+        "sk": "Prané džínsové šortky Brandon",
+        "hu": "Brandon mosott farmershort",
+        "ro": "Pantaloni scurți Brandon din denim spălat",
+        "el": "Ξεβαμμένο τζιν σορτς Brandon",
+        "uk": "Випрані джинсові шорти Brandon",
+        "ar": "شورت جينز Brandon مغسول",
+        "ja": "Brandonウォッシュドデニムショーツ",
+        "ko": "Brandon 워싱 데님 반바지",
+        "vi": "Quần short denim wash Brandon",
+        "tr": "Brandon yıkanmış kot şort"
+      }
+    },
+    {
+      "name": "Valley Forever Denim Shorts",
+      "translations": {
+        "fi": "Valley Forever -farkkushortsit",
+        "da": "Valley Forever-denimshorts",
+        "nb": "Valley Forever-denimshorts",
+        "cs": "Džínové šortky Valley Forever",
+        "sk": "Džínsové šortky Valley Forever",
+        "hu": "Valley Forever farmershort",
+        "ro": "Pantaloni scurți Valley Forever din denim",
+        "el": "Τζιν σορτς Valley Forever",
+        "uk": "Джинсові шорти Valley Forever",
+        "ar": "شورت جينز Valley Forever",
+        "ja": "Valley Foreverデニムショーツ",
+        "ko": "Valley Forever 데님 반바지",
+        "vi": "Quần short denim Valley Forever",
+        "tr": "Valley Forever kot şort"
+      }
+    },
+    {
+      "name": "Wool-Knit Panel Down Jacket",
+      "translations": {
+        "fi": "Villaneulepaneelinen untuvatakki",
+        "da": "Dunjakke med uldstrikpaneler",
+        "nb": "Dunjakke med ullstrikkepaneler",
+        "cs": "Péřová bunda s panely z vlněného úpletu",
+        "sk": "Páperová bunda s panelmi z vlneného úpletu",
+        "hu": "Gyapjú kötött betétes pehelykabát",
+        "ro": "Geacă cu puf și panouri tricotate din lână",
+        "el": "Πουπουλένιο μπουφάν με μάλλινα πλεκτά πάνελ",
+        "uk": "Пухова куртка з вовняними в’язаними вставками",
+        "ar": "سترة داون بأجزاء محبوكة من الصوف",
+        "ja": "ウールニットパネル付きダウンジャケット",
+        "ko": "울 니트 패널 다운 재킷",
+        "vi": "Áo khoác lông vũ phối mảng len dệt kim",
+        "tr": "Yün örgü panelli kuş tüyü mont"
+      }
+    },
+    {
+      "name": "Goose-Patch Zip Hoodie KK10",
+      "translations": {
+        "fi": "Hanhipaikkainen vetoketjuhuppari KK10",
+        "da": "Hættetrøje med lynlås og gåsemærke KK10",
+        "nb": "Hettegenser med glidelås og gåsemerke KK10",
+        "cs": "Mikina na zip s kapucí a husí nášivkou KK10",
+        "sk": "Mikina na zips s kapucňou a husacou nášivkou KK10",
+        "hu": "Libafoltos cipzáras kapucnis pulóver KK10",
+        "ro": "Hanorac cu fermoar și petic cu gâscă KK10",
+        "el": "Φούτερ με κουκούλα, φερμουάρ και μπάλωμα χήνας KK10",
+        "uk": "Худі на блискавці з нашивкою гусака KK10",
+        "ar": "هودي بسحاب ورقعة إوزة KK10",
+        "ja": "グースパッチジップパーカー KK10",
+        "ko": "구스 패치 집업 후드티 KK10",
+        "vi": "Áo hoodie khóa kéo đính miếng vá hình ngỗng KK10",
+        "tr": "Kaz yamalı fermuarlı kapüşonlu sweatshirt KK10"
+      }
+    },
+    {
+      "name": "Wool-Knit Goose Down Jacket",
+      "translations": {
+        "fi": "Villaneuleinen hanhenuntuvatakki",
+        "da": "Gåsedunjakke med uldstrik",
+        "nb": "Gåsedunjakke med ullstrikk",
+        "cs": "Bunda z husího peří s vlněným úpletem",
+        "sk": "Bunda z husacieho páperia s vlneným úpletom",
+        "hu": "Gyapjúkötött libapehely kabát",
+        "ro": "Geacă cu puf de gâscă și tricot din lână",
+        "el": "Μπουφάν από πούπουλο χήνας με μάλλινο πλεκτό",
+        "uk": "Куртка з гусячим пухом і вовняним трикотажем",
+        "ar": "سترة بزغب الإوز وصوف محبوك",
+        "ja": "ウールニットグースダウンジャケット",
+        "ko": "울 니트 구스 다운 재킷",
+        "vi": "Áo khoác lông ngỗng phối len dệt kim",
+        "tr": "Yün örgülü kaz tüyü mont"
+      }
+    },
+    {
+      "name": "Rock Print Loose Zip Hoodie",
+      "translations": {
+        "fi": "Väljä rock-painatuksella varustettu vetoketjuhuppari",
+        "da": "Løs hættetrøje med lynlås og rockprint",
+        "nb": "Løs hettegenser med glidelås og rocketrykk",
+        "cs": "Volná mikina na zip s kapucí a rockovým potiskem",
+        "sk": "Voľná mikina na zips s kapucňou a rockovou potlačou",
+        "hu": "Bő rockmintás cipzáras kapucnis pulóver",
+        "ro": "Hanorac larg cu fermoar și imprimeu rock",
+        "el": "Φαρδύ φούτερ με κουκούλα, φερμουάρ και ροκ τύπωμα",
+        "uk": "Вільне худі на блискавці з рок-принтом",
+        "ar": "هودي واسع بسحاب وطبعة روك",
+        "ja": "ロックプリントルーズジップパーカー",
+        "ko": "록 프린트 루즈 집업 후드티",
+        "vi": "Áo hoodie khóa kéo dáng rộng in hình rock",
+        "tr": "Rock baskılı bol fermuarlı kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Printed Denim Street Shorts",
+      "translations": {
+        "fi": "Painetut farkkushortsit katutyyliin",
+        "da": "Denimstreetshorts med print",
+        "nb": "Denimstreetshorts med trykk",
+        "cs": "Džínové streetové šortky s potiskem",
+        "sk": "Džínsové streetové šortky s potlačou",
+        "hu": "Mintás utcai farmershort",
+        "ro": "Pantaloni scurți street din denim cu imprimeu",
+        "el": "Τζιν σορτς street με τύπωμα",
+        "uk": "Джинсові шорти вуличного стилю з принтом",
+        "ar": "شورت جينز ستريت بطبعة",
+        "ja": "プリントデニムストリートショーツ",
+        "ko": "프린트 데님 스트리트 반바지",
+        "vi": "Quần short denim đường phố có họa tiết",
+        "tr": "Baskılı kot sokak stili şort"
+      }
+    },
+    {
+      "name": "Cross Graphic Black T-Shirt",
+      "translations": {
+        "fi": "Musta ristikuviollinen T-paita",
+        "da": "Sort T-shirt med korsgrafik",
+        "nb": "Svart T-skjorte med korsmotiv",
+        "cs": "Černé tričko s potiskem kříže",
+        "sk": "Čierne tričko s potlačou kríža",
+        "hu": "Fekete keresztmintás póló",
+        "ro": "Tricou negru cu imprimeu cruce",
+        "el": "Μαύρο μπλουζάκι με σχέδιο σταυρού",
+        "uk": "Чорна футболка з принтом хреста",
+        "ar": "تيشيرت أسود برسمة صليب",
+        "ja": "クロスグラフィック入りブラックTシャツ",
+        "ko": "크로스 그래픽 블랙 티셔츠",
+        "vi": "Áo thun đen họa tiết chữ thập",
+        "tr": "Haç desenli siyah tişört"
+      }
+    },
+    {
+      "name": "Palace Blue Athletic Shorts",
+      "translations": {
+        "fi": "Siniset Palace-urheilushortsit",
+        "da": "Blå Palace-sportsshorts",
+        "nb": "Blå Palace-sportsshorts",
+        "cs": "Modré sportovní šortky Palace",
+        "sk": "Modré športové šortky Palace",
+        "hu": "Kék Palace sportshort",
+        "ro": "Pantaloni scurți sport Palace albaștri",
+        "el": "Μπλε αθλητικό σορτς Palace",
+        "uk": "Сині спортивні шорти Palace",
+        "ar": "شورت رياضي Palace أزرق",
+        "ja": "Palaceブルースポーツショーツ",
+        "ko": "Palace 블루 운동 반바지",
+        "vi": "Quần short thể thao Palace màu xanh",
+        "tr": "Palace mavi spor şort"
+      }
+    }
+  ]
+}

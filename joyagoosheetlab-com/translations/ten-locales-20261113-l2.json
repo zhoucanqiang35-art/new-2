@@ -1,0 +1,139 @@
+{
+  "items": [
+    {
+      "name": "Minimal Black Logo T-Shirt",
+      "translations": {
+        "cs": "Tričko s minimalistickým černým logem",
+        "sk": "Tričko s minimalistickým čiernym logom",
+        "hu": "Minimalista fekete logós póló",
+        "el": "Μπλουζάκι με λιτό μαύρο λογότυπο",
+        "uk": "Футболка з мінімалістичним чорним логотипом",
+        "ar": "تيشيرت بشعار أسود بسيط",
+        "ja": "シンプルなブラックロゴTシャツ",
+        "ko": "미니멀 블랙 로고 티셔츠",
+        "vi": "Áo thun logo đen tối giản",
+        "tr": "Minimal siyah logolu tişört"
+      }
+    },
+    {
+      "name": "Milan City Polo Shirt",
+      "translations": {
+        "cs": "Polo tričko Milan City",
+        "sk": "Polo tričko Milan City",
+        "hu": "Milan City galléros póló",
+        "el": "Πόλο μπλουζάκι Milan City",
+        "uk": "Поло Milan City",
+        "ar": "قميص بولو Milan City",
+        "ja": "Milan Cityポロシャツ",
+        "ko": "Milan City 폴로 셔츠",
+        "vi": "Áo polo Milan City",
+        "tr": "Milan City polo yaka tişört"
+      }
+    },
+    {
+      "name": "Trail Graphic T-Shirt",
+      "translations": {
+        "cs": "Tričko s potiskem Trail",
+        "sk": "Tričko s potlačou Trail",
+        "hu": "Trail mintás póló",
+        "el": "Μπλουζάκι με σχέδιο Trail",
+        "uk": "Футболка з принтом Trail",
+        "ar": "تيشيرت برسمة Trail",
+        "ja": "TrailグラフィックTシャツ",
+        "ko": "Trail 그래픽 티셔츠",
+        "vi": "Áo thun họa tiết Trail",
+        "tr": "Trail desenli tişört"
+      }
+    },
+    {
+      "name": "Boxy Fit Basic T-Shirt",
+      "translations": {
+        "cs": "Základní tričko boxy střihu",
+        "sk": "Základné tričko boxy strihu",
+        "hu": "Bő szabású alap póló",
+        "el": "Βασικό μπλουζάκι με φαρδιά γραμμή",
+        "uk": "Базова футболка вільного крою",
+        "ar": "تيشيرت أساسي بقصة واسعة",
+        "ja": "ボックスシルエットのベーシックTシャツ",
+        "ko": "박시핏 베이직 티셔츠",
+        "vi": "Áo thun cơ bản dáng rộng",
+        "tr": "Bol kesim temel tişört"
+      }
+    },
+    {
+      "name": "Longline Casual T-Shirt",
+      "translations": {
+        "cs": "Prodloužené volnočasové tričko",
+        "sk": "Predĺžené voľnočasové tričko",
+        "hu": "Hosszított hétköznapi póló",
+        "el": "Μακρύ καθημερινό μπλουζάκι",
+        "uk": "Подовжена повсякденна футболка",
+        "ar": "تيشيرت كاجوال طويل",
+        "ja": "ロング丈カジュアルTシャツ",
+        "ko": "롱라인 캐주얼 티셔츠",
+        "vi": "Áo thun thường ngày dáng dài",
+        "tr": "Uzun kesim günlük tişört"
+      }
+    },
+    {
+      "name": "Leather Athletic Sneakers",
+      "translations": {
+        "cs": "Kožené sportovní tenisky",
+        "sk": "Kožené športové tenisky",
+        "hu": "Bőr sportcipő",
+        "el": "Δερμάτινα αθλητικά sneakers",
+        "uk": "Шкіряні спортивні кросівки",
+        "ar": "حذاء رياضي جلدي",
+        "ja": "レザースポーツスニーカー",
+        "ko": "가죽 스포츠 스니커즈",
+        "vi": "Giày sneaker thể thao bằng da",
+        "tr": "Deri spor ayakkabı"
+      }
+    },
+    {
+      "name": "Coconut Casual Sneakers",
+      "translations": {
+        "cs": "Volnočasové tenisky Coconut",
+        "sk": "Voľnočasové tenisky Coconut",
+        "hu": "Coconut hétköznapi sportcipő",
+        "el": "Καθημερινά sneakers Coconut",
+        "uk": "Повсякденні кросівки Coconut",
+        "ar": "حذاء رياضي كاجوال Coconut",
+        "ja": "Coconutカジュアルスニーカー",
+        "ko": "Coconut 캐주얼 스니커즈",
+        "vi": "Giày sneaker thường ngày Coconut",
+        "tr": "Coconut günlük spor ayakkabı"
+      }
+    },
+    {
+      "name": "Pulse Casual Sneakers",
+      "translations": {
+        "cs": "Volnočasové tenisky Pulse",
+        "sk": "Voľnočasové tenisky Pulse",
+        "hu": "Pulse hétköznapi sportcipő",
+        "el": "Καθημερινά sneakers Pulse",
+        "uk": "Повсякденні кросівки Pulse",
+        "ar": "حذاء رياضي كاجوال Pulse",
+        "ja": "Pulseカジュアルスニーカー",
+        "ko": "Pulse 캐주얼 스니커즈",
+        "vi": "Giày sneaker thường ngày Pulse",
+        "tr": "Pulse günlük spor ayakkabı"
+      }
+    },
+    {
+      "name": "Casual Athletic Sneakers",
+      "translations": {
+        "cs": "Volnočasové sportovní tenisky",
+        "sk": "Voľnočasové športové tenisky",
+        "hu": "Hétköznapi sportcipő",
+        "el": "Καθημερινά αθλητικά sneakers",
+        "uk": "Повсякденні спортивні кросівки",
+        "ar": "حذاء رياضي كاجوال",
+        "ja": "カジュアルスポーツスニーカー",
+        "ko": "캐주얼 스포츠 스니커즈",
+        "vi": "Giày sneaker thể thao thường ngày",
+        "tr": "Günlük spor ayakkabı"
+      }
+    }
+  ]
+}

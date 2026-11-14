@@ -1,0 +1,224 @@
+{
+  "items": [
+    {
+      "name": "Rhinestone Denim Shorts",
+      "translations": {
+        "fi": "Strassikoristellut farkkushortsit",
+        "da": "Denimshorts med rhinsten",
+        "nb": "Denimshorts med strass",
+        "cs": "Džínové šortky se štrasovými kamínky",
+        "sk": "Džínsové šortky so štrasovými kamienkami",
+        "hu": "Strasszos farmershort",
+        "el": "Τζιν σορτς με στρας",
+        "tr": "Taş süslemeli kot şort",
+        "uk": "Джинсові шорти зі стразами",
+        "ar": "شورت جينز مزين بأحجار الراين",
+        "ja": "ラインストーン付きデニムショーツ",
+        "ko": "라인스톤 데님 반바지",
+        "vi": "Quần short denim đính đá"
+      }
+    },
+    {
+      "name": "Lightweight Beach Shorts",
+      "translations": {
+        "fi": "Kevyet rantashortsit",
+        "da": "Lette strandshorts",
+        "nb": "Lett strandshorts",
+        "cs": "Lehké plážové šortky",
+        "sk": "Ľahké plážové šortky",
+        "hu": "Könnyű strandshort",
+        "el": "Ελαφρύ σορτς παραλίας",
+        "tr": "Hafif plaj şortu",
+        "uk": "Легкі пляжні шорти",
+        "ar": "شورت شاطئ خفيف",
+        "ja": "軽量ビーチショーツ",
+        "ko": "가벼운 비치 반바지",
+        "vi": "Quần short đi biển nhẹ"
+      }
+    },
+    {
+      "name": "Star Patch Denim Shorts",
+      "translations": {
+        "fi": "Tähtimerkillä koristellut farkkushortsit",
+        "da": "Denimshorts med stjernemærke",
+        "nb": "Denimshorts med stjernemerke",
+        "cs": "Džínové šortky s hvězdnou nášivkou",
+        "sk": "Džínsové šortky s hviezdnou nášivkou",
+        "hu": "Csillagfoltos farmershort",
+        "ro": "Pantaloni scurți din denim cu petic în formă de stea",
+        "el": "Τζιν σορτς με μπάλωμα αστεριού",
+        "tr": "Yıldız yamalı kot şort",
+        "uk": "Джинсові шорти з нашивкою-зіркою",
+        "ar": "شورت جينز برقعة نجمة",
+        "ja": "星パッチ付きデニムショーツ",
+        "ko": "별 패치 데님 반바지",
+        "vi": "Quần short denim đính miếng vá hình sao"
+      }
+    },
+    {
+      "name": "Logo Sweat Shorts",
+      "translations": {
+        "fi": "Logolliset collegeshortsit",
+        "da": "Sweatshorts med logo",
+        "nb": "Sweatshorts med logo",
+        "cs": "Teplákové šortky s logem",
+        "sk": "Teplákové šortky s logom",
+        "hu": "Logós szabadidőshort",
+        "ro": "Pantaloni scurți tip trening cu logo",
+        "el": "Σορτς φούτερ με λογότυπο",
+        "tr": "Logolu eşofman şortu",
+        "uk": "Трикотажні шорти з логотипом",
+        "ar": "شورت رياضي بشعار",
+        "ja": "ロゴ入りスウェットショーツ",
+        "ko": "로고 스웨트 반바지",
+        "vi": "Quần short nỉ có logo"
+      }
+    },
+    {
+      "name": "Mesh Training Shorts",
+      "translations": {
+        "fi": "Verkkokankaiset treenishortsit",
+        "da": "Træningsshorts i mesh",
+        "nb": "Treningsshorts i netting",
+        "cs": "Tréninkové šortky ze síťoviny",
+        "sk": "Tréningové šortky zo sieťoviny",
+        "hu": "Hálós edzőshort",
+        "el": "Σορτς προπόνησης από διχτυωτό ύφασμα",
+        "tr": "File antrenman şortu",
+        "uk": "Тренувальні шорти із сітки",
+        "ar": "شورت تدريب شبكي",
+        "ja": "メッシュトレーニングショーツ",
+        "ko": "메시 트레이닝 반바지",
+        "vi": "Quần short tập luyện lưới"
+      }
+    },
+    {
+      "name": "Embroidered Cargo Shorts",
+      "translations": {
+        "fi": "Kirjaillut cargoshortsit",
+        "da": "Cargoshorts med broderi",
+        "nb": "Cargoshorts med broderi",
+        "cs": "Cargo šortky s výšivkou",
+        "sk": "Cargo šortky s výšivkou",
+        "hu": "Hímzett cargo rövidnadrág",
+        "el": "Cargo σορτς με κέντημα",
+        "tr": "İşlemeli kargo şort",
+        "uk": "Шорти карго з вишивкою",
+        "ar": "شورت كارغو مطرز",
+        "ja": "刺繍入りカーゴショーツ",
+        "ko": "자수 카고 반바지",
+        "vi": "Quần short cargo thêu"
+      }
+    },
+    {
+      "name": "Vintage Graphic T-Shirt",
+      "translations": {
+        "fi": "Vintage-henkinen kuvioitu T-paita",
+        "da": "T-shirt med vintagegrafik",
+        "nb": "T-skjorte med vintagegrafikk",
+        "cs": "Tričko s vintage potiskem",
+        "sk": "Tričko s vintage potlačou",
+        "hu": "Vintage mintás póló",
+        "el": "Μπλουζάκι με vintage σχέδιο",
+        "tr": "Vintage grafik desenli tişört",
+        "uk": "Футболка з вінтажним принтом",
+        "ar": "تيشيرت برسمة بطابع قديم",
+        "ja": "ヴィンテージ風グラフィックTシャツ",
+        "ko": "빈티지 그래픽 티셔츠",
+        "vi": "Áo thun họa tiết phong cách cổ điển"
+      }
+    },
+    {
+      "name": "Color-Block Casual Jacket",
+      "translations": {
+        "fi": "Värilohkoiltu vapaa-ajan takki",
+        "da": "Afslappet jakke med farvefelter",
+        "nb": "Uformell jakke med fargeblokker",
+        "cs": "Volnočasová bunda s barevnými bloky",
+        "sk": "Voľnočasová bunda s farebnými blokmi",
+        "hu": "Színblokkolt hétköznapi dzseki",
+        "ro": "Jachetă casual cu blocuri de culoare",
+        "el": "Καθημερινό μπουφάν με χρωματικά μπλοκ",
+        "tr": "Renk bloklu günlük ceket",
+        "uk": "Повсякденна куртка з кольоровими блоками",
+        "ar": "سترة كاجوال بألوان متباينة",
+        "ja": "カラーブロックのカジュアルジャケット",
+        "ko": "컬러 블록 캐주얼 재킷",
+        "vi": "Áo khoác thường ngày phối mảng màu"
+      }
+    },
+    {
+      "name": "Classic Casual T-Shirt",
+      "translations": {
+        "fi": "Klassinen vapaa-ajan T-paita",
+        "da": "Klassisk afslappet T-shirt",
+        "nb": "Klassisk uformell T-skjorte",
+        "cs": "Klasické volnočasové tričko",
+        "sk": "Klasické voľnočasové tričko",
+        "hu": "Klasszikus hétköznapi póló",
+        "el": "Κλασικό καθημερινό μπλουζάκι",
+        "tr": "Klasik günlük tişört",
+        "uk": "Класична повсякденна футболка",
+        "ar": "تيشيرت كاجوال كلاسيكي",
+        "ja": "クラシックカジュアルTシャツ",
+        "ko": "클래식 캐주얼 티셔츠",
+        "vi": "Áo thun thường ngày cổ điển"
+      }
+    },
+    {
+      "name": "Two-Color Down Vest",
+      "translations": {
+        "fi": "Kaksivärinen untuvaliivi",
+        "da": "Tofarvet dunvest",
+        "nb": "Tofarget dunvest",
+        "cs": "Dvoubarevná péřová vesta",
+        "sk": "Dvojfarebná páperová vesta",
+        "hu": "Kétszínű pehelymellény",
+        "el": "Δίχρωμο πουπουλένιο γιλέκο",
+        "tr": "İki renkli kuş tüyü yelek",
+        "uk": "Двоколірний пуховий жилет",
+        "ar": "سترة دون أكمام من الداون بلونين",
+        "ja": "ツートーンダウンベスト",
+        "ko": "투톤 다운 베스트",
+        "vi": "Áo ghi lê lông vũ hai màu"
+      }
+    },
+    {
+      "name": "Classic Zip-Up Sweatshirt",
+      "translations": {
+        "fi": "Klassinen vetoketjullinen collegepaita",
+        "da": "Klassisk sweatshirt med lynlås",
+        "nb": "Klassisk genser med glidelås",
+        "cs": "Klasická mikina na zip",
+        "sk": "Klasická mikina na zips",
+        "hu": "Klasszikus cipzáras pulóver",
+        "el": "Κλασική μπλούζα φούτερ με φερμουάρ",
+        "tr": "Klasik fermuarlı sweatshirt",
+        "uk": "Класична кофта на блискавці",
+        "ar": "سويت شيرت كلاسيكي بسحاب",
+        "ja": "クラシックジップアップスウェット",
+        "ko": "클래식 집업 스웨트셔츠",
+        "vi": "Áo nỉ khóa kéo cổ điển"
+      }
+    },
+    {
+      "name": "Hooded Outdoor Windbreaker",
+      "translations": {
+        "fi": "Hupullinen ulkoilutuulitakki",
+        "da": "Vindjakke med hætte til udendørsbrug",
+        "nb": "Vindjakke med hette til utendørsbruk",
+        "cs": "Outdoorová větrovka s kapucí",
+        "sk": "Outdoorová vetrovka s kapucňou",
+        "hu": "Kapucnis kültéri széldzseki",
+        "ro": "Jachetă de vânt cu glugă pentru exterior",
+        "el": "Αντιανεμικό υπαίθρου με κουκούλα",
+        "tr": "Kapüşonlu outdoor rüzgârlık",
+        "uk": "Вітровка з капюшоном для активного відпочинку",
+        "ar": "سترة واقية من الرياح بغطاء رأس للأنشطة الخارجية",
+        "ja": "フード付きアウトドアウインドブレーカー",
+        "ko": "후드 아웃도어 바람막이",
+        "vi": "Áo khoác gió ngoài trời có mũ"
+      }
+    }
+  ]
+}

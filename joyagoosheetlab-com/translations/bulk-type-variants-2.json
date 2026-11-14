@@ -1,0 +1,508 @@
+{
+  "items": [
+    {
+      "name": "Fashion Casual Jacket 673",
+      "source": "Fashion Casual Jacket",
+      "suffix": " 673",
+      "translations": {
+        "fi": "Muodikas rento takki 673",
+        "da": "Casual modejakke 673",
+        "nb": "Uformell motejakke 673",
+        "cs": "Módní volnočasová bunda 673",
+        "sk": "Módna voľnočasová bunda 673",
+        "hu": "Divatos szabadidős dzseki 673",
+        "ro": "Jachetă casual la modă 673",
+        "el": "Μοντέρνο καθημερινό μπουφάν 673",
+        "tr": "Moda günlük ceket 673",
+        "uk": "Модна повсякденна куртка 673",
+        "ar": "سترة كاجوال عصرية 673",
+        "ja": "ファッションカジュアルジャケット 673",
+        "ko": "패션 캐주얼 재킷 673",
+        "vi": "Áo khoác thường ngày thời trang 673"
+      }
+    },
+    {
+      "name": "Fashion Casual Jacket 002",
+      "source": "Fashion Casual Jacket",
+      "suffix": " 002",
+      "translations": {
+        "fi": "Muodikas rento takki 002",
+        "da": "Casual modejakke 002",
+        "nb": "Uformell motejakke 002",
+        "cs": "Módní volnočasová bunda 002",
+        "sk": "Módna voľnočasová bunda 002",
+        "hu": "Divatos szabadidős dzseki 002",
+        "ro": "Jachetă casual la modă 002",
+        "el": "Μοντέρνο καθημερινό μπουφάν 002",
+        "tr": "Moda günlük ceket 002",
+        "uk": "Модна повсякденна куртка 002",
+        "ar": "سترة كاجوال عصرية 002",
+        "ja": "ファッションカジュアルジャケット 002",
+        "ko": "패션 캐주얼 재킷 002",
+        "vi": "Áo khoác thường ngày thời trang 002"
+      }
+    },
+    {
+      "name": "Fashion Casual Jacket 037",
+      "source": "Fashion Casual Jacket",
+      "suffix": " 037",
+      "translations": {
+        "fi": "Muodikas rento takki 037",
+        "da": "Casual modejakke 037",
+        "nb": "Uformell motejakke 037",
+        "cs": "Módní volnočasová bunda 037",
+        "sk": "Módna voľnočasová bunda 037",
+        "hu": "Divatos szabadidős dzseki 037",
+        "ro": "Jachetă casual la modă 037",
+        "el": "Μοντέρνο καθημερινό μπουφάν 037",
+        "tr": "Moda günlük ceket 037",
+        "uk": "Модна повсякденна куртка 037",
+        "ar": "سترة كاجوال عصرية 037",
+        "ja": "ファッションカジュアルジャケット 037",
+        "ko": "패션 캐주얼 재킷 037",
+        "vi": "Áo khoác thường ngày thời trang 037"
+      }
+    },
+    {
+      "name": "Fashion Casual Shoes 046",
+      "source": "Fashion Casual Shoes",
+      "suffix": " 046",
+      "translations": {
+        "fi": "Muodikkaat vapaa-ajan kengät 046",
+        "da": "Casual modesko 046",
+        "nb": "Uformelle motesko 046",
+        "cs": "Módní volnočasové boty 046",
+        "sk": "Módna voľnočasová obuv 046",
+        "hu": "Divatos szabadidőcipő 046",
+        "ro": "Încălțăminte casual la modă 046",
+        "el": "Μοντέρνα καθημερινά παπούτσια 046",
+        "tr": "Moda günlük ayakkabı 046",
+        "uk": "Модне повсякденне взуття 046",
+        "ar": "أحذية كاجوال عصرية 046",
+        "ja": "ファッションカジュアルシューズ 046",
+        "ko": "패션 캐주얼 신발 046",
+        "vi": "Giày thường ngày thời trang 046"
+      }
+    },
+    {
+      "name": "Fashion Casual Shoes 072",
+      "source": "Fashion Casual Shoes",
+      "suffix": " 072",
+      "translations": {
+        "fi": "Muodikkaat vapaa-ajan kengät 072",
+        "da": "Casual modesko 072",
+        "nb": "Uformelle motesko 072",
+        "cs": "Módní volnočasové boty 072",
+        "sk": "Módna voľnočasová obuv 072",
+        "hu": "Divatos szabadidőcipő 072",
+        "ro": "Încălțăminte casual la modă 072",
+        "el": "Μοντέρνα καθημερινά παπούτσια 072",
+        "tr": "Moda günlük ayakkabı 072",
+        "uk": "Модне повсякденне взуття 072",
+        "ar": "أحذية كاجوال عصرية 072",
+        "ja": "ファッションカジュアルシューズ 072",
+        "ko": "패션 캐주얼 신발 072",
+        "vi": "Giày thường ngày thời trang 072"
+      }
+    },
+    {
+      "name": "Fashion Casual Shoes 658",
+      "source": "Fashion Casual Shoes",
+      "suffix": " 658",
+      "translations": {
+        "fi": "Muodikkaat vapaa-ajan kengät 658",
+        "da": "Casual modesko 658",
+        "nb": "Uformelle motesko 658",
+        "cs": "Módní volnočasové boty 658",
+        "sk": "Módna voľnočasová obuv 658",
+        "hu": "Divatos szabadidőcipő 658",
+        "ro": "Încălțăminte casual la modă 658",
+        "el": "Μοντέρνα καθημερινά παπούτσια 658",
+        "tr": "Moda günlük ayakkabı 658",
+        "uk": "Модне повсякденне взуття 658",
+        "ar": "أحذية كاجوال عصرية 658",
+        "ja": "ファッションカジュアルシューズ 658",
+        "ko": "패션 캐주얼 신발 658",
+        "vi": "Giày thường ngày thời trang 658"
+      }
+    },
+    {
+      "name": "Fashion Sneakers 229",
+      "source": "Fashion Sneakers",
+      "suffix": " 229",
+      "translations": {
+        "fi": "Muodikkaat tennarit 229",
+        "da": "Modesneakers 229",
+        "nb": "Motesneakers 229",
+        "cs": "Módní tenisky 229",
+        "sk": "Módne tenisky 229",
+        "hu": "Divatos sportcipő 229",
+        "ro": "Adidași la modă 229",
+        "el": "Μοντέρνα sneakers 229",
+        "tr": "Moda spor ayakkabı 229",
+        "uk": "Модні кросівки 229",
+        "ar": "أحذية رياضية عصرية 229",
+        "ja": "ファッションスニーカー 229",
+        "ko": "패션 스니커즈 229",
+        "vi": "Giày sneaker thời trang 229"
+      }
+    },
+    {
+      "name": "Fashion Sneakers 563",
+      "source": "Fashion Sneakers",
+      "suffix": " 563",
+      "translations": {
+        "fi": "Muodikkaat tennarit 563",
+        "da": "Modesneakers 563",
+        "nb": "Motesneakers 563",
+        "cs": "Módní tenisky 563",
+        "sk": "Módne tenisky 563",
+        "hu": "Divatos sportcipő 563",
+        "ro": "Adidași la modă 563",
+        "el": "Μοντέρνα sneakers 563",
+        "tr": "Moda spor ayakkabı 563",
+        "uk": "Модні кросівки 563",
+        "ar": "أحذية رياضية عصرية 563",
+        "ja": "ファッションスニーカー 563",
+        "ko": "패션 스니커즈 563",
+        "vi": "Giày sneaker thời trang 563"
+      }
+    },
+    {
+      "name": "Fashion Sneakers 01",
+      "source": "Fashion Sneakers",
+      "suffix": " 01",
+      "translations": {
+        "fi": "Muodikkaat tennarit 01",
+        "da": "Modesneakers 01",
+        "nb": "Motesneakers 01",
+        "cs": "Módní tenisky 01",
+        "sk": "Módne tenisky 01",
+        "hu": "Divatos sportcipő 01",
+        "ro": "Adidași la modă 01",
+        "el": "Μοντέρνα sneakers 01",
+        "tr": "Moda spor ayakkabı 01",
+        "uk": "Модні кросівки 01",
+        "ar": "أحذية رياضية عصرية 01",
+        "ja": "ファッションスニーカー 01",
+        "ko": "패션 스니커즈 01",
+        "vi": "Giày sneaker thời trang 01"
+      }
+    },
+    {
+      "name": "Crossbody Bag and Pouch Set 02",
+      "source": "Crossbody Bag and Pouch Set",
+      "suffix": " 02",
+      "translations": {
+        "fi": "Olkalaukun ja pikkupussin setti 02",
+        "da": "Sæt med crossbodytaske og lille taske 02",
+        "nb": "Sett med crossbodyveske og liten veske 02",
+        "cs": "Sada crossbody kabelky a pouzdra 02",
+        "sk": "Súprava crossbody kabelky a puzdra 02",
+        "hu": "Keresztpántos táska és kis tok szett 02",
+        "ro": "Set cu geantă crossbody și husă 02",
+        "el": "Σετ με χιαστί τσάντα και θήκη 02",
+        "tr": "Çapraz çanta ve kese takımı 02",
+        "uk": "Комплект сумки через плече та чохла 02",
+        "ar": "طقم حقيبة كروس بودي وحقيبة صغيرة 02",
+        "ja": "クロスボディバッグとポーチのセット 02",
+        "ko": "크로스백과 파우치 세트 02",
+        "vi": "Bộ túi đeo chéo và túi nhỏ 02"
+      }
+    },
+    {
+      "name": "Crossbody Bag and Pouch Set 23",
+      "source": "Crossbody Bag and Pouch Set",
+      "suffix": " 23",
+      "translations": {
+        "fi": "Olkalaukun ja pikkupussin setti 23",
+        "da": "Sæt med crossbodytaske og lille taske 23",
+        "nb": "Sett med crossbodyveske og liten veske 23",
+        "cs": "Sada crossbody kabelky a pouzdra 23",
+        "sk": "Súprava crossbody kabelky a puzdra 23",
+        "hu": "Keresztpántos táska és kis tok szett 23",
+        "ro": "Set cu geantă crossbody și husă 23",
+        "el": "Σετ με χιαστί τσάντα και θήκη 23",
+        "tr": "Çapraz çanta ve kese takımı 23",
+        "uk": "Комплект сумки через плече та чохла 23",
+        "ar": "طقم حقيبة كروس بودي وحقيبة صغيرة 23",
+        "ja": "クロスボディバッグとポーチのセット 23",
+        "ko": "크로스백과 파우치 세트 23",
+        "vi": "Bộ túi đeo chéo và túi nhỏ 23"
+      }
+    },
+    {
+      "name": "Vertical Crossbody Bag 3265",
+      "source": "Vertical Crossbody Bag",
+      "suffix": " 3265",
+      "translations": {
+        "fi": "Pystymallinen olkalaukku 3265",
+        "da": "Lodret crossbodytaske 3265",
+        "nb": "Loddrett crossbodyveske 3265",
+        "cs": "Svislá crossbody kabelka 3265",
+        "sk": "Zvislá crossbody taška 3265",
+        "hu": "Függőleges keresztpántos táska 3265",
+        "ro": "Geantă crossbody verticală 3265",
+        "el": "Κάθετη χιαστί τσάντα 3265",
+        "tr": "Dikey çapraz çanta 3265",
+        "uk": "Вертикальна сумка через плече 3265",
+        "ar": "حقيبة كروس بودي عمودية 3265",
+        "ja": "縦型クロスボディバッグ 3265",
+        "ko": "세로형 크로스백 3265",
+        "vi": "Túi đeo chéo dáng dọc 3265"
+      }
+    },
+    {
+      "name": "Vertical Crossbody Bag G8089",
+      "source": "Vertical Crossbody Bag",
+      "suffix": " G8089",
+      "translations": {
+        "fi": "Pystymallinen olkalaukku G8089",
+        "da": "Lodret crossbodytaske G8089",
+        "nb": "Loddrett crossbodyveske G8089",
+        "cs": "Svislá crossbody kabelka G8089",
+        "sk": "Zvislá crossbody taška G8089",
+        "hu": "Függőleges keresztpántos táska G8089",
+        "ro": "Geantă crossbody verticală G8089",
+        "el": "Κάθετη χιαστί τσάντα G8089",
+        "tr": "Dikey çapraz çanta G8089",
+        "uk": "Вертикальна сумка через плече G8089",
+        "ar": "حقيبة كروس بودي عمودية G8089",
+        "ja": "縦型クロスボディバッグ G8089",
+        "ko": "세로형 크로스백 G8089",
+        "vi": "Túi đeo chéo dáng dọc G8089"
+      }
+    },
+    {
+      "name": "Monogram Crossbody Bag 82367",
+      "source": "Monogram Crossbody Bag",
+      "suffix": " 82367",
+      "translations": {
+        "fi": "Monogrammikuosinen olkalaukku 82367",
+        "da": "Crossbodytaske med monogram 82367",
+        "nb": "Crossbodyveske med monogram 82367",
+        "cs": "Crossbody kabelka s monogramem 82367",
+        "sk": "Crossbody kabelka s monogramom 82367",
+        "hu": "Monogramos keresztpántos táska 82367",
+        "ro": "Geantă crossbody cu monogramă 82367",
+        "el": "Χιαστί τσάντα με μονόγραμμα 82367",
+        "tr": "Monogramlı çapraz çanta 82367",
+        "uk": "Сумка через плече з монограмою 82367",
+        "ar": "حقيبة كروس بودي بحروف متداخلة 82367",
+        "ja": "モノグラムクロスボディバッグ 82367",
+        "ko": "모노그램 크로스백 82367",
+        "vi": "Túi đeo chéo chữ lồng 82367"
+      }
+    },
+    {
+      "name": "Monogram Crossbody Bag 2335",
+      "source": "Monogram Crossbody Bag",
+      "suffix": " 2335",
+      "translations": {
+        "fi": "Monogrammikuosinen olkalaukku 2335",
+        "da": "Crossbodytaske med monogram 2335",
+        "nb": "Crossbodyveske med monogram 2335",
+        "cs": "Crossbody kabelka s monogramem 2335",
+        "sk": "Crossbody kabelka s monogramom 2335",
+        "hu": "Monogramos keresztpántos táska 2335",
+        "ro": "Geantă crossbody cu monogramă 2335",
+        "el": "Χιαστί τσάντα με μονόγραμμα 2335",
+        "tr": "Monogramlı çapraz çanta 2335",
+        "uk": "Сумка через плече з монограмою 2335",
+        "ar": "حقيبة كروس بودي بحروف متداخلة 2335",
+        "ja": "モノグラムクロスボディバッグ 2335",
+        "ko": "모노그램 크로스백 2335",
+        "vi": "Túi đeo chéo chữ lồng 2335"
+      }
+    },
+    {
+      "name": "Monogram Messenger Bag 10086",
+      "source": "Monogram Messenger Bag",
+      "suffix": " 10086",
+      "translations": {
+        "fi": "Monogrammikuosinen lähettiolkalaukku 10086",
+        "da": "Messengerbag med monogram 10086",
+        "nb": "Messengerveske med monogram 10086",
+        "cs": "Messenger taška s monogramem 10086",
+        "sk": "Messenger taška s monogramom 10086",
+        "hu": "Monogramos oldaltáska 10086",
+        "ro": "Geantă messenger cu monogramă 10086",
+        "el": "Τσάντα messenger με μονόγραμμα 10086",
+        "tr": "Monogramlı postacı çantası 10086",
+        "uk": "Сумка-месенджер із монограмою 10086",
+        "ar": "حقيبة ماسنجر بحروف متداخلة 10086",
+        "ja": "モノグラムメッセンジャーバッグ 10086",
+        "ko": "모노그램 메신저백 10086",
+        "vi": "Túi messenger chữ lồng 10086"
+      }
+    },
+    {
+      "name": "Monogram Messenger Bag 9110",
+      "source": "Monogram Messenger Bag",
+      "suffix": " 9110",
+      "translations": {
+        "fi": "Monogrammikuosinen lähettiolkalaukku 9110",
+        "da": "Messengerbag med monogram 9110",
+        "nb": "Messengerveske med monogram 9110",
+        "cs": "Messenger taška s monogramem 9110",
+        "sk": "Messenger taška s monogramom 9110",
+        "hu": "Monogramos oldaltáska 9110",
+        "ro": "Geantă messenger cu monogramă 9110",
+        "el": "Τσάντα messenger με μονόγραμμα 9110",
+        "tr": "Monogramlı postacı çantası 9110",
+        "uk": "Сумка-месенджер із монограмою 9110",
+        "ar": "حقيبة ماسنجر بحروف متداخلة 9110",
+        "ja": "モノグラムメッセンジャーバッグ 9110",
+        "ko": "모노그램 메신저백 9110",
+        "vi": "Túi messenger chữ lồng 9110"
+      }
+    },
+    {
+      "name": "Women's Handbag Collection 632",
+      "source": "Women's Handbag Collection",
+      "suffix": " 632",
+      "translations": {
+        "fi": "Naisten käsilaukkujen valikoima 632",
+        "da": "Kollektion af håndtasker til kvinder 632",
+        "nb": "Kolleksjon med håndvesker for kvinner 632",
+        "cs": "Kolekce dámských kabelek 632",
+        "sk": "Kolekcia dámskych kabeliek 632",
+        "hu": "Női kézitáskák kollekciója 632",
+        "ro": "Colecție de genți de mână pentru femei 632",
+        "el": "Συλλογή γυναικείων τσαντών χειρός 632",
+        "tr": "Kadın el çantası koleksiyonu 632",
+        "uk": "Колекція жіночих сумок 632",
+        "ar": "تشكيلة حقائب يد نسائية 632",
+        "ja": "レディースハンドバッグコレクション 632",
+        "ko": "여성 핸드백 컬렉션 632",
+        "vi": "Bộ sưu tập túi xách tay nữ 632"
+      }
+    },
+    {
+      "name": "Women's Handbag Collection DD0",
+      "source": "Women's Handbag Collection",
+      "suffix": " DD0",
+      "translations": {
+        "fi": "Naisten käsilaukkujen valikoima DD0",
+        "da": "Kollektion af håndtasker til kvinder DD0",
+        "nb": "Kolleksjon med håndvesker for kvinner DD0",
+        "cs": "Kolekce dámských kabelek DD0",
+        "sk": "Kolekcia dámskych kabeliek DD0",
+        "hu": "Női kézitáskák kollekciója DD0",
+        "ro": "Colecție de genți de mână pentru femei DD0",
+        "el": "Συλλογή γυναικείων τσαντών χειρός DD0",
+        "tr": "Kadın el çantası koleksiyonu DD0",
+        "uk": "Колекція жіночих сумок DD0",
+        "ar": "تشكيلة حقائب يد نسائية DD0",
+        "ja": "レディースハンドバッグコレクション DD0",
+        "ko": "여성 핸드백 컬렉션 DD0",
+        "vi": "Bộ sưu tập túi xách tay nữ DD0"
+      }
+    },
+    {
+      "name": "Crossbody Bag Collection 004",
+      "source": "Crossbody Bag Collection",
+      "suffix": " 004",
+      "translations": {
+        "fi": "Olkalaukkujen valikoima 004",
+        "da": "Kollektion af crossbodytasker 004",
+        "nb": "Kolleksjon med crossbodyvesker 004",
+        "cs": "Kolekce crossbody kabelek 004",
+        "sk": "Kolekcia crossbody kabeliek 004",
+        "hu": "Keresztpántos táskák kollekciója 004",
+        "ro": "Colecție de genți crossbody 004",
+        "el": "Συλλογή χιαστί τσαντών 004",
+        "tr": "Çapraz çanta koleksiyonu 004",
+        "uk": "Колекція сумок через плече 004",
+        "ar": "تشكيلة حقائب كروس بودي 004",
+        "ja": "クロスボディバッグコレクション 004",
+        "ko": "크로스백 컬렉션 004",
+        "vi": "Bộ sưu tập túi đeo chéo 004"
+      }
+    },
+    {
+      "name": "Crossbody Bag Collection HK88",
+      "source": "Crossbody Bag Collection",
+      "suffix": " HK88",
+      "translations": {
+        "fi": "Olkalaukkujen valikoima HK88",
+        "da": "Kollektion af crossbodytasker HK88",
+        "nb": "Kolleksjon med crossbodyvesker HK88",
+        "cs": "Kolekce crossbody kabelek HK88",
+        "sk": "Kolekcia crossbody kabeliek HK88",
+        "hu": "Keresztpántos táskák kollekciója HK88",
+        "ro": "Colecție de genți crossbody HK88",
+        "el": "Συλλογή χιαστί τσαντών HK88",
+        "tr": "Çapraz çanta koleksiyonu HK88",
+        "uk": "Колекція сумок через плече HK88",
+        "ar": "تشكيلة حقائب كروس بودي HK88",
+        "ja": "クロスボディバッグコレクション HK88",
+        "ko": "크로스백 컬렉션 HK88",
+        "vi": "Bộ sưu tập túi đeo chéo HK88"
+      }
+    },
+    {
+      "name": "Graphic Crewneck Sweatshirt",
+      "source": "Graphic Crewneck Sweatshirt",
+      "suffix": "",
+      "translations": {
+        "fi": "Kuvioitu pyöreäkaula-aukkoinen collegepaita",
+        "da": "Sweatshirt med rund hals og grafik",
+        "nb": "Genser med rund hals og grafikk",
+        "cs": "Mikina s kulatým výstřihem a grafikou",
+        "sk": "Mikina s okrúhlym výstrihom a grafikou",
+        "hu": "Grafikus mintás kerek nyakú pulóver",
+        "ro": "Bluză sport cu guler rotund și grafică",
+        "el": "Φούτερ με στρογγυλή λαιμόκοψη και γραφικά",
+        "tr": "Grafikli bisiklet yaka sweatshirt",
+        "uk": "Світшот із круглим вирізом і графікою",
+        "ar": "سترة بياقة مستديرة ورسومات",
+        "ja": "グラフィッククルーネックスウェットシャツ",
+        "ko": "그래픽 크루넥 스웨트셔츠",
+        "vi": "Áo nỉ cổ tròn họa tiết"
+      }
+    },
+    {
+      "name": "Graphic Crewneck Sweatshirt 61",
+      "source": "Graphic Crewneck Sweatshirt",
+      "suffix": " 61",
+      "translations": {
+        "fi": "Kuvioitu pyöreäkaula-aukkoinen collegepaita 61",
+        "da": "Sweatshirt med rund hals og grafik 61",
+        "nb": "Genser med rund hals og grafikk 61",
+        "cs": "Mikina s kulatým výstřihem a grafikou 61",
+        "sk": "Mikina s okrúhlym výstrihom a grafikou 61",
+        "hu": "Grafikus mintás kerek nyakú pulóver 61",
+        "ro": "Bluză sport cu guler rotund și grafică 61",
+        "el": "Φούτερ με στρογγυλή λαιμόκοψη και γραφικά 61",
+        "tr": "Grafikli bisiklet yaka sweatshirt 61",
+        "uk": "Світшот із круглим вирізом і графікою 61",
+        "ar": "سترة بياقة مستديرة ورسومات 61",
+        "ja": "グラフィッククルーネックスウェットシャツ 61",
+        "ko": "그래픽 크루넥 스웨트셔츠 61",
+        "vi": "Áo nỉ cổ tròn họa tiết 61"
+      }
+    },
+    {
+      "name": "Graphic Crewneck Sweatshirt 03",
+      "source": "Graphic Crewneck Sweatshirt",
+      "suffix": " 03",
+      "translations": {
+        "fi": "Kuvioitu pyöreäkaula-aukkoinen collegepaita 03",
+        "da": "Sweatshirt med rund hals og grafik 03",
+        "nb": "Genser med rund hals og grafikk 03",
+        "cs": "Mikina s kulatým výstřihem a grafikou 03",
+        "sk": "Mikina s okrúhlym výstrihom a grafikou 03",
+        "hu": "Grafikus mintás kerek nyakú pulóver 03",
+        "ro": "Bluză sport cu guler rotund și grafică 03",
+        "el": "Φούτερ με στρογγυλή λαιμόκοψη και γραφικά 03",
+        "tr": "Grafikli bisiklet yaka sweatshirt 03",
+        "uk": "Світшот із круглим вирізом і графікою 03",
+        "ar": "سترة بياقة مستديرة ورسومات 03",
+        "ja": "グラフィッククルーネックスウェットシャツ 03",
+        "ko": "그래픽 크루넥 스웨트셔츠 03",
+        "vi": "Áo nỉ cổ tròn họa tiết 03"
+      }
+    }
+  ]
+}

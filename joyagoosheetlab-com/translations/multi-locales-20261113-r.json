@@ -1,0 +1,274 @@
+{
+  "items": [
+    {
+      "name": "CAR Casual Suit Set",
+      "translations": {
+        "fi": "CAR-rento pukusetti",
+        "da": "CAR-afslappet jakkesæt",
+        "nb": "CAR-uformelt dressett",
+        "cs": "Volnočasový komplet typu oblek CAR",
+        "sk": "Voľnočasový komplet typu oblek CAR",
+        "hu": "CAR hétköznapi öltönyszett",
+        "el": "Καθημερινό σετ τύπου κοστουμιού CAR",
+        "uk": "Повсякденний комплект типу костюма CAR",
+        "ar": "طقم كاجوال على هيئة بدلة CAR",
+        "ja": "CARカジュアルスーツセット",
+        "ko": "CAR 캐주얼 수트 세트",
+        "vi": "Bộ vest thường ngày CAR",
+        "tr": "CAR günlük takım elbise seti"
+      }
+    },
+    {
+      "name": "Autumn Knit Sweater 07HW",
+      "translations": {
+        "fi": "Syksyinen neulepaita 07HW",
+        "da": "Efterårsstriktrøje 07HW",
+        "nb": "Høststrikkegenser 07HW",
+        "cs": "Podzimní pletený svetr 07HW",
+        "sk": "Jesenný pletený sveter 07HW",
+        "hu": "Őszi kötött pulóver 07HW",
+        "el": "Φθινοπωρινό πλεκτό πουλόβερ 07HW",
+        "uk": "Осінній в’язаний светр 07HW",
+        "ar": "كنزة خريفية محبوكة 07HW",
+        "ja": "秋用ニットセーター 07HW",
+        "ko": "가을 니트 스웨터 07HW",
+        "vi": "Áo len dệt kim mùa thu 07HW",
+        "tr": "Sonbaharlık örgü kazak 07HW"
+      }
+    },
+    {
+      "name": "ME Waterproof Shell Jacket",
+      "translations": {
+        "fi": "ME-vedenpitävä kuoritakki",
+        "da": "ME-vandtæt skaljakke",
+        "nb": "ME-vanntett skalljakke",
+        "cs": "Nepromokavá svrchní bunda ME",
+        "sk": "Nepremokavá vrchná bunda ME",
+        "hu": "ME vízálló héjkabát",
+        "el": "Αδιάβροχο εξωτερικό μπουφάν ME",
+        "uk": "Водонепроникна зовнішня куртка ME",
+        "ar": "سترة خارجية ME مقاومة للماء",
+        "ja": "ME防水シェルジャケット",
+        "ko": "ME 방수 셸 재킷",
+        "vi": "Áo khoác ngoài chống nước ME",
+        "tr": "ME su geçirmez dış katman ceketi"
+      }
+    },
+    {
+      "name": "CaW Knit Sweater",
+      "translations": {
+        "fi": "CaW-neulepaita",
+        "da": "CaW-striktrøje",
+        "nb": "CaW-strikkegenser",
+        "cs": "Pletený svetr CaW",
+        "sk": "Pletený sveter CaW",
+        "hu": "CaW kötött pulóver",
+        "el": "Πλεκτό πουλόβερ CaW",
+        "uk": "В’язаний светр CaW",
+        "ar": "كنزة CaW محبوكة",
+        "ja": "CaWニットセーター",
+        "ko": "CaW 니트 스웨터",
+        "vi": "Áo len dệt kim CaW",
+        "tr": "CaW örgü kazak"
+      }
+    },
+    {
+      "name": "Casual Clothing Jacket",
+      "translations": {
+        "fi": "Rento vaatetakki",
+        "da": "Afslappet tøjjakke",
+        "nb": "Uformell klesjakke",
+        "cs": "Volnočasová bunda",
+        "sk": "Voľnočasová bunda",
+        "hu": "Hétköznapi dzseki",
+        "el": "Καθημερινό μπουφάν",
+        "uk": "Повсякденна куртка",
+        "ar": "سترة كاجوال",
+        "ja": "カジュアル衣料ジャケット",
+        "ko": "캐주얼 의류 재킷",
+        "vi": "Áo khoác thường ngày",
+        "tr": "Günlük giyim ceketi"
+      }
+    },
+    {
+      "name": "Dream Batch Sneakers",
+      "translations": {
+        "fi": "Dream Batch -tennarit",
+        "da": "Dream Batch-sneakers",
+        "nb": "Dream Batch-sneakers",
+        "cs": "Tenisky Dream Batch",
+        "sk": "Tenisky Dream Batch",
+        "hu": "Dream Batch sportcipő",
+        "el": "Sneakers Dream Batch",
+        "uk": "Кросівки Dream Batch",
+        "ar": "حذاء رياضي Dream Batch",
+        "ja": "Dream Batchスニーカー",
+        "ko": "Dream Batch 스니커즈",
+        "vi": "Giày sneaker Dream Batch",
+        "tr": "Dream Batch spor ayakkabı"
+      }
+    },
+    {
+      "name": "Zip-Up and Pullover Hoodie",
+      "translations": {
+        "fi": "Vetoketjuhuppari ja päälle puettava huppari",
+        "da": "Hættetrøje med lynlås og hættetrøje uden lynlås",
+        "nb": "Hettegenser med glidelås og hettegenser uten glidelås",
+        "cs": "Mikina s kapucí na zip a mikina bez zipu",
+        "sk": "Mikina s kapucňou na zips a mikina bez zipsu",
+        "hu": "Cipzáras és bebújós kapucnis pulóver",
+        "el": "Φούτερ με κουκούλα με φερμουάρ και χωρίς φερμουάρ",
+        "uk": "Худі на блискавці та худі без блискавки",
+        "ar": "هودي بسحاب وهودي دون سحاب",
+        "ja": "ジップパーカーとプルオーバーパーカー",
+        "ko": "집업 및 풀오버 후드티",
+        "vi": "Áo hoodie khóa kéo và áo hoodie chui đầu",
+        "tr": "Fermuarlı ve fermuarsız kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "31A8-9C Denim Outfit",
+      "translations": {
+        "fi": "Denimasu 31A8-9C",
+        "da": "Denimoutfit 31A8-9C",
+        "nb": "Denimantrekk 31A8-9C",
+        "cs": "Džínový outfit 31A8-9C",
+        "sk": "Džínsový outfit 31A8-9C",
+        "hu": "31A8-9C farmeröltözet",
+        "el": "Τζιν σύνολο 31A8-9C",
+        "uk": "Джинсовий комплект 31A8-9C",
+        "ar": "طقم جينز 31A8-9C",
+        "ja": "31A8-9Cデニムコーディネート",
+        "ko": "31A8-9C 데님 의상",
+        "vi": "Trang phục denim 31A8-9C",
+        "tr": "31A8-9C kot kıyafet"
+      }
+    },
+    {
+      "name": "M Knit-Panel Puffer Jacket",
+      "translations": {
+        "fi": "M-neulepaneelinen toppatakki",
+        "da": "M-pufferjakke med strikpaneler",
+        "nb": "M-pufferjakke med strikkepaneler",
+        "cs": "Prošívaná bunda M s pletenými panely",
+        "sk": "Prešívaná bunda M s pletenými panelmi",
+        "hu": "M kötött betétes pufi kabát",
+        "el": "Φουσκωτό μπουφάν M με πλεκτά πάνελ",
+        "uk": "Дута куртка M із в’язаними вставками",
+        "ar": "سترة منتفخة M بأجزاء محبوكة",
+        "ja": "Mニットパネル付きパファージャケット",
+        "ko": "M 니트 패널 패딩 재킷",
+        "vi": "Áo khoác phao M phối mảng dệt kim",
+        "tr": "M örgü panelli şişme mont"
+      }
+    },
+    {
+      "name": "Alcatraz Star Denim Shorts",
+      "translations": {
+        "fi": "Alcatraz-tähtikuvioiset farkkushortsit",
+        "da": "Alcatraz-denimshorts med stjerne",
+        "nb": "Alcatraz-denimshorts med stjerne",
+        "cs": "Džínové šortky Alcatraz s hvězdou",
+        "sk": "Džínsové šortky Alcatraz s hviezdou",
+        "hu": "Alcatraz csillagos farmershort",
+        "el": "Τζιν σορτς Alcatraz με αστέρι",
+        "uk": "Джинсові шорти Alcatraz із зіркою",
+        "ar": "شورت جينز Alcatraz بنجمة",
+        "ja": "Alcatrazスター付きデニムショーツ",
+        "ko": "Alcatraz 스타 데님 반바지",
+        "vi": "Quần short denim Alcatraz họa tiết sao",
+        "tr": "Alcatraz yıldızlı kot şort"
+      }
+    },
+    {
+      "name": "Casual Performance Set",
+      "translations": {
+        "fi": "Rento suorituskykyinen asusetti",
+        "da": "Afslappet performancesæt",
+        "nb": "Uformelt ytelsessett",
+        "cs": "Volnočasový funkční komplet",
+        "sk": "Voľnočasový funkčný komplet",
+        "hu": "Hétköznapi sportos szett",
+        "el": "Καθημερινό σετ επιδόσεων",
+        "uk": "Повсякденний функціональний комплект",
+        "ar": "طقم كاجوال للأداء",
+        "ja": "カジュアルパフォーマンスセット",
+        "ko": "캐주얼 퍼포먼스 세트",
+        "vi": "Bộ đồ vận động thường ngày",
+        "tr": "Günlük performans takımı"
+      }
+    },
+    {
+      "name": "CT WIP Hooded Sweat Jacket",
+      "translations": {
+        "fi": "CT WIP -hupullinen collegepaitatakki",
+        "da": "CT WIP-sweatjakke med hætte",
+        "nb": "CT WIP-sweatjakke med hette",
+        "cs": "Mikinová bunda CT WIP s kapucí",
+        "sk": "Mikinová bunda CT WIP s kapucňou",
+        "hu": "CT WIP kapucnis melegítődzseki",
+        "el": "Φούτερ μπουφάν CT WIP με κουκούλα",
+        "uk": "Трикотажна куртка CT WIP з капюшоном",
+        "ar": "سترة سويت CT WIP بغطاء رأس",
+        "ja": "CT WIPフード付きスウェットジャケット",
+        "ko": "CT WIP 후드 스웨트 재킷",
+        "vi": "Áo khoác nỉ có mũ CT WIP",
+        "tr": "CT WIP kapüşonlu sweatshirt ceket"
+      }
+    },
+    {
+      "name": "Fashion Couple Jacket",
+      "translations": {
+        "fi": "Muodikas pariskunnan takki",
+        "da": "Moderigtig parjakke",
+        "nb": "Fasjonabel parjakke",
+        "cs": "Módní bunda pro páry",
+        "sk": "Módna bunda pre páry",
+        "hu": "Divatos páros dzseki",
+        "el": "Μοντέρνο μπουφάν για ζευγάρια",
+        "uk": "Модна куртка для пар",
+        "ar": "سترة عصرية للأزواج",
+        "ja": "ファッションペアジャケット",
+        "ko": "패션 커플 재킷",
+        "vi": "Áo khoác thời trang cho cặp đôi",
+        "tr": "Moda çift ceketi"
+      }
+    },
+    {
+      "name": "ME Grid Pullover Jacket",
+      "translations": {
+        "fi": "ME-ruutukuvioinen päälle puettava takki",
+        "da": "ME-pulloverjakke med gittermønster",
+        "nb": "ME-pulloverjakke med rutemønster",
+        "cs": "Přetahovací bunda ME s mřížkovým vzorem",
+        "sk": "Navliekacia bunda ME s mriežkovým vzorom",
+        "hu": "ME rácsmintás bebújós dzseki",
+        "el": "Μπουφάν ME χωρίς φερμουάρ με μοτίβο πλέγματος",
+        "uk": "Куртка ME без блискавки з візерунком-сіткою",
+        "ar": "سترة ME دون سحاب بنقشة شبكية",
+        "ja": "MEグリッド柄プルオーバージャケット",
+        "ko": "ME 격자무늬 풀오버 재킷",
+        "vi": "Áo khoác chui đầu ME họa tiết ô lưới",
+        "tr": "ME kare desenli fermuarsız ceket"
+      }
+    },
+    {
+      "name": "Closed-Toe Cork Slides X1",
+      "translations": {
+        "fi": "Umpikärkiset korkkipistokkaat X1",
+        "da": "Korkslippers med lukket tå X1",
+        "nb": "Korkslippers med lukket tå X1",
+        "cs": "Korkové pantofle s uzavřenou špičkou X1",
+        "sk": "Korkové šľapky s uzavretou špičkou X1",
+        "hu": "Zárt orrú parafa papucs X1",
+        "el": "Παντόφλες από φελλό με κλειστή μύτη X1",
+        "uk": "Коркові шльопанці із закритим носком X1",
+        "ar": "شبشب فلين بمقدمة مغلقة X1",
+        "ja": "つま先が閉じたコルクスライド X1",
+        "ko": "앞이 막힌 코르크 슬라이드 X1",
+        "vi": "Dép lê nút bần bít mũi X1",
+        "tr": "Kapalı burun mantar terlik X1"
+      }
+    }
+  ]
+}

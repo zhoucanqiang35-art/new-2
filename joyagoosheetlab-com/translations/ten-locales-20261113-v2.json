@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "name": "Racing Print Zip Hoodie",
+      "translations": {
+        "cs": "Mikina s kapucí na zip a závodním potiskem",
+        "sk": "Mikina s kapucňou na zips a pretekárskou potlačou",
+        "hu": "Versenymintás cipzáras kapucnis pulóver",
+        "el": "Φούτερ με κουκούλα, φερμουάρ και τύπωμα αγώνων",
+        "uk": "Худі на блискавці з гоночним принтом",
+        "ar": "هودي بسحاب وطبعة سباقات",
+        "ja": "レーシングプリント入りジップパーカー",
+        "ko": "레이싱 프린트 집업 후드티",
+        "vi": "Áo hoodie khóa kéo họa tiết đua xe",
+        "tr": "Yarış baskılı fermuarlı kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Logo Box Summer T-Shirt",
+      "translations": {
+        "cs": "Letní tričko s logem v rámečku",
+        "sk": "Letné tričko s logom v rámčeku",
+        "hu": "Dobozlogós nyári póló",
+        "el": "Καλοκαιρινό μπλουζάκι με λογότυπο σε πλαίσιο",
+        "uk": "Літня футболка з логотипом у рамці",
+        "ar": "تيشيرت صيفي بشعار داخل مربع",
+        "ja": "ボックスロゴサマーTシャツ",
+        "ko": "박스 로고 여름 티셔츠",
+        "vi": "Áo thun mùa hè logo hình hộp",
+        "tr": "Kutu logolu yazlık tişört"
+      }
+    },
+    {
+      "name": "LX10 530 Sneakers",
+      "translations": {
+        "cs": "Tenisky LX10 530",
+        "sk": "Tenisky LX10 530",
+        "hu": "LX10 530 sportcipő",
+        "el": "Sneakers LX10 530",
+        "uk": "Кросівки LX10 530",
+        "ar": "حذاء رياضي LX10 530",
+        "ja": "LX10 530スニーカー",
+        "ko": "LX10 530 스니커즈",
+        "vi": "Giày sneaker LX10 530",
+        "tr": "LX10 530 spor ayakkabı"
+      }
+    },
+    {
+      "name": "700 Boost Sneakers",
+      "translations": {
+        "cs": "Tenisky 700 Boost",
+        "sk": "Tenisky 700 Boost",
+        "hu": "700 Boost sportcipő",
+        "el": "Sneakers 700 Boost",
+        "uk": "Кросівки 700 Boost",
+        "ar": "حذاء رياضي 700 Boost",
+        "ja": "700 Boostスニーカー",
+        "ko": "700 Boost 스니커즈",
+        "vi": "Giày sneaker 700 Boost",
+        "tr": "700 Boost spor ayakkabı"
+      }
+    },
+    {
+      "name": "Track 2 Sneakers",
+      "translations": {
+        "cs": "Tenisky Track 2",
+        "sk": "Tenisky Track 2",
+        "hu": "Track 2 sportcipő",
+        "el": "Sneakers Track 2",
+        "uk": "Кросівки Track 2",
+        "ar": "حذاء رياضي Track 2",
+        "ja": "Track 2スニーカー",
+        "ko": "Track 2 스니커즈",
+        "vi": "Giày sneaker Track 2",
+        "tr": "Track 2 spor ayakkabı"
+      }
+    }
+  ]
+}

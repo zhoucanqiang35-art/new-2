@@ -1,0 +1,155 @@
+{
+  "items": [
+    {
+      "name": "015 Classic Puffer Jacket",
+      "sourceId": "6157",
+      "translations": {
+        "fi": "015 Klassinen puffertakki",
+        "da": "015 Klassisk Pufferjakke"
+      }
+    },
+    {
+      "name": "Classic Everyday Jacket",
+      "sourceId": "6151",
+      "translations": {
+        "fi": "Klassinen arkitakki",
+        "da": "Klassisk hverdagsjakke",
+        "nb": "Klassisk hverdagsjakke"
+      }
+    },
+    {
+      "name": "002 Casual Tracksuit Set",
+      "sourceId": "6150",
+      "translations": {
+        "fi": "002 Rento verryttelypukusarja"
+      }
+    },
+    {
+      "name": "JMS-0926107 Puffer Jacket",
+      "sourceId": "6119",
+      "translations": {
+        "fi": "JMS-0926107 Puffer-takki",
+        "da": "JMS-0926107 Pufferjakke",
+        "nb": "JMS-0926107 Pufferjakke"
+      }
+    },
+    {
+      "name": "Classic Fashion Jacket 088",
+      "sourceId": "6017",
+      "translations": {
+        "fi": "Klassinen muotitakki 088",
+        "da": "Klassisk modejakke 088",
+        "nb": "Klassisk motejakke 088"
+      }
+    },
+    {
+      "name": "Premium Quilted Down Jacket",
+      "sourceId": "6013",
+      "translations": {
+        "fi": "Ensiluokkainen tikattu untuvatakki",
+        "da": "Premium quiltet dunjakke",
+        "nb": "Premium vattert dunjakke"
+      }
+    },
+    {
+      "name": "Thick Unisex Down Jacket",
+      "sourceId": "6012",
+      "translations": {
+        "fi": "Paksu unisex-untuvatakki",
+        "da": "Tyk unisex dunjakke",
+        "nb": "Tykk unisex dunjakke"
+      }
+    },
+    {
+      "name": "Classic Premium Down Jacket",
+      "sourceId": "6010",
+      "translations": {
+        "fi": "Klassinen Premium-untuvatakki",
+        "da": "Klassisk Premium dunjakke",
+        "nb": "Klassisk Premium dunjakke"
+      }
+    },
+    {
+      "name": "Detachable-Hood Padded Vest",
+      "sourceId": "6009",
+      "translations": {
+        "fi": "Irrotettavalla hupulla pehmustettu liivi",
+        "da": "Polstret vest med aftagelig hætte",
+        "nb": "Polstret vest med avtakbar hette"
+      }
+    },
+    {
+      "name": "Hooded Padded Winter Jacket",
+      "sourceId": "5991",
+      "translations": {
+        "fi": "Hupullinen topattu talvitakki",
+        "da": "Vatteret vinterjakke med hætte",
+        "nb": "Vattert vinterjakke med hette"
+      }
+    },
+    {
+      "name": "Men's Tech Fleece Tracksuit",
+      "sourceId": "5986",
+      "translations": {
+        "fi": "Miesten Tech Fleece -verryspuku",
+        "da": "Tech Fleece træningsdragt til mænd",
+        "nb": "Tech Fleece-treningsdress for menn"
+      }
+    },
+    {
+      "name": "Everyday Fashion Sandals 07",
+      "sourceId": "5968",
+      "translations": {
+        "fi": "Arjen muotisandaalit 07",
+        "da": "Hverdagsmodesandaler 07"
+      }
+    },
+    {
+      "name": "Versatile Summer Sandals",
+      "sourceId": "5964",
+      "translations": {
+        "fi": "Monipuoliset kesäsandaalit",
+        "da": "Alsidige sommersandaler",
+        "nb": "Allsidige sommersandaler"
+      }
+    },
+    {
+      "name": "Big Buckle Madrid Sandals",
+      "sourceId": "5950",
+      "translations": {
+        "fi": "Big Buckle Madrid -sandaalit",
+        "nb": "Madrid-sandaler med store spenner"
+      }
+    },
+    {
+      "name": "Home Leisure Slippers TD3",
+      "sourceId": "5942",
+      "translations": {
+        "fi": "Kodin vapaa-ajan tossut TD3"
+      }
+    },
+    {
+      "name": "Outdoor Windbreaker Jacket",
+      "sourceId": "6107",
+      "translations": {
+        "da": "Udendørs vindjakke"
+      }
+    },
+    {
+      "name": "M MAYA Puffer Jacket",
+      "sourceId": "6048",
+      "translations": {
+        "da": "M MAYA Pufferjakke",
+        "nb": "M MAYA Pufferjakke"
+      }
+    },
+    {
+      "name": "NFC Thick Winter Down Jacket",
+      "sourceId": "6014",
+      "translations": {
+        "da": "NFC tyk vinterdunjakke",
+        "nb": "NFC tykk vinterdunjakke"
+      }
+    }
+  ]
+}

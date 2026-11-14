@@ -1,0 +1,256 @@
+{
+  "items": [
+    {
+      "name": "Black Smartwatch",
+      "sourceId": "7384",
+      "translations": {
+        "ro": "Ceas inteligent negru"
+      }
+    },
+    {
+      "name": "Pendant Watch with Gift Box",
+      "sourceId": "7381",
+      "translations": {
+        "ro": "Ceas cu pandantiv cu cutie cadou"
+      }
+    },
+    {
+      "name": "Steel Bracelet Fashion Watch",
+      "sourceId": "7372",
+      "translations": {
+        "ro": "Ceas de modă cu brățară din oțel"
+      }
+    },
+    {
+      "name": "Arte Graphic T-Shirt",
+      "sourceId": "7352",
+      "translations": {
+        "ro": "Tricou Grafic Arte"
+      }
+    },
+    {
+      "name": "RL Half-Zip Knit Sweater",
+      "sourceId": "7333",
+      "translations": {
+        "ro": "Pulover din tricot cu jumătate de fermoar RL"
+      }
+    },
+    {
+      "name": "Corteiz Logo Shorts RR88C",
+      "sourceId": "7323",
+      "translations": {
+        "ro": "Pantaloni scurți Corteiz Logo RR88C"
+      }
+    },
+    {
+      "name": "Sweatshirt and Pants Set",
+      "sourceId": "7310",
+      "translations": {
+        "ro": "Set hanorac și pantaloni"
+      }
+    },
+    {
+      "name": "Navy Hoodie and Pants Set",
+      "sourceId": "7308",
+      "translations": {
+        "ro": "Set de hanoraci și pantaloni bleumarin"
+      }
+    },
+    {
+      "name": "Black Zip-Up Hoodie 005",
+      "sourceId": "7215",
+      "translations": {
+        "ro": "Hanorac negru cu fermoar 005"
+      }
+    },
+    {
+      "name": "Cable-Knit Crewneck Sweater",
+      "sourceId": "7176",
+      "translations": {
+        "ro": "Pulover crewneck din tricot cablu"
+      }
+    },
+    {
+      "name": "Heart Emblem Knit Cardigan",
+      "sourceId": "7141",
+      "translations": {
+        "ro": "Cardigan din tricot cu emblema inimii"
+      }
+    },
+    {
+      "name": "Fashion Knit Sweater",
+      "sourceId": "7111",
+      "translations": {
+        "ro": "Pulover din tricot la modă"
+      }
+    },
+    {
+      "name": "SU Tracksuit Set",
+      "sourceId": "7110",
+      "translations": {
+        "ro": "Set trening SU"
+      }
+    },
+    {
+      "name": "Premium Fashion Knit Sweater",
+      "sourceId": "7107",
+      "translations": {
+        "ro": "Pulover din tricot de modă premium"
+      }
+    },
+    {
+      "name": "Cotton Zip-Up Hoodie Jacket",
+      "sourceId": "7085",
+      "translations": {
+        "ro": "Jachetă din bumbac cu glugă cu fermoar"
+      }
+    },
+    {
+      "name": "Men’s Wool Knit Sweater",
+      "sourceId": "7070",
+      "translations": {
+        "ro": "Pulover din tricot din lână pentru bărbați"
+      }
+    },
+    {
+      "name": "Casual Zip-Up Hoodie Jacket",
+      "sourceId": "7053",
+      "translations": {
+        "ro": "Jachetă casual cu glugă cu fermoar"
+      }
+    },
+    {
+      "name": "Letter Print Zip-Up Hoodie",
+      "sourceId": "7044",
+      "translations": {
+        "ro": "Hanorac cu fermoar cu imprimeu cu litere"
+      }
+    },
+    {
+      "name": "Premium Knit Sweater",
+      "sourceId": "7041",
+      "translations": {
+        "ro": "Pulover din tricot premium"
+      }
+    },
+    {
+      "name": "Trendy Headphones 002",
+      "sourceId": "7025",
+      "translations": {
+        "ro": "Căști la modă 002"
+      }
+    },
+    {
+      "name": "Wireless earphone series",
+      "sourceId": "7023",
+      "translations": {
+        "ro": "Seria de căști fără fir"
+      }
+    },
+    {
+      "name": "Sixth Generation (USB-C)",
+      "sourceId": "6996",
+      "translations": {
+        "ro": "A șasea generație (USB-C)"
+      }
+    },
+    {
+      "name": "MZ77 High-Quality Earphones",
+      "sourceId": "6995",
+      "translations": {
+        "ro": "Căști de înaltă calitate MZ77"
+      }
+    },
+    {
+      "name": "AGT Premium Casual Shorts",
+      "sourceId": "6972",
+      "translations": {
+        "ro": "Pantaloni scurți casual AGT Premium"
+      }
+    },
+    {
+      "name": "040919 AMG Sports Shorts",
+      "sourceId": "6971",
+      "translations": {
+        "ro": "040919 Pantaloni scurți sport AMG"
+      }
+    },
+    {
+      "name": "Unisex Shorts, 40 Styles",
+      "sourceId": "6963",
+      "translations": {
+        "ro": "Pantaloni scurti unisex, 40 de stiluri"
+      }
+    },
+    {
+      "name": "MI Unisex Outfit Set",
+      "sourceId": "6944",
+      "translations": {
+        "ro": "Set de ținute unisex MI"
+      }
+    },
+    {
+      "name": "SV1 Shorts Collection",
+      "sourceId": "6940",
+      "translations": {
+        "ro": "Colecția de pantaloni scurți SV1"
+      }
+    },
+    {
+      "name": "SY T-Shirt and Shorts Set",
+      "sourceId": "6936",
+      "translations": {
+        "ro": "Set de tricou și pantaloni scurți SY"
+      }
+    },
+    {
+      "name": "RM/W Phone Case",
+      "sourceId": "6931",
+      "translations": {
+        "ro": "Husa telefon RM/W"
+      }
+    },
+    {
+      "name": "American Style Sports Shorts",
+      "sourceId": "6924",
+      "translations": {
+        "ro": "Pantaloni scurți sport în stil american"
+      }
+    },
+    {
+      "name": "Classic Everyday Shorts 16",
+      "sourceId": "6923",
+      "translations": {
+        "ro": "Pantaloni scurți clasici de zi cu zi 16"
+      }
+    },
+    {
+      "name": "CBA Casual Outfit Set",
+      "sourceId": "6921",
+      "translations": {
+        "ro": "Set de ținute casual CBA"
+      }
+    },
+    {
+      "name": "Quick Dry Sports Jersey",
+      "sourceId": "6918",
+      "translations": {
+        "ro": "Tricou sport cu uscare rapidă"
+      }
+    },
+    {
+      "name": "Summer Denim Shorts",
+      "sourceId": "6910",
+      "translations": {
+        "ro": "Pantaloni scurți din denim de vară"
+      }
+    },
+    {
+      "name": "Denim Jeans A81-A120",
+      "sourceId": "6897",
+      "translations": {
+        "ro": "Blugi denim A81-A120"
+      }
+    }
+  ]
+}

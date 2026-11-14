@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "name": "Calm Cushioned Slides",
+      "translations": {
+        "fi": "Calm-pehmustetut pistokkaat",
+        "da": "Calm-slippers med dæmpning",
+        "nb": "Calm-slippers med demping",
+        "cs": "Tlumené pantofle Calm",
+        "sk": "Tlmené šľapky Calm",
+        "hu": "Calm párnázott papucs",
+        "el": "Παντόφλες Calm με αντικραδασμική προστασία",
+        "uk": "Шльопанці Calm з амортизацією",
+        "ar": "شبشب Calm مبطن",
+        "ja": "クッション入りCalmスライド",
+        "ko": "쿠션감 있는 Calm 슬라이드",
+        "vi": "Dép lê Calm có đệm",
+        "tr": "Yastıklamalı Calm terlik"
+      }
+    },
+    {
+      "name": "YZ Everyday Slides",
+      "translations": {
+        "fi": "YZ-arkipistokkaat",
+        "da": "YZ-hverdagsslippers",
+        "nb": "YZ-hverdagsslippers",
+        "cs": "Pantofle YZ na každý den",
+        "sk": "Šľapky YZ na každý deň",
+        "hu": "YZ mindennapi papucs",
+        "el": "Καθημερινές παντόφλες YZ",
+        "uk": "Повсякденні шльопанці YZ",
+        "ar": "شبشب YZ للاستخدام اليومي",
+        "ja": "YZデイリースライド",
+        "ko": "YZ 데일리 슬라이드",
+        "vi": "Dép lê YZ hằng ngày",
+        "tr": "YZ günlük terlik"
+      }
+    },
+    {
+      "name": "Classic Everyday Slides",
+      "translations": {
+        "fi": "Klassiset arkipistokkaat",
+        "da": "Klassiske hverdagsslippers",
+        "nb": "Klassiske hverdagsslippers",
+        "cs": "Klasické pantofle na každý den",
+        "sk": "Klasické šľapky na každý deň",
+        "hu": "Klasszikus mindennapi papucs",
+        "el": "Κλασικές καθημερινές παντόφλες",
+        "uk": "Класичні шльопанці на щодень",
+        "ar": "شبشب كلاسيكي للاستخدام اليومي",
+        "ja": "クラシックデイリースライド",
+        "ko": "클래식 데일리 슬라이드",
+        "vi": "Dép lê hằng ngày cổ điển",
+        "tr": "Klasik günlük terlik"
+      }
+    },
+    {
+      "name": "Classic Summer Slides",
+      "translations": {
+        "fi": "Klassiset kesäpistokkaat",
+        "da": "Klassiske sommerslippers",
+        "nb": "Klassiske sommerslippers",
+        "cs": "Klasické letní pantofle",
+        "sk": "Klasické letné šľapky",
+        "hu": "Klasszikus nyári papucs",
+        "el": "Κλασικές καλοκαιρινές παντόφλες",
+        "uk": "Класичні літні шльопанці",
+        "ar": "شبشب صيفي كلاسيكي",
+        "ja": "クラシックサマースライド",
+        "ko": "클래식 여름 슬라이드",
+        "vi": "Dép lê mùa hè cổ điển",
+        "tr": "Klasik yazlık terlik"
+      }
+    }
+  ]
+}

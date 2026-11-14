@@ -1,0 +1,186 @@
+{
+  "items": [
+    {
+      "name": "Sports T-Shirt",
+      "source": "Sports T-Shirt",
+      "suffix": "",
+      "translations": {
+        "da": "Sports-T-shirt",
+        "nb": "Sports-T-skjorte",
+        "cs": "Sportovní tričko",
+        "sk": "Športové tričko",
+        "hu": "Sportpóló",
+        "el": "Αθλητικό μπλουζάκι",
+        "tr": "Spor tişört",
+        "uk": "Спортивна футболка",
+        "ar": "تي شيرت رياضي",
+        "ja": "スポーツTシャツ",
+        "ko": "스포츠 티셔츠",
+        "vi": "Áo phông thể thao"
+      }
+    },
+    {
+      "name": "Casual Summer T-Shirt",
+      "source": "Casual Summer T-Shirt",
+      "suffix": "",
+      "translations": {
+        "fi": "Rento kesäinen T-paita",
+        "da": "Casual sommer-T-shirt",
+        "nb": "Uformell sommer-T-skjorte",
+        "cs": "Volnočasové letní tričko",
+        "sk": "Voľnočasové letné tričko",
+        "hu": "Szabadidős nyári póló",
+        "el": "Καθημερινό καλοκαιρινό μπλουζάκι",
+        "tr": "Günlük yazlık tişört",
+        "uk": "Повсякденна літня футболка",
+        "ar": "تي شيرت صيفي كاجوال",
+        "ja": "カジュアルサマーTシャツ",
+        "ko": "캐주얼 여름 티셔츠",
+        "vi": "Áo phông mùa hè thường ngày"
+      }
+    },
+    {
+      "name": "Premium Sports Shorts",
+      "source": "Premium Sports Shorts",
+      "suffix": "",
+      "translations": {
+        "cs": "Prémiové sportovní šortky",
+        "sk": "Prémiové športové šortky",
+        "hu": "Prémium sportrövidnadrág",
+        "el": "Premium αθλητικό σορτς",
+        "tr": "Premium spor şort",
+        "uk": "Спортивні шорти преміум",
+        "ar": "شورت رياضي فاخر",
+        "ja": "プレミアムスポーツショーツ",
+        "ko": "프리미엄 스포츠 반바지",
+        "vi": "Quần short thể thao cao cấp"
+      }
+    },
+    {
+      "name": "Basketball Sports Shorts",
+      "source": "Basketball Sports Shorts",
+      "suffix": "",
+      "translations": {
+        "cs": "Basketbalové šortky",
+        "sk": "Basketbalové šortky",
+        "hu": "Kosárlabdarövidnadrág",
+        "el": "Σορτς μπάσκετ",
+        "tr": "Basketbol şortu",
+        "uk": "Баскетбольні шорти",
+        "ar": "شورت كرة سلة",
+        "ja": "バスケットボールショーツ",
+        "ko": "농구 반바지",
+        "vi": "Quần short bóng rổ"
+      }
+    },
+    {
+      "name": "Comfortable Summer Shorts",
+      "source": "Comfortable Summer Shorts",
+      "suffix": "",
+      "translations": {
+        "cs": "Pohodlné letní šortky",
+        "sk": "Pohodlné letné šortky",
+        "hu": "Kényelmes nyári rövidnadrág",
+        "el": "Άνετο καλοκαιρινό σορτς",
+        "tr": "Rahat yazlık şort",
+        "uk": "Зручні літні шорти",
+        "ar": "شورت صيفي مريح",
+        "ja": "快適なサマーショーツ",
+        "ko": "편안한 여름 반바지",
+        "vi": "Quần short mùa hè thoải mái"
+      }
+    },
+    {
+      "name": "Sports Training Set",
+      "source": "Sports Training Set",
+      "suffix": "",
+      "translations": {
+        "cs": "Sportovní tréninková souprava",
+        "sk": "Športová tréningová súprava",
+        "hu": "Sportedző szett",
+        "el": "Σετ αθλητικής προπόνησης",
+        "tr": "Spor antrenman takımı",
+        "uk": "Спортивний тренувальний комплект",
+        "ar": "طقم تدريب رياضي",
+        "ja": "スポーツトレーニングセット",
+        "ko": "스포츠 트레이닝 세트",
+        "vi": "Bộ tập luyện thể thao"
+      }
+    },
+    {
+      "name": "Classic Casual Pants",
+      "source": "Classic Casual Pants",
+      "suffix": "",
+      "translations": {
+        "da": "Klassiske casual bukser",
+        "cs": "Klasické volnočasové kalhoty",
+        "sk": "Klasické voľnočasové nohavice",
+        "hu": "Klasszikus szabadidős nadrág",
+        "el": "Κλασικό καθημερινό παντελόνι",
+        "tr": "Klasik günlük pantolon",
+        "uk": "Класичні повсякденні штани",
+        "ar": "سروال كاجوال كلاسيكي",
+        "ja": "クラシックカジュアルパンツ",
+        "ko": "클래식 캐주얼 바지",
+        "vi": "Quần dài thường ngày cổ điển"
+      }
+    },
+    {
+      "name": "Premium Casual Hoodie",
+      "source": "Premium Casual Hoodie",
+      "suffix": "",
+      "translations": {
+        "fi": "Laadukas rento huppari",
+        "da": "Casual premiumhættetrøje",
+        "nb": "Uformell premiumhettegenser",
+        "cs": "Prémiová volnočasová mikina s kapucí",
+        "sk": "Prémiová voľnočasová mikina s kapucňou",
+        "hu": "Prémium szabadidős kapucnis pulóver",
+        "el": "Καθημερινό premium φούτερ με κουκούλα",
+        "tr": "Premium günlük kapüşonlu üst",
+        "uk": "Повсякденне худі преміум",
+        "ar": "سترة كاجوال فاخرة بغطاء رأس",
+        "ja": "プレミアムカジュアルパーカー",
+        "ko": "프리미엄 캐주얼 후디",
+        "vi": "Áo hoodie thường ngày cao cấp"
+      }
+    },
+    {
+      "name": "Embroidered Fashion Shorts",
+      "source": "Embroidered Fashion Shorts",
+      "suffix": "",
+      "translations": {
+        "cs": "Vyšívané módní šortky",
+        "sk": "Vyšívané módne šortky",
+        "hu": "Hímzett divatos rövidnadrág",
+        "el": "Κεντημένο μοντέρνο σορτς",
+        "tr": "İşlemeli moda şort",
+        "uk": "Вишиті модні шорти",
+        "ar": "شورت عصري مطرز",
+        "ja": "刺繍入りファッションショーツ",
+        "ko": "자수 패션 반바지",
+        "vi": "Quần short thời trang thêu"
+      }
+    },
+    {
+      "name": "Casual Shorts Set",
+      "source": "Casual Shorts Set",
+      "suffix": "",
+      "translations": {
+        "fi": "Rento shortsisetti",
+        "da": "Casual shortssæt",
+        "nb": "Uformelt shortssett",
+        "cs": "Volnočasová souprava se šortkami",
+        "sk": "Voľnočasová súprava so šortkami",
+        "hu": "Szabadidős rövidnadrágos szett",
+        "el": "Καθημερινό σετ με σορτς",
+        "tr": "Günlük şort takımı",
+        "uk": "Повсякденний комплект із шортами",
+        "ar": "طقم كاجوال مع شورت",
+        "ja": "カジュアルショーツセット",
+        "ko": "캐주얼 반바지 세트",
+        "vi": "Bộ đồ thường ngày với quần short"
+      }
+    }
+  ]
+}

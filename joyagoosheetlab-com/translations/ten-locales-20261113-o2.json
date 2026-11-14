@@ -1,0 +1,154 @@
+{
+  "items": [
+    {
+      "name": "Fashion Shorts OMGBUY",
+      "translations": {
+        "cs": "Módní šortky OMGBUY",
+        "sk": "Módne šortky OMGBUY",
+        "hu": "OMGBUY divatshort",
+        "el": "Μοντέρνο σορτς OMGBUY",
+        "uk": "Модні шорти OMGBUY",
+        "ar": "شورت عصري OMGBUY",
+        "ja": "OMGBUYファッションショーツ",
+        "ko": "OMGBUY 패션 반바지",
+        "vi": "Quần short thời trang OMGBUY",
+        "tr": "OMGBUY moda şortu"
+      }
+    },
+    {
+      "name": "Assorted Brand Shorts",
+      "translations": {
+        "cs": "Šortky různých značek",
+        "sk": "Šortky rôznych značiek",
+        "hu": "Különböző márkájú rövidnadrágok",
+        "el": "Σορτς από διάφορες μάρκες",
+        "uk": "Шорти різних брендів",
+        "ar": "شورتات من علامات متنوعة",
+        "ja": "各種ブランドのショーツ",
+        "ko": "여러 브랜드 반바지",
+        "vi": "Quần short nhiều thương hiệu",
+        "tr": "Çeşitli marka şortlar"
+      }
+    },
+    {
+      "name": "Premium Fashion Shorts 65",
+      "translations": {
+        "cs": "Prémiové módní šortky 65",
+        "sk": "Prémiové módne šortky 65",
+        "hu": "Prémium divatshort 65",
+        "el": "Premium μοντέρνο σορτς 65",
+        "uk": "Преміальні модні шорти 65",
+        "ar": "شورت عصري فاخر 65",
+        "ja": "プレミアムファッションショーツ 65",
+        "ko": "프리미엄 패션 반바지 65",
+        "vi": "Quần short thời trang cao cấp 65",
+        "tr": "Premium moda şortu 65"
+      }
+    },
+    {
+      "name": "Black Graphic Tracksuit Set",
+      "translations": {
+        "cs": "Černá tepláková souprava s potiskem",
+        "sk": "Čierna tepláková súprava s potlačou",
+        "hu": "Fekete mintás melegítőszett",
+        "el": "Μαύρο σετ φόρμας με σχέδιο",
+        "uk": "Чорний спортивний костюм із принтом",
+        "ar": "بدلة رياضية سوداء برسمة",
+        "ja": "グラフィック入りブラックトラックスーツ",
+        "ko": "블랙 그래픽 트레이닝복 세트",
+        "vi": "Bộ đồ thể thao đen có họa tiết",
+        "tr": "Siyah grafik desenli eşofman takımı"
+      }
+    },
+    {
+      "name": "Men's MMA Training Shorts",
+      "translations": {
+        "cs": "Pánské tréninkové šortky na MMA",
+        "sk": "Pánske tréningové šortky na MMA",
+        "hu": "Férfi MMA edzőshort",
+        "el": "Ανδρικό σορτς προπόνησης MMA",
+        "uk": "Чоловічі тренувальні шорти для MMA",
+        "ar": "شورت تدريب MMA للرجال",
+        "ja": "メンズMMAトレーニングショーツ",
+        "ko": "남성 MMA 트레이닝 반바지",
+        "vi": "Quần short tập MMA nam",
+        "tr": "Erkek MMA antrenman şortu"
+      }
+    },
+    {
+      "name": "Logo Graphic Sports Set",
+      "translations": {
+        "cs": "Sportovní komplet s logem a potiskem",
+        "sk": "Športový komplet s logom a potlačou",
+        "hu": "Logós grafikus sportszett",
+        "el": "Αθλητικό σετ με λογότυπο και σχέδιο",
+        "uk": "Спортивний комплект із логотипом і принтом",
+        "ar": "طقم رياضي بشعار ورسمة",
+        "ja": "ロゴグラフィックスポーツセット",
+        "ko": "로고 그래픽 스포츠 세트",
+        "vi": "Bộ thể thao logo và họa tiết",
+        "tr": "Logolu grafik desenli spor takım"
+      }
+    },
+    {
+      "name": "Color-Block Beach Shorts",
+      "translations": {
+        "cs": "Plážové šortky s barevnými bloky",
+        "sk": "Plážové šortky s farebnými blokmi",
+        "hu": "Színblokkolt strandshort",
+        "el": "Σορτς παραλίας με χρωματικά μπλοκ",
+        "uk": "Пляжні шорти з кольоровими блоками",
+        "ar": "شورت شاطئ بألوان متباينة",
+        "ja": "カラーブロックビーチショーツ",
+        "ko": "컬러 블록 비치 반바지",
+        "vi": "Quần short đi biển phối mảng màu",
+        "tr": "Renk bloklu plaj şortu"
+      }
+    },
+    {
+      "name": "DX53 3D Print Sports Shorts",
+      "translations": {
+        "cs": "Sportovní šortky DX53 s 3D potiskem",
+        "sk": "Športové šortky DX53 s 3D potlačou",
+        "hu": "DX53 sportshort 3D nyomattal",
+        "el": "Αθλητικό σορτς DX53 με τρισδιάστατο τύπωμα",
+        "uk": "Спортивні шорти DX53 із 3D-принтом",
+        "ar": "شورت رياضي DX53 بطباعة ثلاثية الأبعاد",
+        "ja": "DX53 3Dプリントスポーツショーツ",
+        "ko": "DX53 3D 프린트 스포츠 반바지",
+        "vi": "Quần short thể thao in 3D DX53",
+        "tr": "DX53 3D baskılı spor şort"
+      }
+    },
+    {
+      "name": "C Streetwear Shorts",
+      "translations": {
+        "cs": "Streetwearové šortky C",
+        "sk": "Streetwearové šortky C",
+        "hu": "C utcai short",
+        "el": "Σορτς streetwear C",
+        "uk": "Шорти вуличного стилю C",
+        "ar": "شورت C بأسلوب الشارع",
+        "ja": "Cストリートウェアショーツ",
+        "ko": "C 스트리트웨어 반바지",
+        "vi": "Quần short streetwear C",
+        "tr": "C sokak stili şort"
+      }
+    },
+    {
+      "name": "Streetwear Print Shorts",
+      "translations": {
+        "cs": "Šortky se streetwearovým potiskem",
+        "sk": "Šortky so streetwearovou potlačou",
+        "hu": "Utcai mintás rövidnadrág",
+        "el": "Σορτς με τύπωμα streetwear",
+        "uk": "Шорти з принтом у вуличному стилі",
+        "ar": "شورت بطبعة ستريت وير",
+        "ja": "ストリートウェアプリントショーツ",
+        "ko": "스트리트웨어 프린트 반바지",
+        "vi": "Quần short in họa tiết streetwear",
+        "tr": "Sokak stili baskılı şort"
+      }
+    }
+  ]
+}

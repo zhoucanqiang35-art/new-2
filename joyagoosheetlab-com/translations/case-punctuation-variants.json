@@ -1,0 +1,57 @@
+{
+  "sources": {
+    "Embroidered Pullover Hoodie -": "Embroidered Pullover Hoodie",
+    "Amiri jeans": "Amiri Jeans",
+    "Burberry hoodie": "Burberry Hoodie"
+  },
+  "translations": {
+    "Embroidered Pullover Hoodie -": {
+      "fi": "Kirjailtu päälle vedettävä huppari",
+      "da": "Broderet hættetrøje uden lynlås",
+      "nb": "Brodert hettegenser uten glidelås",
+      "cs": "Vyšívaná mikina s kapucí přes hlavu",
+      "sk": "Vyšívaná mikina s kapucňou cez hlavu",
+      "hu": "Hímzett bebújós kapucnis pulóver",
+      "ro": "Hanorac brodat cu glugă fără fermoar",
+      "el": "Κεντημένο φούτερ με κουκούλα χωρίς φερμουάρ",
+      "tr": "İşlemeli fermuarsız kapüşonlu sweatshirt",
+      "uk": "Худі без блискавки з вишивкою",
+      "ar": "سترة مطرزة بغطاء رأس دون سحاب",
+      "ja": "刺繍入りプルオーバーパーカー",
+      "ko": "자수 풀오버 후드티",
+      "vi": "Áo hoodie chui đầu có thêu"
+    },
+    "Amiri jeans": {
+      "fi": "Amiri farkut",
+      "da": "Amiri jeans",
+      "nb": "Amiri jeans",
+      "cs": "Amiri džíny",
+      "sk": "Amiri džínsy",
+      "hu": "Amiri farmer",
+      "ro": "Amiri blugi",
+      "el": "Amiri τζιν",
+      "tr": "Amiri kot pantolon",
+      "uk": "Amiri джинси",
+      "ar": "Amiri جينز",
+      "ja": "Amiri ジーンズ",
+      "ko": "Amiri 청바지",
+      "vi": "Amiri quần jeans"
+    },
+    "Burberry hoodie": {
+      "fi": "Burberry huppari",
+      "da": "Burberry hættetrøje",
+      "nb": "Burberry hettegenser",
+      "cs": "Burberry mikina s kapucí",
+      "sk": "Burberry mikina s kapucňou",
+      "hu": "Burberry kapucnis pulóver",
+      "ro": "Burberry hanorac cu glugă",
+      "el": "Burberry φούτερ με κουκούλα",
+      "tr": "Burberry kapüşonlu sweatshirt",
+      "uk": "Burberry худі",
+      "ar": "Burberry سترة بغطاء رأس",
+      "ja": "Burberry パーカー",
+      "ko": "Burberry 후드티",
+      "vi": "Burberry áo hoodie"
+    }
+  }
+}

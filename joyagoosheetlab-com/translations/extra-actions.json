@@ -1,0 +1,94 @@
+{
+  "keys": [
+    "Other buying agents",
+    "Copy Weidian link",
+    "Copied",
+    "Copy failed"
+  ],
+  "rows": {
+    "fi": [
+      "Muut ostoagentit",
+      "Kopioi Weidian-linkki",
+      "Kopioitu",
+      "Kopiointi epäonnistui – yritä uudelleen"
+    ],
+    "da": [
+      "Andre indkøbsagenter",
+      "Kopiér Weidian-link",
+      "Kopieret",
+      "Kopiering mislykkedes – prøv igen"
+    ],
+    "nb": [
+      "Andre innkjøpsagenter",
+      "Kopier Weidian-lenke",
+      "Kopiert",
+      "Kopiering mislyktes – prøv igjen"
+    ],
+    "cs": [
+      "Další nákupní agenti",
+      "Kopírovat odkaz Weidian",
+      "Zkopírováno",
+      "Kopírování se nezdařilo – zkuste to znovu"
+    ],
+    "sk": [
+      "Ďalší nákupní agenti",
+      "Kopírovať odkaz Weidian",
+      "Skopírované",
+      "Kopírovanie zlyhalo – skúste to znova"
+    ],
+    "hu": [
+      "Más vásárlási ügynökök",
+      "Weidian-hivatkozás másolása",
+      "Másolva",
+      "A másolás sikertelen – próbálja újra"
+    ],
+    "ro": [
+      "Alți agenți de cumpărare",
+      "Copiază linkul Weidian",
+      "Copiat",
+      "Copierea a eșuat – încearcă din nou"
+    ],
+    "el": [
+      "Άλλοι πράκτορες αγορών",
+      "Αντιγραφή συνδέσμου Weidian",
+      "Αντιγράφηκε",
+      "Η αντιγραφή απέτυχε – δοκιμάστε ξανά"
+    ],
+    "tr": [
+      "Diğer alışveriş aracıları",
+      "Weidian bağlantısını kopyala",
+      "Kopyalandı",
+      "Kopyalama başarısız – tekrar deneyin"
+    ],
+    "uk": [
+      "Інші агенти покупок",
+      "Копіювати посилання Weidian",
+      "Скопійовано",
+      "Не вдалося скопіювати – спробуйте ще раз"
+    ],
+    "ar": [
+      "وكلاء شراء آخرون",
+      "نسخ رابط Weidian",
+      "تم النسخ",
+      "تعذّر النسخ، يرجى المحاولة مرة أخرى"
+    ],
+    "ja": [
+      "その他の購入代行",
+      "Weidianリンクをコピー",
+      "コピーしました",
+      "コピーできませんでした。もう一度お試しください"
+    ],
+    "ko": [
+      "다른 구매대행 업체",
+      "Weidian 링크 복사",
+      "복사됨",
+      "복사하지 못했습니다. 다시 시도해 주세요"
+    ],
+    "vi": [
+      "Các đại lý mua hàng khác",
+      "Sao chép liên kết Weidian",
+      "Đã sao chép",
+      "Sao chép không thành công – vui lòng thử lại"
+    ]
+  }
+}

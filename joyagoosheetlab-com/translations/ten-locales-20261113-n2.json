@@ -1,0 +1,154 @@
+{
+  "items": [
+    {
+      "name": "Polo Player Cap Collection",
+      "translations": {
+        "cs": "Kolekce kšiltovek s hráčem póla",
+        "sk": "Kolekcia šiltoviek s hráčom póla",
+        "hu": "Pólójátékos mintás sapkakollekció",
+        "el": "Συλλογή καπέλων με παίκτη πόλο",
+        "uk": "Колекція кепок із гравцем у поло",
+        "ar": "مجموعة قبعات برسمة لاعب بولو",
+        "ja": "ポロプレイヤーキャップコレクション",
+        "ko": "폴로 선수 캡 컬렉션",
+        "vi": "Bộ sưu tập mũ có hình người chơi polo",
+        "tr": "Polo oyuncusu şapka koleksiyonu"
+      }
+    },
+    {
+      "name": "Wide Link Bracelet - 21 cm",
+      "translations": {
+        "cs": "Náramek se širokými články - 21 cm",
+        "sk": "Náramok so širokými článkami - 21 cm",
+        "hu": "Széles szemű karkötő - 21 cm",
+        "el": "Βραχιόλι με φαρδιούς κρίκους - 21 εκ.",
+        "uk": "Браслет із широких ланок - 21 см",
+        "ar": "سوار بحلقات عريضة - 21 سم",
+        "ja": "幅広リンクブレスレット - 21 cm",
+        "ko": "와이드 링크 팔찌 - 21 cm",
+        "vi": "Vòng tay mắt xích bản rộng - 21 cm",
+        "tr": "Geniş halkalı bileklik - 21 cm"
+      }
+    },
+    {
+      "name": "Gothic Charm Bracelet 032",
+      "translations": {
+        "cs": "Gotický náramek s přívěsky 032",
+        "sk": "Gotický náramok s príveskami 032",
+        "hu": "Gótikus medálos karkötő 032",
+        "el": "Γοτθικό βραχιόλι με διακοσμητικά 032",
+        "uk": "Готичний браслет із підвісками 032",
+        "ar": "سوار قوطي بتعليقات 032",
+        "ja": "ゴシックチャームブレスレット 032",
+        "ko": "고딕 참 팔찌 032",
+        "vi": "Vòng tay charm phong cách Gothic 032",
+        "tr": "Gotik figürlü bileklik 032"
+      }
+    },
+    {
+      "name": "Orb Pendant Necklace 024",
+      "translations": {
+        "cs": "Náhrdelník s kulovým přívěskem 024",
+        "sk": "Náhrdelník s guľovým príveskom 024",
+        "hu": "Gömbmedálos nyaklánc 024",
+        "el": "Κολιέ με σφαιρικό μενταγιόν 024",
+        "uk": "Намисто з кулеподібною підвіскою 024",
+        "ar": "قلادة بدلاية كروية 024",
+        "ja": "オーブペンダントネックレス 024",
+        "ko": "오브 펜던트 목걸이 024",
+        "vi": "Dây chuyền mặt cầu 024",
+        "tr": "Küre uçlu kolye 024"
+      }
+    },
+    {
+      "name": "Woven Tote Bag 003",
+      "translations": {
+        "cs": "Tkaná nákupní taška 003",
+        "sk": "Tkaná nákupná taška 003",
+        "hu": "Szőtt bevásárlótáska 003",
+        "el": "Υφαντή τσάντα tote 003",
+        "uk": "Плетена сумка-тоут 003",
+        "ar": "حقيبة توت منسوجة 003",
+        "ja": "編み込みトートバッグ 003",
+        "ko": "우븐 토트백 003",
+        "vi": "Túi tote đan 003",
+        "tr": "Dokuma tote çanta 003"
+      }
+    },
+    {
+      "name": "Logo Sports Backpack 002",
+      "translations": {
+        "cs": "Sportovní batoh s logem 002",
+        "sk": "Športový batoh s logom 002",
+        "hu": "Logós sporthátizsák 002",
+        "el": "Αθλητικό σακίδιο με λογότυπο 002",
+        "uk": "Спортивний рюкзак із логотипом 002",
+        "ar": "حقيبة ظهر رياضية بشعار 002",
+        "ja": "ロゴ入りスポーツバックパック 002",
+        "ko": "로고 스포츠 백팩 002",
+        "vi": "Ba lô thể thao có logo 002",
+        "tr": "Logolu spor sırt çantası 002"
+      }
+    },
+    {
+      "name": "Chloe Tote Bag 7666",
+      "translations": {
+        "cs": "Nákupní taška Chloe 7666",
+        "sk": "Nákupná taška Chloe 7666",
+        "hu": "Chloe bevásárlótáska 7666",
+        "el": "Τσάντα tote Chloe 7666",
+        "uk": "Сумка-тоут Chloe 7666",
+        "ar": "حقيبة توت Chloe 7666",
+        "ja": "Chloeトートバッグ 7666",
+        "ko": "Chloe 토트백 7666",
+        "vi": "Túi tote Chloe 7666",
+        "tr": "Chloe tote çanta 7666"
+      }
+    },
+    {
+      "name": "Cuban Link Necklace 14 mm",
+      "translations": {
+        "cs": "Řetízek Cuban Link 14 mm",
+        "sk": "Retiazka Cuban Link 14 mm",
+        "hu": "Cuban Link nyaklánc 14 mm",
+        "el": "Κολιέ με κρίκους Cuban Link 14 χιλ.",
+        "uk": "Намисто Cuban Link 14 мм",
+        "ar": "قلادة بحلقات Cuban Link مقاس 14 مم",
+        "ja": "キューバンリンクネックレス 14 mm",
+        "ko": "쿠반 링크 목걸이 14 mm",
+        "vi": "Dây chuyền mắt xích Cuban Link 14 mm",
+        "tr": "Cuban Link kolye 14 mm"
+      }
+    },
+    {
+      "name": "H Clasp Bangle 19 cm",
+      "translations": {
+        "cs": "Pevný náramek se zapínáním H 19 cm",
+        "sk": "Pevný náramok so zapínaním H 19 cm",
+        "hu": "H kapcsos merev karkötő 19 cm",
+        "el": "Άκαμπτο βραχιόλι με κούμπωμα H 19 εκ.",
+        "uk": "Жорсткий браслет із застібкою H 19 см",
+        "ar": "سوار صلب بقفل H مقاس 19 سم",
+        "ja": "Hクラスプバングル 19 cm",
+        "ko": "H 잠금 뱅글 19 cm",
+        "vi": "Vòng tay cứng khóa H 19 cm",
+        "tr": "H tokalı bilezik 19 cm"
+      }
+    },
+    {
+      "name": "Supreme Backpack W2C-060",
+      "translations": {
+        "cs": "Batoh Supreme W2C-060",
+        "sk": "Batoh Supreme W2C-060",
+        "hu": "Supreme hátizsák W2C-060",
+        "el": "Σακίδιο Supreme W2C-060",
+        "uk": "Рюкзак Supreme W2C-060",
+        "ar": "حقيبة ظهر Supreme W2C-060",
+        "ja": "Supremeバックパック W2C-060",
+        "ko": "Supreme 백팩 W2C-060",
+        "vi": "Ba lô Supreme W2C-060",
+        "tr": "Supreme sırt çantası W2C-060"
+      }
+    }
+  ]
+}

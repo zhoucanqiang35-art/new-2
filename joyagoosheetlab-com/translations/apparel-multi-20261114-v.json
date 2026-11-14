@@ -1,0 +1,114 @@
+{
+  "items": [
+    {
+      "name": "Versatile Casual Shoes",
+      "translations": {
+        "fi": "Monikäyttöiset vapaa-ajan kengät",
+        "da": "Alsidige fritidssko",
+        "nb": "Allsidige fritidssko",
+        "sk": "Všestranná voľnočasová obuv",
+        "ro": "Încălțăminte casual versatilă",
+        "vi": "Giày thường ngày đa dụng"
+      }
+    },
+    {
+      "name": "Versatile Athletic Sneakers",
+      "translations": {
+        "fi": "Monikäyttöiset urheilutennarit",
+        "da": "Alsidige sportssneakers",
+        "nb": "Allsidige sportssneakers",
+        "sk": "Všestranné športové tenisky",
+        "ro": "Pantofi sport versatili",
+        "vi": "Giày thể thao đa dụng"
+      }
+    },
+    {
+      "name": "Premium Casual Matching Set",
+      "translations": {
+        "fi": "Laadukas yhteensopiva vapaa-ajan setti",
+        "da": "Matchende premium fritidssæt",
+        "nb": "Matchende fritidssett i premium kvalitet",
+        "sk": "Prémiová ladiaca voľnočasová súprava",
+        "ro": "Set casual premium asortat",
+        "vi": "Bộ đồ thường ngày đồng bộ cao cấp"
+      }
+    },
+    {
+      "name": "European Style Matching Set",
+      "translations": {
+        "fi": "Eurooppalaistyylinen yhteensopiva asusetti",
+        "da": "Matchende sæt i europæisk stil",
+        "nb": "Matchende sett i europeisk stil",
+        "sk": "Ladiaca súprava v európskom štýle",
+        "ro": "Set asortat în stil european",
+        "vi": "Bộ đồ đồng bộ phong cách châu Âu"
+      }
+    },
+    {
+      "name": "Floral Hoodie and Shorts Set",
+      "translations": {
+        "fi": "Kukkakuvioinen huppari- ja shortsisetti",
+        "da": "Hættetrøje og shorts-sæt med blomstermønster",
+        "nb": "Hettegenser og shorts-sett med blomstermønster",
+        "sk": "Súprava mikiny s kapucňou a šortiek s kvetinovým vzorom",
+        "ro": "Set cu hanorac și pantaloni scurți cu model floral",
+        "vi": "Bộ áo hoodie và quần short họa tiết hoa"
+      }
+    },
+    {
+      "name": "Comfortable Warm Down Jacket",
+      "translations": {
+        "fi": "Mukava lämmin untuvatakki",
+        "da": "Komfortabel varm dunjakke",
+        "nb": "Komfortabel varm dunjakke",
+        "sk": "Pohodlná teplá páperová bunda",
+        "ro": "Geacă din puf caldă și confortabilă",
+        "vi": "Áo khoác lông vũ ấm áp và thoải mái"
+      }
+    },
+    {
+      "name": "Fashion Everyday Slides",
+      "translations": {
+        "fi": "Muodikkaat arkiset pistokkaat",
+        "da": "Moderigtige hverdagssandaler",
+        "nb": "Moteriktige hverdagssandaler",
+        "sk": "Módne šľapky na každý deň",
+        "ro": "Papuci la modă pentru fiecare zi",
+        "vi": "Dép thời trang đi hằng ngày"
+      }
+    },
+    {
+      "name": "Logo Sport Slides",
+      "translations": {
+        "fi": "Urheilupistokkaat logolla",
+        "da": "Sportssandaler med logo",
+        "nb": "Sportssandaler med logo",
+        "sk": "Športové šľapky s logom",
+        "ro": "Papuci sport cu logo",
+        "vi": "Dép thể thao có logo"
+      }
+    },
+    {
+      "name": "Leather Cork Platform Clogs",
+      "translations": {
+        "fi": "Nahkaiset korkkipohjaiset korokepistokkaat",
+        "da": "Plateautræsko i læder med korksål",
+        "nb": "Plattformtresko i skinn med korksåle",
+        "sk": "Kožené dreváky na korkovej platforme",
+        "ro": "Saboți din piele cu platformă de plută",
+        "vi": "Guốc da đế cao bằng nút chai"
+      }
+    },
+    {
+      "name": "Oblique Pattern Pool Slides",
+      "translations": {
+        "fi": "Uima-allaspistokkaat vinokuviolla",
+        "da": "Poolsandaler med skråt mønster",
+        "nb": "Bassengsandaler med skrått mønster",
+        "sk": "Bazénové šľapky so šikmým vzorom",
+        "ro": "Papuci de piscină cu model oblic",
+        "vi": "Dép đi hồ bơi họa tiết chéo"
+      }
+    }
+  ]
+}

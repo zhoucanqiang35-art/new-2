@@ -1,0 +1,32 @@
+{
+  "3341": {
+    "name": "BF J0R1collection",
+    "translations": {
+      "cs": "Kolekce BF J0R1",
+      "hu": "BF J0R1 kollekció",
+      "el": "Συλλογή BF J0R1",
+      "tr": "BF J0R1 koleksiyonu",
+      "uk": "Колекція BF J0R1",
+      "ar": "مجموعة BF J0R1",
+      "ja": "BF J0R1コレクション",
+      "ko": "BF J0R1 컬렉션",
+      "ru": "Коллекция BF J0R1",
+      "id": "Koleksi BF J0R1"
+    }
+  },
+  "3405": {
+    "name": "TNCollection",
+    "translations": {
+      "cs": "Kolekce TN",
+      "hu": "TN kollekció",
+      "el": "Συλλογή TN",
+      "tr": "TN koleksiyonu",
+      "uk": "Колекція TN",
+      "ar": "مجموعة TN",
+      "ja": "TNコレクション",
+      "ko": "TN 컬렉션",
+      "ru": "Коллекция TN",
+      "id": "Koleksi TN"
+    }
+  }
+}

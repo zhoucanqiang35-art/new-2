@@ -1,0 +1,92 @@
+{
+  "items": [
+    {
+      "name": "Classic Polo Shirt Collection",
+      "translations": {
+        "fi": "Klassinen poolopaitamallisto",
+        "da": "Klassisk poloshirtkollektion",
+        "nb": "Klassisk poloskjortekolleksjon",
+        "sk": "Kolekcia klasických polokošieľ",
+        "ro": "Colecție de tricouri polo clasice",
+        "vi": "Bộ sưu tập áo polo cổ điển"
+      }
+    },
+    {
+      "name": "Dark Graphic Pullover Hoodie",
+      "translations": {
+        "fi": "Tumma kuviollinen hupullinen pusero",
+        "da": "Mørk hættetrøje med grafik",
+        "nb": "Mørk hettegenser med grafikk",
+        "sk": "Tmavá mikina s kapucňou a grafikou",
+        "ro": "Hanorac închis la culoare cu grafică",
+        "vi": "Áo hoodie tối màu họa tiết đồ họa"
+      }
+    },
+    {
+      "name": "Cross Graphic Pullover Hoodie",
+      "translations": {
+        "fi": "Ristikuviollinen hupullinen pusero",
+        "da": "Hættetrøje med korsgrafik",
+        "nb": "Hettegenser med korsmotiv",
+        "sk": "Mikina s kapucňou a grafikou kríža",
+        "ro": "Hanorac cu grafică în formă de cruce",
+        "vi": "Áo hoodie họa tiết chữ thập"
+      }
+    },
+    {
+      "name": "Printed Hoodie and Jogger Set",
+      "translations": {
+        "fi": "Painettu huppari- ja joggerhoususetti",
+        "da": "Sæt med hættetrøje og joggingbukser med print",
+        "nb": "Sett med hettegenser og joggebukse med trykk",
+        "sk": "Súprava mikiny s kapucňou a jogger nohavíc s potlačou",
+        "ro": "Set cu hanorac imprimat și pantaloni jogger",
+        "vi": "Bộ áo hoodie in họa tiết và quần jogger"
+      }
+    },
+    {
+      "name": "YZ Casual Slides",
+      "translations": {
+        "fi": "YZ vapaa-ajan pistokkaat",
+        "da": "YZ fritidssandaler",
+        "nb": "YZ fritidssandaler",
+        "sk": "Voľnočasové šľapky YZ",
+        "ro": "Papuci casual YZ",
+        "vi": "Dép thường ngày YZ"
+      }
+    },
+    {
+      "name": "Premium Casual Outfit Set 009",
+      "translations": {
+        "fi": "Laadukas vapaa-ajan asusetti 009",
+        "da": "Premium fritidstøjsæt 009",
+        "nb": "Fritidsantrekk i premium kvalitet 009",
+        "sk": "Prémiová voľnočasová súprava 009",
+        "ro": "Set vestimentar casual premium 009",
+        "vi": "Bộ trang phục thường ngày cao cấp 009"
+      }
+    },
+    {
+      "name": "Three-Piece Casual Sportswear",
+      "translations": {
+        "fi": "Kolmiosainen vapaa-ajan urheiluasu",
+        "da": "Tredelt afslappet sportstøj",
+        "nb": "Tredelt avslappet sportstøy",
+        "sk": "Trojdielne voľnočasové športové oblečenie",
+        "ro": "Îmbrăcăminte sport casual din trei piese",
+        "vi": "Bộ đồ thể thao thường ngày ba món"
+      }
+    },
+    {
+      "name": "Classic Casual Shorts Special",
+      "translations": {
+        "fi": "Klassiset vapaa-ajan shortsit, erikoisversio",
+        "da": "Klassiske fritidsshorts, specialudgave",
+        "nb": "Klassisk fritidsshorts, spesialutgave",
+        "sk": "Klasické voľnočasové šortky, špeciálne vydanie",
+        "ro": "Pantaloni scurți casual clasici, ediție specială",
+        "vi": "Quần short thường ngày cổ điển, phiên bản đặc biệt"
+      }
+    }
+  ]
+}

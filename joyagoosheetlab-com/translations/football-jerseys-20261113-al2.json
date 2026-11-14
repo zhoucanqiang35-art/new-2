@@ -1,0 +1,155 @@
+{
+  "items": [
+    {
+      "name": "Football Jersey Long",
+      "translations": {
+        "fi": "Pitkä jalkapallopaita",
+        "da": "Lang fodboldtrøje",
+        "nb": "Lang fotballdrakt",
+        "cs": "Dlouhý fotbalový dres",
+        "sk": "Dlhý futbalový dres",
+        "hu": "Hosszú futballmez",
+        "ro": "Tricou de fotbal lung",
+        "el": "Μακριά φανέλα ποδοσφαίρου",
+        "uk": "Довга футбольна майка",
+        "ar": "قميص كرة قدم طويل",
+        "ja": "ロングサッカージャージ",
+        "ko": "긴 축구 저지",
+        "vi": "Áo bóng đá dáng dài",
+        "tr": "Uzun futbol forması"
+      }
+    },
+    {
+      "name": "New Club Jersey",
+      "translations": {
+        "fi": "Uusi seurapaita",
+        "da": "Ny klubtrøje",
+        "nb": "Ny klubbdrakt",
+        "cs": "Nový klubový dres",
+        "sk": "Nový klubový dres",
+        "hu": "Új klubmez",
+        "ro": "Tricou nou de club",
+        "el": "Νέα φανέλα συλλόγου",
+        "uk": "Нова клубна майка",
+        "ar": "قميص نادٍ جديد",
+        "ja": "新しいクラブジャージ",
+        "ko": "새 클럽 저지",
+        "vi": "Áo thi đấu câu lạc bộ mới",
+        "tr": "Yeni kulüp forması"
+      }
+    },
+    {
+      "name": "Miami Embroidered Polo Jersey",
+      "translations": {
+        "fi": "Miami-kirjailtu poolopaita",
+        "da": "Miami-broderet polotrøje",
+        "nb": "Miami-brodert polotrøye",
+        "cs": "Polo dres Miami s výšivkou",
+        "sk": "Polo dres Miami s výšivkou",
+        "hu": "Miami hímzett galléros mez",
+        "ro": "Tricou polo Miami brodat",
+        "el": "Φανέλα πόλο Miami με κέντημα",
+        "uk": "Поло-майка Miami з вишивкою",
+        "ar": "قميص بولو Miami مطرز",
+        "ja": "Miami刺繍ポロジャージ",
+        "ko": "Miami 자수 폴로 저지",
+        "vi": "Áo thi đấu polo Miami thêu",
+        "tr": "Miami işlemeli polo forma"
+      }
+    },
+    {
+      "name": "Brazil Embroidered Polo Jersey",
+      "translations": {
+        "fi": "Brazil-kirjailtu poolopaita",
+        "da": "Brazil-broderet polotrøje",
+        "nb": "Brazil-brodert polotrøye",
+        "cs": "Polo dres Brazil s výšivkou",
+        "sk": "Polo dres Brazil s výšivkou",
+        "hu": "Brazil hímzett galléros mez",
+        "ro": "Tricou polo Brazil brodat",
+        "el": "Φανέλα πόλο Brazil με κέντημα",
+        "uk": "Поло-майка Brazil з вишивкою",
+        "ar": "قميص بولو Brazil مطرز",
+        "ja": "Brazil刺繍ポロジャージ",
+        "ko": "Brazil 자수 폴로 저지",
+        "vi": "Áo thi đấu polo Brazil thêu",
+        "tr": "Brazil işlemeli polo forma"
+      }
+    },
+    {
+      "name": "Supreme 99 Long Sleeve Jersey",
+      "translations": {
+        "fi": "Supreme 99 -pitkähihainen pelipaita",
+        "da": "Supreme 99-langærmet spilletrøje",
+        "nb": "Supreme 99-langermet drakt",
+        "cs": "Dres Supreme 99 s dlouhým rukávem",
+        "sk": "Dres Supreme 99 s dlhým rukávom",
+        "hu": "Supreme 99 hosszú ujjú mez",
+        "ro": "Tricou sport Supreme 99 cu mânecă lungă",
+        "el": "Μακρυμάνικη φανέλα Supreme 99",
+        "uk": "Майка Supreme 99 з довгим рукавом",
+        "ar": "قميص Supreme 99 طويل الأكمام",
+        "ja": "Supreme 99長袖ジャージ",
+        "ko": "Supreme 99 긴소매 저지",
+        "vi": "Áo thi đấu dài tay Supreme 99",
+        "tr": "Supreme 99 uzun kollu forma"
+      }
+    },
+    {
+      "name": "Varsity Jersey and Shorts Set",
+      "translations": {
+        "fi": "Varsity-pelipaita- ja shortsisetti",
+        "da": "Varsity-sæt med spilletrøje og shorts",
+        "nb": "Varsity-sett med drakt og shorts",
+        "cs": "Komplet dresu varsity a šortek",
+        "sk": "Komplet dresu varsity a šortiek",
+        "hu": "Varsity mez és rövidnadrág szett",
+        "ro": "Set varsity de tricou sport și pantaloni scurți",
+        "el": "Σετ varsity με φανέλα και σορτς",
+        "uk": "Комплект varsity із майки та шортів",
+        "ar": "طقم قميص varsity وشورت",
+        "ja": "バーシティジャージとショーツのセット",
+        "ko": "바시티 저지와 반바지 세트",
+        "vi": "Bộ áo thi đấu varsity và quần short",
+        "tr": "Varsity forma ve şort takımı"
+      }
+    },
+    {
+      "name": "Football Jersey Collection DJ",
+      "translations": {
+        "fi": "Jalkapallopaitakokoelma DJ",
+        "da": "Fodboldtrøjekollektion DJ",
+        "nb": "Fotballdraktkolleksjon DJ",
+        "cs": "Kolekce fotbalových dresů DJ",
+        "sk": "Kolekcia futbalových dresov DJ",
+        "hu": "Futballmez-kollekció DJ",
+        "ro": "Colecție de tricouri de fotbal DJ",
+        "el": "Συλλογή φανελών ποδοσφαίρου DJ",
+        "uk": "Колекція футбольних майок DJ",
+        "ar": "مجموعة قمصان كرة قدم DJ",
+        "ja": "サッカージャージコレクション DJ",
+        "ko": "축구 저지 컬렉션 DJ",
+        "vi": "Bộ sưu tập áo bóng đá DJ",
+        "tr": "Futbol forması koleksiyonu DJ"
+      }
+    },
+    {
+      "name": "Football Jersey Collection B7",
+      "translations": {
+        "fi": "Jalkapallopaitakokoelma B7",
+        "da": "Fodboldtrøjekollektion B7",
+        "nb": "Fotballdraktkolleksjon B7",
+        "cs": "Kolekce fotbalových dresů B7",
+        "sk": "Kolekcia futbalových dresov B7",
+        "hu": "Futballmez-kollekció B7",
+        "el": "Συλλογή φανελών ποδοσφαίρου B7",
+        "uk": "Колекція футбольних майок B7",
+        "ar": "مجموعة قمصان كرة قدم B7",
+        "ja": "サッカージャージコレクション B7",
+        "ko": "축구 저지 컬렉션 B7",
+        "vi": "Bộ sưu tập áo bóng đá B7",
+        "tr": "Futbol forması koleksiyonu B7"
+      }
+    }
+  ]
+}

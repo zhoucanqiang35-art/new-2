@@ -1,0 +1,137 @@
+{
+  "keys": [
+    "FIND YOUR NEXT FAVOURITE",
+    "Joyagoo spreadsheet / category",
+    "JOYAGOO SPREADSHEET"
+  ],
+  "rows": {
+    "fi": [
+      "LÖYDÄ SEURAAVA SUOSIKKISI",
+      "Joyagoo-tuotetaulukko / kategoria",
+      "JOYAGOO-TUOTETAULUKKO"
+    ],
+    "da": [
+      "FIND DIN NÆSTE FAVORIT",
+      "Joyagoo-produktoversigt / kategori",
+      "JOYAGOO-PRODUKTOVERSIGT"
+    ],
+    "nb": [
+      "FINN DIN NESTE FAVORITT",
+      "Joyagoo-produktoversikt / kategori",
+      "JOYAGOO-PRODUKTOVERSIKT"
+    ],
+    "cs": [
+      "NAJDĚTE SVŮJ DALŠÍ OBLÍBENÝ KOUSEK",
+      "Přehled produktů Joyagoo / kategorie",
+      "PŘEHLED PRODUKTŮ JOYAGOO"
+    ],
+    "sk": [
+      "NÁJDITE SVOJ ĎALŠÍ OBĽÚBENÝ KÚSOK",
+      "Prehľad produktov Joyagoo / kategória",
+      "PREHĽAD PRODUKTOV JOYAGOO"
+    ],
+    "hu": [
+      "TALÁLJA MEG KÖVETKEZŐ KEDVENCÉT",
+      "Joyagoo terméklista / kategória",
+      "JOYAGOO TERMÉKLISTA"
+    ],
+    "ro": [
+      "GĂSIȚI URMĂTORUL FAVORIT",
+      "Lista de produse Joyagoo / categorie",
+      "LISTA DE PRODUSE JOYAGOO"
+    ],
+    "el": [
+      "ΒΡΕΙΤΕ ΤΟ ΕΠΟΜΕΝΟ ΑΓΑΠΗΜΕΝΟ ΣΑΣ",
+      "Κατάλογος Joyagoo / κατηγορία",
+      "ΚΑΤΑΛΟΓΟΣ JOYAGOO"
+    ],
+    "uk": [
+      "ЗНАЙДІТЬ НАСТУПНИЙ УЛЮБЛЕНИЙ ТОВАР",
+      "Каталог Joyagoo / категорія",
+      "КАТАЛОГ JOYAGOO"
+    ],
+    "ar": [
+      "اكتشف منتجك المفضل التالي",
+      "قائمة Joyagoo / الفئة",
+      "قائمة منتجات JOYAGOO"
+    ],
+    "ja": [
+      "次のお気に入りを見つけよう",
+      "Joyagoo商品一覧 / カテゴリー",
+      "JOYAGOO商品一覧"
+    ],
+    "ko": [
+      "다음 마음에 드는 상품 찾기",
+      "Joyagoo 상품 목록 / 카테고리",
+      "JOYAGOO 상품 목록"
+    ],
+    "vi": [
+      "TÌM MÓN YÊU THÍCH TIẾP THEO",
+      "Danh sách Joyagoo / danh mục",
+      "DANH SÁCH JOYAGOO"
+    ],
+    "tr": [
+      "BİR SONRAKİ FAVORİNİZİ BULUN",
+      "Joyagoo ürün listesi / kategori",
+      "JOYAGOO ÜRÜN LİSTESİ"
+    ]
+  },
+  "livePriceCopy": {
+    "fi": [
+      "Näkyvät hinnat päivittyvät lähteen ollessa saatavilla; hintajärjestys käyttää luettelon tilannekuvaa. USD-muunnos käyttää yllä mainittua päivättyä kurssia.",
+      "Lähteen arvio"
+    ],
+    "da": [
+      "Synlige priser opdateres, når kilden er tilgængelig; prissortering bruger katalogets øjebliksbillede. USD-omregning bruger den daterede kurs ovenfor.",
+      "Kildeestimat"
+    ],
+    "nb": [
+      "Synlige priser oppdateres når kilden er tilgjengelig; prissortering bruker katalogens øyeblikksbilde. USD-omregning bruker den daterte kursen ovenfor.",
+      "Kildeestimat"
+    ],
+    "cs": [
+      "Viditelné ceny se aktualizují, je-li zdroj dostupný; řazení podle ceny používá uložený stav katalogu. Přepočet na USD používá výše uvedený kurz k danému datu.",
+      "Odhad ze zdroje"
+    ],
+    "sk": [
+      "Viditeľné ceny sa aktualizujú, ak je zdroj dostupný; radenie podľa ceny používa uložený stav katalógu. Prepočet na USD používa vyššie uvedený kurz k danému dátumu.",
+      "Odhad zo zdroja"
+    ],
+    "hu": [
+      "A látható árak a forrás elérhetősége esetén frissülnek; az ár szerinti rendezés a katalógus pillanatképét használja. Az USD-átváltás a fent megadott dátumhoz tartozó árfolyamot használja.",
+      "Forrásbecslés"
+    ],
+    "ro": [
+      "Prețurile vizibile se actualizează când sursa este disponibilă; sortarea după preț folosește instantaneul catalogului. Conversia în USD folosește cursul datat de mai sus.",
+      "Estimare din sursă"
+    ],
+    "el": [
+      "Οι ορατές τιμές ενημερώνονται όταν η πηγή είναι διαθέσιμη· η ταξινόμηση τιμών χρησιμοποιεί το αποθηκευμένο στιγμιότυπο καταλόγου. Η μετατροπή σε USD χρησιμοποιεί την παραπάνω ισοτιμία της συγκεκριμένης ημερομηνίας.",
+      "Εκτίμηση πηγής"
+    ],
+    "uk": [
+      "Видимі ціни оновлюються, коли джерело доступне; сортування за ціною використовує збережений стан каталогу. Конвертація в USD використовує зазначений вище курс на відповідну дату.",
+      "Оцінка джерела"
+    ],
+    "ar": [
+      "تُحدّث الأسعار الظاهرة عند توفر المصدر؛ ويستخدم ترتيب الأسعار نسخة الكتالوج المحفوظة. يستخدم التحويل إلى الدولار الأمريكي سعر الصرف المؤرخ أعلاه.",
+      "تقدير المصدر"
+    ],
+    "ja": [
+      "表示価格は取得元が利用可能な場合に更新されます。価格順の並べ替えには保存されたカタログを使用します。米ドルへの換算には上記の日付の為替レートを使用します。",
+      "取得元の参考価格"
+    ],
+    "ko": [
+      "표시 가격은 출처를 이용할 수 있을 때 업데이트되며, 가격 정렬에는 저장된 카탈로그가 사용됩니다. 미국 달러 환산에는 위에 표시된 날짜의 환율이 사용됩니다.",
+      "출처 추정가"
+    ],
+    "vi": [
+      "Giá hiển thị được cập nhật khi nguồn sẵn có; sắp xếp theo giá dùng bản chụp danh mục. Quy đổi USD sử dụng tỷ giá có ngày nêu ở trên.",
+      "Giá ước tính từ nguồn"
+    ],
+    "tr": [
+      "Görünür fiyatlar kaynak kullanılabilir olduğunda güncellenir; fiyat sıralaması katalog anlık görüntüsünü kullanır. USD dönüşümü yukarıda tarihli kuru kullanır.",
+      "Kaynak tahmini"
+    ]
+  }
+}

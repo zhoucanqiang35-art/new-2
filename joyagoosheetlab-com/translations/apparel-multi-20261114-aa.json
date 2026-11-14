@@ -1,0 +1,114 @@
+{
+  "items": [
+    {
+      "name": "Premium Outdoor Water Shoes",
+      "translations": {
+        "fi": "Laadukkaat ulkoiluvesikengät",
+        "da": "Premium vandsko til udendørs brug",
+        "nb": "Vannsko i premium kvalitet til utendørs bruk",
+        "sk": "Prémiová outdoorová obuv do vody",
+        "ro": "Încălțăminte premium de apă pentru exterior",
+        "vi": "Giày đi nước ngoài trời cao cấp"
+      }
+    },
+    {
+      "name": "Platform Casual Dad Sneakers",
+      "translations": {
+        "fi": "Rennot korokepohjaiset dad-tennarit",
+        "da": "Afslappede dad sneakers med plateau",
+        "nb": "Avslappede dad sneakers med platåsåle",
+        "sk": "Voľnočasové robustné tenisky na platforme",
+        "ro": "Pantofi sport casual robuști cu platformă",
+        "vi": "Giày sneaker dáng chunky đế cao thường ngày"
+      }
+    },
+    {
+      "name": "Premium European Casual Shoes",
+      "translations": {
+        "fi": "Laadukkaat eurooppalaiset vapaa-ajan kengät",
+        "da": "Premium fritidssko i europæisk stil",
+        "nb": "Fritidssko i europeisk stil av premium kvalitet",
+        "sk": "Prémiová voľnočasová obuv v európskom štýle",
+        "ro": "Încălțăminte casual premium în stil european",
+        "vi": "Giày thường ngày cao cấp phong cách châu Âu"
+      }
+    },
+    {
+      "name": "2025 Premium Skate Sneakers",
+      "translations": {
+        "fi": "2025 laadukkaat skeittitennarit",
+        "da": "2025 premium skatesneakers",
+        "nb": "2025 skatesneakers i premium kvalitet",
+        "sk": "Prémiové skejterské tenisky 2025",
+        "ro": "Pantofi sport premium de skate 2025",
+        "vi": "Giày trượt ván cao cấp 2025"
+      }
+    },
+    {
+      "name": "Skate Series Casual Sneakers",
+      "translations": {
+        "fi": "Skate-sarjan vapaa-ajan tennarit",
+        "da": "Afslappede sneakers i Skate-serien",
+        "nb": "Avslappede sneakers i Skate-serien",
+        "sk": "Voľnočasové tenisky zo série Skate",
+        "ro": "Pantofi sport casual din seria Skate",
+        "vi": "Giày sneaker thường ngày dòng Skate"
+      }
+    },
+    {
+      "name": "Value Classic Casual Sneakers",
+      "translations": {
+        "fi": "Edulliset klassiset vapaa-ajan tennarit",
+        "da": "Klassiske fritidssneakers til god pris",
+        "nb": "Klassiske fritidssneakers til gunstig pris",
+        "sk": "Cenovo dostupné klasické voľnočasové tenisky",
+        "ro": "Pantofi sport casual clasici la preț avantajos",
+        "vi": "Giày sneaker thường ngày cổ điển giá tốt"
+      }
+    },
+    {
+      "name": "K-14 Premium Running Shoes",
+      "translations": {
+        "fi": "K-14 laadukkaat juoksukengät",
+        "da": "K-14 premium løbesko",
+        "nb": "K-14 løpesko i premium kvalitet",
+        "sk": "Prémiová bežecká obuv K-14",
+        "ro": "Pantofi de alergare premium K-14",
+        "vi": "Giày chạy bộ cao cấp K-14"
+      }
+    },
+    {
+      "name": "Classic Fashion Puffer Jacket",
+      "translations": {
+        "fi": "Klassinen muodikas toppatakki",
+        "da": "Klassisk moderigtig pufferjakke",
+        "nb": "Klassisk moteriktig pufferjakke",
+        "sk": "Klasická módna prešívaná bunda",
+        "ro": "Geacă matlasată clasică la modă",
+        "vi": "Áo khoác phao thời trang cổ điển"
+      }
+    },
+    {
+      "name": "Outdoor Platform Beach Slides",
+      "translations": {
+        "fi": "Korokepohjaiset rantapistokkaat ulkokäyttöön",
+        "da": "Strandsandaler med plateau til udendørs brug",
+        "nb": "Strandsandaler med platåsåle til utendørs bruk",
+        "sk": "Plážové šľapky na platforme do exteriéru",
+        "ro": "Papuci de plajă cu platformă pentru exterior",
+        "vi": "Dép đi biển đế cao dùng ngoài trời"
+      }
+    },
+    {
+      "name": "Premium Mixed-Material Slides",
+      "translations": {
+        "fi": "Laadukkaat sekamateriaalipistokkaat",
+        "da": "Premium sandaler i blandede materialer",
+        "nb": "Sandaler i blandede materialer av premium kvalitet",
+        "sk": "Prémiové šľapky z kombinovaných materiálov",
+        "ro": "Papuci premium din materiale combinate",
+        "vi": "Dép cao cấp phối nhiều chất liệu"
+      }
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "items": [
+    {
+      "name": "3D Print Basketball Shorts",
+      "translations": {
+        "fi": "3D-painetut koripalloshortsit",
+        "da": "Basketballshorts med 3D-print",
+        "nb": "Basketballshorts med 3D-trykk",
+        "cs": "Basketbalové šortky s 3D potiskem",
+        "sk": "Basketbalové šortky s 3D potlačou",
+        "hu": "3D nyomatos kosárlabdashort",
+        "el": "Σορτς μπάσκετ με τρισδιάστατο τύπωμα",
+        "uk": "Баскетбольні шорти з 3D-принтом",
+        "ar": "شورت كرة سلة بطباعة ثلاثية الأبعاد",
+        "ja": "3Dプリントバスケットボールショーツ",
+        "ko": "3D 프린트 농구 반바지",
+        "vi": "Quần short bóng rổ in 3D",
+        "tr": "3D baskılı basketbol şortu"
+      }
+    },
+    {
+      "name": "Fashion Graphic T-Shirt 09",
+      "translations": {
+        "fi": "Muodikas kuviollinen T-paita 09",
+        "da": "Moderigtig T-shirt med grafik 09",
+        "nb": "Fasjonabel T-skjorte med grafikk 09",
+        "cs": "Módní tričko s potiskem 09",
+        "sk": "Módne tričko s potlačou 09",
+        "hu": "Divatos mintás póló 09",
+        "el": "Μοντέρνο μπλουζάκι με σχέδιο 09",
+        "uk": "Модна футболка з принтом 09",
+        "ar": "تيشيرت عصري برسمة 09",
+        "ja": "ファッショングラフィックTシャツ 09",
+        "ko": "패션 그래픽 티셔츠 09",
+        "vi": "Áo thun thời trang có họa tiết 09",
+        "tr": "Moda grafik desenli tişört 09"
+      }
+    },
+    {
+      "name": "Heart-Logo Casual Hoodie",
+      "translations": {
+        "fi": "Rento sydänlogollinen huppari",
+        "da": "Afslappet hættetrøje med hjertelogo",
+        "nb": "Uformell hettegenser med hjertelogo",
+        "cs": "Volnočasová mikina s kapucí a logem srdce",
+        "sk": "Voľnočasová mikina s kapucňou a logom srdca",
+        "hu": "Hétköznapi szívlogós kapucnis pulóver",
+        "el": "Καθημερινό φούτερ με κουκούλα και λογότυπο καρδιάς",
+        "uk": "Повсякденне худі з логотипом-серцем",
+        "ar": "هودي كاجوال بشعار قلب",
+        "ja": "ハートロゴカジュアルパーカー",
+        "ko": "하트 로고 캐주얼 후드티",
+        "vi": "Áo hoodie thường ngày logo trái tim",
+        "tr": "Kalp logolu günlük kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Premium Fashion Jacket",
+      "translations": {
+        "fi": "Laadukas muotitakki",
+        "da": "Premium modejakke",
+        "nb": "Premium motejakke",
+        "cs": "Prémiová módní bunda",
+        "sk": "Prémiová módna bunda",
+        "hu": "Prémium divatdzseki",
+        "el": "Premium μοντέρνο μπουφάν",
+        "uk": "Преміальна модна куртка",
+        "ar": "سترة عصرية فاخرة",
+        "ja": "プレミアムファッションジャケット",
+        "ko": "프리미엄 패션 재킷",
+        "vi": "Áo khoác thời trang cao cấp",
+        "tr": "Premium moda ceket"
+      }
+    },
+    {
+      "name": "Glossy Hooded Down Jacket",
+      "translations": {
+        "fi": "Kiiltävä hupullinen untuvatakki",
+        "da": "Blank dunjakke med hætte",
+        "nb": "Blank dunjakke med hette",
+        "cs": "Lesklá péřová bunda s kapucí",
+        "sk": "Lesklá páperová bunda s kapucňou",
+        "hu": "Fényes kapucnis pehelykabát",
+        "el": "Γυαλιστερό πουπουλένιο μπουφάν με κουκούλα",
+        "uk": "Блискуча пухова куртка з капюшоном",
+        "ar": "سترة داون لامعة بغطاء رأس",
+        "ja": "光沢フード付きダウンジャケット",
+        "ko": "광택 후드 다운 재킷",
+        "vi": "Áo khoác lông vũ bóng có mũ",
+        "tr": "Parlak kapüşonlu kuş tüyü mont"
+      }
+    },
+    {
+      "name": "1996 Style Down Jacket",
+      "translations": {
+        "fi": "1996-tyylinen untuvatakki",
+        "da": "Dunjakke i 1996-stil",
+        "nb": "Dunjakke i 1996-stil",
+        "cs": "Péřová bunda ve stylu 1996",
+        "sk": "Páperová bunda v štýle 1996",
+        "hu": "1996 stílusú pehelykabát",
+        "el": "Πουπουλένιο μπουφάν σε στιλ 1996",
+        "uk": "Пухова куртка у стилі 1996",
+        "ar": "سترة داون بأسلوب 1996",
+        "ja": "1996スタイルダウンジャケット",
+        "ko": "1996 스타일 다운 재킷",
+        "vi": "Áo khoác lông vũ phong cách 1996",
+        "tr": "1996 tarzı kuş tüyü mont"
+      }
+    },
+    {
+      "name": "Western Denim Zip Jacket",
+      "translations": {
+        "fi": "Western-henkinen vetoketjullinen farkkutakki",
+        "da": "Denimjakke med lynlås i westernstil",
+        "nb": "Denimjakke med glidelås i westernstil",
+        "cs": "Džínová bunda na zip ve westernovém stylu",
+        "sk": "Džínsová bunda na zips vo westernovom štýle",
+        "hu": "Western stílusú cipzáras farmerdzseki",
+        "el": "Τζιν μπουφάν με φερμουάρ σε δυτικό στιλ",
+        "uk": "Джинсова куртка на блискавці у стилі вестерн",
+        "ar": "سترة جينز بسحاب بطابع غربي",
+        "ja": "ウエスタンデニムジップジャケット",
+        "ko": "웨스턴 데님 집업 재킷",
+        "vi": "Áo khoác denim khóa kéo phong cách miền Tây",
+        "tr": "Western tarzı fermuarlı kot ceket"
+      }
+    },
+    {
+      "name": "Long Sleeve Zip-Up Jacket",
+      "translations": {
+        "fi": "Pitkähihainen vetoketjutakki",
+        "da": "Langærmet jakke med lynlås",
+        "nb": "Langermet jakke med glidelås",
+        "cs": "Bunda s dlouhým rukávem na zip",
+        "sk": "Bunda s dlhým rukávom na zips",
+        "hu": "Hosszú ujjú cipzáras dzseki",
+        "el": "Μακρυμάνικο μπουφάν με φερμουάρ",
+        "uk": "Куртка з довгими рукавами на блискавці",
+        "ar": "سترة بأكمام طويلة وسحاب",
+        "ja": "長袖ジップアップジャケット",
+        "ko": "긴소매 집업 재킷",
+        "vi": "Áo khoác khóa kéo dài tay",
+        "tr": "Uzun kollu fermuarlı ceket"
+      }
+    },
+    {
+      "name": "Premium Zip-Up Jacket",
+      "translations": {
+        "fi": "Laadukas vetoketjutakki",
+        "da": "Premium jakke med lynlås",
+        "nb": "Premium jakke med glidelås",
+        "cs": "Prémiová bunda na zip",
+        "sk": "Prémiová bunda na zips",
+        "hu": "Prémium cipzáras dzseki",
+        "el": "Premium μπουφάν με φερμουάρ",
+        "uk": "Преміальна куртка на блискавці",
+        "ar": "سترة فاخرة بسحاب",
+        "ja": "プレミアムジップアップジャケット",
+        "ko": "프리미엄 집업 재킷",
+        "vi": "Áo khoác khóa kéo cao cấp",
+        "tr": "Premium fermuarlı ceket"
+      }
+    },
+    {
+      "name": "Glossy Navy Down Jacket",
+      "translations": {
+        "fi": "Kiiltävä tummansininen untuvatakki",
+        "da": "Blank marineblå dunjakke",
+        "nb": "Blank marineblå dunjakke",
+        "cs": "Lesklá tmavě modrá péřová bunda",
+        "sk": "Lesklá tmavomodrá páperová bunda",
+        "hu": "Fényes sötétkék pehelykabát",
+        "el": "Γυαλιστερό σκούρο μπλε πουπουλένιο μπουφάν",
+        "uk": "Блискуча темно-синя пухова куртка",
+        "ar": "سترة داون كحلية لامعة",
+        "ja": "光沢ネイビーダウンジャケット",
+        "ko": "광택 네이비 다운 재킷",
+        "vi": "Áo khoác lông vũ xanh navy bóng",
+        "tr": "Parlak lacivert kuş tüyü mont"
+      }
+    }
+  ]
+}

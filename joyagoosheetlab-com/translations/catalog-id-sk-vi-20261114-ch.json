@@ -1,0 +1,604 @@
+{
+  "7689": {
+    "name": "Men's Monogram Messenger Bag 2",
+    "translations": {
+      "sk": "Pánska messenger taška s monogramom 2212",
+      "vi": "Túi messenger nam họa tiết monogram 2212"
+    }
+  },
+  "7823": {
+    "name": "Patterned Travel Bag 50 cm 802",
+    "translations": {
+      "sk": "Vzorovaná cestovná taška 50 cm 8027",
+      "vi": "Túi du lịch họa tiết 50 cm 8027"
+    }
+  },
+  "7829": {
+    "name": "Patterned Hobo Shoulder Bag 00",
+    "translations": {
+      "sk": "Vzorovaná hobo taška na rameno 006",
+      "vi": "Túi đeo vai hobo họa tiết 006"
+    }
+  },
+  "7830": {
+    "name": "Nike Air Cushion Backpack Coll",
+    "translations": {
+      "sk": "Kolekcia batohov Nike Air Cushion AGT",
+      "vi": "Bộ sưu tập balo Nike Air Cushion AGT"
+    }
+  },
+  "7832": {
+    "name": "Men's Printed Crossbody Bag Co",
+    "translations": {
+      "sk": "Kolekcia pánskych tašiek cez telo s potlačou SSY",
+      "vi": "Bộ sưu tập túi đeo chéo nam in họa tiết SSY"
+    }
+  },
+  "7833": {
+    "name": "Woven Mini Shoulder Bag 708768",
+    "translations": {
+      "sk": "Pletená mini taška na rameno 708768",
+      "vi": "Túi đeo vai mini đan dệt 708768"
+    }
+  },
+  "7837": {
+    "name": "Wallet, Passport Holder and Cr",
+    "translations": {
+      "sk": "Kolekcia peňaženiek, puzdier na pas a tašiek cez telo 003 KEB",
+      "vi": "Bộ sưu tập ví, bao hộ chiếu và túi đeo chéo 003 KEB"
+    }
+  },
+  "7839": {
+    "name": "Patterned Toiletry Pouch 8829",
+    "translations": {
+      "sk": "Vzorované puzdro na hygienické potreby 8829",
+      "vi": "Túi họa tiết đựng đồ vệ sinh 8829"
+    }
+  },
+  "7840": {
+    "name": "Patterned Clutch Bag PM",
+    "translations": {
+      "sk": "Vzorovaná listová kabelka PM",
+      "vi": "Ví cầm tay họa tiết PM"
+    }
+  },
+  "7842": {
+    "name": "Monogram Crossbody Bag and Pou",
+    "translations": {
+      "sk": "Súprava tašky cez telo s monogramom a puzdra 010",
+      "vi": "Bộ túi đeo chéo họa tiết monogram và túi nhỏ 010"
+    }
+  },
+  "7847": {
+    "name": "Wristlet Clutch Collection 998",
+    "translations": {
+      "sk": "Kolekcia listových kabeliek s remienkom na zápästie 9987",
+      "vi": "Bộ sưu tập ví cầm tay có dây đeo cổ tay 9987"
+    }
+  },
+  "7850": {
+    "name": "Patterned Hobo Shoulder Bag 00",
+    "translations": {
+      "sk": "Vzorovaná hobo taška na rameno 006",
+      "vi": "Túi đeo vai hobo họa tiết 006"
+    }
+  },
+  "7852": {
+    "name": "Nike Elite Air Cushion Backpac",
+    "translations": {
+      "sk": "Batoh Nike Elite Air Cushion DX38-4",
+      "vi": "Balo Nike Elite Air Cushion DX38-4"
+    }
+  },
+  "7854": {
+    "name": "Monogram Top Handle Tote Bag 4",
+    "translations": {
+      "sk": "Tote taška s monogramom a horným uchom 41058",
+      "vi": "Túi tote họa tiết monogram quai xách trên 41058"
+    }
+  },
+  "7859": {
+    "name": "Coach Crossbody Camera Bag 991",
+    "translations": {
+      "sk": "Taška cez telo Coach v štýle camera bag 9916",
+      "vi": "Túi đeo chéo camera Coach 9916"
+    }
+  },
+  "7860": {
+    "name": "Printed Shoulder Bag Collectio",
+    "translations": {
+      "sk": "Kolekcia tašiek na rameno s potlačou",
+      "vi": "Bộ sưu tập túi đeo vai in họa tiết"
+    }
+  },
+  "7862": {
+    "name": "Wallet and Passport Holder Col",
+    "translations": {
+      "sk": "Kolekcia peňaženiek a puzdier na pas 003",
+      "vi": "Bộ sưu tập ví và bao hộ chiếu 003"
+    }
+  },
+  "7865": {
+    "name": "Patterned Travel Cosmetic Pouc",
+    "translations": {
+      "sk": "Vzorované cestovné kozmetické puzdro",
+      "vi": "Túi mỹ phẩm du lịch họa tiết"
+    }
+  },
+  "7870": {
+    "name": "Monogram Chain Shoulder Bag Se",
+    "translations": {
+      "sk": "Súprava tašiek na rameno s monogramom a retiazkou",
+      "vi": "Bộ túi đeo vai họa tiết monogram dây xích"
+    }
+  },
+  "7873": {
+    "name": "Color Block Crossbody Bag 9912",
+    "translations": {
+      "sk": "Farebne blokovaná taška cez telo 9912",
+      "vi": "Túi đeo chéo phối màu 9912"
+    }
+  },
+  "7875": {
+    "name": "Patterned Tote and Pouch Set 8",
+    "translations": {
+      "sk": "Súprava vzorovanej tote tašky a puzdra 8001",
+      "vi": "Bộ túi tote họa tiết và túi nhỏ 8001"
+    }
+  },
+  "7876": {
+    "name": "Patterned Mini Zip Pouch 8828",
+    "translations": {
+      "sk": "Vzorované mini puzdro na zips 8828",
+      "vi": "Túi nhỏ họa tiết khóa kéo 8828"
+    }
+  },
+  "7878": {
+    "name": "Monogram Crossbody Bag Set 694",
+    "translations": {
+      "sk": "Súprava tašiek cez telo s monogramom 69443",
+      "vi": "Bộ túi đeo chéo họa tiết monogram 69443"
+    }
+  },
+  "7879": {
+    "name": "Patterned Tote and Pouch Set 8",
+    "translations": {
+      "sk": "Súprava vzorovanej tote tašky a puzdra 8002",
+      "vi": "Bộ túi tote họa tiết và túi nhỏ 8002"
+    }
+  },
+  "7882": {
+    "name": "Lacoste The Blend Monogram Cro",
+    "translations": {
+      "sk": "Taška cez telo Lacoste The Blend s monogramom",
+      "vi": "Túi đeo chéo Lacoste The Blend họa tiết monogram"
+    }
+  },
+  "7883": {
+    "name": "Diesel Mini Crossbody Bag Coll",
+    "translations": {
+      "sk": "Kolekcia mini tašiek cez telo Diesel",
+      "vi": "Bộ sưu tập túi đeo chéo mini Diesel"
+    }
+  },
+  "7889": {
+    "name": "Embossed Top Handle Tote Bag 4",
+    "translations": {
+      "sk": "Reliéfna tote taška s horným uchom 44579",
+      "vi": "Túi tote dập nổi quai xách trên 44579"
+    }
+  },
+  "7890": {
+    "name": "Double Buckle Messenger Bag 99",
+    "translations": {
+      "sk": "Messenger taška s dvojitou prackou 9907",
+      "vi": "Túi messenger hai khóa cài 9907"
+    }
+  },
+  "7892": {
+    "name": "Patterned Mini Zip Pouch 8828",
+    "translations": {
+      "sk": "Vzorované mini puzdro na zips 8828",
+      "vi": "Túi nhỏ họa tiết khóa kéo 8828"
+    }
+  },
+  "7893": {
+    "name": "Gucci Chain Shoulder Bag 46745",
+    "translations": {
+      "sk": "Taška na rameno Gucci s retiazkou 46745",
+      "vi": "Túi đeo vai Gucci dây xích 46745"
+    }
+  },
+  "7896": {
+    "name": "Embossed Crossbody Bag and Pou",
+    "translations": {
+      "sk": "Súprava reliéfnej tašky cez telo a puzdra 69443",
+      "vi": "Bộ túi đeo chéo dập nổi và túi nhỏ 69443"
+    }
+  },
+  "7904": {
+    "name": "YSL Envelope Crossbody Bag 222",
+    "translations": {
+      "sk": "Taška cez telo YSL Envelope 222",
+      "vi": "Túi đeo chéo YSL Envelope 222"
+    }
+  },
+  "7907": {
+    "name": "Patterned Flap Handbag 8029-2",
+    "translations": {
+      "sk": "Vzorovaná kabelka s chlopňou 8029-2",
+      "vi": "Túi xách nắp gập họa tiết 8029-2"
+    }
+  },
+  "7908": {
+    "name": "Black Top Handle Tote Bag 4015",
+    "translations": {
+      "sk": "Čierna tote taška s horným uchom 40159",
+      "vi": "Túi tote đen quai xách trên 40159"
+    }
+  },
+  "7909": {
+    "name": "Embossed Handbag and Coin Pouc",
+    "translations": {
+      "sk": "Súprava reliéfnej kabelky a puzdra na mince 8939",
+      "vi": "Bộ túi xách dập nổi và ví xu 8939"
+    }
+  },
+  "7911": {
+    "name": "Black Tote and Pouch Set 40156",
+    "translations": {
+      "sk": "Súprava čiernej tote tašky a puzdra 40156",
+      "vi": "Bộ túi tote đen và túi nhỏ 40156"
+    }
+  },
+  "7917": {
+    "name": "Cross Motif Ring MZ77",
+    "translations": {
+      "sk": "Prsteň s motívom kríža MZ77",
+      "vi": "Nhẫn họa tiết chữ thập MZ77"
+    }
+  },
+  "7918": {
+    "name": "Screw Motif Bangle 578",
+    "translations": {
+      "sk": "Pevný náramok s motívom skrutiek 578",
+      "vi": "Vòng tay cứng họa tiết đinh vít 578"
+    }
+  },
+  "7921": {
+    "name": "Adjustable Crocodile Link Brac",
+    "translations": {
+      "sk": "Nastaviteľný článkový náramok s krokodílom",
+      "vi": "Vòng tay mắt xích hình cá sấu có thể điều chỉnh"
+    }
+  },
+  "7926": {
+    "name": "Tennis Bracelet 16 cm",
+    "translations": {
+      "sk": "Tenisový náramok 16 cm",
+      "vi": "Vòng tay tennis 16 cm"
+    }
+  },
+  "7928": {
+    "name": "Multi Color Charm Bracelet Col",
+    "translations": {
+      "sk": "Kolekcia náramkov s farebnými príveskami",
+      "vi": "Bộ sưu tập vòng tay mặt trang trí nhiều màu"
+    }
+  },
+  "7931": {
+    "name": "Patterned Flap Shoulder Bag 80",
+    "translations": {
+      "sk": "Vzorovaná taška na rameno s chlopňou 8029-2",
+      "vi": "Túi đeo vai nắp gập họa tiết 8029-2"
+    }
+  },
+  "7932": {
+    "name": "Plaid Backpack 5491",
+    "translations": {
+      "sk": "Károvaný batoh 5491",
+      "vi": "Balo họa tiết kẻ ô 5491"
+    }
+  },
+  "7934": {
+    "name": "Monogram Flap Crossbody Bag 40",
+    "translations": {
+      "sk": "Taška cez telo s monogramom a chlopňou 40780",
+      "vi": "Túi đeo chéo nắp gập họa tiết monogram 40780"
+    }
+  },
+  "7936": {
+    "name": "Shoulder Bag G2201",
+    "translations": {
+      "sk": "Taška na rameno G2201",
+      "vi": "Túi đeo vai G2201"
+    }
+  },
+  "7941": {
+    "name": "Large Travel and Gym Duffel Ba",
+    "translations": {
+      "sk": "Veľká cestovná a športová taška",
+      "vi": "Túi du lịch và tập gym cỡ lớn"
+    }
+  },
+  "7942": {
+    "name": "Monogram Basketball Crossbody",
+    "translations": {
+      "sk": "Taška cez telo s monogramom a basketbalovým motívom 45584",
+      "vi": "Túi đeo chéo họa tiết monogram và bóng rổ 45584"
+    }
+  },
+  "7950": {
+    "name": "Embossed Crossbody Bag and Pou",
+    "translations": {
+      "sk": "Súprava reliéfnej tašky cez telo a puzdra",
+      "vi": "Bộ túi đeo chéo dập nổi và túi nhỏ"
+    }
+  },
+  "7952": {
+    "name": "Patterned Travel Toiletry Pouc",
+    "translations": {
+      "sk": "Vzorované cestovné puzdro na hygienické potreby",
+      "vi": "Túi du lịch họa tiết đựng đồ vệ sinh"
+    }
+  },
+  "7958": {
+    "name": "Barrel Travel and Gym Duffel B",
+    "translations": {
+      "sk": "Valcová cestovná a športová taška",
+      "vi": "Túi du lịch và tập gym dáng trụ"
+    }
+  },
+  "7959": {
+    "name": "Monogram Tiger Crossbody Bag 8",
+    "translations": {
+      "sk": "Taška cez telo s monogramom a tigrom 8089",
+      "vi": "Túi đeo chéo họa tiết monogram và hổ 8089"
+    }
+  },
+  "7960": {
+    "name": "Monogram Tote and Coin Pouch S",
+    "translations": {
+      "sk": "Súprava tote tašky s monogramom a puzdra na mince 8911",
+      "vi": "Bộ túi tote họa tiết monogram và ví xu 8911"
+    }
+  },
+  "7963": {
+    "name": "Men's Camera Crossbody Bag 991",
+    "translations": {
+      "sk": "Pánska taška cez telo v štýle camera bag 9916",
+      "vi": "Túi đeo chéo camera nam 9916"
+    }
+  },
+  "7964": {
+    "name": "Printed Crossbody Bag Three Pi",
+    "translations": {
+      "sk": "Trojčlenná súprava tašiek cez telo s potlačou",
+      "vi": "Bộ ba túi đeo chéo in họa tiết"
+    }
+  },
+  "7967": {
+    "name": "Men's Monogram Crossbody Bag 1",
+    "translations": {
+      "sk": "Pánska taška cez telo s monogramom 10010",
+      "vi": "Túi đeo chéo nam họa tiết monogram 10010"
+    }
+  },
+  "7969": {
+    "name": "Monogram Chain Shoulder Bag DX",
+    "translations": {
+      "sk": "Taška na rameno s monogramom a retiazkou DX9-3",
+      "vi": "Túi đeo vai họa tiết monogram dây xích DX9-3"
+    }
+  },
+  "7971": {
+    "name": "Travel Zip Toiletry Bag GS.918",
+    "translations": {
+      "sk": "Cestovná toaletná taška na zips GS-91843558",
+      "vi": "Túi đựng đồ vệ sinh du lịch khóa kéo GS-91843558"
+    }
+  },
+  "7973": {
+    "name": "Men's Checkerboard Messenger B",
+    "translations": {
+      "sk": "Pánska messenger taška so šachovnicovým vzorom 9903",
+      "vi": "Túi messenger nam họa tiết bàn cờ 9903"
+    }
+  },
+  "7974": {
+    "name": "Men's Monogram Messenger Bag 2",
+    "translations": {
+      "sk": "Pánska messenger taška s monogramom 2212",
+      "vi": "Túi messenger nam họa tiết monogram 2212"
+    }
+  },
+  "7979": {
+    "name": "Men's Vertical Crossbody Bag 9",
+    "translations": {
+      "sk": "Pánska zvislá taška cez telo 9918",
+      "vi": "Túi đeo chéo nam dáng đứng 9918"
+    }
+  },
+  "7980": {
+    "name": "Round Crossbody Camera Bag 173",
+    "translations": {
+      "sk": "Okrúhla taška cez telo v štýle camera bag 1734",
+      "vi": "Túi đeo chéo camera dáng tròn 1734"
+    }
+  },
+  "7981": {
+    "name": "Adjustable Crocodile Link Brac",
+    "translations": {
+      "sk": "Nastaviteľný článkový náramok s krokodílom",
+      "vi": "Vòng tay mắt xích hình cá sấu có thể điều chỉnh"
+    }
+  },
+  "7982": {
+    "name": "Vintage Cross Pendant Chain Ne",
+    "translations": {
+      "sk": "Vintage retiazkový náhrdelník s príveskom kríža",
+      "vi": "Dây chuyền xích cổ điển mặt chữ thập"
+    }
+  },
+  "7983": {
+    "name": "Crystal Ape Head Pendant Neckl",
+    "translations": {
+      "sk": "Náhrdelník s krištáľovým príveskom opičej hlavy DX24-3",
+      "vi": "Dây chuyền mặt đầu khỉ đính pha lê DX24-3"
+    }
+  },
+  "7984": {
+    "name": "Gothic Pendant Necklace Collec",
+    "translations": {
+      "sk": "Kolekcia náhrdelníkov s gotickým príveskom",
+      "vi": "Bộ sưu tập dây chuyền mặt Gothic"
+    }
+  },
+  "7986": {
+    "name": "Colored Crystal Bracelet Colle",
+    "translations": {
+      "sk": "Kolekcia náramkov s farebnými krištáľmi",
+      "vi": "Bộ sưu tập vòng tay pha lê nhiều màu"
+    }
+  },
+  "7988": {
+    "name": "Gold Tone Link Bracelet 2575",
+    "translations": {
+      "sk": "Článkový náramok v zlatom tóne 2575",
+      "vi": "Vòng tay mắt xích màu vàng 2575"
+    }
+  },
+  "7989": {
+    "name": "Cross Pendant Necklace Collect",
+    "translations": {
+      "sk": "Kolekcia náhrdelníkov s príveskom kríža",
+      "vi": "Bộ sưu tập dây chuyền mặt chữ thập"
+    }
+  },
+  "7990": {
+    "name": "Braided Cord Bracelet with Mag",
+    "translations": {
+      "sk": "Náramok z pletenej šnúrky s magnetickým zapínaním",
+      "vi": "Vòng tay dây bện khóa nam châm"
+    }
+  },
+  "7996": {
+    "name": "Gothic Charm Link Bracelet 021",
+    "translations": {
+      "sk": "Článkový náramok s gotickými príveskami 021",
+      "vi": "Vòng tay mắt xích có mặt trang trí Gothic 021"
+    }
+  },
+  "7997": {
+    "name": "Red Logo Tag Necklace 48",
+    "translations": {
+      "sk": "Náhrdelník s červeným príveskom s logom 48",
+      "vi": "Dây chuyền thẻ logo đỏ 48"
+    }
+  },
+  "7999": {
+    "name": "Cross Pendant Bead Necklace 03",
+    "translations": {
+      "sk": "Korálkový náhrdelník s príveskom kríža 033",
+      "vi": "Dây chuyền hạt mặt chữ thập 033"
+    }
+  },
+  "8000": {
+    "name": "Swan and Crystal Pendant Neckl",
+    "translations": {
+      "sk": "Kolekcia náhrdelníkov s labuťou a krištáľovým príveskom",
+      "vi": "Bộ sưu tập dây chuyền mặt thiên nga và pha lê"
+    }
+  },
+  "8002": {
+    "name": "Crystal Pendant Necklace Colle",
+    "translations": {
+      "sk": "Kolekcia náhrdelníkov s krištáľovým príveskom",
+      "vi": "Bộ sưu tập dây chuyền mặt pha lê"
+    }
+  },
+  "8003": {
+    "name": "Heart and Swan Pendant Necklac",
+    "translations": {
+      "sk": "Náhrdelník s príveskami srdca a labute 2136",
+      "vi": "Dây chuyền mặt trái tim và thiên nga 2136"
+    }
+  },
+  "8006": {
+    "name": "Five Clover Bracelet Collectio",
+    "translations": {
+      "sk": "Kolekcia náramkov s piatimi štvorlístkami",
+      "vi": "Bộ sưu tập vòng tay năm cỏ bốn lá"
+    }
+  },
+  "8007": {
+    "name": "Round Zircon Tennis Bracelet 5",
+    "translations": {
+      "sk": "Tenisový náramok s okrúhlymi zirkónmi 5 mm",
+      "vi": "Vòng tay tennis đính zircon tròn 5 mm"
+    }
+  },
+  "8008": {
+    "name": "Pink Cross Pendant Necklace 03",
+    "translations": {
+      "sk": "Náhrdelník s ružovým príveskom kríža 033",
+      "vi": "Dây chuyền mặt chữ thập màu hồng 033"
+    }
+  },
+  "8009": {
+    "name": "Micro Set Zircon Titanium Stee",
+    "translations": {
+      "sk": "Prsteň z titánovej ocele s drobnými zirkónmi",
+      "vi": "Nhẫn thép titan đính zircon nhỏ"
+    }
+  },
+  "8010": {
+    "name": "Pave Open Bangle 004",
+    "translations": {
+      "sk": "Otvorený pevný náramok s pavé osadením 004",
+      "vi": "Vòng tay cứng hở đính đá pavé 004"
+    }
+  },
+  "8015": {
+    "name": "Square-Cut Stone Bridal Ring S",
+    "translations": {
+      "sk": "Svadobná súprava prsteňov so štvorcovo brúsenými kamienkami",
+      "vi": "Bộ nhẫn cưới đính đá cắt vuông"
+    }
+  },
+  "8022": {
+    "name": "Black Cord and Metal Link Brac",
+    "translations": {
+      "sk": "Náramok z čiernej šnúrky a kovových článkov",
+      "vi": "Vòng tay dây đen và mắt xích kim loại"
+    }
+  },
+  "8026": {
+    "name": "Black Bead and Cross Motif Bra",
+    "translations": {
+      "sk": "Náramok s čiernymi korálkami a motívom kríža",
+      "vi": "Vòng tay hạt đen họa tiết chữ thập"
+    }
+  },
+  "8027": {
+    "name": "Resin Cross Pendant Cord Neckl",
+    "translations": {
+      "sk": "Šnúrkový náhrdelník so živicovým príveskom kríža",
+      "vi": "Dây chuyền dây mặt chữ thập bằng nhựa"
+    }
+  },
+  "8029": {
+    "name": "Transparent Cross Pendant Stat",
+    "translations": {
+      "sk": "Výrazný náhrdelník s priehľadným príveskom kríža",
+      "vi": "Dây chuyền nổi bật có mặt chữ thập trong suốt"
+    }
+  },
+  "8032": {
+    "name": "Stone-Set Cross Pendant Neckla",
+    "translations": {
+      "sk": "Náhrdelník s príveskom kríža osadeným kamienkami",
+      "vi": "Dây chuyền mặt chữ thập đính đá"
+    }
+  }
+}

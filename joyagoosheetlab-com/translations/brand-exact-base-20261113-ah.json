@@ -1,0 +1,162 @@
+{
+  "items": [
+    {
+      "name": "MLB Embroidered Casual Shorts",
+      "translations": {
+        "fi": "MLB Kirjaillut vapaa-ajan shortsit",
+        "da": "MLB Broderede casual shorts",
+        "nb": "MLB Brodert fritidsshorts",
+        "cs": "MLB Vyšívané volnočasové šortky",
+        "sk": "MLB Vyšívané voľnočasové šortky",
+        "hu": "MLB Hímzett szabadidős rövidnadrág",
+        "ro": "MLB Pantaloni scurți casual brodați",
+        "el": "MLB Κεντημένο casual σορτς",
+        "tr": "MLB İşlemeli günlük şort",
+        "uk": "MLB Повсякденні шорти з вишивкою",
+        "ar": "MLB شورت يومي مطرز",
+        "ja": "MLB 刺繍入りカジュアルショーツ",
+        "ko": "MLB 자수 캐주얼 반바지",
+        "vi": "MLB Quần short thường ngày thêu"
+      }
+    },
+    {
+      "name": "XT10 Premium Sports Shorts",
+      "translations": {
+        "fi": "XT10 Premium-urheilushortsit",
+        "da": "XT10 Premium sportsshorts",
+        "nb": "XT10 Premium sportsshorts",
+        "cs": "XT10 Prémiové sportovní šortky",
+        "sk": "XT10 Prémiové športové šortky",
+        "hu": "XT10 Prémium sportrövidnadrág",
+        "el": "XT10 Premium αθλητικό σορτς",
+        "tr": "XT10 Premium spor şort",
+        "uk": "XT10 Спортивні шорти преміум",
+        "ar": "XT10 شورت رياضي فاخر",
+        "ja": "XT10 プレミアムスポーツショーツ",
+        "ko": "XT10 프리미엄 스포츠 반바지",
+        "vi": "XT10 Quần short thể thao cao cấp"
+      }
+    },
+    {
+      "name": "RL Embroidered Zip Hoodie",
+      "translations": {
+        "fi": "RL Kirjailtu vetoketjullinen huppari",
+        "da": "RL Broderet hættetrøje med lynlås",
+        "nb": "RL Brodert hettegenser med glidelås",
+        "cs": "RL Vyšívaná mikina s kapucí na zip",
+        "sk": "RL Vyšívaná mikina s kapucňou na zips",
+        "hu": "RL Hímzett cipzáras kapucnis pulóver",
+        "el": "RL Κεντημένο φούτερ με κουκούλα και φερμουάρ",
+        "tr": "RL İşlemeli fermuarlı kapüşonlu sweatshirt",
+        "uk": "RL Худі на блискавці з вишивкою",
+        "ar": "RL سترة مطرزة بغطاء رأس وسحاب",
+        "ja": "RL 刺繍入りジップパーカー",
+        "ko": "RL 자수 지퍼 후드티",
+        "vi": "RL Áo hoodie khóa kéo có thêu"
+      }
+    },
+    {
+      "name": "Nike T-Shirt and Shorts Set",
+      "translations": {
+        "fi": "Nike T-paidan ja shortsien setti",
+        "da": "Nike Sæt med T-shirt og shorts",
+        "nb": "Nike Sett med T-skjorte og shorts",
+        "cs": "Nike Souprava trička a šortek",
+        "sk": "Nike Súprava trička a šortiek",
+        "hu": "Nike Póló és rövidnadrág szett",
+        "el": "Nike Σετ με μπλουζάκι και σορτς",
+        "tr": "Nike Tişört ve şort takımı",
+        "uk": "Nike Комплект футболки та шортів",
+        "ar": "Nike طقم تي شيرت وشورت",
+        "ja": "Nike Tシャツとショーツのセット",
+        "ko": "Nike 티셔츠와 반바지 세트",
+        "vi": "Nike Bộ áo phông và quần short"
+      }
+    },
+    {
+      "name": "Nike Classic Pullover Hoodie",
+      "translations": {
+        "fi": "Nike Klassinen päälle vedettävä huppari",
+        "da": "Nike Klassisk hættetrøje uden lynlås",
+        "nb": "Nike Klassisk hettegenser uten glidelås",
+        "cs": "Nike Klasická mikina s kapucí přes hlavu",
+        "sk": "Nike Klasická mikina s kapucňou cez hlavu",
+        "hu": "Nike Klasszikus bebújós kapucnis pulóver",
+        "ro": "Nike Hanorac clasic cu glugă fără fermoar",
+        "el": "Nike Κλασικό φούτερ με κουκούλα χωρίς φερμουάρ",
+        "tr": "Nike Klasik fermuarsız kapüşonlu sweatshirt",
+        "uk": "Nike Класичне худі без блискавки",
+        "ar": "Nike سترة كلاسيكية بغطاء رأس دون سحاب",
+        "ja": "Nike クラシックなプルオーバーパーカー",
+        "ko": "Nike 클래식 풀오버 후드티",
+        "vi": "Nike Áo hoodie chui đầu cổ điển"
+      }
+    },
+    {
+      "name": "Lacoste Zip Hoodie Collection",
+      "translations": {
+        "fi": "Lacoste Vetoketjuhupparien valikoima",
+        "da": "Lacoste Kollektion af hættetrøjer med lynlås",
+        "nb": "Lacoste Kolleksjon med hettegensere med glidelås",
+        "cs": "Lacoste Kolekce mikin s kapucí na zip",
+        "sk": "Lacoste Kolekcia mikín s kapucňou na zips",
+        "hu": "Lacoste Cipzáras kapucnis pulóverek kollekciója",
+        "ro": "Lacoste Colecție de hanorace cu fermoar",
+        "el": "Lacoste Συλλογή φούτερ με κουκούλα και φερμουάρ",
+        "tr": "Lacoste Fermuarlı kapüşonlu üst koleksiyonu",
+        "uk": "Lacoste Колекція худі на блискавці",
+        "ar": "Lacoste تشكيلة سترات بغطاء رأس وسحاب",
+        "ja": "Lacoste ジップパーカーコレクション",
+        "ko": "Lacoste 집업 후디 컬렉션",
+        "vi": "Lacoste Bộ sưu tập áo hoodie khóa kéo"
+      }
+    },
+    {
+      "name": "Nike Hooded Windbreaker Jacket",
+      "translations": {
+        "fi": "Nike Hupullinen tuulitakki",
+        "da": "Nike Vindjakke med hætte",
+        "nb": "Nike Vindjakke med hette",
+        "cs": "Nike Větrovka s kapucí",
+        "sk": "Nike Vetrovka s kapucňou",
+        "hu": "Nike Kapucnis széldzseki",
+        "ro": "Nike Jachetă de vânt cu glugă",
+        "el": "Nike Αντιανεμικό μπουφάν με κουκούλα",
+        "tr": "Nike Kapüşonlu rüzgarlık ceket",
+        "uk": "Nike Вітровка з капюшоном",
+        "ar": "Nike سترة واقية من الرياح بغطاء رأس",
+        "ja": "Nike フード付きウインドブレーカージャケット",
+        "ko": "Nike 후드 윈드브레이커 재킷",
+        "vi": "Nike Áo khoác chắn gió có mũ"
+      }
+    },
+    {
+      "name": "Lacoste Classic Red Polo Shirt",
+      "translations": {
+        "fi": "Lacoste Klassinen punainen poolopaita",
+        "da": "Lacoste Klassisk rød poloshirt",
+        "nb": "Lacoste Klassisk rød poloskjorte",
+        "ro": "Lacoste Tricou polo clasic rosu"
+      }
+    },
+    {
+      "name": "Louis Vuitton Gucci Wallet",
+      "translations": {
+        "fi": "Louis Vuitton Gucci lompakko",
+        "da": "Louis Vuitton Gucci pung",
+        "nb": "Louis Vuitton Gucci lommebok",
+        "cs": "Louis Vuitton Gucci peněženka",
+        "sk": "Louis Vuitton Gucci peňaženka",
+        "hu": "Louis Vuitton Gucci pénztárca",
+        "ro": "Louis Vuitton Gucci portofel",
+        "el": "Louis Vuitton Gucci πορτοφόλι",
+        "tr": "Louis Vuitton Gucci cüzdan",
+        "uk": "Louis Vuitton Gucci гаманець",
+        "ar": "Louis Vuitton Gucci محفظة",
+        "ja": "Louis Vuitton Gucci 財布",
+        "ko": "Louis Vuitton Gucci 지갑",
+        "vi": "Louis Vuitton Gucci ví"
+      }
+    }
+  ]
+}

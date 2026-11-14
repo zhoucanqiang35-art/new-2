@@ -1,0 +1,154 @@
+{
+  "items": [
+    {
+      "name": "Minimal Logo Blue T-Shirt",
+      "translations": {
+        "cs": "Modré tričko s minimalistickým logem",
+        "sk": "Modré tričko s minimalistickým logom",
+        "hu": "Kék póló minimalista logóval",
+        "el": "Μπλε μπλουζάκι με λιτό λογότυπο",
+        "uk": "Синя футболка з мінімалістичним логотипом",
+        "ar": "تيشيرت أزرق بشعار بسيط",
+        "ja": "シンプルロゴ入りブルーTシャツ",
+        "ko": "미니멀 로고 블루 티셔츠",
+        "vi": "Áo thun xanh logo tối giản",
+        "tr": "Minimal logolu mavi tişört"
+      }
+    },
+    {
+      "name": "Minimal Logo Black T-Shirt",
+      "translations": {
+        "cs": "Černé tričko s minimalistickým logem",
+        "sk": "Čierne tričko s minimalistickým logom",
+        "hu": "Fekete póló minimalista logóval",
+        "el": "Μαύρο μπλουζάκι με λιτό λογότυπο",
+        "uk": "Чорна футболка з мінімалістичним логотипом",
+        "ar": "تيشيرت أسود بشعار بسيط",
+        "ja": "シンプルロゴ入りブラックTシャツ",
+        "ko": "미니멀 로고 블랙 티셔츠",
+        "vi": "Áo thun đen logo tối giản",
+        "tr": "Minimal logolu siyah tişört"
+      }
+    },
+    {
+      "name": "Sky Blue Pullover Hoodie",
+      "translations": {
+        "cs": "Nebesky modrá mikina s kapucí bez zipu",
+        "sk": "Nebesky modrá mikina s kapucňou bez zipsu",
+        "hu": "Égszínkék bebújós kapucnis pulóver",
+        "el": "Γαλάζιο φούτερ με κουκούλα χωρίς φερμουάρ",
+        "uk": "Блакитне худі без блискавки",
+        "ar": "هودي أزرق سماوي دون سحاب",
+        "ja": "スカイブルーのプルオーバーパーカー",
+        "ko": "스카이블루 풀오버 후드티",
+        "vi": "Áo hoodie chui đầu xanh da trời",
+        "tr": "Gök mavisi fermuarsız kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Minimal Logo White T-Shirt",
+      "translations": {
+        "cs": "Bílé tričko s minimalistickým logem",
+        "sk": "Biele tričko s minimalistickým logom",
+        "hu": "Fehér póló minimalista logóval",
+        "el": "Λευκό μπλουζάκι με λιτό λογότυπο",
+        "uk": "Біла футболка з мінімалістичним логотипом",
+        "ar": "تيشيرت أبيض بشعار بسيط",
+        "ja": "シンプルロゴ入りホワイトTシャツ",
+        "ko": "미니멀 로고 화이트 티셔츠",
+        "vi": "Áo thun trắng logo tối giản",
+        "tr": "Minimal logolu beyaz tişört"
+      }
+    },
+    {
+      "name": "London Crest Polo Shirt",
+      "translations": {
+        "cs": "Polo tričko se znakem London",
+        "sk": "Polo tričko so znakom London",
+        "hu": "London címeres galléros póló",
+        "el": "Πόλο μπλουζάκι με έμβλημα London",
+        "uk": "Поло з гербом London",
+        "ar": "قميص بولو بشارة London",
+        "ja": "Londonエンブレム入りポロシャツ",
+        "ko": "London 문장 폴로 셔츠",
+        "vi": "Áo polo huy hiệu London",
+        "tr": "London armalı polo yaka tişört"
+      }
+    },
+    {
+      "name": "1977 Pullover Hoodie",
+      "translations": {
+        "cs": "Mikina s kapucí bez zipu 1977",
+        "sk": "Mikina s kapucňou bez zipsu 1977",
+        "hu": "1977 bebújós kapucnis pulóver",
+        "el": "Φούτερ 1977 με κουκούλα χωρίς φερμουάρ",
+        "uk": "Худі 1977 без блискавки",
+        "ar": "هودي 1977 دون سحاب",
+        "ja": "1977プルオーバーパーカー",
+        "ko": "1977 풀오버 후드티",
+        "vi": "Áo hoodie chui đầu 1977",
+        "tr": "1977 fermuarsız kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Classic Mint Polo Shirt",
+      "translations": {
+        "cs": "Klasické polo tričko v mátové barvě",
+        "sk": "Klasické polo tričko v mätovej farbe",
+        "hu": "Klasszikus mentaszínű galléros póló",
+        "el": "Κλασικό πόλο μπλουζάκι σε χρώμα μέντας",
+        "uk": "Класичне поло м’ятного кольору",
+        "ar": "قميص بولو كلاسيكي بلون النعناع",
+        "ja": "クラシックミントカラーのポロシャツ",
+        "ko": "클래식 민트 폴로 셔츠",
+        "vi": "Áo polo màu xanh bạc hà cổ điển",
+        "tr": "Klasik nane renkli polo yaka tişört"
+      }
+    },
+    {
+      "name": "Premium Crew-Neck T-Shirt",
+      "translations": {
+        "cs": "Prémiové tričko s kulatým výstřihem",
+        "sk": "Prémiové tričko s okrúhlym výstrihom",
+        "hu": "Prémium kerek nyakú póló",
+        "el": "Premium μπλουζάκι με στρογγυλή λαιμόκοψη",
+        "uk": "Преміальна футболка з круглим вирізом",
+        "ar": "تيشيرت فاخر برقبة دائرية",
+        "ja": "プレミアムクルーネックTシャツ",
+        "ko": "프리미엄 크루넥 티셔츠",
+        "vi": "Áo thun cổ tròn cao cấp",
+        "tr": "Premium bisiklet yaka tişört"
+      }
+    },
+    {
+      "name": "Cross Print Denim Shorts",
+      "translations": {
+        "cs": "Džínové šortky s potiskem kříže",
+        "sk": "Džínsové šortky s potlačou kríža",
+        "hu": "Keresztmintás farmershort",
+        "el": "Τζιν σορτς με τύπωμα σταυρού",
+        "uk": "Джинсові шорти з принтом хреста",
+        "ar": "شورت جينز بطبعة صليب",
+        "ja": "クロスプリントデニムショーツ",
+        "ko": "크로스 프린트 데님 반바지",
+        "vi": "Quần short denim in hình chữ thập",
+        "tr": "Haç baskılı kot şort"
+      }
+    },
+    {
+      "name": "Athletic Sneakers",
+      "translations": {
+        "cs": "Sportovní tenisky",
+        "sk": "Športové tenisky",
+        "hu": "Sportcipő",
+        "el": "Αθλητικά sneakers",
+        "uk": "Спортивні кросівки",
+        "ar": "حذاء رياضي",
+        "ja": "スポーツスニーカー",
+        "ko": "운동화",
+        "vi": "Giày sneaker thể thao",
+        "tr": "Spor ayakkabı"
+      }
+    }
+  ]
+}

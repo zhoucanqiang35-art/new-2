@@ -1,0 +1,51 @@
+{
+  "items": [
+    {
+      "name": "L20 Knit Sports Shorts",
+      "translations": {
+        "cs": "L20 Pletené sportovní šortky",
+        "sk": "L20 Pletené športové šortky",
+        "hu": "L20 Kötött sportrövidnadrág",
+        "el": "L20 Πλεκτό αθλητικό σορτς",
+        "tr": "L20 Örgü spor şort",
+        "uk": "L20 В’язані спортивні шорти",
+        "ar": "L20 شورت رياضي محبوك",
+        "ja": "L20 ニットスポーツショーツ",
+        "ko": "L20 니트 스포츠 반바지",
+        "vi": "L20 Quần short thể thao dệt kim"
+      }
+    },
+    {
+      "name": "DX21 Embroidered Zip Hoodie",
+      "translations": {
+        "da": "DX21 Broderet hættetrøje med lynlås",
+        "nb": "DX21 Brodert hettegenser med glidelås",
+        "cs": "DX21 Vyšívaná mikina s kapucí na zip",
+        "sk": "DX21 Vyšívaná mikina s kapucňou na zips",
+        "hu": "DX21 Hímzett cipzáras kapucnis pulóver",
+        "el": "DX21 Κεντημένο φούτερ με κουκούλα και φερμουάρ",
+        "tr": "DX21 İşlemeli fermuarlı kapüşonlu sweatshirt",
+        "uk": "DX21 Худі на блискавці з вишивкою",
+        "ar": "DX21 سترة مطرزة بغطاء رأس وسحاب",
+        "ja": "DX21 刺繍入りジップパーカー",
+        "ko": "DX21 자수 지퍼 후드티",
+        "vi": "DX21 Áo hoodie khóa kéo có thêu"
+      }
+    },
+    {
+      "name": "B30 Casual Sneakers Collection",
+      "translations": {
+        "ro": "B30 Colecția de adidași casual"
+      }
+    },
+    {
+      "name": "G-X10 Retro 4 Basketball Shoes",
+      "translations": {
+        "fi": "G-X10 Retro 4 -koripallokengät",
+        "da": "G-X10 Retro 4 Basketball Sko",
+        "nb": "G-X10 Retro 4 Basketballsko",
+        "ro": "G-X10 Pantofi de baschet retro 4"
+      }
+    }
+  ]
+}

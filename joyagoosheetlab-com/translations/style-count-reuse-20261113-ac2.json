@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "name": "Purple Jeans [5 styles]",
+      "translations": {
+        "fi": "Purple farkut [5 mallia]",
+        "da": "Purple jeans [5 modeller]",
+        "nb": "Purple jeans [5 modeller]",
+        "cs": "Purple džíny [5 variant]",
+        "sk": "Purple džínsy [5 variantov]",
+        "hu": "Purple farmer [5 változat]",
+        "ro": "Purple blugi [5 modele]",
+        "el": "Purple τζιν [5 σχέδια]",
+        "tr": "Purple kot pantolon [5 model]",
+        "uk": "Purple джинси [5 варіантів]",
+        "ar": "Purple جينز [5 تصميمًا]",
+        "ja": "Purple ジーンズ [5 種類]",
+        "ko": "Purple 청바지 [5 종]",
+        "vi": "Purple quần jeans [5 mẫu]"
+      }
+    },
+    {
+      "name": "Moncler Sweatshirt [40 styles]",
+      "translations": {
+        "fi": "Moncler collegepaita [40 mallia]",
+        "da": "Moncler sweatshirt [40 modeller]",
+        "nb": "Moncler collegegenser [40 modeller]",
+        "cs": "Moncler mikina [40 variant]",
+        "sk": "Moncler mikina [40 variantov]",
+        "hu": "Moncler pulóver [40 változat]",
+        "ro": "Moncler bluză de trening [40 modele]",
+        "el": "Moncler φούτερ [40 σχέδια]",
+        "tr": "Moncler sweatshirt [40 model]",
+        "uk": "Moncler світшот [40 варіантів]",
+        "ar": "Moncler قميص سويت شيرت [40 تصميمًا]",
+        "ja": "Moncler スウェットシャツ [40 種類]",
+        "ko": "Moncler 스웨트셔츠 [40 종]",
+        "vi": "Moncler áo sweatshirt [40 mẫu]"
+      }
+    }
+  ]
+}

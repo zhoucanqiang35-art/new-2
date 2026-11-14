@@ -1,0 +1,802 @@
+{
+  "items": [
+    {
+      "name": "Polo shirt（5 styles）",
+      "translations": {
+        "fi": "poolopaita [5 mallia]",
+        "da": "poloshirt [5 modeller]",
+        "nb": "poloskjorte [5 modeller]",
+        "cs": "polo tričko [5 variant]",
+        "sk": "polo tričko [5 variantov]",
+        "hu": "galléros póló [5 változat]",
+        "ro": "tricou polo [5 modele]",
+        "el": "πόλο μπλουζάκι [5 σχέδια]",
+        "uk": "поло [5 варіантів]",
+        "ar": "قميص بولو [5 تصميمًا]",
+        "ja": "ポロシャツ [5 種類]",
+        "ko": "폴로 셔츠 [5 종]",
+        "vi": "áo polo [5 mẫu]",
+        "tr": "polo tişört [5 model]"
+      }
+    },
+    {
+      "name": "Burberry scarf（24 STYLE TOP）",
+      "translations": {
+        "fi": "Burberry huivi [24 mallia] TOP",
+        "da": "Burberry halstørklæde [24 modeller] TOP",
+        "nb": "Burberry skjerf [24 modeller] TOP",
+        "cs": "Burberry šála [24 variant] TOP",
+        "sk": "Burberry šál [24 variantov] TOP",
+        "hu": "Burberry sál [24 változat] TOP",
+        "ro": "Burberry eșarfă [24 modele] TOP",
+        "el": "Burberry κασκόλ [24 σχέδια] TOP",
+        "uk": "Burberry шарф [24 варіантів] TOP",
+        "ar": "Burberry وشاح [24 تصميمًا] TOP",
+        "ja": "Burberry スカーフ [24 種類] TOP",
+        "ko": "Burberry 스카프 [24 종] TOP",
+        "vi": "Burberry khăn quàng [24 mẫu] TOP",
+        "tr": "Burberry atkı [24 model] TOP"
+      }
+    },
+    {
+      "name": "Italy Jersey（11 STYLE TOP）",
+      "translations": {
+        "fi": "Italy pelipaita [11 mallia] TOP",
+        "da": "Italy spilletrøje [11 modeller] TOP",
+        "nb": "Italy drakt [11 modeller] TOP",
+        "cs": "Italy dres [11 variant] TOP",
+        "sk": "Italy dres [11 variantov] TOP",
+        "hu": "Italy mez [11 változat] TOP",
+        "ro": "Italy tricou sport [11 modele] TOP",
+        "el": "Italy αθλητική φανέλα [11 σχέδια] TOP",
+        "uk": "Italy спортивна майка [11 варіантів] TOP",
+        "ar": "Italy قميص رياضي [11 تصميمًا] TOP",
+        "ja": "Italy ジャージ [11 種類] TOP",
+        "ko": "Italy 저지 [11 종] TOP",
+        "vi": "Italy áo thi đấu [11 mẫu] TOP",
+        "tr": "Italy forma [11 model] TOP"
+      }
+    },
+    {
+      "name": "Balenciaga B22 Cap [3 styles]",
+      "translations": {
+        "fi": "Balenciaga B22 lippalakki [3 mallia]",
+        "da": "Balenciaga B22 kasket [3 modeller]",
+        "nb": "Balenciaga B22 caps [3 modeller]",
+        "cs": "Balenciaga B22 kšiltovka [3 variant]",
+        "sk": "Balenciaga B22 šiltovka [3 variantov]",
+        "hu": "Balenciaga B22 sapka [3 változat]",
+        "ro": "Balenciaga B22 șapcă [3 modele]",
+        "el": "Balenciaga B22 καπέλο τύπου cap [3 σχέδια]",
+        "uk": "Balenciaga B22 кепка [3 варіантів]",
+        "ar": "Balenciaga B22 قبعة كاب [3 تصميمًا]",
+        "ja": "Balenciaga B22 キャップ [3 種類]",
+        "ko": "Balenciaga B22 캡 [3 종]",
+        "vi": "Balenciaga B22 mũ lưỡi trai [3 mẫu]",
+        "tr": "Balenciaga B22 kep [3 model]"
+      }
+    },
+    {
+      "name": "LV Bracelets [22 styles]",
+      "translations": {
+        "fi": "LV rannekorut [22 mallia]",
+        "da": "LV armbånd [22 modeller]",
+        "nb": "LV armbånd [22 modeller]",
+        "cs": "LV náramky [22 variant]",
+        "sk": "LV náramky [22 variantov]",
+        "hu": "LV karkötők [22 változat]",
+        "ro": "LV brățări [22 modele]",
+        "el": "LV βραχιόλια [22 σχέδια]",
+        "uk": "LV браслети [22 варіантів]",
+        "ar": "LV أساور [22 تصميمًا]",
+        "ja": "LV ブレスレット [22 種類]",
+        "ko": "LV 팔찌 [22 종]",
+        "vi": "LV vòng tay [22 mẫu]",
+        "tr": "LV bileklikler [22 model]"
+      }
+    },
+    {
+      "name": "AMI Ribbed Sweater [7 styles]",
+      "translations": {
+        "fi": "AMI ribbineulepaita [7 mallia]",
+        "da": "AMI ribstrikket sweater [7 modeller]",
+        "nb": "AMI ribbestrikket genser [7 modeller]",
+        "cs": "AMI žebrovaný svetr [7 variant]",
+        "sk": "AMI rebrovaný sveter [7 variantov]",
+        "hu": "AMI bordázott pulóver [7 változat]",
+        "ro": "AMI pulover reiat [7 modele]",
+        "el": "AMI ριμπ πουλόβερ [7 σχέδια]",
+        "uk": "AMI рубчастий светр [7 варіантів]",
+        "ar": "AMI كنزة مضلعة [7 تصميمًا]",
+        "ja": "AMI リブ編みセーター [7 種類]",
+        "ko": "AMI 골지 스웨터 [7 종]",
+        "vi": "AMI áo len dệt gân [7 mẫu]",
+        "tr": "AMI fitilli kazak [7 model]"
+      }
+    },
+    {
+      "name": "JNCO Denim Shorts [40 styles]",
+      "translations": {
+        "fi": "JNCO farkkushortsit [40 mallia]",
+        "da": "JNCO denimshorts [40 modeller]",
+        "nb": "JNCO denimshorts [40 modeller]",
+        "cs": "JNCO džínové šortky [40 variant]",
+        "sk": "JNCO džínsové šortky [40 variantov]",
+        "hu": "JNCO farmershort [40 változat]",
+        "ro": "JNCO pantaloni scurți din denim [40 modele]",
+        "el": "JNCO τζιν σορτς [40 σχέδια]",
+        "uk": "JNCO джинсові шорти [40 варіантів]",
+        "ar": "JNCO شورت جينز [40 تصميمًا]",
+        "ja": "JNCO デニムショーツ [40 種類]",
+        "ko": "JNCO 데님 반바지 [40 종]",
+        "vi": "JNCO quần short denim [40 mẫu]",
+        "tr": "JNCO kot şort [40 model]"
+      }
+    },
+    {
+      "name": "Coach MAYA Handbag [18 styles]",
+      "translations": {
+        "fi": "Coach MAYA käsilaukku [18 mallia]",
+        "da": "Coach MAYA håndtaske [18 modeller]",
+        "nb": "Coach MAYA håndveske [18 modeller]",
+        "cs": "Coach MAYA kabelka [18 variant]",
+        "sk": "Coach MAYA kabelka [18 variantov]",
+        "hu": "Coach MAYA kézitáska [18 változat]",
+        "ro": "Coach MAYA geantă de mână [18 modele]",
+        "el": "Coach MAYA τσάντα χειρός [18 σχέδια]",
+        "uk": "Coach MAYA ручна сумка [18 варіантів]",
+        "ar": "Coach MAYA حقيبة يد [18 تصميمًا]",
+        "ja": "Coach MAYA ハンドバッグ [18 種類]",
+        "ko": "Coach MAYA 핸드백 [18 종]",
+        "vi": "Coach MAYA túi xách tay [18 mẫu]",
+        "tr": "Coach MAYA el çantası [18 model]"
+      }
+    },
+    {
+      "name": "Sweater [37 Styles]",
+      "translations": {
+        "fi": "neulepaita [37 mallia]",
+        "da": "sweater [37 modeller]",
+        "nb": "genser [37 modeller]",
+        "cs": "svetr [37 variant]",
+        "sk": "sveter [37 variantov]",
+        "hu": "pulóver [37 változat]",
+        "ro": "pulover [37 modele]",
+        "el": "πουλόβερ [37 σχέδια]",
+        "uk": "светр [37 варіантів]",
+        "ar": "كنزة [37 تصميمًا]",
+        "ja": "セーター [37 種類]",
+        "ko": "스웨터 [37 종]",
+        "vi": "áo len [37 mẫu]",
+        "tr": "kazak [37 model]"
+      }
+    },
+    {
+      "name": "Rolex Watches ( 40 + styles)",
+      "translations": {
+        "fi": "Rolex rannekellot [40+ mallia]",
+        "da": "Rolex ure [40+ modeller]",
+        "nb": "Rolex klokker [40+ modeller]",
+        "cs": "Rolex hodinky [40+ variant]",
+        "sk": "Rolex hodinky [40+ variantov]",
+        "hu": "Rolex karórák [40+ változat]",
+        "ro": "Rolex ceasuri [40+ modele]",
+        "el": "Rolex ρολόγια [40+ σχέδια]",
+        "uk": "Rolex годинники [40+ варіантів]",
+        "ar": "Rolex ساعات [40+ تصميمًا]",
+        "ja": "Rolex 腕時計 [40+ 種類]",
+        "ko": "Rolex 손목시계 [40+ 종]",
+        "vi": "Rolex đồng hồ [40+ mẫu]",
+        "tr": "Rolex kol saatleri [40+ model]"
+      }
+    },
+    {
+      "name": "FG Essentials Tee [40 styles]",
+      "translations": {
+        "fi": "FG Essentials T-paita [40 mallia]",
+        "da": "FG Essentials T-shirt [40 modeller]",
+        "nb": "FG Essentials T-skjorte [40 modeller]",
+        "cs": "FG Essentials tričko [40 variant]",
+        "sk": "FG Essentials tričko [40 variantov]",
+        "hu": "FG Essentials póló [40 változat]",
+        "ro": "FG Essentials tricou [40 modele]",
+        "el": "FG Essentials μπλουζάκι [40 σχέδια]",
+        "uk": "FG Essentials футболка [40 варіантів]",
+        "ar": "FG Essentials تيشيرت [40 تصميمًا]",
+        "ja": "FG Essentials Tシャツ [40 種類]",
+        "ko": "FG Essentials 티셔츠 [40 종]",
+        "vi": "FG Essentials áo thun [40 mẫu]",
+        "tr": "FG Essentials tişört [40 model]"
+      }
+    },
+    {
+      "name": "Trapstar B22 Jacket [9 styles]",
+      "translations": {
+        "fi": "Trapstar B22 takki [9 mallia]",
+        "da": "Trapstar B22 jakke [9 modeller]",
+        "nb": "Trapstar B22 jakke [9 modeller]",
+        "cs": "Trapstar B22 bunda [9 variant]",
+        "sk": "Trapstar B22 bunda [9 variantov]",
+        "hu": "Trapstar B22 dzseki [9 változat]",
+        "ro": "Trapstar B22 jachetă [9 modele]",
+        "el": "Trapstar B22 μπουφάν [9 σχέδια]",
+        "uk": "Trapstar B22 куртка [9 варіантів]",
+        "ar": "Trapstar B22 سترة [9 تصميمًا]",
+        "ja": "Trapstar B22 ジャケット [9 種類]",
+        "ko": "Trapstar B22 재킷 [9 종]",
+        "vi": "Trapstar B22 áo khoác [9 mẫu]",
+        "tr": "Trapstar B22 ceket [9 model]"
+      }
+    },
+    {
+      "name": "Prada Logo T-Shirt [38 styles]",
+      "translations": {
+        "fi": "Prada logollinen T-paita [38 mallia]",
+        "da": "Prada T-shirt med logo [38 modeller]",
+        "nb": "Prada T-skjorte med logo [38 modeller]",
+        "cs": "Prada tričko s logem [38 variant]",
+        "sk": "Prada tričko s logom [38 variantov]",
+        "hu": "Prada logós póló [38 változat]",
+        "ro": "Prada tricou cu logo [38 modele]",
+        "el": "Prada μπλουζάκι με λογότυπο [38 σχέδια]",
+        "uk": "Prada футболка з логотипом [38 варіантів]",
+        "ar": "Prada تيشيرت بشعار [38 تصميمًا]",
+        "ja": "Prada ロゴTシャツ [38 種類]",
+        "ko": "Prada 로고 티셔츠 [38 종]",
+        "vi": "Prada áo thun có logo [38 mẫu]",
+        "tr": "Prada logolu tişört [38 model]"
+      }
+    },
+    {
+      "name": "Dior Oblique Jacket [2 styles]",
+      "translations": {
+        "fi": "Dior Oblique takki [2 mallia]",
+        "da": "Dior Oblique jakke [2 modeller]",
+        "nb": "Dior Oblique jakke [2 modeller]",
+        "cs": "Dior Oblique bunda [2 variant]",
+        "sk": "Dior Oblique bunda [2 variantov]",
+        "hu": "Dior Oblique dzseki [2 változat]",
+        "ro": "Dior Oblique jachetă [2 modele]",
+        "el": "Dior Oblique μπουφάν [2 σχέδια]",
+        "uk": "Dior Oblique куртка [2 варіантів]",
+        "ar": "Dior Oblique سترة [2 تصميمًا]",
+        "ja": "Dior Oblique ジャケット [2 種類]",
+        "ko": "Dior Oblique 재킷 [2 종]",
+        "vi": "Dior Oblique áo khoác [2 mẫu]",
+        "tr": "Dior Oblique ceket [2 model]"
+      }
+    },
+    {
+      "name": "Travis Socks [40 styles]",
+      "translations": {
+        "fi": "Travis sukat [40 mallia]",
+        "da": "Travis sokker [40 modeller]",
+        "nb": "Travis sokker [40 modeller]",
+        "cs": "Travis ponožky [40 variant]",
+        "sk": "Travis ponožky [40 variantov]",
+        "hu": "Travis zoknik [40 változat]",
+        "ro": "Travis șosete [40 modele]",
+        "el": "Travis κάλτσες [40 σχέδια]",
+        "uk": "Travis шкарпетки [40 варіантів]",
+        "ar": "Travis جوارب [40 تصميمًا]",
+        "ja": "Travis 靴下 [40 種類]",
+        "ko": "Travis 양말 [40 종]",
+        "vi": "Travis tất [40 mẫu]",
+        "tr": "Travis çorap [40 model]"
+      }
+    },
+    {
+      "name": "AMIRI Logo Hoodie [3 styles]",
+      "translations": {
+        "fi": "AMIRI logollinen huppari [3 mallia]",
+        "da": "AMIRI hættetrøje med logo [3 modeller]",
+        "nb": "AMIRI hettegenser med logo [3 modeller]",
+        "cs": "AMIRI mikina s kapucí a logem [3 variant]",
+        "sk": "AMIRI mikina s kapucňou a logom [3 variantov]",
+        "hu": "AMIRI logós kapucnis pulóver [3 változat]",
+        "ro": "AMIRI hanorac cu logo [3 modele]",
+        "el": "AMIRI φούτερ με κουκούλα και λογότυπο [3 σχέδια]",
+        "uk": "AMIRI худі з логотипом [3 варіантів]",
+        "ar": "AMIRI هودي بشعار [3 تصميمًا]",
+        "ja": "AMIRI ロゴパーカー [3 種類]",
+        "ko": "AMIRI 로고 후드티 [3 종]",
+        "vi": "AMIRI áo hoodie có logo [3 mẫu]",
+        "tr": "AMIRI logolu kapüşonlu sweatshirt [3 model]"
+      }
+    },
+    {
+      "name": "Supreme Bogo Bag [4 styles]",
+      "translations": {
+        "fi": "Supreme Bogo laukku [4 mallia]",
+        "da": "Supreme Bogo taske [4 modeller]",
+        "nb": "Supreme Bogo veske [4 modeller]",
+        "cs": "Supreme Bogo taška [4 variant]",
+        "sk": "Supreme Bogo taška [4 variantov]",
+        "hu": "Supreme Bogo táska [4 változat]",
+        "ro": "Supreme Bogo geantă [4 modele]",
+        "el": "Supreme Bogo τσάντα [4 σχέδια]",
+        "uk": "Supreme Bogo сумка [4 варіантів]",
+        "ar": "Supreme Bogo حقيبة [4 تصميمًا]",
+        "ja": "Supreme Bogo バッグ [4 種類]",
+        "ko": "Supreme Bogo 가방 [4 종]",
+        "vi": "Supreme Bogo túi [4 mẫu]",
+        "tr": "Supreme Bogo çanta [4 model]"
+      }
+    },
+    {
+      "name": "Vetements Hoodie [35 styles]",
+      "translations": {
+        "fi": "Vetements huppari [35 mallia]",
+        "da": "Vetements hættetrøje [35 modeller]",
+        "nb": "Vetements hettegenser [35 modeller]",
+        "cs": "Vetements mikina s kapucí [35 variant]",
+        "sk": "Vetements mikina s kapucňou [35 variantov]",
+        "hu": "Vetements kapucnis pulóver [35 változat]",
+        "ro": "Vetements hanorac [35 modele]",
+        "el": "Vetements φούτερ με κουκούλα [35 σχέδια]",
+        "uk": "Vetements худі [35 варіантів]",
+        "ar": "Vetements هودي [35 تصميمًا]",
+        "ja": "Vetements パーカー [35 種類]",
+        "ko": "Vetements 후드티 [35 종]",
+        "vi": "Vetements áo hoodie [35 mẫu]",
+        "tr": "Vetements kapüşonlu sweatshirt [35 model]"
+      }
+    },
+    {
+      "name": "Adwysd T-Shirt [30 styles]",
+      "translations": {
+        "fi": "Adwysd T-paita [30 mallia]",
+        "da": "Adwysd T-shirt [30 modeller]",
+        "nb": "Adwysd T-skjorte [30 modeller]",
+        "cs": "Adwysd tričko [30 variant]",
+        "sk": "Adwysd tričko [30 variantov]",
+        "hu": "Adwysd póló [30 változat]",
+        "ro": "Adwysd tricou [30 modele]",
+        "el": "Adwysd μπλουζάκι [30 σχέδια]",
+        "uk": "Adwysd футболка [30 варіантів]",
+        "ar": "Adwysd تيشيرت [30 تصميمًا]",
+        "ja": "Adwysd Tシャツ [30 種類]",
+        "ko": "Adwysd 티셔츠 [30 종]",
+        "vi": "Adwysd áo thun [30 mẫu]",
+        "tr": "Adwysd tişört [30 model]"
+      }
+    },
+    {
+      "name": "Canada Goose Vest [9 styles]",
+      "translations": {
+        "fi": "Canada Goose liivi [9 mallia]",
+        "da": "Canada Goose vest [9 modeller]",
+        "nb": "Canada Goose vest [9 modeller]",
+        "cs": "Canada Goose vesta [9 variant]",
+        "sk": "Canada Goose vesta [9 variantov]",
+        "hu": "Canada Goose mellény [9 változat]",
+        "ro": "Canada Goose vestă [9 modele]",
+        "el": "Canada Goose γιλέκο [9 σχέδια]",
+        "uk": "Canada Goose жилет [9 варіантів]",
+        "ar": "Canada Goose سترة دون أكمام [9 تصميمًا]",
+        "ja": "Canada Goose ベスト [9 種類]",
+        "ko": "Canada Goose 베스트 [9 종]",
+        "vi": "Canada Goose áo ghi lê [9 mẫu]",
+        "tr": "Canada Goose yelek [9 model]"
+      }
+    },
+    {
+      "name": "BAPE Shark Hoodie [25 styles]",
+      "translations": {
+        "fi": "BAPE Shark huppari [25 mallia]",
+        "da": "BAPE Shark hættetrøje [25 modeller]",
+        "nb": "BAPE Shark hettegenser [25 modeller]",
+        "cs": "BAPE Shark mikina s kapucí [25 variant]",
+        "sk": "BAPE Shark mikina s kapucňou [25 variantov]",
+        "hu": "BAPE Shark kapucnis pulóver [25 változat]",
+        "ro": "BAPE Shark hanorac [25 modele]",
+        "el": "BAPE Shark φούτερ με κουκούλα [25 σχέδια]",
+        "uk": "BAPE Shark худі [25 варіантів]",
+        "ar": "BAPE Shark هودي [25 تصميمًا]",
+        "ja": "BAPE Shark パーカー [25 種類]",
+        "ko": "BAPE Shark 후드티 [25 종]",
+        "vi": "BAPE Shark áo hoodie [25 mẫu]",
+        "tr": "BAPE Shark kapüşonlu sweatshirt [25 model]"
+      }
+    },
+    {
+      "name": "Nike Sport Shorts [40 styles]",
+      "translations": {
+        "fi": "Nike urheilushortsit [40 mallia]",
+        "da": "Nike sportsshorts [40 modeller]",
+        "nb": "Nike sportsshorts [40 modeller]",
+        "cs": "Nike sportovní šortky [40 variant]",
+        "sk": "Nike športové šortky [40 variantov]",
+        "hu": "Nike sportshort [40 változat]",
+        "ro": "Nike pantaloni scurți sport [40 modele]",
+        "el": "Nike αθλητικό σορτς [40 σχέδια]",
+        "uk": "Nike спортивні шорти [40 варіантів]",
+        "ar": "Nike شورت رياضي [40 تصميمًا]",
+        "ja": "Nike スポーツショーツ [40 種類]",
+        "ko": "Nike 스포츠 반바지 [40 종]",
+        "vi": "Nike quần short thể thao [40 mẫu]",
+        "tr": "Nike spor şort [40 model]"
+      }
+    },
+    {
+      "name": "Yacht Print Shorts [15 styles]",
+      "translations": {
+        "fi": "jahtipainatetut shortsit [15 mallia]",
+        "da": "shorts med yachtprint [15 modeller]",
+        "nb": "shorts med yachttrykk [15 modeller]",
+        "cs": "šortky s potiskem jachty [15 variant]",
+        "sk": "šortky s potlačou jachty [15 variantov]",
+        "hu": "jachtmintás rövidnadrág [15 változat]",
+        "ro": "pantaloni scurți cu imprimeu cu iaht [15 modele]",
+        "el": "σορτς με τύπωμα γιοτ [15 σχέδια]",
+        "uk": "шорти з принтом яхти [15 варіантів]",
+        "ar": "شورت بطبعة يخت [15 تصميمًا]",
+        "ja": "ヨットプリントショーツ [15 種類]",
+        "ko": "요트 프린트 반바지 [15 종]",
+        "vi": "quần short in hình du thuyền [15 mẫu]",
+        "tr": "yat baskılı şort [15 model]"
+      }
+    },
+    {
+      "name": "RvL Miami Jersey [27 styles]",
+      "translations": {
+        "fi": "RvL Miami pelipaita [27 mallia]",
+        "da": "RvL Miami spilletrøje [27 modeller]",
+        "nb": "RvL Miami drakt [27 modeller]",
+        "cs": "RvL Miami dres [27 variant]",
+        "sk": "RvL Miami dres [27 variantov]",
+        "hu": "RvL Miami mez [27 változat]",
+        "ro": "RvL Miami tricou sport [27 modele]",
+        "el": "RvL Miami αθλητική φανέλα [27 σχέδια]",
+        "uk": "RvL Miami спортивна майка [27 варіантів]",
+        "ar": "RvL Miami قميص رياضي [27 تصميمًا]",
+        "ja": "RvL Miami ジャージ [27 種類]",
+        "ko": "RvL Miami 저지 [27 종]",
+        "vi": "RvL Miami áo thi đấu [27 mẫu]",
+        "tr": "RvL Miami forma [27 model]"
+      }
+    },
+    {
+      "name": "LV Varsity Jacket [30 styles]",
+      "translations": {
+        "fi": "LV varsity-takki [30 mallia]",
+        "da": "LV varsityjakke [30 modeller]",
+        "nb": "LV varsityjakke [30 modeller]",
+        "cs": "LV univerzitní bunda [30 variant]",
+        "sk": "LV univerzitná bunda [30 variantov]",
+        "hu": "LV egyetemi stílusú dzseki [30 változat]",
+        "ro": "LV jachetă varsity [30 modele]",
+        "el": "LV μπουφάν varsity [30 σχέδια]",
+        "uk": "LV куртка-варситі [30 варіантів]",
+        "ar": "LV سترة جامعية [30 تصميمًا]",
+        "ja": "LV バーシティジャケット [30 種類]",
+        "ko": "LV 바시티 재킷 [30 종]",
+        "vi": "LV áo khoác varsity [30 mẫu]",
+        "tr": "LV üniversite tarzı ceket [30 model]"
+      }
+    },
+    {
+      "name": "PSD Boxer Briefs [40 styles]",
+      "translations": {
+        "fi": "PSD bokserit [40 mallia]",
+        "da": "PSD boxershorts [40 modeller]",
+        "nb": "PSD boxershorts [40 modeller]",
+        "cs": "PSD boxerky [40 variant]",
+        "sk": "PSD boxerky [40 variantov]",
+        "hu": "PSD boxeralsó [40 változat]",
+        "ro": "PSD boxeri [40 modele]",
+        "el": "PSD μποξεράκια [40 σχέδια]",
+        "uk": "PSD боксери [40 варіантів]",
+        "ar": "PSD سروال بوكسر [40 تصميمًا]",
+        "ja": "PSD ボクサーブリーフ [40 種類]",
+        "ko": "PSD 복서 브리프 [40 종]",
+        "vi": "PSD quần boxer brief [40 mẫu]",
+        "tr": "PSD boxer külot [40 model]"
+      }
+    },
+    {
+      "name": "Football caps (6 styles)",
+      "translations": {
+        "fi": "jalkapallolippalakit [6 mallia]",
+        "da": "fodboldkasketter [6 modeller]",
+        "nb": "fotballcapser [6 modeller]",
+        "cs": "fotbalové kšiltovky [6 variant]",
+        "sk": "futbalové šiltovky [6 variantov]",
+        "hu": "focis sapkák [6 változat]",
+        "ro": "șepci de fotbal [6 modele]",
+        "el": "ποδοσφαιρικά καπέλα cap [6 σχέδια]",
+        "uk": "футбольні кепки [6 варіантів]",
+        "ar": "قبعات كرة قدم [6 تصميمًا]",
+        "ja": "サッカーキャップ [6 種類]",
+        "ko": "축구 캡 [6 종]",
+        "vi": "mũ lưỡi trai bóng đá [6 mẫu]",
+        "tr": "futbol kepleri [6 model]"
+      }
+    },
+    {
+      "name": "Sp5der Tee [40 styles]",
+      "translations": {
+        "fi": "Sp5der T-paita [40 mallia]",
+        "da": "Sp5der T-shirt [40 modeller]",
+        "nb": "Sp5der T-skjorte [40 modeller]",
+        "cs": "Sp5der tričko [40 variant]",
+        "sk": "Sp5der tričko [40 variantov]",
+        "hu": "Sp5der póló [40 változat]",
+        "ro": "Sp5der tricou [40 modele]",
+        "el": "Sp5der μπλουζάκι [40 σχέδια]",
+        "uk": "Sp5der футболка [40 варіантів]",
+        "ar": "Sp5der تيشيرت [40 تصميمًا]",
+        "ja": "Sp5der Tシャツ [40 種類]",
+        "ko": "Sp5der 티셔츠 [40 종]",
+        "vi": "Sp5der áo thun [40 mẫu]",
+        "tr": "Sp5der tişört [40 model]"
+      }
+    },
+    {
+      "name": "TF Perfume （40+ styles）",
+      "translations": {
+        "fi": "TF hajuvesi [40+ mallia]",
+        "da": "TF parfume [40+ modeller]",
+        "nb": "TF parfyme [40+ modeller]",
+        "cs": "TF parfém [40+ variant]",
+        "sk": "TF parfum [40+ variantov]",
+        "hu": "TF parfüm [40+ változat]",
+        "ro": "TF parfum [40+ modele]",
+        "el": "TF άρωμα [40+ σχέδια]",
+        "uk": "TF парфуми [40+ варіантів]",
+        "ar": "TF عطر [40+ تصميمًا]",
+        "ja": "TF 香水 [40+ 種類]",
+        "ko": "TF 향수 [40+ 종]",
+        "vi": "TF nước hoa [40+ mẫu]",
+        "tr": "TF parfüm [40+ model]"
+      }
+    },
+    {
+      "name": "Purple Tracksuits [19 styles]",
+      "translations": {
+        "fi": "Purple verryttelyasut [19 mallia]",
+        "da": "Purple træningsdragter [19 modeller]",
+        "nb": "Purple treningsdresser [19 modeller]",
+        "cs": "Purple teplákové soupravy [19 variant]",
+        "sk": "Purple teplákové súpravy [19 variantov]",
+        "hu": "Purple melegítőszettek [19 változat]",
+        "ro": "Purple treninguri [19 modele]",
+        "el": "Purple φόρμες [19 σχέδια]",
+        "uk": "Purple спортивні костюми [19 варіантів]",
+        "ar": "Purple بدلات رياضية [19 تصميمًا]",
+        "ja": "Purple トラックスーツ [19 種類]",
+        "ko": "Purple 트레이닝복 [19 종]",
+        "vi": "Purple bộ đồ thể thao [19 mẫu]",
+        "tr": "Purple eşofman takımları [19 model]"
+      }
+    },
+    {
+      "name": "LV Dior bag set ( 22 + styles)",
+      "translations": {
+        "fi": "LV Dior laukkusetti [22+ mallia]",
+        "da": "LV Dior taskesæt [22+ modeller]",
+        "nb": "LV Dior veskesett [22+ modeller]",
+        "cs": "LV Dior sada tašek [22+ variant]",
+        "sk": "LV Dior sada tašiek [22+ variantov]",
+        "hu": "LV Dior táskaszett [22+ változat]",
+        "ro": "LV Dior set de genți [22+ modele]",
+        "el": "LV Dior σετ τσαντών [22+ σχέδια]",
+        "uk": "LV Dior набір сумок [22+ варіантів]",
+        "ar": "LV Dior طقم حقائب [22+ تصميمًا]",
+        "ja": "LV Dior バッグセット [22+ 種類]",
+        "ko": "LV Dior 가방 세트 [22+ 종]",
+        "vi": "LV Dior bộ túi [22+ mẫu]",
+        "tr": "LV Dior çanta seti [22+ model]"
+      }
+    },
+    {
+      "name": "PP T-Shirt [36 styles]",
+      "translations": {
+        "fi": "PP T-paita [36 mallia]",
+        "da": "PP T-shirt [36 modeller]",
+        "nb": "PP T-skjorte [36 modeller]",
+        "cs": "PP tričko [36 variant]",
+        "sk": "PP tričko [36 variantov]",
+        "hu": "PP póló [36 változat]",
+        "ro": "PP tricou [36 modele]",
+        "el": "PP μπλουζάκι [36 σχέδια]",
+        "uk": "PP футболка [36 варіантів]",
+        "ar": "PP تيشيرت [36 تصميمًا]",
+        "ja": "PP Tシャツ [36 種類]",
+        "ko": "PP 티셔츠 [36 종]",
+        "vi": "PP áo thun [36 mẫu]",
+        "tr": "PP tişört [36 model]"
+      }
+    },
+    {
+      "name": "Stone Island Polo [6 styles]",
+      "translations": {
+        "fi": "Stone Island poolopaita [6 mallia]",
+        "da": "Stone Island poloshirt [6 modeller]",
+        "nb": "Stone Island poloskjorte [6 modeller]",
+        "cs": "Stone Island polo tričko [6 variant]",
+        "sk": "Stone Island polo tričko [6 variantov]",
+        "hu": "Stone Island galléros póló [6 változat]",
+        "ro": "Stone Island tricou polo [6 modele]",
+        "el": "Stone Island πόλο μπλουζάκι [6 σχέδια]",
+        "uk": "Stone Island поло [6 варіантів]",
+        "ar": "Stone Island قميص بولو [6 تصميمًا]",
+        "ja": "Stone Island ポロシャツ [6 種類]",
+        "ko": "Stone Island 폴로 셔츠 [6 종]",
+        "vi": "Stone Island áo polo [6 mẫu]",
+        "tr": "Stone Island polo tişört [6 model]"
+      }
+    },
+    {
+      "name": "Dior Saddle Bag [40 styles]",
+      "translations": {
+        "fi": "Dior Saddle laukku [40 mallia]",
+        "da": "Dior Saddle taske [40 modeller]",
+        "nb": "Dior Saddle veske [40 modeller]",
+        "cs": "Dior Saddle taška [40 variant]",
+        "sk": "Dior Saddle taška [40 variantov]",
+        "hu": "Dior Saddle táska [40 változat]",
+        "ro": "Dior Saddle geantă [40 modele]",
+        "el": "Dior Saddle τσάντα [40 σχέδια]",
+        "uk": "Dior Saddle сумка [40 варіантів]",
+        "ar": "Dior Saddle حقيبة [40 تصميمًا]",
+        "ja": "Dior Saddle バッグ [40 種類]",
+        "ko": "Dior Saddle 가방 [40 종]",
+        "vi": "Dior Saddle túi [40 mẫu]",
+        "tr": "Dior Saddle çanta [40 model]"
+      }
+    },
+    {
+      "name": "tussy Dice T-Shirt [40 styles]",
+      "translations": {
+        "fi": "tussy Dice T-paita [40 mallia]",
+        "da": "tussy Dice T-shirt [40 modeller]",
+        "nb": "tussy Dice T-skjorte [40 modeller]",
+        "cs": "tussy Dice tričko [40 variant]",
+        "sk": "tussy Dice tričko [40 variantov]",
+        "hu": "tussy Dice póló [40 változat]",
+        "ro": "tussy Dice tricou [40 modele]",
+        "el": "tussy Dice μπλουζάκι [40 σχέδια]",
+        "uk": "tussy Dice футболка [40 варіантів]",
+        "ar": "tussy Dice تيشيرت [40 تصميمًا]",
+        "ja": "tussy Dice Tシャツ [40 種類]",
+        "ko": "tussy Dice 티셔츠 [40 종]",
+        "vi": "tussy Dice áo thun [40 mẫu]",
+        "tr": "tussy Dice tişört [40 model]"
+      }
+    },
+    {
+      "name": "JNCO Jeans [40 styles]",
+      "translations": {
+        "fi": "JNCO farkut [40 mallia]",
+        "da": "JNCO jeans [40 modeller]",
+        "nb": "JNCO jeans [40 modeller]",
+        "cs": "JNCO džíny [40 variant]",
+        "sk": "JNCO džínsy [40 variantov]",
+        "hu": "JNCO farmer [40 változat]",
+        "ro": "JNCO blugi [40 modele]",
+        "el": "JNCO τζιν [40 σχέδια]",
+        "uk": "JNCO джинси [40 варіантів]",
+        "ar": "JNCO جينز [40 تصميمًا]",
+        "ja": "JNCO ジーンズ [40 種類]",
+        "ko": "JNCO 청바지 [40 종]",
+        "vi": "JNCO quần jeans [40 mẫu]",
+        "tr": "JNCO kot pantolon [40 model]"
+      }
+    },
+    {
+      "name": "Hermès Birkin Bag [40 styles]",
+      "translations": {
+        "fi": "Hermès Birkin laukku [40 mallia]",
+        "da": "Hermès Birkin taske [40 modeller]",
+        "nb": "Hermès Birkin veske [40 modeller]",
+        "cs": "Hermès Birkin taška [40 variant]",
+        "sk": "Hermès Birkin taška [40 variantov]",
+        "hu": "Hermès Birkin táska [40 változat]",
+        "ro": "Hermès Birkin geantă [40 modele]",
+        "el": "Hermès Birkin τσάντα [40 σχέδια]",
+        "uk": "Hermès Birkin сумка [40 варіантів]",
+        "ar": "Hermès Birkin حقيبة [40 تصميمًا]",
+        "ja": "Hermès Birkin バッグ [40 種類]",
+        "ko": "Hermès Birkin 가방 [40 종]",
+        "vi": "Hermès Birkin túi [40 mẫu]",
+        "tr": "Hermès Birkin çanta [40 model]"
+      }
+    },
+    {
+      "name": "Coolalpaca Jeans [40 styles]",
+      "translations": {
+        "fi": "Coolalpaca farkut [40 mallia]",
+        "da": "Coolalpaca jeans [40 modeller]",
+        "nb": "Coolalpaca jeans [40 modeller]",
+        "cs": "Coolalpaca džíny [40 variant]",
+        "sk": "Coolalpaca džínsy [40 variantov]",
+        "hu": "Coolalpaca farmer [40 változat]",
+        "ro": "Coolalpaca blugi [40 modele]",
+        "el": "Coolalpaca τζιν [40 σχέδια]",
+        "uk": "Coolalpaca джинси [40 варіантів]",
+        "ar": "Coolalpaca جينز [40 تصميمًا]",
+        "ja": "Coolalpaca ジーンズ [40 種類]",
+        "ko": "Coolalpaca 청바지 [40 종]",
+        "vi": "Coolalpaca quần jeans [40 mẫu]",
+        "tr": "Coolalpaca kot pantolon [40 model]"
+      }
+    },
+    {
+      "name": "AMIRI Shirt( 26 + styles)",
+      "translations": {
+        "fi": "AMIRI paita [26+ mallia]",
+        "da": "AMIRI skjorte [26+ modeller]",
+        "nb": "AMIRI skjorte [26+ modeller]",
+        "cs": "AMIRI košile [26+ variant]",
+        "sk": "AMIRI košeľa [26+ variantov]",
+        "hu": "AMIRI ing [26+ változat]",
+        "ro": "AMIRI cămașă [26+ modele]",
+        "el": "AMIRI πουκάμισο [26+ σχέδια]",
+        "uk": "AMIRI сорочка [26+ варіантів]",
+        "ar": "AMIRI قميص [26+ تصميمًا]",
+        "ja": "AMIRI シャツ [26+ 種類]",
+        "ko": "AMIRI 셔츠 [26+ 종]",
+        "vi": "AMIRI áo sơ mi [26+ mẫu]",
+        "tr": "AMIRI gömlek [26+ model]"
+      }
+    },
+    {
+      "name": "tf Perfume （40+ styles)",
+      "translations": {
+        "fi": "tf hajuvesi [40+ mallia]",
+        "da": "tf parfume [40+ modeller]",
+        "nb": "tf parfyme [40+ modeller]",
+        "cs": "tf parfém [40+ variant]",
+        "sk": "tf parfum [40+ variantov]",
+        "hu": "tf parfüm [40+ változat]",
+        "ro": "tf parfum [40+ modele]",
+        "el": "tf άρωμα [40+ σχέδια]",
+        "uk": "tf парфуми [40+ варіантів]",
+        "ar": "tf عطر [40+ تصميمًا]",
+        "ja": "tf 香水 [40+ 種類]",
+        "ko": "tf 향수 [40+ 종]",
+        "vi": "tf nước hoa [40+ mẫu]",
+        "tr": "tf parfüm [40+ model]"
+      }
+    },
+    {
+      "name": "CK Underwear(30 styles)",
+      "translations": {
+        "fi": "CK alusvaatteet [30 mallia]",
+        "da": "CK undertøj [30 modeller]",
+        "nb": "CK undertøy [30 modeller]",
+        "cs": "CK spodní prádlo [30 variant]",
+        "sk": "CK spodná bielizeň [30 variantov]",
+        "hu": "CK fehérnemű [30 változat]",
+        "ro": "CK lenjerie [30 modele]",
+        "el": "CK εσώρουχα [30 σχέδια]",
+        "uk": "CK спідня білизна [30 варіантів]",
+        "ar": "CK ملابس داخلية [30 تصميمًا]",
+        "ja": "CK 下着 [30 種類]",
+        "ko": "CK 속옷 [30 종]",
+        "vi": "CK đồ lót [30 mẫu]",
+        "tr": "CK iç çamaşırı [30 model]"
+      }
+    },
+    {
+      "name": "PSD Underwear ( 39 + styles)",
+      "translations": {
+        "fi": "PSD alusvaatteet [39+ mallia]",
+        "da": "PSD undertøj [39+ modeller]",
+        "nb": "PSD undertøy [39+ modeller]",
+        "cs": "PSD spodní prádlo [39+ variant]",
+        "sk": "PSD spodná bielizeň [39+ variantov]",
+        "hu": "PSD fehérnemű [39+ változat]",
+        "ro": "PSD lenjerie [39+ modele]",
+        "el": "PSD εσώρουχα [39+ σχέδια]",
+        "uk": "PSD спідня білизна [39+ варіантів]",
+        "ar": "PSD ملابس داخلية [39+ تصميمًا]",
+        "ja": "PSD 下着 [39+ 種類]",
+        "ko": "PSD 속옷 [39+ 종]",
+        "vi": "PSD đồ lót [39+ mẫu]",
+        "tr": "PSD iç çamaşırı [39+ model]"
+      }
+    }
+  ]
+}

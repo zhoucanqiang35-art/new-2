@@ -1,0 +1,109 @@
+{
+  "items": [
+    {
+      "name": "casual socks",
+      "translations": {
+        "fi": "Vapaa-ajan sukat",
+        "da": "Fritidssokker",
+        "nb": "Fritidssokker",
+        "sk": "Voľnočasové ponožky",
+        "ro": "Șosete casual",
+        "vi": "Tất thường ngày"
+      }
+    },
+    {
+      "name": "fashion watch",
+      "translations": {
+        "fi": "Muotikello",
+        "da": "Modeur",
+        "nb": "Moteklokke",
+        "sk": "Módne hodinky",
+        "ro": "Ceas de modă",
+        "vi": "Đồng hồ thời trang"
+      }
+    },
+    {
+      "name": "fashion shoes",
+      "translations": {
+        "sk": "Módna obuv",
+        "vi": "Giày thời trang"
+      }
+    },
+    {
+      "name": "Football Tracksuit",
+      "translations": {
+        "sk": "Futbalová tepláková súprava",
+        "vi": "Bộ đồ thể thao bóng đá"
+      }
+    },
+    {
+      "name": "Casual shoes",
+      "translations": {
+        "fi": "Vapaa-ajan kengät",
+        "da": "Fritidssko",
+        "nb": "Fritidssko",
+        "sk": "Voľnočasová obuv",
+        "ro": "Încălțăminte casual",
+        "vi": "Giày thường ngày"
+      }
+    },
+    {
+      "name": "Premium Athletic Sneakers",
+      "translations": {
+        "fi": "Laadukkaat urheilutennarit",
+        "da": "Premium sportssneakers",
+        "nb": "Sportssneakers i premium kvalitet",
+        "sk": "Prémiové športové tenisky",
+        "vi": "Giày thể thao cao cấp"
+      }
+    },
+    {
+      "name": "Classic Sportswear Set",
+      "translations": {
+        "fi": "Klassinen urheiluvaatesetti",
+        "da": "Klassisk sportstøjssæt",
+        "nb": "Klassisk sportsklærsett",
+        "sk": "Klasická športová súprava",
+        "vi": "Bộ đồ thể thao cổ điển"
+      }
+    },
+    {
+      "name": "Classic Men's Zip Hoodie",
+      "translations": {
+        "fi": "Klassinen miesten vetoketjuhuppari",
+        "da": "Klassisk hættetrøje med lynlås til mænd",
+        "nb": "Klassisk hettejakke for menn",
+        "sk": "Klasická pánska mikina s kapucňou na zips",
+        "vi": "Áo hoodie nam cổ điển khóa kéo"
+      }
+    },
+    {
+      "name": "Classic Everyday Jacket",
+      "translations": {
+        "sk": "Klasická bunda na každý deň",
+        "vi": "Áo khoác cổ điển mặc hằng ngày"
+      }
+    },
+    {
+      "name": "Premium Everyday Shoes",
+      "translations": {
+        "fi": "Laadukkaat arkikengät",
+        "da": "Premium hverdagssko",
+        "nb": "Hverdagssko i premium kvalitet",
+        "sk": "Prémiová obuv na každý deň",
+        "vi": "Giày thường ngày cao cấp"
+      }
+    },
+    {
+      "name": "Summer Casual Sports Shorts A",
+      "translations": {
+        "fi": "Kesäiset vapaa-ajan urheilushortsit A",
+        "da": "Afslappede sommersportsshorts A",
+        "nb": "Avslappet sommersportsshorts A",
+        "sk": "Letné voľnočasové športové šortky A",
+        "ro": "Pantaloni scurți sport casual de vară A",
+        "vi": "Quần short thể thao mùa hè thường ngày A"
+      }
+    }
+  ]
+}

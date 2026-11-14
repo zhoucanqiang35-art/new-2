@@ -1,0 +1,114 @@
+{
+  "items": [
+    {
+      "name": "YHH05 Hoodie and Joggers Set",
+      "translations": {
+        "fi": "YHH05 huppari- ja joggerhoususetti",
+        "da": "YHH05 sæt med hættetrøje og joggingbukser",
+        "nb": "YHH05 sett med hettegenser og joggebukse",
+        "sk": "Súprava mikiny s kapucňou a jogger nohavíc YHH05",
+        "ro": "Set cu hanorac și pantaloni jogger YHH05",
+        "vi": "Bộ áo hoodie và quần jogger YHH05"
+      }
+    },
+    {
+      "name": "Casual Track Jacket and Pants",
+      "translations": {
+        "fi": "Rento verryttelytakki- ja housusetti",
+        "da": "Afslappet sæt med træningsjakke og bukser",
+        "nb": "Avslappet sett med treningsjakke og bukse",
+        "sk": "Voľnočasová súprava športovej bundy a nohavíc",
+        "ro": "Set casual cu jachetă sport și pantaloni",
+        "vi": "Bộ áo khoác thể thao và quần thường ngày"
+      }
+    },
+    {
+      "name": "Genuine Leather Mule Slippers",
+      "translations": {
+        "fi": "Aidosta nahasta valmistetut avokantaiset pistokkaat",
+        "da": "Mules i ægte læder",
+        "nb": "Mules i ekte skinn",
+        "sk": "Nazúvacie papuče z pravej kože",
+        "ro": "Papuci tip mule din piele naturală",
+        "vi": "Dép mule bằng da thật"
+      }
+    },
+    {
+      "name": "Knit Logo Casual Set",
+      "translations": {
+        "fi": "Rento neulesetti logolla",
+        "da": "Afslappet striksæt med logo",
+        "nb": "Avslappet strikkesett med logo",
+        "sk": "Voľnočasová pletená súprava s logom",
+        "ro": "Set casual tricotat cu logo",
+        "vi": "Bộ đồ dệt kim thường ngày có logo"
+      }
+    },
+    {
+      "name": "Classic Fluted Bezel Bracelet",
+      "translations": {
+        "fi": "Klassinen rannekoru uurretulla kehällä",
+        "da": "Klassisk armbånd med riflet krans",
+        "nb": "Klassisk armbånd med rillet krans",
+        "sk": "Klasický náramok s vrúbkovanou lunetou",
+        "ro": "Brățară clasică cu ramă canelată",
+        "vi": "Vòng tay cổ điển có viền rãnh"
+      }
+    },
+    {
+      "name": "Pearl Style Orb Necklace 032",
+      "translations": {
+        "fi": "Helmityylinen palloriipuskaulakoru 032",
+        "da": "Halskæde med kuglevedhæng i perlestil 032",
+        "nb": "Halskjede med kuleanheng i perlestil 032",
+        "sk": "Náhrdelník s guľovým príveskom v perlovom štýle 032",
+        "ro": "Colier cu pandantiv sferic în stil perlat 032",
+        "vi": "Dây chuyền mặt cầu phong cách ngọc trai 032"
+      }
+    },
+    {
+      "name": "Sticker Graphic Backpack 105",
+      "translations": {
+        "fi": "Reppu tarrakuvituksella 105",
+        "da": "Rygsæk med klistermærkegrafik 105",
+        "nb": "Ryggsekk med klistremerkegrafikk 105",
+        "sk": "Batoh s nálepkovou grafikou 105",
+        "ro": "Rucsac cu grafică tip autocolant 105",
+        "vi": "Ba lô họa tiết nhãn dán 105"
+      }
+    },
+    {
+      "name": "Casual Sports Backpack DJ NCB",
+      "translations": {
+        "fi": "Rento urheilureppu DJ NCB",
+        "da": "Afslappet sportsrygsæk DJ NCB",
+        "nb": "Avslappet sportsryggsekk DJ NCB",
+        "sk": "Voľnočasový športový batoh DJ NCB",
+        "ro": "Rucsac sport casual DJ NCB",
+        "vi": "Ba lô thể thao thường ngày DJ NCB"
+      }
+    },
+    {
+      "name": "Minimalist Casual Slides 054",
+      "translations": {
+        "fi": "Minimalistiset vapaa-ajan pistokkaat 054",
+        "da": "Minimalistiske fritidssandaler 054",
+        "nb": "Minimalistiske fritidssandaler 054",
+        "sk": "Minimalistické voľnočasové šľapky 054",
+        "ro": "Papuci casual minimaliști 054",
+        "vi": "Dép thường ngày tối giản 054"
+      }
+    },
+    {
+      "name": "Classic Casual Slip-On Shoes",
+      "translations": {
+        "fi": "Klassiset jalkaan sujautettavat vapaa-ajan kengät",
+        "da": "Klassiske slip-on fritidssko",
+        "nb": "Klassiske slip-on fritidssko",
+        "sk": "Klasická nazúvacia voľnočasová obuv",
+        "ro": "Încălțăminte casual clasică fără șireturi",
+        "vi": "Giày thường ngày cổ điển dễ xỏ"
+      }
+    }
+  ]
+}

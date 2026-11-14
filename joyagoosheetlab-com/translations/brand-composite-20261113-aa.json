@@ -1,0 +1,1349 @@
+{
+  "items": [
+    {
+      "name": "Supreme Ski Goggles",
+      "translations": {
+        "fi": "Supreme hiihtolasit",
+        "da": "Supreme skibriller",
+        "nb": "Supreme skibriller",
+        "cs": "Supreme lyžařské brýle",
+        "sk": "Supreme lyžiarske okuliare",
+        "hu": "Supreme síszemüveg",
+        "ro": "Supreme ochelari de schi",
+        "el": "Supreme γυαλιά σκι",
+        "uk": "Supreme лижні окуляри",
+        "ar": "Supreme نظارات تزلج",
+        "ja": "Supreme スキーゴーグル",
+        "ko": "Supreme 스키 고글",
+        "vi": "Supreme kính trượt tuyết",
+        "tr": "Supreme kayak gözlüğü"
+      }
+    },
+    {
+      "name": "Burberry short sleeved shirt",
+      "translations": {
+        "fi": "Burberry lyhythihainen paita",
+        "da": "Burberry kortærmet skjorte",
+        "nb": "Burberry kortermet skjorte",
+        "cs": "Burberry košile s krátkým rukávem",
+        "sk": "Burberry košeľa s krátkym rukávom",
+        "hu": "Burberry rövid ujjú ing",
+        "ro": "Burberry cămașă cu mânecă scurtă",
+        "el": "Burberry κοντομάνικο πουκάμισο",
+        "uk": "Burberry сорочка з короткими рукавами",
+        "ar": "Burberry قميص بأكمام قصيرة",
+        "ja": "Burberry 半袖シャツ",
+        "ko": "Burberry 반소매 셔츠",
+        "vi": "Burberry áo sơ mi ngắn tay",
+        "tr": "Burberry kısa kollu gömlek"
+      }
+    },
+    {
+      "name": "Gucci short sleeves",
+      "translations": {
+        "fi": "Gucci lyhythihaiset vaatteet",
+        "da": "Gucci kortærmet beklædning",
+        "nb": "Gucci kortermede plagg",
+        "cs": "Gucci oděvy s krátkým rukávem",
+        "sk": "Gucci odevy s krátkym rukávom",
+        "hu": "Gucci rövid ujjú ruhák",
+        "ro": "Gucci articole cu mânecă scurtă",
+        "el": "Gucci κοντομάνικα ρούχα",
+        "uk": "Gucci одяг із короткими рукавами",
+        "ar": "Gucci ملابس بأكمام قصيرة",
+        "ja": "Gucci 半袖ウェア",
+        "ko": "Gucci 반소매 의류",
+        "vi": "Gucci đồ ngắn tay",
+        "tr": "Gucci kısa kollu giysiler"
+      }
+    },
+    {
+      "name": "Amiri short sleeve",
+      "translations": {
+        "fi": "Amiri lyhythihainen vaate",
+        "da": "Amiri kortærmet beklædning",
+        "nb": "Amiri kortermet plagg",
+        "cs": "Amiri oděv s krátkým rukávem",
+        "sk": "Amiri odev s krátkym rukávom",
+        "hu": "Amiri rövid ujjú ruha",
+        "ro": "Amiri articol cu mânecă scurtă",
+        "el": "Amiri κοντομάνικο ρούχο",
+        "uk": "Amiri одяг із короткими рукавами",
+        "ar": "Amiri ملابس بأكمام قصيرة",
+        "ja": "Amiri 半袖ウェア",
+        "ko": "Amiri 반소매 의류",
+        "vi": "Amiri đồ ngắn tay",
+        "tr": "Amiri kısa kollu giysi"
+      }
+    },
+    {
+      "name": "PRADA Fashion glasses",
+      "translations": {
+        "fi": "PRADA muotilasit",
+        "da": "PRADA modebriller",
+        "nb": "PRADA motebriller",
+        "cs": "PRADA módní brýle",
+        "sk": "PRADA módne okuliare",
+        "hu": "PRADA divatszemüveg",
+        "ro": "PRADA ochelari de modă",
+        "el": "PRADA μοντέρνα γυαλιά",
+        "uk": "PRADA модні окуляри",
+        "ar": "PRADA نظارات عصرية",
+        "ja": "PRADA ファッション眼鏡",
+        "ko": "PRADA 패션 안경",
+        "vi": "PRADA kính thời trang",
+        "tr": "PRADA moda gözlük"
+      }
+    },
+    {
+      "name": "LV short sleeved shirt",
+      "translations": {
+        "fi": "LV lyhythihainen paita",
+        "da": "LV kortærmet skjorte",
+        "nb": "LV kortermet skjorte",
+        "cs": "LV košile s krátkým rukávem",
+        "sk": "LV košeľa s krátkym rukávom",
+        "hu": "LV rövid ujjú ing",
+        "ro": "LV cămașă cu mânecă scurtă",
+        "el": "LV κοντομάνικο πουκάμισο",
+        "uk": "LV сорочка з короткими рукавами",
+        "ar": "LV قميص بأكمام قصيرة",
+        "ja": "LV 半袖シャツ",
+        "ko": "LV 반소매 셔츠",
+        "vi": "LV áo sơ mi ngắn tay",
+        "tr": "LV kısa kollu gömlek"
+      }
+    },
+    {
+      "name": "CANADA GOOSE vest",
+      "translations": {
+        "fi": "CANADA GOOSE liivi",
+        "da": "CANADA GOOSE vest",
+        "nb": "CANADA GOOSE vest",
+        "cs": "CANADA GOOSE vesta",
+        "sk": "CANADA GOOSE vesta",
+        "hu": "CANADA GOOSE mellény",
+        "ro": "CANADA GOOSE vestă",
+        "el": "CANADA GOOSE γιλέκο",
+        "uk": "CANADA GOOSE жилет",
+        "ar": "CANADA GOOSE سترة دون أكمام",
+        "ja": "CANADA GOOSE ベスト",
+        "ko": "CANADA GOOSE 베스트",
+        "vi": "CANADA GOOSE áo ghi lê",
+        "tr": "CANADA GOOSE yelek"
+      }
+    },
+    {
+      "name": "Palm Angels sweatshirt",
+      "translations": {
+        "fi": "Palm Angels collegepaita",
+        "da": "Palm Angels sweatshirt",
+        "nb": "Palm Angels genser",
+        "cs": "Palm Angels mikina",
+        "sk": "Palm Angels mikina",
+        "hu": "Palm Angels pulóver",
+        "ro": "Palm Angels bluză sport",
+        "el": "Palm Angels μπλούζα φούτερ",
+        "uk": "Palm Angels світшот",
+        "ar": "Palm Angels سويت شيرت",
+        "ja": "Palm Angels スウェット",
+        "ko": "Palm Angels 스웨트셔츠",
+        "vi": "Palm Angels áo nỉ",
+        "tr": "Palm Angels sweatshirt"
+      }
+    },
+    {
+      "name": "trapstar coat",
+      "translations": {
+        "fi": "trapstar takki",
+        "da": "trapstar frakke",
+        "nb": "trapstar frakk",
+        "cs": "trapstar kabát",
+        "sk": "trapstar kabát",
+        "hu": "trapstar kabát",
+        "ro": "trapstar palton",
+        "el": "trapstar παλτό",
+        "uk": "trapstar пальто",
+        "ar": "trapstar معطف",
+        "ja": "trapstar コート",
+        "ko": "trapstar 코트",
+        "vi": "trapstar áo khoác dài",
+        "tr": "trapstar kaban"
+      }
+    },
+    {
+      "name": "Canada Goose down jacket",
+      "translations": {
+        "fi": "Canada Goose untuvatakki",
+        "da": "Canada Goose dunjakke",
+        "nb": "Canada Goose dunjakke",
+        "cs": "Canada Goose péřová bunda",
+        "sk": "Canada Goose páperová bunda",
+        "hu": "Canada Goose pehelykabát",
+        "ro": "Canada Goose geacă cu puf",
+        "el": "Canada Goose πουπουλένιο μπουφάν",
+        "uk": "Canada Goose пухова куртка",
+        "ar": "Canada Goose سترة داون",
+        "ja": "Canada Goose ダウンジャケット",
+        "ko": "Canada Goose 다운 재킷",
+        "vi": "Canada Goose áo khoác lông vũ",
+        "tr": "Canada Goose kuş tüyü mont"
+      }
+    },
+    {
+      "name": "Moncler Down jacket",
+      "translations": {
+        "fi": "Moncler untuvatakki",
+        "da": "Moncler dunjakke",
+        "nb": "Moncler dunjakke",
+        "cs": "Moncler péřová bunda",
+        "sk": "Moncler páperová bunda",
+        "hu": "Moncler pehelykabát",
+        "ro": "Moncler geacă cu puf",
+        "el": "Moncler πουπουλένιο μπουφάν",
+        "uk": "Moncler пухова куртка",
+        "ar": "Moncler سترة داون",
+        "ja": "Moncler ダウンジャケット",
+        "ko": "Moncler 다운 재킷",
+        "vi": "Moncler áo khoác lông vũ",
+        "tr": "Moncler kuş tüyü mont"
+      }
+    },
+    {
+      "name": "Ralph Lauren polo",
+      "translations": {
+        "fi": "Ralph Lauren poolopaita",
+        "da": "Ralph Lauren poloshirt",
+        "nb": "Ralph Lauren poloskjorte",
+        "cs": "Ralph Lauren polo tričko",
+        "sk": "Ralph Lauren polo tričko",
+        "hu": "Ralph Lauren galléros póló",
+        "ro": "Ralph Lauren tricou polo",
+        "el": "Ralph Lauren πόλο μπλουζάκι",
+        "uk": "Ralph Lauren поло",
+        "ar": "Ralph Lauren قميص بولو",
+        "ja": "Ralph Lauren ポロシャツ",
+        "ko": "Ralph Lauren 폴로 셔츠",
+        "vi": "Ralph Lauren áo polo",
+        "tr": "Ralph Lauren polo tişört"
+      }
+    },
+    {
+      "name": "Burberry down jacket",
+      "translations": {
+        "fi": "Burberry untuvatakki",
+        "da": "Burberry dunjakke",
+        "nb": "Burberry dunjakke",
+        "cs": "Burberry péřová bunda",
+        "sk": "Burberry páperová bunda",
+        "hu": "Burberry pehelykabát",
+        "ro": "Burberry geacă cu puf",
+        "el": "Burberry πουπουλένιο μπουφάν",
+        "uk": "Burberry пухова куртка",
+        "ar": "Burberry سترة داون",
+        "ja": "Burberry ダウンジャケット",
+        "ko": "Burberry 다운 재킷",
+        "vi": "Burberry áo khoác lông vũ",
+        "tr": "Burberry kuş tüyü mont"
+      }
+    },
+    {
+      "name": "Canada Goose Down Jacket",
+      "translations": {
+        "fi": "Canada Goose untuvatakki",
+        "da": "Canada Goose dunjakke",
+        "nb": "Canada Goose dunjakke",
+        "cs": "Canada Goose péřová bunda",
+        "sk": "Canada Goose páperová bunda",
+        "hu": "Canada Goose pehelykabát",
+        "ro": "Canada Goose geacă cu puf",
+        "el": "Canada Goose πουπουλένιο μπουφάν",
+        "uk": "Canada Goose пухова куртка",
+        "ar": "Canada Goose سترة داون",
+        "ja": "Canada Goose ダウンジャケット",
+        "ko": "Canada Goose 다운 재킷",
+        "vi": "Canada Goose áo khoác lông vũ",
+        "tr": "Canada Goose kuş tüyü mont"
+      }
+    },
+    {
+      "name": "Ralph Lauren sweatshirt",
+      "translations": {
+        "fi": "Ralph Lauren collegepaita",
+        "da": "Ralph Lauren sweatshirt",
+        "nb": "Ralph Lauren genser",
+        "cs": "Ralph Lauren mikina",
+        "sk": "Ralph Lauren mikina",
+        "hu": "Ralph Lauren pulóver",
+        "ro": "Ralph Lauren bluză sport",
+        "el": "Ralph Lauren μπλούζα φούτερ",
+        "uk": "Ralph Lauren світшот",
+        "ar": "Ralph Lauren سويت شيرت",
+        "ja": "Ralph Lauren スウェット",
+        "ko": "Ralph Lauren 스웨트셔츠",
+        "vi": "Ralph Lauren áo nỉ",
+        "tr": "Ralph Lauren sweatshirt"
+      }
+    },
+    {
+      "name": "Balenciaga sweatshirt",
+      "translations": {
+        "fi": "Balenciaga collegepaita",
+        "da": "Balenciaga sweatshirt",
+        "nb": "Balenciaga genser",
+        "cs": "Balenciaga mikina",
+        "sk": "Balenciaga mikina",
+        "hu": "Balenciaga pulóver",
+        "ro": "Balenciaga bluză sport",
+        "el": "Balenciaga μπλούζα φούτερ",
+        "uk": "Balenciaga світшот",
+        "ar": "Balenciaga سويت شيرت",
+        "ja": "Balenciaga スウェット",
+        "ko": "Balenciaga 스웨트셔츠",
+        "vi": "Balenciaga áo nỉ",
+        "tr": "Balenciaga sweatshirt"
+      }
+    },
+    {
+      "name": "Stone Island down jacket",
+      "translations": {
+        "fi": "Stone Island untuvatakki",
+        "da": "Stone Island dunjakke",
+        "nb": "Stone Island dunjakke",
+        "cs": "Stone Island péřová bunda",
+        "sk": "Stone Island páperová bunda",
+        "hu": "Stone Island pehelykabát",
+        "ro": "Stone Island geacă cu puf",
+        "el": "Stone Island πουπουλένιο μπουφάν",
+        "uk": "Stone Island пухова куртка",
+        "ar": "Stone Island سترة داون",
+        "ja": "Stone Island ダウンジャケット",
+        "ko": "Stone Island 다운 재킷",
+        "vi": "Stone Island áo khoác lông vũ",
+        "tr": "Stone Island kuş tüyü mont"
+      }
+    },
+    {
+      "name": "Corteiz Hoodie set",
+      "translations": {
+        "fi": "Corteiz hupparisetti",
+        "da": "Corteiz hættetrøjesæt",
+        "nb": "Corteiz hettegenser-sett",
+        "cs": "Corteiz komplet s mikinou",
+        "sk": "Corteiz komplet s mikinou",
+        "hu": "Corteiz kapucnis pulóverszett",
+        "ro": "Corteiz set cu hanorac",
+        "el": "Corteiz σετ με φούτερ με κουκούλα",
+        "uk": "Corteiz комплект із худі",
+        "ar": "Corteiz طقم هودي",
+        "ja": "Corteiz パーカーセット",
+        "ko": "Corteiz 후드티 세트",
+        "vi": "Corteiz bộ hoodie",
+        "tr": "Corteiz kapüşonlu takım"
+      }
+    },
+    {
+      "name": "Hellstar Hoodie Set",
+      "translations": {
+        "fi": "Hellstar hupparisetti",
+        "da": "Hellstar hættetrøjesæt",
+        "nb": "Hellstar hettegenser-sett",
+        "cs": "Hellstar komplet s mikinou",
+        "sk": "Hellstar komplet s mikinou",
+        "hu": "Hellstar kapucnis pulóverszett",
+        "ro": "Hellstar set cu hanorac",
+        "el": "Hellstar σετ με φούτερ με κουκούλα",
+        "uk": "Hellstar комплект із худі",
+        "ar": "Hellstar طقم هودي",
+        "ja": "Hellstar パーカーセット",
+        "ko": "Hellstar 후드티 세트",
+        "vi": "Hellstar bộ hoodie",
+        "tr": "Hellstar kapüşonlu takım"
+      }
+    },
+    {
+      "name": "MONCLER Down Jacket",
+      "translations": {
+        "fi": "MONCLER untuvatakki",
+        "da": "MONCLER dunjakke",
+        "nb": "MONCLER dunjakke",
+        "cs": "MONCLER péřová bunda",
+        "sk": "MONCLER páperová bunda",
+        "hu": "MONCLER pehelykabát",
+        "ro": "MONCLER geacă cu puf",
+        "el": "MONCLER πουπουλένιο μπουφάν",
+        "uk": "MONCLER пухова куртка",
+        "ar": "MONCLER سترة داون",
+        "ja": "MONCLER ダウンジャケット",
+        "ko": "MONCLER 다운 재킷",
+        "vi": "MONCLER áo khoác lông vũ",
+        "tr": "MONCLER kuş tüyü mont"
+      }
+    },
+    {
+      "name": "Chrome Hearts ski goggles",
+      "translations": {
+        "fi": "Chrome Hearts hiihtolasit",
+        "da": "Chrome Hearts skibriller",
+        "nb": "Chrome Hearts skibriller",
+        "cs": "Chrome Hearts lyžařské brýle",
+        "sk": "Chrome Hearts lyžiarske okuliare",
+        "hu": "Chrome Hearts síszemüveg",
+        "ro": "Chrome Hearts ochelari de schi",
+        "el": "Chrome Hearts γυαλιά σκι",
+        "uk": "Chrome Hearts лижні окуляри",
+        "ar": "Chrome Hearts نظارات تزلج",
+        "ja": "Chrome Hearts スキーゴーグル",
+        "ko": "Chrome Hearts 스키 고글",
+        "vi": "Chrome Hearts kính trượt tuyết",
+        "tr": "Chrome Hearts kayak gözlüğü"
+      }
+    },
+    {
+      "name": "Gucci Fashion Glasses",
+      "translations": {
+        "fi": "Gucci muotilasit",
+        "da": "Gucci modebriller",
+        "nb": "Gucci motebriller",
+        "cs": "Gucci módní brýle",
+        "sk": "Gucci módne okuliare",
+        "hu": "Gucci divatszemüveg",
+        "ro": "Gucci ochelari de modă",
+        "el": "Gucci μοντέρνα γυαλιά",
+        "uk": "Gucci модні окуляри",
+        "ar": "Gucci نظارات عصرية",
+        "ja": "Gucci ファッション眼鏡",
+        "ko": "Gucci 패션 안경",
+        "vi": "Gucci kính thời trang",
+        "tr": "Gucci moda gözlük"
+      }
+    },
+    {
+      "name": "Fendi Fashion Glasses",
+      "translations": {
+        "fi": "Fendi muotilasit",
+        "da": "Fendi modebriller",
+        "nb": "Fendi motebriller",
+        "cs": "Fendi módní brýle",
+        "sk": "Fendi módne okuliare",
+        "hu": "Fendi divatszemüveg",
+        "ro": "Fendi ochelari de modă",
+        "el": "Fendi μοντέρνα γυαλιά",
+        "uk": "Fendi модні окуляри",
+        "ar": "Fendi نظارات عصرية",
+        "ja": "Fendi ファッション眼鏡",
+        "ko": "Fendi 패션 안경",
+        "vi": "Fendi kính thời trang",
+        "tr": "Fendi moda gözlük"
+      }
+    },
+    {
+      "name": "Versace Men's Underwear",
+      "translations": {
+        "fi": "Versace miesten alusvaatteet",
+        "da": "Versace undertøj til mænd",
+        "nb": "Versace undertøy for menn",
+        "cs": "Versace pánské spodní prádlo",
+        "sk": "Versace pánska spodná bielizeň",
+        "hu": "Versace férfi fehérnemű",
+        "ro": "Versace lenjerie pentru bărbați",
+        "el": "Versace ανδρικά εσώρουχα",
+        "uk": "Versace чоловіча спідня білизна",
+        "ar": "Versace ملابس داخلية رجالية",
+        "ja": "Versace メンズ下着",
+        "ko": "Versace 남성 속옷",
+        "vi": "Versace đồ lót nam",
+        "tr": "Versace erkek iç çamaşırı"
+      }
+    },
+    {
+      "name": "Fendi Men's Underwear",
+      "translations": {
+        "fi": "Fendi miesten alusvaatteet",
+        "da": "Fendi undertøj til mænd",
+        "nb": "Fendi undertøy for menn",
+        "cs": "Fendi pánské spodní prádlo",
+        "sk": "Fendi pánska spodná bielizeň",
+        "hu": "Fendi férfi fehérnemű",
+        "ro": "Fendi lenjerie pentru bărbați",
+        "el": "Fendi ανδρικά εσώρουχα",
+        "uk": "Fendi чоловіча спідня білизна",
+        "ar": "Fendi ملابس داخلية رجالية",
+        "ja": "Fendi メンズ下着",
+        "ko": "Fendi 남성 속옷",
+        "vi": "Fendi đồ lót nam",
+        "tr": "Fendi erkek iç çamaşırı"
+      }
+    },
+    {
+      "name": "Balenciaga short sleeved shirt",
+      "translations": {
+        "fi": "Balenciaga lyhythihainen paita",
+        "da": "Balenciaga kortærmet skjorte",
+        "nb": "Balenciaga kortermet skjorte",
+        "cs": "Balenciaga košile s krátkým rukávem",
+        "sk": "Balenciaga košeľa s krátkym rukávom",
+        "hu": "Balenciaga rövid ujjú ing",
+        "ro": "Balenciaga cămașă cu mânecă scurtă",
+        "el": "Balenciaga κοντομάνικο πουκάμισο",
+        "uk": "Balenciaga сорочка з короткими рукавами",
+        "ar": "Balenciaga قميص بأكمام قصيرة",
+        "ja": "Balenciaga 半袖シャツ",
+        "ko": "Balenciaga 반소매 셔츠",
+        "vi": "Balenciaga áo sơ mi ngắn tay",
+        "tr": "Balenciaga kısa kollu gömlek"
+      }
+    },
+    {
+      "name": "DENIM TEARS HOODIE SUIT",
+      "translations": {
+        "fi": "DENIM TEARS huppariasu",
+        "da": "DENIM TEARS hættetrøjesæt",
+        "nb": "DENIM TEARS hettegenser-sett",
+        "cs": "DENIM TEARS komplet s mikinou",
+        "sk": "DENIM TEARS komplet s mikinou",
+        "hu": "DENIM TEARS kapucnis szett",
+        "ro": "DENIM TEARS set cu hanorac",
+        "el": "DENIM TEARS σετ με φούτερ με κουκούλα",
+        "uk": "DENIM TEARS комплект із худі",
+        "ar": "DENIM TEARS طقم هودي",
+        "ja": "DENIM TEARS パーカーセット",
+        "ko": "DENIM TEARS 후드티 세트",
+        "vi": "DENIM TEARS bộ hoodie",
+        "tr": "DENIM TEARS kapüşonlu takım"
+      }
+    },
+    {
+      "name": "Chanel Fashion Earrings",
+      "translations": {
+        "fi": "Chanel muotikorvakorut",
+        "da": "Chanel modeøreringe",
+        "nb": "Chanel moteøredobber",
+        "cs": "Chanel módní náušnice",
+        "sk": "Chanel módne náušnice",
+        "hu": "Chanel divatfülbevaló",
+        "ro": "Chanel cercei de modă",
+        "el": "Chanel μοντέρνα σκουλαρίκια",
+        "uk": "Chanel модні сережки",
+        "ar": "Chanel أقراط عصرية",
+        "ja": "Chanel ファッションイヤリング",
+        "ko": "Chanel 패션 귀걸이",
+        "vi": "Chanel bông tai thời trang",
+        "tr": "Chanel moda küpe"
+      }
+    },
+    {
+      "name": "Chanel Fashion Bracelet",
+      "translations": {
+        "fi": "Chanel muotirannekoru",
+        "da": "Chanel modearmbånd",
+        "nb": "Chanel motearmbånd",
+        "cs": "Chanel módní náramek",
+        "sk": "Chanel módny náramok",
+        "hu": "Chanel divatkarkötő",
+        "ro": "Chanel brățară de modă",
+        "el": "Chanel μοντέρνο βραχιόλι",
+        "uk": "Chanel модний браслет",
+        "ar": "Chanel سوار عصري",
+        "ja": "Chanel ファッションブレスレット",
+        "ko": "Chanel 패션 팔찌",
+        "vi": "Chanel vòng tay thời trang",
+        "tr": "Chanel moda bileklik"
+      }
+    },
+    {
+      "name": "Lacoste Polo shirt",
+      "translations": {
+        "fi": "Lacoste poolopaita",
+        "da": "Lacoste poloshirt",
+        "nb": "Lacoste poloskjorte",
+        "cs": "Lacoste polo tričko",
+        "sk": "Lacoste polo tričko",
+        "hu": "Lacoste galléros póló",
+        "ro": "Lacoste tricou polo",
+        "el": "Lacoste πόλο μπλουζάκι",
+        "uk": "Lacoste поло",
+        "ar": "Lacoste قميص بولو",
+        "ja": "Lacoste ポロシャツ",
+        "ko": "Lacoste 폴로 셔츠",
+        "vi": "Lacoste áo polo",
+        "tr": "Lacoste polo tişört"
+      }
+    },
+    {
+      "name": "Prada short sleeves",
+      "translations": {
+        "fi": "Prada lyhythihaiset vaatteet",
+        "da": "Prada kortærmet beklædning",
+        "nb": "Prada kortermede plagg",
+        "cs": "Prada oděvy s krátkým rukávem",
+        "sk": "Prada odevy s krátkym rukávom",
+        "hu": "Prada rövid ujjú ruhák",
+        "ro": "Prada articole cu mânecă scurtă",
+        "el": "Prada κοντομάνικα ρούχα",
+        "uk": "Prada одяг із короткими рукавами",
+        "ar": "Prada ملابس بأكمام قصيرة",
+        "ja": "Prada 半袖ウェア",
+        "ko": "Prada 반소매 의류",
+        "vi": "Prada đồ ngắn tay",
+        "tr": "Prada kısa kollu giysiler"
+      }
+    },
+    {
+      "name": "Saint Laurent Fashion Bracelet",
+      "translations": {
+        "fi": "Saint Laurent muotirannekoru",
+        "da": "Saint Laurent modearmbånd",
+        "nb": "Saint Laurent motearmbånd",
+        "cs": "Saint Laurent módní náramek",
+        "sk": "Saint Laurent módny náramok",
+        "hu": "Saint Laurent divatkarkötő",
+        "ro": "Saint Laurent brățară de modă",
+        "el": "Saint Laurent μοντέρνο βραχιόλι",
+        "uk": "Saint Laurent модний браслет",
+        "ar": "Saint Laurent سوار عصري",
+        "ja": "Saint Laurent ファッションブレスレット",
+        "ko": "Saint Laurent 패션 팔찌",
+        "vi": "Saint Laurent vòng tay thời trang",
+        "tr": "Saint Laurent moda bileklik"
+      }
+    },
+    {
+      "name": "burberry short sleeve",
+      "translations": {
+        "fi": "burberry lyhythihainen vaate",
+        "da": "burberry kortærmet beklædning",
+        "nb": "burberry kortermet plagg",
+        "cs": "burberry oděv s krátkým rukávem",
+        "sk": "burberry odev s krátkym rukávom",
+        "hu": "burberry rövid ujjú ruha",
+        "ro": "burberry articol cu mânecă scurtă",
+        "el": "burberry κοντομάνικο ρούχο",
+        "uk": "burberry одяг із короткими рукавами",
+        "ar": "burberry ملابس بأكمام قصيرة",
+        "ja": "burberry 半袖ウェア",
+        "ko": "burberry 반소매 의류",
+        "vi": "burberry đồ ngắn tay",
+        "tr": "burberry kısa kollu giysi"
+      }
+    },
+    {
+      "name": "GUCCI Short sleeve",
+      "translations": {
+        "fi": "GUCCI lyhythihainen vaate",
+        "da": "GUCCI kortærmet beklædning",
+        "nb": "GUCCI kortermet plagg",
+        "cs": "GUCCI oděv s krátkým rukávem",
+        "sk": "GUCCI odev s krátkym rukávom",
+        "hu": "GUCCI rövid ujjú ruha",
+        "ro": "GUCCI articol cu mânecă scurtă",
+        "el": "GUCCI κοντομάνικο ρούχο",
+        "uk": "GUCCI одяг із короткими рукавами",
+        "ar": "GUCCI ملابس بأكمام قصيرة",
+        "ja": "GUCCI 半袖ウェア",
+        "ko": "GUCCI 반소매 의류",
+        "vi": "GUCCI đồ ngắn tay",
+        "tr": "GUCCI kısa kollu giysi"
+      }
+    },
+    {
+      "name": "Louis Vuitton Low-Top Sneakers",
+      "translations": {
+        "fi": "Louis Vuitton matalavartiset tennarit",
+        "da": "Louis Vuitton lave sneakers",
+        "nb": "Louis Vuitton lave sneakers",
+        "cs": "Louis Vuitton nízké tenisky",
+        "sk": "Louis Vuitton nízke tenisky",
+        "hu": "Louis Vuitton alacsony szárú sportcipő",
+        "ro": "Louis Vuitton sneakers cu profil jos",
+        "el": "Louis Vuitton χαμηλά sneakers",
+        "uk": "Louis Vuitton низькі кросівки",
+        "ar": "Louis Vuitton حذاء رياضي منخفض الرقبة",
+        "ja": "Louis Vuitton ローカットスニーカー",
+        "ko": "Louis Vuitton 로우탑 스니커즈",
+        "vi": "Louis Vuitton giày sneaker cổ thấp",
+        "tr": "Louis Vuitton alçak bilekli spor ayakkabı"
+      }
+    },
+    {
+      "name": "Chanel jewelry",
+      "translations": {
+        "fi": "Chanel korut",
+        "da": "Chanel smykker",
+        "nb": "Chanel smykker",
+        "cs": "Chanel šperky",
+        "sk": "Chanel šperky",
+        "hu": "Chanel ékszerek",
+        "ro": "Chanel bijuterii",
+        "el": "Chanel κοσμήματα",
+        "uk": "Chanel прикраси",
+        "ar": "Chanel مجوهرات",
+        "ja": "Chanel ジュエリー",
+        "ko": "Chanel 주얼리",
+        "vi": "Chanel trang sức",
+        "tr": "Chanel takı"
+      }
+    },
+    {
+      "name": "Versace sweatshirt",
+      "translations": {
+        "fi": "Versace collegepaita",
+        "da": "Versace sweatshirt",
+        "nb": "Versace genser",
+        "cs": "Versace mikina",
+        "sk": "Versace mikina",
+        "hu": "Versace pulóver",
+        "ro": "Versace bluză sport",
+        "el": "Versace μπλούζα φούτερ",
+        "uk": "Versace світшот",
+        "ar": "Versace سويت شيرت",
+        "ja": "Versace スウェット",
+        "ko": "Versace 스웨트셔츠",
+        "vi": "Versace áo nỉ",
+        "tr": "Versace sweatshirt"
+      }
+    },
+    {
+      "name": "BURBERRY Underwear",
+      "translations": {
+        "fi": "BURBERRY alusvaatteet",
+        "da": "BURBERRY undertøj",
+        "nb": "BURBERRY undertøy",
+        "cs": "BURBERRY spodní prádlo",
+        "sk": "BURBERRY spodná bielizeň",
+        "hu": "BURBERRY fehérnemű",
+        "ro": "BURBERRY lenjerie",
+        "el": "BURBERRY εσώρουχα",
+        "uk": "BURBERRY спідня білизна",
+        "ar": "BURBERRY ملابس داخلية",
+        "ja": "BURBERRY 下着",
+        "ko": "BURBERRY 속옷",
+        "vi": "BURBERRY đồ lót",
+        "tr": "BURBERRY iç çamaşırı"
+      }
+    },
+    {
+      "name": "Moncler POLO",
+      "translations": {
+        "fi": "Moncler poolopaita",
+        "da": "Moncler poloshirt",
+        "nb": "Moncler poloskjorte",
+        "cs": "Moncler polo tričko",
+        "sk": "Moncler polo tričko",
+        "hu": "Moncler galléros póló",
+        "ro": "Moncler tricou polo",
+        "el": "Moncler πόλο μπλουζάκι",
+        "uk": "Moncler поло",
+        "ar": "Moncler قميص بولو",
+        "ja": "Moncler ポロシャツ",
+        "ko": "Moncler 폴로 셔츠",
+        "vi": "Moncler áo polo",
+        "tr": "Moncler polo tişört"
+      }
+    },
+    {
+      "name": "ADIDAS POLO",
+      "translations": {
+        "fi": "ADIDAS poolopaita",
+        "da": "ADIDAS poloshirt",
+        "nb": "ADIDAS poloskjorte",
+        "cs": "ADIDAS polo tričko",
+        "sk": "ADIDAS polo tričko",
+        "hu": "ADIDAS galléros póló",
+        "ro": "ADIDAS tricou polo",
+        "el": "ADIDAS πόλο μπλουζάκι",
+        "uk": "ADIDAS поло",
+        "ar": "ADIDAS قميص بولو",
+        "ja": "ADIDAS ポロシャツ",
+        "ko": "ADIDAS 폴로 셔츠",
+        "vi": "ADIDAS áo polo",
+        "tr": "ADIDAS polo tişört"
+      }
+    },
+    {
+      "name": "Burberry sweatshirt",
+      "translations": {
+        "fi": "Burberry collegepaita",
+        "da": "Burberry sweatshirt",
+        "nb": "Burberry genser",
+        "cs": "Burberry mikina",
+        "sk": "Burberry mikina",
+        "hu": "Burberry pulóver",
+        "ro": "Burberry bluză sport",
+        "el": "Burberry μπλούζα φούτερ",
+        "uk": "Burberry світшот",
+        "ar": "Burberry سويت شيرت",
+        "ja": "Burberry スウェット",
+        "ko": "Burberry 스웨트셔츠",
+        "vi": "Burberry áo nỉ",
+        "tr": "Burberry sweatshirt"
+      }
+    },
+    {
+      "name": "Nike Set",
+      "translations": {
+        "fi": "Nike setti",
+        "da": "Nike sæt",
+        "nb": "Nike sett",
+        "cs": "Nike komplet",
+        "sk": "Nike komplet",
+        "hu": "Nike szett",
+        "ro": "Nike set",
+        "el": "Nike σετ",
+        "uk": "Nike комплект",
+        "ar": "Nike طقم",
+        "ja": "Nike セット",
+        "ko": "Nike 세트",
+        "vi": "Nike bộ đồ",
+        "tr": "Nike takım"
+      }
+    },
+    {
+      "name": "Lacoste Longsleeve",
+      "translations": {
+        "fi": "Lacoste pitkähihainen paita",
+        "da": "Lacoste langærmet trøje",
+        "nb": "Lacoste langermet trøye",
+        "cs": "Lacoste tričko s dlouhým rukávem",
+        "sk": "Lacoste tričko s dlhým rukávom",
+        "hu": "Lacoste hosszú ujjú felső",
+        "ro": "Lacoste bluză cu mânecă lungă",
+        "el": "Lacoste μακρυμάνικη μπλούζα",
+        "uk": "Lacoste лонгслів",
+        "ar": "Lacoste قميص بأكمام طويلة",
+        "ja": "Lacoste 長袖トップス",
+        "ko": "Lacoste 긴소매 상의",
+        "vi": "Lacoste áo dài tay",
+        "tr": "Lacoste uzun kollu üst"
+      }
+    },
+    {
+      "name": "Hellstar Longsleeve",
+      "translations": {
+        "fi": "Hellstar pitkähihainen paita",
+        "da": "Hellstar langærmet trøje",
+        "nb": "Hellstar langermet trøye",
+        "cs": "Hellstar tričko s dlouhým rukávem",
+        "sk": "Hellstar tričko s dlhým rukávom",
+        "hu": "Hellstar hosszú ujjú felső",
+        "ro": "Hellstar bluză cu mânecă lungă",
+        "el": "Hellstar μακρυμάνικη μπλούζα",
+        "uk": "Hellstar лонгслів",
+        "ar": "Hellstar قميص بأكمام طويلة",
+        "ja": "Hellstar 長袖トップス",
+        "ko": "Hellstar 긴소매 상의",
+        "vi": "Hellstar áo dài tay",
+        "tr": "Hellstar uzun kollu üst"
+      }
+    },
+    {
+      "name": "Vlone Longsleeve",
+      "translations": {
+        "fi": "Vlone pitkähihainen paita",
+        "da": "Vlone langærmet trøje",
+        "nb": "Vlone langermet trøye",
+        "cs": "Vlone tričko s dlouhým rukávem",
+        "sk": "Vlone tričko s dlhým rukávom",
+        "hu": "Vlone hosszú ujjú felső",
+        "ro": "Vlone bluză cu mânecă lungă",
+        "el": "Vlone μακρυμάνικη μπλούζα",
+        "uk": "Vlone лонгслів",
+        "ar": "Vlone قميص بأكمام طويلة",
+        "ja": "Vlone 長袖トップス",
+        "ko": "Vlone 긴소매 상의",
+        "vi": "Vlone áo dài tay",
+        "tr": "Vlone uzun kollu üst"
+      }
+    },
+    {
+      "name": "Balenciaga Set",
+      "translations": {
+        "fi": "Balenciaga setti",
+        "da": "Balenciaga sæt",
+        "nb": "Balenciaga sett",
+        "cs": "Balenciaga komplet",
+        "sk": "Balenciaga komplet",
+        "hu": "Balenciaga szett",
+        "ro": "Balenciaga set",
+        "el": "Balenciaga σετ",
+        "uk": "Balenciaga комплект",
+        "ar": "Balenciaga طقم",
+        "ja": "Balenciaga セット",
+        "ko": "Balenciaga 세트",
+        "vi": "Balenciaga bộ đồ",
+        "tr": "Balenciaga takım"
+      }
+    },
+    {
+      "name": "Burberry Polo",
+      "translations": {
+        "fi": "Burberry poolopaita",
+        "da": "Burberry poloshirt",
+        "nb": "Burberry poloskjorte",
+        "cs": "Burberry polo tričko",
+        "sk": "Burberry polo tričko",
+        "hu": "Burberry galléros póló",
+        "ro": "Burberry tricou polo",
+        "el": "Burberry πόλο μπλουζάκι",
+        "uk": "Burberry поло",
+        "ar": "Burberry قميص بولو",
+        "ja": "Burberry ポロシャツ",
+        "ko": "Burberry 폴로 셔츠",
+        "vi": "Burberry áo polo",
+        "tr": "Burberry polo tişört"
+      }
+    },
+    {
+      "name": "TRAPSTAR COAT",
+      "translations": {
+        "fi": "TRAPSTAR takki",
+        "da": "TRAPSTAR frakke",
+        "nb": "TRAPSTAR frakk",
+        "cs": "TRAPSTAR kabát",
+        "sk": "TRAPSTAR kabát",
+        "hu": "TRAPSTAR kabát",
+        "ro": "TRAPSTAR palton",
+        "el": "TRAPSTAR παλτό",
+        "uk": "TRAPSTAR пальто",
+        "ar": "TRAPSTAR معطف",
+        "ja": "TRAPSTAR コート",
+        "ko": "TRAPSTAR 코트",
+        "vi": "TRAPSTAR áo khoác dài",
+        "tr": "TRAPSTAR kaban"
+      }
+    },
+    {
+      "name": "TRAPSTAR SET",
+      "translations": {
+        "fi": "TRAPSTAR setti",
+        "da": "TRAPSTAR sæt",
+        "nb": "TRAPSTAR sett",
+        "cs": "TRAPSTAR komplet",
+        "sk": "TRAPSTAR komplet",
+        "hu": "TRAPSTAR szett",
+        "ro": "TRAPSTAR set",
+        "el": "TRAPSTAR σετ",
+        "uk": "TRAPSTAR комплект",
+        "ar": "TRAPSTAR طقم",
+        "ja": "TRAPSTAR セット",
+        "ko": "TRAPSTAR 세트",
+        "vi": "TRAPSTAR bộ đồ",
+        "tr": "TRAPSTAR takım"
+      }
+    },
+    {
+      "name": "Gucci sweatshirt",
+      "translations": {
+        "fi": "Gucci collegepaita",
+        "da": "Gucci sweatshirt",
+        "nb": "Gucci genser",
+        "cs": "Gucci mikina",
+        "sk": "Gucci mikina",
+        "hu": "Gucci pulóver",
+        "ro": "Gucci bluză sport",
+        "el": "Gucci μπλούζα φούτερ",
+        "uk": "Gucci світшот",
+        "ar": "Gucci سويت شيرت",
+        "ja": "Gucci スウェット",
+        "ko": "Gucci 스웨트셔츠",
+        "vi": "Gucci áo nỉ",
+        "tr": "Gucci sweatshirt"
+      }
+    },
+    {
+      "name": "Stone Island sweatshirt",
+      "translations": {
+        "fi": "Stone Island collegepaita",
+        "da": "Stone Island sweatshirt",
+        "nb": "Stone Island genser",
+        "cs": "Stone Island mikina",
+        "sk": "Stone Island mikina",
+        "hu": "Stone Island pulóver",
+        "ro": "Stone Island bluză sport",
+        "el": "Stone Island μπλούζα φούτερ",
+        "uk": "Stone Island світшот",
+        "ar": "Stone Island سويت شيرت",
+        "ja": "Stone Island スウェット",
+        "ko": "Stone Island 스웨트셔츠",
+        "vi": "Stone Island áo nỉ",
+        "tr": "Stone Island sweatshirt"
+      }
+    },
+    {
+      "name": "Ralph Lauren polo Shirt",
+      "translations": {
+        "fi": "Ralph Lauren poolopaita",
+        "da": "Ralph Lauren poloshirt",
+        "nb": "Ralph Lauren poloskjorte",
+        "cs": "Ralph Lauren polo tričko",
+        "sk": "Ralph Lauren polo tričko",
+        "hu": "Ralph Lauren galléros póló",
+        "ro": "Ralph Lauren tricou polo",
+        "el": "Ralph Lauren πόλο μπλουζάκι",
+        "uk": "Ralph Lauren поло",
+        "ar": "Ralph Lauren قميص بولو",
+        "ja": "Ralph Lauren ポロシャツ",
+        "ko": "Ralph Lauren 폴로 셔츠",
+        "vi": "Ralph Lauren áo polo",
+        "tr": "Ralph Lauren polo tişört"
+      }
+    },
+    {
+      "name": "Corteiz Down Jacket",
+      "translations": {
+        "fi": "Corteiz untuvatakki",
+        "da": "Corteiz dunjakke",
+        "nb": "Corteiz dunjakke",
+        "cs": "Corteiz péřová bunda",
+        "sk": "Corteiz páperová bunda",
+        "hu": "Corteiz pehelykabát",
+        "ro": "Corteiz geacă cu puf",
+        "el": "Corteiz πουπουλένιο μπουφάν",
+        "uk": "Corteiz пухова куртка",
+        "ar": "Corteiz سترة داون",
+        "ja": "Corteiz ダウンジャケット",
+        "ko": "Corteiz 다운 재킷",
+        "vi": "Corteiz áo khoác lông vũ",
+        "tr": "Corteiz kuş tüyü mont"
+      }
+    },
+    {
+      "name": "Fendi underwear",
+      "translations": {
+        "fi": "Fendi alusvaatteet",
+        "da": "Fendi undertøj",
+        "nb": "Fendi undertøy",
+        "cs": "Fendi spodní prádlo",
+        "sk": "Fendi spodná bielizeň",
+        "hu": "Fendi fehérnemű",
+        "ro": "Fendi lenjerie",
+        "el": "Fendi εσώρουχα",
+        "uk": "Fendi спідня білизна",
+        "ar": "Fendi ملابس داخلية",
+        "ja": "Fendi 下着",
+        "ko": "Fendi 속옷",
+        "vi": "Fendi đồ lót",
+        "tr": "Fendi iç çamaşırı"
+      }
+    },
+    {
+      "name": "MONCLER vest",
+      "translations": {
+        "fi": "MONCLER liivi",
+        "da": "MONCLER vest",
+        "nb": "MONCLER vest",
+        "cs": "MONCLER vesta",
+        "sk": "MONCLER vesta",
+        "hu": "MONCLER mellény",
+        "ro": "MONCLER vestă",
+        "el": "MONCLER γιλέκο",
+        "uk": "MONCLER жилет",
+        "ar": "MONCLER سترة دون أكمام",
+        "ja": "MONCLER ベスト",
+        "ko": "MONCLER 베스트",
+        "vi": "MONCLER áo ghi lê",
+        "tr": "MONCLER yelek"
+      }
+    },
+    {
+      "name": "Chrome Hearts short sleeve",
+      "translations": {
+        "fi": "Chrome Hearts lyhythihainen vaate",
+        "da": "Chrome Hearts kortærmet beklædning",
+        "nb": "Chrome Hearts kortermet plagg",
+        "cs": "Chrome Hearts oděv s krátkým rukávem",
+        "sk": "Chrome Hearts odev s krátkym rukávom",
+        "hu": "Chrome Hearts rövid ujjú ruha",
+        "ro": "Chrome Hearts articol cu mânecă scurtă",
+        "el": "Chrome Hearts κοντομάνικο ρούχο",
+        "uk": "Chrome Hearts одяг із короткими рукавами",
+        "ar": "Chrome Hearts ملابس بأكمام قصيرة",
+        "ja": "Chrome Hearts 半袖ウェア",
+        "ko": "Chrome Hearts 반소매 의류",
+        "vi": "Chrome Hearts đồ ngắn tay",
+        "tr": "Chrome Hearts kısa kollu giysi"
+      }
+    },
+    {
+      "name": "Louis Vuitton short sleeve",
+      "translations": {
+        "fi": "Louis Vuitton lyhythihainen vaate",
+        "da": "Louis Vuitton kortærmet beklædning",
+        "nb": "Louis Vuitton kortermet plagg",
+        "cs": "Louis Vuitton oděv s krátkým rukávem",
+        "sk": "Louis Vuitton odev s krátkym rukávom",
+        "hu": "Louis Vuitton rövid ujjú ruha",
+        "ro": "Louis Vuitton articol cu mânecă scurtă",
+        "el": "Louis Vuitton κοντομάνικο ρούχο",
+        "uk": "Louis Vuitton одяг із короткими рукавами",
+        "ar": "Louis Vuitton ملابس بأكمام قصيرة",
+        "ja": "Louis Vuitton 半袖ウェア",
+        "ko": "Louis Vuitton 반소매 의류",
+        "vi": "Louis Vuitton đồ ngắn tay",
+        "tr": "Louis Vuitton kısa kollu giysi"
+      }
+    },
+    {
+      "name": "Chanel short sleeved shirt",
+      "translations": {
+        "fi": "Chanel lyhythihainen paita",
+        "da": "Chanel kortærmet skjorte",
+        "nb": "Chanel kortermet skjorte",
+        "cs": "Chanel košile s krátkým rukávem",
+        "sk": "Chanel košeľa s krátkym rukávom",
+        "hu": "Chanel rövid ujjú ing",
+        "ro": "Chanel cămașă cu mânecă scurtă",
+        "el": "Chanel κοντομάνικο πουκάμισο",
+        "uk": "Chanel сорочка з короткими рукавами",
+        "ar": "Chanel قميص بأكمام قصيرة",
+        "ja": "Chanel 半袖シャツ",
+        "ko": "Chanel 반소매 셔츠",
+        "vi": "Chanel áo sơ mi ngắn tay",
+        "tr": "Chanel kısa kollu gömlek"
+      }
+    },
+    {
+      "name": "Dior Fashion Earrings",
+      "translations": {
+        "fi": "Dior muotikorvakorut",
+        "da": "Dior modeøreringe",
+        "nb": "Dior moteøredobber",
+        "cs": "Dior módní náušnice",
+        "sk": "Dior módne náušnice",
+        "hu": "Dior divatfülbevaló",
+        "ro": "Dior cercei de modă",
+        "el": "Dior μοντέρνα σκουλαρίκια",
+        "uk": "Dior модні сережки",
+        "ar": "Dior أقراط عصرية",
+        "ja": "Dior ファッションイヤリング",
+        "ko": "Dior 패션 귀걸이",
+        "vi": "Dior bông tai thời trang",
+        "tr": "Dior moda küpe"
+      }
+    },
+    {
+      "name": "Louis Vuitton jewelry",
+      "translations": {
+        "fi": "Louis Vuitton korut",
+        "da": "Louis Vuitton smykker",
+        "nb": "Louis Vuitton smykker",
+        "cs": "Louis Vuitton šperky",
+        "sk": "Louis Vuitton šperky",
+        "hu": "Louis Vuitton ékszerek",
+        "ro": "Louis Vuitton bijuterii",
+        "el": "Louis Vuitton κοσμήματα",
+        "uk": "Louis Vuitton прикраси",
+        "ar": "Louis Vuitton مجوهرات",
+        "ja": "Louis Vuitton ジュエリー",
+        "ko": "Louis Vuitton 주얼리",
+        "vi": "Louis Vuitton trang sức",
+        "tr": "Louis Vuitton takı"
+      }
+    },
+    {
+      "name": "Moncler down jacket",
+      "translations": {
+        "fi": "Moncler untuvatakki",
+        "da": "Moncler dunjakke",
+        "nb": "Moncler dunjakke",
+        "cs": "Moncler péřová bunda",
+        "sk": "Moncler páperová bunda",
+        "hu": "Moncler pehelykabát",
+        "ro": "Moncler geacă cu puf",
+        "el": "Moncler πουπουλένιο μπουφάν",
+        "uk": "Moncler пухова куртка",
+        "ar": "Moncler سترة داون",
+        "ja": "Moncler ダウンジャケット",
+        "ko": "Moncler 다운 재킷",
+        "vi": "Moncler áo khoác lông vũ",
+        "tr": "Moncler kuş tüyü mont"
+      }
+    },
+    {
+      "name": "Trapstar down jacket",
+      "translations": {
+        "fi": "Trapstar untuvatakki",
+        "da": "Trapstar dunjakke",
+        "nb": "Trapstar dunjakke",
+        "cs": "Trapstar péřová bunda",
+        "sk": "Trapstar páperová bunda",
+        "hu": "Trapstar pehelykabát",
+        "ro": "Trapstar geacă cu puf",
+        "el": "Trapstar πουπουλένιο μπουφάν",
+        "uk": "Trapstar пухова куртка",
+        "ar": "Trapstar سترة داون",
+        "ja": "Trapstar ダウンジャケット",
+        "ko": "Trapstar 다운 재킷",
+        "vi": "Trapstar áo khoác lông vũ",
+        "tr": "Trapstar kuş tüyü mont"
+      }
+    },
+    {
+      "name": "Stone Island POLO",
+      "translations": {
+        "fi": "Stone Island poolopaita",
+        "da": "Stone Island poloshirt",
+        "nb": "Stone Island poloskjorte",
+        "cs": "Stone Island polo tričko",
+        "sk": "Stone Island polo tričko",
+        "hu": "Stone Island galléros póló",
+        "ro": "Stone Island tricou polo",
+        "el": "Stone Island πόλο μπλουζάκι",
+        "uk": "Stone Island поло",
+        "ar": "Stone Island قميص بولو",
+        "ja": "Stone Island ポロシャツ",
+        "ko": "Stone Island 폴로 셔츠",
+        "vi": "Stone Island áo polo",
+        "tr": "Stone Island polo tişört"
+      }
+    },
+    {
+      "name": "Denim tears Set",
+      "translations": {
+        "fi": "Denim tears setti",
+        "da": "Denim tears sæt",
+        "nb": "Denim tears sett",
+        "cs": "Denim tears komplet",
+        "sk": "Denim tears komplet",
+        "hu": "Denim tears szett",
+        "ro": "Denim tears set",
+        "el": "Denim tears σετ",
+        "uk": "Denim tears комплект",
+        "ar": "Denim tears طقم",
+        "ja": "Denim tears セット",
+        "ko": "Denim tears 세트",
+        "vi": "Denim tears bộ đồ",
+        "tr": "Denim tears takım"
+      }
+    },
+    {
+      "name": "DENIM TEARS HOODIE suit",
+      "translations": {
+        "fi": "DENIM TEARS huppariasu",
+        "da": "DENIM TEARS hættetrøjesæt",
+        "nb": "DENIM TEARS hettegenser-sett",
+        "cs": "DENIM TEARS komplet s mikinou",
+        "sk": "DENIM TEARS komplet s mikinou",
+        "hu": "DENIM TEARS kapucnis szett",
+        "ro": "DENIM TEARS set cu hanorac",
+        "el": "DENIM TEARS σετ με φούτερ με κουκούλα",
+        "uk": "DENIM TEARS комплект із худі",
+        "ar": "DENIM TEARS طقم هودي",
+        "ja": "DENIM TEARS パーカーセット",
+        "ko": "DENIM TEARS 후드티 세트",
+        "vi": "DENIM TEARS bộ hoodie",
+        "tr": "DENIM TEARS kapüşonlu takım"
+      }
+    },
+    {
+      "name": "Nike sweatshirt",
+      "translations": {
+        "fi": "Nike collegepaita",
+        "da": "Nike sweatshirt",
+        "nb": "Nike genser",
+        "cs": "Nike mikina",
+        "sk": "Nike mikina",
+        "hu": "Nike pulóver",
+        "ro": "Nike bluză sport",
+        "el": "Nike μπλούζα φούτερ",
+        "uk": "Nike світшот",
+        "ar": "Nike سويت شيرت",
+        "ja": "Nike スウェット",
+        "ko": "Nike 스웨트셔츠",
+        "vi": "Nike áo nỉ",
+        "tr": "Nike sweatshirt"
+      }
+    },
+    {
+      "name": "Off-White Low-Top Sneakers",
+      "translations": {
+        "fi": "Off-White matalavartiset tennarit",
+        "da": "Off-White lave sneakers",
+        "nb": "Off-White lave sneakers",
+        "cs": "Off-White nízké tenisky",
+        "sk": "Off-White nízke tenisky",
+        "hu": "Off-White alacsony szárú sportcipő",
+        "ro": "Off-White sneakers cu profil jos",
+        "el": "Off-White χαμηλά sneakers",
+        "uk": "Off-White низькі кросівки",
+        "ar": "Off-White حذاء رياضي منخفض الرقبة",
+        "ja": "Off-White ローカットスニーカー",
+        "ko": "Off-White 로우탑 스니커즈",
+        "vi": "Off-White giày sneaker cổ thấp",
+        "tr": "Off-White alçak bilekli spor ayakkabı"
+      }
+    },
+    {
+      "name": "Moncler Logo Zip-Up Hoodie",
+      "translations": {
+        "fi": "Moncler logollinen vetoketjuhuppari",
+        "da": "Moncler hættetrøje med lynlås og logo",
+        "nb": "Moncler hettegenser med glidelås og logo",
+        "cs": "Moncler mikina s kapucí na zip a logem",
+        "sk": "Moncler mikina s kapucňou na zips a logom",
+        "hu": "Moncler logós cipzáras kapucnis pulóver",
+        "el": "Moncler φούτερ με κουκούλα, φερμουάρ και λογότυπο",
+        "uk": "Moncler худі на блискавці з логотипом",
+        "ar": "Moncler هودي بسحاب وشعار",
+        "ja": "Moncler ロゴ入りジップパーカー",
+        "ko": "Moncler 로고 집업 후드티",
+        "vi": "Moncler áo hoodie khóa kéo có logo",
+        "tr": "Moncler logolu fermuarlı kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Represent Logo Zip-Up Hoodie",
+      "translations": {
+        "fi": "Represent logollinen vetoketjuhuppari",
+        "da": "Represent hættetrøje med lynlås og logo",
+        "nb": "Represent hettegenser med glidelås og logo",
+        "cs": "Represent mikina s kapucí na zip a logem",
+        "sk": "Represent mikina s kapucňou na zips a logom",
+        "hu": "Represent logós cipzáras kapucnis pulóver",
+        "el": "Represent φούτερ με κουκούλα, φερμουάρ και λογότυπο",
+        "uk": "Represent худі на блискавці з логотипом",
+        "ar": "Represent هودي بسحاب وشعار",
+        "ja": "Represent ロゴ入りジップパーカー",
+        "ko": "Represent 로고 집업 후드티",
+        "vi": "Represent áo hoodie khóa kéo có logo",
+        "tr": "Represent logolu fermuarlı kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Stone Island Logo Sweatshirt",
+      "translations": {
+        "fi": "Stone Island logollinen collegepaita",
+        "da": "Stone Island sweatshirt med logo",
+        "nb": "Stone Island genser med logo",
+        "cs": "Stone Island mikina s logem",
+        "sk": "Stone Island mikina s logom",
+        "hu": "Stone Island logós pulóver",
+        "el": "Stone Island μπλούζα φούτερ με λογότυπο",
+        "uk": "Stone Island світшот із логотипом",
+        "ar": "Stone Island سويت شيرت بشعار",
+        "ja": "Stone Island ロゴスウェット",
+        "ko": "Stone Island 로고 스웨트셔츠",
+        "vi": "Stone Island áo nỉ có logo",
+        "tr": "Stone Island logolu sweatshirt"
+      }
+    },
+    {
+      "name": "Essentials Logo Sweatshirt",
+      "translations": {
+        "fi": "Essentials logollinen collegepaita",
+        "da": "Essentials sweatshirt med logo",
+        "nb": "Essentials genser med logo",
+        "cs": "Essentials mikina s logem",
+        "sk": "Essentials mikina s logom",
+        "hu": "Essentials logós pulóver",
+        "el": "Essentials μπλούζα φούτερ με λογότυπο",
+        "uk": "Essentials світшот із логотипом",
+        "ar": "Essentials سويت شيرت بشعار",
+        "ja": "Essentials ロゴスウェット",
+        "ko": "Essentials 로고 스웨트셔츠",
+        "vi": "Essentials áo nỉ có logo",
+        "tr": "Essentials logolu sweatshirt"
+      }
+    }
+  ]
+}

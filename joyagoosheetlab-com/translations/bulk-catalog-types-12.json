@@ -1,0 +1,201 @@
+{
+  "items": [
+    {
+      "name": "Smartphone Color Collection",
+      "source": "Smartphone Color Collection",
+      "suffix": "",
+      "translations": {
+        "fi": "Älypuhelinten värivalikoima",
+        "da": "Smartphone-farvekollektion",
+        "nb": "Smarttelefon-fargekolleksjon",
+        "cs": "Barevná kolekce chytrých telefonů",
+        "sk": "Farebná kolekcia smartfónov",
+        "hu": "Okostelefonok színkollekciója",
+        "ro": "Colecție de culori pentru smartphone-uri",
+        "el": "Συλλογή χρωμάτων smartphone",
+        "tr": "Akıllı telefon renk koleksiyonu",
+        "uk": "Колекція кольорів смартфонів",
+        "ar": "تشكيلة ألوان الهواتف الذكية",
+        "ja": "スマートフォンカラーコレクション",
+        "ko": "스마트폰 컬러 컬렉션",
+        "vi": "Bộ sưu tập màu điện thoại thông minh"
+      }
+    },
+    {
+      "name": "Portable Speaker Collection",
+      "source": "Portable Speaker Collection",
+      "suffix": "",
+      "translations": {
+        "cs": "Kolekce přenosných reproduktorů",
+        "sk": "Kolekcia prenosných reproduktorov",
+        "hu": "Hordozható hangszórók kollekciója",
+        "el": "Συλλογή φορητών ηχείων",
+        "tr": "Taşınabilir hoparlör koleksiyonu",
+        "uk": "Колекція портативних колонок",
+        "ar": "تشكيلة مكبرات صوت محمولة",
+        "ja": "ポータブルスピーカーコレクション",
+        "ko": "휴대용 스피커 컬렉션",
+        "vi": "Bộ sưu tập loa di động"
+      }
+    },
+    {
+      "name": "Cross-Detail Jeans Collection",
+      "source": "Cross-Detail Jeans Collection",
+      "suffix": "",
+      "translations": {
+        "fi": "Ristiyksityiskohtaisten farkkujen valikoima",
+        "da": "Kollektion af jeans med korsdetaljer",
+        "nb": "Kolleksjon med jeans med korsdetaljer",
+        "cs": "Kolekce džínů s detaily kříže",
+        "sk": "Kolekcia džínsov s detailmi kríža",
+        "hu": "Kereszt részletes farmerek kollekciója",
+        "ro": "Colecție de blugi cu detalii în formă de cruce",
+        "el": "Συλλογή τζιν με λεπτομέρειες σταυρού",
+        "tr": "Haç detaylı kot pantolon koleksiyonu",
+        "uk": "Колекція джинсів із деталями-хрестами",
+        "ar": "تشكيلة جينز بتفاصيل صليب",
+        "ja": "クロスディテールジーンズコレクション",
+        "ko": "십자가 디테일 청바지 컬렉션",
+        "vi": "Bộ sưu tập quần jeans chi tiết chữ thập"
+      }
+    },
+    {
+      "name": "Gray Hoodie and Sweatpants Set",
+      "source": "Gray Hoodie and Sweatpants Set",
+      "suffix": "",
+      "translations": {
+        "fi": "Harmaan hupparin ja collegehousujen setti",
+        "da": "Sæt med grå hættetrøje og sweatpants",
+        "nb": "Sett med grå hettegenser og joggebukse",
+        "cs": "Souprava šedé mikiny s kapucí a tepláků",
+        "sk": "Súprava sivej mikiny s kapucňou a teplákov",
+        "hu": "Szürke kapucnis pulóver és melegítőnadrág szett",
+        "ro": "Set cu hanorac gri și pantaloni de trening",
+        "el": "Σετ με γκρι φούτερ με κουκούλα και παντελόνι φόρμας",
+        "tr": "Gri kapüşonlu üst ve eşofman altı takımı",
+        "uk": "Комплект сірого худі та спортивних штанів",
+        "ar": "طقم سترة رمادية بغطاء رأس وسروال رياضي",
+        "ja": "グレーのパーカーとスウェットパンツのセット",
+        "ko": "그레이 후디와 스웨트팬츠 세트",
+        "vi": "Bộ áo hoodie xám và quần nỉ"
+      }
+    },
+    {
+      "name": "Graphic Denim Jeans Collection",
+      "source": "Graphic Denim Jeans Collection",
+      "suffix": "",
+      "translations": {
+        "fi": "Kuvioitujen denimfarkkujen valikoima",
+        "da": "Kollektion af denimjeans med grafik",
+        "nb": "Kolleksjon med denimjeans med grafikk",
+        "cs": "Kolekce džínů s grafikou",
+        "sk": "Kolekcia džínsov s grafikou",
+        "hu": "Grafikus mintás farmerek kollekciója",
+        "ro": "Colecție de blugi din denim cu grafică",
+        "el": "Συλλογή τζιν με γραφικά",
+        "tr": "Grafikli denim kot pantolon koleksiyonu",
+        "uk": "Колекція джинсів із графікою",
+        "ar": "تشكيلة جينز دنيم برسومات",
+        "ja": "グラフィックデニムジーンズコレクション",
+        "ko": "그래픽 데님 청바지 컬렉션",
+        "vi": "Bộ sưu tập quần jeans denim họa tiết"
+      }
+    },
+    {
+      "name": "Full-Zip Hoodie Collection",
+      "source": "Full-Zip Hoodie Collection",
+      "suffix": "",
+      "translations": {
+        "fi": "Kokopitkällä vetoketjulla varustettujen hupparien valikoima",
+        "cs": "Kolekce mikin s kapucí a celopropínacím zipem",
+        "sk": "Kolekcia mikín s kapucňou a celoprepínacím zipsom",
+        "hu": "Végig cipzáras kapucnis pulóverek kollekciója",
+        "el": "Συλλογή φούτερ με κουκούλα και φερμουάρ πλήρους μήκους",
+        "tr": "Tam fermuarlı kapüşonlu üst koleksiyonu",
+        "uk": "Колекція худі на блискавці по всій довжині",
+        "ar": "تشكيلة سترات بغطاء رأس وسحاب كامل",
+        "ja": "フルジップパーカーコレクション",
+        "ko": "풀집업 후디 컬렉션",
+        "vi": "Bộ sưu tập áo hoodie khóa kéo toàn thân"
+      }
+    },
+    {
+      "name": "Straight-Leg Jeans Collection",
+      "source": "Straight-Leg Jeans Collection",
+      "suffix": "",
+      "translations": {
+        "fi": "Suoralahkeisten farkkujen valikoima",
+        "da": "Kollektion af jeans med lige ben",
+        "nb": "Kolleksjon med jeans med rette ben",
+        "cs": "Kolekce džínů s rovnými nohavicemi",
+        "sk": "Kolekcia džínsov s rovnými nohavicami",
+        "hu": "Egyenes szárú farmerek kollekciója",
+        "ro": "Colecție de blugi cu croială dreaptă",
+        "el": "Συλλογή τζιν σε ίσια γραμμή",
+        "tr": "Düz paça kot pantolon koleksiyonu",
+        "uk": "Колекція джинсів прямого крою",
+        "ar": "تشكيلة جينز مستقيم الساق",
+        "ja": "ストレートジーンズコレクション",
+        "ko": "스트레이트 청바지 컬렉션",
+        "vi": "Bộ sưu tập quần jeans ống đứng"
+      }
+    },
+    {
+      "name": "Full-Zip Hoodie and Sweatpants",
+      "source": "Full-Zip Hoodie and Sweatpants",
+      "suffix": "",
+      "translations": {
+        "fi": "Huppari kokopitkällä vetoketjulla ja collegehousut",
+        "da": "Hættetrøje med gennemgående lynlås og sweatpants",
+        "nb": "Hettegenser med hel glidelås og joggebukse",
+        "cs": "Mikina s kapucí a celopropínacím zipem a tepláky",
+        "sk": "Mikina s kapucňou a celoprepínacím zipsom a tepláky",
+        "hu": "Végig cipzáras kapucnis pulóver és melegítőnadrág",
+        "ro": "Hanorac cu fermoar pe toată lungimea și pantaloni de trening",
+        "el": "Φούτερ με κουκούλα και φερμουάρ πλήρους μήκους και παντελόνι φόρμας",
+        "tr": "Tam fermuarlı kapüşonlu üst ve eşofman altı",
+        "uk": "Худі на блискавці по всій довжині та спортивні штани",
+        "ar": "سترة بغطاء رأس وسحاب كامل وسروال رياضي",
+        "ja": "フルジップパーカーとスウェットパンツ",
+        "ko": "풀집업 후디와 스웨트팬츠",
+        "vi": "Áo hoodie khóa kéo toàn thân và quần nỉ"
+      }
+    },
+    {
+      "name": "Paneled Drawstring Joggers",
+      "source": "Paneled Drawstring Joggers",
+      "suffix": "",
+      "translations": {
+        "fi": "Paneelirakenteiset joggerhousut kiristysnyörillä",
+        "da": "Joggingbukser med paneler og snøre",
+        "cs": "Jogger kalhoty z dílů se stahovací šňůrkou",
+        "sk": "Jogger nohavice z dielov so sťahovacou šnúrkou",
+        "hu": "Panelekből készült húzózsinóros joggernadrág",
+        "el": "Παντελόνι jogger με πάνελ και κορδόνι",
+        "tr": "Panelli ipli jogger pantolon",
+        "uk": "Джогери з панелями та шнурком",
+        "ar": "سروال جوغر بأجزاء منفصلة ورباط",
+        "ja": "パネル切替ドローコードジョガー",
+        "ko": "패널 드로스트링 조거 팬츠",
+        "vi": "Quần jogger phối mảng có dây rút"
+      }
+    },
+    {
+      "name": "Double-Waistband Baggy Jeans",
+      "source": "Double-Waistband Baggy Jeans",
+      "suffix": "",
+      "translations": {
+        "cs": "Volné džíny s dvojitým pasem",
+        "sk": "Voľné džínsy s dvojitým pásom",
+        "hu": "Dupla derékpántos bő farmer",
+        "el": "Φαρδιά τζιν με διπλή μέση",
+        "tr": "Çift bel bantlı bol kot pantolon",
+        "uk": "Мішкуваті джинси з подвійним поясом",
+        "ar": "جينز فضفاض بحزام خصر مزدوج",
+        "ja": "ダブルウエストバンドバギージーンズ",
+        "ko": "더블 허리밴드 배기 청바지",
+        "vi": "Quần jeans ống rộng hai cạp"
+      }
+    }
+  ]
+}

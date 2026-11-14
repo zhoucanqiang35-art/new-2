@@ -1,0 +1,189 @@
+{
+  "items": [
+    {
+      "name": "Men's T-Shirt and Shorts Set",
+      "translations": {
+        "fi": "Miesten T-paita- ja shortsisetti",
+        "da": "T-shirt- og shortssæt til mænd",
+        "nb": "T-skjorte- og shortssett for menn",
+        "cs": "Pánský komplet trička a šortek",
+        "sk": "Pánsky komplet trička a šortiek",
+        "hu": "Férfi póló és rövidnadrág szett",
+        "el": "Ανδρικό σετ με μπλουζάκι και σορτς",
+        "uk": "Чоловічий комплект футболки та шортів",
+        "ar": "طقم تيشيرت وشورت رجالي",
+        "ja": "メンズTシャツとショーツのセット",
+        "ko": "남성 티셔츠와 반바지 세트",
+        "vi": "Bộ áo thun và quần short nam",
+        "tr": "Erkek tişört ve şort takımı"
+      }
+    },
+    {
+      "name": "Summer T-Shirt and Jogger Set",
+      "translations": {
+        "fi": "Kesäinen T-paita- ja joggerhoususetti",
+        "da": "Sommersæt med T-shirt og joggers",
+        "nb": "Sommersett med T-skjorte og joggebukse",
+        "cs": "Letní komplet trička a jogger kalhot",
+        "sk": "Letný komplet trička a jogger nohavíc",
+        "hu": "Nyári póló és joggernadrág szett",
+        "ro": "Set de vară de tricou și pantaloni jogger",
+        "el": "Καλοκαιρινό σετ με μπλουζάκι και jogger",
+        "uk": "Літній комплект футболки та джогерів",
+        "ar": "طقم صيفي من تيشيرت وبنطال جوغر",
+        "ja": "サマーTシャツとジョガーのセット",
+        "ko": "여름 티셔츠와 조거팬츠 세트",
+        "vi": "Bộ áo thun và quần jogger mùa hè",
+        "tr": "Yazlık tişört ve jogger takımı"
+      }
+    },
+    {
+      "name": "Men's Quick-Dry Beach Shorts",
+      "translations": {
+        "fi": "Miesten nopeasti kuivuvat rantashortsit",
+        "da": "Hurtigtørrende strandshorts til mænd",
+        "nb": "Hurtigtørkende strandshorts for menn",
+        "cs": "Pánské rychleschnoucí plážové šortky",
+        "sk": "Pánske rýchloschnúce plážové šortky",
+        "hu": "Férfi gyorsan száradó strandshort",
+        "el": "Ανδρικό σορτς παραλίας που στεγνώνει γρήγορα",
+        "uk": "Чоловічі швидковисихаючі пляжні шорти",
+        "ar": "شورت شاطئ رجالي سريع الجفاف",
+        "ja": "メンズ速乾ビーチショーツ",
+        "ko": "남성 속건 비치 반바지",
+        "vi": "Quần short đi biển nhanh khô nam",
+        "tr": "Erkek hızlı kuruyan plaj şortu"
+      }
+    },
+    {
+      "name": "1977 Logo Drawstring Shorts",
+      "translations": {
+        "fi": "1977-logolliset kiristysnyörishortsit",
+        "da": "Shorts med snøre og 1977-logo",
+        "nb": "Shorts med snøring og 1977-logo",
+        "cs": "Šortky se stahovací šňůrkou a logem 1977",
+        "sk": "Šortky so sťahovacou šnúrkou a logom 1977",
+        "hu": "1977 logós húzózsinóros short",
+        "el": "Σορτς με κορδόνι και λογότυπο 1977",
+        "uk": "Шорти зі шнурком і логотипом 1977",
+        "ar": "شورت برباط وشعار 1977",
+        "ja": "1977ロゴドローコードショーツ",
+        "ko": "1977 로고 드로스트링 반바지",
+        "vi": "Quần short dây rút logo 1977",
+        "tr": "1977 logolu büzme ipli şort"
+      }
+    },
+    {
+      "name": "Minimalist Drawstring Shorts",
+      "translations": {
+        "fi": "Minimalistiset kiristysnyörishortsit",
+        "da": "Minimalistiske shorts med snøre",
+        "nb": "Minimalistisk shorts med snøring",
+        "cs": "Minimalistické šortky se stahovací šňůrkou",
+        "sk": "Minimalistické šortky so sťahovacou šnúrkou",
+        "hu": "Minimalista húzózsinóros short",
+        "el": "Μίνιμαλ σορτς με κορδόνι",
+        "uk": "Мінімалістичні шорти зі шнурком",
+        "ar": "شورت بسيط برباط",
+        "ja": "ミニマルドローコードショーツ",
+        "ko": "미니멀 드로스트링 반바지",
+        "vi": "Quần short dây rút tối giản",
+        "tr": "Minimalist büzme ipli şort"
+      }
+    },
+    {
+      "name": "Letter Print Quick-Dry Shorts",
+      "translations": {
+        "fi": "Kirjainpainetut nopeasti kuivuvat shortsit",
+        "da": "Hurtigtørrende shorts med bogstavprint",
+        "nb": "Hurtigtørkende shorts med bokstavtrykk",
+        "cs": "Rychleschnoucí šortky s potiskem písmen",
+        "sk": "Rýchloschnúce šortky s potlačou písmen",
+        "hu": "Betűmintás gyorsan száradó short",
+        "ro": "Pantaloni scurți cu imprimeu cu litere și uscare rapidă",
+        "el": "Σορτς με τύπωμα γραμμάτων που στεγνώνει γρήγορα",
+        "uk": "Швидковисихаючі шорти з літерним принтом",
+        "ar": "شورت سريع الجفاف بطبعة حروف",
+        "ja": "文字プリント速乾ショーツ",
+        "ko": "레터 프린트 속건 반바지",
+        "vi": "Quần short nhanh khô in chữ",
+        "tr": "Harf baskılı hızlı kuruyan şort"
+      }
+    },
+    {
+      "name": "Check-Trim Drawstring Shorts",
+      "translations": {
+        "fi": "Ruutureunaiset kiristysnyörishortsit",
+        "da": "Shorts med snøre og ternet kant",
+        "nb": "Shorts med snøring og rutete kant",
+        "cs": "Šortky se stahovací šňůrkou a kostkovaným lemem",
+        "sk": "Šortky so sťahovacou šnúrkou a kockovaným lemom",
+        "hu": "Kockás szegélyű húzózsinóros short",
+        "ro": "Pantaloni scurți cu șnur și margine în carouri",
+        "el": "Σορτς με κορδόνι και καρό τελείωμα",
+        "uk": "Шорти зі шнурком і картатим оздобленням",
+        "ar": "شورت برباط وحافة مربعات",
+        "ja": "チェック柄トリムのドローコードショーツ",
+        "ko": "체크 트림 드로스트링 반바지",
+        "vi": "Quần short dây rút viền kẻ ô",
+        "tr": "Ekose şeritli büzme ipli şort"
+      }
+    },
+    {
+      "name": "Graphic Casual Sports Shorts",
+      "translations": {
+        "fi": "Kuviolliset rennot urheilushortsit",
+        "da": "Afslappede sportsshorts med grafik",
+        "nb": "Uformell sportsshorts med grafikk",
+        "cs": "Volnočasové sportovní šortky s potiskem",
+        "sk": "Voľnočasové športové šortky s potlačou",
+        "hu": "Mintás hétköznapi sportshort",
+        "ro": "Pantaloni scurți sport casual cu imprimeu",
+        "el": "Καθημερινό αθλητικό σορτς με σχέδιο",
+        "uk": "Повсякденні спортивні шорти з принтом",
+        "ar": "شورت رياضي كاجوال برسمة",
+        "ja": "グラフィック入りカジュアルスポーツショーツ",
+        "ko": "그래픽 캐주얼 스포츠 반바지",
+        "vi": "Quần short thể thao thường ngày có họa tiết",
+        "tr": "Grafik desenli günlük spor şort"
+      }
+    },
+    {
+      "name": "Women's Utility Cargo Shorts",
+      "translations": {
+        "fi": "Naisten monitaskuiset cargoshortsit",
+        "da": "Praktiske cargoshorts til kvinder",
+        "nb": "Praktisk cargoshorts for kvinner",
+        "cs": "Dámské praktické cargo šortky",
+        "sk": "Dámske praktické cargo šortky",
+        "hu": "Női praktikus cargo rövidnadrág",
+        "el": "Γυναικείο πρακτικό cargo σορτς",
+        "uk": "Жіночі практичні шорти карго",
+        "ar": "شورت كارغو عملي نسائي",
+        "ja": "レディースユーティリティカーゴショーツ",
+        "ko": "여성 유틸리티 카고 반바지",
+        "vi": "Quần short cargo đa dụng nữ",
+        "tr": "Kadın kullanışlı kargo şort"
+      }
+    },
+    {
+      "name": "Spring T-Shirt and Shorts Set",
+      "translations": {
+        "fi": "Keväinen T-paita- ja shortsisetti",
+        "da": "Forårssæt med T-shirt og shorts",
+        "nb": "Vårsett med T-skjorte og shorts",
+        "cs": "Jarní komplet trička a šortek",
+        "sk": "Jarný komplet trička a šortiek",
+        "hu": "Tavaszi póló és rövidnadrág szett",
+        "ro": "Set de primăvară de tricou și pantaloni scurți",
+        "el": "Ανοιξιάτικο σετ με μπλουζάκι και σορτς",
+        "uk": "Весняний комплект футболки та шортів",
+        "ar": "طقم ربيعي من تيشيرت وشورت",
+        "ja": "スプリングTシャツとショーツのセット",
+        "ko": "봄 티셔츠와 반바지 세트",
+        "vi": "Bộ áo thun và quần short mùa xuân",
+        "tr": "İlkbaharlık tişört ve şort takımı"
+      }
+    }
+  ]
+}

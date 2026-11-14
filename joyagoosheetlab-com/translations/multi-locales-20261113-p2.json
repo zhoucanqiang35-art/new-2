@@ -1,0 +1,184 @@
+{
+  "items": [
+    {
+      "name": "Color-Block Casual Vest",
+      "translations": {
+        "fi": "Värilohkoiltu vapaa-ajan liivi",
+        "da": "Afslappet vest med farvefelter",
+        "nb": "Uformell vest med fargeblokker",
+        "cs": "Volnočasová vesta s barevnými bloky",
+        "sk": "Voľnočasová vesta s farebnými blokmi",
+        "hu": "Színblokkolt hétköznapi mellény",
+        "el": "Καθημερινό γιλέκο με χρωματικά μπλοκ",
+        "uk": "Повсякденний жилет із кольоровими блоками",
+        "ar": "سترة كاجوال دون أكمام بألوان متباينة",
+        "ja": "カラーブロックのカジュアルベスト",
+        "ko": "컬러 블록 캐주얼 베스트",
+        "vi": "Áo ghi lê thường ngày phối mảng màu",
+        "tr": "Renk bloklu günlük yelek"
+      }
+    },
+    {
+      "name": "Premium Matching Set 002",
+      "translations": {
+        "fi": "Laadukas yhteensopiva asusetti 002",
+        "da": "Premium matchende sæt 002",
+        "nb": "Premium matchende sett 002",
+        "cs": "Prémiový sladěný komplet 002",
+        "sk": "Prémiový zladený komplet 002",
+        "hu": "Prémium összeillő szett 002",
+        "el": "Premium ασορτί σετ 002",
+        "uk": "Преміальний комплект 002",
+        "ar": "طقم متناسق فاخر 002",
+        "ja": "プレミアムセットアップ 002",
+        "ko": "프리미엄 매칭 세트 002",
+        "vi": "Bộ đồ đồng bộ cao cấp 002",
+        "tr": "Premium uyumlu takım 002"
+      }
+    },
+    {
+      "name": "3M Reflective Coach Jacket",
+      "translations": {
+        "fi": "3M-heijastava coach-takki",
+        "da": "3M-refleksjakke i coach-stil",
+        "nb": "3M-refleksjakke i coach-stil",
+        "cs": "Reflexní bunda typu coach 3M",
+        "sk": "Reflexná bunda typu coach 3M",
+        "hu": "3M fényvisszaverő coach dzseki",
+        "el": "Ανακλαστικό μπουφάν τύπου coach 3M",
+        "uk": "Світловідбивна куртка типу coach 3M",
+        "ar": "سترة كوتش عاكسة 3M",
+        "ja": "3M反射コーチジャケット",
+        "ko": "3M 반사 코치 재킷",
+        "vi": "Áo khoác coach phản quang 3M",
+        "tr": "3M yansıtıcılı coach ceket"
+      }
+    },
+    {
+      "name": "Colorblock Knit Track Set",
+      "translations": {
+        "fi": "Värilohkoiltu neuleverryttelyasu",
+        "da": "Strikket træningssæt med farvefelter",
+        "nb": "Strikket treningssett med fargeblokker",
+        "cs": "Pletená tepláková souprava s barevnými bloky",
+        "sk": "Pletená tepláková súprava s farebnými blokmi",
+        "hu": "Színblokkolt kötött melegítőszett",
+        "el": "Πλεκτό σετ φόρμας με χρωματικά μπλοκ",
+        "uk": "В’язаний спортивний комплект із кольоровими блоками",
+        "ar": "طقم رياضي محبوك بألوان متباينة",
+        "ja": "カラーブロックニットトラックセット",
+        "ko": "컬러 블록 니트 트랙 세트",
+        "vi": "Bộ đồ thể thao dệt kim phối mảng màu",
+        "tr": "Renk bloklu örgü eşofman takımı"
+      }
+    },
+    {
+      "name": "Moncler Knit Down Cardigan",
+      "translations": {
+        "fi": "Moncler-neuleuntuva-neuletakki",
+        "da": "Moncler-strikket cardigan med dun",
+        "nb": "Moncler-strikket cardigan med dun",
+        "cs": "Pletený péřový kardigan Moncler",
+        "sk": "Pletený páperový kardigán Moncler",
+        "hu": "Moncler kötött pehely kardigán",
+        "el": "Πλεκτή πουπουλένια ζακέτα Moncler",
+        "uk": "В’язаний пуховий кардиган Moncler",
+        "ar": "كارديغان Moncler محبوك ومحشو بالداون",
+        "ja": "Monclerニットダウンカーディガン",
+        "ko": "Moncler 니트 다운 카디건",
+        "vi": "Áo cardigan dệt kim lông vũ Moncler",
+        "tr": "Moncler örgü kuş tüyü hırka"
+      }
+    },
+    {
+      "name": "Women's Fitted Yoga Jacket",
+      "translations": {
+        "fi": "Naisten vartalonmyötäinen joogatakki",
+        "da": "Figursyet yogajakke til kvinder",
+        "nb": "Figursydd yogajakke for kvinner",
+        "cs": "Dámská přiléhavá bunda na jógu",
+        "sk": "Dámska priliehavá bunda na jogu",
+        "hu": "Női testhezálló jógadzseki",
+        "el": "Γυναικείο εφαρμοστό μπουφάν γιόγκα",
+        "uk": "Жіноча приталена куртка для йоги",
+        "ar": "سترة يوغا نسائية بقصة ضيقة",
+        "ja": "レディースフィットヨガジャケット",
+        "ko": "여성 슬림핏 요가 재킷",
+        "vi": "Áo khoác yoga ôm dáng nữ",
+        "tr": "Kadın vücuda oturan yoga ceketi"
+      }
+    },
+    {
+      "name": "Sculpted Platform Slides",
+      "translations": {
+        "fi": "Muotoillut korokepistokkaat",
+        "da": "Formede slippers med plateau",
+        "nb": "Formede slippers med platå",
+        "cs": "Tvarované pantofle na platformě",
+        "sk": "Tvarované šľapky na platforme",
+        "hu": "Formázott platformpapucs",
+        "el": "Παντόφλες με διαμορφωμένη πλατφόρμα",
+        "uk": "Шльопанці на фігурній платформі",
+        "ar": "شبشب بنعل مرتفع منحوت",
+        "ja": "立体成型プラットフォームスライド",
+        "ko": "조형 플랫폼 슬라이드",
+        "vi": "Dép lê đế cao tạo hình",
+        "tr": "Şekillendirilmiş platform terlik"
+      }
+    },
+    {
+      "name": "Tasman Mustard Slippers",
+      "translations": {
+        "fi": "Tasman-sinapinkeltaiset tossut",
+        "da": "Tasman-hjemmesko i sennepsfarve",
+        "nb": "Tasman-tøfler i sennepsfarge",
+        "cs": "Hořčicové přezůvky Tasman",
+        "sk": "Horčicové papuče Tasman",
+        "hu": "Mustárszínű Tasman papucs",
+        "el": "Παντόφλες Tasman σε μουσταρδί",
+        "uk": "Капці Tasman гірчичного кольору",
+        "ar": "خف Tasman بلون الخردل",
+        "ja": "マスタードカラーのTasmanスリッパ",
+        "ko": "머스터드 컬러 Tasman 슬리퍼",
+        "vi": "Dép Tasman màu vàng mù tạt",
+        "tr": "Hardal rengi Tasman terlik"
+      }
+    },
+    {
+      "name": "Star Platform Slippers",
+      "translations": {
+        "fi": "Tähtikoristeiset koroketossut",
+        "da": "Hjemmesko med stjerne og plateau",
+        "nb": "Tøfler med stjerne og platå",
+        "cs": "Přezůvky na platformě s hvězdou",
+        "sk": "Papuče na platforme s hviezdou",
+        "hu": "Csillagos platformpapucs",
+        "el": "Παντόφλες πλατφόρμας με αστέρι",
+        "uk": "Капці на платформі із зіркою",
+        "ar": "خف بنعل مرتفع ونجمة",
+        "ja": "星付きプラットフォームスリッパ",
+        "ko": "별 장식 플랫폼 슬리퍼",
+        "vi": "Dép đế cao họa tiết ngôi sao",
+        "tr": "Yıldızlı platform terlik"
+      }
+    },
+    {
+      "name": "Minimalist Slide Sandals",
+      "translations": {
+        "fi": "Minimalistiset pistokassandaalit",
+        "da": "Minimalistiske slidesandaler",
+        "nb": "Minimalistiske slidesandaler",
+        "cs": "Minimalistické nazouvací sandály",
+        "sk": "Minimalistické nazúvacie sandále",
+        "hu": "Minimalista belebújós szandál",
+        "el": "Μίνιμαλ πέδιλα τύπου slide",
+        "uk": "Мінімалістичні сандалі-шльопанці",
+        "ar": "صندل بسيط سهل الارتداء",
+        "ja": "ミニマルスライドサンダル",
+        "ko": "미니멀 슬라이드 샌들",
+        "vi": "Dép sandal xỏ chân tối giản",
+        "tr": "Minimalist geçirmeli sandalet"
+      }
+    }
+  ]
+}

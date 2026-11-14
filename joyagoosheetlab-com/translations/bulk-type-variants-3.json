@@ -1,0 +1,487 @@
+{
+  "items": [
+    {
+      "name": "Fashion Pants DD01",
+      "source": "Fashion Pants",
+      "suffix": " DD01",
+      "translations": {
+        "fi": "Muodikkaat housut DD01",
+        "da": "Modebukser DD01",
+        "nb": "Motebukser DD01",
+        "cs": "Módní kalhoty DD01",
+        "sk": "Módne nohavice DD01",
+        "hu": "Divatnadrág DD01",
+        "ro": "Pantaloni la modă DD01",
+        "el": "Μοντέρνο παντελόνι DD01",
+        "tr": "Moda pantolon DD01",
+        "uk": "Модні штани DD01",
+        "ar": "سروال عصري DD01",
+        "ja": "ファッションパンツ DD01",
+        "ko": "패션 바지 DD01",
+        "vi": "Quần dài thời trang DD01"
+      }
+    },
+    {
+      "name": "Fashion Pants 013",
+      "source": "Fashion Pants",
+      "suffix": " 013",
+      "translations": {
+        "fi": "Muodikkaat housut 013",
+        "da": "Modebukser 013",
+        "nb": "Motebukser 013",
+        "cs": "Módní kalhoty 013",
+        "sk": "Módne nohavice 013",
+        "hu": "Divatnadrág 013",
+        "ro": "Pantaloni la modă 013",
+        "el": "Μοντέρνο παντελόνι 013",
+        "tr": "Moda pantolon 013",
+        "uk": "Модні штани 013",
+        "ar": "سروال عصري 013",
+        "ja": "ファッションパンツ 013",
+        "ko": "패션 바지 013",
+        "vi": "Quần dài thời trang 013"
+      }
+    },
+    {
+      "name": "Summer Shorts 205",
+      "source": "Summer Shorts",
+      "suffix": " 205",
+      "translations": {
+        "fi": "Kesäshortsit 205",
+        "da": "Sommershorts 205",
+        "nb": "Sommershorts 205",
+        "cs": "Letní šortky 205",
+        "sk": "Letné šortky 205",
+        "hu": "Nyári rövidnadrág 205",
+        "ro": "Pantaloni scurți de vară 205",
+        "el": "Καλοκαιρινό σορτς 205",
+        "tr": "Yazlık şort 205",
+        "uk": "Літні шорти 205",
+        "ar": "شورت صيفي 205",
+        "ja": "サマーショーツ 205",
+        "ko": "여름 반바지 205",
+        "vi": "Quần short mùa hè 205"
+      }
+    },
+    {
+      "name": "Summer Shorts 40",
+      "source": "Summer Shorts",
+      "suffix": " 40",
+      "translations": {
+        "fi": "Kesäshortsit 40",
+        "da": "Sommershorts 40",
+        "nb": "Sommershorts 40",
+        "cs": "Letní šortky 40",
+        "sk": "Letné šortky 40",
+        "hu": "Nyári rövidnadrág 40",
+        "ro": "Pantaloni scurți de vară 40",
+        "el": "Καλοκαιρινό σορτς 40",
+        "tr": "Yazlık şort 40",
+        "uk": "Літні шорти 40",
+        "ar": "شورت صيفي 40",
+        "ja": "サマーショーツ 40",
+        "ko": "여름 반바지 40",
+        "vi": "Quần short mùa hè 40"
+      }
+    },
+    {
+      "name": "Fashion Outfit Set PT08",
+      "source": "Fashion Outfit Set",
+      "suffix": " PT08",
+      "translations": {
+        "fi": "Muodikas asukokonaisuus PT08",
+        "da": "Modesæt PT08",
+        "nb": "Motesett PT08",
+        "cs": "Módní souprava PT08",
+        "sk": "Módna súprava PT08",
+        "hu": "Divatos ruhaszett PT08",
+        "ro": "Set vestimentar la modă PT08",
+        "el": "Μοντέρνο σετ ρούχων PT08",
+        "tr": "Moda kıyafet takımı PT08",
+        "uk": "Модний комплект одягу PT08",
+        "ar": "طقم ملابس عصري PT08",
+        "ja": "ファッションコーディネートセット PT08",
+        "ko": "패션 의상 세트 PT08",
+        "vi": "Bộ trang phục thời trang PT08"
+      }
+    },
+    {
+      "name": "Fashion Outfit Set 0930",
+      "source": "Fashion Outfit Set",
+      "suffix": " 0930",
+      "translations": {
+        "fi": "Muodikas asukokonaisuus 0930",
+        "da": "Modesæt 0930",
+        "nb": "Motesett 0930",
+        "cs": "Módní souprava 0930",
+        "sk": "Módna súprava 0930",
+        "hu": "Divatos ruhaszett 0930",
+        "ro": "Set vestimentar la modă 0930",
+        "el": "Μοντέρνο σετ ρούχων 0930",
+        "tr": "Moda kıyafet takımı 0930",
+        "uk": "Модний комплект одягу 0930",
+        "ar": "طقم ملابس عصري 0930",
+        "ja": "ファッションコーディネートセット 0930",
+        "ko": "패션 의상 세트 0930",
+        "vi": "Bộ trang phục thời trang 0930"
+      }
+    },
+    {
+      "name": "Casual Sports Shorts 39",
+      "source": "Casual Sports Shorts",
+      "suffix": " 39",
+      "translations": {
+        "fi": "Rennot urheilushortsit 39",
+        "da": "Casual sportsshorts 39",
+        "nb": "Uformelle sportsshorts 39",
+        "cs": "Volnočasové sportovní šortky 39",
+        "sk": "Voľnočasové športové šortky 39",
+        "hu": "Szabadidős sportrövidnadrág 39",
+        "ro": "Pantaloni scurți sport casual 39",
+        "el": "Καθημερινό αθλητικό σορτς 39",
+        "tr": "Günlük spor şort 39",
+        "uk": "Повсякденні спортивні шорти 39",
+        "ar": "شورت رياضي كاجوال 39",
+        "ja": "カジュアルスポーツショーツ 39",
+        "ko": "캐주얼 스포츠 반바지 39",
+        "vi": "Quần short thể thao thường ngày 39"
+      }
+    },
+    {
+      "name": "Casual Sports Shorts 0",
+      "source": "Casual Sports Shorts",
+      "suffix": " 0",
+      "translations": {
+        "fi": "Rennot urheilushortsit 0",
+        "da": "Casual sportsshorts 0",
+        "nb": "Uformelle sportsshorts 0",
+        "cs": "Volnočasové sportovní šortky 0",
+        "sk": "Voľnočasové športové šortky 0",
+        "hu": "Szabadidős sportrövidnadrág 0",
+        "ro": "Pantaloni scurți sport casual 0",
+        "el": "Καθημερινό αθλητικό σορτς 0",
+        "tr": "Günlük spor şort 0",
+        "uk": "Повсякденні спортивні шорти 0",
+        "ar": "شورت رياضي كاجوال 0",
+        "ja": "カジュアルスポーツショーツ 0",
+        "ko": "캐주얼 스포츠 반바지 0",
+        "vi": "Quần short thể thao thường ngày 0"
+      }
+    },
+    {
+      "name": "Casual Trend Shorts 83",
+      "source": "Casual Trend Shorts",
+      "suffix": " 83",
+      "translations": {
+        "fi": "Rennot trendishortsit 83",
+        "da": "Casual trendy shorts 83",
+        "nb": "Uformelle trendy shorts 83",
+        "cs": "Volnočasové trendy šortky 83",
+        "sk": "Voľnočasové trendy šortky 83",
+        "hu": "Divatos szabadidős rövidnadrág 83",
+        "ro": "Pantaloni scurți casual în tendințe 83",
+        "el": "Καθημερινό σορτς σε μοντέρνο στιλ 83",
+        "tr": "Günlük trend şort 83",
+        "uk": "Повсякденні модні шорти 83",
+        "ar": "شورت كاجوال عصري 83",
+        "ja": "カジュアルトレンドショーツ 83",
+        "ko": "캐주얼 트렌드 반바지 83",
+        "vi": "Quần short thường ngày hợp xu hướng 83"
+      }
+    },
+    {
+      "name": "Casual Trend Shorts 030",
+      "source": "Casual Trend Shorts",
+      "suffix": " 030",
+      "translations": {
+        "fi": "Rennot trendishortsit 030",
+        "da": "Casual trendy shorts 030",
+        "nb": "Uformelle trendy shorts 030",
+        "cs": "Volnočasové trendy šortky 030",
+        "sk": "Voľnočasové trendy šortky 030",
+        "hu": "Divatos szabadidős rövidnadrág 030",
+        "ro": "Pantaloni scurți casual în tendințe 030",
+        "el": "Καθημερινό σορτς σε μοντέρνο στιλ 030",
+        "tr": "Günlük trend şort 030",
+        "uk": "Повсякденні модні шорти 030",
+        "ar": "شورت كاجوال عصري 030",
+        "ja": "カジュアルトレンドショーツ 030",
+        "ko": "캐주얼 트렌드 반바지 030",
+        "vi": "Quần short thường ngày hợp xu hướng 030"
+      }
+    },
+    {
+      "name": "Casual Streetwear 001",
+      "source": "Casual Streetwear",
+      "suffix": " 001",
+      "translations": {
+        "fi": "Rennot katumuotivaatteet 001",
+        "da": "Casual streetwear 001",
+        "nb": "Uformell streetwear 001",
+        "cs": "Volnočasové streetwear oblečení 001",
+        "sk": "Voľnočasové streetwear oblečenie 001",
+        "hu": "Szabadidős utcai viselet 001",
+        "ro": "Îmbrăcăminte streetwear casual 001",
+        "el": "Καθημερινά ρούχα streetwear 001",
+        "tr": "Günlük sokak giyimi 001",
+        "uk": "Повсякденний вуличний одяг 001",
+        "ar": "ملابس شوارع كاجوال 001",
+        "ja": "カジュアルストリートウェア 001",
+        "ko": "캐주얼 스트리트웨어 001",
+        "vi": "Trang phục đường phố thường ngày 001"
+      }
+    },
+    {
+      "name": "Casual Streetwear FW2C",
+      "source": "Casual Streetwear",
+      "suffix": " FW2C",
+      "translations": {
+        "fi": "Rennot katumuotivaatteet FW2C",
+        "da": "Casual streetwear FW2C",
+        "nb": "Uformell streetwear FW2C",
+        "cs": "Volnočasové streetwear oblečení FW2C",
+        "sk": "Voľnočasové streetwear oblečenie FW2C",
+        "hu": "Szabadidős utcai viselet FW2C",
+        "ro": "Îmbrăcăminte streetwear casual FW2C",
+        "el": "Καθημερινά ρούχα streetwear FW2C",
+        "tr": "Günlük sokak giyimi FW2C",
+        "uk": "Повсякденний вуличний одяг FW2C",
+        "ar": "ملابس شوارع كاجوال FW2C",
+        "ja": "カジュアルストリートウェア FW2C",
+        "ko": "캐주얼 스트리트웨어 FW2C",
+        "vi": "Trang phục đường phố thường ngày FW2C"
+      }
+    },
+    {
+      "name": "Premium Jacket 30-BF",
+      "source": "Premium Jacket",
+      "suffix": " 30-BF",
+      "translations": {
+        "fi": "Laadukas takki 30-BF",
+        "da": "Premiumjakke 30-BF",
+        "nb": "Premiumjakke 30-BF",
+        "cs": "Prémiová bunda 30-BF",
+        "sk": "Prémiová bunda 30-BF",
+        "hu": "Prémium dzseki 30-BF",
+        "ro": "Jachetă premium 30-BF",
+        "el": "Premium μπουφάν 30-BF",
+        "tr": "Premium ceket 30-BF",
+        "uk": "Куртка преміум 30-BF",
+        "ar": "سترة فاخرة 30-BF",
+        "ja": "プレミアムジャケット 30-BF",
+        "ko": "프리미엄 재킷 30-BF",
+        "vi": "Áo khoác cao cấp 30-BF"
+      }
+    },
+    {
+      "name": "Premium Jacket 30-DZBG",
+      "source": "Premium Jacket",
+      "suffix": " 30-DZBG",
+      "translations": {
+        "fi": "Laadukas takki 30-DZBG",
+        "da": "Premiumjakke 30-DZBG",
+        "nb": "Premiumjakke 30-DZBG",
+        "cs": "Prémiová bunda 30-DZBG",
+        "sk": "Prémiová bunda 30-DZBG",
+        "hu": "Prémium dzseki 30-DZBG",
+        "ro": "Jachetă premium 30-DZBG",
+        "el": "Premium μπουφάν 30-DZBG",
+        "tr": "Premium ceket 30-DZBG",
+        "uk": "Куртка преміум 30-DZBG",
+        "ar": "سترة فاخرة 30-DZBG",
+        "ja": "プレミアムジャケット 30-DZBG",
+        "ko": "프리미엄 재킷 30-DZBG",
+        "vi": "Áo khoác cao cấp 30-DZBG"
+      }
+    },
+    {
+      "name": "Fashion Zipper Jacket 079",
+      "source": "Fashion Zipper Jacket",
+      "suffix": " 079",
+      "translations": {
+        "fi": "Muodikas vetoketjutakki 079",
+        "da": "Modejakke med lynlås 079",
+        "nb": "Motejakke med glidelås 079",
+        "cs": "Módní bunda na zip 079",
+        "sk": "Módna bunda na zips 079",
+        "hu": "Divatos cipzáras dzseki 079",
+        "ro": "Jachetă la modă cu fermoar 079",
+        "el": "Μοντέρνο μπουφάν με φερμουάρ 079",
+        "tr": "Moda fermuarlı ceket 079",
+        "uk": "Модна куртка на блискавці 079",
+        "ar": "سترة عصرية بسحاب 079",
+        "ja": "ファッションジップジャケット 079",
+        "ko": "패션 지퍼 재킷 079",
+        "vi": "Áo khoác khóa kéo thời trang 079"
+      }
+    },
+    {
+      "name": "Fashion Zipper Jacket 075",
+      "source": "Fashion Zipper Jacket",
+      "suffix": " 075",
+      "translations": {
+        "fi": "Muodikas vetoketjutakki 075",
+        "da": "Modejakke med lynlås 075",
+        "nb": "Motejakke med glidelås 075",
+        "cs": "Módní bunda na zip 075",
+        "sk": "Módna bunda na zips 075",
+        "hu": "Divatos cipzáras dzseki 075",
+        "ro": "Jachetă la modă cu fermoar 075",
+        "el": "Μοντέρνο μπουφάν με φερμουάρ 075",
+        "tr": "Moda fermuarlı ceket 075",
+        "uk": "Модна куртка на блискавці 075",
+        "ar": "سترة عصرية بسحاب 075",
+        "ja": "ファッションジップジャケット 075",
+        "ko": "패션 지퍼 재킷 075",
+        "vi": "Áo khoác khóa kéo thời trang 075"
+      }
+    },
+    {
+      "name": "Fashion Clothing 288",
+      "source": "Fashion Clothing",
+      "suffix": " 288",
+      "translations": {
+        "fi": "Muodikkaat vaatteet 288",
+        "da": "Modetøj 288",
+        "nb": "Moteklær 288",
+        "cs": "Módní oblečení 288",
+        "sk": "Módne oblečenie 288",
+        "hu": "Divatos ruházat 288",
+        "ro": "Îmbrăcăminte la modă 288",
+        "el": "Μοντέρνα ρούχα 288",
+        "tr": "Moda giyim 288",
+        "uk": "Модний одяг 288",
+        "ar": "ملابس عصرية 288",
+        "ja": "ファッション衣料 288",
+        "ko": "패션 의류 288",
+        "vi": "Trang phục thời trang 288"
+      }
+    },
+    {
+      "name": "Fashion Clothing 058",
+      "source": "Fashion Clothing",
+      "suffix": " 058",
+      "translations": {
+        "fi": "Muodikkaat vaatteet 058",
+        "da": "Modetøj 058",
+        "nb": "Moteklær 058",
+        "cs": "Módní oblečení 058",
+        "sk": "Módne oblečenie 058",
+        "hu": "Divatos ruházat 058",
+        "ro": "Îmbrăcăminte la modă 058",
+        "el": "Μοντέρνα ρούχα 058",
+        "tr": "Moda giyim 058",
+        "uk": "Модний одяг 058",
+        "ar": "ملابس عصرية 058",
+        "ja": "ファッション衣料 058",
+        "ko": "패션 의류 058",
+        "vi": "Trang phục thời trang 058"
+      }
+    },
+    {
+      "name": "Fashion Clothing 287",
+      "source": "Fashion Clothing",
+      "suffix": " 287",
+      "translations": {
+        "fi": "Muodikkaat vaatteet 287",
+        "da": "Modetøj 287",
+        "nb": "Moteklær 287",
+        "cs": "Módní oblečení 287",
+        "sk": "Módne oblečenie 287",
+        "hu": "Divatos ruházat 287",
+        "ro": "Îmbrăcăminte la modă 287",
+        "el": "Μοντέρνα ρούχα 287",
+        "tr": "Moda giyim 287",
+        "uk": "Модний одяг 287",
+        "ar": "ملابس عصرية 287",
+        "ja": "ファッション衣料 287",
+        "ko": "패션 의류 287",
+        "vi": "Trang phục thời trang 287"
+      }
+    },
+    {
+      "name": "Summer Casual Sports Shorts 02",
+      "source": "Summer Casual Sports Shorts",
+      "suffix": " 02",
+      "translations": {
+        "fi": "Rennot kesäurheilushortsit 02",
+        "da": "Casual sportsshorts til sommer 02",
+        "nb": "Uformelle sportsshorts til sommeren 02",
+        "cs": "Letní volnočasové sportovní šortky 02",
+        "sk": "Letné voľnočasové športové šortky 02",
+        "hu": "Nyári szabadidős sportrövidnadrág 02",
+        "ro": "Pantaloni scurți sport casual de vară 02",
+        "el": "Καλοκαιρινό καθημερινό αθλητικό σορτς 02",
+        "tr": "Yazlık günlük spor şort 02",
+        "uk": "Літні повсякденні спортивні шорти 02",
+        "ar": "شورت رياضي كاجوال صيفي 02",
+        "ja": "サマーカジュアルスポーツショーツ 02",
+        "ko": "여름 캐주얼 스포츠 반바지 02",
+        "vi": "Quần short thể thao thường ngày mùa hè 02"
+      }
+    },
+    {
+      "name": "Summer Casual Sports Shorts",
+      "source": "Summer Casual Sports Shorts",
+      "suffix": "",
+      "translations": {
+        "fi": "Rennot kesäurheilushortsit",
+        "da": "Casual sportsshorts til sommer",
+        "nb": "Uformelle sportsshorts til sommeren",
+        "cs": "Letní volnočasové sportovní šortky",
+        "sk": "Letné voľnočasové športové šortky",
+        "hu": "Nyári szabadidős sportrövidnadrág",
+        "ro": "Pantaloni scurți sport casual de vară",
+        "el": "Καλοκαιρινό καθημερινό αθλητικό σορτς",
+        "tr": "Yazlık günlük spor şort",
+        "uk": "Літні повсякденні спортивні шорти",
+        "ar": "شورت رياضي كاجوال صيفي",
+        "ja": "サマーカジュアルスポーツショーツ",
+        "ko": "여름 캐주얼 스포츠 반바지",
+        "vi": "Quần short thể thao thường ngày mùa hè"
+      }
+    },
+    {
+      "name": "Summer Casual Sports Shorts 18",
+      "source": "Summer Casual Sports Shorts",
+      "suffix": " 18",
+      "translations": {
+        "fi": "Rennot kesäurheilushortsit 18",
+        "da": "Casual sportsshorts til sommer 18",
+        "nb": "Uformelle sportsshorts til sommeren 18",
+        "cs": "Letní volnočasové sportovní šortky 18",
+        "sk": "Letné voľnočasové športové šortky 18",
+        "hu": "Nyári szabadidős sportrövidnadrág 18",
+        "ro": "Pantaloni scurți sport casual de vară 18",
+        "el": "Καλοκαιρινό καθημερινό αθλητικό σορτς 18",
+        "tr": "Yazlık günlük spor şort 18",
+        "uk": "Літні повсякденні спортивні шорти 18",
+        "ar": "شورت رياضي كاجوال صيفي 18",
+        "ja": "サマーカジュアルスポーツショーツ 18",
+        "ko": "여름 캐주얼 스포츠 반바지 18",
+        "vi": "Quần short thể thao thường ngày mùa hè 18"
+      }
+    },
+    {
+      "name": "Summer Casual Sports Shorts 13",
+      "source": "Summer Casual Sports Shorts",
+      "suffix": " 13",
+      "translations": {
+        "fi": "Rennot kesäurheilushortsit 13",
+        "da": "Casual sportsshorts til sommer 13",
+        "nb": "Uformelle sportsshorts til sommeren 13",
+        "cs": "Letní volnočasové sportovní šortky 13",
+        "sk": "Letné voľnočasové športové šortky 13",
+        "hu": "Nyári szabadidős sportrövidnadrág 13",
+        "ro": "Pantaloni scurți sport casual de vară 13",
+        "el": "Καλοκαιρινό καθημερινό αθλητικό σορτς 13",
+        "tr": "Yazlık günlük spor şort 13",
+        "uk": "Літні повсякденні спортивні шорти 13",
+        "ar": "شورت رياضي كاجوال صيفي 13",
+        "ja": "サマーカジュアルスポーツショーツ 13",
+        "ko": "여름 캐주얼 스포츠 반바지 13",
+        "vi": "Quần short thể thao thường ngày mùa hè 13"
+      }
+    }
+  ]
+}

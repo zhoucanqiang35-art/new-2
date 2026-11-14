@@ -1,0 +1,274 @@
+{
+  "items": [
+    {
+      "name": "AD Casual Jacket",
+      "translations": {
+        "fi": "AD vapaa-ajan takki",
+        "da": "AD afslappet jakke",
+        "nb": "AD uformell jakke",
+        "cs": "AD volnočasová bunda",
+        "sk": "AD voľnočasová bunda",
+        "hu": "AD hétköznapi dzseki",
+        "el": "AD καθημερινό μπουφάν",
+        "uk": "AD повсякденна куртка",
+        "ar": "AD سترة كاجوال",
+        "ja": "AD カジュアルジャケット",
+        "ko": "AD 캐주얼 재킷",
+        "vi": "AD áo khoác thường ngày",
+        "tr": "AD günlük ceket"
+      }
+    },
+    {
+      "name": "ADDS Casual Jacket",
+      "translations": {
+        "fi": "ADDS vapaa-ajan takki",
+        "da": "ADDS afslappet jakke",
+        "nb": "ADDS uformell jakke",
+        "cs": "ADDS volnočasová bunda",
+        "sk": "ADDS voľnočasová bunda",
+        "hu": "ADDS hétköznapi dzseki",
+        "el": "ADDS καθημερινό μπουφάν",
+        "uk": "ADDS повсякденна куртка",
+        "ar": "ADDS سترة كاجوال",
+        "ja": "ADDS カジュアルジャケット",
+        "ko": "ADDS 캐주얼 재킷",
+        "vi": "ADDS áo khoác thường ngày",
+        "tr": "ADDS günlük ceket"
+      }
+    },
+    {
+      "name": "GOAT Casual Jacket",
+      "translations": {
+        "fi": "GOAT vapaa-ajan takki",
+        "da": "GOAT afslappet jakke",
+        "nb": "GOAT uformell jakke",
+        "cs": "GOAT volnočasová bunda",
+        "sk": "GOAT voľnočasová bunda",
+        "hu": "GOAT hétköznapi dzseki",
+        "el": "GOAT καθημερινό μπουφάν",
+        "uk": "GOAT повсякденна куртка",
+        "ar": "GOAT سترة كاجوال",
+        "ja": "GOAT カジュアルジャケット",
+        "ko": "GOAT 캐주얼 재킷",
+        "vi": "GOAT áo khoác thường ngày",
+        "tr": "GOAT günlük ceket"
+      }
+    },
+    {
+      "name": "Miller Casual Jacket",
+      "translations": {
+        "fi": "Miller vapaa-ajan takki",
+        "da": "Miller afslappet jakke",
+        "nb": "Miller uformell jakke",
+        "cs": "Miller volnočasová bunda",
+        "sk": "Miller voľnočasová bunda",
+        "hu": "Miller hétköznapi dzseki",
+        "el": "Miller καθημερινό μπουφάν",
+        "uk": "Miller повсякденна куртка",
+        "ar": "Miller سترة كاجوال",
+        "ja": "Miller カジュアルジャケット",
+        "ko": "Miller 캐주얼 재킷",
+        "vi": "Miller áo khoác thường ngày",
+        "tr": "Miller günlük ceket"
+      }
+    },
+    {
+      "name": "MKL Casual Jacket",
+      "translations": {
+        "fi": "MKL vapaa-ajan takki",
+        "da": "MKL afslappet jakke",
+        "nb": "MKL uformell jakke",
+        "cs": "MKL volnočasová bunda",
+        "sk": "MKL voľnočasová bunda",
+        "hu": "MKL hétköznapi dzseki",
+        "el": "MKL καθημερινό μπουφάν",
+        "uk": "MKL повсякденна куртка",
+        "ar": "MKL سترة كاجوال",
+        "ja": "MKL カジュアルジャケット",
+        "ko": "MKL 캐주얼 재킷",
+        "vi": "MKL áo khoác thường ngày",
+        "tr": "MKL günlük ceket"
+      }
+    },
+    {
+      "name": "HD09 Casual Jacket",
+      "translations": {
+        "fi": "HD09 vapaa-ajan takki",
+        "da": "HD09 afslappet jakke",
+        "nb": "HD09 uformell jakke",
+        "cs": "HD09 volnočasová bunda",
+        "sk": "HD09 voľnočasová bunda",
+        "hu": "HD09 hétköznapi dzseki",
+        "el": "HD09 καθημερινό μπουφάν",
+        "uk": "HD09 повсякденна куртка",
+        "ar": "HD09 سترة كاجوال",
+        "ja": "HD09 カジュアルジャケット",
+        "ko": "HD09 캐주얼 재킷",
+        "vi": "HD09 áo khoác thường ngày",
+        "tr": "HD09 günlük ceket"
+      }
+    },
+    {
+      "name": "MMG Casual Jacket 660327142",
+      "translations": {
+        "fi": "MMG vapaa-ajan takki 660327142",
+        "da": "MMG afslappet jakke 660327142",
+        "nb": "MMG uformell jakke 660327142",
+        "cs": "MMG volnočasová bunda 660327142",
+        "sk": "MMG voľnočasová bunda 660327142",
+        "hu": "MMG hétköznapi dzseki 660327142",
+        "el": "MMG καθημερινό μπουφάν 660327142",
+        "uk": "MMG повсякденна куртка 660327142",
+        "ar": "MMG سترة كاجوال 660327142",
+        "ja": "MMG カジュアルジャケット 660327142",
+        "ko": "MMG 캐주얼 재킷 660327142",
+        "vi": "MMG áo khoác thường ngày 660327142",
+        "tr": "MMG günlük ceket 660327142"
+      }
+    },
+    {
+      "name": "WFB Premium Casual Jacket",
+      "translations": {
+        "fi": "WFB laadukas vapaa-ajan takki",
+        "da": "WFB premium afslappet jakke",
+        "nb": "WFB premium uformell jakke",
+        "cs": "WFB prémiová volnočasová bunda",
+        "sk": "WFB prémiová voľnočasová bunda",
+        "hu": "WFB prémium hétköznapi dzseki",
+        "el": "WFB premium καθημερινό μπουφάν",
+        "uk": "WFB преміальна повсякденна куртка",
+        "ar": "WFB سترة كاجوال فاخرة",
+        "ja": "WFB プレミアムカジュアルジャケット",
+        "ko": "WFB 프리미엄 캐주얼 재킷",
+        "vi": "WFB áo khoác thường ngày cao cấp",
+        "tr": "WFB premium günlük ceket"
+      }
+    },
+    {
+      "name": "Cort Premium Casual Jacket",
+      "translations": {
+        "fi": "Cort laadukas vapaa-ajan takki",
+        "da": "Cort premium afslappet jakke",
+        "nb": "Cort premium uformell jakke",
+        "cs": "Cort prémiová volnočasová bunda",
+        "sk": "Cort prémiová voľnočasová bunda",
+        "hu": "Cort prémium hétköznapi dzseki",
+        "el": "Cort premium καθημερινό μπουφάν",
+        "uk": "Cort преміальна повсякденна куртка",
+        "ar": "Cort سترة كاجوال فاخرة",
+        "ja": "Cort プレミアムカジュアルジャケット",
+        "ko": "Cort 프리미엄 캐주얼 재킷",
+        "vi": "Cort áo khoác thường ngày cao cấp",
+        "tr": "Cort premium günlük ceket"
+      }
+    },
+    {
+      "name": "Premium Padded Jacket 001",
+      "translations": {
+        "fi": "laadukas topattu takki 001",
+        "da": "premium polstret jakke 001",
+        "nb": "premium polstret jakke 001",
+        "cs": "prémiová zateplená bunda 001",
+        "sk": "prémiová zateplená bunda 001",
+        "hu": "prémium bélelt dzseki 001",
+        "el": "premium μπουφάν με επένδυση 001",
+        "uk": "преміальна утеплена куртка 001",
+        "ar": "سترة مبطنة فاخرة 001",
+        "ja": "プレミアム中綿ジャケット 001",
+        "ko": "프리미엄 패딩 재킷 001",
+        "vi": "áo khoác chần bông cao cấp 001",
+        "tr": "premium dolgulu ceket 001"
+      }
+    },
+    {
+      "name": "TNF 1996 Puffer Jacket",
+      "translations": {
+        "fi": "TNF 1996 toppatakki",
+        "da": "TNF 1996 pufferjakke",
+        "nb": "TNF 1996 pufferjakke",
+        "cs": "TNF 1996 prošívaná bunda",
+        "sk": "TNF 1996 prešívaná bunda",
+        "hu": "TNF 1996 pufi kabát",
+        "el": "TNF 1996 φουσκωτό μπουφάν",
+        "uk": "TNF 1996 дута куртка",
+        "ar": "TNF 1996 سترة منتفخة",
+        "ja": "TNF 1996 パファージャケット",
+        "ko": "TNF 1996 패딩 재킷",
+        "vi": "TNF 1996 áo khoác phao",
+        "tr": "TNF 1996 şişme mont"
+      }
+    },
+    {
+      "name": "Youth Hooded Casual Jacket",
+      "translations": {
+        "fi": "nuorten hupullinen vapaa-ajan takki",
+        "da": "afslappet jakke med hætte til unge",
+        "nb": "uformell jakke med hette for ungdom",
+        "cs": "volnočasová bunda s kapucí pro mládež",
+        "sk": "voľnočasová bunda s kapucňou pre mládež",
+        "hu": "kapucnis hétköznapi ifjúsági dzseki",
+        "el": "καθημερινό μπουφάν με κουκούλα για νέους",
+        "uk": "повсякденна куртка з капюшоном для молоді",
+        "ar": "سترة كاجوال للشباب بغطاء رأس",
+        "ja": "ユース用フード付きカジュアルジャケット",
+        "ko": "청소년 후드 캐주얼 재킷",
+        "vi": "áo khoác thường ngày có mũ cho thiếu niên",
+        "tr": "gençler için kapüşonlu günlük ceket"
+      }
+    },
+    {
+      "name": "Premium PHD Jacket 004",
+      "translations": {
+        "fi": "PHD laadukas takki 004",
+        "da": "PHD premium jakke 004",
+        "nb": "PHD premium jakke 004",
+        "cs": "PHD prémiová bunda 004",
+        "sk": "PHD prémiová bunda 004",
+        "hu": "PHD prémium dzseki 004",
+        "el": "PHD premium μπουφάν 004",
+        "uk": "PHD преміальна куртка 004",
+        "ar": "PHD سترة فاخرة 004",
+        "ja": "PHD プレミアムジャケット 004",
+        "ko": "PHD 프리미엄 재킷 004",
+        "vi": "PHD áo khoác cao cấp 004",
+        "tr": "PHD premium ceket 004"
+      }
+    },
+    {
+      "name": "XJXPCS Fashion Shorts 09",
+      "translations": {
+        "fi": "XJXPCS muotishortsit 09",
+        "da": "XJXPCS modeshorts 09",
+        "nb": "XJXPCS moteshorts 09",
+        "cs": "XJXPCS módní šortky 09",
+        "sk": "XJXPCS módne šortky 09",
+        "hu": "XJXPCS divatshort 09",
+        "el": "XJXPCS μοντέρνο σορτς 09",
+        "uk": "XJXPCS модні шорти 09",
+        "ar": "XJXPCS شورت عصري 09",
+        "ja": "XJXPCS ファッションショーツ 09",
+        "ko": "XJXPCS 패션 반바지 09",
+        "vi": "XJXPCS quần short thời trang 09",
+        "tr": "XJXPCS moda şort 09"
+      }
+    },
+    {
+      "name": "KN Half-Zip Jacket",
+      "translations": {
+        "fi": "KN puolivetoketjullinen takki",
+        "da": "KN jakke med halv lynlås",
+        "nb": "KN jakke med halv glidelås",
+        "cs": "KN bunda s polovičním zipem",
+        "sk": "KN bunda s polovičným zipsom",
+        "hu": "KN félcipzáras dzseki",
+        "el": "KN μπουφάν με μισό φερμουάρ",
+        "uk": "KN куртка з короткою блискавкою",
+        "ar": "KN سترة بنصف سحاب",
+        "ja": "KN ハーフジップジャケット",
+        "ko": "KN 하프 집업 재킷",
+        "vi": "KN áo khoác khóa kéo nửa",
+        "tr": "KN yarım fermuarlı ceket"
+      }
+    }
+  ]
+}

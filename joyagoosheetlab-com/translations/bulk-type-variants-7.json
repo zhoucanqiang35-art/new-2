@@ -1,0 +1,130 @@
+{
+  "items": [
+    {
+      "name": "Quilted Shoulder Bag C1-VHB-00",
+      "source": "Quilted Shoulder Bag",
+      "suffix": " C1-VHB-00",
+      "translations": {
+        "fi": "Tikattu olkalaukku C1-VHB-00",
+        "da": "Quiltet skuldertaske C1-VHB-00",
+        "nb": "Vattert skulderveske C1-VHB-00",
+        "cs": "Prošívaná kabelka přes rameno C1-VHB-00",
+        "sk": "Prešívaná kabelka cez plece C1-VHB-00",
+        "hu": "Steppelt válltáska C1-VHB-00",
+        "ro": "Geantă de umăr matlasată C1-VHB-00",
+        "el": "Καπιτονέ τσάντα ώμου C1-VHB-00",
+        "tr": "Kapitone omuz çantası C1-VHB-00",
+        "uk": "Стьобана сумка на плече C1-VHB-00",
+        "ar": "حقيبة كتف مبطنة C1-VHB-00",
+        "ja": "キルティングショルダーバッグ C1-VHB-00",
+        "ko": "퀼팅 숄더백 C1-VHB-00",
+        "vi": "Túi đeo vai chần bông C1-VHB-00"
+      }
+    },
+    {
+      "name": "Crossbody Messenger Bag 3311",
+      "source": "Crossbody Messenger Bag",
+      "suffix": " 3311",
+      "translations": {
+        "fi": "Olalla pidettävä lähettiolkalaukku 3311",
+        "da": "Crossbody-messengerbag 3311",
+        "nb": "Crossbody-messengerveske 3311",
+        "cs": "Crossbody messenger taška 3311",
+        "sk": "Crossbody messenger taška 3311",
+        "hu": "Keresztpántos oldaltáska 3311",
+        "ro": "Geantă messenger crossbody 3311",
+        "el": "Χιαστί τσάντα messenger 3311",
+        "tr": "Çapraz postacı çantası 3311",
+        "uk": "Сумка-месенджер через плече 3311",
+        "ar": "حقيبة ماسنجر كروس بودي 3311",
+        "ja": "クロスボディメッセンジャーバッグ 3311",
+        "ko": "크로스 메신저백 3311",
+        "vi": "Túi messenger đeo chéo 3311"
+      }
+    },
+    {
+      "name": "Patterned Belt Bag 3304",
+      "source": "Patterned Belt Bag",
+      "suffix": " 3304",
+      "translations": {
+        "fi": "Kuviollinen vyölaukku 3304",
+        "da": "Mønstret bæltetaske 3304",
+        "nb": "Mønstret belteveske 3304",
+        "cs": "Vzorovaná ledvinka 3304",
+        "sk": "Vzorovaná ľadvinka 3304",
+        "hu": "Mintás övtáska 3304",
+        "ro": "Borsetă cu model 3304",
+        "el": "Τσάντα μέσης με σχέδιο 3304",
+        "tr": "Desenli bel çantası 3304",
+        "uk": "Поясна сумка з візерунком 3304",
+        "ar": "حقيبة خصر بنقشة 3304",
+        "ja": "柄入りベルトバッグ 3304",
+        "ko": "패턴 벨트백 3304",
+        "vi": "Túi đeo hông họa tiết 3304"
+      }
+    },
+    {
+      "name": "Vertical Shoulder Bag 517",
+      "source": "Vertical Shoulder Bag",
+      "suffix": " 517",
+      "translations": {
+        "fi": "Pystymallinen olkalaukku 517",
+        "da": "Lodret skuldertaske 517",
+        "nb": "Loddrett skulderveske 517",
+        "cs": "Svislá kabelka přes rameno 517",
+        "sk": "Zvislá kabelka cez plece 517",
+        "hu": "Függőleges válltáska 517",
+        "ro": "Geantă de umăr verticală 517",
+        "el": "Κάθετη τσάντα ώμου 517",
+        "tr": "Dikey omuz çantası 517",
+        "uk": "Вертикальна сумка на плече 517",
+        "ar": "حقيبة كتف عمودية 517",
+        "ja": "縦型ショルダーバッグ 517",
+        "ko": "세로형 숄더백 517",
+        "vi": "Túi đeo vai dáng dọc 517"
+      }
+    },
+    {
+      "name": "Top Handle Handbag 289",
+      "source": "Top Handle Handbag",
+      "suffix": " 289",
+      "translations": {
+        "fi": "Yläkahvallinen käsilaukku 289",
+        "da": "Håndtaske med tophåndtag 289",
+        "nb": "Håndveske med topphåndtak 289",
+        "cs": "Kabelka s horním držadlem 289",
+        "sk": "Kabelka s horným držadlom 289",
+        "hu": "Felső fülű kézitáska 289",
+        "ro": "Geantă cu mâner superior 289",
+        "el": "Τσάντα χειρός με πάνω λαβή 289",
+        "tr": "Üst saplı el çantası 289",
+        "uk": "Сумка з верхньою ручкою 289",
+        "ar": "حقيبة يد بمقبض علوي 289",
+        "ja": "トップハンドルハンドバッグ 289",
+        "ko": "탑 핸들 핸드백 289",
+        "vi": "Túi xách quai trên 289"
+      }
+    },
+    {
+      "name": "Structured Crossbody Bag 3270",
+      "source": "Structured Crossbody Bag",
+      "suffix": " 3270",
+      "translations": {
+        "fi": "Ryhdikäs olkalaukku 3270",
+        "da": "Struktureret crossbodytaske 3270",
+        "nb": "Strukturert crossbodyveske 3270",
+        "cs": "Crossbody kabelka s pevnou strukturou 3270",
+        "sk": "Crossbody kabelka s pevnou štruktúrou 3270",
+        "hu": "Strukturált keresztpántos táska 3270",
+        "ro": "Geantă crossbody structurată 3270",
+        "el": "Χιαστί τσάντα με δομημένο σχήμα 3270",
+        "tr": "Formlu çapraz çanta 3270",
+        "uk": "Сумка через плече структурованої форми 3270",
+        "ar": "حقيبة كروس بودي بهيكل محدد 3270",
+        "ja": "構築的なクロスボディバッグ 3270",
+        "ko": "형태감 있는 크로스백 3270",
+        "vi": "Túi đeo chéo dáng đứng 3270"
+      }
+    }
+  ]
+}

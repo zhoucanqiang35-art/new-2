@@ -1,0 +1,184 @@
+{
+  "2987": {
+    "name": "Chanel Fashion Short Sleeves",
+    "translations": {
+      "cs": "Chanel módní krátké rukávy",
+      "hu": "Chanel divatos rövid ujjú",
+      "el": "Chanel κοντομάνικο μόδας",
+      "tr": "Chanel moda kısa kollu",
+      "uk": "Chanel модний короткий рукав",
+      "ja": "Chanel ファッション半袖",
+      "ko": "Chanel 패션 반소매",
+      "ar": "Chanel أكمام قصيرة عصرية"
+    }
+  },
+  "2986": {
+    "name": "Chanel Fashion Printed Short S",
+    "translations": {
+      "cs": "Chanel módní potištěné krátké rukávy",
+      "hu": "Chanel divatos nyomott rövid ujjú",
+      "el": "Chanel κοντομάνικο μόδας με στάμπα",
+      "tr": "Chanel moda baskılı kısa kollu",
+      "uk": "Chanel модний принтований короткий рукав",
+      "ja": "Chanel ファッションプリントの半袖",
+      "ko": "Chanel 패션 프린트 반소매",
+      "ar": "Chanel أكمام قصيرة مطبوعة عصرية"
+    }
+  },
+  "2963": {
+    "name": "YSL SAINT LAURENT Hermes LV Lo",
+    "translations": {
+      "cs": "Ysl Saint Laurent Hermes Lv Louis Vuitton kabelka, taška přes tělo",
+      "hu": "Ysl Saint Laurent Hermes Lv Louis Vuitton kézitáska, keresztpántos táska",
+      "el": "Ysl Saint Laurent Hermes Lv Louis Vuitton τσάντα χειρός, χιαστί τσάντα",
+      "tr": "Ysl Saint Laurent Hermes Lv Louis Vuitton el çantası, çapraz çanta",
+      "uk": "Ysl Saint Laurent Hermes Lv Louis Vuitton сумка, сумка через плече",
+      "ja": "Ysl Saint Laurent Hermes Lv Louis Vuitton ハンドバッグ、クロスボディバッグ",
+      "ko": "Ysl Saint Laurent Hermes Lv Louis Vuitton 핸드백, 크로스백",
+      "ar": "Ysl Saint Laurent Hermes Lv Louis Vuitton حقيبة يد، حقيبة كروس"
+    }
+  },
+  "2960": {
+    "name": "Loewe Earring",
+    "translations": {
+      "cs": "Loewe náušnice",
+      "hu": "Loewe fülbevaló",
+      "el": "Loewe σκουλαρίκι",
+      "tr": "Loewe küpe",
+      "uk": "Loewe сережка",
+      "ja": "Loewe イヤリング",
+      "ko": "Loewe 귀걸이",
+      "ar": "Loewe قرط"
+    }
+  },
+  "2959": {
+    "name": "NIKE socks nike socks x10 only",
+    "translations": {
+      "cs": "Nike ponožky, pouze ponožky X10 Nike",
+      "hu": "Nike zokni, csak zokni X10 Nike",
+      "el": "Nike κάλτσες, μόνο κάλτσες X10 Nike",
+      "tr": "Nike çorap, yalnızca çorap X10 Nike",
+      "uk": "Nike шкарпетки, тільки шкарпетки X10 Nike",
+      "ja": "Nike ソックス、ソックスのみ X10 Nike",
+      "ko": "Nike 양말, 양말만 X10 Nike",
+      "ar": "Nike جوارب، جوارب فقط X10 Nike"
+    }
+  },
+  "2950": {
+    "name": "Syna world suit（34 STYLE TOP",
+    "translations": {
+      "cs": "Syna World souprava, 34 stylů, top",
+      "hu": "Syna World szett, 34 stílus, felső",
+      "el": "Syna World σετ, 34 στυλ, μπλούζα",
+      "tr": "Syna World takım, 34 model, üst",
+      "uk": "Syna World комплект, 34 стилі, верх",
+      "ja": "Syna World セット、34スタイル、トップス",
+      "ko": "Syna World 세트, 34가지 스타일, 상의",
+      "ar": "Syna World طقم، 34 تصميماً، قطعة علوية"
+    }
+  },
+  "2948": {
+    "name": "miumiu GlassesLV Louis Vuitto",
+    "translations": {
+      "cs": "Miumiu Lv Louis Vuitton Cartier Burberry brýle, sluneční brýle",
+      "hu": "Miumiu Lv Louis Vuitton Cartier Burberry szemüveg, napszemüveg",
+      "el": "Miumiu Lv Louis Vuitton Cartier Burberry γυαλιά, γυαλιά ηλίου",
+      "tr": "Miumiu Lv Louis Vuitton Cartier Burberry gözlük, güneş gözlüğü",
+      "uk": "Miumiu Lv Louis Vuitton Cartier Burberry окуляри, сонцезахисні окуляри",
+      "ja": "Miumiu Lv Louis Vuitton Cartier Burberry 眼鏡、サングラス",
+      "ko": "Miumiu Lv Louis Vuitton Cartier Burberry 안경, 선글라스",
+      "ar": "Miumiu Lv Louis Vuitton Cartier Burberry نظارات، نظارات شمسية"
+    }
+  },
+  "2915": {
+    "name": "Puma/LA slippers（40 STYLE OG",
+    "translations": {
+      "cs": "Puma La pantofle, 40 stylů Og",
+      "hu": "Puma La papucs, 40 stílus Og",
+      "el": "Puma La παντόφλες, 40 στυλ Og",
+      "tr": "Puma La terlik, 40 model Og",
+      "uk": "Puma La капці, 40 стилів Og",
+      "ja": "Puma La スリッパ、40スタイル Og",
+      "ko": "Puma La 슬리퍼, 40가지 스타일 Og",
+      "ar": "Puma La شبشب، 40 تصميماً Og"
+    }
+  },
+  "2909": {
+    "name": "Product Casablanca Set",
+    "translations": {
+      "cs": "Casablanca souprava",
+      "hu": "Casablanca szett",
+      "el": "Casablanca σετ",
+      "tr": "Casablanca takım",
+      "uk": "Casablanca комплект",
+      "ja": "Casablanca セット",
+      "ko": "Casablanca 세트",
+      "ar": "Casablanca طقم"
+    }
+  },
+  "2903": {
+    "name": "Nike Shoes Slippers（40 STYLE O",
+    "translations": {
+      "cs": "Nike boty, pantofle, 40 stylů Og",
+      "hu": "Nike cipő, papucs, 40 stílus Og",
+      "el": "Nike παπούτσια, παντόφλες, 40 στυλ Og",
+      "tr": "Nike ayakkabı, terlik, 40 model Og",
+      "uk": "Nike взуття, капці, 40 стилів Og",
+      "ja": "Nike シューズ、スリッパ、40スタイル Og",
+      "ko": "Nike 신발, 슬리퍼, 40가지 스타일 Og",
+      "ar": "Nike أحذية، شبشب، 40 تصميماً Og"
+    }
+  },
+  "2902": {
+    "name": "Jordan/NY/Adidas slippers（40 S",
+    "translations": {
+      "cs": "Jordan Ny Adidas pantofle, 40 stylů Top",
+      "hu": "Jordan Ny Adidas papucs, 40 stílus Top",
+      "el": "Jordan Ny Adidas παντόφλες, 40 στυλ Top",
+      "tr": "Jordan Ny Adidas terlik, 40 model Top",
+      "uk": "Jordan Ny Adidas капці, 40 стилів Top",
+      "ja": "Jordan Ny Adidas スリッパ、40スタイル Top",
+      "ko": "Jordan Ny Adidas 슬리퍼, 40가지 스타일 Top",
+      "ar": "Jordan Ny Adidas شبشب، 40 تصميماً Top"
+    }
+  },
+  "2899": {
+    "name": "Lv Short",
+    "translations": {
+      "cs": "Lv šortky",
+      "hu": "Lv rövidnadrág",
+      "el": "Lv σορτς",
+      "tr": "Lv şort",
+      "uk": "Lv шорти",
+      "ja": "Lv ショートパンツ",
+      "ko": "Lv 반바지",
+      "ar": "Lv شورت"
+    }
+  },
+  "2895": {
+    "name": "HUGO BOSS SHORT",
+    "translations": {
+      "cs": "HUGO BOSS šortky",
+      "hu": "HUGO BOSS rövidnadrág",
+      "el": "HUGO BOSS σορτς",
+      "tr": "HUGO BOSS şort",
+      "uk": "HUGO BOSS шорти",
+      "ja": "HUGO BOSS ショートパンツ",
+      "ko": "HUGO BOSS 반바지",
+      "ar": "HUGO BOSS شورت"
+    }
+  },
+  "2866": {
+    "name": "CORTEIZ WINDCHEATER",
+    "translations": {
+      "cs": "CORTEIZ větrovka",
+      "hu": "CORTEIZ széldzseki",
+      "el": "CORTEIZ αντιανεμικό μπουφάν",
+      "tr": "CORTEIZ rüzgarlık",
+      "uk": "CORTEIZ вітровка",
+      "ja": "CORTEIZ ウィンドブレーカー",
+      "ko": "CORTEIZ 윈드브레이커",
+      "ar": "CORTEIZ سترة واقية من الرياح"
+    }
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "items": [
+    {
+      "name": "Casual High-Top Sneakers",
+      "translations": {
+        "fi": "Rennot korkeavartiset tennarit",
+        "da": "Afslappede højskaftede sneakers",
+        "nb": "Uformelle høye sneakers",
+        "cs": "Volnočasové kotníkové tenisky",
+        "sk": "Voľnočasové členkové tenisky",
+        "hu": "Hétköznapi magas szárú sportcipő",
+        "ro": "Sneakers casual cu carâmb înalt",
+        "el": "Καθημερινά ψηλά sneakers",
+        "uk": "Повсякденні високі кросівки",
+        "ar": "حذاء رياضي كاجوال برقبة عالية",
+        "ja": "カジュアルハイカットスニーカー",
+        "ko": "캐주얼 하이탑 스니커즈",
+        "vi": "Giày sneaker cổ cao thường ngày",
+        "tr": "Günlük yüksek bilekli spor ayakkabı"
+      }
+    },
+    {
+      "name": "Casual Low-Top Sneakers",
+      "translations": {
+        "fi": "Rennot matalavartiset tennarit",
+        "da": "Afslappede lavskaftede sneakers",
+        "nb": "Uformelle lave sneakers",
+        "cs": "Volnočasové nízké tenisky",
+        "sk": "Voľnočasové nízke tenisky",
+        "hu": "Hétköznapi alacsony szárú sportcipő",
+        "ro": "Sneakers casual cu carâmb jos",
+        "el": "Καθημερινά χαμηλά sneakers",
+        "uk": "Повсякденні низькі кросівки",
+        "ar": "حذاء رياضي كاجوال برقبة منخفضة",
+        "ja": "カジュアルローカットスニーカー",
+        "ko": "캐주얼 로우탑 스니커즈",
+        "vi": "Giày sneaker cổ thấp thường ngày",
+        "tr": "Günlük alçak bilekli spor ayakkabı"
+      }
+    },
+    {
+      "name": "Premium Casual Pants",
+      "translations": {
+        "fi": "Laadukkaat vapaa-ajan housut",
+        "da": "Premium afslappede bukser",
+        "nb": "Premium uformelle bukser",
+        "cs": "Prémiové volnočasové kalhoty",
+        "sk": "Prémiové voľnočasové nohavice",
+        "hu": "Prémium hétköznapi nadrág",
+        "el": "Premium καθημερινό παντελόνι",
+        "uk": "Преміальні повсякденні штани",
+        "ar": "بنطال كاجوال فاخر",
+        "ja": "プレミアムカジュアルパンツ",
+        "ko": "프리미엄 캐주얼 바지",
+        "vi": "Quần dài thường ngày cao cấp",
+        "tr": "Premium günlük pantolon"
+      }
+    },
+    {
+      "name": "Classic Fashion Slides",
+      "translations": {
+        "fi": "Klassiset muotipistokkaat",
+        "da": "Klassiske modeslippers",
+        "nb": "Klassiske moteslippers",
+        "cs": "Klasické módní pantofle",
+        "sk": "Klasické módne šľapky",
+        "hu": "Klasszikus divatpapucs",
+        "ro": "Papuci clasici la modă",
+        "el": "Κλασικές μοντέρνες παντόφλες",
+        "uk": "Класичні модні шльопанці",
+        "ar": "شبشب عصري كلاسيكي",
+        "ja": "クラシックファッションスライドサンダル",
+        "ko": "클래식 패션 슬라이드",
+        "vi": "Dép lê thời trang cổ điển",
+        "tr": "Klasik moda terlik"
+      }
+    },
+    {
+      "name": "Classic Cork Sandals",
+      "translations": {
+        "fi": "Klassiset korkkisandaalit",
+        "da": "Klassiske korksandaler",
+        "nb": "Klassiske korksandaler",
+        "cs": "Klasické korkové sandály",
+        "sk": "Klasické korkové sandále",
+        "hu": "Klasszikus parafa szandál",
+        "el": "Κλασικά σανδάλια από φελλό",
+        "uk": "Класичні коркові сандалі",
+        "ar": "صندل فلين كلاسيكي",
+        "ja": "クラシックコルクサンダル",
+        "ko": "클래식 코르크 샌들",
+        "vi": "Xăng đan nút bần cổ điển",
+        "tr": "Klasik mantar sandalet"
+      }
+    },
+    {
+      "name": "Casual Fashion Shorts",
+      "translations": {
+        "fi": "Rennot muotishortsit",
+        "da": "Afslappede modeshorts",
+        "nb": "Uformell moteshorts",
+        "cs": "Ležérní módní šortky",
+        "sk": "Ležérne módne šortky",
+        "hu": "Hétköznapi divatshort",
+        "el": "Μοντέρνο καθημερινό σορτς",
+        "uk": "Повсякденні модні шорти",
+        "ar": "شورت كاجوال عصري",
+        "ja": "カジュアルファッションショーツ",
+        "ko": "캐주얼 패션 반바지",
+        "vi": "Quần short thời trang thường ngày",
+        "tr": "Günlük moda şortu"
+      }
+    },
+    {
+      "name": "Classic Streetwear Shorts",
+      "translations": {
+        "fi": "Klassiset streetwear-shortsit",
+        "da": "Klassiske streetwear-shorts",
+        "nb": "Klassisk streetwear-shorts",
+        "cs": "Klasické streetwearové šortky",
+        "sk": "Klasické streetwearové šortky",
+        "hu": "Klasszikus utcai short",
+        "ro": "Pantaloni scurți streetwear clasici",
+        "el": "Κλασικό σορτς streetwear",
+        "uk": "Класичні шорти вуличного стилю",
+        "ar": "شورت كلاسيكي بأسلوب الشارع",
+        "ja": "クラシックストリートウェアショーツ",
+        "ko": "클래식 스트리트웨어 반바지",
+        "vi": "Quần short streetwear cổ điển",
+        "tr": "Klasik sokak stili şort"
+      }
+    },
+    {
+      "name": "Classic Logo Zip Hoodie",
+      "translations": {
+        "fi": "Klassinen logollinen vetoketjuhuppari",
+        "da": "Klassisk hættetrøje med logo og lynlås",
+        "nb": "Klassisk hettegenser med logo og glidelås",
+        "cs": "Klasická mikina s kapucí, logem a zipem",
+        "sk": "Klasická mikina s kapucňou, logom a zipsom",
+        "hu": "Klasszikus logós cipzáras kapucnis pulóver",
+        "ro": "Hanorac clasic cu logo și fermoar",
+        "el": "Κλασικό φούτερ με κουκούλα, λογότυπο και φερμουάρ",
+        "uk": "Класичне худі на блискавці з логотипом",
+        "ar": "هودي كلاسيكي بسحاب وشعار",
+        "ja": "ロゴ入りクラシックジップパーカー",
+        "ko": "클래식 로고 집업 후드티",
+        "vi": "Áo hoodie khóa kéo logo cổ điển",
+        "tr": "Klasik logolu fermuarlı kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Hooded Casual Jacket",
+      "translations": {
+        "fi": "Hupullinen vapaa-ajan takki",
+        "da": "Afslappet jakke med hætte",
+        "nb": "Uformell jakke med hette",
+        "cs": "Volnočasová bunda s kapucí",
+        "sk": "Voľnočasová bunda s kapucňou",
+        "hu": "Kapucnis hétköznapi dzseki",
+        "el": "Καθημερινό μπουφάν με κουκούλα",
+        "uk": "Повсякденна куртка з капюшоном",
+        "ar": "سترة كاجوال بغطاء رأس",
+        "ja": "フード付きカジュアルジャケット",
+        "ko": "후드 캐주얼 재킷",
+        "vi": "Áo khoác thường ngày có mũ",
+        "tr": "Kapüşonlu günlük ceket"
+      }
+    },
+    {
+      "name": "Premium Casual Tracksuit",
+      "translations": {
+        "fi": "Laadukas vapaa-ajan verryttelyasu",
+        "da": "Premium afslappet træningssæt",
+        "nb": "Premium uformell treningsdress",
+        "cs": "Prémiová volnočasová tepláková souprava",
+        "sk": "Prémiová voľnočasová tepláková súprava",
+        "hu": "Prémium hétköznapi melegítőszett",
+        "ro": "Trening casual premium",
+        "el": "Premium καθημερινή φόρμα",
+        "uk": "Преміальний повсякденний спортивний костюм",
+        "ar": "بدلة رياضية كاجوال فاخرة",
+        "ja": "プレミアムカジュアルトラックスーツ",
+        "ko": "프리미엄 캐주얼 트레이닝복",
+        "vi": "Bộ đồ thể thao thường ngày cao cấp",
+        "tr": "Premium günlük eşofman takımı"
+      }
+    },
+    {
+      "name": "Casual Windbreaker Jacket",
+      "translations": {
+        "fi": "Rento tuulitakki",
+        "da": "Afslappet vindjakke",
+        "nb": "Uformell vindjakke",
+        "cs": "Volnočasová větrovka",
+        "sk": "Voľnočasová vetrovka",
+        "hu": "Hétköznapi széldzseki",
+        "ro": "Jachetă casual de vânt",
+        "el": "Καθημερινό αντιανεμικό μπουφάν",
+        "uk": "Повсякденна вітровка",
+        "ar": "سترة واقية من الرياح كاجوال",
+        "ja": "カジュアルウインドブレーカー",
+        "ko": "캐주얼 바람막이 재킷",
+        "vi": "Áo khoác gió thường ngày",
+        "tr": "Günlük rüzgârlık ceket"
+      }
+    },
+    {
+      "name": "Unisex Casual Matching Set",
+      "translations": {
+        "fi": "Unisex-vapaa-ajan asukokonaisuus",
+        "da": "Afslappet unisex-sæt",
+        "nb": "Uformelt unisex-sett",
+        "cs": "Unisex volnočasový komplet",
+        "sk": "Unisex voľnočasový komplet",
+        "hu": "Uniszex hétköznapi szett",
+        "el": "Καθημερινό σετ unisex",
+        "uk": "Повсякденний комплект унісекс",
+        "ar": "طقم كاجوال للجنسين",
+        "ja": "ユニセックスカジュアルセットアップ",
+        "ko": "남녀 공용 캐주얼 세트",
+        "vi": "Bộ đồ thường ngày unisex",
+        "tr": "Unisex günlük takım"
+      }
+    }
+  ]
+}

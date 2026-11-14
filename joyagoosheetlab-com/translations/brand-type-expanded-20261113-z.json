@@ -1,0 +1,2892 @@
+{
+  "items": [
+    {
+      "name": "Ferragamo Belt",
+      "translations": {
+        "fi": "Ferragamo vyö",
+        "da": "Ferragamo bælte",
+        "nb": "Ferragamo belte",
+        "cs": "Ferragamo pásek",
+        "sk": "Ferragamo opasok",
+        "hu": "Ferragamo öv",
+        "ro": "Ferragamo curea",
+        "el": "Ferragamo ζώνη",
+        "uk": "Ferragamo ремінь",
+        "ar": "Ferragamo حزام",
+        "ja": "Ferragamo ベルト",
+        "ko": "Ferragamo 벨트",
+        "vi": "Ferragamo thắt lưng",
+        "tr": "Ferragamo kemer"
+      }
+    },
+    {
+      "name": "Gucci Caps",
+      "translations": {
+        "fi": "Gucci lippalakit",
+        "da": "Gucci kasketter",
+        "nb": "Gucci capser",
+        "cs": "Gucci kšiltovky",
+        "sk": "Gucci šiltovky",
+        "hu": "Gucci sapkák",
+        "ro": "Gucci șepci",
+        "el": "Gucci καπέλα τύπου cap",
+        "uk": "Gucci кепки",
+        "ar": "Gucci قبعات كاب",
+        "ja": "Gucci キャップ",
+        "ko": "Gucci 캡",
+        "vi": "Gucci mũ lưỡi trai",
+        "tr": "Gucci kepler"
+      }
+    },
+    {
+      "name": "Lv Slippers ( 36 + styles)",
+      "translations": {
+        "fi": "Lv tohvelit [36+ mallia]",
+        "da": "Lv hjemmesko [36+ modeller]",
+        "nb": "Lv tøfler [36+ modeller]",
+        "cs": "Lv přezůvky [36+ variant]",
+        "sk": "Lv papuče [36+ variantov]",
+        "hu": "Lv szobapapucs [36+ változat]",
+        "ro": "Lv papuci de casă [36+ modele]",
+        "el": "Lv παντόφλες [36+ σχέδια]",
+        "uk": "Lv капці [36+ варіантів]",
+        "ar": "Lv خف [36+ تصميمًا]",
+        "ja": "Lv スリッパ [36+ 種類]",
+        "ko": "Lv 슬리퍼 [36+ 종]",
+        "vi": "Lv dép đi trong nhà [36+ mẫu]",
+        "tr": "Lv ev terliği [36+ model]"
+      }
+    },
+    {
+      "name": "Chanel  bags",
+      "translations": {
+        "fi": "Chanel laukut",
+        "da": "Chanel tasker",
+        "nb": "Chanel vesker",
+        "cs": "Chanel tašky",
+        "sk": "Chanel tašky",
+        "hu": "Chanel táskák",
+        "ro": "Chanel genți",
+        "el": "Chanel τσάντες",
+        "uk": "Chanel сумки",
+        "ar": "Chanel حقائب",
+        "ja": "Chanel バッグ",
+        "ko": "Chanel 가방",
+        "vi": "Chanel túi",
+        "tr": "Chanel çantalar"
+      }
+    },
+    {
+      "name": "Patagonia T-shirt",
+      "translations": {
+        "fi": "Patagonia T-paita",
+        "da": "Patagonia T-shirt",
+        "nb": "Patagonia T-skjorte",
+        "cs": "Patagonia tričko",
+        "sk": "Patagonia tričko",
+        "hu": "Patagonia póló",
+        "ro": "Patagonia tricou",
+        "el": "Patagonia μπλουζάκι",
+        "uk": "Patagonia футболка",
+        "ar": "Patagonia تيشيرت",
+        "ja": "Patagonia Tシャツ",
+        "ko": "Patagonia 티셔츠",
+        "vi": "Patagonia áo thun",
+        "tr": "Patagonia tişört"
+      }
+    },
+    {
+      "name": "cartier glasses",
+      "translations": {
+        "fi": "cartier silmälasit",
+        "da": "cartier briller",
+        "nb": "cartier briller",
+        "cs": "cartier brýle",
+        "sk": "cartier okuliare",
+        "hu": "cartier szemüveg",
+        "ro": "cartier ochelari",
+        "el": "cartier γυαλιά",
+        "uk": "cartier окуляри",
+        "ar": "cartier نظارات",
+        "ja": "cartier 眼鏡",
+        "ko": "cartier 안경",
+        "vi": "cartier kính",
+        "tr": "cartier gözlük"
+      }
+    },
+    {
+      "name": "Timberland Shoes",
+      "translations": {
+        "fi": "Timberland kengät",
+        "da": "Timberland sko",
+        "nb": "Timberland sko",
+        "cs": "Timberland boty",
+        "sk": "Timberland topánky",
+        "hu": "Timberland cipő",
+        "ro": "Timberland pantofi",
+        "el": "Timberland παπούτσια",
+        "uk": "Timberland взуття",
+        "ar": "Timberland أحذية",
+        "ja": "Timberland シューズ",
+        "ko": "Timberland 신발",
+        "vi": "Timberland giày",
+        "tr": "Timberland ayakkabı"
+      }
+    },
+    {
+      "name": "Hellstar Tee",
+      "translations": {
+        "fi": "Hellstar T-paita",
+        "da": "Hellstar T-shirt",
+        "nb": "Hellstar T-skjorte",
+        "cs": "Hellstar tričko",
+        "sk": "Hellstar tričko",
+        "hu": "Hellstar póló",
+        "ro": "Hellstar tricou",
+        "el": "Hellstar μπλουζάκι",
+        "uk": "Hellstar футболка",
+        "ar": "Hellstar تيشيرت",
+        "ja": "Hellstar Tシャツ",
+        "ko": "Hellstar 티셔츠",
+        "vi": "Hellstar áo thun",
+        "tr": "Hellstar tişört"
+      }
+    },
+    {
+      "name": "Armani shoes",
+      "translations": {
+        "fi": "Armani kengät",
+        "da": "Armani sko",
+        "nb": "Armani sko",
+        "cs": "Armani boty",
+        "sk": "Armani topánky",
+        "hu": "Armani cipő",
+        "ro": "Armani pantofi",
+        "el": "Armani παπούτσια",
+        "uk": "Armani взуття",
+        "ar": "Armani أحذية",
+        "ja": "Armani シューズ",
+        "ko": "Armani 신발",
+        "vi": "Armani giày",
+        "tr": "Armani ayakkabı"
+      }
+    },
+    {
+      "name": "FENDI Sunglasses",
+      "translations": {
+        "fi": "FENDI aurinkolasit",
+        "da": "FENDI solbriller",
+        "nb": "FENDI solbriller",
+        "cs": "FENDI sluneční brýle",
+        "sk": "FENDI slnečné okuliare",
+        "hu": "FENDI napszemüveg",
+        "ro": "FENDI ochelari de soare",
+        "el": "FENDI γυαλιά ηλίου",
+        "uk": "FENDI сонцезахисні окуляри",
+        "ar": "FENDI نظارات شمسية",
+        "ja": "FENDI サングラス",
+        "ko": "FENDI 선글라스",
+        "vi": "FENDI kính râm",
+        "tr": "FENDI güneş gözlüğü"
+      }
+    },
+    {
+      "name": "gucci BELTS",
+      "translations": {
+        "fi": "gucci vyöt",
+        "da": "gucci bælter",
+        "nb": "gucci belter",
+        "cs": "gucci pásky",
+        "sk": "gucci opasky",
+        "hu": "gucci övek",
+        "ro": "gucci curele",
+        "el": "gucci ζώνες",
+        "uk": "gucci ремені",
+        "ar": "gucci أحزمة",
+        "ja": "gucci ベルト",
+        "ko": "gucci 벨트",
+        "vi": "gucci thắt lưng",
+        "tr": "gucci kemerler"
+      }
+    },
+    {
+      "name": "FENDI BELTS",
+      "translations": {
+        "fi": "FENDI vyöt",
+        "da": "FENDI bælter",
+        "nb": "FENDI belter",
+        "cs": "FENDI pásky",
+        "sk": "FENDI opasky",
+        "hu": "FENDI övek",
+        "ro": "FENDI curele",
+        "el": "FENDI ζώνες",
+        "uk": "FENDI ремені",
+        "ar": "FENDI أحزمة",
+        "ja": "FENDI ベルト",
+        "ko": "FENDI 벨트",
+        "vi": "FENDI thắt lưng",
+        "tr": "FENDI kemerler"
+      }
+    },
+    {
+      "name": "Nofaith Pants",
+      "translations": {
+        "fi": "Nofaith housut",
+        "da": "Nofaith bukser",
+        "nb": "Nofaith bukser",
+        "cs": "Nofaith kalhoty",
+        "sk": "Nofaith nohavice",
+        "hu": "Nofaith nadrág",
+        "ro": "Nofaith pantaloni",
+        "el": "Nofaith παντελόνι",
+        "uk": "Nofaith штани",
+        "ar": "Nofaith بنطال",
+        "ja": "Nofaith パンツ",
+        "ko": "Nofaith 바지",
+        "vi": "Nofaith quần dài",
+        "tr": "Nofaith pantolon"
+      }
+    },
+    {
+      "name": "Stone Island jacket",
+      "translations": {
+        "fi": "Stone Island takki",
+        "da": "Stone Island jakke",
+        "nb": "Stone Island jakke",
+        "cs": "Stone Island bunda",
+        "sk": "Stone Island bunda",
+        "hu": "Stone Island dzseki",
+        "ro": "Stone Island jachetă",
+        "el": "Stone Island μπουφάν",
+        "uk": "Stone Island куртка",
+        "ar": "Stone Island سترة",
+        "ja": "Stone Island ジャケット",
+        "ko": "Stone Island 재킷",
+        "vi": "Stone Island áo khoác",
+        "tr": "Stone Island ceket"
+      }
+    },
+    {
+      "name": "LOEWE bracelet",
+      "translations": {
+        "fi": "LOEWE rannekoru",
+        "da": "LOEWE armbånd",
+        "nb": "LOEWE armbånd",
+        "cs": "LOEWE náramek",
+        "sk": "LOEWE náramok",
+        "hu": "LOEWE karkötő",
+        "ro": "LOEWE brățară",
+        "el": "LOEWE βραχιόλι",
+        "uk": "LOEWE браслет",
+        "ar": "LOEWE سوار",
+        "ja": "LOEWE ブレスレット",
+        "ko": "LOEWE 팔찌",
+        "vi": "LOEWE vòng tay",
+        "tr": "LOEWE bileklik"
+      }
+    },
+    {
+      "name": "Givenchy Belt",
+      "translations": {
+        "fi": "Givenchy vyö",
+        "da": "Givenchy bælte",
+        "nb": "Givenchy belte",
+        "cs": "Givenchy pásek",
+        "sk": "Givenchy opasok",
+        "hu": "Givenchy öv",
+        "ro": "Givenchy curea",
+        "el": "Givenchy ζώνη",
+        "uk": "Givenchy ремінь",
+        "ar": "Givenchy حزام",
+        "ja": "Givenchy ベルト",
+        "ko": "Givenchy 벨트",
+        "vi": "Givenchy thắt lưng",
+        "tr": "Givenchy kemer"
+      }
+    },
+    {
+      "name": "Louis Vuitton Belt",
+      "translations": {
+        "fi": "Louis Vuitton vyö",
+        "da": "Louis Vuitton bælte",
+        "nb": "Louis Vuitton belte",
+        "cs": "Louis Vuitton pásek",
+        "sk": "Louis Vuitton opasok",
+        "hu": "Louis Vuitton öv",
+        "ro": "Louis Vuitton curea",
+        "el": "Louis Vuitton ζώνη",
+        "uk": "Louis Vuitton ремінь",
+        "ar": "Louis Vuitton حزام",
+        "ja": "Louis Vuitton ベルト",
+        "ko": "Louis Vuitton 벨트",
+        "vi": "Louis Vuitton thắt lưng",
+        "tr": "Louis Vuitton kemer"
+      }
+    },
+    {
+      "name": "PRADA BAG",
+      "translations": {
+        "fi": "PRADA laukku",
+        "da": "PRADA taske",
+        "nb": "PRADA veske",
+        "cs": "PRADA taška",
+        "sk": "PRADA taška",
+        "hu": "PRADA táska",
+        "ro": "PRADA geantă",
+        "el": "PRADA τσάντα",
+        "uk": "PRADA сумка",
+        "ar": "PRADA حقيبة",
+        "ja": "PRADA バッグ",
+        "ko": "PRADA 가방",
+        "vi": "PRADA túi",
+        "tr": "PRADA çanta"
+      }
+    },
+    {
+      "name": "Under Armour shorts",
+      "translations": {
+        "fi": "Under Armour shortsit",
+        "da": "Under Armour shorts",
+        "nb": "Under Armour shorts",
+        "cs": "Under Armour šortky",
+        "sk": "Under Armour šortky",
+        "hu": "Under Armour rövidnadrág",
+        "ro": "Under Armour pantaloni scurți",
+        "el": "Under Armour σορτς",
+        "uk": "Under Armour шорти",
+        "ar": "Under Armour شورت",
+        "ja": "Under Armour ショーツ",
+        "ko": "Under Armour 반바지",
+        "vi": "Under Armour quần short",
+        "tr": "Under Armour şort"
+      }
+    },
+    {
+      "name": "Burberry scarf",
+      "translations": {
+        "fi": "Burberry huivi",
+        "da": "Burberry halstørklæde",
+        "nb": "Burberry skjerf",
+        "cs": "Burberry šála",
+        "sk": "Burberry šál",
+        "hu": "Burberry sál",
+        "ro": "Burberry eșarfă",
+        "el": "Burberry κασκόλ",
+        "uk": "Burberry шарф",
+        "ar": "Burberry وشاح",
+        "ja": "Burberry スカーフ",
+        "ko": "Burberry 스카프",
+        "vi": "Burberry khăn quàng",
+        "tr": "Burberry atkı"
+      }
+    },
+    {
+      "name": "Ralph Lauren TEE",
+      "translations": {
+        "fi": "Ralph Lauren T-paita",
+        "da": "Ralph Lauren T-shirt",
+        "nb": "Ralph Lauren T-skjorte",
+        "cs": "Ralph Lauren tričko",
+        "sk": "Ralph Lauren tričko",
+        "hu": "Ralph Lauren póló",
+        "ro": "Ralph Lauren tricou",
+        "el": "Ralph Lauren μπλουζάκι",
+        "uk": "Ralph Lauren футболка",
+        "ar": "Ralph Lauren تيشيرت",
+        "ja": "Ralph Lauren Tシャツ",
+        "ko": "Ralph Lauren 티셔츠",
+        "vi": "Ralph Lauren áo thun",
+        "tr": "Ralph Lauren tişört"
+      }
+    },
+    {
+      "name": "chanel necklace",
+      "translations": {
+        "fi": "chanel kaulakoru",
+        "da": "chanel halskæde",
+        "nb": "chanel halskjede",
+        "cs": "chanel náhrdelník",
+        "sk": "chanel náhrdelník",
+        "hu": "chanel nyaklánc",
+        "ro": "chanel colier",
+        "el": "chanel κολιέ",
+        "uk": "chanel намисто",
+        "ar": "chanel قلادة",
+        "ja": "chanel ネックレス",
+        "ko": "chanel 목걸이",
+        "vi": "chanel dây chuyền",
+        "tr": "chanel kolye"
+      }
+    },
+    {
+      "name": "Gucci Bracelet",
+      "translations": {
+        "fi": "Gucci rannekoru",
+        "da": "Gucci armbånd",
+        "nb": "Gucci armbånd",
+        "cs": "Gucci náramek",
+        "sk": "Gucci náramok",
+        "hu": "Gucci karkötő",
+        "ro": "Gucci brățară",
+        "el": "Gucci βραχιόλι",
+        "uk": "Gucci браслет",
+        "ar": "Gucci سوار",
+        "ja": "Gucci ブレスレット",
+        "ko": "Gucci 팔찌",
+        "vi": "Gucci vòng tay",
+        "tr": "Gucci bileklik"
+      }
+    },
+    {
+      "name": "GUCCI Hat",
+      "translations": {
+        "fi": "GUCCI hattu",
+        "da": "GUCCI hat",
+        "nb": "GUCCI hatt",
+        "cs": "GUCCI klobouk",
+        "sk": "GUCCI klobúk",
+        "hu": "GUCCI kalap",
+        "ro": "GUCCI pălărie",
+        "el": "GUCCI καπέλο",
+        "uk": "GUCCI капелюх",
+        "ar": "GUCCI قبعة",
+        "ja": "GUCCI 帽子",
+        "ko": "GUCCI 모자",
+        "vi": "GUCCI mũ",
+        "tr": "GUCCI şapka"
+      }
+    },
+    {
+      "name": "Versace belt （40 style）",
+      "translations": {
+        "fi": "Versace vyö [40 mallia]",
+        "da": "Versace bælte [40 modeller]",
+        "nb": "Versace belte [40 modeller]",
+        "cs": "Versace pásek [40 variant]",
+        "sk": "Versace opasok [40 variantov]",
+        "hu": "Versace öv [40 változat]",
+        "ro": "Versace curea [40 modele]",
+        "el": "Versace ζώνη [40 σχέδια]",
+        "uk": "Versace ремінь [40 варіантів]",
+        "ar": "Versace حزام [40 تصميمًا]",
+        "ja": "Versace ベルト [40 種類]",
+        "ko": "Versace 벨트 [40 종]",
+        "vi": "Versace thắt lưng [40 mẫu]",
+        "tr": "Versace kemer [40 model]"
+      }
+    },
+    {
+      "name": "chanel earrings",
+      "translations": {
+        "fi": "chanel korvakorut",
+        "da": "chanel øreringe",
+        "nb": "chanel øredobber",
+        "cs": "chanel náušnice",
+        "sk": "chanel náušnice",
+        "hu": "chanel fülbevalók",
+        "ro": "chanel cercei",
+        "el": "chanel σκουλαρίκια",
+        "uk": "chanel сережки",
+        "ar": "chanel أقراط",
+        "ja": "chanel イヤリング",
+        "ko": "chanel 귀걸이",
+        "vi": "chanel bông tai",
+        "tr": "chanel küpeler"
+      }
+    },
+    {
+      "name": "GUCCI bag（10+styles)",
+      "translations": {
+        "fi": "GUCCI laukku [10+ mallia]",
+        "da": "GUCCI taske [10+ modeller]",
+        "nb": "GUCCI veske [10+ modeller]",
+        "cs": "GUCCI taška [10+ variant]",
+        "sk": "GUCCI taška [10+ variantov]",
+        "hu": "GUCCI táska [10+ változat]",
+        "ro": "GUCCI geantă [10+ modele]",
+        "el": "GUCCI τσάντα [10+ σχέδια]",
+        "uk": "GUCCI сумка [10+ варіантів]",
+        "ar": "GUCCI حقيبة [10+ تصميمًا]",
+        "ja": "GUCCI バッグ [10+ 種類]",
+        "ko": "GUCCI 가방 [10+ 종]",
+        "vi": "GUCCI túi [10+ mẫu]",
+        "tr": "GUCCI çanta [10+ model]"
+      }
+    },
+    {
+      "name": "GUCCI bag（30+styles)",
+      "translations": {
+        "fi": "GUCCI laukku [30+ mallia]",
+        "da": "GUCCI taske [30+ modeller]",
+        "nb": "GUCCI veske [30+ modeller]",
+        "cs": "GUCCI taška [30+ variant]",
+        "sk": "GUCCI taška [30+ variantov]",
+        "hu": "GUCCI táska [30+ változat]",
+        "ro": "GUCCI geantă [30+ modele]",
+        "el": "GUCCI τσάντα [30+ σχέδια]",
+        "uk": "GUCCI сумка [30+ варіантів]",
+        "ar": "GUCCI حقيبة [30+ تصميمًا]",
+        "ja": "GUCCI バッグ [30+ 種類]",
+        "ko": "GUCCI 가방 [30+ 종]",
+        "vi": "GUCCI túi [30+ mẫu]",
+        "tr": "GUCCI çanta [30+ model]"
+      }
+    },
+    {
+      "name": "Gucci Scarf",
+      "translations": {
+        "fi": "Gucci huivi",
+        "da": "Gucci halstørklæde",
+        "nb": "Gucci skjerf",
+        "cs": "Gucci šála",
+        "sk": "Gucci šál",
+        "hu": "Gucci sál",
+        "ro": "Gucci eșarfă",
+        "el": "Gucci κασκόλ",
+        "uk": "Gucci шарф",
+        "ar": "Gucci وشاح",
+        "ja": "Gucci スカーフ",
+        "ko": "Gucci 스카프",
+        "vi": "Gucci khăn quàng",
+        "tr": "Gucci atkı"
+      }
+    },
+    {
+      "name": "gucci cap",
+      "translations": {
+        "fi": "gucci lippalakki",
+        "da": "gucci kasket",
+        "nb": "gucci caps",
+        "cs": "gucci kšiltovka",
+        "sk": "gucci šiltovka",
+        "hu": "gucci sapka",
+        "ro": "gucci șapcă",
+        "el": "gucci καπέλο τύπου cap",
+        "uk": "gucci кепка",
+        "ar": "gucci قبعة كاب",
+        "ja": "gucci キャップ",
+        "ko": "gucci 캡",
+        "vi": "gucci mũ lưỡi trai",
+        "tr": "gucci kep"
+      }
+    },
+    {
+      "name": "Chrome Hearts cap",
+      "translations": {
+        "fi": "Chrome Hearts lippalakki",
+        "da": "Chrome Hearts kasket",
+        "nb": "Chrome Hearts caps",
+        "cs": "Chrome Hearts kšiltovka",
+        "sk": "Chrome Hearts šiltovka",
+        "hu": "Chrome Hearts sapka",
+        "ro": "Chrome Hearts șapcă",
+        "el": "Chrome Hearts καπέλο τύπου cap",
+        "uk": "Chrome Hearts кепка",
+        "ar": "Chrome Hearts قبعة كاب",
+        "ja": "Chrome Hearts キャップ",
+        "ko": "Chrome Hearts 캡",
+        "vi": "Chrome Hearts mũ lưỡi trai",
+        "tr": "Chrome Hearts kep"
+      }
+    },
+    {
+      "name": "LV scarf",
+      "translations": {
+        "fi": "LV huivi",
+        "da": "LV halstørklæde",
+        "nb": "LV skjerf",
+        "cs": "LV šála",
+        "sk": "LV šál",
+        "hu": "LV sál",
+        "ro": "LV eșarfă",
+        "el": "LV κασκόλ",
+        "uk": "LV шарф",
+        "ar": "LV وشاح",
+        "ja": "LV スカーフ",
+        "ko": "LV 스카프",
+        "vi": "LV khăn quàng",
+        "tr": "LV atkı"
+      }
+    },
+    {
+      "name": "Chanel sneakers",
+      "translations": {
+        "fi": "Chanel tennarit",
+        "da": "Chanel sneakers",
+        "nb": "Chanel sneakers",
+        "cs": "Chanel tenisky",
+        "sk": "Chanel tenisky",
+        "hu": "Chanel sportcipő",
+        "ro": "Chanel sneakers",
+        "el": "Chanel sneakers",
+        "uk": "Chanel кросівки",
+        "ar": "Chanel حذاء رياضي",
+        "ja": "Chanel スニーカー",
+        "ko": "Chanel 스니커즈",
+        "vi": "Chanel giày sneaker",
+        "tr": "Chanel spor ayakkabı"
+      }
+    },
+    {
+      "name": "Chrome Hearts Jeans(40 styles)",
+      "translations": {
+        "fi": "Chrome Hearts farkut [40 mallia]",
+        "da": "Chrome Hearts jeans [40 modeller]",
+        "nb": "Chrome Hearts jeans [40 modeller]",
+        "cs": "Chrome Hearts džíny [40 variant]",
+        "sk": "Chrome Hearts džínsy [40 variantov]",
+        "hu": "Chrome Hearts farmer [40 változat]",
+        "ro": "Chrome Hearts blugi [40 modele]",
+        "el": "Chrome Hearts τζιν [40 σχέδια]",
+        "uk": "Chrome Hearts джинси [40 варіантів]",
+        "ar": "Chrome Hearts جينز [40 تصميمًا]",
+        "ja": "Chrome Hearts ジーンズ [40 種類]",
+        "ko": "Chrome Hearts 청바지 [40 종]",
+        "vi": "Chrome Hearts quần jeans [40 mẫu]",
+        "tr": "Chrome Hearts kot pantolon [40 model]"
+      }
+    },
+    {
+      "name": "Versace Sunglasses",
+      "translations": {
+        "fi": "Versace aurinkolasit",
+        "da": "Versace solbriller",
+        "nb": "Versace solbriller",
+        "cs": "Versace sluneční brýle",
+        "sk": "Versace slnečné okuliare",
+        "hu": "Versace napszemüveg",
+        "ro": "Versace ochelari de soare",
+        "el": "Versace γυαλιά ηλίου",
+        "uk": "Versace сонцезахисні окуляри",
+        "ar": "Versace نظارات شمسية",
+        "ja": "Versace サングラス",
+        "ko": "Versace 선글라스",
+        "vi": "Versace kính râm",
+        "tr": "Versace güneş gözlüğü"
+      }
+    },
+    {
+      "name": "chanel bag（2 styles）",
+      "translations": {
+        "fi": "chanel laukku [2 mallia]",
+        "da": "chanel taske [2 modeller]",
+        "nb": "chanel veske [2 modeller]",
+        "cs": "chanel taška [2 variant]",
+        "sk": "chanel taška [2 variantov]",
+        "hu": "chanel táska [2 változat]",
+        "ro": "chanel geantă [2 modele]",
+        "el": "chanel τσάντα [2 σχέδια]",
+        "uk": "chanel сумка [2 варіантів]",
+        "ar": "chanel حقيبة [2 تصميمًا]",
+        "ja": "chanel バッグ [2 種類]",
+        "ko": "chanel 가방 [2 종]",
+        "vi": "chanel túi [2 mẫu]",
+        "tr": "chanel çanta [2 model]"
+      }
+    },
+    {
+      "name": "NIKE bag (3 style)",
+      "translations": {
+        "fi": "NIKE laukku [3 mallia]",
+        "da": "NIKE taske [3 modeller]",
+        "nb": "NIKE veske [3 modeller]",
+        "cs": "NIKE taška [3 variant]",
+        "sk": "NIKE taška [3 variantov]",
+        "hu": "NIKE táska [3 változat]",
+        "ro": "NIKE geantă [3 modele]",
+        "el": "NIKE τσάντα [3 σχέδια]",
+        "uk": "NIKE сумка [3 варіантів]",
+        "ar": "NIKE حقيبة [3 تصميمًا]",
+        "ja": "NIKE バッグ [3 種類]",
+        "ko": "NIKE 가방 [3 종]",
+        "vi": "NIKE túi [3 mẫu]",
+        "tr": "NIKE çanta [3 model]"
+      }
+    },
+    {
+      "name": "MLB hat",
+      "translations": {
+        "fi": "MLB hattu",
+        "da": "MLB hat",
+        "nb": "MLB hatt",
+        "cs": "MLB klobouk",
+        "sk": "MLB klobúk",
+        "hu": "MLB kalap",
+        "ro": "MLB pălărie",
+        "el": "MLB καπέλο",
+        "uk": "MLB капелюх",
+        "ar": "MLB قبعة",
+        "ja": "MLB 帽子",
+        "ko": "MLB 모자",
+        "vi": "MLB mũ",
+        "tr": "MLB şapka"
+      }
+    },
+    {
+      "name": "Louis Vuitton Tee",
+      "translations": {
+        "fi": "Louis Vuitton T-paita",
+        "da": "Louis Vuitton T-shirt",
+        "nb": "Louis Vuitton T-skjorte",
+        "cs": "Louis Vuitton tričko",
+        "sk": "Louis Vuitton tričko",
+        "hu": "Louis Vuitton póló",
+        "ro": "Louis Vuitton tricou",
+        "el": "Louis Vuitton μπλουζάκι",
+        "uk": "Louis Vuitton футболка",
+        "ar": "Louis Vuitton تيشيرت",
+        "ja": "Louis Vuitton Tシャツ",
+        "ko": "Louis Vuitton 티셔츠",
+        "vi": "Louis Vuitton áo thun",
+        "tr": "Louis Vuitton tişört"
+      }
+    },
+    {
+      "name": "Valentino bracelet",
+      "translations": {
+        "fi": "Valentino rannekoru",
+        "da": "Valentino armbånd",
+        "nb": "Valentino armbånd",
+        "cs": "Valentino náramek",
+        "sk": "Valentino náramok",
+        "hu": "Valentino karkötő",
+        "ro": "Valentino brățară",
+        "el": "Valentino βραχιόλι",
+        "uk": "Valentino браслет",
+        "ar": "Valentino سوار",
+        "ja": "Valentino ブレスレット",
+        "ko": "Valentino 팔찌",
+        "vi": "Valentino vòng tay",
+        "tr": "Valentino bileklik"
+      }
+    },
+    {
+      "name": "Saint Laurent bag",
+      "translations": {
+        "fi": "Saint Laurent laukku",
+        "da": "Saint Laurent taske",
+        "nb": "Saint Laurent veske",
+        "cs": "Saint Laurent taška",
+        "sk": "Saint Laurent taška",
+        "hu": "Saint Laurent táska",
+        "ro": "Saint Laurent geantă",
+        "el": "Saint Laurent τσάντα",
+        "uk": "Saint Laurent сумка",
+        "ar": "Saint Laurent حقيبة",
+        "ja": "Saint Laurent バッグ",
+        "ko": "Saint Laurent 가방",
+        "vi": "Saint Laurent túi",
+        "tr": "Saint Laurent çanta"
+      }
+    },
+    {
+      "name": "Gucci Belt",
+      "translations": {
+        "fi": "Gucci vyö",
+        "da": "Gucci bælte",
+        "nb": "Gucci belte",
+        "cs": "Gucci pásek",
+        "sk": "Gucci opasok",
+        "hu": "Gucci öv",
+        "ro": "Gucci curea",
+        "el": "Gucci ζώνη",
+        "uk": "Gucci ремінь",
+        "ar": "Gucci حزام",
+        "ja": "Gucci ベルト",
+        "ko": "Gucci 벨트",
+        "vi": "Gucci thắt lưng",
+        "tr": "Gucci kemer"
+      }
+    },
+    {
+      "name": "Ami Tracksuit",
+      "translations": {
+        "fi": "Ami verryttelyasu",
+        "da": "Ami træningsdragt",
+        "nb": "Ami treningsdress",
+        "cs": "Ami tepláková souprava",
+        "sk": "Ami tepláková súprava",
+        "hu": "Ami melegítőszett",
+        "ro": "Ami trening",
+        "el": "Ami φόρμα",
+        "uk": "Ami спортивний костюм",
+        "ar": "Ami بدلة رياضية",
+        "ja": "Ami トラックスーツ",
+        "ko": "Ami 트레이닝복",
+        "vi": "Ami bộ đồ thể thao",
+        "tr": "Ami eşofman takımı"
+      }
+    },
+    {
+      "name": "Air Force 1 shoes",
+      "translations": {
+        "fi": "Air Force 1 kengät",
+        "da": "Air Force 1 sko",
+        "nb": "Air Force 1 sko",
+        "cs": "Air Force 1 boty",
+        "sk": "Air Force 1 topánky",
+        "hu": "Air Force 1 cipő",
+        "ro": "Air Force 1 pantofi",
+        "el": "Air Force 1 παπούτσια",
+        "uk": "Air Force 1 взуття",
+        "ar": "Air Force 1 أحذية",
+        "ja": "Air Force 1 シューズ",
+        "ko": "Air Force 1 신발",
+        "vi": "Air Force 1 giày",
+        "tr": "Air Force 1 ayakkabı"
+      }
+    },
+    {
+      "name": "Stone island jacket",
+      "translations": {
+        "fi": "Stone island takki",
+        "da": "Stone island jakke",
+        "nb": "Stone island jakke",
+        "cs": "Stone island bunda",
+        "sk": "Stone island bunda",
+        "hu": "Stone island dzseki",
+        "ro": "Stone island jachetă",
+        "el": "Stone island μπουφάν",
+        "uk": "Stone island куртка",
+        "ar": "Stone island سترة",
+        "ja": "Stone island ジャケット",
+        "ko": "Stone island 재킷",
+        "vi": "Stone island áo khoác",
+        "tr": "Stone island ceket"
+      }
+    },
+    {
+      "name": "Dior earrings",
+      "translations": {
+        "fi": "Dior korvakorut",
+        "da": "Dior øreringe",
+        "nb": "Dior øredobber",
+        "cs": "Dior náušnice",
+        "sk": "Dior náušnice",
+        "hu": "Dior fülbevalók",
+        "ro": "Dior cercei",
+        "el": "Dior σκουλαρίκια",
+        "uk": "Dior сережки",
+        "ar": "Dior أقراط",
+        "ja": "Dior イヤリング",
+        "ko": "Dior 귀걸이",
+        "vi": "Dior bông tai",
+        "tr": "Dior küpeler"
+      }
+    },
+    {
+      "name": "DSQUARED2 Jeans（28+ Styles）",
+      "translations": {
+        "fi": "DSQUARED2 farkut [28+ mallia]",
+        "da": "DSQUARED2 jeans [28+ modeller]",
+        "nb": "DSQUARED2 jeans [28+ modeller]",
+        "cs": "DSQUARED2 džíny [28+ variant]",
+        "sk": "DSQUARED2 džínsy [28+ variantov]",
+        "hu": "DSQUARED2 farmer [28+ változat]",
+        "ro": "DSQUARED2 blugi [28+ modele]",
+        "el": "DSQUARED2 τζιν [28+ σχέδια]",
+        "uk": "DSQUARED2 джинси [28+ варіантів]",
+        "ar": "DSQUARED2 جينز [28+ تصميمًا]",
+        "ja": "DSQUARED2 ジーンズ [28+ 種類]",
+        "ko": "DSQUARED2 청바지 [28+ 종]",
+        "vi": "DSQUARED2 quần jeans [28+ mẫu]",
+        "tr": "DSQUARED2 kot pantolon [28+ model]"
+      }
+    },
+    {
+      "name": "Prada sunglasses",
+      "translations": {
+        "fi": "Prada aurinkolasit",
+        "da": "Prada solbriller",
+        "nb": "Prada solbriller",
+        "cs": "Prada sluneční brýle",
+        "sk": "Prada slnečné okuliare",
+        "hu": "Prada napszemüveg",
+        "ro": "Prada ochelari de soare",
+        "el": "Prada γυαλιά ηλίου",
+        "uk": "Prada сонцезахисні окуляри",
+        "ar": "Prada نظارات شمسية",
+        "ja": "Prada サングラス",
+        "ko": "Prada 선글라스",
+        "vi": "Prada kính râm",
+        "tr": "Prada güneş gözlüğü"
+      }
+    },
+    {
+      "name": "Amiri HAT",
+      "translations": {
+        "fi": "Amiri hattu",
+        "da": "Amiri hat",
+        "nb": "Amiri hatt",
+        "cs": "Amiri klobouk",
+        "sk": "Amiri klobúk",
+        "hu": "Amiri kalap",
+        "ro": "Amiri pălărie",
+        "el": "Amiri καπέλο",
+        "uk": "Amiri капелюх",
+        "ar": "Amiri قبعة",
+        "ja": "Amiri 帽子",
+        "ko": "Amiri 모자",
+        "vi": "Amiri mũ",
+        "tr": "Amiri şapka"
+      }
+    },
+    {
+      "name": "Burberry shoes",
+      "translations": {
+        "fi": "Burberry kengät",
+        "da": "Burberry sko",
+        "nb": "Burberry sko",
+        "cs": "Burberry boty",
+        "sk": "Burberry topánky",
+        "hu": "Burberry cipő",
+        "ro": "Burberry pantofi",
+        "el": "Burberry παπούτσια",
+        "uk": "Burberry взуття",
+        "ar": "Burberry أحذية",
+        "ja": "Burberry シューズ",
+        "ko": "Burberry 신발",
+        "vi": "Burberry giày",
+        "tr": "Burberry ayakkabı"
+      }
+    },
+    {
+      "name": "Stone island Tee",
+      "translations": {
+        "fi": "Stone island T-paita",
+        "da": "Stone island T-shirt",
+        "nb": "Stone island T-skjorte",
+        "cs": "Stone island tričko",
+        "sk": "Stone island tričko",
+        "hu": "Stone island póló",
+        "ro": "Stone island tricou",
+        "el": "Stone island μπλουζάκι",
+        "uk": "Stone island футболка",
+        "ar": "Stone island تيشيرت",
+        "ja": "Stone island Tシャツ",
+        "ko": "Stone island 티셔츠",
+        "vi": "Stone island áo thun",
+        "tr": "Stone island tişört"
+      }
+    },
+    {
+      "name": "FENDI scarf（5 styles)",
+      "translations": {
+        "fi": "FENDI huivi [5 mallia]",
+        "da": "FENDI halstørklæde [5 modeller]",
+        "nb": "FENDI skjerf [5 modeller]",
+        "cs": "FENDI šála [5 variant]",
+        "sk": "FENDI šál [5 variantov]",
+        "hu": "FENDI sál [5 változat]",
+        "ro": "FENDI eșarfă [5 modele]",
+        "el": "FENDI κασκόλ [5 σχέδια]",
+        "uk": "FENDI шарф [5 варіантів]",
+        "ar": "FENDI وشاح [5 تصميمًا]",
+        "ja": "FENDI スカーフ [5 種類]",
+        "ko": "FENDI 스카프 [5 종]",
+        "vi": "FENDI khăn quàng [5 mẫu]",
+        "tr": "FENDI atkı [5 model]"
+      }
+    },
+    {
+      "name": "Nike shoes",
+      "translations": {
+        "fi": "Nike kengät",
+        "da": "Nike sko",
+        "nb": "Nike sko",
+        "cs": "Nike boty",
+        "sk": "Nike topánky",
+        "hu": "Nike cipő",
+        "ro": "Nike pantofi",
+        "el": "Nike παπούτσια",
+        "uk": "Nike взуття",
+        "ar": "Nike أحذية",
+        "ja": "Nike シューズ",
+        "ko": "Nike 신발",
+        "vi": "Nike giày",
+        "tr": "Nike ayakkabı"
+      }
+    },
+    {
+      "name": "Prada bag",
+      "translations": {
+        "fi": "Prada laukku",
+        "da": "Prada taske",
+        "nb": "Prada veske",
+        "cs": "Prada taška",
+        "sk": "Prada taška",
+        "hu": "Prada táska",
+        "ro": "Prada geantă",
+        "el": "Prada τσάντα",
+        "uk": "Prada сумка",
+        "ar": "Prada حقيبة",
+        "ja": "Prada バッグ",
+        "ko": "Prada 가방",
+        "vi": "Prada túi",
+        "tr": "Prada çanta"
+      }
+    },
+    {
+      "name": "Hellstar cap",
+      "translations": {
+        "fi": "Hellstar lippalakki",
+        "da": "Hellstar kasket",
+        "nb": "Hellstar caps",
+        "cs": "Hellstar kšiltovka",
+        "sk": "Hellstar šiltovka",
+        "hu": "Hellstar sapka",
+        "ro": "Hellstar șapcă",
+        "el": "Hellstar καπέλο τύπου cap",
+        "uk": "Hellstar кепка",
+        "ar": "Hellstar قبعة كاب",
+        "ja": "Hellstar キャップ",
+        "ko": "Hellstar 캡",
+        "vi": "Hellstar mũ lưỡi trai",
+        "tr": "Hellstar kep"
+      }
+    },
+    {
+      "name": "ALO pants",
+      "translations": {
+        "fi": "ALO housut",
+        "da": "ALO bukser",
+        "nb": "ALO bukser",
+        "cs": "ALO kalhoty",
+        "sk": "ALO nohavice",
+        "hu": "ALO nadrág",
+        "ro": "ALO pantaloni",
+        "el": "ALO παντελόνι",
+        "uk": "ALO штани",
+        "ar": "ALO بنطال",
+        "ja": "ALO パンツ",
+        "ko": "ALO 바지",
+        "vi": "ALO quần dài",
+        "tr": "ALO pantolon"
+      }
+    },
+    {
+      "name": "Chanel scarf",
+      "translations": {
+        "fi": "Chanel huivi",
+        "da": "Chanel halstørklæde",
+        "nb": "Chanel skjerf",
+        "cs": "Chanel šála",
+        "sk": "Chanel šál",
+        "hu": "Chanel sál",
+        "ro": "Chanel eșarfă",
+        "el": "Chanel κασκόλ",
+        "uk": "Chanel шарф",
+        "ar": "Chanel وشاح",
+        "ja": "Chanel スカーフ",
+        "ko": "Chanel 스카프",
+        "vi": "Chanel khăn quàng",
+        "tr": "Chanel atkı"
+      }
+    },
+    {
+      "name": "Amiri Tee",
+      "translations": {
+        "fi": "Amiri T-paita",
+        "da": "Amiri T-shirt",
+        "nb": "Amiri T-skjorte",
+        "cs": "Amiri tričko",
+        "sk": "Amiri tričko",
+        "hu": "Amiri póló",
+        "ro": "Amiri tricou",
+        "el": "Amiri μπλουζάκι",
+        "uk": "Amiri футболка",
+        "ar": "Amiri تيشيرت",
+        "ja": "Amiri Tシャツ",
+        "ko": "Amiri 티셔츠",
+        "vi": "Amiri áo thun",
+        "tr": "Amiri tişört"
+      }
+    },
+    {
+      "name": "LV  hat",
+      "translations": {
+        "fi": "LV hattu",
+        "da": "LV hat",
+        "nb": "LV hatt",
+        "cs": "LV klobouk",
+        "sk": "LV klobúk",
+        "hu": "LV kalap",
+        "ro": "LV pălărie",
+        "el": "LV καπέλο",
+        "uk": "LV капелюх",
+        "ar": "LV قبعة",
+        "ja": "LV 帽子",
+        "ko": "LV 모자",
+        "vi": "LV mũ",
+        "tr": "LV şapka"
+      }
+    },
+    {
+      "name": "Dolce & Gabbana Tee",
+      "translations": {
+        "fi": "Dolce & Gabbana T-paita",
+        "da": "Dolce & Gabbana T-shirt",
+        "nb": "Dolce & Gabbana T-skjorte",
+        "cs": "Dolce & Gabbana tričko",
+        "sk": "Dolce & Gabbana tričko",
+        "hu": "Dolce & Gabbana póló",
+        "ro": "Dolce & Gabbana tricou",
+        "el": "Dolce & Gabbana μπλουζάκι",
+        "uk": "Dolce & Gabbana футболка",
+        "ar": "Dolce & Gabbana تيشيرت",
+        "ja": "Dolce & Gabbana Tシャツ",
+        "ko": "Dolce & Gabbana 티셔츠",
+        "vi": "Dolce & Gabbana áo thun",
+        "tr": "Dolce & Gabbana tişört"
+      }
+    },
+    {
+      "name": "LACOSTE tee",
+      "translations": {
+        "fi": "LACOSTE T-paita",
+        "da": "LACOSTE T-shirt",
+        "nb": "LACOSTE T-skjorte",
+        "cs": "LACOSTE tričko",
+        "sk": "LACOSTE tričko",
+        "hu": "LACOSTE póló",
+        "ro": "LACOSTE tricou",
+        "el": "LACOSTE μπλουζάκι",
+        "uk": "LACOSTE футболка",
+        "ar": "LACOSTE تيشيرت",
+        "ja": "LACOSTE Tシャツ",
+        "ko": "LACOSTE 티셔츠",
+        "vi": "LACOSTE áo thun",
+        "tr": "LACOSTE tişört"
+      }
+    },
+    {
+      "name": "REPRESENT tee",
+      "translations": {
+        "fi": "REPRESENT T-paita",
+        "da": "REPRESENT T-shirt",
+        "nb": "REPRESENT T-skjorte",
+        "cs": "REPRESENT tričko",
+        "sk": "REPRESENT tričko",
+        "hu": "REPRESENT póló",
+        "ro": "REPRESENT tricou",
+        "el": "REPRESENT μπλουζάκι",
+        "uk": "REPRESENT футболка",
+        "ar": "REPRESENT تيشيرت",
+        "ja": "REPRESENT Tシャツ",
+        "ko": "REPRESENT 티셔츠",
+        "vi": "REPRESENT áo thun",
+        "tr": "REPRESENT tişört"
+      }
+    },
+    {
+      "name": "LOEWE SHORTS",
+      "translations": {
+        "fi": "LOEWE shortsit",
+        "da": "LOEWE shorts",
+        "nb": "LOEWE shorts",
+        "cs": "LOEWE šortky",
+        "sk": "LOEWE šortky",
+        "hu": "LOEWE rövidnadrág",
+        "ro": "LOEWE pantaloni scurți",
+        "el": "LOEWE σορτς",
+        "uk": "LOEWE шорти",
+        "ar": "LOEWE شورت",
+        "ja": "LOEWE ショーツ",
+        "ko": "LOEWE 반바지",
+        "vi": "LOEWE quần short",
+        "tr": "LOEWE şort"
+      }
+    },
+    {
+      "name": "Miumiu cap",
+      "translations": {
+        "fi": "Miumiu lippalakki",
+        "da": "Miumiu kasket",
+        "nb": "Miumiu caps",
+        "cs": "Miumiu kšiltovka",
+        "sk": "Miumiu šiltovka",
+        "hu": "Miumiu sapka",
+        "ro": "Miumiu șapcă",
+        "el": "Miumiu καπέλο τύπου cap",
+        "uk": "Miumiu кепка",
+        "ar": "Miumiu قبعة كاب",
+        "ja": "Miumiu キャップ",
+        "ko": "Miumiu 캡",
+        "vi": "Miumiu mũ lưỡi trai",
+        "tr": "Miumiu kep"
+      }
+    },
+    {
+      "name": "LV shoes",
+      "translations": {
+        "fi": "LV kengät",
+        "da": "LV sko",
+        "nb": "LV sko",
+        "cs": "LV boty",
+        "sk": "LV topánky",
+        "hu": "LV cipő",
+        "ro": "LV pantofi",
+        "el": "LV παπούτσια",
+        "uk": "LV взуття",
+        "ar": "LV أحذية",
+        "ja": "LV シューズ",
+        "ko": "LV 신발",
+        "vi": "LV giày",
+        "tr": "LV ayakkabı"
+      }
+    },
+    {
+      "name": "Loro Piana cap",
+      "translations": {
+        "fi": "Loro Piana lippalakki",
+        "da": "Loro Piana kasket",
+        "nb": "Loro Piana caps",
+        "cs": "Loro Piana kšiltovka",
+        "sk": "Loro Piana šiltovka",
+        "hu": "Loro Piana sapka",
+        "ro": "Loro Piana șapcă",
+        "el": "Loro Piana καπέλο τύπου cap",
+        "uk": "Loro Piana кепка",
+        "ar": "Loro Piana قبعة كاب",
+        "ja": "Loro Piana キャップ",
+        "ko": "Loro Piana 캡",
+        "vi": "Loro Piana mũ lưỡi trai",
+        "tr": "Loro Piana kep"
+      }
+    },
+    {
+      "name": "ALO TEE",
+      "translations": {
+        "fi": "ALO T-paita",
+        "da": "ALO T-shirt",
+        "nb": "ALO T-skjorte",
+        "cs": "ALO tričko",
+        "sk": "ALO tričko",
+        "hu": "ALO póló",
+        "ro": "ALO tricou",
+        "el": "ALO μπλουζάκι",
+        "uk": "ALO футболка",
+        "ar": "ALO تيشيرت",
+        "ja": "ALO Tシャツ",
+        "ko": "ALO 티셔츠",
+        "vi": "ALO áo thun",
+        "tr": "ALO tişört"
+      }
+    },
+    {
+      "name": "Ralph Lauren belt",
+      "translations": {
+        "fi": "Ralph Lauren vyö",
+        "da": "Ralph Lauren bælte",
+        "nb": "Ralph Lauren belte",
+        "cs": "Ralph Lauren pásek",
+        "sk": "Ralph Lauren opasok",
+        "hu": "Ralph Lauren öv",
+        "ro": "Ralph Lauren curea",
+        "el": "Ralph Lauren ζώνη",
+        "uk": "Ralph Lauren ремінь",
+        "ar": "Ralph Lauren حزام",
+        "ja": "Ralph Lauren ベルト",
+        "ko": "Ralph Lauren 벨트",
+        "vi": "Ralph Lauren thắt lưng",
+        "tr": "Ralph Lauren kemer"
+      }
+    },
+    {
+      "name": "Stussy  Jeans",
+      "translations": {
+        "fi": "Stussy farkut",
+        "da": "Stussy jeans",
+        "nb": "Stussy jeans",
+        "cs": "Stussy džíny",
+        "sk": "Stussy džínsy",
+        "hu": "Stussy farmer",
+        "ro": "Stussy blugi",
+        "el": "Stussy τζιν",
+        "uk": "Stussy джинси",
+        "ar": "Stussy جينز",
+        "ja": "Stussy ジーンズ",
+        "ko": "Stussy 청바지",
+        "vi": "Stussy quần jeans",
+        "tr": "Stussy kot pantolon"
+      }
+    },
+    {
+      "name": "PALM ANGELS  t-shirt",
+      "translations": {
+        "fi": "PALM ANGELS T-paita",
+        "da": "PALM ANGELS T-shirt",
+        "nb": "PALM ANGELS T-skjorte",
+        "cs": "PALM ANGELS tričko",
+        "sk": "PALM ANGELS tričko",
+        "hu": "PALM ANGELS póló",
+        "ro": "PALM ANGELS tricou",
+        "el": "PALM ANGELS μπλουζάκι",
+        "uk": "PALM ANGELS футболка",
+        "ar": "PALM ANGELS تيشيرت",
+        "ja": "PALM ANGELS Tシャツ",
+        "ko": "PALM ANGELS 티셔츠",
+        "vi": "PALM ANGELS áo thun",
+        "tr": "PALM ANGELS tişört"
+      }
+    },
+    {
+      "name": "LV CAP",
+      "translations": {
+        "fi": "LV lippalakki",
+        "da": "LV kasket",
+        "nb": "LV caps",
+        "cs": "LV kšiltovka",
+        "sk": "LV šiltovka",
+        "hu": "LV sapka",
+        "ro": "LV șapcă",
+        "el": "LV καπέλο τύπου cap",
+        "uk": "LV кепка",
+        "ar": "LV قبعة كاب",
+        "ja": "LV キャップ",
+        "ko": "LV 캡",
+        "vi": "LV mũ lưỡi trai",
+        "tr": "LV kep"
+      }
+    },
+    {
+      "name": "CHANEL sunglasses",
+      "translations": {
+        "fi": "CHANEL aurinkolasit",
+        "da": "CHANEL solbriller",
+        "nb": "CHANEL solbriller",
+        "cs": "CHANEL sluneční brýle",
+        "sk": "CHANEL slnečné okuliare",
+        "hu": "CHANEL napszemüveg",
+        "ro": "CHANEL ochelari de soare",
+        "el": "CHANEL γυαλιά ηλίου",
+        "uk": "CHANEL сонцезахисні окуляри",
+        "ar": "CHANEL نظارات شمسية",
+        "ja": "CHANEL サングラス",
+        "ko": "CHANEL 선글라스",
+        "vi": "CHANEL kính râm",
+        "tr": "CHANEL güneş gözlüğü"
+      }
+    },
+    {
+      "name": "Patagonia TEE",
+      "translations": {
+        "fi": "Patagonia T-paita",
+        "da": "Patagonia T-shirt",
+        "nb": "Patagonia T-skjorte",
+        "cs": "Patagonia tričko",
+        "sk": "Patagonia tričko",
+        "hu": "Patagonia póló",
+        "ro": "Patagonia tricou",
+        "el": "Patagonia μπλουζάκι",
+        "uk": "Patagonia футболка",
+        "ar": "Patagonia تيشيرت",
+        "ja": "Patagonia Tシャツ",
+        "ko": "Patagonia 티셔츠",
+        "vi": "Patagonia áo thun",
+        "tr": "Patagonia tişört"
+      }
+    },
+    {
+      "name": "Maison Kitsune TEE",
+      "translations": {
+        "fi": "Maison Kitsune T-paita",
+        "da": "Maison Kitsune T-shirt",
+        "nb": "Maison Kitsune T-skjorte",
+        "cs": "Maison Kitsune tričko",
+        "sk": "Maison Kitsune tričko",
+        "hu": "Maison Kitsune póló",
+        "ro": "Maison Kitsune tricou",
+        "el": "Maison Kitsune μπλουζάκι",
+        "uk": "Maison Kitsune футболка",
+        "ar": "Maison Kitsune تيشيرت",
+        "ja": "Maison Kitsune Tシャツ",
+        "ko": "Maison Kitsune 티셔츠",
+        "vi": "Maison Kitsune áo thun",
+        "tr": "Maison Kitsune tişört"
+      }
+    },
+    {
+      "name": "prada  bags",
+      "translations": {
+        "fi": "prada laukut",
+        "da": "prada tasker",
+        "nb": "prada vesker",
+        "cs": "prada tašky",
+        "sk": "prada tašky",
+        "hu": "prada táskák",
+        "ro": "prada genți",
+        "el": "prada τσάντες",
+        "uk": "prada сумки",
+        "ar": "prada حقائب",
+        "ja": "prada バッグ",
+        "ko": "prada 가방",
+        "vi": "prada túi",
+        "tr": "prada çantalar"
+      }
+    },
+    {
+      "name": "Fendi belt",
+      "translations": {
+        "fi": "Fendi vyö",
+        "da": "Fendi bælte",
+        "nb": "Fendi belte",
+        "cs": "Fendi pásek",
+        "sk": "Fendi opasok",
+        "hu": "Fendi öv",
+        "ro": "Fendi curea",
+        "el": "Fendi ζώνη",
+        "uk": "Fendi ремінь",
+        "ar": "Fendi حزام",
+        "ja": "Fendi ベルト",
+        "ko": "Fendi 벨트",
+        "vi": "Fendi thắt lưng",
+        "tr": "Fendi kemer"
+      }
+    },
+    {
+      "name": "MLB Shorts",
+      "translations": {
+        "fi": "MLB shortsit",
+        "da": "MLB shorts",
+        "nb": "MLB shorts",
+        "cs": "MLB šortky",
+        "sk": "MLB šortky",
+        "hu": "MLB rövidnadrág",
+        "ro": "MLB pantaloni scurți",
+        "el": "MLB σορτς",
+        "uk": "MLB шорти",
+        "ar": "MLB شورت",
+        "ja": "MLB ショーツ",
+        "ko": "MLB 반바지",
+        "vi": "MLB quần short",
+        "tr": "MLB şort"
+      }
+    },
+    {
+      "name": "Louis Vuitton Scarf",
+      "translations": {
+        "fi": "Louis Vuitton huivi",
+        "da": "Louis Vuitton halstørklæde",
+        "nb": "Louis Vuitton skjerf",
+        "cs": "Louis Vuitton šála",
+        "sk": "Louis Vuitton šál",
+        "hu": "Louis Vuitton sál",
+        "ro": "Louis Vuitton eșarfă",
+        "el": "Louis Vuitton κασκόλ",
+        "uk": "Louis Vuitton шарф",
+        "ar": "Louis Vuitton وشاح",
+        "ja": "Louis Vuitton スカーフ",
+        "ko": "Louis Vuitton 스카프",
+        "vi": "Louis Vuitton khăn quàng",
+        "tr": "Louis Vuitton atkı"
+      }
+    },
+    {
+      "name": "Off-white shoes",
+      "translations": {
+        "fi": "Off-white kengät",
+        "da": "Off-white sko",
+        "nb": "Off-white sko",
+        "cs": "Off-white boty",
+        "sk": "Off-white topánky",
+        "hu": "Off-white cipő",
+        "ro": "Off-white pantofi",
+        "el": "Off-white παπούτσια",
+        "uk": "Off-white взуття",
+        "ar": "Off-white أحذية",
+        "ja": "Off-white シューズ",
+        "ko": "Off-white 신발",
+        "vi": "Off-white giày",
+        "tr": "Off-white ayakkabı"
+      }
+    },
+    {
+      "name": "prada slippers",
+      "translations": {
+        "fi": "prada tohvelit",
+        "da": "prada hjemmesko",
+        "nb": "prada tøfler",
+        "cs": "prada přezůvky",
+        "sk": "prada papuče",
+        "hu": "prada szobapapucs",
+        "ro": "prada papuci de casă",
+        "el": "prada παντόφλες",
+        "uk": "prada капці",
+        "ar": "prada خف",
+        "ja": "prada スリッパ",
+        "ko": "prada 슬리퍼",
+        "vi": "prada dép đi trong nhà",
+        "tr": "prada ev terliği"
+      }
+    },
+    {
+      "name": "Trapstar Pants",
+      "translations": {
+        "fi": "Trapstar housut",
+        "da": "Trapstar bukser",
+        "nb": "Trapstar bukser",
+        "cs": "Trapstar kalhoty",
+        "sk": "Trapstar nohavice",
+        "hu": "Trapstar nadrág",
+        "ro": "Trapstar pantaloni",
+        "el": "Trapstar παντελόνι",
+        "uk": "Trapstar штани",
+        "ar": "Trapstar بنطال",
+        "ja": "Trapstar パンツ",
+        "ko": "Trapstar 바지",
+        "vi": "Trapstar quần dài",
+        "tr": "Trapstar pantolon"
+      }
+    },
+    {
+      "name": "Carhartt wallet",
+      "translations": {
+        "fi": "Carhartt lompakko",
+        "da": "Carhartt pung",
+        "nb": "Carhartt lommebok",
+        "cs": "Carhartt peněženka",
+        "sk": "Carhartt peňaženka",
+        "hu": "Carhartt pénztárca",
+        "ro": "Carhartt portofel",
+        "el": "Carhartt πορτοφόλι",
+        "uk": "Carhartt гаманець",
+        "ar": "Carhartt محفظة",
+        "ja": "Carhartt 財布",
+        "ko": "Carhartt 지갑",
+        "vi": "Carhartt ví",
+        "tr": "Carhartt cüzdan"
+      }
+    },
+    {
+      "name": "Chanel backpack",
+      "translations": {
+        "fi": "Chanel reppu",
+        "da": "Chanel rygsæk",
+        "nb": "Chanel ryggsekk",
+        "cs": "Chanel batoh",
+        "sk": "Chanel batoh",
+        "hu": "Chanel hátizsák",
+        "ro": "Chanel rucsac",
+        "el": "Chanel σακίδιο",
+        "uk": "Chanel рюкзак",
+        "ar": "Chanel حقيبة ظهر",
+        "ja": "Chanel バックパック",
+        "ko": "Chanel 백팩",
+        "vi": "Chanel ba lô",
+        "tr": "Chanel sırt çantası"
+      }
+    },
+    {
+      "name": "Prada SunGlasses",
+      "translations": {
+        "fi": "Prada aurinkolasit",
+        "da": "Prada solbriller",
+        "nb": "Prada solbriller",
+        "cs": "Prada sluneční brýle",
+        "sk": "Prada slnečné okuliare",
+        "hu": "Prada napszemüveg",
+        "ro": "Prada ochelari de soare",
+        "el": "Prada γυαλιά ηλίου",
+        "uk": "Prada сонцезахисні окуляри",
+        "ar": "Prada نظارات شمسية",
+        "ja": "Prada サングラス",
+        "ko": "Prada 선글라스",
+        "vi": "Prada kính râm",
+        "tr": "Prada güneş gözlüğü"
+      }
+    },
+    {
+      "name": "Versace SunGlasses",
+      "translations": {
+        "fi": "Versace aurinkolasit",
+        "da": "Versace solbriller",
+        "nb": "Versace solbriller",
+        "cs": "Versace sluneční brýle",
+        "sk": "Versace slnečné okuliare",
+        "hu": "Versace napszemüveg",
+        "ro": "Versace ochelari de soare",
+        "el": "Versace γυαλιά ηλίου",
+        "uk": "Versace сонцезахисні окуляри",
+        "ar": "Versace نظارات شمسية",
+        "ja": "Versace サングラス",
+        "ko": "Versace 선글라스",
+        "vi": "Versace kính râm",
+        "tr": "Versace güneş gözlüğü"
+      }
+    },
+    {
+      "name": "Burberry Tee",
+      "translations": {
+        "fi": "Burberry T-paita",
+        "da": "Burberry T-shirt",
+        "nb": "Burberry T-skjorte",
+        "cs": "Burberry tričko",
+        "sk": "Burberry tričko",
+        "hu": "Burberry póló",
+        "ro": "Burberry tricou",
+        "el": "Burberry μπλουζάκι",
+        "uk": "Burberry футболка",
+        "ar": "Burberry تيشيرت",
+        "ja": "Burberry Tシャツ",
+        "ko": "Burberry 티셔츠",
+        "vi": "Burberry áo thun",
+        "tr": "Burberry tişört"
+      }
+    },
+    {
+      "name": "Gucci bracelet",
+      "translations": {
+        "fi": "Gucci rannekoru",
+        "da": "Gucci armbånd",
+        "nb": "Gucci armbånd",
+        "cs": "Gucci náramek",
+        "sk": "Gucci náramok",
+        "hu": "Gucci karkötő",
+        "ro": "Gucci brățară",
+        "el": "Gucci βραχιόλι",
+        "uk": "Gucci браслет",
+        "ar": "Gucci سوار",
+        "ja": "Gucci ブレスレット",
+        "ko": "Gucci 팔찌",
+        "vi": "Gucci vòng tay",
+        "tr": "Gucci bileklik"
+      }
+    },
+    {
+      "name": "LACOSTE Sunglasses",
+      "translations": {
+        "fi": "LACOSTE aurinkolasit",
+        "da": "LACOSTE solbriller",
+        "nb": "LACOSTE solbriller",
+        "cs": "LACOSTE sluneční brýle",
+        "sk": "LACOSTE slnečné okuliare",
+        "hu": "LACOSTE napszemüveg",
+        "ro": "LACOSTE ochelari de soare",
+        "el": "LACOSTE γυαλιά ηλίου",
+        "uk": "LACOSTE сонцезахисні окуляри",
+        "ar": "LACOSTE نظارات شمسية",
+        "ja": "LACOSTE サングラス",
+        "ko": "LACOSTE 선글라스",
+        "vi": "LACOSTE kính râm",
+        "tr": "LACOSTE güneş gözlüğü"
+      }
+    },
+    {
+      "name": "Chanel Sunglasses [40 styles]",
+      "translations": {
+        "fi": "Chanel aurinkolasit [40 mallia]",
+        "da": "Chanel solbriller [40 modeller]",
+        "nb": "Chanel solbriller [40 modeller]",
+        "cs": "Chanel sluneční brýle [40 variant]",
+        "sk": "Chanel slnečné okuliare [40 variantov]",
+        "hu": "Chanel napszemüveg [40 változat]",
+        "ro": "Chanel ochelari de soare [40 modele]",
+        "el": "Chanel γυαλιά ηλίου [40 σχέδια]",
+        "uk": "Chanel сонцезахисні окуляри [40 варіантів]",
+        "ar": "Chanel نظارات شمسية [40 تصميمًا]",
+        "ja": "Chanel サングラス [40 種類]",
+        "ko": "Chanel 선글라스 [40 종]",
+        "vi": "Chanel kính râm [40 mẫu]",
+        "tr": "Chanel güneş gözlüğü [40 model]"
+      }
+    },
+    {
+      "name": "AMI Sweater( 40 + styles)",
+      "translations": {
+        "fi": "AMI neulepusero [40+ mallia]",
+        "da": "AMI sweater [40+ modeller]",
+        "nb": "AMI genser [40+ modeller]",
+        "cs": "AMI svetr [40+ variant]",
+        "sk": "AMI sveter [40+ variantov]",
+        "hu": "AMI pulóver [40+ változat]",
+        "ro": "AMI pulover [40+ modele]",
+        "el": "AMI πουλόβερ [40+ σχέδια]",
+        "uk": "AMI светр [40+ варіантів]",
+        "ar": "AMI كنزة [40+ تصميمًا]",
+        "ja": "AMI セーター [40+ 種類]",
+        "ko": "AMI 스웨터 [40+ 종]",
+        "vi": "AMI áo len [40+ mẫu]",
+        "tr": "AMI kazak [40+ model]"
+      }
+    },
+    {
+      "name": "Off-White shoes",
+      "translations": {
+        "fi": "Off-White kengät",
+        "da": "Off-White sko",
+        "nb": "Off-White sko",
+        "cs": "Off-White boty",
+        "sk": "Off-White topánky",
+        "hu": "Off-White cipő",
+        "ro": "Off-White pantofi",
+        "el": "Off-White παπούτσια",
+        "uk": "Off-White взуття",
+        "ar": "Off-White أحذية",
+        "ja": "Off-White シューズ",
+        "ko": "Off-White 신발",
+        "vi": "Off-White giày",
+        "tr": "Off-White ayakkabı"
+      }
+    },
+    {
+      "name": "DsquaRed2 Tee",
+      "translations": {
+        "fi": "DsquaRed2 T-paita",
+        "da": "DsquaRed2 T-shirt",
+        "nb": "DsquaRed2 T-skjorte",
+        "cs": "DsquaRed2 tričko",
+        "sk": "DsquaRed2 tričko",
+        "hu": "DsquaRed2 póló",
+        "ro": "DsquaRed2 tricou",
+        "el": "DsquaRed2 μπλουζάκι",
+        "uk": "DsquaRed2 футболка",
+        "ar": "DsquaRed2 تيشيرت",
+        "ja": "DsquaRed2 Tシャツ",
+        "ko": "DsquaRed2 티셔츠",
+        "vi": "DsquaRed2 áo thun",
+        "tr": "DsquaRed2 tişört"
+      }
+    },
+    {
+      "name": "Chanel shoes",
+      "translations": {
+        "fi": "Chanel kengät",
+        "da": "Chanel sko",
+        "nb": "Chanel sko",
+        "cs": "Chanel boty",
+        "sk": "Chanel topánky",
+        "hu": "Chanel cipő",
+        "ro": "Chanel pantofi",
+        "el": "Chanel παπούτσια",
+        "uk": "Chanel взуття",
+        "ar": "Chanel أحذية",
+        "ja": "Chanel シューズ",
+        "ko": "Chanel 신발",
+        "vi": "Chanel giày",
+        "tr": "Chanel ayakkabı"
+      }
+    },
+    {
+      "name": "Dior hat",
+      "translations": {
+        "fi": "Dior hattu",
+        "da": "Dior hat",
+        "nb": "Dior hatt",
+        "cs": "Dior klobouk",
+        "sk": "Dior klobúk",
+        "hu": "Dior kalap",
+        "ro": "Dior pălărie",
+        "el": "Dior καπέλο",
+        "uk": "Dior капелюх",
+        "ar": "Dior قبعة",
+        "ja": "Dior 帽子",
+        "ko": "Dior 모자",
+        "vi": "Dior mũ",
+        "tr": "Dior şapka"
+      }
+    },
+    {
+      "name": "Trapstar shorts",
+      "translations": {
+        "fi": "Trapstar shortsit",
+        "da": "Trapstar shorts",
+        "nb": "Trapstar shorts",
+        "cs": "Trapstar šortky",
+        "sk": "Trapstar šortky",
+        "hu": "Trapstar rövidnadrág",
+        "ro": "Trapstar pantaloni scurți",
+        "el": "Trapstar σορτς",
+        "uk": "Trapstar шорти",
+        "ar": "Trapstar شورت",
+        "ja": "Trapstar ショーツ",
+        "ko": "Trapstar 반바지",
+        "vi": "Trapstar quần short",
+        "tr": "Trapstar şort"
+      }
+    },
+    {
+      "name": "Stone Island shorts",
+      "translations": {
+        "fi": "Stone Island shortsit",
+        "da": "Stone Island shorts",
+        "nb": "Stone Island shorts",
+        "cs": "Stone Island šortky",
+        "sk": "Stone Island šortky",
+        "hu": "Stone Island rövidnadrág",
+        "ro": "Stone Island pantaloni scurți",
+        "el": "Stone Island σορτς",
+        "uk": "Stone Island шорти",
+        "ar": "Stone Island شورت",
+        "ja": "Stone Island ショーツ",
+        "ko": "Stone Island 반바지",
+        "vi": "Stone Island quần short",
+        "tr": "Stone Island şort"
+      }
+    },
+    {
+      "name": "Balenciaga Tee",
+      "translations": {
+        "fi": "Balenciaga T-paita",
+        "da": "Balenciaga T-shirt",
+        "nb": "Balenciaga T-skjorte",
+        "cs": "Balenciaga tričko",
+        "sk": "Balenciaga tričko",
+        "hu": "Balenciaga póló",
+        "ro": "Balenciaga tricou",
+        "el": "Balenciaga μπλουζάκι",
+        "uk": "Balenciaga футболка",
+        "ar": "Balenciaga تيشيرت",
+        "ja": "Balenciaga Tシャツ",
+        "ko": "Balenciaga 티셔츠",
+        "vi": "Balenciaga áo thun",
+        "tr": "Balenciaga tişört"
+      }
+    },
+    {
+      "name": "AMI hoodie",
+      "translations": {
+        "fi": "AMI huppari",
+        "da": "AMI hættetrøje",
+        "nb": "AMI hettegenser",
+        "cs": "AMI mikina s kapucí",
+        "sk": "AMI mikina s kapucňou",
+        "hu": "AMI kapucnis pulóver",
+        "ro": "AMI hanorac",
+        "el": "AMI φούτερ με κουκούλα",
+        "uk": "AMI худі",
+        "ar": "AMI هودي",
+        "ja": "AMI パーカー",
+        "ko": "AMI 후드티",
+        "vi": "AMI áo hoodie",
+        "tr": "AMI kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Burberry tee",
+      "translations": {
+        "fi": "Burberry T-paita",
+        "da": "Burberry T-shirt",
+        "nb": "Burberry T-skjorte",
+        "cs": "Burberry tričko",
+        "sk": "Burberry tričko",
+        "hu": "Burberry póló",
+        "ro": "Burberry tricou",
+        "el": "Burberry μπλουζάκι",
+        "uk": "Burberry футболка",
+        "ar": "Burberry تيشيرت",
+        "ja": "Burberry Tシャツ",
+        "ko": "Burberry 티셔츠",
+        "vi": "Burberry áo thun",
+        "tr": "Burberry tişört"
+      }
+    },
+    {
+      "name": "Corteiz TEE",
+      "translations": {
+        "fi": "Corteiz T-paita",
+        "da": "Corteiz T-shirt",
+        "nb": "Corteiz T-skjorte",
+        "cs": "Corteiz tričko",
+        "sk": "Corteiz tričko",
+        "hu": "Corteiz póló",
+        "ro": "Corteiz tricou",
+        "el": "Corteiz μπλουζάκι",
+        "uk": "Corteiz футболка",
+        "ar": "Corteiz تيشيرت",
+        "ja": "Corteiz Tシャツ",
+        "ko": "Corteiz 티셔츠",
+        "vi": "Corteiz áo thun",
+        "tr": "Corteiz tişört"
+      }
+    },
+    {
+      "name": "VLONE TEE",
+      "translations": {
+        "fi": "VLONE T-paita",
+        "da": "VLONE T-shirt",
+        "nb": "VLONE T-skjorte",
+        "cs": "VLONE tričko",
+        "sk": "VLONE tričko",
+        "hu": "VLONE póló",
+        "ro": "VLONE tricou",
+        "el": "VLONE μπλουζάκι",
+        "uk": "VLONE футболка",
+        "ar": "VLONE تيشيرت",
+        "ja": "VLONE Tシャツ",
+        "ko": "VLONE 티셔츠",
+        "vi": "VLONE áo thun",
+        "tr": "VLONE tişört"
+      }
+    },
+    {
+      "name": "Gallery Dept  T-shirt",
+      "translations": {
+        "fi": "Gallery Dept T-paita",
+        "da": "Gallery Dept T-shirt",
+        "nb": "Gallery Dept T-skjorte",
+        "cs": "Gallery Dept tričko",
+        "sk": "Gallery Dept tričko",
+        "hu": "Gallery Dept póló",
+        "ro": "Gallery Dept tricou",
+        "el": "Gallery Dept μπλουζάκι",
+        "uk": "Gallery Dept футболка",
+        "ar": "Gallery Dept تيشيرت",
+        "ja": "Gallery Dept Tシャツ",
+        "ko": "Gallery Dept 티셔츠",
+        "vi": "Gallery Dept áo thun",
+        "tr": "Gallery Dept tişört"
+      }
+    },
+    {
+      "name": "SUPREME TEE",
+      "translations": {
+        "fi": "SUPREME T-paita",
+        "da": "SUPREME T-shirt",
+        "nb": "SUPREME T-skjorte",
+        "cs": "SUPREME tričko",
+        "sk": "SUPREME tričko",
+        "hu": "SUPREME póló",
+        "ro": "SUPREME tricou",
+        "el": "SUPREME μπλουζάκι",
+        "uk": "SUPREME футболка",
+        "ar": "SUPREME تيشيرت",
+        "ja": "SUPREME Tシャツ",
+        "ko": "SUPREME 티셔츠",
+        "vi": "SUPREME áo thun",
+        "tr": "SUPREME tişört"
+      }
+    },
+    {
+      "name": "AMI TEE",
+      "translations": {
+        "fi": "AMI T-paita",
+        "da": "AMI T-shirt",
+        "nb": "AMI T-skjorte",
+        "cs": "AMI tričko",
+        "sk": "AMI tričko",
+        "hu": "AMI póló",
+        "ro": "AMI tricou",
+        "el": "AMI μπλουζάκι",
+        "uk": "AMI футболка",
+        "ar": "AMI تيشيرت",
+        "ja": "AMI Tシャツ",
+        "ko": "AMI 티셔츠",
+        "vi": "AMI áo thun",
+        "tr": "AMI tişört"
+      }
+    },
+    {
+      "name": "Stone Island tee",
+      "translations": {
+        "fi": "Stone Island T-paita",
+        "da": "Stone Island T-shirt",
+        "nb": "Stone Island T-skjorte",
+        "cs": "Stone Island tričko",
+        "sk": "Stone Island tričko",
+        "hu": "Stone Island póló",
+        "ro": "Stone Island tricou",
+        "el": "Stone Island μπλουζάκι",
+        "uk": "Stone Island футболка",
+        "ar": "Stone Island تيشيرت",
+        "ja": "Stone Island Tシャツ",
+        "ko": "Stone Island 티셔츠",
+        "vi": "Stone Island áo thun",
+        "tr": "Stone Island tişört"
+      }
+    },
+    {
+      "name": "PRADA shoes",
+      "translations": {
+        "fi": "PRADA kengät",
+        "da": "PRADA sko",
+        "nb": "PRADA sko",
+        "cs": "PRADA boty",
+        "sk": "PRADA topánky",
+        "hu": "PRADA cipő",
+        "ro": "PRADA pantofi",
+        "el": "PRADA παπούτσια",
+        "uk": "PRADA взуття",
+        "ar": "PRADA أحذية",
+        "ja": "PRADA シューズ",
+        "ko": "PRADA 신발",
+        "vi": "PRADA giày",
+        "tr": "PRADA ayakkabı"
+      }
+    },
+    {
+      "name": "Ami Sweater",
+      "translations": {
+        "fi": "Ami neulepusero",
+        "da": "Ami sweater",
+        "nb": "Ami genser",
+        "cs": "Ami svetr",
+        "sk": "Ami sveter",
+        "hu": "Ami pulóver",
+        "ro": "Ami pulover",
+        "el": "Ami πουλόβερ",
+        "uk": "Ami светр",
+        "ar": "Ami كنزة",
+        "ja": "Ami セーター",
+        "ko": "Ami 스웨터",
+        "vi": "Ami áo len",
+        "tr": "Ami kazak"
+      }
+    },
+    {
+      "name": "Stussy Tee",
+      "translations": {
+        "fi": "Stussy T-paita",
+        "da": "Stussy T-shirt",
+        "nb": "Stussy T-skjorte",
+        "cs": "Stussy tričko",
+        "sk": "Stussy tričko",
+        "hu": "Stussy póló",
+        "ro": "Stussy tricou",
+        "el": "Stussy μπλουζάκι",
+        "uk": "Stussy футболка",
+        "ar": "Stussy تيشيرت",
+        "ja": "Stussy Tシャツ",
+        "ko": "Stussy 티셔츠",
+        "vi": "Stussy áo thun",
+        "tr": "Stussy tişört"
+      }
+    },
+    {
+      "name": "Ralph Lauren socks",
+      "translations": {
+        "fi": "Ralph Lauren sukat",
+        "da": "Ralph Lauren sokker",
+        "nb": "Ralph Lauren sokker",
+        "cs": "Ralph Lauren ponožky",
+        "sk": "Ralph Lauren ponožky",
+        "hu": "Ralph Lauren zoknik",
+        "ro": "Ralph Lauren șosete",
+        "el": "Ralph Lauren κάλτσες",
+        "uk": "Ralph Lauren шкарпетки",
+        "ar": "Ralph Lauren جوارب",
+        "ja": "Ralph Lauren 靴下",
+        "ko": "Ralph Lauren 양말",
+        "vi": "Ralph Lauren tất",
+        "tr": "Ralph Lauren çorap"
+      }
+    },
+    {
+      "name": "AMIRI Jeans（31+ Styles）",
+      "translations": {
+        "fi": "AMIRI farkut [31+ mallia]",
+        "da": "AMIRI jeans [31+ modeller]",
+        "nb": "AMIRI jeans [31+ modeller]",
+        "cs": "AMIRI džíny [31+ variant]",
+        "sk": "AMIRI džínsy [31+ variantov]",
+        "hu": "AMIRI farmer [31+ változat]",
+        "ro": "AMIRI blugi [31+ modele]",
+        "el": "AMIRI τζιν [31+ σχέδια]",
+        "uk": "AMIRI джинси [31+ варіантів]",
+        "ar": "AMIRI جينز [31+ تصميمًا]",
+        "ja": "AMIRI ジーンズ [31+ 種類]",
+        "ko": "AMIRI 청바지 [31+ 종]",
+        "vi": "AMIRI quần jeans [31+ mẫu]",
+        "tr": "AMIRI kot pantolon [31+ model]"
+      }
+    },
+    {
+      "name": "Ralph Lauren  T-SHIRT",
+      "translations": {
+        "fi": "Ralph Lauren T-paita",
+        "da": "Ralph Lauren T-shirt",
+        "nb": "Ralph Lauren T-skjorte",
+        "cs": "Ralph Lauren tričko",
+        "sk": "Ralph Lauren tričko",
+        "hu": "Ralph Lauren póló",
+        "ro": "Ralph Lauren tricou",
+        "el": "Ralph Lauren μπλουζάκι",
+        "uk": "Ralph Lauren футболка",
+        "ar": "Ralph Lauren تيشيرت",
+        "ja": "Ralph Lauren Tシャツ",
+        "ko": "Ralph Lauren 티셔츠",
+        "vi": "Ralph Lauren áo thun",
+        "tr": "Ralph Lauren tişört"
+      }
+    },
+    {
+      "name": "Versace shorts",
+      "translations": {
+        "fi": "Versace shortsit",
+        "da": "Versace shorts",
+        "nb": "Versace shorts",
+        "cs": "Versace šortky",
+        "sk": "Versace šortky",
+        "hu": "Versace rövidnadrág",
+        "ro": "Versace pantaloni scurți",
+        "el": "Versace σορτς",
+        "uk": "Versace шорти",
+        "ar": "Versace شورت",
+        "ja": "Versace ショーツ",
+        "ko": "Versace 반바지",
+        "vi": "Versace quần short",
+        "tr": "Versace şort"
+      }
+    },
+    {
+      "name": "gallery dept  shorts",
+      "translations": {
+        "fi": "gallery dept shortsit",
+        "da": "gallery dept shorts",
+        "nb": "gallery dept shorts",
+        "cs": "gallery dept šortky",
+        "sk": "gallery dept šortky",
+        "hu": "gallery dept rövidnadrág",
+        "ro": "gallery dept pantaloni scurți",
+        "el": "gallery dept σορτς",
+        "uk": "gallery dept шорти",
+        "ar": "gallery dept شورت",
+        "ja": "gallery dept ショーツ",
+        "ko": "gallery dept 반바지",
+        "vi": "gallery dept quần short",
+        "tr": "gallery dept şort"
+      }
+    },
+    {
+      "name": "Loewe T-shirt",
+      "translations": {
+        "fi": "Loewe T-paita",
+        "da": "Loewe T-shirt",
+        "nb": "Loewe T-skjorte",
+        "cs": "Loewe tričko",
+        "sk": "Loewe tričko",
+        "hu": "Loewe póló",
+        "ro": "Loewe tricou",
+        "el": "Loewe μπλουζάκι",
+        "uk": "Loewe футболка",
+        "ar": "Loewe تيشيرت",
+        "ja": "Loewe Tシャツ",
+        "ko": "Loewe 티셔츠",
+        "vi": "Loewe áo thun",
+        "tr": "Loewe tişört"
+      }
+    },
+    {
+      "name": "Givenchy shoes",
+      "translations": {
+        "fi": "Givenchy kengät",
+        "da": "Givenchy sko",
+        "nb": "Givenchy sko",
+        "cs": "Givenchy boty",
+        "sk": "Givenchy topánky",
+        "hu": "Givenchy cipő",
+        "ro": "Givenchy pantofi",
+        "el": "Givenchy παπούτσια",
+        "uk": "Givenchy взуття",
+        "ar": "Givenchy أحذية",
+        "ja": "Givenchy シューズ",
+        "ko": "Givenchy 신발",
+        "vi": "Givenchy giày",
+        "tr": "Givenchy ayakkabı"
+      }
+    },
+    {
+      "name": "Kenzo Tee",
+      "translations": {
+        "fi": "Kenzo T-paita",
+        "da": "Kenzo T-shirt",
+        "nb": "Kenzo T-skjorte",
+        "cs": "Kenzo tričko",
+        "sk": "Kenzo tričko",
+        "hu": "Kenzo póló",
+        "ro": "Kenzo tricou",
+        "el": "Kenzo μπλουζάκι",
+        "uk": "Kenzo футболка",
+        "ar": "Kenzo تيشيرت",
+        "ja": "Kenzo Tシャツ",
+        "ko": "Kenzo 티셔츠",
+        "vi": "Kenzo áo thun",
+        "tr": "Kenzo tişört"
+      }
+    },
+    {
+      "name": "Ami T-shirt",
+      "translations": {
+        "fi": "Ami T-paita",
+        "da": "Ami T-shirt",
+        "nb": "Ami T-skjorte",
+        "cs": "Ami tričko",
+        "sk": "Ami tričko",
+        "hu": "Ami póló",
+        "ro": "Ami tricou",
+        "el": "Ami μπλουζάκι",
+        "uk": "Ami футболка",
+        "ar": "Ami تيشيرت",
+        "ja": "Ami Tシャツ",
+        "ko": "Ami 티셔츠",
+        "vi": "Ami áo thun",
+        "tr": "Ami tişört"
+      }
+    },
+    {
+      "name": "Adidas shoes",
+      "translations": {
+        "fi": "Adidas kengät",
+        "da": "Adidas sko",
+        "nb": "Adidas sko",
+        "cs": "Adidas boty",
+        "sk": "Adidas topánky",
+        "hu": "Adidas cipő",
+        "ro": "Adidas pantofi",
+        "el": "Adidas παπούτσια",
+        "uk": "Adidas взуття",
+        "ar": "Adidas أحذية",
+        "ja": "Adidas シューズ",
+        "ko": "Adidas 신발",
+        "vi": "Adidas giày",
+        "tr": "Adidas ayakkabı"
+      }
+    },
+    {
+      "name": "Gallery Dept Tee",
+      "translations": {
+        "fi": "Gallery Dept T-paita",
+        "da": "Gallery Dept T-shirt",
+        "nb": "Gallery Dept T-skjorte",
+        "cs": "Gallery Dept tričko",
+        "sk": "Gallery Dept tričko",
+        "hu": "Gallery Dept póló",
+        "ro": "Gallery Dept tricou",
+        "el": "Gallery Dept μπλουζάκι",
+        "uk": "Gallery Dept футболка",
+        "ar": "Gallery Dept تيشيرت",
+        "ja": "Gallery Dept Tシャツ",
+        "ko": "Gallery Dept 티셔츠",
+        "vi": "Gallery Dept áo thun",
+        "tr": "Gallery Dept tişört"
+      }
+    },
+    {
+      "name": "Ralph Lauren tee",
+      "translations": {
+        "fi": "Ralph Lauren T-paita",
+        "da": "Ralph Lauren T-shirt",
+        "nb": "Ralph Lauren T-skjorte",
+        "cs": "Ralph Lauren tričko",
+        "sk": "Ralph Lauren tričko",
+        "hu": "Ralph Lauren póló",
+        "ro": "Ralph Lauren tricou",
+        "el": "Ralph Lauren μπλουζάκι",
+        "uk": "Ralph Lauren футболка",
+        "ar": "Ralph Lauren تيشيرت",
+        "ja": "Ralph Lauren Tシャツ",
+        "ko": "Ralph Lauren 티셔츠",
+        "vi": "Ralph Lauren áo thun",
+        "tr": "Ralph Lauren tişört"
+      }
+    },
+    {
+      "name": "Nike socks",
+      "translations": {
+        "fi": "Nike sukat",
+        "da": "Nike sokker",
+        "nb": "Nike sokker",
+        "cs": "Nike ponožky",
+        "sk": "Nike ponožky",
+        "hu": "Nike zoknik",
+        "ro": "Nike șosete",
+        "el": "Nike κάλτσες",
+        "uk": "Nike шкарпетки",
+        "ar": "Nike جوارب",
+        "ja": "Nike 靴下",
+        "ko": "Nike 양말",
+        "vi": "Nike tất",
+        "tr": "Nike çorap"
+      }
+    },
+    {
+      "name": "BURBERRY  T-shirt",
+      "translations": {
+        "fi": "BURBERRY T-paita",
+        "da": "BURBERRY T-shirt",
+        "nb": "BURBERRY T-skjorte",
+        "cs": "BURBERRY tričko",
+        "sk": "BURBERRY tričko",
+        "hu": "BURBERRY póló",
+        "ro": "BURBERRY tricou",
+        "el": "BURBERRY μπλουζάκι",
+        "uk": "BURBERRY футболка",
+        "ar": "BURBERRY تيشيرت",
+        "ja": "BURBERRY Tシャツ",
+        "ko": "BURBERRY 티셔츠",
+        "vi": "BURBERRY áo thun",
+        "tr": "BURBERRY tişört"
+      }
+    },
+    {
+      "name": "Stussy tee",
+      "translations": {
+        "fi": "Stussy T-paita",
+        "da": "Stussy T-shirt",
+        "nb": "Stussy T-skjorte",
+        "cs": "Stussy tričko",
+        "sk": "Stussy tričko",
+        "hu": "Stussy póló",
+        "ro": "Stussy tricou",
+        "el": "Stussy μπλουζάκι",
+        "uk": "Stussy футболка",
+        "ar": "Stussy تيشيرت",
+        "ja": "Stussy Tシャツ",
+        "ko": "Stussy 티셔츠",
+        "vi": "Stussy áo thun",
+        "tr": "Stussy tişört"
+      }
+    },
+    {
+      "name": "Stone island T-shirts",
+      "translations": {
+        "fi": "Stone island T-paidat",
+        "da": "Stone island T-shirts",
+        "nb": "Stone island T-skjorter",
+        "cs": "Stone island trička",
+        "sk": "Stone island tričká",
+        "hu": "Stone island pólók",
+        "ro": "Stone island tricouri",
+        "el": "Stone island μπλουζάκια",
+        "uk": "Stone island футболки",
+        "ar": "Stone island تيشيرتات",
+        "ja": "Stone island Tシャツ",
+        "ko": "Stone island 티셔츠",
+        "vi": "Stone island áo thun",
+        "tr": "Stone island tişörtler"
+      }
+    },
+    {
+      "name": "Trapstar Tracksuit",
+      "translations": {
+        "fi": "Trapstar verryttelyasu",
+        "da": "Trapstar træningsdragt",
+        "nb": "Trapstar treningsdress",
+        "cs": "Trapstar tepláková souprava",
+        "sk": "Trapstar tepláková súprava",
+        "hu": "Trapstar melegítőszett",
+        "ro": "Trapstar trening",
+        "el": "Trapstar φόρμα",
+        "uk": "Trapstar спортивний костюм",
+        "ar": "Trapstar بدلة رياضية",
+        "ja": "Trapstar トラックスーツ",
+        "ko": "Trapstar 트레이닝복",
+        "vi": "Trapstar bộ đồ thể thao",
+        "tr": "Trapstar eşofman takımı"
+      }
+    },
+    {
+      "name": "Gallery DEPT Pants（39+ Styles）",
+      "translations": {
+        "fi": "Gallery DEPT housut [39+ mallia]",
+        "da": "Gallery DEPT bukser [39+ modeller]",
+        "nb": "Gallery DEPT bukser [39+ modeller]",
+        "cs": "Gallery DEPT kalhoty [39+ variant]",
+        "sk": "Gallery DEPT nohavice [39+ variantov]",
+        "hu": "Gallery DEPT nadrág [39+ változat]",
+        "ro": "Gallery DEPT pantaloni [39+ modele]",
+        "el": "Gallery DEPT παντελόνι [39+ σχέδια]",
+        "uk": "Gallery DEPT штани [39+ варіантів]",
+        "ar": "Gallery DEPT بنطال [39+ تصميمًا]",
+        "ja": "Gallery DEPT パンツ [39+ 種類]",
+        "ko": "Gallery DEPT 바지 [39+ 종]",
+        "vi": "Gallery DEPT quần dài [39+ mẫu]",
+        "tr": "Gallery DEPT pantolon [39+ model]"
+      }
+    },
+    {
+      "name": "AMIRI SHOES",
+      "translations": {
+        "fi": "AMIRI kengät",
+        "da": "AMIRI sko",
+        "nb": "AMIRI sko",
+        "cs": "AMIRI boty",
+        "sk": "AMIRI topánky",
+        "hu": "AMIRI cipő",
+        "ro": "AMIRI pantofi",
+        "el": "AMIRI παπούτσια",
+        "uk": "AMIRI взуття",
+        "ar": "AMIRI أحذية",
+        "ja": "AMIRI シューズ",
+        "ko": "AMIRI 신발",
+        "vi": "AMIRI giày",
+        "tr": "AMIRI ayakkabı"
+      }
+    },
+    {
+      "name": "Burberry slippers",
+      "translations": {
+        "fi": "Burberry tohvelit",
+        "da": "Burberry hjemmesko",
+        "nb": "Burberry tøfler",
+        "cs": "Burberry přezůvky",
+        "sk": "Burberry papuče",
+        "hu": "Burberry szobapapucs",
+        "ro": "Burberry papuci de casă",
+        "el": "Burberry παντόφλες",
+        "uk": "Burberry капці",
+        "ar": "Burberry خف",
+        "ja": "Burberry スリッパ",
+        "ko": "Burberry 슬리퍼",
+        "vi": "Burberry dép đi trong nhà",
+        "tr": "Burberry ev terliği"
+      }
+    },
+    {
+      "name": "AMIRI Belt",
+      "translations": {
+        "fi": "AMIRI vyö",
+        "da": "AMIRI bælte",
+        "nb": "AMIRI belte",
+        "cs": "AMIRI pásek",
+        "sk": "AMIRI opasok",
+        "hu": "AMIRI öv",
+        "ro": "AMIRI curea",
+        "el": "AMIRI ζώνη",
+        "uk": "AMIRI ремінь",
+        "ar": "AMIRI حزام",
+        "ja": "AMIRI ベルト",
+        "ko": "AMIRI 벨트",
+        "vi": "AMIRI thắt lưng",
+        "tr": "AMIRI kemer"
+      }
+    },
+    {
+      "name": "Fendi Slides",
+      "translations": {
+        "fi": "Fendi pistokkaat",
+        "da": "Fendi slippers",
+        "nb": "Fendi slippers",
+        "cs": "Fendi pantofle",
+        "sk": "Fendi šľapky",
+        "hu": "Fendi papucs",
+        "ro": "Fendi papuci",
+        "el": "Fendi παντόφλες slide",
+        "uk": "Fendi шльопанці",
+        "ar": "Fendi شبشب",
+        "ja": "Fendi スライドサンダル",
+        "ko": "Fendi 슬라이드",
+        "vi": "Fendi dép lê",
+        "tr": "Fendi terlik"
+      }
+    },
+    {
+      "name": "Dolce & Gabbana shoes",
+      "translations": {
+        "fi": "Dolce & Gabbana kengät",
+        "da": "Dolce & Gabbana sko",
+        "nb": "Dolce & Gabbana sko",
+        "cs": "Dolce & Gabbana boty",
+        "sk": "Dolce & Gabbana topánky",
+        "hu": "Dolce & Gabbana cipő",
+        "ro": "Dolce & Gabbana pantofi",
+        "el": "Dolce & Gabbana παπούτσια",
+        "uk": "Dolce & Gabbana взуття",
+        "ar": "Dolce & Gabbana أحذية",
+        "ja": "Dolce & Gabbana シューズ",
+        "ko": "Dolce & Gabbana 신발",
+        "vi": "Dolce & Gabbana giày",
+        "tr": "Dolce & Gabbana ayakkabı"
+      }
+    },
+    {
+      "name": "LV Jeans（25+ Styles）",
+      "translations": {
+        "fi": "LV farkut [25+ mallia]",
+        "da": "LV jeans [25+ modeller]",
+        "nb": "LV jeans [25+ modeller]",
+        "cs": "LV džíny [25+ variant]",
+        "sk": "LV džínsy [25+ variantov]",
+        "hu": "LV farmer [25+ változat]",
+        "ro": "LV blugi [25+ modele]",
+        "el": "LV τζιν [25+ σχέδια]",
+        "uk": "LV джинси [25+ варіантів]",
+        "ar": "LV جينز [25+ تصميمًا]",
+        "ja": "LV ジーンズ [25+ 種類]",
+        "ko": "LV 청바지 [25+ 종]",
+        "vi": "LV quần jeans [25+ mẫu]",
+        "tr": "LV kot pantolon [25+ model]"
+      }
+    },
+    {
+      "name": "OFF-WHITE T-shirt",
+      "translations": {
+        "fi": "OFF-WHITE T-paita",
+        "da": "OFF-WHITE T-shirt",
+        "nb": "OFF-WHITE T-skjorte",
+        "cs": "OFF-WHITE tričko",
+        "sk": "OFF-WHITE tričko",
+        "hu": "OFF-WHITE póló",
+        "ro": "OFF-WHITE tricou",
+        "el": "OFF-WHITE μπλουζάκι",
+        "uk": "OFF-WHITE футболка",
+        "ar": "OFF-WHITE تيشيرت",
+        "ja": "OFF-WHITE Tシャツ",
+        "ko": "OFF-WHITE 티셔츠",
+        "vi": "OFF-WHITE áo thun",
+        "tr": "OFF-WHITE tişört"
+      }
+    },
+    {
+      "name": "PRADA Glasses",
+      "translations": {
+        "fi": "PRADA silmälasit",
+        "da": "PRADA briller",
+        "nb": "PRADA briller",
+        "cs": "PRADA brýle",
+        "sk": "PRADA okuliare",
+        "hu": "PRADA szemüveg",
+        "ro": "PRADA ochelari",
+        "el": "PRADA γυαλιά",
+        "uk": "PRADA окуляри",
+        "ar": "PRADA نظارات",
+        "ja": "PRADA 眼鏡",
+        "ko": "PRADA 안경",
+        "vi": "PRADA kính",
+        "tr": "PRADA gözlük"
+      }
+    },
+    {
+      "name": "NIKE SOCKS",
+      "translations": {
+        "fi": "NIKE sukat",
+        "da": "NIKE sokker",
+        "nb": "NIKE sokker",
+        "cs": "NIKE ponožky",
+        "sk": "NIKE ponožky",
+        "hu": "NIKE zoknik",
+        "ro": "NIKE șosete",
+        "el": "NIKE κάλτσες",
+        "uk": "NIKE шкарпетки",
+        "ar": "NIKE جوارب",
+        "ja": "NIKE 靴下",
+        "ko": "NIKE 양말",
+        "vi": "NIKE tất",
+        "tr": "NIKE çorap"
+      }
+    },
+    {
+      "name": "Stussy Jersey",
+      "translations": {
+        "fi": "Stussy pelipaita",
+        "da": "Stussy spilletrøje",
+        "nb": "Stussy drakt",
+        "cs": "Stussy dres",
+        "sk": "Stussy dres",
+        "hu": "Stussy mez",
+        "ro": "Stussy tricou sport",
+        "el": "Stussy αθλητική φανέλα",
+        "uk": "Stussy спортивна майка",
+        "ar": "Stussy قميص رياضي",
+        "ja": "Stussy ジャージ",
+        "ko": "Stussy 저지",
+        "vi": "Stussy áo thi đấu",
+        "tr": "Stussy forma"
+      }
+    },
+    {
+      "name": "Gallery dept  shorts",
+      "translations": {
+        "fi": "Gallery dept shortsit",
+        "da": "Gallery dept shorts",
+        "nb": "Gallery dept shorts",
+        "cs": "Gallery dept šortky",
+        "sk": "Gallery dept šortky",
+        "hu": "Gallery dept rövidnadrág",
+        "ro": "Gallery dept pantaloni scurți",
+        "el": "Gallery dept σορτς",
+        "uk": "Gallery dept шорти",
+        "ar": "Gallery dept شورت",
+        "ja": "Gallery dept ショーツ",
+        "ko": "Gallery dept 반바지",
+        "vi": "Gallery dept quần short",
+        "tr": "Gallery dept şort"
+      }
+    },
+    {
+      "name": "Cartier Sunglasses [39 styles]",
+      "translations": {
+        "fi": "Cartier aurinkolasit [39 mallia]",
+        "da": "Cartier solbriller [39 modeller]",
+        "nb": "Cartier solbriller [39 modeller]",
+        "cs": "Cartier sluneční brýle [39 variant]",
+        "sk": "Cartier slnečné okuliare [39 variantov]",
+        "hu": "Cartier napszemüveg [39 változat]",
+        "ro": "Cartier ochelari de soare [39 modele]",
+        "el": "Cartier γυαλιά ηλίου [39 σχέδια]",
+        "uk": "Cartier сонцезахисні окуляри [39 варіантів]",
+        "ar": "Cartier نظارات شمسية [39 تصميمًا]",
+        "ja": "Cartier サングラス [39 種類]",
+        "ko": "Cartier 선글라스 [39 종]",
+        "vi": "Cartier kính râm [39 mẫu]",
+        "tr": "Cartier güneş gözlüğü [39 model]"
+      }
+    },
+    {
+      "name": "Off-White T-Shirt [36 styles]",
+      "translations": {
+        "fi": "Off-White T-paita [36 mallia]",
+        "da": "Off-White T-shirt [36 modeller]",
+        "nb": "Off-White T-skjorte [36 modeller]",
+        "cs": "Off-White tričko [36 variant]",
+        "sk": "Off-White tričko [36 variantov]",
+        "hu": "Off-White póló [36 változat]",
+        "ro": "Off-White tricou [36 modele]",
+        "el": "Off-White μπλουζάκι [36 σχέδια]",
+        "uk": "Off-White футболка [36 варіантів]",
+        "ar": "Off-White تيشيرت [36 تصميمًا]",
+        "ja": "Off-White Tシャツ [36 種類]",
+        "ko": "Off-White 티셔츠 [36 종]",
+        "vi": "Off-White áo thun [36 mẫu]",
+        "tr": "Off-White tişört [36 model]"
+      }
+    },
+    {
+      "name": "Amiri Cap [40 styles]",
+      "translations": {
+        "fi": "Amiri lippalakki [40 mallia]",
+        "da": "Amiri kasket [40 modeller]",
+        "nb": "Amiri caps [40 modeller]",
+        "cs": "Amiri kšiltovka [40 variant]",
+        "sk": "Amiri šiltovka [40 variantov]",
+        "hu": "Amiri sapka [40 változat]",
+        "ro": "Amiri șapcă [40 modele]",
+        "el": "Amiri καπέλο τύπου cap [40 σχέδια]",
+        "uk": "Amiri кепка [40 варіантів]",
+        "ar": "Amiri قبعة كاب [40 تصميمًا]",
+        "ja": "Amiri キャップ [40 種類]",
+        "ko": "Amiri 캡 [40 종]",
+        "vi": "Amiri mũ lưỡi trai [40 mẫu]",
+        "tr": "Amiri kep [40 model]"
+      }
+    },
+    {
+      "name": "Supreme Wallet",
+      "translations": {
+        "fi": "Supreme lompakko",
+        "da": "Supreme pung",
+        "nb": "Supreme lommebok",
+        "cs": "Supreme peněženka",
+        "sk": "Supreme peňaženka",
+        "hu": "Supreme pénztárca",
+        "ro": "Supreme portofel",
+        "el": "Supreme πορτοφόλι",
+        "uk": "Supreme гаманець",
+        "ar": "Supreme محفظة",
+        "ja": "Supreme 財布",
+        "ko": "Supreme 지갑",
+        "vi": "Supreme ví",
+        "tr": "Supreme cüzdan"
+      }
+    },
+    {
+      "name": "Valentino tees",
+      "translations": {
+        "fi": "Valentino T-paidat",
+        "da": "Valentino T-shirts",
+        "nb": "Valentino T-skjorter",
+        "cs": "Valentino trička",
+        "sk": "Valentino tričká",
+        "hu": "Valentino pólók",
+        "ro": "Valentino tricouri",
+        "el": "Valentino μπλουζάκια",
+        "uk": "Valentino футболки",
+        "ar": "Valentino تيشيرتات",
+        "ja": "Valentino Tシャツ",
+        "ko": "Valentino 티셔츠",
+        "vi": "Valentino áo thun",
+        "tr": "Valentino tişörtler"
+      }
+    },
+    {
+      "name": "LOUIS VUITTON GLASSES",
+      "translations": {
+        "fi": "LOUIS VUITTON silmälasit",
+        "da": "LOUIS VUITTON briller",
+        "nb": "LOUIS VUITTON briller",
+        "cs": "LOUIS VUITTON brýle",
+        "sk": "LOUIS VUITTON okuliare",
+        "hu": "LOUIS VUITTON szemüveg",
+        "ro": "LOUIS VUITTON ochelari",
+        "el": "LOUIS VUITTON γυαλιά",
+        "uk": "LOUIS VUITTON окуляри",
+        "ar": "LOUIS VUITTON نظارات",
+        "ja": "LOUIS VUITTON 眼鏡",
+        "ko": "LOUIS VUITTON 안경",
+        "vi": "LOUIS VUITTON kính",
+        "tr": "LOUIS VUITTON gözlük"
+      }
+    },
+    {
+      "name": "Armani SunGlasses",
+      "translations": {
+        "fi": "Armani aurinkolasit",
+        "da": "Armani solbriller",
+        "nb": "Armani solbriller",
+        "cs": "Armani sluneční brýle",
+        "sk": "Armani slnečné okuliare",
+        "hu": "Armani napszemüveg",
+        "ro": "Armani ochelari de soare",
+        "el": "Armani γυαλιά ηλίου",
+        "uk": "Armani сонцезахисні окуляри",
+        "ar": "Armani نظارات شمسية",
+        "ja": "Armani サングラス",
+        "ko": "Armani 선글라스",
+        "vi": "Armani kính râm",
+        "tr": "Armani güneş gözlüğü"
+      }
+    },
+    {
+      "name": "DIOR shoes",
+      "translations": {
+        "fi": "DIOR kengät",
+        "da": "DIOR sko",
+        "nb": "DIOR sko",
+        "cs": "DIOR boty",
+        "sk": "DIOR topánky",
+        "hu": "DIOR cipő",
+        "ro": "DIOR pantofi",
+        "el": "DIOR παπούτσια",
+        "uk": "DIOR взуття",
+        "ar": "DIOR أحذية",
+        "ja": "DIOR シューズ",
+        "ko": "DIOR 신발",
+        "vi": "DIOR giày",
+        "tr": "DIOR ayakkabı"
+      }
+    },
+    {
+      "name": "Calvin Klein Belt",
+      "translations": {
+        "fi": "Calvin Klein vyö",
+        "da": "Calvin Klein bælte",
+        "nb": "Calvin Klein belte",
+        "cs": "Calvin Klein pásek",
+        "sk": "Calvin Klein opasok",
+        "hu": "Calvin Klein öv",
+        "ro": "Calvin Klein curea",
+        "el": "Calvin Klein ζώνη",
+        "uk": "Calvin Klein ремінь",
+        "ar": "Calvin Klein حزام",
+        "ja": "Calvin Klein ベルト",
+        "ko": "Calvin Klein 벨트",
+        "vi": "Calvin Klein thắt lưng",
+        "tr": "Calvin Klein kemer"
+      }
+    },
+    {
+      "name": "Corteiz cap",
+      "translations": {
+        "fi": "Corteiz lippalakki",
+        "da": "Corteiz kasket",
+        "nb": "Corteiz caps",
+        "cs": "Corteiz kšiltovka",
+        "sk": "Corteiz šiltovka",
+        "hu": "Corteiz sapka",
+        "ro": "Corteiz șapcă",
+        "el": "Corteiz καπέλο τύπου cap",
+        "uk": "Corteiz кепка",
+        "ar": "Corteiz قبعة كاب",
+        "ja": "Corteiz キャップ",
+        "ko": "Corteiz 캡",
+        "vi": "Corteiz mũ lưỡi trai",
+        "tr": "Corteiz kep"
+      }
+    },
+    {
+      "name": "Givenchy Tee",
+      "translations": {
+        "fi": "Givenchy T-paita",
+        "da": "Givenchy T-shirt",
+        "nb": "Givenchy T-skjorte",
+        "cs": "Givenchy tričko",
+        "sk": "Givenchy tričko",
+        "hu": "Givenchy póló",
+        "ro": "Givenchy tricou",
+        "el": "Givenchy μπλουζάκι",
+        "uk": "Givenchy футболка",
+        "ar": "Givenchy تيشيرت",
+        "ja": "Givenchy Tシャツ",
+        "ko": "Givenchy 티셔츠",
+        "vi": "Givenchy áo thun",
+        "tr": "Givenchy tişört"
+      }
+    },
+    {
+      "name": "Goyard Wallet",
+      "translations": {
+        "fi": "Goyard lompakko",
+        "da": "Goyard pung",
+        "nb": "Goyard lommebok",
+        "cs": "Goyard peněženka",
+        "sk": "Goyard peňaženka",
+        "hu": "Goyard pénztárca",
+        "ro": "Goyard portofel",
+        "el": "Goyard πορτοφόλι",
+        "uk": "Goyard гаманець",
+        "ar": "Goyard محفظة",
+        "ja": "Goyard 財布",
+        "ko": "Goyard 지갑",
+        "vi": "Goyard ví",
+        "tr": "Goyard cüzdan"
+      }
+    },
+    {
+      "name": "Dior Sunglasses",
+      "translations": {
+        "fi": "Dior aurinkolasit",
+        "da": "Dior solbriller",
+        "nb": "Dior solbriller",
+        "cs": "Dior sluneční brýle",
+        "sk": "Dior slnečné okuliare",
+        "hu": "Dior napszemüveg",
+        "ro": "Dior ochelari de soare",
+        "el": "Dior γυαλιά ηλίου",
+        "uk": "Dior сонцезахисні окуляри",
+        "ar": "Dior نظارات شمسية",
+        "ja": "Dior サングラス",
+        "ko": "Dior 선글라스",
+        "vi": "Dior kính râm",
+        "tr": "Dior güneş gözlüğü"
+      }
+    },
+    {
+      "name": "Prada Glasses",
+      "translations": {
+        "fi": "Prada silmälasit",
+        "da": "Prada briller",
+        "nb": "Prada briller",
+        "cs": "Prada brýle",
+        "sk": "Prada okuliare",
+        "hu": "Prada szemüveg",
+        "ro": "Prada ochelari",
+        "el": "Prada γυαλιά",
+        "uk": "Prada окуляри",
+        "ar": "Prada نظارات",
+        "ja": "Prada 眼鏡",
+        "ko": "Prada 안경",
+        "vi": "Prada kính",
+        "tr": "Prada gözlük"
+      }
+    },
+    {
+      "name": "Gucci Wallet",
+      "translations": {
+        "fi": "Gucci lompakko",
+        "da": "Gucci pung",
+        "nb": "Gucci lommebok",
+        "cs": "Gucci peněženka",
+        "sk": "Gucci peňaženka",
+        "hu": "Gucci pénztárca",
+        "ro": "Gucci portofel",
+        "el": "Gucci πορτοφόλι",
+        "uk": "Gucci гаманець",
+        "ar": "Gucci محفظة",
+        "ja": "Gucci 財布",
+        "ko": "Gucci 지갑",
+        "vi": "Gucci ví",
+        "tr": "Gucci cüzdan"
+      }
+    }
+  ]
+}

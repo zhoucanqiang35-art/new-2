@@ -1,0 +1,172 @@
+{
+  "items": [
+    {
+      "name": "White Strap Smartwatch",
+      "source": "White Strap Smartwatch",
+      "suffix": "",
+      "translations": {
+        "fi": "Älykello valkoisella rannekkeella",
+        "da": "Smartwatch med hvid rem",
+        "nb": "Smartklokke med hvit rem",
+        "cs": "Chytré hodinky s bílým řemínkem",
+        "sk": "Inteligentné hodinky s bielym remienkom",
+        "hu": "Okosóra fehér szíjjal",
+        "ro": "Ceas inteligent cu curea albă",
+        "el": "Έξυπνο ρολόι με λευκό λουράκι",
+        "tr": "Beyaz kayışlı akıllı saat",
+        "uk": "Розумний годинник із білим ремінцем",
+        "ar": "ساعة ذكية بسوار أبيض",
+        "ja": "ホワイトストラップスマートウォッチ",
+        "ko": "화이트 스트랩 스마트워치",
+        "vi": "Đồng hồ thông minh dây trắng"
+      }
+    },
+    {
+      "name": "Blue Dial Steel Bracelet Watch",
+      "source": "Blue Dial Steel Bracelet Watch",
+      "suffix": "",
+      "translations": {
+        "fi": "Teräsrannekello sinisellä kellotaululla",
+        "da": "Stålarmbåndsur med blå urskive",
+        "nb": "Stålarmbåndsur med blå urskive",
+        "cs": "Hodinky s ocelovým náramkem a modrým ciferníkem",
+        "sk": "Hodinky s oceľovým náramkom a modrým ciferníkom",
+        "hu": "Acél karkötős óra kék számlappal",
+        "ro": "Ceas cu brățară din oțel și cadran albastru",
+        "el": "Ρολόι με ατσάλινο μπρασελέ και μπλε καντράν",
+        "tr": "Mavi kadranlı çelik bilezik saat",
+        "uk": "Годинник зі сталевим браслетом і синім циферблатом",
+        "ar": "ساعة بسوار فولاذي وقرص أزرق",
+        "ja": "ブルーダイヤルスチールブレスレットウォッチ",
+        "ko": "블루 다이얼 스틸 브레이슬릿 시계",
+        "vi": "Đồng hồ dây thép mặt xanh"
+      }
+    },
+    {
+      "name": "Red Dial Steel Bracelet Watch",
+      "source": "Red Dial Steel Bracelet Watch",
+      "suffix": "",
+      "translations": {
+        "fi": "Teräsrannekello punaisella kellotaululla",
+        "da": "Stålarmbåndsur med rød urskive",
+        "nb": "Stålarmbåndsur med rød urskive",
+        "cs": "Hodinky s ocelovým náramkem a červeným ciferníkem",
+        "sk": "Hodinky s oceľovým náramkom a červeným ciferníkom",
+        "hu": "Acél karkötős óra piros számlappal",
+        "ro": "Ceas cu brățară din oțel și cadran roșu",
+        "el": "Ρολόι με ατσάλινο μπρασελέ και κόκκινο καντράν",
+        "tr": "Kırmızı kadranlı çelik bilezik saat",
+        "uk": "Годинник зі сталевим браслетом і червоним циферблатом",
+        "ar": "ساعة بسوار فولاذي وقرص أحمر",
+        "ja": "レッドダイヤルスチールブレスレットウォッチ",
+        "ko": "레드 다이얼 스틸 브레이슬릿 시계",
+        "vi": "Đồng hồ dây thép mặt đỏ"
+      }
+    },
+    {
+      "name": "Gold Tone Fluted Bezel Watch",
+      "source": "Gold Tone Fluted Bezel Watch",
+      "suffix": "",
+      "translations": {
+        "fi": "Kullanvärinen kello uurretulla kehällä",
+        "da": "Guldfarvet ur med riflet urkrans",
+        "nb": "Gullfarget klokke med riflet bezel",
+        "cs": "Hodinky ve zlatém odstínu s vroubkovanou lunetou",
+        "sk": "Hodinky v zlatom odtieni s vrúbkovanou lunetou",
+        "hu": "Aranyszínű óra bordázott lünettával",
+        "ro": "Ceas auriu cu lunetă canelată",
+        "el": "Χρυσαφί ρολόι με αυλακωτή στεφάνη",
+        "tr": "Altın renkli yivli çerçeveli saat",
+        "uk": "Годинник золотистого кольору з рифленим безелем",
+        "ar": "ساعة بلون ذهبي وإطار مخدد",
+        "ja": "ゴールドトーンフルーテッドベゼルウォッチ",
+        "ko": "골드톤 플루티드 베젤 시계",
+        "vi": "Đồng hồ tông vàng có vành khía"
+      }
+    },
+    {
+      "name": "Steel Bracelet Watch Gift Set",
+      "source": "Steel Bracelet Watch Gift Set",
+      "suffix": "",
+      "translations": {
+        "fi": "Teräsrannekellon lahjasetti",
+        "da": "Gavesæt med stålarmbåndsur",
+        "nb": "Gavesett med stålarmbåndsur",
+        "cs": "Dárková sada hodinek s ocelovým náramkem",
+        "sk": "Darčeková súprava hodiniek s oceľovým náramkom",
+        "hu": "Acél karkötős óra ajándékszett",
+        "ro": "Set cadou cu ceas cu brățară din oțel",
+        "el": "Σετ δώρου με ρολόι με ατσάλινο μπρασελέ",
+        "tr": "Çelik bilezik saat hediye seti",
+        "uk": "Подарунковий набір із годинником зі сталевим браслетом",
+        "ar": "طقم هدايا بساعة بسوار فولاذي",
+        "ja": "スチールブレスレットウォッチギフトセット",
+        "ko": "스틸 브레이슬릿 시계 선물 세트",
+        "vi": "Bộ quà tặng đồng hồ dây thép"
+      }
+    },
+    {
+      "name": "Pink Dial Steel Bracelet Watch",
+      "source": "Pink Dial Steel Bracelet Watch",
+      "suffix": "",
+      "translations": {
+        "fi": "Teräsrannekello vaaleanpunaisella kellotaululla",
+        "da": "Stålarmbåndsur med lyserød urskive",
+        "nb": "Stålarmbåndsur med rosa urskive",
+        "cs": "Hodinky s ocelovým náramkem a růžovým ciferníkem",
+        "sk": "Hodinky s oceľovým náramkom a ružovým ciferníkom",
+        "hu": "Acél karkötős óra rózsaszín számlappal",
+        "ro": "Ceas cu brățară din oțel și cadran roz",
+        "el": "Ρολόι με ατσάλινο μπρασελέ και ροζ καντράν",
+        "tr": "Pembe kadranlı çelik bilezik saat",
+        "uk": "Годинник зі сталевим браслетом і рожевим циферблатом",
+        "ar": "ساعة بسوار فولاذي وقرص وردي",
+        "ja": "ピンクダイヤルスチールブレスレットウォッチ",
+        "ko": "핑크 다이얼 스틸 브레이슬릿 시계",
+        "vi": "Đồng hồ dây thép mặt hồng"
+      }
+    },
+    {
+      "name": "Smartwatch Strap Set",
+      "source": "Smartwatch Strap Set",
+      "suffix": "",
+      "translations": {
+        "fi": "Älykellon rannekesetti",
+        "da": "Sæt med smartwatch-remme",
+        "nb": "Sett med smartklokkeremmer",
+        "cs": "Sada řemínků pro chytré hodinky",
+        "sk": "Súprava remienkov pre inteligentné hodinky",
+        "hu": "Okosóra szíjszett",
+        "ro": "Set de curele pentru ceas inteligent",
+        "el": "Σετ λουριών για έξυπνο ρολόι",
+        "tr": "Akıllı saat kayış seti",
+        "uk": "Набір ремінців для розумного годинника",
+        "ar": "طقم أساور لساعة ذكية",
+        "ja": "スマートウォッチストラップセット",
+        "ko": "스마트워치 스트랩 세트",
+        "vi": "Bộ dây đeo đồng hồ thông minh"
+      }
+    },
+    {
+      "name": "Digital Sports Wristwatch",
+      "source": "Digital Sports Wristwatch",
+      "suffix": "",
+      "translations": {
+        "fi": "Digitaalinen urheilurannekello",
+        "da": "Digitalt sportsarmbåndsur",
+        "nb": "Digitalt sportsarmbåndsur",
+        "cs": "Digitální sportovní náramkové hodinky",
+        "sk": "Digitálne športové náramkové hodinky",
+        "hu": "Digitális sportkaróra",
+        "ro": "Ceas sport digital de mână",
+        "el": "Ψηφιακό αθλητικό ρολόι χειρός",
+        "tr": "Dijital spor kol saati",
+        "uk": "Цифровий спортивний наручний годинник",
+        "ar": "ساعة يد رياضية رقمية",
+        "ja": "デジタルスポーツ腕時計",
+        "ko": "디지털 스포츠 손목시계",
+        "vi": "Đồng hồ thể thao kỹ thuật số đeo tay"
+      }
+    }
+  ]
+}

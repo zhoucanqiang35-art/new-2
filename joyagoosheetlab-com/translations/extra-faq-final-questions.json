@@ -1,0 +1,79 @@
+{
+  "keys": [
+    "What is a Joyagoo spreadsheet and how do I use it?",
+    "How much is shipping, how long does it take, and can my item be sent?",
+    "What if warehouse photos show the wrong or a damaged item?"
+  ],
+  "rows": {
+    "fi": [
+      "Mikä on Joyagoo-tuotetaulukko ja miten sitä käytetään?",
+      "Paljonko toimitus maksaa, kuinka kauan se kestää ja voiko tuotteeni lähettää?",
+      "Entä jos varastokuvat näyttävät väärän tai vaurioituneen tuotteen?"
+    ],
+    "da": [
+      "Hvad er en Joyagoo-produktoversigt, og hvordan bruger jeg den?",
+      "Hvad koster fragt, hvor lang tid tager det, og kan min vare sendes?",
+      "Hvad hvis lagerbillederne viser den forkerte vare eller en beskadiget vare?"
+    ],
+    "nb": [
+      "Hva er en Joyagoo-produktoversikt, og hvordan bruker jeg den?",
+      "Hva koster frakten, hvor lang tid tar den, og kan varen min sendes?",
+      "Hva hvis lagerbildene viser feil vare eller en skadet vare?"
+    ],
+    "cs": [
+      "Co je produktový přehled Joyagoo a jak jej používat?",
+      "Kolik stojí doprava, jak dlouho trvá a lze moji položku odeslat?",
+      "Co když fotografie ze skladu ukazují nesprávné nebo poškozené zboží?"
+    ],
+    "sk": [
+      "Čo je produktový prehľad Joyagoo a ako ho používať?",
+      "Koľko stojí doprava, ako dlho trvá a možno moju položku odoslať?",
+      "Čo ak fotografie zo skladu zobrazujú nesprávny alebo poškodený tovar?"
+    ],
+    "hu": [
+      "Mi az a Joyagoo-terméktáblázat, és hogyan használhatom?",
+      "Mennyibe kerül a szállítás, mennyi ideig tart, és feladható-e a termékem?",
+      "Mi történik, ha a raktári képeken rossz vagy sérült termék látható?"
+    ],
+    "ro": [
+      "Ce este un tabel Joyagoo și cum îl folosesc?",
+      "Cât costă transportul, cât durează și poate fi expediat produsul meu?",
+      "Ce fac dacă fotografiile din depozit arată un produs greșit sau deteriorat?"
+    ],
+    "el": [
+      "Τι είναι ο κατάλογος Joyagoo και πώς τον χρησιμοποιώ;",
+      "Πόσο κοστίζει η αποστολή, πόσο διαρκεί και μπορεί να αποσταλεί το προϊόν μου;",
+      "Τι γίνεται αν οι φωτογραφίες της αποθήκης δείχνουν λάθος ή κατεστραμμένο προϊόν;"
+    ],
+    "tr": [
+      "Joyagoo ürün tablosu nedir ve nasıl kullanılır?",
+      "Kargo ücreti ne kadar, ne kadar sürer ve ürünüm gönderilebilir mi?",
+      "Depo fotoğraflarında yanlış veya hasarlı ürün görünüyorsa ne olur?"
+    ],
+    "uk": [
+      "Що таке таблиця товарів Joyagoo і як нею користуватися?",
+      "Скільки коштує доставка, скільки вона триває і чи можна надіслати мій товар?",
+      "Що робити, якщо на фото зі складу неправильний або пошкоджений товар?"
+    ],
+    "ar": [
+      "ما جدول منتجات Joyagoo وكيف أستخدمه؟",
+      "كم تكلفة الشحن وكم يستغرق وهل يمكن إرسال منتجي؟",
+      "ماذا لو أظهرت صور المستودع منتجاً خاطئاً أو تالفاً؟"
+    ],
+    "ja": [
+      "Joyagooの商品一覧とは何ですか？どう使いますか？",
+      "送料はいくらで、どのくらいかかり、商品は発送できますか？",
+      "倉庫の写真に違う商品や破損した商品が写っていたらどうしますか？"
+    ],
+    "ko": [
+      "Joyagoo 상품 목록이란 무엇이며 어떻게 사용하나요?",
+      "배송비와 배송 기간은 얼마나 되며 제 상품을 보낼 수 있나요?",
+      "창고 사진에 잘못된 상품이나 손상된 상품이 보이면 어떻게 하나요?"
+    ],
+    "vi": [
+      "Bảng sản phẩm Joyagoo là gì và tôi sử dụng như thế nào?",
+      "Phí vận chuyển là bao nhiêu, mất bao lâu và sản phẩm của tôi có thể gửi được không?",
+      "Nếu ảnh kho cho thấy sai sản phẩm hoặc sản phẩm bị hỏng thì sao?"
+    ]
+  }
+}

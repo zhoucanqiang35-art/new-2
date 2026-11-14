@@ -1,0 +1,132 @@
+{
+  "status": "draft-not-enabled",
+  "languages": [
+    {
+      "code": "fi",
+      "native": "Suomi",
+      "english": "Finnish",
+      "home": "Etusivu",
+      "spreadsheet": "Tuotetaulukko",
+      "howToBuy": "Näin ostat",
+      "faq": "Usein kysytyt kysymykset"
+    },
+    {
+      "code": "da",
+      "native": "Dansk",
+      "english": "Danish",
+      "home": "Forside",
+      "spreadsheet": "Produktoversigt",
+      "howToBuy": "Sådan køber du",
+      "faq": "Ofte stillede spørgsmål"
+    },
+    {
+      "code": "nb",
+      "native": "Norsk bokmål",
+      "english": "Norwegian Bokmål",
+      "home": "Hjem",
+      "spreadsheet": "Produktoversikt",
+      "howToBuy": "Slik kjøper du",
+      "faq": "Vanlige spørsmål"
+    },
+    {
+      "code": "cs",
+      "native": "Čeština",
+      "english": "Czech",
+      "home": "Domů",
+      "spreadsheet": "Přehled produktů",
+      "howToBuy": "Jak nakupovat",
+      "faq": "Časté dotazy"
+    },
+    {
+      "code": "hu",
+      "native": "Magyar",
+      "english": "Hungarian",
+      "home": "Kezdőlap",
+      "spreadsheet": "Terméklista",
+      "howToBuy": "Hogyan vásárolj",
+      "faq": "Gyakori kérdések"
+    },
+    {
+      "code": "ro",
+      "native": "Română",
+      "english": "Romanian",
+      "home": "Acasă",
+      "spreadsheet": "Lista de produse",
+      "howToBuy": "Cum cumperi",
+      "faq": "Întrebări frecvente"
+    },
+    {
+      "code": "el",
+      "native": "Ελληνικά",
+      "english": "Greek",
+      "home": "Αρχική",
+      "spreadsheet": "Κατάλογος προϊόντων",
+      "howToBuy": "Πώς να αγοράσετε",
+      "faq": "Συχνές ερωτήσεις"
+    },
+    {
+      "code": "tr",
+      "native": "Türkçe",
+      "english": "Turkish",
+      "home": "Ana sayfa",
+      "spreadsheet": "Ürün listesi",
+      "howToBuy": "Nasıl satın alınır",
+      "faq": "Sıkça sorulan sorular"
+    },
+    {
+      "code": "uk",
+      "native": "Українська",
+      "english": "Ukrainian",
+      "home": "Головна",
+      "spreadsheet": "Каталог товарів",
+      "howToBuy": "Як купувати",
+      "faq": "Поширені запитання"
+    },
+    {
+      "code": "ar",
+      "native": "العربية",
+      "english": "Arabic",
+      "home": "الرئيسية",
+      "spreadsheet": "قائمة المنتجات",
+      "howToBuy": "كيفية الشراء",
+      "faq": "الأسئلة الشائعة",
+      "direction": "rtl"
+    },
+    {
+      "code": "ja",
+      "native": "日本語",
+      "english": "Japanese",
+      "home": "ホーム",
+      "spreadsheet": "商品一覧",
+      "howToBuy": "購入方法",
+      "faq": "よくある質問"
+    },
+    {
+      "code": "ko",
+      "native": "한국어",
+      "english": "Korean",
+      "home": "홈",
+      "spreadsheet": "상품 목록",
+      "howToBuy": "구매 방법",
+      "faq": "자주 묻는 질문"
+    },
+    {
+      "code": "ru",
+      "native": "Русский",
+      "english": "Russian",
+      "home": "Главная",
+      "spreadsheet": "Таблица товаров",
+      "howToBuy": "Как купить",
+      "faq": "Частые вопросы"
+    },
+    {
+      "code": "id",
+      "native": "Bahasa Indonesia",
+      "english": "Indonesian",
+      "home": "Beranda",
+      "spreadsheet": "Daftar produk",
+      "howToBuy": "Cara membeli",
+      "faq": "Tanya jawab"
+    }
+  ]
+}

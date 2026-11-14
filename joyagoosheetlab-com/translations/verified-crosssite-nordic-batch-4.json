@@ -1,0 +1,188 @@
+{
+  "items": [
+    {
+      "name": "DX13 Versatile Casual Shorts",
+      "sourceId": "6904",
+      "translations": {
+        "fi": "DX13 monipuoliset vapaa-ajan shortsit"
+      }
+    },
+    {
+      "name": "Casual Fashion Product 75",
+      "sourceId": "6901",
+      "translations": {
+        "fi": "Rento muotituote 75",
+        "da": "Afslappet modeprodukt 75",
+        "nb": "Uformelt moteprodukt 75"
+      }
+    },
+    {
+      "name": "Sports T-Shirt",
+      "sourceId": "6888",
+      "translations": {
+        "fi": "Urheilu T-paita"
+      }
+    },
+    {
+      "name": "Summer Zipper Shorts",
+      "sourceId": "6877",
+      "translations": {
+        "fi": "Kesäiset vetoketjushortsit",
+        "da": "Sommer lynlåsshorts"
+      }
+    },
+    {
+      "name": "Denim Tears Shorts",
+      "sourceId": "6876",
+      "translations": {
+        "fi": "Denim Tears -shortsit",
+        "da": "Denim Tears Shorts",
+        "nb": "Denim Tears Shorts"
+      }
+    },
+    {
+      "name": "Embroidered Knit Hoodie",
+      "sourceId": "6872",
+      "translations": {
+        "fi": "Brodeerattu neulottu huppari",
+        "da": "Broderet strik hættetrøje",
+        "nb": "Brodert strikket hettegenser"
+      }
+    },
+    {
+      "name": "Premium Sports Shorts",
+      "sourceId": "6868",
+      "translations": {
+        "fi": "Premium-urheilushortsit",
+        "da": "Premium sportsshorts",
+        "nb": "Premium sportsshorts"
+      }
+    },
+    {
+      "name": "Basketball Sports Shorts",
+      "sourceId": "6864",
+      "translations": {
+        "fi": "Koripalloshortsit",
+        "da": "Basketball sportsshorts",
+        "nb": "Basketball sportsshorts"
+      }
+    },
+    {
+      "name": "Multi Color Sports Shorts",
+      "sourceId": "6845",
+      "translations": {
+        "fi": "Moniväriset urheilushortsit",
+        "da": "Sportsshorts i flere farver",
+        "nb": "Sportsshorts i flere farger"
+      }
+    },
+    {
+      "name": "Comfortable Summer Shorts",
+      "sourceId": "6841",
+      "translations": {
+        "fi": "Mukavat kesäshortsit",
+        "da": "Komfortable sommershorts",
+        "nb": "Komfortable sommershorts"
+      }
+    },
+    {
+      "name": "Classic Casual Pants",
+      "sourceId": "6829",
+      "translations": {
+        "fi": "Klassiset vapaa-ajan housut",
+        "nb": "Klassiske fritidsbukser"
+      }
+    },
+    {
+      "name": "Classic Everyday Shorts",
+      "sourceId": "6825",
+      "translations": {
+        "fi": "Klassiset jokapäiväiset shortsit",
+        "da": "Klassiske hverdagsshorts",
+        "nb": "Klassisk hverdagsshorts"
+      }
+    },
+    {
+      "name": "Embroidered Fashion Shorts",
+      "sourceId": "6804",
+      "translations": {
+        "fi": "Brodeeratut muotishortsit",
+        "da": "Broderede modeshorts",
+        "nb": "Broderte moteshorts"
+      }
+    },
+    {
+      "name": "Sports Training Set",
+      "sourceId": "6795",
+      "translations": {
+        "fi": "Urheiluharjoitussetti",
+        "da": "Sportstræningssæt",
+        "nb": "Sportstreningssett"
+      }
+    },
+    {
+      "name": "ESS Sports Shorts",
+      "sourceId": "6793",
+      "translations": {
+        "fi": "ESS-urheilushortsit",
+        "da": "ESS Sportsshorts",
+        "nb": "ESS Sportsshorts"
+      }
+    },
+    {
+      "name": "Premium Short Sleeve Set",
+      "sourceId": "6788",
+      "translations": {
+        "fi": "Premium lyhythihainen setti",
+        "da": "Premium kortærmet sæt",
+        "nb": "Premium kortermet sett"
+      }
+    },
+    {
+      "name": "L20 Knit Sports Shorts",
+      "sourceId": "6749",
+      "translations": {
+        "fi": "L20 Neulotut urheilushortsit",
+        "da": "L20 Strik Sportsshorts",
+        "nb": "L20 Strikket sportsshorts"
+      }
+    },
+    {
+      "name": "Jeans 6",
+      "sourceId": "6739",
+      "translations": {
+        "fi": "Farkut 6"
+      }
+    },
+    {
+      "name": "D975 Shorts",
+      "sourceId": "6732",
+      "translations": {
+        "fi": "D975 shortsit"
+      }
+    },
+    {
+      "name": "Shorts Series 67",
+      "sourceId": "6790",
+      "translations": {
+        "da": "Shorts-serie 67",
+        "nb": "Shortsserie 67"
+      }
+    },
+    {
+      "name": "Classic Matching Outfit Set",
+      "sourceId": "6724",
+      "translations": {
+        "da": "Klassisk matchende outfitsæt",
+        "nb": "Klassisk matchende antrekkssett"
+      }
+    },
+    {
+      "name": "Fashion Shorts ME AGT",
+      "sourceId": "6731",
+      "translations": {
+        "nb": "Moteshorts ME AGT"
+      }
+    }
+  ]
+}

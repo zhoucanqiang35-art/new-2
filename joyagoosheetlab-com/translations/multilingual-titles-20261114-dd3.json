@@ -1,0 +1,31 @@
+{
+  "8389": {
+    "name": "Letter-Print T-Shirt Collectio",
+    "translations": {
+      "cs": "Kolekce triček s potiskem písmen",
+      "hu": "Betűmintás pólókollekció",
+      "el": "Συλλογή μπλουζών με τύπωμα γραμμάτων",
+      "tr": "Harf baskılı tişört koleksiyonu",
+      "uk": "Колекція футболок із принтом літер",
+      "ar": "مجموعة قمصان بطبعة حروف",
+      "ja": "文字プリントTシャツコレクション",
+      "ko": "레터링 프린트 티셔츠 컬렉션",
+      "ru": "Коллекция футболок с буквенным принтом",
+      "id": "Koleksi kaus dengan cetakan huruf"
+    }
+  },
+  "8573": {
+    "name": "Cotton-Wreath Print Denim Jack",
+    "translations": {
+      "ru": "Коллекция джинсовых курток и джинсов с принтом хлопкового венка",
+      "id": "Koleksi jaket denim dan celana jins bermotif rangkaian kapas"
+    }
+  },
+  "8789": {
+    "name": "Boxed Boxer Briefs - CXS-10192",
+    "translations": {
+      "ru": "Боксеры в коробке CXS-1019275",
+      "id": "Celana boxer dalam kotak CXS-1019275"
+    }
+  }
+}

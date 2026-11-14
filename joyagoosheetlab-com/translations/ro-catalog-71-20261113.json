@@ -1,0 +1,430 @@
+{
+  "items": [
+    {
+      "name": "Goggle Knit Beanie",
+      "translations": {
+        "ro": "Căciulă tricotată cu ochelari"
+      }
+    },
+    {
+      "name": "Polo Player Cap Collection",
+      "translations": {
+        "ro": "Colecție de șepci cu jucător de polo"
+      }
+    },
+    {
+      "name": "Graphic Full-Face Balaclava",
+      "translations": {
+        "ro": "Balaclavă integrală cu imprimeu"
+      }
+    },
+    {
+      "name": "Zip-Detail Flared Trousers",
+      "translations": {
+        "ro": "Pantaloni evazați cu detaliu cu fermoar"
+      }
+    },
+    {
+      "name": "Wide Link Bracelet - 21 cm",
+      "translations": {
+        "ro": "Brățară cu zale late - 21 cm"
+      }
+    },
+    {
+      "name": "Gothic Charm Bracelet 032",
+      "translations": {
+        "ro": "Brățară cu pandantive gotice 032"
+      }
+    },
+    {
+      "name": "Orb Pendant Necklace 024",
+      "translations": {
+        "ro": "Colier cu pandantiv sferic 024"
+      }
+    },
+    {
+      "name": "Woven Tote Bag 003",
+      "translations": {
+        "ro": "Geantă tote țesută 003"
+      }
+    },
+    {
+      "name": "Logo Sports Backpack 002",
+      "translations": {
+        "ro": "Rucsac sport cu logo 002"
+      }
+    },
+    {
+      "name": "Tiger Head Camera Bag 6188",
+      "translations": {
+        "ro": "Geantă tip cameră cu cap de tigru 6188"
+      }
+    },
+    {
+      "name": "Slim Screw Motif Bangle",
+      "translations": {
+        "ro": "Brățară rigidă subțire cu motiv de șurub"
+      }
+    },
+    {
+      "name": "H Clasp Bangle 19 cm",
+      "translations": {
+        "ro": "Brățară rigidă cu închizătoare H de 19 cm"
+      }
+    },
+    {
+      "name": "Catie Screw Motif Bangle",
+      "translations": {
+        "ro": "Brățară rigidă Catie cu motiv de șurub"
+      }
+    },
+    {
+      "name": "YSL Chain Shoulder Bag 004",
+      "translations": {
+        "ro": "Geantă de umăr YSL cu lanț 004"
+      }
+    },
+    {
+      "name": "Coach Men's Camera Bag 9950",
+      "translations": {
+        "ro": "Geantă tip cameră Coach pentru bărbați 9950"
+      }
+    },
+    {
+      "name": "Supreme Backpack W2C-060",
+      "translations": {
+        "ro": "Rucsac Supreme W2C-060"
+      }
+    },
+    {
+      "name": "Camera Crossbody Bag 9022",
+      "translations": {
+        "ro": "Geantă tip cameră purtată transversal 9022"
+      }
+    },
+    {
+      "name": "Coach City 33 Tote Bag",
+      "translations": {
+        "ro": "Geantă tote Coach City 33"
+      }
+    },
+    {
+      "name": "Diesel Mini Bag Collection",
+      "translations": {
+        "ro": "Colecție de mini genți Diesel"
+      }
+    },
+    {
+      "name": "YSL Mini Chain Shoulder Bag",
+      "translations": {
+        "ro": "Mini geantă de umăr YSL cu lanț"
+      }
+    },
+    {
+      "name": "Distressed Patch Backpack",
+      "translations": {
+        "ro": "Rucsac cu aspect uzat și petice"
+      }
+    },
+    {
+      "name": "Shoulder Bag Collection 008",
+      "translations": {
+        "ro": "Colecție de genți de umăr 008"
+      }
+    },
+    {
+      "name": "Goyard Zip Wristlet Pouch",
+      "translations": {
+        "ro": "Borsetă de mână Goyard cu fermoar"
+      }
+    },
+    {
+      "name": "Supreme Belt Bag Collection",
+      "translations": {
+        "ro": "Colecție de genți de talie Supreme"
+      }
+    },
+    {
+      "name": "Cross Detail Travel Handbag",
+      "translations": {
+        "ro": "Geantă de călătorie cu detaliu în formă de cruce"
+      }
+    },
+    {
+      "name": "Hoodie and Pants Set DJ",
+      "translations": {
+        "ro": "Set de hanorac și pantaloni DJ"
+      }
+    },
+    {
+      "name": "1994 Graphic Zip-Up Hoodie",
+      "translations": {
+        "ro": "Hanorac cu fermoar și imprimeu 1994"
+      }
+    },
+    {
+      "name": "Riverside Graphic Hoodie",
+      "translations": {
+        "ro": "Hanorac cu imprimeu Riverside"
+      }
+    },
+    {
+      "name": "Tiger Graphic Zip-Up Hoodie",
+      "translations": {
+        "ro": "Hanorac cu fermoar și imprimeu cu tigru"
+      }
+    },
+    {
+      "name": "LV Knit Sweater Collection",
+      "translations": {
+        "ro": "Colecție de pulovere tricotate LV"
+      }
+    },
+    {
+      "name": "Zip-Up Hoodie and Pants Set",
+      "translations": {
+        "ro": "Set de hanorac cu fermoar și pantaloni"
+      }
+    },
+    {
+      "name": "FW24 Crewneck Sweater",
+      "translations": {
+        "ro": "Pulover FW24 cu guler rotund"
+      }
+    },
+    {
+      "name": "RL Crewneck Knit Sweater",
+      "translations": {
+        "ro": "Pulover tricotat RL cu guler rotund"
+      }
+    },
+    {
+      "name": "SLL Knit Sweater",
+      "translations": {
+        "ro": "Pulover tricotat SLL"
+      }
+    },
+    {
+      "name": "Air max Headset",
+      "translations": {
+        "ro": "Căști Air max"
+      }
+    },
+    {
+      "name": "DD01 Trendy Phone Case",
+      "translations": {
+        "ro": "Husă de telefon modernă DD01"
+      }
+    },
+    {
+      "name": "Headphones",
+      "translations": {
+        "ro": "Căști"
+      }
+    },
+    {
+      "name": "OKSTORE Phone Case 0075",
+      "translations": {
+        "ro": "Husă de telefon OKSTORE 0075"
+      }
+    },
+    {
+      "name": "DJ RM/W Phone Case",
+      "translations": {
+        "ro": "Husă de telefon DJ RM/W"
+      }
+    },
+    {
+      "name": "AP Accessories Collection",
+      "translations": {
+        "ro": "Colecție de accesorii AP"
+      }
+    },
+    {
+      "name": "Planet Basic Casual Shorts",
+      "translations": {
+        "ro": "Pantaloni scurți casual Planet Basic"
+      }
+    },
+    {
+      "name": "Corteiz Street Print Shorts",
+      "translations": {
+        "ro": "Pantaloni scurți Corteiz cu imprimeu street"
+      }
+    },
+    {
+      "name": "Jasonreps Graphic Shorts",
+      "translations": {
+        "ro": "Pantaloni scurți Jasonreps cu imprimeu"
+      }
+    },
+    {
+      "name": "Fashion Shorts OMGBUY",
+      "translations": {
+        "ro": "Pantaloni scurți la modă OMGBUY"
+      }
+    },
+    {
+      "name": "Casual Fashion Q2",
+      "translations": {
+        "ro": "Modă casual Q2"
+      }
+    },
+    {
+      "name": "RL Casual Trend Shorts",
+      "translations": {
+        "ro": "Pantaloni scurți casual moderni RL"
+      }
+    },
+    {
+      "name": "AI Casual Trend Pants 1-29",
+      "translations": {
+        "ro": "Pantaloni casual moderni AI 1-29"
+      }
+    },
+    {
+      "name": "X09 Casual Trend Shorts",
+      "translations": {
+        "ro": "Pantaloni scurți casual moderni X09"
+      }
+    },
+    {
+      "name": "BP Shark Head Shorts",
+      "translations": {
+        "ro": "Pantaloni scurți BP cu cap de rechin"
+      }
+    },
+    {
+      "name": "FF Classic Fashion Shorts",
+      "translations": {
+        "ro": "Pantaloni scurți clasici la modă FF"
+      }
+    },
+    {
+      "name": "L Animal Print Shorts",
+      "translations": {
+        "ro": "Pantaloni scurți L cu imprimeu animal"
+      }
+    },
+    {
+      "name": "Factory Casual Shorts",
+      "translations": {
+        "ro": "Pantaloni scurți casual Factory"
+      }
+    },
+    {
+      "name": "Casual T-Shirt LX Batch 326",
+      "translations": {
+        "ro": "Tricou casual LX lotul 326"
+      }
+    },
+    {
+      "name": "Assorted Brand Shorts",
+      "translations": {
+        "ro": "Pantaloni scurți de diverse mărci"
+      }
+    },
+    {
+      "name": "DD01 Casual Trend Shorts",
+      "translations": {
+        "ro": "Pantaloni scurți casual moderni DD01"
+      }
+    },
+    {
+      "name": "Premium Fashion Shorts 65",
+      "translations": {
+        "ro": "Pantaloni scurți premium la modă 65"
+      }
+    },
+    {
+      "name": "Casual Matching Set 006",
+      "translations": {
+        "ro": "Set casual asortat 006"
+      }
+    },
+    {
+      "name": "Black Graphic Tracksuit Set",
+      "translations": {
+        "ro": "Trening negru cu imprimeu"
+      }
+    },
+    {
+      "name": "Men's MMA Training Shorts",
+      "translations": {
+        "ro": "Pantaloni scurți de antrenament MMA pentru bărbați"
+      }
+    },
+    {
+      "name": "Logo Graphic Sports Set",
+      "translations": {
+        "ro": "Set sport cu logo și imprimeu"
+      }
+    },
+    {
+      "name": "Color-Block Beach Shorts",
+      "translations": {
+        "ro": "Pantaloni scurți de plajă în blocuri de culoare"
+      }
+    },
+    {
+      "name": "DX53 3D Print Sports Shorts",
+      "translations": {
+        "ro": "Pantaloni scurți sport DX53 cu imprimeu 3D"
+      }
+    },
+    {
+      "name": "C Streetwear Shorts",
+      "translations": {
+        "ro": "Pantaloni scurți streetwear C"
+      }
+    },
+    {
+      "name": "Streetwear Print Shorts",
+      "translations": {
+        "ro": "Pantaloni scurți cu imprimeu streetwear"
+      }
+    },
+    {
+      "name": "Men's Graphic Shorts 2025",
+      "translations": {
+        "ro": "Pantaloni scurți cu imprimeu pentru bărbați 2025"
+      }
+    },
+    {
+      "name": "HC Graphic Hoodie 3",
+      "translations": {
+        "ro": "Hanorac HC cu imprimeu 3"
+      }
+    },
+    {
+      "name": "Zip Jacket and Shorts Set",
+      "translations": {
+        "ro": "Set de jachetă cu fermoar și pantaloni scurți"
+      }
+    },
+    {
+      "name": "Casual Sweatshirt Set",
+      "translations": {
+        "ro": "Set casual de bluze sport"
+      }
+    },
+    {
+      "name": "Classic Puffer Jacket 007",
+      "translations": {
+        "ro": "Geacă matlasată clasică 007"
+      }
+    },
+    {
+      "name": "Gradient Streetwear Hoodie",
+      "translations": {
+        "ro": "Hanorac streetwear cu degradeu"
+      }
+    },
+    {
+      "name": "Embroidered Sweatshirt Set",
+      "translations": {
+        "ro": "Set de bluze sport cu broderie"
+      }
+    }
+  ]
+}

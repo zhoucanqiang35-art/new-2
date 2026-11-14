@@ -1,0 +1,359 @@
+{
+  "4167": {
+    "name": "Dior B22 Chunky Running Sneake",
+    "translations": {
+      "fi": "Dior B22 -massiiviset juoksutennarit",
+      "da": "Dior B22 chunky løbesneakers",
+      "nb": "Dior B22 chunky løpesneakers",
+      "ro": "Adidași masivi de alergare Dior B22"
+    }
+  },
+  "4169": {
+    "name": "Nike Air Max 95 Real GX Batch",
+    "translations": {
+      "fi": "Nike Air Max 95 Real GX -erä",
+      "da": "Nike Air Max 95 Real GX-batch",
+      "nb": "Nike Air Max 95 Real GX-batch"
+    }
+  },
+  "4177": {
+    "name": "Lanvin Curb Foshan WF04 Collec",
+    "translations": {
+      "fi": "Lanvin Curb Foshan WF04 -mallisto 1",
+      "da": "Lanvin Curb Foshan WF04 kollektion 1",
+      "nb": "Lanvin Curb Foshan WF04 kolleksjon 1",
+      "ro": "Colecție Lanvin Curb Foshan WF04 1"
+    }
+  },
+  "4178": {
+    "name": "Air Force 1 Low Collection",
+    "translations": {
+      "fi": "Air Force 1 Low -mallisto",
+      "da": "Air Force 1 Low-kollektion",
+      "nb": "Air Force 1 Low-kolleksjon",
+      "ro": "Colecție Air Force 1 Low"
+    }
+  },
+  "4186": {
+    "name": "Numeris Sneakers Collection",
+    "translations": {
+      "fi": "Numeris-tennareiden mallisto",
+      "da": "Kollektion af Numeris sneakers",
+      "nb": "Kolleksjon av Numeris sneakers"
+    }
+  },
+  "4190": {
+    "name": "Air Jordan 14 TK Batch Collect",
+    "translations": {
+      "fi": "Air Jordan 14 TK -erän mallisto",
+      "da": "Air Jordan 14 TK-batch kollektion",
+      "nb": "Air Jordan 14 TK-batch kolleksjon",
+      "ro": "Colecție Air Jordan 14 din lotul TK"
+    }
+  },
+  "4196": {
+    "name": "Dior B22 Collection",
+    "translations": {
+      "fi": "Dior B22 -mallisto",
+      "da": "Dior B22-kollektion",
+      "nb": "Dior B22-kolleksjon"
+    }
+  },
+  "4203": {
+    "name": "Air Jordan 4 Basketball Sneake",
+    "translations": {
+      "fi": "Air Jordan 4 -koripallotennarit DD01",
+      "da": "Air Jordan 4 basketballsneakers DD01",
+      "nb": "Air Jordan 4 basketballsneakers DD01",
+      "ro": "Adidași de baschet Air Jordan 4 DD01"
+    }
+  },
+  "4207": {
+    "name": "Air Jordan 4 GX Batch Collecti",
+    "translations": {
+      "fi": "Air Jordan 4 GX -erän mallisto",
+      "da": "Air Jordan 4 GX-batch kollektion",
+      "nb": "Air Jordan 4 GX-batch kolleksjon",
+      "ro": "Colecție Air Jordan 4 din lotul GX"
+    }
+  },
+  "4208": {
+    "name": "Louis Vuitton Trainer AM Batch",
+    "translations": {
+      "fi": "Louis Vuitton Trainer AM -erä",
+      "da": "Louis Vuitton Trainer AM-batch",
+      "nb": "Louis Vuitton Trainer AM-batch"
+    }
+  },
+  "4210": {
+    "name": "Dior B23 GD Batch Collection",
+    "translations": {
+      "da": "Dior B23 GD-batch kollektion",
+      "nb": "Dior B23 GD-batch kolleksjon",
+      "ro": "Colecție Dior B23 din lotul GD"
+    }
+  },
+  "4213": {
+    "name": "Air Jordan 5 Y3 Batch Collecti",
+    "translations": {
+      "fi": "Air Jordan 5 Y3 -erän mallisto",
+      "da": "Air Jordan 5 Y3-batch kollektion",
+      "nb": "Air Jordan 5 Y3-batch kolleksjon",
+      "ro": "Colecție Air Jordan 5 din lotul Y3"
+    }
+  },
+  "4214": {
+    "name": "Nike Air Max 95 MX Batch Colle",
+    "translations": {
+      "fi": "Nike Air Max 95 MX -erän mallisto",
+      "da": "Nike Air Max 95 MX-batch kollektion",
+      "nb": "Nike Air Max 95 MX-batch kolleksjon",
+      "ro": "Colecție Nike Air Max 95 din lotul MX"
+    }
+  },
+  "4218": {
+    "name": "Gel-Kayano 14 Retro Running Sh",
+    "translations": {
+      "fi": "Gel-Kayano 14 -retrojuoksukengät",
+      "da": "Gel-Kayano 14 retro løbesko",
+      "nb": "Gel-Kayano 14 retro løpesko",
+      "ro": "Pantofi de alergare retro Gel-Kayano 14"
+    }
+  },
+  "4223": {
+    "name": "S2 Performance Basketball Snea",
+    "translations": {
+      "fi": "S2-suorituskykyisten koripallotennareiden mallisto",
+      "da": "Kollektion af S2 performance-basketballsneakers",
+      "nb": "Kolleksjon av S2 performance-basketballsneakers",
+      "ro": "Colecție de adidași de performanță pentru baschet S2"
+    }
+  },
+  "4225": {
+    "name": "DD Batch Classic Casual Sneake",
+    "translations": {
+      "fi": "DD-erän klassiset vapaa-ajan tennarit",
+      "da": "Klassiske casual sneakers i DD-batch",
+      "nb": "Klassiske casual sneakers i DD-batch",
+      "ro": "Adidași casual clasici din lotul DD"
+    }
+  },
+  "4227": {
+    "name": "LJR Premium Basketball Sneaker",
+    "translations": {
+      "fi": "LJR premium-koripallotennarit",
+      "da": "LJR premium basketballsneakers",
+      "nb": "LJR premium basketballsneakers"
+    }
+  },
+  "4231": {
+    "name": "Vintage Distressed Star Sneake",
+    "translations": {
+      "fi": "Vintage-henkisten kulutettujen tähtitennareiden mallisto",
+      "da": "Kollektion af vintage sneakers med stjernemotiv og slidt look",
+      "nb": "Kolleksjon av vintage sneakers med stjernemotiv og slitt utseende",
+      "ro": "Colecție de adidași vintage cu stea și aspect uzat"
+    }
+  },
+  "4234": {
+    "name": "Custom Extended-Size Casual Sh",
+    "translations": {
+      "fi": "Yksilölliset vapaa-ajan kengät laajalla kokovalikoimalla",
+      "da": "Specialdesignede fritidssko i ekstra størrelser",
+      "nb": "Spesialdesignede fritidssko i ekstra størrelser"
+    }
+  },
+  "4235": {
+    "name": "R1 Batch Retro Basketball Snea",
+    "translations": {
+      "fi": "R1-erän retrohenkiset koripallotennarit",
+      "da": "R1-batch retro basketballsneakers",
+      "nb": "R1-batch retro basketballsneakers",
+      "ro": "Adidași retro de baschet din lotul R1"
+    }
+  },
+  "4239": {
+    "name": "ANS-012 Fashion Casual Sneaker",
+    "translations": {
+      "fi": "ANS-012 vapaa-ajan tennarit",
+      "da": "ANS-012 casual sneakers",
+      "nb": "ANS-012 casual sneakers"
+    }
+  },
+  "4240": {
+    "name": "J3 Retro Black Cat Basketball",
+    "translations": {
+      "fi": "J3 Retro Black Cat -koripallokengät",
+      "da": "J3 Retro Black Cat basketballsko",
+      "nb": "J3 Retro Black Cat basketballsko"
+    }
+  },
+  "4241": {
+    "name": "Max 95 Air-Cushion Running Sho",
+    "translations": {
+      "fi": "Max 95 -juoksukengät ilmatyynyvaimennuksella",
+      "da": "Max 95 løbesko med luftpude",
+      "nb": "Max 95 løpesko med luftpute",
+      "ro": "Pantofi de alergare Max 95 cu pernă de aer"
+    }
+  },
+  "4242": {
+    "name": "Retro 11 Low Basketball Sneake",
+    "translations": {
+      "fi": "Retro 11 Low -koripallotennarit",
+      "da": "Retro 11 Low basketballsneakers",
+      "nb": "Retro 11 Low basketballsneakers",
+      "ro": "Adidași de baschet Retro 11 Low"
+    }
+  },
+  "4244": {
+    "name": "9060 Collaborative Retro Runni",
+    "translations": {
+      "da": "9060 samarbejdskollektion retro løbesko",
+      "nb": "9060 samarbeidskolleksjon retro løpesko",
+      "ro": "Pantofi de alergare retro 9060 din colecție colaborativă"
+    }
+  },
+  "4249": {
+    "name": "NYC Series Premium Running Sho",
+    "translations": {
+      "fi": "NYC-sarjan laadukkaat juoksukengät",
+      "da": "NYC-seriens premium løbesko",
+      "nb": "NYC-seriens premium løpesko"
+    }
+  },
+  "4255": {
+    "name": "America's Cup Patent-Mesh Snea",
+    "translations": {
+      "fi": "America's Cup -tennarit kiiltonahalla ja verkkokankaalla",
+      "da": "America's Cup sneakers med lak og mesh",
+      "nb": "America's Cup sneakers med lakk og mesh"
+    }
+  },
+  "4263": {
+    "name": "Samba-Style Low-Top Casual Sne",
+    "translations": {
+      "da": "Lave casual sneakers i Samba-stil",
+      "nb": "Lave casual sneakers i Samba-stil",
+      "ro": "Adidași casual joși în stil Samba"
+    }
+  },
+  "4266": {
+    "name": "LJR Premium Retro Basketball S",
+    "translations": {
+      "fi": "LJR premium-retrokoripallokengät",
+      "da": "LJR premium retro basketballsko",
+      "nb": "LJR premium retro basketballsko",
+      "ro": "Pantofi de baschet retro premium LJR"
+    }
+  },
+  "4272": {
+    "name": "Bape-Style Low-Top Sneakers Co",
+    "translations": {
+      "fi": "BAPE-tyylisten matalavartisten tennareiden mallisto",
+      "da": "Kollektion af lave sneakers i BAPE-stil",
+      "nb": "Kolleksjon av lave sneakers i BAPE-stil"
+    }
+  },
+  "4273": {
+    "name": "Monogram Platform Canvas Sneak",
+    "translations": {
+      "fi": "Monogrammikuviolliset kangastennarit korokepohjalla",
+      "da": "Kanvassneakers med monogram og plateau",
+      "nb": "Kanvassneakers med monogram og platåsåle",
+      "ro": "Adidași din pânză cu monogramă și platformă"
+    }
+  },
+  "4278": {
+    "name": "Fashion Star Distressed Sneake",
+    "translations": {
+      "fi": "Fashion Star -tennarit kulutetulla ilmeellä",
+      "da": "Fashion Star sneakers med slidt look",
+      "nb": "Fashion Star sneakers med slitt utseende",
+      "ro": "Adidași Fashion Star cu aspect uzat"
+    }
+  },
+  "4285": {
+    "name": "Track Series Premium Chunky Sn",
+    "translations": {
+      "da": "Track-seriens premium chunky sneakers",
+      "nb": "Track-seriens premium chunky sneakers",
+      "ro": "Adidași masivi premium din seria Track"
+    }
+  },
+  "4295": {
+    "name": "Skate Series Premium Low-Top S",
+    "translations": {
+      "fi": "Skate-sarjan matalavartiset premium-kengät",
+      "da": "Skate-seriens lave premiumsko",
+      "nb": "Skate-seriens lave premiumsko"
+    }
+  },
+  "4302": {
+    "name": "2002R Fashion Casual Sports Sh",
+    "translations": {
+      "fi": "2002R vapaa-ajan urheilukengät",
+      "da": "2002R casual sportssko",
+      "nb": "2002R casual sportssko"
+    }
+  },
+  "4313": {
+    "name": "AD Classic Retro Campus Sneake",
+    "translations": {
+      "fi": "AD Classic Retro Campus -tennarit",
+      "da": "AD Classic Retro Campus sneakers",
+      "nb": "AD Classic Retro Campus sneakers",
+      "ro": "Adidași AD Classic Retro Campus"
+    }
+  },
+  "4319": {
+    "name": "Air Max Plus Premium Cushion S",
+    "translations": {
+      "fi": "Air Max Plus -tennarit premium-vaimennuksella",
+      "da": "Air Max Plus sneakers med premium støddæmpning",
+      "nb": "Air Max Plus sneakers med premium demping"
+    }
+  },
+  "4327": {
+    "name": "America's Cup Jade Batch Sneak",
+    "translations": {
+      "fi": "America's Cup Jade -erän tennarit",
+      "da": "America's Cup sneakers, Jade-batch",
+      "nb": "America's Cup sneakers, Jade-batch"
+    }
+  },
+  "4328": {
+    "name": "Gel-NYC Sneakers Collection",
+    "translations": {
+      "fi": "Gel-NYC-tennareiden mallisto",
+      "da": "Kollektion af Gel-NYC sneakers",
+      "nb": "Kolleksjon av Gel-NYC sneakers"
+    }
+  },
+  "4329": {
+    "name": "Distressed Low-Top Canvas Snea",
+    "translations": {
+      "fi": "Kulutetut matalavartiset kangastennarit",
+      "da": "Slidte lave kanvassneakers",
+      "nb": "Slitte lave kanvassneakers",
+      "ro": "Adidași joși din pânză cu aspect uzat"
+    }
+  },
+  "4334": {
+    "name": "Track 3 Sneakers Collection",
+    "translations": {
+      "fi": "Track 3 -tennareiden mallisto",
+      "da": "Kollektion af Track 3 sneakers",
+      "nb": "Kolleksjon av Track 3 sneakers"
+    }
+  },
+  "4348": {
+    "name": "American Classic Casual Sneake",
+    "translations": {
+      "fi": "American Classic -vapaa-ajan tennarit",
+      "da": "American Classic casual sneakers",
+      "nb": "American Classic casual sneakers",
+      "ro": "Adidași casual American Classic"
+    }
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "items": [
+    {
+      "name": "Textured Crewneck Knit Sweater",
+      "translations": {
+        "fi": "Pintakuvioitu pyöreäkauluksinen neule",
+        "da": "Struktureret striktrøje med rund hals",
+        "nb": "Strukturert strikkegenser med rund hals",
+        "cs": "Strukturovaný pletený svetr s kulatým výstřihem",
+        "sk": "Štruktúrovaný pletený sveter s okrúhlym výstrihom",
+        "hu": "Texturált kötött pulóver kerek nyakkal",
+        "ro": "Pulover tricotat texturat cu decolteu rotund",
+        "el": "Πλεκτό πουλόβερ με υφή και στρογγυλή λαιμόκοψη",
+        "tr": "Dokulu bisiklet yaka örgü kazak",
+        "uk": "Фактурний в’язаний светр із круглим вирізом",
+        "ar": "كنزة محبوكة بنسيج بارز وياقة مستديرة",
+        "ja": "表情のある編み地のクルーネックニット",
+        "ko": "텍스처 크루넥 니트 스웨터",
+        "vi": "Áo len cổ tròn bề mặt dệt nổi"
+      }
+    },
+    {
+      "name": "Cable-Knit Crewneck Sweater",
+      "translations": {
+        "fi": "Palmikkoneule pyöreällä kaula-aukolla",
+        "cs": "Copánkový svetr s kulatým výstřihem",
+        "sk": "Vrkočový sveter s okrúhlym výstrihom",
+        "hu": "Csavart mintás pulóver kerek nyakkal",
+        "el": "Πουλόβερ με πλέξη κοτσίδα και στρογγυλή λαιμόκοψη",
+        "tr": "Saç örgülü bisiklet yaka kazak",
+        "uk": "Светр косичної в’язки з круглим вирізом",
+        "ar": "كنزة محبوكة بضفائر وياقة مستديرة",
+        "ja": "ケーブル編みクルーネックセーター",
+        "ko": "케이블 니트 크루넥 스웨터",
+        "vi": "Áo len cổ tròn đan vặn thừng"
+      }
+    },
+    {
+      "name": "Fashion Knit Sweater",
+      "translations": {
+        "cs": "Módní pletený svetr",
+        "sk": "Módny pletený sveter",
+        "hu": "Divatos kötött pulóver",
+        "el": "Μοντέρνο πλεκτό πουλόβερ",
+        "tr": "Moda örgü kazak",
+        "uk": "Модний в’язаний светр",
+        "ar": "كنزة محبوكة عصرية",
+        "ja": "ファッションニットセーター",
+        "ko": "패션 니트 스웨터",
+        "vi": "Áo len thời trang"
+      }
+    },
+    {
+      "name": "Cotton Zip-Up Hoodie Jacket",
+      "translations": {
+        "cs": "Bavlněná mikina s kapucí na zip",
+        "sk": "Bavlnená mikina s kapucňou na zips",
+        "hu": "Pamut cipzáras kapucnis felső",
+        "el": "Βαμβακερό φούτερ με κουκούλα και φερμουάρ",
+        "tr": "Pamuklu fermuarlı kapüşonlu üst",
+        "uk": "Бавовняне худі на блискавці",
+        "ar": "سترة هودي قطنية بسحاب",
+        "ja": "コットンジップアップパーカー",
+        "ko": "면 집업 후드 재킷",
+        "vi": "Áo hoodie cotton khóa kéo"
+      }
+    },
+    {
+      "name": "Casual Zip-Up Hoodie Jacket",
+      "translations": {
+        "da": "Afslappet hættetrøje med lynlås",
+        "nb": "Avslappet hettejakke med glidelås",
+        "cs": "Volná mikina s kapucí na zip",
+        "sk": "Voľná mikina s kapucňou na zips",
+        "hu": "Laza cipzáras kapucnis felső",
+        "el": "Casual φούτερ με κουκούλα και φερμουάρ",
+        "tr": "Günlük fermuarlı kapüşonlu üst",
+        "uk": "Повсякденне худі на блискавці",
+        "ar": "سترة هودي كاجوال بسحاب",
+        "ja": "カジュアルジップアップパーカー",
+        "ko": "캐주얼 집업 후드 재킷",
+        "vi": "Áo hoodie khóa kéo thường ngày"
+      }
+    },
+    {
+      "name": "Hooded Padded Winter Jacket",
+      "translations": {
+        "cs": "Prošívaná zimní bunda s kapucí",
+        "sk": "Prešívaná zimná bunda s kapucňou",
+        "hu": "Kapucnis bélelt télikabát",
+        "el": "Χειμερινό μπουφάν με επένδυση και κουκούλα",
+        "tr": "Kapüşonlu dolgulu kışlık mont",
+        "uk": "Утеплена зимова куртка з капюшоном",
+        "ar": "سترة شتوية مبطنة بغطاء رأس",
+        "ja": "フード付き中綿ウィンタージャケット",
+        "ko": "후드 패딩 겨울 재킷",
+        "vi": "Áo khoác mùa đông có mũ và lớp đệm"
+      }
+    },
+    {
+      "name": "Distressed Waxed Denim Jacket",
+      "translations": {
+        "fi": "Kulutettu vahattu farkkutakki",
+        "da": "Slidt vokset denimjakke",
+        "nb": "Slitt vokset denimjakke",
+        "cs": "Sepraná voskovaná džínová bunda",
+        "sk": "Ošúchaná voskovaná džínsová bunda",
+        "hu": "Koptatott viaszos farmerdzseki",
+        "ro": "Jachetă din denim cerat cu aspect uzat",
+        "el": "Κερωμένο τζιν μπουφάν με φθαρμένη όψη",
+        "tr": "Eskitme mumlu kot ceket",
+        "uk": "Вощена джинсова куртка з ефектом потертості",
+        "ar": "سترة جينز مشمعة بمظهر معتق",
+        "ja": "ダメージ加工のワックスデニムジャケット",
+        "ko": "빈티지 워싱 왁스 데님 재킷",
+        "vi": "Áo khoác denim phủ sáp hiệu ứng cũ"
+      }
+    },
+    {
+      "name": "Classic Premium Down Jacket",
+      "translations": {
+        "cs": "Klasická prémiová péřová bunda",
+        "sk": "Klasická prémiová páperová bunda",
+        "hu": "Klasszikus prémium pehelykabát",
+        "el": "Κλασικό premium πουπουλένιο μπουφάν",
+        "tr": "Klasik premium kuş tüyü mont",
+        "uk": "Класична преміальна пухова куртка",
+        "ar": "سترة ريش كلاسيكية فاخرة",
+        "ja": "クラシックプレミアムダウンジャケット",
+        "ko": "클래식 프리미엄 다운 재킷",
+        "vi": "Áo khoác lông vũ cao cấp cổ điển"
+      }
+    },
+    {
+      "name": "Classic Everyday Shorts",
+      "translations": {
+        "cs": "Klasické šortky na každý den",
+        "sk": "Klasické šortky na každý deň",
+        "hu": "Klasszikus mindennapi rövidnadrág",
+        "el": "Κλασικό σορτς καθημερινής χρήσης",
+        "tr": "Klasik günlük şort",
+        "uk": "Класичні повсякденні шорти",
+        "ar": "شورت كلاسيكي للاستخدام اليومي",
+        "ja": "クラシックなデイリーショーツ",
+        "ko": "클래식 데일리 쇼츠",
+        "vi": "Quần short cổ điển mặc hằng ngày"
+      }
+    },
+    {
+      "name": "Summer Zipper Shorts",
+      "translations": {
+        "nb": "Sommershorts med glidelås",
+        "cs": "Letní šortky se zipem",
+        "sk": "Letné šortky so zipsom",
+        "hu": "Nyári cipzáras rövidnadrág",
+        "el": "Καλοκαιρινό σορτς με φερμουάρ",
+        "tr": "Fermuarlı yazlık şort",
+        "uk": "Літні шорти на блискавці",
+        "ar": "شورت صيفي بسحاب",
+        "ja": "ジッパー付きサマーショーツ",
+        "ko": "지퍼 여름 쇼츠",
+        "vi": "Quần short mùa hè có khóa kéo"
+      }
+    },
+    {
+      "name": "High Quality Basketball Shorts",
+      "translations": {
+        "fi": "Laadukkaat koripalloshortsit",
+        "da": "Basketballshorts i høj kvalitet",
+        "nb": "Basketballshorts i høy kvalitet",
+        "cs": "Kvalitní basketbalové šortky",
+        "sk": "Kvalitné basketbalové šortky",
+        "hu": "Kiváló minőségű kosárlabda rövidnadrág",
+        "ro": "Pantaloni scurți de baschet de calitate",
+        "el": "Σορτς μπάσκετ υψηλής ποιότητας",
+        "tr": "Yüksek kaliteli basketbol şortu",
+        "uk": "Якісні баскетбольні шорти",
+        "ar": "شورت كرة سلة عالي الجودة",
+        "ja": "高品質バスケットボールショーツ",
+        "ko": "고품질 농구 쇼츠",
+        "vi": "Quần short bóng rổ chất lượng cao"
+      }
+    },
+    {
+      "name": "Multi Color Sports Shorts",
+      "translations": {
+        "cs": "Vícebarevné sportovní šortky",
+        "sk": "Viacfarebné športové šortky",
+        "hu": "Többszínű sport rövidnadrág",
+        "el": "Πολύχρωμο αθλητικό σορτς",
+        "tr": "Çok renkli spor şort",
+        "uk": "Різнокольорові спортивні шорти",
+        "ar": "شورت رياضي متعدد الألوان",
+        "ja": "マルチカラーのスポーツショーツ",
+        "ko": "멀티 컬러 스포츠 쇼츠",
+        "vi": "Quần short thể thao nhiều màu"
+      }
+    },
+    {
+      "name": "Embroidered Knit Hoodie",
+      "translations": {
+        "cs": "Vyšívaná pletená mikina s kapucí",
+        "sk": "Vyšívaná pletená mikina s kapucňou",
+        "hu": "Hímzett kötött kapucnis pulóver",
+        "el": "Κεντημένο πλεκτό φούτερ με κουκούλα",
+        "tr": "İşlemeli örgü kapüşonlu üst",
+        "uk": "В’язане худі з вишивкою",
+        "ar": "هودي محبوك مطرز",
+        "ja": "刺繍入りニットパーカー",
+        "ko": "자수 니트 후드티",
+        "vi": "Áo hoodie dệt kim thêu"
+      }
+    },
+    {
+      "name": "Solid Color Knee Length Shorts",
+      "translations": {
+        "fi": "Yksiväriset polvipituiset shortsit",
+        "da": "Ensfarvede knælange shorts",
+        "nb": "Ensfarget knelang shorts",
+        "cs": "Jednobarevné šortky ke kolenům",
+        "sk": "Jednofarebné šortky po kolená",
+        "hu": "Egyszínű térdig érő rövidnadrág",
+        "ro": "Pantaloni scurți uni până la genunchi",
+        "el": "Μονόχρωμο σορτς έως το γόνατο",
+        "tr": "Düz renk diz boyu şort",
+        "uk": "Однотонні шорти до колін",
+        "ar": "شورت سادة بطول الركبة",
+        "ja": "無地の膝丈ショーツ",
+        "ko": "단색 무릎 길이 쇼츠",
+        "vi": "Quần short trơn dài đến gối"
+      }
+    }
+  ]
+}

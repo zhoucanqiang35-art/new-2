@@ -1,0 +1,64 @@
+{
+  "keys": [
+    "Find the size chart on the specific listing. Measure a similar garment you own while it lies flat, then compare the chest, shoulder, length and sleeve measurements. For trousers, compare waist, rise, inseam and thigh; for shoes, check foot length and the seller’s size guidance.",
+    "Different sellers may measure in different ways and allow a small tolerance. If the chart is missing, confusing or between sizes, request clarification before paying instead of relying on the size label alone."
+  ],
+  "rows": {
+    "fi": [
+      "Etsi kokotaulukko kyseisestä ilmoituksesta. Mittaa vastaava omistamasi vaate tasaiselle alustalle asetettuna ja vertaa rinnan, hartioiden, pituuden ja hihojen mittoja. Housuissa vertaa vyötäröä, haaran korkeutta, sisälahjetta ja reittä; kengissä tarkista jalan pituus ja myyjän koko-ohje.",
+      "Eri myyjät voivat mitata eri tavoin ja sallia pienen mittaeron. Jos taulukko puuttuu, on epäselvä tai jäät kokojen väliin, pyydä tarkennusta ennen maksamista sen sijaan, että luotat pelkkään kokomerkintään."
+    ],
+    "da": [
+      "Find størrelsesskemaet på den konkrete annonce. Mål et lignende stykke tøj, du ejer, mens det ligger fladt, og sammenlign bryst, skuldre, længde og ærmer. For bukser sammenlignes talje, skridthøjde, indvendig benlængde og lår; for sko kontrolleres fodlængde og sælgerens størrelsesvejledning.",
+      "Sælgere kan måle forskelligt og tillade en lille tolerance. Hvis skemaet mangler, er uklart, eller du ligger mellem størrelser, så bed om en afklaring før betaling i stedet for kun at stole på størrelsesmærket."
+    ],
+    "nb": [
+      "Finn størrelsestabellen i den aktuelle annonsen. Mål et lignende plagg du eier mens det ligger flatt, og sammenlign bryst, skuldre, lengde og ermer. For bukser sammenlignes midje, livhøyde, innvendig benlengde og lår; for sko sjekkes fotlengde og selgerens størrelsesveiledning.",
+      "Selgere kan måle på ulike måter og tillate en liten toleranse. Hvis tabellen mangler, er uklar eller du ligger mellom størrelser, be om avklaring før betaling i stedet for å stole bare på størrelsesetiketten."
+    ],
+    "cs": [
+      "Najděte tabulku velikostí u konkrétní nabídky. Změřte podobný oděv, který vlastníte, položený naplocho, a porovnejte hrudník, ramena, délku a rukávy. U kalhot porovnejte pas, sed, vnitřní délku nohavice a stehno; u bot ověřte délku chodidla a pokyny prodejce k velikosti.",
+      "Různí prodejci mohou měřit odlišně a připouštět malou toleranci. Pokud tabulka chybí, je nejasná nebo jste mezi velikostmi, požádejte před zaplacením o upřesnění a nespoléhejte pouze na označení velikosti."
+    ],
+    "sk": [
+      "Nájdite tabuľku veľkostí pri konkrétnej ponuke. Zmerajte podobný odev, ktorý vlastníte, položený naplocho, a porovnajte hrudník, ramená, dĺžku a rukávy. Pri nohaviciach porovnajte pás, sed, vnútornú dĺžku nohavice a stehno; pri topánkach overte dĺžku chodidla a pokyny predajcu k veľkosti.",
+      "Rôzni predajcovia môžu merať odlišne a pripúšťať malú toleranciu. Ak tabuľka chýba, je nejasná alebo ste medzi veľkosťami, požiadajte pred zaplatením o spresnenie a nespoliehajte sa len na označenie veľkosti."
+    ],
+    "hu": [
+      "Keresse meg a mérettáblázatot az adott hirdetésben. Mérjen le egy hasonló, saját ruhadarabot sík felületre fektetve, majd hasonlítsa össze a mell-, váll-, hossz- és ujjméreteket. Nadrágnál a derekat, ülepét, belső szárhosszt és combot; cipőnél a lábhosszt és az eladó méretútmutatóját ellenőrizze.",
+      "Az eladók eltérően mérhetnek, és kis eltérést engedhetnek meg. Ha a táblázat hiányzik, nem egyértelmű, vagy két méret közé esik, fizetés előtt kérjen pontosítást, ne hagyatkozzon kizárólag a méretcímkére."
+    ],
+    "ro": [
+      "Găsește tabelul de mărimi în anunțul respectiv. Măsoară un articol similar pe care îl deții, așezat pe o suprafață plană, apoi compară pieptul, umerii, lungimea și mânecile. Pentru pantaloni compară talia, înălțimea taliei, lungimea interioară și coapsa; pentru pantofi verifică lungimea piciorului și ghidul de mărimi al vânzătorului.",
+      "Vânzătorii pot măsura diferit și pot permite o mică toleranță. Dacă tabelul lipsește, este neclar sau te afli între mărimi, cere clarificări înainte de plată în loc să te bazezi doar pe eticheta de mărime."
+    ],
+    "el": [
+      "Βρείτε τον πίνακα μεγεθών στη συγκεκριμένη αγγελία. Μετρήστε ένα παρόμοιο ρούχο που έχετε απλωμένο σε επίπεδη επιφάνεια και συγκρίνετε στήθος, ώμους, μήκος και μανίκια. Για παντελόνια συγκρίνετε μέση, ύψος καβάλου, εσωτερικό μήκος και μηρό· για παπούτσια ελέγξτε το μήκος ποδιού και τις οδηγίες μεγέθους του πωλητή.",
+      "Οι πωλητές μπορεί να μετρούν διαφορετικά και να επιτρέπουν μικρή απόκλιση. Αν ο πίνακας λείπει, είναι ασαφής ή βρίσκεστε ανάμεσα σε μεγέθη, ζητήστε διευκρίνιση πριν πληρώσετε αντί να βασιστείτε μόνο στην ετικέτα μεγέθους."
+    ],
+    "tr": [
+      "İlgili ilandaki beden tablosunu bulun. Sahip olduğunuz benzer bir giysiyi düz bir zemine sererek ölçün; göğüs, omuz, uzunluk ve kol ölçülerini karşılaştırın. Pantolon için bel, ağ yüksekliği, iç bacak ve uyluğu; ayakkabı için ayak uzunluğunu ve satıcının beden rehberini kontrol edin.",
+      "Satıcılar farklı ölçüm yapabilir ve küçük bir tolerans belirtebilir. Tablo eksik veya karışıksa ya da iki beden arasında kalıyorsanız yalnızca beden etiketine güvenmek yerine ödeme öncesinde açıklama isteyin."
+    ],
+    "uk": [
+      "Знайдіть таблицю розмірів у конкретному оголошенні. Виміряйте схожий одяг, який маєте, розклавши його рівно, і порівняйте груди, плечі, довжину та рукави. Для штанів порівняйте талію, висоту посадки, внутрішній шов і стегно; для взуття перевірте довжину стопи та рекомендації продавця.",
+      "Продавці можуть вимірювати по-різному й допускати невелику похибку. Якщо таблиці немає, вона незрозуміла або ви між розмірами, попросіть уточнення перед оплатою, а не покладайтеся лише на маркування розміру."
+    ],
+    "ar": [
+      "ابحث عن جدول المقاسات في العرض المحدد. قس قطعة مشابهة لديك وهي مفرودة ثم قارن قياسات الصدر والكتفين والطول والأكمام. في السراويل قارن الخصر وارتفاع الحجر والطول الداخلي والفخذ؛ وفي الأحذية تحقق من طول القدم وإرشادات البائع للمقاس.",
+      "قد يستخدم البائعون طرق قياس مختلفة ويسمحون بهامش بسيط. إذا كان الجدول مفقودًا أو غير واضح أو كنت بين مقاسين، فاطلب توضيحًا قبل الدفع بدلًا من الاعتماد على ملصق المقاس وحده."
+    ],
+    "ja": [
+      "該当する商品情報のサイズ表を確認してください。手持ちの似た服を平らに置いて測り、胸囲、肩幅、着丈、袖丈を比較します。パンツはウエスト、股上、股下、太ももを、靴は足の長さと販売者のサイズ案内を確認してください。",
+      "販売者によって測り方が異なり、多少の誤差が認められる場合があります。表がない、わかりにくい、またはサイズの中間に当たる場合は、サイズ表記だけに頼らず、支払い前に確認してください。"
+    ],
+    "ko": [
+      "해당 판매 정보에서 사이즈표를 찾으세요. 가지고 있는 비슷한 옷을 평평하게 놓고 측정한 뒤 가슴, 어깨, 길이와 소매 치수를 비교하세요. 바지는 허리, 밑위, 안쪽 다리 길이와 허벅지를 비교하고 신발은 발 길이와 판매자의 사이즈 안내를 확인하세요.",
+      "판매자마다 측정 방식이 다르고 작은 오차를 허용할 수 있습니다. 표가 없거나 혼란스럽거나 두 사이즈 사이에 있다면 사이즈 표기만 믿지 말고 결제 전에 확인을 요청하세요."
+    ],
+    "vi": [
+      "Tìm bảng kích cỡ trong tin đăng cụ thể. Đặt phẳng một món đồ tương tự bạn đang có để đo, sau đó so sánh số đo ngực, vai, chiều dài và tay áo. Với quần, so sánh eo, đáy, chiều dài trong ống và đùi; với giày, kiểm tra chiều dài bàn chân và hướng dẫn kích cỡ của người bán.",
+      "Người bán có thể đo theo cách khác nhau và cho phép sai số nhỏ. Nếu bảng thiếu, khó hiểu hoặc bạn nằm giữa hai cỡ, hãy yêu cầu làm rõ trước khi thanh toán thay vì chỉ dựa vào nhãn kích cỡ."
+    ]
+  }
+}

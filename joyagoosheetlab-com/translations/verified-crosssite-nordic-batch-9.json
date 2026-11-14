@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "name": "Tie-Dye Short Sleeve Shirt",
+      "sourceId": "5621",
+      "translations": {
+        "fi": "Tie-Dye lyhythihainen paita",
+        "da": "Tie-Dye kortærmet skjorte",
+        "nb": "Tie-Dye kortermet skjorte"
+      }
+    },
+    {
+      "name": "Classic Versatile T-Shirt",
+      "sourceId": "5244",
+      "translations": {
+        "fi": "Klassinen monipuolinen T-paita",
+        "da": "Klassisk alsidig T-shirt",
+        "nb": "Klassisk allsidig T-skjorte"
+      }
+    },
+    {
+      "name": "Stussy White Zip Hoodie",
+      "sourceId": "5234",
+      "translations": {
+        "fi": "Stussy valkoinen vetoketjuhuppari",
+        "da": "Stussy Hvid hættetrøje med lynlås",
+        "nb": "Stussy Hvit hettegenser med glidelås"
+      }
+    },
+    {
+      "name": "Ami Heart Logo White T-Shirt",
+      "sourceId": "5195",
+      "translations": {
+        "fi": "Ami Heart Logo valkoinen T-paita"
+      }
+    },
+    {
+      "name": "LV Logo White Polo Shirt",
+      "sourceId": "4924",
+      "translations": {
+        "fi": "LV Logo valkoinen poolopaita",
+        "nb": "LV Logo Hvit poloskjorte"
+      }
+    },
+    {
+      "name": "Essentials Logo Black Shorts",
+      "sourceId": "4907",
+      "translations": {
+        "fi": "Essentials Logo Mustat shortsit",
+        "da": "Essentials Logo sorte shorts"
+      }
+    },
+    {
+      "name": "Alo Yoga Black Zip Hoodie",
+      "sourceId": "4896",
+      "translations": {
+        "fi": "Alo Yoga musta vetoketjuhuppari",
+        "da": "Alo Yoga sort hættetrøje med lynlås"
+      }
+    },
+    {
+      "name": "Basic T-Shirt Collection",
+      "sourceId": "4885",
+      "translations": {
+        "fi": "Perus T-paitakokoelma"
+      }
+    },
+    {
+      "name": "Cable Knit White Polo Shirt",
+      "sourceId": "4854",
+      "translations": {
+        "fi": "Kaapelineulottu valkoinen poolopaita",
+        "da": "Kabelstrik hvid poloshirt",
+        "nb": "Kabelstrikket hvit poloskjorte"
+      }
+    },
+    {
+      "name": "Dior Logo T-Shirt Collection",
+      "sourceId": "4839",
+      "translations": {
+        "fi": "Dior Logo T-paitakokoelma",
+        "nb": "Dior Logo T-skjortesamling"
+      }
+    },
+    {
+      "name": "Acne Studios Gray Zip Hoodie",
+      "sourceId": "4836",
+      "translations": {
+        "fi": "Acne Studiosin harmaa vetoketjullinen huppari",
+        "da": "Acne Studios Grå Hættetrøje med lynlås",
+        "nb": "Acne Studios Grå hettegenser med glidelås"
+      }
+    },
+    {
+      "name": "Ami Heart Logo Green T-Shirt",
+      "sourceId": "5148",
+      "translations": {
+        "da": "Ami Heart Logo Grøn T-Shirt",
+        "nb": "Ami Heart Logo Grønn T-skjorte"
+      }
+    },
+    {
+      "name": "Soccer Jersey Collection",
+      "sourceId": "4984",
+      "translations": {
+        "da": "Fodboldtrøjesamling",
+        "nb": "Fotballdraktsamling"
+      }
+    }
+  ]
+}

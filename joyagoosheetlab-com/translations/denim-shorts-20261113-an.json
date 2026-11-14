@@ -1,0 +1,288 @@
+{
+  "items": [
+    {
+      "name": "Washed Black Frayed-Hem Jeans",
+      "translations": {
+        "fi": "Pestyt mustat farkut rispaantuneilla lahkeensuilla",
+        "da": "Vaskede sorte jeans med flossede kanter",
+        "nb": "Vaskede svarte jeans med frynsete kanter",
+        "cs": "Prané černé džíny s roztřepenými lemy",
+        "sk": "Prané čierne džínsy s rozstrapkanými lemami",
+        "hu": "Mosott fekete farmer rojtos szegéllyel",
+        "ro": "Blugi negri spălați cu tiv destrămat",
+        "el": "Ξεβαμμένο μαύρο τζιν με ξέφτια στο τελείωμα",
+        "uk": "Випрані чорні джинси з потертою кромкою",
+        "ar": "جينز أسود مغسول بحواف مهترئة",
+        "ja": "ウォッシュドブラックの裾ほつれジーンズ",
+        "ko": "워싱 블랙 올풀림 밑단 청바지",
+        "vi": "Quần jeans đen wash gấu tua",
+        "tr": "Yıkanmış siyah püsküllü paça kot pantolon"
+      }
+    },
+    {
+      "name": "Paint-Splatter Wide-Leg Jeans",
+      "translations": {
+        "fi": "Maalitahrakuvioiset leveälahkeiset farkut",
+        "da": "Jeans med vide ben og malerstænk",
+        "nb": "Jeans med vide ben og malingssprut",
+        "cs": "Džíny se širokými nohavicemi a cákanci barvy",
+        "sk": "Džínsy so širokými nohavicami a fŕkancami farby",
+        "hu": "Festékfröccsenéses bő szárú farmer",
+        "ro": "Blugi cu craci largi și stropi de vopsea",
+        "el": "Τζιν με φαρδιά μπατζάκια και πιτσιλιές μπογιάς",
+        "uk": "Широкі джинси з бризками фарби",
+        "ar": "جينز واسع الساقين برذاذ طلاء",
+        "ja": "ペイントスプラッターワイドレッグジーンズ",
+        "ko": "페인트 스플래터 와이드 레그 청바지",
+        "vi": "Quần jeans ống rộng họa tiết sơn bắn",
+        "tr": "Boya sıçramalı geniş paça kot pantolon"
+      }
+    },
+    {
+      "name": "Light-Wash Straight-Leg Jeans",
+      "translations": {
+        "fi": "Vaaleaksi pestyt suoralahkeiset farkut",
+        "da": "Lysvaskede jeans med lige ben",
+        "nb": "Lysvaskede jeans med rette ben",
+        "cs": "Světle prané džíny s rovnými nohavicemi",
+        "sk": "Svetlo prané džínsy s rovnými nohavicami",
+        "hu": "Világosra mosott egyenes szárú farmer",
+        "ro": "Blugi cu craci drepți spălați în nuanță deschisă",
+        "el": "Ανοιχτόχρωμο πλυμένο τζιν με ίσια μπατζάκια",
+        "uk": "Світлі випрані джинси з прямими штанинами",
+        "ar": "جينز مستقيم الساقين بغسيل فاتح",
+        "ja": "ライトウォッシュストレートレッグジーンズ",
+        "ko": "라이트 워싱 스트레이트 레그 청바지",
+        "vi": "Quần jeans ống đứng wash sáng màu",
+        "tr": "Açık yıkanmış düz paça kot pantolon"
+      }
+    },
+    {
+      "name": "Contrast-Panel Flared Jeans",
+      "translations": {
+        "fi": "Levenevät farkut kontrastipaneeleilla",
+        "da": "Udsvingede jeans med kontrastpaneler",
+        "nb": "Utsvingte jeans med kontrastpaneler",
+        "cs": "Rozšířené džíny s kontrastními panely",
+        "sk": "Rozšírené džínsy s kontrastnými panelmi",
+        "hu": "Kontrasztos betétes trapézfarmer",
+        "el": "Τζιν καμπάνα με πάνελ αντίθεσης",
+        "uk": "Розкльошені джинси з контрастними вставками",
+        "ar": "جينز واسع من الأسفل بأجزاء متباينة",
+        "ja": "コントラストパネルフレアジーンズ",
+        "ko": "대비 패널 플레어 청바지",
+        "vi": "Quần jeans ống loe phối mảng tương phản",
+        "tr": "Kontrast panelli İspanyol paça kot pantolon"
+      }
+    },
+    {
+      "name": "Cross-Patch Jeans Collection",
+      "translations": {
+        "fi": "Ristipaikkaisten farkkujen kokoelma",
+        "da": "Jeanskollektion med korsmærker",
+        "nb": "Jeanskolleksjon med korslapper",
+        "cs": "Kolekce džínů s křížovými nášivkami",
+        "sk": "Kolekcia džínsov s krížovými nášivkami",
+        "hu": "Keresztfoltos farmerkollekció",
+        "ro": "Colecție de blugi cu petice în formă de cruce",
+        "el": "Συλλογή τζιν με μπαλώματα σταυρού",
+        "uk": "Колекція джинсів із нашивками-хрестами",
+        "ar": "مجموعة جينز برقع صليب",
+        "ja": "クロスパッチジーンズコレクション",
+        "ko": "크로스 패치 청바지 컬렉션",
+        "vi": "Bộ sưu tập jeans vá hình chữ thập",
+        "tr": "Haç yamalı kot pantolon koleksiyonu"
+      }
+    },
+    {
+      "name": "Supreme Knit Shorts 202622505",
+      "translations": {
+        "fi": "Supreme-neuleshortsit 202622505",
+        "da": "Supreme-strikshorts 202622505",
+        "nb": "Supreme-strikkeshorts 202622505",
+        "cs": "Pletené šortky Supreme 202622505",
+        "sk": "Pletené šortky Supreme 202622505",
+        "hu": "Supreme kötött short 202622505",
+        "ro": "Pantaloni scurți tricotați Supreme 202622505",
+        "el": "Πλεκτό σορτς Supreme 202622505",
+        "uk": "В’язані шорти Supreme 202622505",
+        "ar": "شورت Supreme محبوك 202622505",
+        "ja": "Supremeニットショーツ 202622505",
+        "ko": "Supreme 니트 반바지 202622505",
+        "vi": "Quần short dệt kim Supreme 202622505",
+        "tr": "Supreme örgü şort 202622505"
+      }
+    },
+    {
+      "name": "Streetwear Top and Shorts Set",
+      "translations": {
+        "fi": "Streetwear-yläosa ja shortsit -setti",
+        "da": "Streetwear-sæt med top og shorts",
+        "nb": "Streetwear-sett med topp og shorts",
+        "cs": "Streetwearový komplet s vrškem a šortkami",
+        "sk": "Streetwearový komplet s vrchom a šortkami",
+        "hu": "Utcai felső és rövidnadrág szett",
+        "ro": "Set streetwear de bluză și pantaloni scurți",
+        "el": "Σετ streetwear με μπλούζα και σορτς",
+        "uk": "Комплект у вуличному стилі з верхом і шортами",
+        "ar": "طقم ستريت وير من بلوزة وشورت",
+        "ja": "ストリートウェアトップスとショーツのセット",
+        "ko": "스트리트웨어 상의와 반바지 세트",
+        "vi": "Bộ áo streetwear và quần short",
+        "tr": "Sokak stili üst ve şort takımı"
+      }
+    },
+    {
+      "name": "Flocked Summer Sports Shorts",
+      "translations": {
+        "fi": "Samettipintaiset kesäurheilushortsit",
+        "da": "Flokkede sommersportsshorts",
+        "nb": "Flokkede sommersportsshorts",
+        "cs": "Letní sportovní šortky s vločkováním",
+        "sk": "Letné športové šortky s vločkovaním",
+        "hu": "Flokkolt nyári sportshort",
+        "ro": "Pantaloni scurți sport de vară cu imprimeu flock",
+        "el": "Καλοκαιρινό αθλητικό σορτς με φλοκ τύπωμα",
+        "uk": "Літні спортивні шорти з флоковим принтом",
+        "ar": "شورت رياضي صيفي بطباعة مخملية",
+        "ja": "フロッキープリントのサマースポーツショーツ",
+        "ko": "플로킹 여름 스포츠 반바지",
+        "vi": "Quần short thể thao mùa hè in nhung",
+        "tr": "Flok baskılı yazlık spor şort"
+      }
+    },
+    {
+      "name": "Essentials FOG Cotton T-Shirt",
+      "translations": {
+        "fi": "Essentials FOG -puuvillainen T-paita",
+        "da": "Essentials FOG-T-shirt i bomuld",
+        "nb": "Essentials FOG-T-skjorte i bomull",
+        "cs": "Bavlněné tričko Essentials FOG",
+        "sk": "Bavlnené tričko Essentials FOG",
+        "hu": "Essentials FOG pamutpóló",
+        "ro": "Tricou din bumbac Essentials FOG",
+        "el": "Βαμβακερό μπλουζάκι Essentials FOG",
+        "uk": "Бавовняна футболка Essentials FOG",
+        "ar": "تيشيرت قطني Essentials FOG",
+        "ja": "Essentials FOGコットンTシャツ",
+        "ko": "Essentials FOG 면 티셔츠",
+        "vi": "Áo thun cotton Essentials FOG",
+        "tr": "Essentials FOG pamuklu tişört"
+      }
+    },
+    {
+      "name": "Summer T-Shirt and Shorts Set",
+      "translations": {
+        "fi": "Kesäinen T-paita- ja shortsisetti",
+        "da": "Sommersæt med T-shirt og shorts",
+        "nb": "Sommersett med T-skjorte og shorts",
+        "cs": "Letní komplet trička a šortek",
+        "sk": "Letný komplet trička a šortiek",
+        "hu": "Nyári póló és rövidnadrág szett",
+        "ro": "Set de vară de tricou și pantaloni scurți",
+        "el": "Καλοκαιρινό σετ με μπλουζάκι και σορτς",
+        "uk": "Літній комплект футболки та шортів",
+        "ar": "طقم صيفي من تيشيرت وشورت",
+        "ja": "サマーTシャツとショーツのセット",
+        "ko": "여름 티셔츠와 반바지 세트",
+        "vi": "Bộ áo thun và quần short mùa hè",
+        "tr": "Yazlık tişört ve şort takımı"
+      }
+    },
+    {
+      "name": "Casual Streetwear Shorts 030",
+      "translations": {
+        "fi": "Rennot streetwear-shortsit 030",
+        "da": "Afslappede streetwear-shorts 030",
+        "nb": "Uformell streetwear-shorts 030",
+        "cs": "Volnočasové streetwearové šortky 030",
+        "sk": "Voľnočasové streetwearové šortky 030",
+        "hu": "Hétköznapi utcai rövidnadrág 030",
+        "ro": "Pantaloni scurți streetwear casual 030",
+        "el": "Καθημερινό σορτς streetwear 030",
+        "uk": "Повсякденні шорти вуличного стилю 030",
+        "ar": "شورت ستريت وير كاجوال 030",
+        "ja": "カジュアルストリートウェアショーツ 030",
+        "ko": "캐주얼 스트리트웨어 반바지 030",
+        "vi": "Quần short streetwear thường ngày 030",
+        "tr": "Günlük sokak stili şort 030"
+      }
+    },
+    {
+      "name": "Loose Sports Shorts DJ-Jump6",
+      "translations": {
+        "fi": "Väljät urheilushortsit DJ-Jump6",
+        "da": "Løse sportsshorts DJ-Jump6",
+        "nb": "Løs sportsshorts DJ-Jump6",
+        "cs": "Volné sportovní šortky DJ-Jump6",
+        "sk": "Voľné športové šortky DJ-Jump6",
+        "hu": "Bő sportshort DJ-Jump6",
+        "ro": "Pantaloni scurți sport largi DJ-Jump6",
+        "el": "Φαρδύ αθλητικό σορτς DJ-Jump6",
+        "uk": "Вільні спортивні шорти DJ-Jump6",
+        "ar": "شورت رياضي واسع DJ-Jump6",
+        "ja": "ルーズスポーツショーツ DJ-Jump6",
+        "ko": "루즈 스포츠 반바지 DJ-Jump6",
+        "vi": "Quần short thể thao rộng DJ-Jump6",
+        "tr": "Bol spor şort DJ-Jump6"
+      }
+    },
+    {
+      "name": "Blue Swoosh Basketball Shorts",
+      "translations": {
+        "fi": "Siniset Swoosh-koripalloshortsit",
+        "da": "Blå Swoosh-basketballshorts",
+        "nb": "Blå Swoosh-basketballshorts",
+        "cs": "Modré basketbalové šortky Swoosh",
+        "sk": "Modré basketbalové šortky Swoosh",
+        "hu": "Kék Swoosh kosárlabdashort",
+        "ro": "Pantaloni scurți de baschet Swoosh albaștri",
+        "el": "Μπλε σορτς μπάσκετ Swoosh",
+        "uk": "Сині баскетбольні шорти Swoosh",
+        "ar": "شورت كرة سلة Swoosh أزرق",
+        "ja": "ブルーのSwooshバスケットボールショーツ",
+        "ko": "블루 Swoosh 농구 반바지",
+        "vi": "Quần short bóng rổ Swoosh màu xanh",
+        "tr": "Mavi Swoosh basketbol şortu"
+      }
+    },
+    {
+      "name": "High-Street Drawstring Shorts",
+      "translations": {
+        "fi": "High-street-shortsit kiristysnyörillä",
+        "da": "High-street-shorts med snøre",
+        "nb": "High-street-shorts med snøring",
+        "cs": "High-street šortky se stahovací šňůrkou",
+        "sk": "High-street šortky so sťahovacou šnúrkou",
+        "hu": "High-street húzózsinóros short",
+        "ro": "Pantaloni scurți high-street cu șnur",
+        "el": "Σορτς high-street με κορδόνι",
+        "uk": "Шорти high-street зі шнурком",
+        "ar": "شورت هاي ستريت برباط",
+        "ja": "ハイストリートドローコードショーツ",
+        "ko": "하이스트리트 드로스트링 반바지",
+        "vi": "Quần short high-street có dây rút",
+        "tr": "High-street büzme ipli şort"
+      }
+    },
+    {
+      "name": "All-Over Letter Print Shorts",
+      "translations": {
+        "fi": "kauttaaltaan kirjainpainatetut shortsit",
+        "da": "Shorts med bogstavprint overalt",
+        "nb": "Shorts med heldekkende bokstavtrykk",
+        "cs": "Šortky s celoplošným potiskem písmen",
+        "sk": "Šortky s celoplošnou potlačou písmen",
+        "hu": "Teljes felületén betűmintás rövidnadrág",
+        "ro": "Pantaloni scurți cu imprimeu cu litere pe toată suprafața",
+        "el": "Σορτς με τύπωμα γραμμάτων σε όλη την επιφάνεια",
+        "uk": "Шорти з літерним принтом по всій поверхні",
+        "ar": "شورت بطبعة حروف على كامل السطح",
+        "ja": "全面文字プリントショーツ",
+        "ko": "전체 레터 프린트 반바지",
+        "vi": "Quần short in chữ toàn bộ",
+        "tr": "Tam yüzey harf baskılı şort"
+      }
+    }
+  ]
+}

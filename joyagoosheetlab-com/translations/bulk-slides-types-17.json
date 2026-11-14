@@ -1,0 +1,105 @@
+{
+  "items": [
+    {
+      "name": "Minimalist Comfort Slides",
+      "source": "Minimalist Comfort Slides",
+      "suffix": "",
+      "translations": {
+        "fi": "Minimalistiset mukavat pistokkaat",
+        "da": "Minimalistiske komfort-slides",
+        "nb": "Minimalistiske komfort-slides",
+        "cs": "Minimalistické pohodlné nazouváky",
+        "sk": "Minimalistické pohodlné šľapky",
+        "hu": "Minimalista kényelmi papucs",
+        "ro": "Papuci slide minimaliști confortabili",
+        "el": "Μίνιμαλ άνετες παντόφλες slides",
+        "tr": "Minimalist rahat terlik",
+        "uk": "Мінімалістичні комфортні шльопанці",
+        "ar": "شبشب مريح بتصميم بسيط",
+        "ja": "ミニマルコンフォートスライドサンダル",
+        "ko": "미니멀 편안한 슬라이드",
+        "vi": "Dép slide tối giản êm ái"
+      }
+    },
+    {
+      "name": "Classic EVA Foam Slides",
+      "source": "Classic EVA Foam Slides",
+      "suffix": "",
+      "translations": {
+        "fi": "Klassiset EVA-vaahtopistokkaat",
+        "da": "Klassiske slides i EVA-skum",
+        "nb": "Klassiske slides i EVA-skum",
+        "cs": "Klasické nazouváky z EVA pěny",
+        "sk": "Klasické šľapky z EVA peny",
+        "hu": "Klasszikus EVA habpapucs",
+        "ro": "Papuci slide clasici din spumă EVA",
+        "el": "Κλασικές παντόφλες slides από αφρό EVA",
+        "tr": "Klasik EVA köpük terlik",
+        "uk": "Класичні шльопанці з піни EVA",
+        "ar": "شبشب كلاسيكي من رغوة EVA",
+        "ja": "クラシックEVAフォームスライドサンダル",
+        "ko": "클래식 EVA 폼 슬라이드",
+        "vi": "Dép slide xốp EVA cổ điển"
+      }
+    },
+    {
+      "name": "Versatile Summer Sandals",
+      "source": "Versatile Summer Sandals",
+      "suffix": "",
+      "translations": {
+        "cs": "Univerzální letní sandály",
+        "sk": "Univerzálne letné sandále",
+        "hu": "Sokoldalú nyári szandál",
+        "el": "Ευέλικτα καλοκαιρινά σανδάλια",
+        "tr": "Çok yönlü yazlık sandalet",
+        "uk": "Універсальні літні сандалі",
+        "ar": "صنادل صيفية متعددة الاستخدامات",
+        "ja": "使いやすいサマーサンダル",
+        "ko": "다용도 여름 샌들",
+        "vi": "Sandal mùa hè đa dụng"
+      }
+    },
+    {
+      "name": "Closed-Toe Beach Clog Shoes",
+      "source": "Closed-Toe Beach Clog Shoes",
+      "suffix": "",
+      "translations": {
+        "fi": "Umpikärkiset rantaklogit",
+        "da": "Strandtræsko med lukket tå",
+        "nb": "Strandtresko med lukket tå",
+        "cs": "Plážové nazouváky s uzavřenou špičkou",
+        "sk": "Plážové dreváky s uzavretou špičkou",
+        "hu": "Zárt orrú strandklumpa",
+        "ro": "Saboti de plajă cu vârf închis",
+        "el": "Σαμπό παραλίας με κλειστή μύτη",
+        "tr": "Burnu kapalı plaj takunyası",
+        "uk": "Пляжні сабо із закритим носком",
+        "ar": "حذاء قبقاب للشاطئ بمقدمة مغلقة",
+        "ja": "つま先が閉じたビーチクロッグ",
+        "ko": "앞이 막힌 비치 클로그",
+        "vi": "Guốc đi biển bít mũi"
+      }
+    },
+    {
+      "name": "Striped Fashion Slides",
+      "source": "Striped Fashion Slides",
+      "suffix": "",
+      "translations": {
+        "fi": "Raidalliset muotipistokkaat",
+        "da": "Stribede mode-slides",
+        "nb": "Stripete mote-slides",
+        "cs": "Pruhované módní nazouváky",
+        "sk": "Pruhované módne šľapky",
+        "hu": "Csíkos divatos papucs",
+        "ro": "Papuci slide de modă cu dungi",
+        "el": "Ριγέ μοντέρνες παντόφλες slides",
+        "tr": "Çizgili moda terlik",
+        "uk": "Смугасті модні шльопанці",
+        "ar": "شبشب عصري مخطط",
+        "ja": "ストライプファッションスライドサンダル",
+        "ko": "스트라이프 패션 슬라이드",
+        "vi": "Dép slide thời trang kẻ sọc"
+      }
+    }
+  ]
+}

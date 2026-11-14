@@ -1,0 +1,64 @@
+{
+  "keys": [
+    "QC photos are images of an item inspected at a warehouse. When your order reaches that stage, compare the photos with your chosen size, colour and listing: check the overall shape, visible damage, markings, fasteners and included parts. Ask for another view or measurement if a key detail is hidden.",
+    "Public QC photos may show an earlier order or a different batch. They cannot guarantee what you will receive, and the current preview does not yet provide a QC-photo database."
+  ],
+  "rows": {
+    "fi": [
+      "QC-kuvat ovat kuvia varastolla tarkastetusta tuotteesta. Kun tilauksesi on tässä vaiheessa, vertaa kuvia valitsemaasi kokoon, väriin ja ilmoitukseen: tarkista yleismuoto, näkyvät vauriot, merkinnät, kiinnikkeet ja mukana tulevat osat. Pyydä toinen kuvakulma tai mitta, jos tärkeä yksityiskohta on piilossa.",
+      "Julkiset QC-kuvat voivat esittää aiempaa tilausta tai toista erää. Ne eivät takaa, mitä saat, eikä tässä esikatselussa vielä ole QC-kuvatietokantaa."
+    ],
+    "da": [
+      "QC-fotos er billeder af en vare, der er kontrolleret på et lager. Når din ordre når dette trin, skal du sammenligne billederne med din valgte størrelse, farve og annoncen: kontrollér form, synlige skader, mærkninger, lukninger og medfølgende dele. Bed om en anden vinkel eller en måling, hvis en vigtig detalje er skjult.",
+      "Offentlige QC-fotos kan vise en tidligere ordre eller en anden varebatch. De garanterer ikke, hvad du modtager, og denne forhåndsvisning har endnu ingen database med QC-fotos."
+    ],
+    "nb": [
+      "QC-bilder er bilder av en vare som er kontrollert på et lager. Når bestillingen din når dette trinnet, sammenlign bildene med valgt størrelse, farge og annonsen: sjekk form, synlige skader, merking, lukninger og medfølgende deler. Be om en annen vinkel eller et mål hvis en viktig detalj er skjult.",
+      "Offentlige QC-bilder kan vise en tidligere bestilling eller et annet parti. De garanterer ikke hva du mottar, og denne forhåndsvisningen har ennå ingen database med QC-bilder."
+    ],
+    "cs": [
+      "Fotografie QC zachycují zboží zkontrolované ve skladu. Jakmile se vaše objednávka dostane do této fáze, porovnejte fotografie se zvolenou velikostí, barvou a nabídkou: zkontrolujte celkový tvar, viditelné poškození, označení, zapínání a přiložené součásti. Pokud je důležitý detail zakrytý, požádejte o další pohled nebo měření.",
+      "Veřejné fotografie QC mohou zachycovat dřívější objednávku nebo jinou šarži. Nezaručují, co obdržíte, a tento náhled zatím neposkytuje databázi fotografií QC."
+    ],
+    "sk": [
+      "Fotografie QC zobrazujú tovar skontrolovaný v sklade. Keď sa vaša objednávka dostane do tejto fázy, porovnajte fotografie so zvolenou veľkosťou, farbou a ponukou: skontrolujte celkový tvar, viditeľné poškodenie, označenia, zapínanie a priložené súčasti. Ak je dôležitý detail zakrytý, požiadajte o ďalší pohľad alebo meranie.",
+      "Verejné fotografie QC môžu zobrazovať skoršiu objednávku alebo inú šaržu. Nezaručujú, čo dostanete, a tento náhľad zatiaľ neposkytuje databázu fotografií QC."
+    ],
+    "hu": [
+      "A QC-képek egy raktárban ellenőrzött termékről készült fényképek. Amikor a rendelése eléri ezt a szakaszt, hasonlítsa össze a képeket a kiválasztott mérettel, színnel és termékhirdetéssel: ellenőrizze az alakot, a látható sérüléseket, jelöléseket, záródásokat és a mellékelt részeket. Ha egy fontos részlet nem látható, kérjen másik nézetet vagy mérést.",
+      "A nyilvános QC-képek korábbi rendelést vagy másik gyártási tételt is mutathatnak. Nem garantálják, hogy mit kap, és a jelenlegi előnézet még nem tartalmaz QC-fotóadatbázist."
+    ],
+    "ro": [
+      "Fotografiile QC arată un articol verificat într-un depozit. Când comanda ajunge în această etapă, comparați fotografiile cu mărimea, culoarea și anunțul ales: verificați forma generală, deteriorările vizibile, marcajele, sistemele de închidere și piesele incluse. Cereți o altă perspectivă sau o măsurătoare dacă un detaliu important este ascuns.",
+      "Fotografiile QC publice pot arăta o comandă anterioară sau un alt lot. Ele nu garantează ce veți primi, iar versiunea actuală de previzualizare nu oferă încă o bază de date cu fotografii QC."
+    ],
+    "el": [
+      "Οι φωτογραφίες QC δείχνουν ένα προϊόν που ελέγχθηκε σε αποθήκη. Όταν η παραγγελία σας φτάσει σε αυτό το στάδιο, συγκρίνετε τις φωτογραφίες με το μέγεθος, το χρώμα και την καταχώριση που επιλέξατε: ελέγξτε το γενικό σχήμα, τις ορατές φθορές, τις σημάνσεις, τα κουμπώματα και τα μέρη που περιλαμβάνονται. Ζητήστε άλλη όψη ή μέτρηση αν μια σημαντική λεπτομέρεια είναι κρυμμένη.",
+      "Οι δημόσιες φωτογραφίες QC μπορεί να δείχνουν παλαιότερη παραγγελία ή διαφορετική παρτίδα. Δεν εγγυώνται τι θα παραλάβετε και η τρέχουσα προεπισκόπηση δεν διαθέτει ακόμη βάση φωτογραφιών QC."
+    ],
+    "uk": [
+      "Фото QC показують товар, перевірений на складі. Коли ваше замовлення досягне цього етапу, порівняйте фото з вибраними розміром, кольором і товарною пропозицією: перевірте загальну форму, видимі пошкодження, позначення, застібки та комплектні частини. Якщо важливу деталь не видно, попросіть інший ракурс або вимірювання.",
+      "Публічні фото QC можуть показувати попереднє замовлення або іншу партію. Вони не гарантують, що саме ви отримаєте, а поточна попередня версія ще не містить бази фотографій QC."
+    ],
+    "ar": [
+      "صور QC هي صور لمنتج فُحص في المستودع. عندما يصل طلبك إلى هذه المرحلة، قارن الصور بالمقاس واللون والإعلان الذي اخترته: تحقق من الشكل العام والأضرار الظاهرة والعلامات ووسائل الإغلاق والقطع المرفقة. اطلب صورة من زاوية أخرى أو قياسًا إذا كانت تفاصيل مهمة مخفية.",
+      "قد تعرض صور QC العامة طلبًا سابقًا أو دفعة مختلفة. وهي لا تضمن ما ستتلقاه، كما أن نسخة المعاينة الحالية لا توفر بعد قاعدة بيانات لصور QC."
+    ],
+    "ja": [
+      "QC写真は、倉庫で検品された商品の写真です。注文がその段階に達したら、選択したサイズ、色、商品掲載情報と写真を比較し、全体の形、目に見える損傷、表示、留め具、付属品を確認してください。重要な箇所が隠れている場合は、別の角度の写真や採寸を依頼してください。",
+      "公開QC写真は、以前の注文や別のロットを示している場合があります。届く商品を保証するものではなく、現在のプレビューにはまだQC写真データベースがありません。"
+    ],
+    "ko": [
+      "QC 사진은 창고에서 검수한 상품을 촬영한 사진입니다. 주문이 해당 단계에 도달하면 선택한 크기, 색상 및 상품 등록 정보와 사진을 비교하고 전체 형태, 눈에 보이는 손상, 표시, 잠금장치와 구성품을 확인하세요. 중요한 부분이 가려져 있다면 다른 각도의 사진이나 실측을 요청하세요.",
+      "공개 QC 사진은 이전 주문이나 다른 생산분을 보여 줄 수 있습니다. 실제 수령할 상품을 보장하지 않으며, 현재 미리보기에는 아직 QC 사진 데이터베이스가 없습니다."
+    ],
+    "vi": [
+      "Ảnh QC là ảnh của sản phẩm đã được kiểm tra tại kho. Khi đơn hàng đến bước này, hãy so sánh ảnh với kích cỡ, màu sắc và thông tin sản phẩm bạn đã chọn: kiểm tra hình dáng tổng thể, hư hỏng nhìn thấy được, ký hiệu, khóa cài và các bộ phận đi kèm. Hãy yêu cầu ảnh góc khác hoặc số đo nếu một chi tiết quan trọng bị che khuất.",
+      "Ảnh QC công khai có thể cho thấy đơn hàng trước đó hoặc một lô khác. Chúng không đảm bảo sản phẩm bạn sẽ nhận được và bản xem trước hiện tại chưa có cơ sở dữ liệu ảnh QC."
+    ],
+    "tr": [
+      "QC fotoğrafları, depoda kontrol edilmiş bir ürüne ait görüntülerdir. Siparişiniz bu aşamaya geldiğinde fotoğrafları seçtiğiniz beden, renk ve ilanla karşılaştırın; genel şekli, görünür hasarı, işaretleri, bağlantıları ve dahil olan parçaları kontrol edin. Önemli bir ayrıntı görünmüyorsa başka bir açı veya ölçüm isteyin.",
+      "Herkese açık QC fotoğrafları önceki bir siparişi veya farklı bir partiyi gösterebilir. Alacağınız ürünü garanti etmezler ve mevcut önizlemede henüz QC fotoğraf veritabanı bulunmaz."
+    ]
+  }
+}

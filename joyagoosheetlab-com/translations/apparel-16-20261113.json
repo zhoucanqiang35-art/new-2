@@ -1,0 +1,302 @@
+{
+  "items": [
+    {
+      "name": "Solid Color Summer Shorts",
+      "translations": {
+        "fi": "Yksiväriset kesäshortsit",
+        "da": "Ensfarvede sommershorts",
+        "nb": "Ensfarget sommershorts",
+        "cs": "Jednobarevné letní šortky",
+        "sk": "Jednofarebné letné šortky",
+        "hu": "Egyszínű nyári rövidnadrág",
+        "el": "Μονόχρωμο καλοκαιρινό σορτς",
+        "uk": "Однотонні літні шорти",
+        "ar": "شورت صيفي بلون سادة",
+        "ja": "無地サマーショーツ",
+        "ko": "단색 여름 반바지",
+        "vi": "Quần short mùa hè trơn màu",
+        "tr": "Düz renk yazlık şort"
+      }
+    },
+    {
+      "name": "Red Plaid Denim Shorts",
+      "translations": {
+        "fi": "Punaruudulliset farkkushortsit",
+        "da": "Rødternede denimshorts",
+        "nb": "Rutrød denimshorts",
+        "cs": "Červené kostkované džínové šortky",
+        "sk": "Červené kockované džínsové šortky",
+        "hu": "Piros kockás farmershort",
+        "el": "Κόκκινο καρό τζιν σορτς",
+        "uk": "Червоні картаті джинсові шорти",
+        "ar": "شورت جينز بمربعات حمراء",
+        "ja": "赤チェック柄デニムショーツ",
+        "ko": "레드 체크 데님 반바지",
+        "vi": "Quần short denim kẻ ô đỏ",
+        "tr": "Kırmızı ekose kot şort"
+      }
+    },
+    {
+      "name": "Navy Logo Swim Shorts",
+      "translations": {
+        "fi": "Tummansiniset logolliset uimashortsit",
+        "da": "Marineblå badeshorts med logo",
+        "nb": "Marineblå badeshorts med logo",
+        "cs": "Tmavě modré plavkové šortky s logem",
+        "sk": "Tmavomodré plavecké šortky s logom",
+        "hu": "Sötétkék logós fürdőshort",
+        "ro": "Pantaloni scurți de baie bleumarin cu logo",
+        "el": "Μπλε σκούρο μαγιό σορτς με λογότυπο",
+        "uk": "Темно-сині плавальні шорти з логотипом",
+        "ar": "شورت سباحة كحلي بشعار",
+        "ja": "ネイビーのロゴ入りスイムショーツ",
+        "ko": "네이비 로고 수영 반바지",
+        "vi": "Quần short bơi xanh navy có logo",
+        "tr": "Lacivert logolu yüzme şortu"
+      }
+    },
+    {
+      "name": "Graphic Streetwear Shorts",
+      "translations": {
+        "fi": "Kuviolliset streetwear-shortsit",
+        "da": "Streetwear-shorts med grafik",
+        "nb": "Streetwear-shorts med grafikk",
+        "cs": "Streetwearové šortky s potiskem",
+        "sk": "Streetwearové šortky s potlačou",
+        "hu": "Grafikás utcai short",
+        "ro": "Pantaloni scurți streetwear cu imprimeu",
+        "el": "Σορτς streetwear με σχέδιο",
+        "uk": "Шорти вуличного стилю з принтом",
+        "ar": "شورت ستريت وير برسمة",
+        "ja": "グラフィック入りストリートウェアショーツ",
+        "ko": "그래픽 스트리트웨어 반바지",
+        "vi": "Quần short streetwear họa tiết",
+        "tr": "Grafik desenli sokak stili şort"
+      }
+    },
+    {
+      "name": "Split-Hem Sports Shorts",
+      "translations": {
+        "fi": "Halkiolahkeiset urheilushortsit",
+        "da": "Sportsshorts med slids i kanten",
+        "nb": "Sportsshorts med splitt i kanten",
+        "cs": "Sportovní šortky s rozparky na lemu",
+        "sk": "Športové šortky s rozparkami na leme",
+        "hu": "Felsliccelt szárú sportshort",
+        "ro": "Pantaloni scurți sport cu tiv despicat",
+        "el": "Αθλητικό σορτς με σκίσιμο στο τελείωμα",
+        "uk": "Спортивні шорти з розрізами на подолі",
+        "ar": "شورت رياضي بحافة مشقوقة",
+        "ja": "裾スリット入りスポーツショーツ",
+        "ko": "밑단 트임 스포츠 반바지",
+        "vi": "Quần short thể thao xẻ gấu",
+        "tr": "Yırtmaçlı paça spor şort"
+      }
+    },
+    {
+      "name": "Mesh-Lined Beach Shorts",
+      "translations": {
+        "fi": "Verkkovuoratut rantashortsit",
+        "da": "Strandshorts med meshfor",
+        "nb": "Strandshorts med nettingfôr",
+        "cs": "Plážové šortky se síťovanou podšívkou",
+        "sk": "Plážové šortky so sieťovanou podšívkou",
+        "hu": "Hálós bélésű strandshort",
+        "el": "Σορτς παραλίας με διχτυωτή φόδρα",
+        "uk": "Пляжні шорти із сітчастою підкладкою",
+        "ar": "شورت شاطئ ببطانة شبكية",
+        "ja": "メッシュ裏地付きビーチショーツ",
+        "ko": "메시 안감 비치 반바지",
+        "vi": "Quần short đi biển lót lưới",
+        "tr": "File astarlı plaj şortu"
+      }
+    },
+    {
+      "name": "Quick-Dry Athletic Shorts",
+      "translations": {
+        "fi": "Nopeasti kuivuvat urheilushortsit",
+        "da": "Hurtigtørrende sportsshorts",
+        "nb": "Hurtigtørkende sportsshorts",
+        "cs": "Rychleschnoucí sportovní šortky",
+        "sk": "Rýchloschnúce športové šortky",
+        "hu": "Gyorsan száradó sportshort",
+        "ro": "Pantaloni scurți sport cu uscare rapidă",
+        "el": "Αθλητικό σορτς που στεγνώνει γρήγορα",
+        "uk": "Швидковисихаючі спортивні шорти",
+        "ar": "شورت رياضي سريع الجفاف",
+        "ja": "速乾スポーツショーツ",
+        "ko": "속건 운동 반바지",
+        "vi": "Quần short thể thao nhanh khô",
+        "tr": "Hızlı kuruyan spor şortu"
+      }
+    },
+    {
+      "name": "Streetwear Beach Shorts",
+      "translations": {
+        "fi": "Streetwear-rantashortsit",
+        "da": "Streetwear-strandshorts",
+        "nb": "Streetwear-strandshorts",
+        "cs": "Streetwearové plážové šortky",
+        "sk": "Streetwearové plážové šortky",
+        "hu": "Utcai stílusú strandshort",
+        "ro": "Pantaloni scurți de plajă streetwear",
+        "el": "Σορτς παραλίας streetwear",
+        "uk": "Пляжні шорти у вуличному стилі",
+        "ar": "شورت شاطئ بأسلوب الشارع",
+        "ja": "ストリートウェアビーチショーツ",
+        "ko": "스트리트웨어 비치 반바지",
+        "vi": "Quần short đi biển phong cách streetwear",
+        "tr": "Sokak stili plaj şortu"
+      }
+    },
+    {
+      "name": "3D Print Mesh Shorts",
+      "translations": {
+        "fi": "3D-kuvioiset verkkoshortsit",
+        "da": "Meshshorts med 3D-print",
+        "nb": "Nettingshorts med 3D-trykk",
+        "cs": "Síťované šortky s 3D potiskem",
+        "sk": "Sieťované šortky s 3D potlačou",
+        "hu": "3D mintás hálós short",
+        "el": "Διχτυωτό σορτς με τρισδιάστατο τύπωμα",
+        "uk": "Сітчасті шорти з 3D-принтом",
+        "ar": "شورت شبكي بطباعة ثلاثية الأبعاد",
+        "ja": "3Dプリントメッシュショーツ",
+        "ko": "3D 프린트 메시 반바지",
+        "vi": "Quần short lưới in 3D",
+        "tr": "3D baskılı file şort"
+      }
+    },
+    {
+      "name": "Vintage Logo Zip Hoodie",
+      "translations": {
+        "fi": "Vintage-logollinen vetoketjuhuppari",
+        "da": "Hættetrøje med lynlås og vintagelogo",
+        "nb": "Hettegenser med glidelås og vintagelogo",
+        "cs": "Mikina na zip s kapucí a vintage logem",
+        "sk": "Mikina na zips s kapucňou a vintage logom",
+        "hu": "Vintage logós cipzáras kapucnis pulóver",
+        "el": "Φούτερ με κουκούλα, φερμουάρ και vintage λογότυπο",
+        "uk": "Худі на блискавці з вінтажним логотипом",
+        "ar": "هودي بسحاب وشعار بطابع قديم",
+        "ja": "ヴィンテージロゴジップパーカー",
+        "ko": "빈티지 로고 집업 후드티",
+        "vi": "Áo hoodie khóa kéo logo cổ điển",
+        "tr": "Vintage logolu fermuarlı kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Cashmere Crewneck Sweater",
+      "translations": {
+        "fi": "Pyöreäkauluksinen kashmirneule",
+        "da": "Kashmirtrøje med rund hals",
+        "nb": "Kashmirgenser med rund hals",
+        "cs": "Kašmírový svetr s kulatým výstřihem",
+        "sk": "Kašmírový sveter s okrúhlym výstrihom",
+        "hu": "Kerek nyakú kasmírpulóver",
+        "ro": "Pulover din cașmir cu guler rotund",
+        "el": "Κασμιρένιο πουλόβερ με στρογγυλή λαιμόκοψη",
+        "uk": "Кашеміровий светр із круглим вирізом",
+        "ar": "كنزة كشمير برقبة دائرية",
+        "ja": "カシミヤクルーネックセーター",
+        "ko": "캐시미어 크루넥 스웨터",
+        "vi": "Áo len cashmere cổ tròn",
+        "tr": "Bisiklet yaka kaşmir kazak"
+      }
+    },
+    {
+      "name": "Music Graphic Zip Hoodie",
+      "translations": {
+        "fi": "Musiikkikuvioinen vetoketjuhuppari",
+        "da": "Hættetrøje med lynlås og musikgrafik",
+        "nb": "Hettegenser med glidelås og musikkmotiv",
+        "cs": "Mikina na zip s kapucí a hudebním potiskem",
+        "sk": "Mikina na zips s kapucňou a hudobnou potlačou",
+        "hu": "Zenei mintás cipzáras kapucnis pulóver",
+        "ro": "Hanorac cu fermoar și imprimeu muzical",
+        "el": "Φούτερ με κουκούλα, φερμουάρ και μουσικό σχέδιο",
+        "uk": "Худі на блискавці з музичним принтом",
+        "ar": "هودي بسحاب ورسمة موسيقية",
+        "ja": "音楽グラフィック入りジップパーカー",
+        "ko": "음악 그래픽 집업 후드티",
+        "vi": "Áo hoodie khóa kéo họa tiết âm nhạc",
+        "tr": "Müzik desenli fermuarlı kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Knit-Panel Down Jacket",
+      "translations": {
+        "fi": "Neulepaneelinen untuvatakki",
+        "da": "Dunjakke med strikpaneler",
+        "nb": "Dunjakke med strikkepaneler",
+        "cs": "Péřová bunda s pletenými panely",
+        "sk": "Páperová bunda s pletenými panelmi",
+        "hu": "Kötött betétes pehelykabát",
+        "ro": "Geacă cu puf și panouri tricotate",
+        "el": "Πουπουλένιο μπουφάν με πλεκτά πάνελ",
+        "uk": "Пухова куртка з в’язаними вставками",
+        "ar": "سترة داون بأجزاء محبوكة",
+        "ja": "ニットパネル付きダウンジャケット",
+        "ko": "니트 패널 다운 재킷",
+        "vi": "Áo khoác lông vũ phối mảng dệt kim",
+        "tr": "Örgü panelli kuş tüyü mont"
+      }
+    },
+    {
+      "name": "Crewneck Knit Sweater",
+      "translations": {
+        "fi": "Pyöreäkauluksinen neulepaita",
+        "da": "Strikket sweater med rund hals",
+        "nb": "Strikkegenser med rund hals",
+        "cs": "Pletený svetr s kulatým výstřihem",
+        "sk": "Pletený sveter s okrúhlym výstrihom",
+        "hu": "Kerek nyakú kötött pulóver",
+        "ro": "Pulover tricotat cu guler rotund",
+        "el": "Πλεκτό πουλόβερ με στρογγυλή λαιμόκοψη",
+        "uk": "В’язаний светр із круглим вирізом",
+        "ar": "كنزة محبوكة برقبة دائرية",
+        "ja": "クルーネックニットセーター",
+        "ko": "크루넥 니트 스웨터",
+        "vi": "Áo len dệt kim cổ tròn",
+        "tr": "Bisiklet yaka örgü kazak"
+      }
+    },
+    {
+      "name": "Candy Print Denim Shorts",
+      "translations": {
+        "fi": "Makeiskuvioiset farkkushortsit",
+        "da": "Denimshorts med slikprint",
+        "nb": "Denimshorts med godterimotiv",
+        "cs": "Džínové šortky s potiskem sladkostí",
+        "sk": "Džínsové šortky s potlačou sladkostí",
+        "hu": "Cukorka mintás farmershort",
+        "el": "Τζιν σορτς με στάμπα καραμέλας",
+        "uk": "Джинсові шорти з принтом цукерок",
+        "ar": "شورت جينز بطبعة حلوى",
+        "ja": "キャンディ柄デニムショーツ",
+        "ko": "캔디 프린트 데님 반바지",
+        "vi": "Quần short denim họa tiết kẹo",
+        "tr": "Şeker desenli kot şort"
+      }
+    },
+    {
+      "name": "Pony Embroidered Shorts",
+      "translations": {
+        "fi": "Ponikirjaillut shortsit",
+        "da": "Shorts med ponybroderi",
+        "nb": "Shorts med ponnybroderi",
+        "cs": "Šortky s výšivkou poníka",
+        "sk": "Šortky s výšivkou poníka",
+        "hu": "Póni hímzéses rövidnadrág",
+        "ro": "Pantaloni scurți cu ponei brodat",
+        "el": "Σορτς με κεντημένο πόνι",
+        "uk": "Шорти з вишитим поні",
+        "ar": "شورت بتطريز حصان صغير",
+        "ja": "ポニー刺繍ショーツ",
+        "ko": "포니 자수 반바지",
+        "vi": "Quần short thêu ngựa con",
+        "tr": "Poni işlemeli şort"
+      }
+    }
+  ]
+}

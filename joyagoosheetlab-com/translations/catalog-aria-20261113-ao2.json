@@ -1,0 +1,64 @@
+{
+  "keys": [
+    "Product categories",
+    "Language"
+  ],
+  "rows": {
+    "fi": [
+      "Tuotekategoriat",
+      "Kieli"
+    ],
+    "da": [
+      "Produktkategorier",
+      "Sprog"
+    ],
+    "nb": [
+      "Produktkategorier",
+      "Språk"
+    ],
+    "cs": [
+      "Kategorie produktů",
+      "Jazyk"
+    ],
+    "sk": [
+      "Kategórie produktov",
+      "Jazyk"
+    ],
+    "hu": [
+      "Termékkategóriák",
+      "Nyelv"
+    ],
+    "ro": [
+      "Categorii de produse",
+      "Limbă"
+    ],
+    "el": [
+      "Κατηγορίες προϊόντων",
+      "Γλώσσα"
+    ],
+    "tr": [
+      "Ürün kategorileri",
+      "Dil"
+    ],
+    "uk": [
+      "Категорії товарів",
+      "Мова"
+    ],
+    "ar": [
+      "فئات المنتجات",
+      "اللغة"
+    ],
+    "ja": [
+      "商品カテゴリー",
+      "言語"
+    ],
+    "ko": [
+      "상품 카테고리",
+      "언어"
+    ],
+    "vi": [
+      "Danh mục sản phẩm",
+      "Ngôn ngữ"
+    ]
+  }
+}

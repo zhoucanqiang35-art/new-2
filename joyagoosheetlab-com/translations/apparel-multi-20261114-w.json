@@ -1,0 +1,114 @@
+{
+  "items": [
+    {
+      "name": "Designer Collaboration Clogs",
+      "translations": {
+        "fi": "Suunnittelijayhteistyön puukengät",
+        "da": "Træsko fra designersamarbejde",
+        "nb": "Tresko fra designersamarbeid",
+        "sk": "Dreváky z dizajnérskej spolupráce",
+        "ro": "Saboți din colaborare cu designer",
+        "vi": "Guốc hợp tác cùng nhà thiết kế"
+      }
+    },
+    {
+      "name": "Everyday Fashion Slides 041",
+      "translations": {
+        "fi": "Muodikkaat arkipistokkaat 041",
+        "da": "Moderigtige hverdagssandaler 041",
+        "nb": "Moteriktige hverdagssandaler 041",
+        "sk": "Módne šľapky na každý deň 041",
+        "ro": "Papuci la modă pentru fiecare zi 041",
+        "vi": "Dép thời trang đi hằng ngày 041"
+      }
+    },
+    {
+      "name": "European Style Casual Shoes",
+      "translations": {
+        "fi": "Eurooppalaistyyliset vapaa-ajan kengät",
+        "da": "Fritidssko i europæisk stil",
+        "nb": "Fritidssko i europeisk stil",
+        "sk": "Voľnočasová obuv v európskom štýle",
+        "ro": "Încălțăminte casual în stil european",
+        "vi": "Giày thường ngày phong cách châu Âu"
+      }
+    },
+    {
+      "name": "Casual Streetwear Collection",
+      "translations": {
+        "fi": "Rento streetwear-mallisto",
+        "da": "Afslappet streetwear-kollektion",
+        "nb": "Avslappet streetwear-kolleksjon",
+        "sk": "Voľnočasová kolekcia streetwearu",
+        "ro": "Colecție casual streetwear",
+        "vi": "Bộ sưu tập streetwear thường ngày"
+      }
+    },
+    {
+      "name": "Sport Recovery Slides 004",
+      "translations": {
+        "fi": "Palautumispistokkaat urheiluun 004",
+        "da": "Sportssandaler til restitution 004",
+        "nb": "Sportssandaler for restitusjon 004",
+        "sk": "Športové regeneračné šľapky 004",
+        "ro": "Papuci sport pentru recuperare 004",
+        "vi": "Dép phục hồi thể thao 004"
+      }
+    },
+    {
+      "name": "Premium Hoodie and Pants Set",
+      "translations": {
+        "fi": "Laadukas huppari- ja housusetti",
+        "da": "Premium sæt med hættetrøje og bukser",
+        "nb": "Sett med hettegenser og bukse i premium kvalitet",
+        "sk": "Prémiová súprava mikiny s kapucňou a nohavíc",
+        "ro": "Set premium cu hanorac și pantaloni",
+        "vi": "Bộ áo hoodie và quần cao cấp"
+      }
+    },
+    {
+      "name": "Premium Sweatshirt Set MAN",
+      "translations": {
+        "fi": "Laadukas collegepaitasetti MAN",
+        "da": "Premium sweatshirtsæt MAN",
+        "nb": "Sweatshirtsett i premium kvalitet MAN",
+        "sk": "Prémiová súprava s mikinou MAN",
+        "ro": "Set premium cu bluză sport MAN",
+        "vi": "Bộ đồ sweatshirt cao cấp MAN"
+      }
+    },
+    {
+      "name": "2025SS Skate Sneakers",
+      "translations": {
+        "fi": "2025SS skeittitennarit",
+        "da": "2025SS skatesneakers",
+        "nb": "2025SS skatesneakers",
+        "sk": "Skejterské tenisky 2025SS",
+        "ro": "Pantofi sport de skate 2025SS",
+        "vi": "Giày trượt ván 2025SS"
+      }
+    },
+    {
+      "name": "Black Swoosh Sports Shorts",
+      "translations": {
+        "sk": "Čierne športové šortky so Swoosh",
+        "vi": "Quần short thể thao đen có Swoosh"
+      }
+    },
+    {
+      "name": "Women's Zip Sports Jacket",
+      "translations": {
+        "sk": "Dámska športová bunda na zips",
+        "vi": "Áo khoác thể thao nữ khóa kéo"
+      }
+    },
+    {
+      "name": "Casual Fashion Down Jacket",
+      "translations": {
+        "fi": "Rento muodikas untuvatakki",
+        "da": "Afslappet moderigtig dunjakke",
+        "nb": "Avslappet moteriktig dunjakke"
+      }
+    }
+  ]
+}

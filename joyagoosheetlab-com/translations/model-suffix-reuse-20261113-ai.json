@@ -1,0 +1,129 @@
+{
+  "items": [
+    {
+      "name": "Football Jersey Collection B7",
+      "translations": {
+        "ro": "Colecția de tricouri de fotbal B7"
+      }
+    },
+    {
+      "name": "Classic Everyday Shorts 16",
+      "translations": {
+        "fi": "Klassiset jokapäiväiset shortsit 16"
+      }
+    },
+    {
+      "name": "Fashion Knit Sweater 11",
+      "translations": {
+        "nb": "Mote strikket genser 11"
+      }
+    },
+    {
+      "name": "Casual Fashion Down Jacket 016",
+      "translations": {
+        "cs": "Volnočasová módní péřová bunda 016",
+        "sk": "Voľnočasová módna páperová bunda 016",
+        "hu": "Hétköznapi divatos pehelykabát 016",
+        "ro": "Geacă casual la modă cu puf 016",
+        "el": "Καθημερινό μοντέρνο πουπουλένιο μπουφάν 016",
+        "tr": "Günlük moda kuş tüyü mont 016",
+        "uk": "Повсякденна модна пухова куртка 016",
+        "ar": "سترة داون كاجوال عصرية 016",
+        "ja": "カジュアルファッションダウンジャケット 016",
+        "ko": "캐주얼 패션 다운 재킷 016",
+        "vi": "Áo khoác lông vũ thời trang thường ngày 016"
+      }
+    },
+    {
+      "name": "Premium Fashion Jacket 7436559",
+      "translations": {
+        "ro": "Jachetă Premium Fashion 7436559"
+      }
+    },
+    {
+      "name": "Premium Casual Pants 743840226",
+      "translations": {
+        "fi": "Laadukkaat vapaa-ajan housut 743840226",
+        "da": "Premium afslappede bukser 743840226",
+        "nb": "Premium uformelle bukser 743840226",
+        "cs": "Prémiové volnočasové kalhoty 743840226",
+        "sk": "Prémiové voľnočasové nohavice 743840226",
+        "hu": "Prémium hétköznapi nadrág 743840226",
+        "ro": "Pantaloni casual premium 743840226",
+        "el": "Premium καθημερινό παντελόνι 743840226",
+        "tr": "Premium günlük pantolon 743840226",
+        "uk": "Преміальні повсякденні штани 743840226",
+        "ar": "بنطال كاجوال فاخر 743840226",
+        "ja": "プレミアムカジュアルパンツ 743840226",
+        "ko": "프리미엄 캐주얼 바지 743840226",
+        "vi": "Quần dài thường ngày cao cấp 743840226"
+      }
+    },
+    {
+      "name": "Men's Tech Fleece Tracksuit 08",
+      "translations": {
+        "fi": "Miesten Tech Fleece -verryspuku 08",
+        "da": "Tech Fleece træningsdragt til mænd 08",
+        "nb": "Tech Fleece-treningsdress for menn 08",
+        "ro": "Trening pentru bărbați Tech Fleece 08"
+      }
+    },
+    {
+      "name": "Dior B25 Low-Top Sneakers BD2",
+      "translations": {
+        "fi": "Dior B25 -matalavartiset tennarit BD2",
+        "da": "Dior B25-lave sneakers BD2",
+        "nb": "Dior B25-lave sneakers BD2",
+        "cs": "Nízké tenisky Dior B25 BD2",
+        "sk": "Nízke tenisky Dior B25 BD2",
+        "hu": "Dior B25 alacsony szárú sportcipő BD2",
+        "ro": "Sneakers Dior B25 cu profil jos BD2",
+        "el": "Χαμηλά sneakers Dior B25 BD2",
+        "tr": "Dior B25 alçak bilekli spor ayakkabı BD2",
+        "uk": "Низькі кросівки Dior B25 BD2",
+        "ar": "حذاء رياضي منخفض الرقبة Dior B25 BD2",
+        "ja": "Dior B25ローカットスニーカー BD2",
+        "ko": "Dior B25 로우탑 스니커즈 BD2",
+        "vi": "Giày sneaker cổ thấp Dior B25 BD2"
+      }
+    },
+    {
+      "name": "Dior B30 Sneakers G-CD-SHOE-06",
+      "translations": {
+        "fi": "Dior B30 tennarit G-CD-SHOE-06",
+        "da": "Dior B30 sneakers G-CD-SHOE-06",
+        "nb": "Dior B30 sneakers G-CD-SHOE-06",
+        "cs": "Dior B30 tenisky G-CD-SHOE-06",
+        "sk": "Dior B30 tenisky G-CD-SHOE-06",
+        "hu": "Dior B30 sportcipő G-CD-SHOE-06",
+        "ro": "Dior B30 sneakers G-CD-SHOE-06",
+        "el": "Dior B30 sneakers G-CD-SHOE-06",
+        "tr": "Dior B30 spor ayakkabı G-CD-SHOE-06",
+        "uk": "Dior B30 кросівки G-CD-SHOE-06",
+        "ar": "Dior B30 حذاء رياضي G-CD-SHOE-06",
+        "ja": "Dior B30 スニーカー G-CD-SHOE-06",
+        "ko": "Dior B30 스니커즈 G-CD-SHOE-06",
+        "vi": "Dior B30 giày sneaker G-CD-SHOE-06"
+      }
+    },
+    {
+      "name": "Air Max 95 Sneakers A888",
+      "translations": {
+        "fi": "Air Max 95 -tennarit A888",
+        "da": "Air Max 95-sneakers A888",
+        "nb": "Air Max 95-sneakers A888",
+        "cs": "Tenisky Air Max 95 A888",
+        "sk": "Tenisky Air Max 95 A888",
+        "hu": "Air Max 95 sportcipő A888",
+        "ro": "Sneakers Air Max 95 A888",
+        "el": "Sneakers Air Max 95 A888",
+        "tr": "Air Max 95 spor ayakkabı A888",
+        "uk": "Кросівки Air Max 95 A888",
+        "ar": "حذاء رياضي Air Max 95 A888",
+        "ja": "Air Max 95スニーカー A888",
+        "ko": "Air Max 95 스니커즈 A888",
+        "vi": "Giày sneaker Air Max 95 A888"
+      }
+    }
+  ]
+}

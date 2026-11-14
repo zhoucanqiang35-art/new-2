@@ -1,0 +1,166 @@
+{
+  "items": [
+    {
+      "name": "Purple Five-Clover Bracelet",
+      "source": "Purple Five-Clover Bracelet",
+      "suffix": "",
+      "translations": {
+        "cs": "Fialový náramek s pěti jeteli",
+        "sk": "Fialový náramok s piatimi ďatelinami",
+        "hu": "Lila ötlóherés karkötő",
+        "el": "Μωβ βραχιόλι με πέντε τριφύλλια",
+        "tr": "Mor beş yoncalı bileklik",
+        "uk": "Фіолетовий браслет із п’ятьма конюшинами",
+        "ar": "سوار بنفسجي بخمس وحدات برسيم",
+        "ja": "パープルファイブクローバーブレスレット",
+        "ko": "퍼플 파이브 클로버 팔찌",
+        "vi": "Vòng tay năm cỏ màu tím"
+      }
+    },
+    {
+      "name": "Layered Orb Pendant Necklace",
+      "source": "Layered Orb Pendant Necklace",
+      "suffix": "",
+      "translations": {
+        "fi": "Kerroksellinen kaulakoru palloriipuksella",
+        "da": "Lagdelt halskæde med kuglevedhæng",
+        "nb": "Lagdelt halskjede med kuleanheng",
+        "cs": "Vrstvený náhrdelník s kulovým přívěskem",
+        "sk": "Vrstvený náhrdelník s guľovým príveskom",
+        "hu": "Réteges gömbmedálos nyaklánc",
+        "ro": "Colier suprapus cu pandantiv sferic",
+        "el": "Πολυεπίπεδο κολιέ με σφαιρικό μενταγιόν",
+        "tr": "Katmanlı küre uçlu kolye",
+        "uk": "Багатошарове намисто з кулоном-кулею",
+        "ar": "قلادة متعددة الطبقات بدلاية كروية",
+        "ja": "重ね付け風オーブペンダントネックレス",
+        "ko": "레이어드 오브 펜던트 목걸이",
+        "vi": "Dây chuyền nhiều lớp mặt cầu"
+      }
+    },
+    {
+      "name": "Stone-Set Slim Band Ring",
+      "source": "Stone-Set Slim Band Ring",
+      "suffix": "",
+      "translations": {
+        "fi": "Kapea kivikoristeinen sormus",
+        "da": "Smal ring med sten",
+        "nb": "Smal ring med steiner",
+        "cs": "Úzký prsten s kamínky",
+        "sk": "Úzky prsteň s kamienkami",
+        "hu": "Keskeny köves gyűrű",
+        "ro": "Inel subțire cu pietre",
+        "el": "Λεπτό δαχτυλίδι με πέτρες",
+        "tr": "Taşlı ince bant yüzük",
+        "uk": "Тонка каблучка з камінцями",
+        "ar": "خاتم رفيع مرصع بأحجار",
+        "ja": "ストーン付きスリムバンドリング",
+        "ko": "스톤 장식 슬림 밴드 반지",
+        "vi": "Nhẫn vòng mảnh đính đá"
+      }
+    },
+    {
+      "name": "Crocodile Detail Link Bracelet",
+      "source": "Crocodile Detail Link Bracelet",
+      "suffix": "",
+      "translations": {
+        "fi": "Lenkkirannekoru krokotiiliyksityiskohdalla",
+        "da": "Ledarmbånd med krokodilledetalje",
+        "nb": "Lenkearmbånd med krokodilledetalj",
+        "cs": "Článkový náramek s detailem krokodýla",
+        "sk": "Článkový náramok s detailom krokodíla",
+        "hu": "Krokodil részletes láncszemes karkötő",
+        "ro": "Brățară cu zale și detaliu crocodil",
+        "el": "Βραχιόλι με κρίκους και λεπτομέρεια κροκόδειλου",
+        "tr": "Timsah detaylı halkalı bileklik",
+        "uk": "Браслет із ланками та деталлю-крокодилом",
+        "ar": "سوار بحلقات وتفصيل تمساح",
+        "ja": "クロコダイルディテールリンクブレスレット",
+        "ko": "악어 디테일 링크 팔찌",
+        "vi": "Vòng tay mắt xích chi tiết cá sấu"
+      }
+    },
+    {
+      "name": "Stone-Set Polished Band Ring",
+      "source": "Stone-Set Polished Band Ring",
+      "suffix": "",
+      "translations": {
+        "fi": "Kiillotettu kivikoristeinen sormus",
+        "da": "Poleret ring med sten",
+        "nb": "Polert ring med steiner",
+        "cs": "Leštěný prsten s kamínky",
+        "sk": "Leštený prsteň s kamienkami",
+        "hu": "Fényes köves gyűrű",
+        "ro": "Inel lustruit cu pietre",
+        "el": "Γυαλισμένο δαχτυλίδι με πέτρες",
+        "tr": "Taşlı parlak bant yüzük",
+        "uk": "Полірована каблучка з камінцями",
+        "ar": "خاتم مصقول مرصع بأحجار",
+        "ja": "ストーン付きポリッシュドバンドリング",
+        "ko": "스톤 장식 광택 밴드 반지",
+        "vi": "Nhẫn vòng đánh bóng đính đá"
+      }
+    },
+    {
+      "name": "Black Beaded Motif Bracelet",
+      "source": "Black Beaded Motif Bracelet",
+      "suffix": "",
+      "translations": {
+        "fi": "Rannekoru mustalla helmikuviolla",
+        "da": "Armbånd med sort perlemotiv",
+        "nb": "Armbånd med svart perlemotiv",
+        "cs": "Náramek s motivem černých korálků",
+        "sk": "Náramok s motívom čiernych korálok",
+        "hu": "Fekete gyöngymotívumos karkötő",
+        "el": "Βραχιόλι με μοτίβο μαύρων χαντρών",
+        "tr": "Siyah boncuk motifli bileklik",
+        "uk": "Браслет із мотивом чорних намистин",
+        "ar": "سوار بنقش خرز أسود",
+        "ja": "ブラックビーズモチーフブレスレット",
+        "ko": "블랙 비즈 모티프 팔찌",
+        "vi": "Vòng tay họa tiết hạt đen"
+      }
+    },
+    {
+      "name": "Crocodile Pendant Bracelet",
+      "source": "Crocodile Pendant Bracelet",
+      "suffix": "",
+      "translations": {
+        "fi": "Rannekoru krokotiiliriipuksella",
+        "da": "Armbånd med krokodillevedhæng",
+        "nb": "Armbånd med krokodilleanheng",
+        "cs": "Náramek s krokodýlím přívěskem",
+        "sk": "Náramok s krokodílím príveskom",
+        "hu": "Krokodil medálos karkötő",
+        "el": "Βραχιόλι με διακοσμητικό κροκόδειλο",
+        "tr": "Timsah uçlu bileklik",
+        "uk": "Браслет із підвіскою-крокодилом",
+        "ar": "سوار بدلاية تمساح",
+        "ja": "クロコダイルペンダントブレスレット",
+        "ko": "악어 펜던트 팔찌",
+        "vi": "Vòng tay mặt cá sấu"
+      }
+    },
+    {
+      "name": "Dice and Cross Link Bracelet",
+      "source": "Dice and Cross Link Bracelet",
+      "suffix": "",
+      "translations": {
+        "fi": "Lenkkirannekoru noppa- ja ristiyksityiskohdilla",
+        "da": "Ledarmbånd med terning og kors",
+        "nb": "Lenkearmbånd med terning og kors",
+        "cs": "Článkový náramek s kostkou a křížem",
+        "sk": "Článkový náramok s kockou a krížom",
+        "hu": "Dobókocka- és keresztmotívumos láncszemes karkötő",
+        "ro": "Brățară cu zale, zar și cruce",
+        "el": "Βραχιόλι με κρίκους, ζάρι και σταυρό",
+        "tr": "Zar ve haç detaylı halkalı bileklik",
+        "uk": "Браслет із ланками, гральним кубиком і хрестом",
+        "ar": "سوار بحلقات وزينة نرد وصليب",
+        "ja": "ダイスとクロスのリンクブレスレット",
+        "ko": "주사위와 십자가 링크 팔찌",
+        "vi": "Vòng tay mắt xích xúc xắc và chữ thập"
+      }
+    }
+  ]
+}

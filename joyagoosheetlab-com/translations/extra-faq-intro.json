@@ -1,0 +1,64 @@
+{
+  "keys": [
+    "Frequently Asked Questions",
+    "Clear answers to common questions before you browse, order and ship."
+  ],
+  "rows": {
+    "fi": [
+      "Usein kysytyt kysymykset",
+      "Selkeitä vastauksia yleisiin kysymyksiin ennen selaamista, tilaamista ja lähettämistä."
+    ],
+    "da": [
+      "Ofte stillede spørgsmål",
+      "Klare svar på almindelige spørgsmål, før du gennemser, bestiller og sender."
+    ],
+    "nb": [
+      "Ofte stilte spørsmål",
+      "Klare svar på vanlige spørsmål før du utforsker, bestiller og sender."
+    ],
+    "cs": [
+      "Často kladené otázky",
+      "Jasné odpovědi na běžné otázky před procházením, objednáním a odesláním."
+    ],
+    "sk": [
+      "Často kladené otázky",
+      "Jasné odpovede na bežné otázky pred prehliadaním, objednaním a odoslaním."
+    ],
+    "hu": [
+      "Gyakran ismételt kérdések",
+      "Egyértelmű válaszok a gyakori kérdésekre böngészés, rendelés és feladás előtt."
+    ],
+    "ro": [
+      "Întrebări frecvente",
+      "Răspunsuri clare la întrebări obișnuite înainte de a explora, comanda și expedia."
+    ],
+    "el": [
+      "Συχνές ερωτήσεις",
+      "Σαφείς απαντήσεις σε συνηθισμένες ερωτήσεις πριν από την περιήγηση, την παραγγελία και την αποστολή."
+    ],
+    "tr": [
+      "Sıkça sorulan sorular",
+      "Göz atmadan, sipariş vermeden ve göndermeden önce sık sorulan sorulara açık yanıtlar."
+    ],
+    "uk": [
+      "Поширені запитання",
+      "Зрозумілі відповіді на поширені запитання перед переглядом, замовленням і відправленням."
+    ],
+    "ar": [
+      "الأسئلة الشائعة",
+      "إجابات واضحة عن الأسئلة الشائعة قبل التصفح والطلب والشحن."
+    ],
+    "ja": [
+      "よくある質問",
+      "閲覧、注文、発送の前によくある質問に分かりやすくお答えします。"
+    ],
+    "ko": [
+      "자주 묻는 질문",
+      "둘러보기, 주문 및 발송 전에 자주 묻는 질문에 명확하게 답합니다."
+    ],
+    "vi": [
+      "Câu hỏi thường gặp",
+      "Câu trả lời rõ ràng cho các thắc mắc thường gặp trước khi bạn xem, đặt hàng và vận chuyển."
+    ]
+  }
+}

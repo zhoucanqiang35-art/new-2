@@ -1,0 +1,410 @@
+{
+  "items": [
+    {
+      "name": "Sweater Collection",
+      "translations": {
+        "sk": "Kolekcia svetrov",
+        "vi": "Bộ sưu tập áo len"
+      }
+    },
+    {
+      "name": "M Batch Dunk Series Collection",
+      "translations": {
+        "sk": "Kolekcia série Dunk, šarža M",
+        "vi": "Bộ sưu tập dòng Dunk lô M"
+      }
+    },
+    {
+      "name": "D**r B*30 Series Collection",
+      "translations": {
+        "sk": "Kolekcia série D**r B*30",
+        "vi": "Bộ sưu tập dòng D**r B*30"
+      }
+    },
+    {
+      "name": "YH Batch D1OR B27 Collection",
+      "translations": {
+        "sk": "Kolekcia D1OR B27, šarža YH",
+        "vi": "Bộ sưu tập D1OR B27 lô YH"
+      }
+    },
+    {
+      "name": "Nike Dunk M Batch Collection",
+      "translations": {
+        "sk": "Kolekcia Nike Dunk, šarža M",
+        "vi": "Bộ sưu tập Nike Dunk lô M"
+      }
+    },
+    {
+      "name": "Air Force 1 GX Collection",
+      "translations": {
+        "sk": "Kolekcia Air Force 1 GX",
+        "vi": "Bộ sưu tập Air Force 1 GX"
+      }
+    },
+    {
+      "name": "T Batch Ja 3 Collection",
+      "translations": {
+        "sk": "Kolekcia Ja 3, šarža T",
+        "vi": "Bộ sưu tập Ja 3 lô T"
+      }
+    },
+    {
+      "name": "M-Version BV Series Collection",
+      "translations": {
+        "sk": "Kolekcia série BV, verzia M",
+        "vi": "Bộ sưu tập dòng BV phiên bản M"
+      }
+    },
+    {
+      "name": "Air Max 95 WW1 Collection",
+      "translations": {
+        "sk": "Kolekcia Air Max 95 WW1",
+        "vi": "Bộ sưu tập Air Max 95 WW1"
+      }
+    },
+    {
+      "name": "Air Max 90 ET Batch Collection",
+      "translations": {
+        "sk": "Kolekcia Air Max 90, šarža ET",
+        "vi": "Bộ sưu tập Air Max 90 lô ET"
+      }
+    },
+    {
+      "name": "Air Jordan B-Grade Collection",
+      "translations": {
+        "sk": "Kolekcia Air Jordan triedy B",
+        "vi": "Bộ sưu tập Air Jordan loại B"
+      }
+    },
+    {
+      "name": "Air Force 1 G Batch Collection",
+      "translations": {
+        "sk": "Kolekcia Air Force 1, šarža G",
+        "vi": "Bộ sưu tập Air Force 1 lô G"
+      }
+    },
+    {
+      "name": "Dunk Low S2 Batch Collection",
+      "translations": {
+        "sk": "Kolekcia Dunk Low, šarža S2",
+        "vi": "Bộ sưu tập Dunk Low lô S2"
+      }
+    },
+    {
+      "name": "SB Dunk PK Batch Collection",
+      "translations": {
+        "sk": "Kolekcia SB Dunk, šarža PK",
+        "vi": "Bộ sưu tập SB Dunk lô PK"
+      }
+    },
+    {
+      "name": "Air Jordan 4 Budget Collection",
+      "translations": {
+        "sk": "Kolekcia Air Jordan 4, cenovo dostupná verzia",
+        "vi": "Bộ sưu tập Air Jordan 4 phiên bản giá tốt"
+      }
+    },
+    {
+      "name": "Bape-Style Sneakers Collection",
+      "translations": {
+        "sk": "Kolekcia tenisiek v štýle Bape",
+        "vi": "Bộ sưu tập giày sneaker phong cách Bape"
+      }
+    },
+    {
+      "name": "Sock-Style Sneakers Collection",
+      "translations": {
+        "sk": "Kolekcia ponožkových tenisiek",
+        "vi": "Bộ sưu tập giày sneaker dạng tất"
+      }
+    },
+    {
+      "name": "BST Casual Sneakers Collection",
+      "translations": {
+        "sk": "Kolekcia voľnočasových tenisiek BST",
+        "vi": "Bộ sưu tập giày sneaker thường ngày BST"
+      }
+    },
+    {
+      "name": "Dior B30 DG Batch Collection",
+      "translations": {
+        "sk": "Kolekcia Dior B30, šarža DG",
+        "vi": "Bộ sưu tập Dior B30 lô DG"
+      }
+    },
+    {
+      "name": "GZ Batch Sneaker Collection",
+      "translations": {
+        "sk": "Kolekcia tenisiek, šarža GZ",
+        "vi": "Bộ sưu tập giày sneaker lô GZ"
+      }
+    },
+    {
+      "name": "GX Batch Jordan 4 Collection",
+      "translations": {
+        "sk": "Kolekcia Jordan 4, šarža GX",
+        "vi": "Bộ sưu tập Jordan 4 lô GX"
+      }
+    },
+    {
+      "name": "OX Batch GT Cut Collection",
+      "translations": {
+        "sk": "Kolekcia GT Cut, šarža OX",
+        "vi": "Bộ sưu tập GT Cut lô OX"
+      }
+    },
+    {
+      "name": "KK Batch Dunk Low Collection",
+      "translations": {
+        "sk": "Kolekcia Dunk Low, šarža KK",
+        "vi": "Bộ sưu tập Dunk Low lô KK"
+      }
+    },
+    {
+      "name": "ZC Batch GEL-NYC Collection",
+      "translations": {
+        "sk": "Kolekcia GEL-NYC, šarža ZC",
+        "vi": "Bộ sưu tập GEL-NYC lô ZC"
+      }
+    },
+    {
+      "name": "Best Batch Sneakers Collection",
+      "translations": {
+        "sk": "Kolekcia tenisiek Best Batch",
+        "vi": "Bộ sưu tập giày sneaker lô Best"
+      }
+    },
+    {
+      "name": "G Batch Air Force 1 Collection",
+      "translations": {
+        "sk": "Kolekcia Air Force 1, šarža G",
+        "vi": "Bộ sưu tập Air Force 1 lô G"
+      }
+    },
+    {
+      "name": "PE Batch On Running Collection",
+      "translations": {
+        "sk": "Kolekcia On Running, šarža PE",
+        "vi": "Bộ sưu tập On Running lô PE"
+      }
+    },
+    {
+      "name": "Air Max 95 Gradient Collection",
+      "translations": {
+        "sk": "Kolekcia Air Max 95 s prechodom farieb",
+        "vi": "Bộ sưu tập Air Max 95 phối màu chuyển sắc"
+      }
+    },
+    {
+      "name": "OG Batch Jordan 6 Collection",
+      "translations": {
+        "sk": "Kolekcia Jordan 6, šarža OG",
+        "vi": "Bộ sưu tập Jordan 6 lô OG"
+      }
+    },
+    {
+      "name": "RN Batch Jordan 4 Collection",
+      "translations": {
+        "sk": "Kolekcia Jordan 4, šarža RN",
+        "vi": "Bộ sưu tập Jordan 4 lô RN"
+      }
+    },
+    {
+      "name": "OWF Series Collection",
+      "translations": {
+        "sk": "Kolekcia série OWF",
+        "vi": "Bộ sưu tập dòng OWF"
+      }
+    },
+    {
+      "name": "PE Batch P-6000 Collection",
+      "translations": {
+        "sk": "Kolekcia P-6000, šarža PE",
+        "vi": "Bộ sưu tập P-6000 lô PE"
+      }
+    },
+    {
+      "name": "Basic T-Shirt Collection",
+      "translations": {
+        "sk": "Kolekcia základných tričiek",
+        "vi": "Bộ sưu tập áo thun cơ bản"
+      }
+    },
+    {
+      "name": "Performance T-Shirt Collection",
+      "translations": {
+        "sk": "Kolekcia výkonnostných tričiek",
+        "vi": "Bộ sưu tập áo thun thể thao hiệu năng"
+      }
+    },
+    {
+      "name": "Colorful Polo Shirt Collection",
+      "translations": {
+        "sk": "Kolekcia farebných polokošieľ",
+        "vi": "Bộ sưu tập áo polo nhiều màu"
+      }
+    },
+    {
+      "name": "Ape Graphic T-Shirt Collection",
+      "translations": {
+        "sk": "Kolekcia tričiek s grafikou opice",
+        "vi": "Bộ sưu tập áo thun họa tiết khỉ"
+      }
+    },
+    {
+      "name": "OWF Max Sneakers Collection",
+      "translations": {
+        "sk": "Kolekcia tenisiek OWF Max",
+        "vi": "Bộ sưu tập giày sneaker OWF Max"
+      }
+    },
+    {
+      "name": "Dior B23 GD Batch Collection",
+      "translations": {
+        "sk": "Kolekcia Dior B23, šarža GD",
+        "vi": "Bộ sưu tập Dior B23 lô GD"
+      }
+    },
+    {
+      "name": "Nike Dunk AY Batch Collection",
+      "translations": {
+        "sk": "Kolekcia Nike Dunk, šarža AY",
+        "vi": "Bộ sưu tập Nike Dunk lô AY"
+      }
+    },
+    {
+      "name": "LW Basketball Slide Collection",
+      "translations": {
+        "sk": "Kolekcia basketbalových šľapiek LW",
+        "vi": "Bộ sưu tập dép bóng rổ LW"
+      }
+    },
+    {
+      "name": "LW Foam Slide Collection",
+      "translations": {
+        "sk": "Kolekcia penových šľapiek LW",
+        "vi": "Bộ sưu tập dép xốp LW"
+      }
+    },
+    {
+      "name": "LW Value Slide Collection",
+      "translations": {
+        "sk": "Kolekcia cenovo dostupných šľapiek LW",
+        "vi": "Bộ sưu tập dép LW giá tốt"
+      }
+    },
+    {
+      "name": "Embroidered T-Shirt Collection",
+      "translations": {
+        "sk": "Kolekcia vyšívaných tričiek",
+        "vi": "Bộ sưu tập áo thun có thêu"
+      }
+    },
+    {
+      "name": "Crewneck Sweatshirt Collection",
+      "translations": {
+        "sk": "Kolekcia mikín s okrúhlym výstrihom",
+        "vi": "Bộ sưu tập áo sweatshirt cổ tròn"
+      }
+    },
+    {
+      "name": "Letter Print Hoodie Collection",
+      "translations": {
+        "sk": "Kolekcia mikín s kapucňou a potlačou písmen",
+        "vi": "Bộ sưu tập áo hoodie in chữ"
+      }
+    },
+    {
+      "name": "Football Jersey Collection",
+      "translations": {
+        "sk": "Kolekcia futbalových dresov",
+        "vi": "Bộ sưu tập áo thi đấu bóng đá"
+      }
+    },
+    {
+      "name": "PAX77 Casual Shorts Collection",
+      "translations": {
+        "sk": "Kolekcia voľnočasových šortiek PAX77",
+        "vi": "Bộ sưu tập quần short thường ngày PAX77"
+      }
+    },
+    {
+      "name": "Graphic Trucker Cap Collection",
+      "translations": {
+        "sk": "Kolekcia šiltoviek trucker s grafikou",
+        "vi": "Bộ sưu tập mũ trucker họa tiết đồ họa"
+      }
+    },
+    {
+      "name": "Hanes Boxer Briefs Collection",
+      "translations": {
+        "sk": "Kolekcia boxeriek Hanes",
+        "vi": "Bộ sưu tập quần lót boxer Hanes"
+      }
+    },
+    {
+      "name": "Washed Flared Jeans Collection",
+      "translations": {
+        "sk": "Kolekcia praných rozšírených džínsov",
+        "vi": "Bộ sưu tập quần jeans ống loe wash"
+      }
+    },
+    {
+      "name": "Cuffed Jogger Pants Collection",
+      "translations": {
+        "sk": "Kolekcia jogger nohavíc s manžetami",
+        "vi": "Bộ sưu tập quần jogger bo gấu"
+      }
+    },
+    {
+      "name": "Xerjoff Fragrance Collection",
+      "translations": {
+        "sk": "Kolekcia vôní Xerjoff",
+        "vi": "Bộ sưu tập nước hoa Xerjoff"
+      }
+    },
+    {
+      "name": "Le Beau Fragrance Collection",
+      "translations": {
+        "sk": "Kolekcia vôní Le Beau",
+        "vi": "Bộ sưu tập nước hoa Le Beau"
+      }
+    },
+    {
+      "name": "Le Male Fragrance Collection",
+      "translations": {
+        "sk": "Kolekcia vôní Le Male",
+        "vi": "Bộ sưu tập nước hoa Le Male"
+      }
+    },
+    {
+      "name": "Men's Messenger Bag Collection",
+      "translations": {
+        "sk": "Kolekcia pánskych tašiek typu messenger",
+        "vi": "Bộ sưu tập túi messenger nam"
+      }
+    },
+    {
+      "name": "Men's Crossbody Bag Collection",
+      "translations": {
+        "sk": "Kolekcia pánskych tašiek cez telo",
+        "vi": "Bộ sưu tập túi đeo chéo nam"
+      }
+    },
+    {
+      "name": "Monogram Travel Bag Collection",
+      "translations": {
+        "sk": "Kolekcia cestovných tašiek s monogramom",
+        "vi": "Bộ sưu tập túi du lịch họa tiết monogram"
+      }
+    },
+    {
+      "name": "Carhartt Backpack Collection",
+      "translations": {
+        "sk": "Kolekcia batohov Carhartt",
+        "vi": "Bộ sưu tập ba lô Carhartt"
+      }
+    }
+  ]
+}

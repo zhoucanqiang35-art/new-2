@@ -1,0 +1,916 @@
+{
+  "items": [
+    {
+      "name": "Nike x NOCTA T-shirt",
+      "translations": {
+        "fi": "Nike x NOCTA T-paita",
+        "da": "Nike x NOCTA T-shirt",
+        "nb": "Nike x NOCTA T-skjorte",
+        "cs": "Nike x NOCTA tričko",
+        "sk": "Nike x NOCTA tričko",
+        "hu": "Nike x NOCTA póló",
+        "ro": "Nike x NOCTA tricou",
+        "el": "Nike x NOCTA μπλουζάκι",
+        "uk": "Nike x NOCTA футболка",
+        "ar": "Nike x NOCTA تيشيرت",
+        "ja": "Nike x NOCTA Tシャツ",
+        "ko": "Nike x NOCTA 티셔츠",
+        "vi": "Nike x NOCTA áo thun",
+        "tr": "Nike x NOCTA tişört"
+      }
+    },
+    {
+      "name": "Broken Planet Sweater",
+      "translations": {
+        "fi": "Broken Planet neulepusero",
+        "da": "Broken Planet sweater",
+        "nb": "Broken Planet genser",
+        "cs": "Broken Planet svetr",
+        "sk": "Broken Planet sveter",
+        "hu": "Broken Planet pulóver",
+        "ro": "Broken Planet pulover",
+        "el": "Broken Planet πουλόβερ",
+        "uk": "Broken Planet светр",
+        "ar": "Broken Planet كنزة",
+        "ja": "Broken Planet セーター",
+        "ko": "Broken Planet 스웨터",
+        "vi": "Broken Planet áo len",
+        "tr": "Broken Planet kazak"
+      }
+    },
+    {
+      "name": "Stussy x Nike Jacket",
+      "translations": {
+        "fi": "Stussy x Nike takki",
+        "da": "Stussy x Nike jakke",
+        "nb": "Stussy x Nike jakke",
+        "cs": "Stussy x Nike bunda",
+        "sk": "Stussy x Nike bunda",
+        "hu": "Stussy x Nike dzseki",
+        "ro": "Stussy x Nike jachetă",
+        "el": "Stussy x Nike μπουφάν",
+        "uk": "Stussy x Nike куртка",
+        "ar": "Stussy x Nike سترة",
+        "ja": "Stussy x Nike ジャケット",
+        "ko": "Stussy x Nike 재킷",
+        "vi": "Stussy x Nike áo khoác",
+        "tr": "Stussy x Nike ceket"
+      }
+    },
+    {
+      "name": "Maison Margiela MM6 shoes",
+      "translations": {
+        "fi": "Maison Margiela MM6 kengät",
+        "da": "Maison Margiela MM6 sko",
+        "nb": "Maison Margiela MM6 sko",
+        "cs": "Maison Margiela MM6 boty",
+        "sk": "Maison Margiela MM6 topánky",
+        "hu": "Maison Margiela MM6 cipő",
+        "ro": "Maison Margiela MM6 pantofi",
+        "el": "Maison Margiela MM6 παπούτσια",
+        "uk": "Maison Margiela MM6 взуття",
+        "ar": "Maison Margiela MM6 أحذية",
+        "ja": "Maison Margiela MM6 シューズ",
+        "ko": "Maison Margiela MM6 신발",
+        "vi": "Maison Margiela MM6 giày",
+        "tr": "Maison Margiela MM6 ayakkabı"
+      }
+    },
+    {
+      "name": "vans socks",
+      "translations": {
+        "fi": "vans sukat",
+        "da": "vans sokker",
+        "nb": "vans sokker",
+        "cs": "vans ponožky",
+        "sk": "vans ponožky",
+        "hu": "vans zoknik",
+        "ro": "vans șosete",
+        "el": "vans κάλτσες",
+        "uk": "vans шкарпетки",
+        "ar": "vans جوارب",
+        "ja": "vans 靴下",
+        "ko": "vans 양말",
+        "vi": "vans tất",
+        "tr": "vans çorap"
+      }
+    },
+    {
+      "name": "Off White OW shoes",
+      "translations": {
+        "fi": "Off White OW kengät",
+        "da": "Off White OW sko",
+        "nb": "Off White OW sko",
+        "cs": "Off White OW boty",
+        "sk": "Off White OW topánky",
+        "hu": "Off White OW cipő",
+        "ro": "Off White OW pantofi",
+        "el": "Off White OW παπούτσια",
+        "uk": "Off White OW взуття",
+        "ar": "Off White OW أحذية",
+        "ja": "Off White OW シューズ",
+        "ko": "Off White OW 신발",
+        "vi": "Off White OW giày",
+        "tr": "Off White OW ayakkabı"
+      }
+    },
+    {
+      "name": "Purple Brand T-shirt",
+      "translations": {
+        "fi": "Purple Brand T-paita",
+        "da": "Purple Brand T-shirt",
+        "nb": "Purple Brand T-skjorte",
+        "cs": "Purple Brand tričko",
+        "sk": "Purple Brand tričko",
+        "hu": "Purple Brand póló",
+        "ro": "Purple Brand tricou",
+        "el": "Purple Brand μπλουζάκι",
+        "uk": "Purple Brand футболка",
+        "ar": "Purple Brand تيشيرت",
+        "ja": "Purple Brand Tシャツ",
+        "ko": "Purple Brand 티셔츠",
+        "vi": "Purple Brand áo thun",
+        "tr": "Purple Brand tişört"
+      }
+    },
+    {
+      "name": "Travis Scott Tee",
+      "translations": {
+        "fi": "Travis Scott T-paita",
+        "da": "Travis Scott T-shirt",
+        "nb": "Travis Scott T-skjorte",
+        "cs": "Travis Scott tričko",
+        "sk": "Travis Scott tričko",
+        "hu": "Travis Scott póló",
+        "ro": "Travis Scott tricou",
+        "el": "Travis Scott μπλουζάκι",
+        "uk": "Travis Scott футболка",
+        "ar": "Travis Scott تيشيرت",
+        "ja": "Travis Scott Tシャツ",
+        "ko": "Travis Scott 티셔츠",
+        "vi": "Travis Scott áo thun",
+        "tr": "Travis Scott tişört"
+      }
+    },
+    {
+      "name": "Casablanca T-shirt",
+      "translations": {
+        "fi": "Casablanca T-paita",
+        "da": "Casablanca T-shirt",
+        "nb": "Casablanca T-skjorte",
+        "cs": "Casablanca tričko",
+        "sk": "Casablanca tričko",
+        "hu": "Casablanca póló",
+        "ro": "Casablanca tricou",
+        "el": "Casablanca μπλουζάκι",
+        "uk": "Casablanca футболка",
+        "ar": "Casablanca تيشيرت",
+        "ja": "Casablanca Tシャツ",
+        "ko": "Casablanca 티셔츠",
+        "vi": "Casablanca áo thun",
+        "tr": "Casablanca tişört"
+      }
+    },
+    {
+      "name": "YSL BAG",
+      "translations": {
+        "fi": "YSL laukku",
+        "da": "YSL taske",
+        "nb": "YSL veske",
+        "cs": "YSL taška",
+        "sk": "YSL taška",
+        "hu": "YSL táska",
+        "ro": "YSL geantă",
+        "el": "YSL τσάντα",
+        "uk": "YSL сумка",
+        "ar": "YSL حقيبة",
+        "ja": "YSL バッグ",
+        "ko": "YSL 가방",
+        "vi": "YSL túi",
+        "tr": "YSL çanta"
+      }
+    },
+    {
+      "name": "vetement Hoodie",
+      "translations": {
+        "fi": "vetement huppari",
+        "da": "vetement hættetrøje",
+        "nb": "vetement hettegenser",
+        "cs": "vetement mikina s kapucí",
+        "sk": "vetement mikina s kapucňou",
+        "hu": "vetement kapucnis pulóver",
+        "ro": "vetement hanorac",
+        "el": "vetement φούτερ με κουκούλα",
+        "uk": "vetement худі",
+        "ar": "vetement هودي",
+        "ja": "vetement パーカー",
+        "ko": "vetement 후드티",
+        "vi": "vetement áo hoodie",
+        "tr": "vetement kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Guess slippers",
+      "translations": {
+        "fi": "Guess tohvelit",
+        "da": "Guess hjemmesko",
+        "nb": "Guess tøfler",
+        "cs": "Guess přezůvky",
+        "sk": "Guess papuče",
+        "hu": "Guess szobapapucs",
+        "ro": "Guess papuci de casă",
+        "el": "Guess παντόφλες",
+        "uk": "Guess капці",
+        "ar": "Guess خف",
+        "ja": "Guess スリッパ",
+        "ko": "Guess 슬리퍼",
+        "vi": "Guess dép đi trong nhà",
+        "tr": "Guess ev terliği"
+      }
+    },
+    {
+      "name": "Acne Studios T-shirt",
+      "translations": {
+        "fi": "Acne Studios T-paita",
+        "da": "Acne Studios T-shirt",
+        "nb": "Acne Studios T-skjorte",
+        "cs": "Acne Studios tričko",
+        "sk": "Acne Studios tričko",
+        "hu": "Acne Studios póló",
+        "ro": "Acne Studios tricou",
+        "el": "Acne Studios μπλουζάκι",
+        "uk": "Acne Studios футболка",
+        "ar": "Acne Studios تيشيرت",
+        "ja": "Acne Studios Tシャツ",
+        "ko": "Acne Studios 티셔츠",
+        "vi": "Acne Studios áo thun",
+        "tr": "Acne Studios tişört"
+      }
+    },
+    {
+      "name": "CK TEE",
+      "translations": {
+        "fi": "CK T-paita",
+        "da": "CK T-shirt",
+        "nb": "CK T-skjorte",
+        "cs": "CK tričko",
+        "sk": "CK tričko",
+        "hu": "CK póló",
+        "ro": "CK tricou",
+        "el": "CK μπλουζάκι",
+        "uk": "CK футболка",
+        "ar": "CK تيشيرت",
+        "ja": "CK Tシャツ",
+        "ko": "CK 티셔츠",
+        "vi": "CK áo thun",
+        "tr": "CK tişört"
+      }
+    },
+    {
+      "name": "CK belt",
+      "translations": {
+        "fi": "CK vyö",
+        "da": "CK bælte",
+        "nb": "CK belte",
+        "cs": "CK pásek",
+        "sk": "CK opasok",
+        "hu": "CK öv",
+        "ro": "CK curea",
+        "el": "CK ζώνη",
+        "uk": "CK ремінь",
+        "ar": "CK حزام",
+        "ja": "CK ベルト",
+        "ko": "CK 벨트",
+        "vi": "CK thắt lưng",
+        "tr": "CK kemer"
+      }
+    },
+    {
+      "name": "McQueen T-shirt",
+      "translations": {
+        "fi": "McQueen T-paita",
+        "da": "McQueen T-shirt",
+        "nb": "McQueen T-skjorte",
+        "cs": "McQueen tričko",
+        "sk": "McQueen tričko",
+        "hu": "McQueen póló",
+        "ro": "McQueen tricou",
+        "el": "McQueen μπλουζάκι",
+        "uk": "McQueen футболка",
+        "ar": "McQueen تيشيرت",
+        "ja": "McQueen Tシャツ",
+        "ko": "McQueen 티셔츠",
+        "vi": "McQueen áo thun",
+        "tr": "McQueen tişört"
+      }
+    },
+    {
+      "name": "Aime Leon Dore TEE",
+      "translations": {
+        "fi": "Aime Leon Dore T-paita",
+        "da": "Aime Leon Dore T-shirt",
+        "nb": "Aime Leon Dore T-skjorte",
+        "cs": "Aime Leon Dore tričko",
+        "sk": "Aime Leon Dore tričko",
+        "hu": "Aime Leon Dore póló",
+        "ro": "Aime Leon Dore tricou",
+        "el": "Aime Leon Dore μπλουζάκι",
+        "uk": "Aime Leon Dore футболка",
+        "ar": "Aime Leon Dore تيشيرت",
+        "ja": "Aime Leon Dore Tシャツ",
+        "ko": "Aime Leon Dore 티셔츠",
+        "vi": "Aime Leon Dore áo thun",
+        "tr": "Aime Leon Dore tişört"
+      }
+    },
+    {
+      "name": "THE NORTH FACE BAG",
+      "translations": {
+        "fi": "THE NORTH FACE laukku",
+        "da": "THE NORTH FACE taske",
+        "nb": "THE NORTH FACE veske",
+        "cs": "THE NORTH FACE taška",
+        "sk": "THE NORTH FACE taška",
+        "hu": "THE NORTH FACE táska",
+        "ro": "THE NORTH FACE geantă",
+        "el": "THE NORTH FACE τσάντα",
+        "uk": "THE NORTH FACE сумка",
+        "ar": "THE NORTH FACE حقيبة",
+        "ja": "THE NORTH FACE バッグ",
+        "ko": "THE NORTH FACE 가방",
+        "vi": "THE NORTH FACE túi",
+        "tr": "THE NORTH FACE çanta"
+      }
+    },
+    {
+      "name": "Palm Angel T-shirt",
+      "translations": {
+        "fi": "Palm Angel T-paita",
+        "da": "Palm Angel T-shirt",
+        "nb": "Palm Angel T-skjorte",
+        "cs": "Palm Angel tričko",
+        "sk": "Palm Angel tričko",
+        "hu": "Palm Angel póló",
+        "ro": "Palm Angel tricou",
+        "el": "Palm Angel μπλουζάκι",
+        "uk": "Palm Angel футболка",
+        "ar": "Palm Angel تيشيرت",
+        "ja": "Palm Angel Tシャツ",
+        "ko": "Palm Angel 티셔츠",
+        "vi": "Palm Angel áo thun",
+        "tr": "Palm Angel tişört"
+      }
+    },
+    {
+      "name": "Alexander McQueen T-shirt",
+      "translations": {
+        "fi": "Alexander McQueen T-paita",
+        "da": "Alexander McQueen T-shirt",
+        "nb": "Alexander McQueen T-skjorte",
+        "cs": "Alexander McQueen tričko",
+        "sk": "Alexander McQueen tričko",
+        "hu": "Alexander McQueen póló",
+        "ro": "Alexander McQueen tricou",
+        "el": "Alexander McQueen μπλουζάκι",
+        "uk": "Alexander McQueen футболка",
+        "ar": "Alexander McQueen تيشيرت",
+        "ja": "Alexander McQueen Tシャツ",
+        "ko": "Alexander McQueen 티셔츠",
+        "vi": "Alexander McQueen áo thun",
+        "tr": "Alexander McQueen tişört"
+      }
+    },
+    {
+      "name": "Ray Ban SunGlasses",
+      "translations": {
+        "fi": "Ray Ban aurinkolasit",
+        "da": "Ray Ban solbriller",
+        "nb": "Ray Ban solbriller",
+        "cs": "Ray Ban sluneční brýle",
+        "sk": "Ray Ban slnečné okuliare",
+        "hu": "Ray Ban napszemüveg",
+        "ro": "Ray Ban ochelari de soare",
+        "el": "Ray Ban γυαλιά ηλίου",
+        "uk": "Ray Ban сонцезахисні окуляри",
+        "ar": "Ray Ban نظارات شمسية",
+        "ja": "Ray Ban サングラス",
+        "ko": "Ray Ban 선글라스",
+        "vi": "Ray Ban kính râm",
+        "tr": "Ray Ban güneş gözlüğü"
+      }
+    },
+    {
+      "name": "Travis Scott T-shirt",
+      "translations": {
+        "fi": "Travis Scott T-paita",
+        "da": "Travis Scott T-shirt",
+        "nb": "Travis Scott T-skjorte",
+        "cs": "Travis Scott tričko",
+        "sk": "Travis Scott tričko",
+        "hu": "Travis Scott póló",
+        "ro": "Travis Scott tricou",
+        "el": "Travis Scott μπλουζάκι",
+        "uk": "Travis Scott футболка",
+        "ar": "Travis Scott تيشيرت",
+        "ja": "Travis Scott Tシャツ",
+        "ko": "Travis Scott 티셔츠",
+        "vi": "Travis Scott áo thun",
+        "tr": "Travis Scott tişört"
+      }
+    },
+    {
+      "name": "Dita Sunglasses",
+      "translations": {
+        "fi": "Dita aurinkolasit",
+        "da": "Dita solbriller",
+        "nb": "Dita solbriller",
+        "cs": "Dita sluneční brýle",
+        "sk": "Dita slnečné okuliare",
+        "hu": "Dita napszemüveg",
+        "ro": "Dita ochelari de soare",
+        "el": "Dita γυαλιά ηλίου",
+        "uk": "Dita сонцезахисні окуляри",
+        "ar": "Dita نظارات شمسية",
+        "ja": "Dita サングラス",
+        "ko": "Dita 선글라스",
+        "vi": "Dita kính râm",
+        "tr": "Dita güneş gözlüğü"
+      }
+    },
+    {
+      "name": "The North Face Backpack",
+      "translations": {
+        "fi": "The North Face reppu",
+        "da": "The North Face rygsæk",
+        "nb": "The North Face ryggsekk",
+        "cs": "The North Face batoh",
+        "sk": "The North Face batoh",
+        "hu": "The North Face hátizsák",
+        "ro": "The North Face rucsac",
+        "el": "The North Face σακίδιο",
+        "uk": "The North Face рюкзак",
+        "ar": "The North Face حقيبة ظهر",
+        "ja": "The North Face バックパック",
+        "ko": "The North Face 백팩",
+        "vi": "The North Face ba lô",
+        "tr": "The North Face sırt çantası"
+      }
+    },
+    {
+      "name": "Hermès Belt",
+      "translations": {
+        "fi": "Hermès vyö",
+        "da": "Hermès bælte",
+        "nb": "Hermès belte",
+        "cs": "Hermès pásek",
+        "sk": "Hermès opasok",
+        "hu": "Hermès öv",
+        "ro": "Hermès curea",
+        "el": "Hermès ζώνη",
+        "uk": "Hermès ремінь",
+        "ar": "Hermès حزام",
+        "ja": "Hermès ベルト",
+        "ko": "Hermès 벨트",
+        "vi": "Hermès thắt lưng",
+        "tr": "Hermès kemer"
+      }
+    },
+    {
+      "name": "Ray-Ban glasses",
+      "translations": {
+        "fi": "Ray-Ban silmälasit",
+        "da": "Ray-Ban briller",
+        "nb": "Ray-Ban briller",
+        "cs": "Ray-Ban brýle",
+        "sk": "Ray-Ban okuliare",
+        "hu": "Ray-Ban szemüveg",
+        "ro": "Ray-Ban ochelari",
+        "el": "Ray-Ban γυαλιά",
+        "uk": "Ray-Ban окуляри",
+        "ar": "Ray-Ban نظارات",
+        "ja": "Ray-Ban 眼鏡",
+        "ko": "Ray-Ban 안경",
+        "vi": "Ray-Ban kính",
+        "tr": "Ray-Ban gözlük"
+      }
+    },
+    {
+      "name": "Vivienne T-shirt",
+      "translations": {
+        "fi": "Vivienne T-paita",
+        "da": "Vivienne T-shirt",
+        "nb": "Vivienne T-skjorte",
+        "cs": "Vivienne tričko",
+        "sk": "Vivienne tričko",
+        "hu": "Vivienne póló",
+        "ro": "Vivienne tricou",
+        "el": "Vivienne μπλουζάκι",
+        "uk": "Vivienne футболка",
+        "ar": "Vivienne تيشيرت",
+        "ja": "Vivienne Tシャツ",
+        "ko": "Vivienne 티셔츠",
+        "vi": "Vivienne áo thun",
+        "tr": "Vivienne tişört"
+      }
+    },
+    {
+      "name": "Evisu t-shirt",
+      "translations": {
+        "fi": "Evisu T-paita",
+        "da": "Evisu T-shirt",
+        "nb": "Evisu T-skjorte",
+        "cs": "Evisu tričko",
+        "sk": "Evisu tričko",
+        "hu": "Evisu póló",
+        "ro": "Evisu tricou",
+        "el": "Evisu μπλουζάκι",
+        "uk": "Evisu футболка",
+        "ar": "Evisu تيشيرت",
+        "ja": "Evisu Tシャツ",
+        "ko": "Evisu 티셔츠",
+        "vi": "Evisu áo thun",
+        "tr": "Evisu tişört"
+      }
+    },
+    {
+      "name": "Arc'teryx T-shirt",
+      "translations": {
+        "fi": "Arc'teryx T-paita",
+        "da": "Arc'teryx T-shirt",
+        "nb": "Arc'teryx T-skjorte",
+        "cs": "Arc'teryx tričko",
+        "sk": "Arc'teryx tričko",
+        "hu": "Arc'teryx póló",
+        "ro": "Arc'teryx tricou",
+        "el": "Arc'teryx μπλουζάκι",
+        "uk": "Arc'teryx футболка",
+        "ar": "Arc'teryx تيشيرت",
+        "ja": "Arc'teryx Tシャツ",
+        "ko": "Arc'teryx 티셔츠",
+        "vi": "Arc'teryx áo thun",
+        "tr": "Arc'teryx tişört"
+      }
+    },
+    {
+      "name": "TRAVIS SCOTT SHORTS",
+      "translations": {
+        "fi": "TRAVIS SCOTT shortsit",
+        "da": "TRAVIS SCOTT shorts",
+        "nb": "TRAVIS SCOTT shorts",
+        "cs": "TRAVIS SCOTT šortky",
+        "sk": "TRAVIS SCOTT šortky",
+        "hu": "TRAVIS SCOTT rövidnadrág",
+        "ro": "TRAVIS SCOTT pantaloni scurți",
+        "el": "TRAVIS SCOTT σορτς",
+        "uk": "TRAVIS SCOTT шорти",
+        "ar": "TRAVIS SCOTT شورت",
+        "ja": "TRAVIS SCOTT ショーツ",
+        "ko": "TRAVIS SCOTT 반바지",
+        "vi": "TRAVIS SCOTT quần short",
+        "tr": "TRAVIS SCOTT şort"
+      }
+    },
+    {
+      "name": "Balenciaga × Adidas Tracksuit",
+      "translations": {
+        "fi": "Balenciaga × Adidas verryttelyasu",
+        "da": "Balenciaga × Adidas træningsdragt",
+        "nb": "Balenciaga × Adidas treningsdress",
+        "cs": "Balenciaga × Adidas tepláková souprava",
+        "sk": "Balenciaga × Adidas tepláková súprava",
+        "hu": "Balenciaga × Adidas melegítőszett",
+        "ro": "Balenciaga × Adidas trening",
+        "el": "Balenciaga × Adidas φόρμα",
+        "uk": "Balenciaga × Adidas спортивний костюм",
+        "ar": "Balenciaga × Adidas بدلة رياضية",
+        "ja": "Balenciaga × Adidas トラックスーツ",
+        "ko": "Balenciaga × Adidas 트레이닝복",
+        "vi": "Balenciaga × Adidas bộ đồ thể thao",
+        "tr": "Balenciaga × Adidas eşofman takımı"
+      }
+    },
+    {
+      "name": "YSL bags",
+      "translations": {
+        "fi": "YSL laukut",
+        "da": "YSL tasker",
+        "nb": "YSL vesker",
+        "cs": "YSL tašky",
+        "sk": "YSL tašky",
+        "hu": "YSL táskák",
+        "ro": "YSL genți",
+        "el": "YSL τσάντες",
+        "uk": "YSL сумки",
+        "ar": "YSL حقائب",
+        "ja": "YSL バッグ",
+        "ko": "YSL 가방",
+        "vi": "YSL túi",
+        "tr": "YSL çantalar"
+      }
+    },
+    {
+      "name": "BROKEN PLANET HOODIE",
+      "translations": {
+        "fi": "BROKEN PLANET huppari",
+        "da": "BROKEN PLANET hættetrøje",
+        "nb": "BROKEN PLANET hettegenser",
+        "cs": "BROKEN PLANET mikina s kapucí",
+        "sk": "BROKEN PLANET mikina s kapucňou",
+        "hu": "BROKEN PLANET kapucnis pulóver",
+        "ro": "BROKEN PLANET hanorac",
+        "el": "BROKEN PLANET φούτερ με κουκούλα",
+        "uk": "BROKEN PLANET худі",
+        "ar": "BROKEN PLANET هودي",
+        "ja": "BROKEN PLANET パーカー",
+        "ko": "BROKEN PLANET 후드티",
+        "vi": "BROKEN PLANET áo hoodie",
+        "tr": "BROKEN PLANET kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Nike x Nocta Tracksuit",
+      "translations": {
+        "fi": "Nike x Nocta verryttelyasu",
+        "da": "Nike x Nocta træningsdragt",
+        "nb": "Nike x Nocta treningsdress",
+        "cs": "Nike x Nocta tepláková souprava",
+        "sk": "Nike x Nocta tepláková súprava",
+        "hu": "Nike x Nocta melegítőszett",
+        "ro": "Nike x Nocta trening",
+        "el": "Nike x Nocta φόρμα",
+        "uk": "Nike x Nocta спортивний костюм",
+        "ar": "Nike x Nocta بدلة رياضية",
+        "ja": "Nike x Nocta トラックスーツ",
+        "ko": "Nike x Nocta 트레이닝복",
+        "vi": "Nike x Nocta bộ đồ thể thao",
+        "tr": "Nike x Nocta eşofman takımı"
+      }
+    },
+    {
+      "name": "V-Lone T-Shirt [40 styles]",
+      "translations": {
+        "fi": "V-Lone T-paita [40 mallia]",
+        "da": "V-Lone T-shirt [40 modeller]",
+        "nb": "V-Lone T-skjorte [40 modeller]",
+        "cs": "V-Lone tričko [40 variant]",
+        "sk": "V-Lone tričko [40 variantov]",
+        "hu": "V-Lone póló [40 változat]",
+        "ro": "V-Lone tricou [40 modele]",
+        "el": "V-Lone μπλουζάκι [40 σχέδια]",
+        "uk": "V-Lone футболка [40 варіантів]",
+        "ar": "V-Lone تيشيرت [40 تصميمًا]",
+        "ja": "V-Lone Tシャツ [40 種類]",
+        "ko": "V-Lone 티셔츠 [40 종]",
+        "vi": "V-Lone áo thun [40 mẫu]",
+        "tr": "V-Lone tişört [40 model]"
+      }
+    },
+    {
+      "name": "Puma Backpack [4 styles]",
+      "translations": {
+        "fi": "Puma reppu [4 mallia]",
+        "da": "Puma rygsæk [4 modeller]",
+        "nb": "Puma ryggsekk [4 modeller]",
+        "cs": "Puma batoh [4 variant]",
+        "sk": "Puma batoh [4 variantov]",
+        "hu": "Puma hátizsák [4 változat]",
+        "ro": "Puma rucsac [4 modele]",
+        "el": "Puma σακίδιο [4 σχέδια]",
+        "uk": "Puma рюкзак [4 варіантів]",
+        "ar": "Puma حقيبة ظهر [4 تصميمًا]",
+        "ja": "Puma バックパック [4 種類]",
+        "ko": "Puma 백팩 [4 종]",
+        "vi": "Puma ba lô [4 mẫu]",
+        "tr": "Puma sırt çantası [4 model]"
+      }
+    },
+    {
+      "name": "Casablanca T-Shirt [40 styles]",
+      "translations": {
+        "fi": "Casablanca T-paita [40 mallia]",
+        "da": "Casablanca T-shirt [40 modeller]",
+        "nb": "Casablanca T-skjorte [40 modeller]",
+        "cs": "Casablanca tričko [40 variant]",
+        "sk": "Casablanca tričko [40 variantov]",
+        "hu": "Casablanca póló [40 változat]",
+        "ro": "Casablanca tricou [40 modele]",
+        "el": "Casablanca μπλουζάκι [40 σχέδια]",
+        "uk": "Casablanca футболка [40 варіантів]",
+        "ar": "Casablanca تيشيرت [40 تصميمًا]",
+        "ja": "Casablanca Tシャツ [40 種類]",
+        "ko": "Casablanca 티셔츠 [40 종]",
+        "vi": "Casablanca áo thun [40 mẫu]",
+        "tr": "Casablanca tişört [40 model]"
+      }
+    },
+    {
+      "name": "Ray Ban GLASSES",
+      "translations": {
+        "fi": "Ray Ban silmälasit",
+        "da": "Ray Ban briller",
+        "nb": "Ray Ban briller",
+        "cs": "Ray Ban brýle",
+        "sk": "Ray Ban okuliare",
+        "hu": "Ray Ban szemüveg",
+        "ro": "Ray Ban ochelari",
+        "el": "Ray Ban γυαλιά",
+        "uk": "Ray Ban окуляри",
+        "ar": "Ray Ban نظارات",
+        "ja": "Ray Ban 眼鏡",
+        "ko": "Ray Ban 안경",
+        "vi": "Ray Ban kính",
+        "tr": "Ray Ban gözlük"
+      }
+    },
+    {
+      "name": "Purple Brand jeans",
+      "translations": {
+        "fi": "Purple Brand farkut",
+        "da": "Purple Brand jeans",
+        "nb": "Purple Brand jeans",
+        "cs": "Purple Brand džíny",
+        "sk": "Purple Brand džínsy",
+        "hu": "Purple Brand farmer",
+        "ro": "Purple Brand blugi",
+        "el": "Purple Brand τζιν",
+        "uk": "Purple Brand джинси",
+        "ar": "Purple Brand جينز",
+        "ja": "Purple Brand ジーンズ",
+        "ko": "Purple Brand 청바지",
+        "vi": "Purple Brand quần jeans",
+        "tr": "Purple Brand kot pantolon"
+      }
+    },
+    {
+      "name": "Nike x Nocta Sweater",
+      "translations": {
+        "fi": "Nike x Nocta neulepusero",
+        "da": "Nike x Nocta sweater",
+        "nb": "Nike x Nocta genser",
+        "cs": "Nike x Nocta svetr",
+        "sk": "Nike x Nocta sveter",
+        "hu": "Nike x Nocta pulóver",
+        "ro": "Nike x Nocta pulover",
+        "el": "Nike x Nocta πουλόβερ",
+        "uk": "Nike x Nocta светр",
+        "ar": "Nike x Nocta كنزة",
+        "ja": "Nike x Nocta セーター",
+        "ko": "Nike x Nocta 스웨터",
+        "vi": "Nike x Nocta áo len",
+        "tr": "Nike x Nocta kazak"
+      }
+    },
+    {
+      "name": "Broken Planet Tee",
+      "translations": {
+        "fi": "Broken Planet T-paita",
+        "da": "Broken Planet T-shirt",
+        "nb": "Broken Planet T-skjorte",
+        "cs": "Broken Planet tričko",
+        "sk": "Broken Planet tričko",
+        "hu": "Broken Planet póló",
+        "ro": "Broken Planet tricou",
+        "el": "Broken Planet μπλουζάκι",
+        "uk": "Broken Planet футболка",
+        "ar": "Broken Planet تيشيرت",
+        "ja": "Broken Planet Tシャツ",
+        "ko": "Broken Planet 티셔츠",
+        "vi": "Broken Planet áo thun",
+        "tr": "Broken Planet tişört"
+      }
+    },
+    {
+      "name": "CASABLANCA TEE",
+      "translations": {
+        "fi": "CASABLANCA T-paita",
+        "da": "CASABLANCA T-shirt",
+        "nb": "CASABLANCA T-skjorte",
+        "cs": "CASABLANCA tričko",
+        "sk": "CASABLANCA tričko",
+        "hu": "CASABLANCA póló",
+        "ro": "CASABLANCA tricou",
+        "el": "CASABLANCA μπλουζάκι",
+        "uk": "CASABLANCA футболка",
+        "ar": "CASABLANCA تيشيرت",
+        "ja": "CASABLANCA Tシャツ",
+        "ko": "CASABLANCA 티셔츠",
+        "vi": "CASABLANCA áo thun",
+        "tr": "CASABLANCA tişört"
+      }
+    },
+    {
+      "name": "EVISU jeans",
+      "translations": {
+        "fi": "EVISU farkut",
+        "da": "EVISU jeans",
+        "nb": "EVISU jeans",
+        "cs": "EVISU džíny",
+        "sk": "EVISU džínsy",
+        "hu": "EVISU farmer",
+        "ro": "EVISU blugi",
+        "el": "EVISU τζιν",
+        "uk": "EVISU джинси",
+        "ar": "EVISU جينز",
+        "ja": "EVISU ジーンズ",
+        "ko": "EVISU 청바지",
+        "vi": "EVISU quần jeans",
+        "tr": "EVISU kot pantolon"
+      }
+    },
+    {
+      "name": "RAY-BAN GLASSES",
+      "translations": {
+        "fi": "RAY-BAN silmälasit",
+        "da": "RAY-BAN briller",
+        "nb": "RAY-BAN briller",
+        "cs": "RAY-BAN brýle",
+        "sk": "RAY-BAN okuliare",
+        "hu": "RAY-BAN szemüveg",
+        "ro": "RAY-BAN ochelari",
+        "el": "RAY-BAN γυαλιά",
+        "uk": "RAY-BAN окуляри",
+        "ar": "RAY-BAN نظارات",
+        "ja": "RAY-BAN 眼鏡",
+        "ko": "RAY-BAN 안경",
+        "vi": "RAY-BAN kính",
+        "tr": "RAY-BAN gözlük"
+      }
+    },
+    {
+      "name": "The North Face Tee",
+      "translations": {
+        "fi": "The North Face T-paita",
+        "da": "The North Face T-shirt",
+        "nb": "The North Face T-skjorte",
+        "cs": "The North Face tričko",
+        "sk": "The North Face tričko",
+        "hu": "The North Face póló",
+        "ro": "The North Face tricou",
+        "el": "The North Face μπλουζάκι",
+        "uk": "The North Face футболка",
+        "ar": "The North Face تيشيرت",
+        "ja": "The North Face Tシャツ",
+        "ko": "The North Face 티셔츠",
+        "vi": "The North Face áo thun",
+        "tr": "The North Face tişört"
+      }
+    },
+    {
+      "name": "Guess wallet",
+      "translations": {
+        "fi": "Guess lompakko",
+        "da": "Guess pung",
+        "nb": "Guess lommebok",
+        "cs": "Guess peněženka",
+        "sk": "Guess peňaženka",
+        "hu": "Guess pénztárca",
+        "ro": "Guess portofel",
+        "el": "Guess πορτοφόλι",
+        "uk": "Guess гаманець",
+        "ar": "Guess محفظة",
+        "ja": "Guess 財布",
+        "ko": "Guess 지갑",
+        "vi": "Guess ví",
+        "tr": "Guess cüzdan"
+      }
+    },
+    {
+      "name": "Hermès necklace",
+      "translations": {
+        "fi": "Hermès kaulakoru",
+        "da": "Hermès halskæde",
+        "nb": "Hermès halskjede",
+        "cs": "Hermès náhrdelník",
+        "sk": "Hermès náhrdelník",
+        "hu": "Hermès nyaklánc",
+        "ro": "Hermès colier",
+        "el": "Hermès κολιέ",
+        "uk": "Hermès намисто",
+        "ar": "Hermès قلادة",
+        "ja": "Hermès ネックレス",
+        "ko": "Hermès 목걸이",
+        "vi": "Hermès dây chuyền",
+        "tr": "Hermès kolye"
+      }
+    },
+    {
+      "name": "THE NORTH FACE shorts",
+      "translations": {
+        "fi": "THE NORTH FACE shortsit",
+        "da": "THE NORTH FACE shorts",
+        "nb": "THE NORTH FACE shorts",
+        "cs": "THE NORTH FACE šortky",
+        "sk": "THE NORTH FACE šortky",
+        "hu": "THE NORTH FACE rövidnadrág",
+        "ro": "THE NORTH FACE pantaloni scurți",
+        "el": "THE NORTH FACE σορτς",
+        "uk": "THE NORTH FACE шорти",
+        "ar": "THE NORTH FACE شورت",
+        "ja": "THE NORTH FACE ショーツ",
+        "ko": "THE NORTH FACE 반바지",
+        "vi": "THE NORTH FACE quần short",
+        "tr": "THE NORTH FACE şort"
+      }
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "items": [
+    {
+      "name": "Zip-Detail Straight-Leg Jeans",
+      "source": "Zip-Detail Straight-Leg Jeans",
+      "suffix": "",
+      "translations": {
+        "fi": "Suoralahkeiset farkut vetoketjuyksityiskohdilla",
+        "da": "Jeans med lige ben og lynlåsdetaljer",
+        "nb": "Jeans med rette ben og glidelåsdetaljer",
+        "cs": "Džíny s rovnými nohavicemi a detaily zipu",
+        "sk": "Džínsy s rovnými nohavicami a detailmi zipsu",
+        "hu": "Egyenes szárú farmer cipzár részletekkel",
+        "ro": "Blugi drepți cu detalii cu fermoar",
+        "el": "Τζιν σε ίσια γραμμή με λεπτομέρειες φερμουάρ",
+        "tr": "Fermuar detaylı düz paça kot pantolon",
+        "uk": "Джинси прямого крою з деталями-блискавками",
+        "ar": "جينز مستقيم الساق بتفاصيل سحاب",
+        "ja": "ジップディテールストレートジーンズ",
+        "ko": "지퍼 디테일 스트레이트 청바지",
+        "vi": "Quần jeans ống đứng chi tiết khóa kéo"
+      }
+    },
+    {
+      "name": "Reflective-Piping Track Pants",
+      "source": "Reflective-Piping Track Pants",
+      "suffix": "",
+      "translations": {
+        "fi": "Verkkarihousut heijastavilla tereillä",
+        "da": "Træningsbukser med reflekskanter",
+        "nb": "Treningsbukser med reflekskanter",
+        "cs": "Sportovní kalhoty s reflexním lemováním",
+        "sk": "Športové nohavice s reflexným lemovaním",
+        "hu": "Fényvisszaverő szegélyes edzőnadrág",
+        "ro": "Pantaloni sport cu paspoal reflectorizant",
+        "el": "Παντελόνι φόρμας με ανακλαστικό σιρίτι",
+        "tr": "Reflektör şeritli eşofman altı",
+        "uk": "Спортивні штани зі світловідбивним кантом",
+        "ar": "سروال رياضي بحواف عاكسة",
+        "ja": "反射パイピング付きトラックパンツ",
+        "ko": "반사 파이핑 트랙 팬츠",
+        "vi": "Quần thể thao viền phản quang"
+      }
+    },
+    {
+      "name": "Side-Stripe Jeans Collection",
+      "source": "Side-Stripe Jeans Collection",
+      "suffix": "",
+      "translations": {
+        "fi": "Sivuraitaisten farkkujen valikoima",
+        "da": "Kollektion af jeans med sidestriber",
+        "nb": "Kolleksjon med jeans med sidestriper",
+        "cs": "Kolekce džínů s bočními pruhy",
+        "sk": "Kolekcia džínsov s bočnými pruhmi",
+        "hu": "Oldalcsíkos farmerek kollekciója",
+        "el": "Συλλογή τζιν με πλαϊνές ρίγες",
+        "tr": "Yan şeritli kot pantolon koleksiyonu",
+        "uk": "Колекція джинсів із бічними смугами",
+        "ar": "تشكيلة جينز بخطوط جانبية",
+        "ja": "サイドストライプジーンズコレクション",
+        "ko": "사이드 스트라이프 청바지 컬렉션",
+        "vi": "Bộ sưu tập quần jeans sọc bên"
+      }
+    },
+    {
+      "name": "Camouflage Wide-Leg Trousers",
+      "source": "Camouflage Wide-Leg Trousers",
+      "suffix": "",
+      "translations": {
+        "fi": "Maastokuvioiset leveälahkeiset housut",
+        "da": "Camouflagebukser med brede ben",
+        "nb": "Kamuflasjebukser med vide ben",
+        "cs": "Maskáčové kalhoty se širokými nohavicemi",
+        "sk": "Maskáčové nohavice so širokými nohavicami",
+        "hu": "Terepmintás bő szárú nadrág",
+        "ro": "Pantaloni camuflaj cu craci largi",
+        "el": "Παντελόνι παραλλαγής με φαρδιά μπατζάκια",
+        "tr": "Kamuflaj geniş paça pantolon",
+        "uk": "Камуфляжні штани з широкими штанинами",
+        "ar": "سروال مموه واسع الساق",
+        "ja": "カモフラージュ柄ワイドパンツ",
+        "ko": "카모플라주 와이드 바지",
+        "vi": "Quần rằn ri ống rộng"
+      }
+    },
+    {
+      "name": "Layered-Waistband Jogger Pants",
+      "source": "Layered-Waistband Jogger Pants",
+      "suffix": "",
+      "translations": {
+        "fi": "Joggerhousut kerroksellisella vyötäröllä",
+        "da": "Joggingbukser med lagdelt linning",
+        "nb": "Joggebukse med lagdelt linning",
+        "cs": "Jogger kalhoty s vrstveným pasem",
+        "sk": "Jogger nohavice s vrstveným pásom",
+        "hu": "Réteges derékpántos joggernadrág",
+        "ro": "Pantaloni jogger cu talie suprapusă",
+        "el": "Παντελόνι jogger με πολυεπίπεδη μέση",
+        "tr": "Katmanlı bel bantlı jogger pantolon",
+        "uk": "Джогери з багатошаровим поясом",
+        "ar": "سروال جوغر بحزام خصر متعدد الطبقات",
+        "ja": "レイヤードウエストバンドジョガーパンツ",
+        "ko": "레이어드 허리밴드 조거 팬츠",
+        "vi": "Quần jogger cạp nhiều lớp"
+      }
+    },
+    {
+      "name": "Graphic T-Shirt and Shorts Set",
+      "source": "Graphic T-Shirt and Shorts Set",
+      "suffix": "",
+      "translations": {
+        "fi": "Kuviollisen T-paidan ja shortsien setti",
+        "da": "Sæt med T-shirt med grafik og shorts",
+        "nb": "Sett med T-skjorte med grafikk og shorts",
+        "cs": "Souprava trička s grafikou a šortek",
+        "sk": "Súprava trička s grafikou a šortiek",
+        "hu": "Grafikus mintás póló és rövidnadrág szett",
+        "ro": "Set cu tricou cu grafică și pantaloni scurți",
+        "el": "Σετ με μπλουζάκι με γραφικά και σορτς",
+        "tr": "Grafikli tişört ve şort takımı",
+        "uk": "Комплект футболки з графікою та шортів",
+        "ar": "طقم تي شيرت برسومات وشورت",
+        "ja": "グラフィックTシャツとショーツのセット",
+        "ko": "그래픽 티셔츠와 반바지 세트",
+        "vi": "Bộ áo phông họa tiết và quần short"
+      }
+    },
+    {
+      "name": "Checkerboard Beanie and Scarf",
+      "source": "Checkerboard Beanie and Scarf",
+      "suffix": "",
+      "translations": {
+        "fi": "Ruutukuvioinen pipo ja huivi",
+        "da": "Ternet hue og halstørklæde",
+        "nb": "Rutete lue og skjerf",
+        "cs": "Kostkovaná čepice a šála",
+        "sk": "Kockovaná čiapka a šál",
+        "hu": "Sakktáblamintás sapka és sál",
+        "ro": "Căciulă și fular cu model în carouri",
+        "el": "Καρό σκούφος και κασκόλ",
+        "tr": "Damalı bere ve atkı",
+        "uk": "Картата шапка та шарф",
+        "ar": "قبعة كاروهات ووشاح",
+        "ja": "チェッカー柄ビーニーとマフラー",
+        "ko": "체커보드 비니와 목도리",
+        "vi": "Mũ len và khăn quàng họa tiết caro"
+      }
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "keys": [
+    "Where do I register, order and pay?",
+    "Are QC photos available for every product?",
+    "How do I choose the correct size?",
+    "What if a product link fails or stops working?",
+    "Are the listed USD prices current?"
+  ],
+  "rows": {
+    "fi": [
+      "Missä rekisteröidyn, tilaan ja maksan?",
+      "Onko kaikista tuotteista saatavilla QC-kuvia?",
+      "Miten valitsen oikean koon?",
+      "Entä jos tuotelinkki ei toimi tai lakkaa toimimasta?",
+      "Ovatko ilmoitetut USD-hinnat ajan tasalla?"
+    ],
+    "da": [
+      "Hvor registrerer jeg mig, bestiller og betaler?",
+      "Findes der QC-billeder af alle produkter?",
+      "Hvordan vælger jeg den rigtige størrelse?",
+      "Hvad hvis et produktlink ikke virker eller holder op med at virke?",
+      "Er de viste USD-priser aktuelle?"
+    ],
+    "nb": [
+      "Hvor registrerer jeg meg, bestiller og betaler?",
+      "Finnes det QC-bilder av alle produkter?",
+      "Hvordan velger jeg riktig størrelse?",
+      "Hva om en produktlenke ikke virker eller slutter å virke?",
+      "Er de oppgitte USD-prisene oppdaterte?"
+    ],
+    "cs": [
+      "Kde se zaregistruji, objednám a zaplatím?",
+      "Jsou fotografie QC dostupné u každého produktu?",
+      "Jak vyberu správnou velikost?",
+      "Co když odkaz na produkt nefunguje nebo přestane fungovat?",
+      "Jsou uvedené ceny v USD aktuální?"
+    ],
+    "sk": [
+      "Kde sa zaregistrujem, objednám a zaplatím?",
+      "Sú fotografie QC dostupné pri každom produkte?",
+      "Ako si vyberiem správnu veľkosť?",
+      "Čo ak odkaz na produkt nefunguje alebo prestane fungovať?",
+      "Sú uvedené ceny v USD aktuálne?"
+    ],
+    "hu": [
+      "Hol regisztrálhatok, rendelhetek és fizethetek?",
+      "Minden termékhez elérhetők QC-fotók?",
+      "Hogyan válasszam ki a megfelelő méretet?",
+      "Mi történik, ha egy termék hivatkozása nem működik vagy megszűnik?",
+      "Aktuálisak a feltüntetett USD-árak?"
+    ],
+    "ro": [
+      "Unde mă înregistrez, comand și plătesc?",
+      "Există fotografii QC pentru fiecare produs?",
+      "Cum aleg mărimea potrivită?",
+      "Ce fac dacă un link către produs nu funcționează sau nu mai este disponibil?",
+      "Sunt actuale prețurile afișate în USD?"
+    ],
+    "el": [
+      "Πού εγγράφομαι, παραγγέλνω και πληρώνω;",
+      "Υπάρχουν φωτογραφίες QC για κάθε προϊόν;",
+      "Πώς επιλέγω το σωστό μέγεθος;",
+      "Τι γίνεται αν ένας σύνδεσμος προϊόντος δεν λειτουργεί ή σταματήσει να λειτουργεί;",
+      "Είναι ενημερωμένες οι αναγραφόμενες τιμές σε USD;"
+    ],
+    "tr": [
+      "Nerede kayıt olur, sipariş verir ve ödeme yaparım?",
+      "Her ürün için QC fotoğrafları var mı?",
+      "Doğru bedeni nasıl seçerim?",
+      "Bir ürün bağlantısı çalışmazsa veya çalışmayı bırakırsa ne olur?",
+      "Listelenen USD fiyatları güncel mi?"
+    ],
+    "uk": [
+      "Де зареєструватися, оформити замовлення й оплатити?",
+      "Чи доступні фото QC для кожного товару?",
+      "Як вибрати правильний розмір?",
+      "Що робити, якщо посилання на товар не працює або перестало працювати?",
+      "Чи актуальні зазначені ціни в доларах США?"
+    ],
+    "ar": [
+      "أين أسجل وأطلب وأدفع؟",
+      "هل تتوفر صور فحص الجودة لكل منتج؟",
+      "كيف أختار المقاس الصحيح؟",
+      "ماذا لو لم يعمل رابط المنتج أو توقف عن العمل؟",
+      "هل الأسعار المدرجة بالدولار الأمريكي محدثة؟"
+    ],
+    "ja": [
+      "登録、注文、支払いはどこで行いますか？",
+      "すべての商品にQC写真はありますか？",
+      "正しいサイズはどう選びますか？",
+      "商品リンクが機能しない、または使えなくなった場合はどうしますか？",
+      "表示されている米ドル価格は最新ですか？"
+    ],
+    "ko": [
+      "어디에서 가입하고 주문하고 결제하나요?",
+      "모든 상품에 QC 사진이 제공되나요?",
+      "올바른 사이즈는 어떻게 선택하나요?",
+      "상품 링크가 작동하지 않거나 더 이상 열리지 않으면 어떻게 하나요?",
+      "표시된 미국 달러 가격은 최신인가요?"
+    ],
+    "vi": [
+      "Tôi đăng ký, đặt hàng và thanh toán ở đâu?",
+      "Mọi sản phẩm đều có ảnh QC không?",
+      "Làm thế nào để chọn đúng kích cỡ?",
+      "Nếu liên kết sản phẩm không hoạt động hoặc ngừng hoạt động thì sao?",
+      "Giá USD được niêm yết có còn cập nhật không?"
+    ]
+  }
+}

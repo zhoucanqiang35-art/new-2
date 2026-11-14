@@ -1,0 +1,159 @@
+{
+  "items": [
+    {
+      "name": "Red Clover Chain Bracelet",
+      "source": "Red Clover Chain Bracelet",
+      "suffix": "",
+      "translations": {
+        "fi": "Ketjurannekoru punaisella apilalla",
+        "da": "Kædearmbånd med rødt kløver",
+        "nb": "Kjedearmbånd med rødt kløver",
+        "cs": "Řetízkový náramek s červeným jetelem",
+        "sk": "Retiazkový náramok s červenou ďatelinou",
+        "hu": "Piros lóherés lánckarkötő",
+        "el": "Βραχιόλι αλυσίδα με κόκκινο τριφύλλι",
+        "tr": "Kırmızı yoncalı zincir bileklik",
+        "uk": "Браслет-ланцюжок із червоною конюшиною",
+        "ar": "سوار سلسلة ببرسيم أحمر",
+        "ja": "レッドクローバーチェーンブレスレット",
+        "ko": "레드 클로버 체인 팔찌",
+        "vi": "Vòng tay dây xích cỏ đỏ"
+      }
+    },
+    {
+      "name": "Geometric Clasp Chain Bracelet",
+      "source": "Geometric Clasp Chain Bracelet",
+      "suffix": "",
+      "translations": {
+        "fi": "Ketjurannekoru geometrisella lukolla",
+        "da": "Kædearmbånd med geometrisk lås",
+        "nb": "Kjedearmbånd med geometrisk lås",
+        "cs": "Řetízkový náramek s geometrickou sponou",
+        "sk": "Retiazkový náramok s geometrickou sponou",
+        "hu": "Geometrikus kapcsos lánckarkötő",
+        "ro": "Brățară cu lanț și închidere geometrică",
+        "el": "Βραχιόλι αλυσίδα με γεωμετρικό κούμπωμα",
+        "tr": "Geometrik tokalı zincir bileklik",
+        "uk": "Браслет-ланцюжок із геометричною застібкою",
+        "ar": "سوار سلسلة بمشبك هندسي",
+        "ja": "幾何学クラスプチェーンブレスレット",
+        "ko": "기하학 잠금 체인 팔찌",
+        "vi": "Vòng tay dây xích khóa hình học"
+      }
+    },
+    {
+      "name": "Engraved Floral Wide Band Ring",
+      "source": "Engraved Floral Wide Band Ring",
+      "suffix": "",
+      "translations": {
+        "fi": "Leveä kaiverrettu kukka-aiheinen sormus",
+        "da": "Bred graveret ring med blomstermotiv",
+        "nb": "Bred gravert ring med blomstermotiv",
+        "cs": "Široký gravírovaný prsten s květinovým motivem",
+        "sk": "Široký gravírovaný prsteň s kvetinovým motívom",
+        "hu": "Széles vésett virágmintás gyűrű",
+        "ro": "Inel lat gravat cu motiv floral",
+        "el": "Φαρδύ χαραγμένο δαχτυλίδι με λουλούδια",
+        "tr": "Oymalı çiçekli geniş bant yüzük",
+        "uk": "Широка гравірована каблучка з квітковим мотивом",
+        "ar": "خاتم عريض محفور بزخرفة زهور",
+        "ja": "刻印入りフローラルワイドバンドリング",
+        "ko": "각인 플로럴 와이드 밴드 반지",
+        "vi": "Nhẫn vòng bản rộng khắc hoa"
+      }
+    },
+    {
+      "name": "Gold Tone Pave Ring",
+      "source": "Gold Tone Pave Ring",
+      "suffix": "",
+      "translations": {
+        "fi": "Kullanvärinen pavé-sormus",
+        "da": "Guldfarvet pavéring",
+        "nb": "Gullfarget pavé-ring",
+        "cs": "Prsten pavé ve zlatém odstínu",
+        "sk": "Prsteň pavé v zlatom odtieni",
+        "hu": "Aranyszínű pavé gyűrű",
+        "ro": "Inel pavé auriu",
+        "el": "Χρυσαφί δαχτυλίδι pavé",
+        "tr": "Altın renkli pavé yüzük",
+        "uk": "Каблучка паве золотистого кольору",
+        "ar": "خاتم بافيه بلون ذهبي",
+        "ja": "ゴールドトーンパヴェリング",
+        "ko": "골드톤 파베 반지",
+        "vi": "Nhẫn pavé tông vàng"
+      }
+    },
+    {
+      "name": "Colorful Clover Chain Bracelet",
+      "source": "Colorful Clover Chain Bracelet",
+      "suffix": "",
+      "translations": {
+        "fi": "Ketjurannekoru värikkäillä apiloilla",
+        "da": "Kædearmbånd med farverige kløvere",
+        "nb": "Kjedearmbånd med fargerike kløvere",
+        "cs": "Řetízkový náramek s barevnými jeteli",
+        "sk": "Retiazkový náramok s farebnými ďatelinami",
+        "hu": "Színes lóherés lánckarkötő",
+        "ro": "Brățară cu lanț și trifoi colorați",
+        "el": "Βραχιόλι αλυσίδα με πολύχρωμα τριφύλλια",
+        "tr": "Renkli yoncalı zincir bileklik",
+        "uk": "Браслет-ланцюжок із різнокольоровою конюшиною",
+        "ar": "سوار سلسلة بوحدات برسيم ملونة",
+        "ja": "カラフルクローバーチェーンブレスレット",
+        "ko": "컬러풀 클로버 체인 팔찌",
+        "vi": "Vòng tay dây xích cỏ nhiều màu"
+      }
+    },
+    {
+      "name": "Two Tone Link Bracelet 2575",
+      "source": "Two Tone Link Bracelet",
+      "suffix": " 2575",
+      "translations": {
+        "cs": "Dvoubarevný článkový náramek 2575",
+        "sk": "Dvojfarebný článkový náramok 2575",
+        "hu": "Kétszínű láncszemes karkötő 2575",
+        "el": "Δίχρωμο βραχιόλι με κρίκους 2575",
+        "tr": "İki renkli halkalı bileklik 2575",
+        "uk": "Двоколірний браслет із ланками 2575",
+        "ar": "سوار بحلقات بلونين 2575",
+        "ja": "ツートーンリンクブレスレット 2575",
+        "ko": "투톤 링크 팔찌 2575",
+        "vi": "Vòng tay mắt xích hai tông màu 2575"
+      }
+    },
+    {
+      "name": "Two Tone Chain Bracelet 06",
+      "source": "Two Tone Chain Bracelet",
+      "suffix": " 06",
+      "translations": {
+        "cs": "Dvoubarevný řetízkový náramek 06",
+        "sk": "Dvojfarebný retiazkový náramok 06",
+        "hu": "Kétszínű lánckarkötő 06",
+        "el": "Δίχρωμο βραχιόλι αλυσίδα 06",
+        "tr": "İki renkli zincir bileklik 06",
+        "uk": "Двоколірний браслет-ланцюжок 06",
+        "ar": "سوار سلسلة بلونين 06",
+        "ja": "ツートーンチェーンブレスレット 06",
+        "ko": "투톤 체인 팔찌 06",
+        "vi": "Vòng tay dây xích hai tông màu 06"
+      }
+    },
+    {
+      "name": "Engraved Open Cuff Bangle",
+      "source": "Engraved Open Cuff Bangle",
+      "suffix": "",
+      "translations": {
+        "cs": "Gravírovaný otevřený pevný náramek",
+        "sk": "Gravírovaný otvorený pevný náramok",
+        "hu": "Vésett nyitott merev karkötő",
+        "el": "Χαραγμένο ανοιχτό άκαμπτο βραχιόλι",
+        "tr": "Oymalı açık manşet bilezik",
+        "uk": "Гравірований розімкнений жорсткий браслет",
+        "ar": "سوار صلب مفتوح ومحفور",
+        "ja": "刻印入りオープンカフバングル",
+        "ko": "각인 오픈 커프 뱅글",
+        "vi": "Vòng tay cứng bản hở khắc chữ"
+      }
+    }
+  ]
+}

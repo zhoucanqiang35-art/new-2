@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "name": "Aqua Summer Sandals",
+      "sourceId": "5916",
+      "translations": {
+        "ro": "Sandale Aqua Summer"
+      }
+    },
+    {
+      "name": "Fashion Slides E098 Classic",
+      "sourceId": "5914",
+      "translations": {
+        "ro": "Sandale de modă E098 Clasic"
+      }
+    },
+    {
+      "name": "Platform Sport Beach Sandals",
+      "sourceId": "5906",
+      "translations": {
+        "ro": "Sandale de plajă cu platformă Sport"
+      }
+    },
+    {
+      "name": "LW Rejuven8 Ventilated Clogs",
+      "sourceId": "5896",
+      "translations": {
+        "ro": "Saboți ventilați LW Rejuven8"
+      }
+    },
+    {
+      "name": "Premium Everyday Shoes",
+      "sourceId": "5892",
+      "translations": {
+        "ro": "Pantofi de zi cu zi premium"
+      }
+    },
+    {
+      "name": "Women's Trendy Shoes 091",
+      "sourceId": "5888",
+      "translations": {
+        "ro": "Pantofi la modă pentru femei 091"
+      }
+    },
+    {
+      "name": "Women's Classic Logo Slides",
+      "sourceId": "5878",
+      "translations": {
+        "ro": "Sandale clasice cu logo pentru femei"
+      }
+    },
+    {
+      "name": "High-Street Casual Shoes 003",
+      "sourceId": "5862",
+      "translations": {
+        "ro": "Pantofi casual High-Street 003"
+      }
+    },
+    {
+      "name": "Classic Winter Snow Boots",
+      "sourceId": "5859",
+      "translations": {
+        "ro": "Cizme clasice de iarnă pentru zăpadă"
+      }
+    },
+    {
+      "name": "Closed-Toe Cork Clogs",
+      "sourceId": "5858",
+      "translations": {
+        "ro": "Saboți din plută cu vârf închis"
+      }
+    },
+    {
+      "name": "Classic Cork Sandals",
+      "sourceId": "5855",
+      "translations": {
+        "ro": "Sandale clasice din plută"
+      }
+    }
+  ]
+}

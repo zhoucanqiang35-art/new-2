@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "name": "Classic Fashion T-Shirt",
+      "translations": {
+        "fi": "Klassinen muodikas T-paita",
+        "da": "Klassisk moderigtig T-shirt",
+        "nb": "Klassisk moteriktig T-skjorte",
+        "sk": "Klasické módne tričko",
+        "vi": "Áo thun thời trang cổ điển"
+      }
+    },
+    {
+      "name": "Classic Versatile T-Shirt",
+      "translations": {
+        "sk": "Klasické všestranné tričko",
+        "vi": "Áo thun đa dụng cổ điển"
+      }
+    },
+    {
+      "name": "Casual Sneakers Collection",
+      "translations": {
+        "fi": "Vapaa-ajan tennarimallisto",
+        "da": "Kollektion af afslappede sneakers",
+        "nb": "Kolleksjon av fritidssneakers",
+        "sk": "Kolekcia voľnočasových tenisiek",
+        "vi": "Bộ sưu tập giày sneaker thường ngày"
+      }
+    },
+    {
+      "name": "Casual Sweatpants Collection",
+      "translations": {
+        "fi": "Rento collegehousumallisto",
+        "da": "Kollektion af afslappede joggingbukser",
+        "nb": "Kolleksjon av avslappede joggebukser",
+        "sk": "Kolekcia voľnočasových teplákov",
+        "vi": "Bộ sưu tập quần nỉ thường ngày"
+      }
+    },
+    {
+      "name": "Premium Casual Shorts C",
+      "translations": {
+        "fi": "Laadukkaat vapaa-ajan shortsit C",
+        "da": "Premium fritidsshorts C",
+        "nb": "Fritidsshorts i premium kvalitet C",
+        "sk": "Prémiové voľnočasové šortky C",
+        "vi": "Quần short thường ngày cao cấp C"
+      }
+    },
+    {
+      "name": "Classic Casual Set",
+      "translations": {
+        "fi": "Klassinen vapaa-ajan asusetti",
+        "da": "Klassisk fritidssæt",
+        "nb": "Klassisk fritidssett",
+        "sk": "Klasická voľnočasová súprava",
+        "vi": "Bộ đồ thường ngày cổ điển"
+      }
+    },
+    {
+      "name": "Casual Hooded Tracksuit",
+      "translations": {
+        "da": "Afslappet træningsdragt med hætte",
+        "sk": "Voľnočasová tepláková súprava s kapucňou",
+        "vi": "Bộ đồ thể thao thường ngày có mũ"
+      }
+    },
+    {
+      "name": "Hooded Zip Sportswear Set",
+      "translations": {
+        "sk": "Športová súprava s kapucňou na zips",
+        "vi": "Bộ đồ thể thao có mũ và khóa kéo"
+      }
+    },
+    {
+      "name": "Casual Print Zip Hoodie",
+      "translations": {
+        "fi": "Rento vetoketjuhuppari printillä",
+        "da": "Afslappet hættetrøje med lynlås og print",
+        "nb": "Avslappet hettejakke med trykk",
+        "sk": "Voľnočasová mikina s kapucňou na zips a potlačou",
+        "vi": "Áo hoodie thường ngày khóa kéo in họa tiết"
+      }
+    },
+    {
+      "name": "Classic Matching Outfit Set",
+      "translations": {
+        "fi": "Klassinen yhteensopiva asukokonaisuus",
+        "sk": "Klasická ladiaca súprava oblečenia",
+        "vi": "Bộ trang phục đồng bộ cổ điển"
+      }
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "items": [
+    {
+      "name": "Equestrian Logo T-Shirt",
+      "source": "Equestrian Logo T-Shirt",
+      "suffix": "",
+      "translations": {
+        "fi": "Hevosaiheisella logolla varustettu T-paita",
+        "da": "T-shirt med ridelogo",
+        "nb": "T-skjorte med ridelogo",
+        "cs": "Tričko s jezdeckým logem",
+        "sk": "Tričko s jazdeckým logom",
+        "hu": "Lovas logós póló",
+        "ro": "Tricou cu logo ecvestru",
+        "el": "Μπλουζάκι με ιππικό λογότυπο",
+        "tr": "Binicilik logolu tişört",
+        "uk": "Футболка з кінним логотипом",
+        "ar": "تي شيرت بشعار فروسية",
+        "ja": "馬術ロゴTシャツ",
+        "ko": "승마 로고 티셔츠",
+        "vi": "Áo phông logo cưỡi ngựa"
+      }
+    },
+    {
+      "name": "Crewneck Cable-Knit Sweater",
+      "source": "Crewneck Cable-Knit Sweater",
+      "suffix": "",
+      "translations": {
+        "fi": "Pyöreäkaula-aukkoinen palmikkoneule",
+        "da": "Kabelstrikket trøje med rund hals",
+        "nb": "Kabelstrikket genser med rund hals",
+        "cs": "Copánkový svetr s kulatým výstřihem",
+        "sk": "Vrkočový sveter s okrúhlym výstrihom",
+        "hu": "Kerek nyakú csavart kötésű pulóver",
+        "ro": "Pulover cu guler rotund și model torsadat",
+        "el": "Πουλόβερ πλεξούδα με στρογγυλή λαιμόκοψη",
+        "tr": "Bisiklet yaka saç örgüsü kazak",
+        "uk": "Светр косової в’язки з круглим вирізом",
+        "ar": "سترة محبوكة بنقشة ضفائر وياقة مستديرة",
+        "ja": "クルーネックケーブルニットセーター",
+        "ko": "크루넥 케이블 니트 스웨터",
+        "vi": "Áo len cổ tròn dệt cáp"
+      }
+    },
+    {
+      "name": "Arte Graphic T-Shirt",
+      "source": "Arte Graphic T-Shirt",
+      "suffix": "",
+      "translations": {
+        "fi": "Arte-kuviollinen T-paita",
+        "da": "T-shirt med Arte-grafik",
+        "nb": "T-skjorte med Arte-grafikk",
+        "cs": "Tričko s grafikou Arte",
+        "sk": "Tričko s grafikou Arte",
+        "hu": "Arte mintás póló",
+        "el": "Μπλουζάκι με γραφικά Arte",
+        "tr": "Arte grafikli tişört",
+        "uk": "Футболка з графікою Arte",
+        "ar": "تي شيرت برسومات Arte",
+        "ja": "Arte グラフィックTシャツ",
+        "ko": "Arte 그래픽 티셔츠",
+        "vi": "Áo phông họa tiết Arte"
+      }
+    },
+    {
+      "name": "Sweatshirt and Pants Set",
+      "source": "Sweatshirt and Pants Set",
+      "suffix": "",
+      "translations": {
+        "fi": "Collegepaidan ja housujen setti",
+        "da": "Sæt med sweatshirt og bukser",
+        "cs": "Souprava mikiny a kalhot",
+        "sk": "Súprava mikiny a nohavíc",
+        "hu": "Pulóver és nadrág szett",
+        "el": "Σετ με φούτερ και παντελόνι",
+        "tr": "Sweatshirt ve pantolon takımı",
+        "uk": "Комплект світшота та штанів",
+        "ar": "طقم سترة وسروال",
+        "ja": "スウェットシャツとパンツのセット",
+        "ko": "스웨트셔츠와 바지 세트",
+        "vi": "Bộ áo nỉ và quần dài"
+      }
+    },
+    {
+      "name": "Navy Hoodie and Pants Set",
+      "source": "Navy Hoodie and Pants Set",
+      "suffix": "",
+      "translations": {
+        "fi": "Tummansinisen hupparin ja housujen setti",
+        "da": "Sæt med marineblå hættetrøje og bukser",
+        "nb": "Sett med marineblå hettegenser og bukser",
+        "cs": "Souprava tmavě modré mikiny s kapucí a kalhot",
+        "sk": "Súprava tmavomodrej mikiny s kapucňou a nohavíc",
+        "hu": "Tengerészkék kapucnis pulóver és nadrág szett",
+        "el": "Σετ με μπλε σκούρο φούτερ με κουκούλα και παντελόνι",
+        "tr": "Lacivert kapüşonlu üst ve pantolon takımı",
+        "uk": "Комплект темно-синього худі та штанів",
+        "ar": "طقم سترة كحلية بغطاء رأس وسروال",
+        "ja": "ネイビーパーカーとパンツのセット",
+        "ko": "네이비 후디와 바지 세트",
+        "vi": "Bộ áo hoodie xanh navy và quần dài"
+      }
+    },
+    {
+      "name": "Heart Emblem Knit Cardigan",
+      "source": "Heart Emblem Knit Cardigan",
+      "suffix": "",
+      "translations": {
+        "fi": "Sydänmerkillinen neuletakki",
+        "cs": "Pletený kardigan se srdcovým emblémem",
+        "sk": "Pletený kardigán so srdcovým emblémom",
+        "hu": "Szívemblémás kötött kardigán",
+        "el": "Πλεκτή ζακέτα με έμβλημα καρδιάς",
+        "tr": "Kalp amblemli örgü hırka",
+        "uk": "В’язаний кардиган з емблемою серця",
+        "ar": "كارديغان محبوك بشارة قلب",
+        "ja": "ハートエンブレムニットカーディガン",
+        "ko": "하트 엠블럼 니트 카디건",
+        "vi": "Áo cardigan dệt kim biểu tượng trái tim"
+      }
+    },
+    {
+      "name": "Premium Knit Sweater",
+      "source": "Premium Knit Sweater",
+      "suffix": "",
+      "translations": {
+        "cs": "Prémiový pletený svetr",
+        "sk": "Prémiový pletený sveter",
+        "hu": "Prémium kötött pulóver",
+        "el": "Premium πλεκτό πουλόβερ",
+        "tr": "Premium örgü kazak",
+        "uk": "В’язаний светр преміум",
+        "ar": "سترة محبوكة فاخرة",
+        "ja": "プレミアムニットセーター",
+        "ko": "프리미엄 니트 스웨터",
+        "vi": "Áo len dệt kim cao cấp"
+      }
+    }
+  ]
+}

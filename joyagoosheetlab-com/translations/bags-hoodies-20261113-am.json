@@ -1,0 +1,287 @@
+{
+  "items": [
+    {
+      "name": "Men's Patterned Crossbody Bag",
+      "translations": {
+        "fi": "Miesten kuviollinen olanylilaukku",
+        "da": "Mønstret crossbodytaske til mænd",
+        "nb": "Mønstret crossbodyveske for menn",
+        "cs": "Pánská vzorovaná crossbody taška",
+        "sk": "Pánska vzorovaná crossbody taška",
+        "hu": "Férfi mintás keresztpántos táska",
+        "ro": "Geantă transversală cu model pentru bărbați",
+        "el": "Ανδρική χιαστί τσάντα με μοτίβο",
+        "uk": "Чоловіча сумка через плече з візерунком",
+        "ar": "حقيبة كروس رجالية بنقشة",
+        "ja": "メンズ柄入りクロスボディバッグ",
+        "ko": "남성 패턴 크로스백",
+        "vi": "Túi đeo chéo nam có họa tiết",
+        "tr": "Erkek desenli çapraz çanta"
+      }
+    },
+    {
+      "name": "Men's Zip Crossbody Bag 9957",
+      "translations": {
+        "fi": "Miesten vetoketjullinen olanylilaukku 9957",
+        "da": "Crossbodytaske til mænd med lynlås 9957",
+        "nb": "Crossbodyveske for menn med glidelås 9957",
+        "cs": "Pánská crossbody taška na zip 9957",
+        "sk": "Pánska crossbody taška na zips 9957",
+        "hu": "Férfi cipzáras keresztpántos táska 9957",
+        "ro": "Geantă transversală cu fermoar pentru bărbați 9957",
+        "el": "Ανδρική χιαστί τσάντα με φερμουάρ 9957",
+        "uk": "Чоловіча сумка через плече на блискавці 9957",
+        "ar": "حقيبة كروس رجالية بسحاب 9957",
+        "ja": "メンズジップクロスボディバッグ 9957",
+        "ko": "남성 지퍼 크로스백 9957",
+        "vi": "Túi đeo chéo nam khóa kéo 9957",
+        "tr": "Erkek fermuarlı çapraz çanta 9957"
+      }
+    },
+    {
+      "name": "Men's Crossbody Bag and Pouch",
+      "translations": {
+        "fi": "Miesten olanylilaukku ja pussukka",
+        "da": "Crossbodytaske og pung til mænd",
+        "nb": "Crossbodyveske og pung for menn",
+        "cs": "Pánská crossbody taška a pouzdro",
+        "sk": "Pánska crossbody taška a puzdro",
+        "hu": "Férfi keresztpántos táska és tok",
+        "ro": "Geantă transversală și portfard pentru bărbați",
+        "el": "Ανδρική χιαστί τσάντα και θήκη",
+        "uk": "Чоловіча сумка через плече та чохол",
+        "ar": "حقيبة كروس وجراب رجالي",
+        "ja": "メンズクロスボディバッグとポーチ",
+        "ko": "남성 크로스백과 파우치",
+        "vi": "Túi đeo chéo và túi nhỏ nam",
+        "tr": "Erkek çapraz çanta ve küçük çanta"
+      }
+    },
+    {
+      "name": "Plaid Bag and Pouch Set AGT",
+      "translations": {
+        "fi": "Ruudullinen laukku- ja pussukkasetti AGT",
+        "da": "Ternet taske- og pungsæt AGT",
+        "nb": "Rutete veske- og pungsett AGT",
+        "cs": "Sada kostkované tašky a pouzdra AGT",
+        "sk": "Sada kockovanej tašky a puzdra AGT",
+        "hu": "Kockás táska- és tokszett AGT",
+        "el": "Σετ καρό τσάντας και θήκης AGT",
+        "uk": "Комплект картатої сумки та чохла AGT",
+        "ar": "طقم حقيبة مربعات وجراب AGT",
+        "ja": "チェック柄バッグとポーチのセット AGT",
+        "ko": "체크 가방과 파우치 세트 AGT",
+        "vi": "Bộ túi kẻ ô và túi nhỏ AGT",
+        "tr": "Ekose çanta ve küçük çanta takımı AGT"
+      }
+    },
+    {
+      "name": "Patterned Top Handle Bag 8028",
+      "translations": {
+        "fi": "Kuviollinen yläkahvallinen laukku 8028",
+        "da": "Mønstret taske med tophåndtag 8028",
+        "nb": "Mønstret veske med topphåndtak 8028",
+        "cs": "Vzorovaná taška s horním uchem 8028",
+        "sk": "Vzorovaná taška s horným uchom 8028",
+        "hu": "Mintás felső füles táska 8028",
+        "ro": "Geantă cu model și mâner superior 8028",
+        "el": "Τσάντα με μοτίβο και πάνω χερούλι 8028",
+        "uk": "Сумка з візерунком і верхньою ручкою 8028",
+        "ar": "حقيبة بنقشة ومقبض علوي 8028",
+        "ja": "柄入りトップハンドルバッグ 8028",
+        "ko": "패턴 탑핸들백 8028",
+        "vi": "Túi họa tiết có quai xách trên 8028",
+        "tr": "Desenli üst saplı çanta 8028"
+      }
+    },
+    {
+      "name": "Wristlet Crossbody Bag G2206",
+      "translations": {
+        "fi": "Rannekkeellinen olanylilaukku G2206",
+        "da": "Crossbodytaske med håndledsrem G2206",
+        "nb": "Crossbodyveske med håndleddsrem G2206",
+        "cs": "Crossbody taška s poutkem na zápěstí G2206",
+        "sk": "Crossbody taška s pútkom na zápästie G2206",
+        "hu": "Csuklópántos keresztpántos táska G2206",
+        "ro": "Geantă transversală cu curea de încheietură G2206",
+        "el": "Χιαστί τσάντα με λουράκι καρπού G2206",
+        "uk": "Сумка через плече з ремінцем на зап’ястя G2206",
+        "ar": "حقيبة كروس بسوار معصم G2206",
+        "ja": "リストレット付きクロスボディバッグ G2206",
+        "ko": "손목 스트랩 크로스백 G2206",
+        "vi": "Túi đeo chéo có dây đeo cổ tay G2206",
+        "tr": "Bilek askılı çapraz çanta G2206"
+      }
+    },
+    {
+      "name": "Horizontal Crossbody Bag 3280",
+      "translations": {
+        "fi": "Vaakasuuntainen olanylilaukku 3280",
+        "da": "Vandret crossbodytaske 3280",
+        "nb": "Horisontal crossbodyveske 3280",
+        "cs": "Horizontální crossbody taška 3280",
+        "sk": "Horizontálna crossbody taška 3280",
+        "hu": "Vízszintes keresztpántos táska 3280",
+        "ro": "Geantă transversală orizontală 3280",
+        "el": "Οριζόντια χιαστί τσάντα 3280",
+        "uk": "Горизонтальна сумка через плече 3280",
+        "ar": "حقيبة كروس أفقية 3280",
+        "ja": "横型クロスボディバッグ 3280",
+        "ko": "가로형 크로스백 3280",
+        "vi": "Túi đeo chéo dáng ngang 3280",
+        "tr": "Yatay çapraz çanta 3280"
+      }
+    },
+    {
+      "name": "Patterned Tote Bag Collection",
+      "translations": {
+        "fi": "Kuviollisten kantolaukkujen kokoelma",
+        "da": "Kollektion af mønstrede totetasker",
+        "nb": "Kolleksjon av mønstrede totevesker",
+        "cs": "Kolekce vzorovaných nákupních tašek",
+        "sk": "Kolekcia vzorovaných nákupných tašiek",
+        "hu": "Mintás bevásárlótáska-kollekció",
+        "ro": "Colecție de genți tote cu model",
+        "el": "Συλλογή τσαντών tote με μοτίβο",
+        "uk": "Колекція сумок-тоут із візерунком",
+        "ar": "مجموعة حقائب توت بنقوش",
+        "ja": "柄入りトートバッグコレクション",
+        "ko": "패턴 토트백 컬렉션",
+        "vi": "Bộ sưu tập túi tote có họa tiết",
+        "tr": "Desenli tote çanta koleksiyonu"
+      }
+    },
+    {
+      "name": "Steel Bracelet Fashion Watch",
+      "translations": {
+        "fi": "Muotikello teräsrannekkeella",
+        "da": "Modeur med stållænke",
+        "nb": "Moteklokke med stållenkearmbånd",
+        "cs": "Módní hodinky s ocelovým náramkem",
+        "sk": "Módne hodinky s oceľovým náramkom",
+        "hu": "Divatóra acélszíjjal",
+        "el": "Ρολόι μόδας με ατσάλινο μπρασελέ",
+        "uk": "Модний годинник зі сталевим браслетом",
+        "ar": "ساعة عصرية بسوار فولاذي",
+        "ja": "スチールブレスレットのファッションウォッチ",
+        "ko": "스틸 브레이슬릿 패션 시계",
+        "vi": "Đồng hồ thời trang dây thép",
+        "tr": "Çelik bilezikli moda saat"
+      }
+    },
+    {
+      "name": "Long Drawstring Zip-Up Hoodie",
+      "translations": {
+        "fi": "Pitkällä kiristysnyörillä varustettu vetoketjuhuppari",
+        "da": "Hættetrøje med lynlås og lang snøre",
+        "nb": "Hettegenser med glidelås og lang snøring",
+        "cs": "Mikina s kapucí na zip a dlouhou stahovací šňůrkou",
+        "sk": "Mikina s kapucňou na zips a dlhou sťahovacou šnúrkou",
+        "hu": "Hosszú húzózsinóros cipzáras kapucnis pulóver",
+        "ro": "Hanorac cu fermoar și șnur lung",
+        "el": "Φούτερ με κουκούλα, φερμουάρ και μακρύ κορδόνι",
+        "uk": "Худі на блискавці з довгим шнурком",
+        "ar": "هودي بسحاب ورباط طويل",
+        "ja": "長いドローコード付きジップパーカー",
+        "ko": "긴 드로스트링 집업 후드티",
+        "vi": "Áo hoodie khóa kéo dây rút dài",
+        "tr": "Uzun büzme ipli fermuarlı kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Green Striped Pullover Hoodie",
+      "translations": {
+        "fi": "Vihreä raidallinen päälle puettava huppari",
+        "da": "Grønstribet hættetrøje uden lynlås",
+        "nb": "Grønnstripet hettegenser uten glidelås",
+        "cs": "Zeleně pruhovaná mikina s kapucí bez zipu",
+        "sk": "Zeleno pruhovaná mikina s kapucňou bez zipsu",
+        "hu": "Zöld csíkos bebújós kapucnis pulóver",
+        "ro": "Hanorac fără fermoar cu dungi verzi",
+        "el": "Φούτερ με κουκούλα χωρίς φερμουάρ και πράσινες ρίγες",
+        "uk": "Худі без блискавки із зеленими смугами",
+        "ar": "هودي دون سحاب بخطوط خضراء",
+        "ja": "グリーンストライプのプルオーバーパーカー",
+        "ko": "그린 스트라이프 풀오버 후드티",
+        "vi": "Áo hoodie chui đầu sọc xanh",
+        "tr": "Yeşil çizgili fermuarsız kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Graphic Zip-Up Hoodie 019-KEB",
+      "translations": {
+        "fi": "Kuviollinen vetoketjuhuppari 019-KEB",
+        "da": "Hættetrøje med lynlås og grafik 019-KEB",
+        "nb": "Hettegenser med glidelås og grafikk 019-KEB",
+        "cs": "Mikina s kapucí na zip a potiskem 019-KEB",
+        "sk": "Mikina s kapucňou na zips a potlačou 019-KEB",
+        "hu": "Mintás cipzáras kapucnis pulóver 019-KEB",
+        "ro": "Hanorac cu fermoar și imprimeu 019-KEB",
+        "el": "Φούτερ με κουκούλα, φερμουάρ και σχέδιο 019-KEB",
+        "uk": "Худі на блискавці з принтом 019-KEB",
+        "ar": "هودي بسحاب ورسمة 019-KEB",
+        "ja": "グラフィック入りジップパーカー 019-KEB",
+        "ko": "그래픽 집업 후드티 019-KEB",
+        "vi": "Áo hoodie khóa kéo có họa tiết 019-KEB",
+        "tr": "Grafik desenli fermuarlı kapüşonlu sweatshirt 019-KEB"
+      }
+    },
+    {
+      "name": "Spiderweb Graphic Hoodie FD03",
+      "translations": {
+        "fi": "Hämähäkinseittikuvioinen huppari FD03",
+        "da": "Hættetrøje med spindelvævsgrafik FD03",
+        "nb": "Hettegenser med edderkoppnett-motiv FD03",
+        "cs": "Mikina s kapucí a potiskem pavučiny FD03",
+        "sk": "Mikina s kapucňou a potlačou pavučiny FD03",
+        "hu": "Pókhálómintás kapucnis pulóver FD03",
+        "ro": "Hanorac cu imprimeu pânză de păianjen FD03",
+        "el": "Φούτερ με κουκούλα και σχέδιο ιστού αράχνης FD03",
+        "uk": "Худі з принтом павутини FD03",
+        "ar": "هودي برسمة شبكة عنكبوت FD03",
+        "ja": "クモの巣グラフィックパーカー FD03",
+        "ko": "거미줄 그래픽 후드티 FD03",
+        "vi": "Áo hoodie họa tiết mạng nhện FD03",
+        "tr": "Örümcek ağı desenli kapüşonlu sweatshirt FD03"
+      }
+    },
+    {
+      "name": "Front and Back Graphic Hoodie",
+      "translations": {
+        "fi": "Etu- ja takakuvioinen huppari",
+        "da": "Hættetrøje med grafik foran og bagpå",
+        "nb": "Hettegenser med grafikk foran og bak",
+        "cs": "Mikina s kapucí a potiskem vpředu i vzadu",
+        "sk": "Mikina s kapucňou a potlačou vpredu aj vzadu",
+        "hu": "Elöl-hátul mintás kapucnis pulóver",
+        "ro": "Hanorac cu imprimeu în față și în spate",
+        "el": "Φούτερ με κουκούλα και σχέδιο μπροστά και πίσω",
+        "uk": "Худі з принтом спереду та ззаду",
+        "ar": "هودي برسمة أمامية وخلفية",
+        "ja": "前後グラフィックパーカー",
+        "ko": "앞뒤 그래픽 후드티",
+        "vi": "Áo hoodie có họa tiết mặt trước và sau",
+        "tr": "Önü ve arkası grafik desenli kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Autumn Winter Pullover Hoodie",
+      "translations": {
+        "fi": "Syys-talvikauden päälle puettava huppari",
+        "da": "Hættetrøje uden lynlås til efterår og vinter",
+        "nb": "Hettegenser uten glidelås for høst og vinter",
+        "cs": "Podzimní a zimní mikina s kapucí bez zipu",
+        "sk": "Jesenná a zimná mikina s kapucňou bez zipsu",
+        "hu": "Őszi-téli bebújós kapucnis pulóver",
+        "ro": "Hanorac fără fermoar pentru toamnă și iarnă",
+        "el": "Φθινοπωρινό και χειμερινό φούτερ με κουκούλα χωρίς φερμουάρ",
+        "uk": "Осінньо-зимове худі без блискавки",
+        "ar": "هودي خريفي شتوي دون سحاب",
+        "ja": "秋冬用プルオーバーパーカー",
+        "ko": "가을 겨울 풀오버 후드티",
+        "vi": "Áo hoodie chui đầu mùa thu đông",
+        "tr": "Sonbahar kış fermuarsız kapüşonlu sweatshirt"
+      }
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "source": {
+    "Pocket T-Shirt and Shorts Set": "Pocket T-Shirt and Shorts Set",
+    "Patterned Beanie and Scarf Set": "Patterned Beanie and Scarf Set",
+    "Printed Polo Shirt and Shorts": "Printed Polo Shirt and Shorts",
+    "Floral Zip Hoodie and Trousers": "Floral Zip Hoodie and Trousers",
+    "Hooded Zip Jacket and Trousers": "Hooded Zip Jacket and Trousers"
+  },
+  "translations": {
+    "Pocket T-Shirt and Shorts Set": {
+      "fi": "Taskullisen T-paidan ja shortsien setti",
+      "da": "Sæt med T-shirt med lomme og shorts",
+      "nb": "Sett med T-skjorte med lomme og shorts",
+      "cs": "Souprava trička s kapsou a šortek",
+      "sk": "Súprava trička s vreckom a šortiek",
+      "hu": "Zsebes póló és rövidnadrág szett",
+      "ro": "Set cu tricou cu buzunar și pantaloni scurți",
+      "el": "Σετ με μπλουζάκι με τσέπη και σορτς",
+      "tr": "Cepli tişört ve şort takımı",
+      "uk": "Комплект футболки з кишенею та шортів",
+      "ar": "طقم تي شيرت بجيب وشورت",
+      "ja": "ポケット付きTシャツとショーツのセット",
+      "ko": "포켓 티셔츠와 반바지 세트",
+      "vi": "Bộ áo phông có túi và quần short"
+    },
+    "Patterned Beanie and Scarf Set": {
+      "fi": "Kuviollisen pipon ja huivin setti",
+      "da": "Sæt med mønstret hue og halstørklæde",
+      "nb": "Sett med mønstret lue og skjerf",
+      "cs": "Souprava vzorované čepice a šály",
+      "sk": "Súprava vzorovanej čiapky a šálu",
+      "hu": "Mintás sapka és sál szett",
+      "ro": "Set cu căciulă cu model și fular",
+      "el": "Σετ με σκούφο με σχέδιο και κασκόλ",
+      "tr": "Desenli bere ve atkı takımı",
+      "uk": "Комплект шапки з візерунком і шарфа",
+      "ar": "طقم قبعة بنقشة ووشاح",
+      "ja": "柄入りビーニーとマフラーのセット",
+      "ko": "패턴 비니와 목도리 세트",
+      "vi": "Bộ mũ len họa tiết và khăn quàng"
+    },
+    "Printed Polo Shirt and Shorts": {
+      "fi": "Painettu poolopaita ja shortsit",
+      "da": "Poloshirt med print og shorts",
+      "nb": "Poloskjorte med trykk og shorts",
+      "cs": "Polokošile s potiskem a šortky",
+      "sk": "Polokošeľa s potlačou a šortky",
+      "hu": "Mintás galléros póló és rövidnadrág",
+      "ro": "Tricou polo imprimat și pantaloni scurți",
+      "el": "Μπλούζα πόλο με τύπωμα και σορτς",
+      "tr": "Baskılı polo yaka tişört ve şort",
+      "uk": "Поло з принтом і шорти",
+      "ar": "قميص بولو مطبوع وشورت",
+      "ja": "プリントポロシャツとショーツ",
+      "ko": "프린트 폴로 셔츠와 반바지",
+      "vi": "Áo polo in họa tiết và quần short"
+    },
+    "Floral Zip Hoodie and Trousers": {
+      "fi": "Kukallisen vetoketjuhupparin ja housujen setti",
+      "da": "Sæt med hættetrøje med lynlås og blomstermotiv og bukser",
+      "nb": "Sett med hettegenser med glidelås og blomstermotiv og bukser",
+      "cs": "Souprava květované mikiny s kapucí na zip a kalhot",
+      "sk": "Súprava kvetovanej mikiny s kapucňou na zips a nohavíc",
+      "hu": "Virágmintás cipzáras kapucnis pulóver és nadrág szett",
+      "ro": "Set cu hanorac floral cu fermoar și pantaloni",
+      "el": "Σετ με φούτερ με κουκούλα, φερμουάρ και λουλούδια και παντελόνι",
+      "tr": "Çiçek desenli fermuarlı kapüşonlu üst ve pantolon takımı",
+      "uk": "Комплект худі на блискавці з квітковим принтом і штанів",
+      "ar": "طقم سترة بغطاء رأس وسحاب ونقشة زهور وسروال",
+      "ja": "花柄ジップパーカーとパンツのセット",
+      "ko": "꽃무늬 집업 후디와 바지 세트",
+      "vi": "Bộ áo hoodie hoa khóa kéo và quần dài"
+    },
+    "Hooded Zip Jacket and Trousers": {
+      "fi": "Hupullinen vetoketjutakki ja housut",
+      "da": "Jakke med hætte og lynlås og bukser",
+      "nb": "Jakke med hette og glidelås og bukser",
+      "cs": "Bunda s kapucí na zip a kalhoty",
+      "sk": "Bunda s kapucňou na zips a nohavice",
+      "hu": "Kapucnis cipzáras dzseki és nadrág",
+      "ro": "Jachetă cu glugă și fermoar și pantaloni",
+      "el": "Μπουφάν με κουκούλα και φερμουάρ και παντελόνι",
+      "tr": "Kapüşonlu fermuarlı ceket ve pantolon",
+      "uk": "Куртка з капюшоном на блискавці та штани",
+      "ar": "سترة بغطاء رأس وسحاب وسروال",
+      "ja": "フード付きジップジャケットとパンツ",
+      "ko": "후드 집업 재킷과 바지",
+      "vi": "Áo khoác có mũ khóa kéo và quần dài"
+    }
+  }
+}

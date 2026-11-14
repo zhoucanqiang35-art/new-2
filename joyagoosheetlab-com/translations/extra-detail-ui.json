@@ -1,0 +1,109 @@
+{
+  "keys": [
+    "Product ID:",
+    "QC photos",
+    "Weidian product photos",
+    "Browse all products",
+    "Price unavailable"
+  ],
+  "rows": {
+    "fi": [
+      "Tuotetunnus:",
+      "Laaduntarkastuskuvat",
+      "Weidian-tuotekuvat",
+      "Selaa kaikkia tuotteita",
+      "Hintaa ei ole saatavilla"
+    ],
+    "da": [
+      "Produkt-id:",
+      "QC-billeder",
+      "Weidian-produktbilleder",
+      "Se alle produkter",
+      "Pris ikke tilgængelig"
+    ],
+    "nb": [
+      "Produkt-ID:",
+      "QC-bilder",
+      "Weidian-produktbilder",
+      "Se alle produkter",
+      "Pris ikke tilgjengelig"
+    ],
+    "cs": [
+      "ID produktu:",
+      "Fotografie kontroly kvality",
+      "Fotografie produktu z Weidianu",
+      "Zobrazit všechny produkty",
+      "Cena není k dispozici"
+    ],
+    "sk": [
+      "ID produktu:",
+      "Fotografie kontroly kvality",
+      "Fotografie produktu z Weidianu",
+      "Zobraziť všetky produkty",
+      "Cena nie je k dispozícii"
+    ],
+    "hu": [
+      "Termékazonosító:",
+      "Minőségellenőrzési fotók",
+      "Weidian-termékfotók",
+      "Összes termék megtekintése",
+      "Az ár nem érhető el"
+    ],
+    "ro": [
+      "ID produs:",
+      "Fotografii QC",
+      "Fotografii de produs Weidian",
+      "Vezi toate produsele",
+      "Preț indisponibil"
+    ],
+    "el": [
+      "ID προϊόντος:",
+      "Φωτογραφίες ελέγχου ποιότητας",
+      "Φωτογραφίες προϊόντος Weidian",
+      "Δείτε όλα τα προϊόντα",
+      "Η τιμή δεν είναι διαθέσιμη"
+    ],
+    "tr": [
+      "Ürün kimliği:",
+      "Kalite kontrol fotoğrafları",
+      "Weidian ürün fotoğrafları",
+      "Tüm ürünlere göz at",
+      "Fiyat mevcut değil"
+    ],
+    "uk": [
+      "ID товару:",
+      "Фото перевірки якості",
+      "Фото товару Weidian",
+      "Переглянути всі товари",
+      "Ціна недоступна"
+    ],
+    "ar": [
+      "رقم المنتج:",
+      "صور فحص الجودة",
+      "صور منتج Weidian",
+      "تصفح جميع المنتجات",
+      "السعر غير متاح"
+    ],
+    "ja": [
+      "商品ID：",
+      "品質検査写真",
+      "Weidianの商品写真",
+      "すべての商品を見る",
+      "価格は利用できません"
+    ],
+    "ko": [
+      "상품 ID:",
+      "품질 검사 사진",
+      "Weidian 상품 사진",
+      "모든 상품 보기",
+      "가격 정보 없음"
+    ],
+    "vi": [
+      "Mã sản phẩm:",
+      "Ảnh kiểm tra chất lượng",
+      "Ảnh sản phẩm Weidian",
+      "Xem tất cả sản phẩm",
+      "Không có giá"
+    ]
+  }
+}

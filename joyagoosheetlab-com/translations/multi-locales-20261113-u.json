@@ -1,0 +1,274 @@
+{
+  "items": [
+    {
+      "name": "Casual Sweatshirt Set",
+      "translations": {
+        "fi": "Rento collegepaitasetti",
+        "da": "Afslappet sweatshirtsæt",
+        "nb": "Uformelt gensersett",
+        "cs": "Volnočasový komplet mikin",
+        "sk": "Voľnočasový komplet mikín",
+        "hu": "Hétköznapi pulóverszett",
+        "el": "Καθημερινό σετ μπλουζών φούτερ",
+        "uk": "Повсякденний комплект світшотів",
+        "ar": "طقم سويت شيرت كاجوال",
+        "ja": "カジュアルスウェットセット",
+        "ko": "캐주얼 스웨트셔츠 세트",
+        "vi": "Bộ áo nỉ thường ngày",
+        "tr": "Günlük sweatshirt takımı"
+      }
+    },
+    {
+      "name": "Wool Outdoor Shell Jacket",
+      "translations": {
+        "fi": "Villainen ulkoilun kuoritakki",
+        "da": "Udendørs skaljakke i uld",
+        "nb": "Utendørs skalljakke i ull",
+        "cs": "Vlněná outdoorová svrchní bunda",
+        "sk": "Vlnená outdoorová vrchná bunda",
+        "hu": "Gyapjú kültéri héjkabát",
+        "el": "Μάλλινο εξωτερικό μπουφάν υπαίθρου",
+        "uk": "Вовняна зовнішня куртка для активного відпочинку",
+        "ar": "سترة خارجية صوفية للأنشطة الخارجية",
+        "ja": "ウールアウトドアシェルジャケット",
+        "ko": "울 아웃도어 셸 재킷",
+        "vi": "Áo khoác ngoài trời bằng len",
+        "tr": "Yün outdoor dış katman ceketi"
+      }
+    },
+    {
+      "name": "Palm Moose Fur Hood Parka",
+      "translations": {
+        "fi": "Palm Moose -turkishupullinen parkatakki",
+        "da": "Palm Moose-parka med pelshætte",
+        "nb": "Palm Moose-parkas med pelshette",
+        "cs": "Parka Palm Moose s kožešinovou kapucí",
+        "sk": "Parka Palm Moose s kožušinovou kapucňou",
+        "hu": "Palm Moose szőrmés kapucnis parka",
+        "el": "Πάρκα Palm Moose με γούνινη κουκούλα",
+        "uk": "Парка Palm Moose з хутряним капюшоном",
+        "ar": "باركا Palm Moose بغطاء رأس من الفرو",
+        "ja": "Palm Mooseファーフードパーカー",
+        "ko": "Palm Moose 퍼 후드 파카",
+        "vi": "Áo parka Palm Moose có mũ lông",
+        "tr": "Palm Moose kürk kapüşonlu parka"
+      }
+    },
+    {
+      "name": "Premium Fashion Slides",
+      "translations": {
+        "fi": "Laadukkaat muotipistokkaat",
+        "da": "Premium modeslippers",
+        "nb": "Premium moteslippers",
+        "cs": "Prémiové módní pantofle",
+        "sk": "Prémiové módne šľapky",
+        "hu": "Prémium divatpapucs",
+        "el": "Premium μοντέρνες παντόφλες",
+        "uk": "Преміальні модні шльопанці",
+        "ar": "شبشب عصري فاخر",
+        "ja": "プレミアムファッションスライド",
+        "ko": "프리미엄 패션 슬라이드",
+        "vi": "Dép lê thời trang cao cấp",
+        "tr": "Premium moda terlik"
+      }
+    },
+    {
+      "name": "Premium Casual Slides",
+      "translations": {
+        "fi": "Laadukkaat vapaa-ajan pistokkaat",
+        "da": "Premium afslappede slippers",
+        "nb": "Premium uformelle slippers",
+        "cs": "Prémiové volnočasové pantofle",
+        "sk": "Prémiové voľnočasové šľapky",
+        "hu": "Prémium hétköznapi papucs",
+        "el": "Premium καθημερινές παντόφλες",
+        "uk": "Преміальні повсякденні шльопанці",
+        "ar": "شبشب كاجوال فاخر",
+        "ja": "プレミアムカジュアルスライド",
+        "ko": "프리미엄 캐주얼 슬라이드",
+        "vi": "Dép lê thường ngày cao cấp",
+        "tr": "Premium günlük terlik"
+      }
+    },
+    {
+      "name": "BD Cork Slide Collection 1",
+      "translations": {
+        "fi": "BD-korkkipistokaskokoelma 1",
+        "da": "BD-korkslipperkollektion 1",
+        "nb": "BD-korkslipperskolleksjon 1",
+        "cs": "Kolekce korkových pantoflí BD 1",
+        "sk": "Kolekcia korkových šľapiek BD 1",
+        "hu": "BD parafa papucs kollekció 1",
+        "el": "Συλλογή παντοφλών από φελλό BD 1",
+        "uk": "Колекція коркових шльопанців BD 1",
+        "ar": "مجموعة شبشب فلين BD 1",
+        "ja": "BDコルクスライドコレクション 1",
+        "ko": "BD 코르크 슬라이드 컬렉션 1",
+        "vi": "Bộ sưu tập dép lê nút bần BD 1",
+        "tr": "BD mantar terlik koleksiyonu 1"
+      }
+    },
+    {
+      "name": "3DC Casual House Shoes",
+      "translations": {
+        "fi": "3DC-rennot sisäkengät",
+        "da": "3DC-afslappede hjemmesko",
+        "nb": "3DC-uformelle innesko",
+        "cs": "Volnočasová domácí obuv 3DC",
+        "sk": "Voľnočasová domáca obuv 3DC",
+        "hu": "3DC hétköznapi házicipő",
+        "el": "Καθημερινά παπούτσια σπιτιού 3DC",
+        "uk": "Повсякденне домашнє взуття 3DC",
+        "ar": "حذاء منزلي كاجوال 3DC",
+        "ja": "3DCカジュアルルームシューズ",
+        "ko": "3DC 캐주얼 실내화",
+        "vi": "Giày đi trong nhà thường ngày 3DC",
+        "tr": "3DC günlük ev ayakkabısı"
+      }
+    },
+    {
+      "name": "Ollie Leather Sneakers",
+      "translations": {
+        "fi": "Ollie-nahkatennarit",
+        "da": "Ollie-sneakers i læder",
+        "nb": "Ollie-sneakers i skinn",
+        "cs": "Kožené tenisky Ollie",
+        "sk": "Kožené tenisky Ollie",
+        "hu": "Ollie bőr sportcipő",
+        "el": "Δερμάτινα sneakers Ollie",
+        "uk": "Шкіряні кросівки Ollie",
+        "ar": "حذاء رياضي Ollie جلدي",
+        "ja": "Ollieレザースニーカー",
+        "ko": "Ollie 가죽 스니커즈",
+        "vi": "Giày sneaker Ollie bằng da",
+        "tr": "Ollie deri spor ayakkabı"
+      }
+    },
+    {
+      "name": "Paris Logo Slides",
+      "translations": {
+        "fi": "Paris-logopistokkaat",
+        "da": "Paris-slippers med logo",
+        "nb": "Paris-slippers med logo",
+        "cs": "Pantofle Paris s logem",
+        "sk": "Šľapky Paris s logom",
+        "hu": "Paris logós papucs",
+        "el": "Παντόφλες Paris με λογότυπο",
+        "uk": "Шльопанці Paris з логотипом",
+        "ar": "شبشب Paris بشعار",
+        "ja": "Parisロゴスライド",
+        "ko": "Paris 로고 슬라이드",
+        "vi": "Dép lê Paris có logo",
+        "tr": "Paris logolu terlik"
+      }
+    },
+    {
+      "name": "Everyday Casual Slides",
+      "translations": {
+        "fi": "Rennot arkipistokkaat",
+        "da": "Afslappede hverdagsslippers",
+        "nb": "Uformelle hverdagsslippers",
+        "cs": "Volnočasové pantofle na každý den",
+        "sk": "Voľnočasové šľapky na každý deň",
+        "hu": "Mindennapi hétköznapi papucs",
+        "el": "Καθημερινές παντόφλες",
+        "uk": "Повсякденні шльопанці",
+        "ar": "شبشب كاجوال للاستخدام اليومي",
+        "ja": "デイリーカジュアルスライド",
+        "ko": "데일리 캐주얼 슬라이드",
+        "vi": "Dép lê thường ngày",
+        "tr": "Günlük terlik"
+      }
+    },
+    {
+      "name": "Fashion Comfort Slides",
+      "translations": {
+        "fi": "Mukavat muotipistokkaat",
+        "da": "Komfortable modeslippers",
+        "nb": "Komfortable moteslippers",
+        "cs": "Pohodlné módní pantofle",
+        "sk": "Pohodlné módne šľapky",
+        "hu": "Kényelmes divatpapucs",
+        "el": "Άνετες μοντέρνες παντόφλες",
+        "uk": "Зручні модні шльопанці",
+        "ar": "شبشب عصري مريح",
+        "ja": "快適なファッションスライド",
+        "ko": "편안한 패션 슬라이드",
+        "vi": "Dép lê thời trang êm ái",
+        "tr": "Rahat moda terlik"
+      }
+    },
+    {
+      "name": "YZ Slide Collection",
+      "translations": {
+        "fi": "YZ-pistokaskokoelma",
+        "da": "YZ-slipperkollektion",
+        "nb": "YZ-slipperskolleksjon",
+        "cs": "Kolekce pantoflí YZ",
+        "sk": "Kolekcia šľapiek YZ",
+        "hu": "YZ papucskollekció",
+        "el": "Συλλογή παντοφλών YZ",
+        "uk": "Колекція шльопанців YZ",
+        "ar": "مجموعة شبشب YZ",
+        "ja": "YZスライドコレクション",
+        "ko": "YZ 슬라이드 컬렉션",
+        "vi": "Bộ sưu tập dép lê YZ",
+        "tr": "YZ terlik koleksiyonu"
+      }
+    },
+    {
+      "name": "Stussy Graphic Shorts",
+      "translations": {
+        "fi": "Stussy-kuviolliset shortsit",
+        "da": "Stussy-shorts med grafik",
+        "nb": "Stussy-shorts med grafikk",
+        "cs": "Šortky Stussy s potiskem",
+        "sk": "Šortky Stussy s potlačou",
+        "hu": "Stussy mintás rövidnadrág",
+        "el": "Σορτς Stussy με σχέδιο",
+        "uk": "Шорти Stussy з принтом",
+        "ar": "شورت Stussy برسمة",
+        "ja": "Stussyグラフィックショーツ",
+        "ko": "Stussy 그래픽 반바지",
+        "vi": "Quần short Stussy có họa tiết",
+        "tr": "Stussy grafik desenli şort"
+      }
+    },
+    {
+      "name": "Bape Graphic Gray Hoodie",
+      "translations": {
+        "fi": "Bape-harmaa kuviollinen huppari",
+        "da": "Grå Bape-hættetrøje med grafik",
+        "nb": "Grå Bape-hettegenser med grafikk",
+        "cs": "Šedá mikina Bape s kapucí a potiskem",
+        "sk": "Sivá mikina Bape s kapucňou a potlačou",
+        "hu": "Szürke Bape mintás kapucnis pulóver",
+        "el": "Γκρι φούτερ Bape με κουκούλα και σχέδιο",
+        "uk": "Сіре худі Bape з принтом",
+        "ar": "هودي Bape رمادي برسمة",
+        "ja": "Bapeグラフィック入りグレーパーカー",
+        "ko": "Bape 그래픽 그레이 후드티",
+        "vi": "Áo hoodie Bape xám có họa tiết",
+        "tr": "Bape gri grafik desenli kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Stussy Dice Navy T-Shirt",
+      "translations": {
+        "fi": "Stussy Dice -tummansininen T-paita",
+        "da": "Marineblå Stussy Dice-T-shirt",
+        "nb": "Marineblå Stussy Dice-T-skjorte",
+        "cs": "Tmavě modré tričko Stussy Dice",
+        "sk": "Tmavomodré tričko Stussy Dice",
+        "hu": "Sötétkék Stussy Dice póló",
+        "el": "Σκούρο μπλε μπλουζάκι Stussy Dice",
+        "uk": "Темно-синя футболка Stussy Dice",
+        "ar": "تيشيرت Stussy Dice كحلي",
+        "ja": "Stussy DiceネイビーTシャツ",
+        "ko": "Stussy Dice 네이비 티셔츠",
+        "vi": "Áo thun Stussy Dice xanh navy",
+        "tr": "Stussy Dice lacivert tişört"
+      }
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "items": [
+    {
+      "name": "Drawstring Backpack 8090",
+      "source": "Drawstring Backpack",
+      "suffix": " 8090",
+      "translations": {
+        "fi": "Nyörireppu 8090",
+        "da": "Rygsæk med snøre 8090",
+        "nb": "Ryggsekk med snøring 8090",
+        "cs": "Batoh se stahovací šňůrkou 8090",
+        "sk": "Batoh so sťahovacou šnúrkou 8090",
+        "hu": "Húzózsinóros hátizsák 8090",
+        "ro": "Rucsac cu șnur 8090",
+        "el": "Σακίδιο με κορδόνι 8090",
+        "tr": "İpli sırt çantası 8090",
+        "uk": "Рюкзак зі шнурком 8090",
+        "ar": "حقيبة ظهر برباط 8090",
+        "ja": "ドローコードバックパック 8090",
+        "ko": "드로스트링 백팩 8090",
+        "vi": "Ba lô dây rút 8090"
+      }
+    },
+    {
+      "name": "Printed Sports Backpack 010",
+      "source": "Printed Sports Backpack",
+      "suffix": " 010",
+      "translations": {
+        "fi": "Painettu urheilureppu 010",
+        "da": "Sportsrygsæk med print 010",
+        "nb": "Sportsryggsekk med trykk 010",
+        "cs": "Sportovní batoh s potiskem 010",
+        "sk": "Športový batoh s potlačou 010",
+        "hu": "Nyomott mintás sporthátizsák 010",
+        "ro": "Rucsac sport imprimat 010",
+        "el": "Αθλητικό σακίδιο με τύπωμα 010",
+        "tr": "Baskılı spor sırt çantası 010",
+        "uk": "Спортивний рюкзак із принтом 010",
+        "ar": "حقيبة ظهر رياضية مطبوعة 010",
+        "ja": "プリントスポーツバックパック 010",
+        "ko": "프린트 스포츠 백팩 010",
+        "vi": "Ba lô thể thao in họa tiết 010"
+      }
+    },
+    {
+      "name": "Buckle Shoulder Bag 66001",
+      "source": "Buckle Shoulder Bag",
+      "suffix": " 66001",
+      "translations": {
+        "fi": "Soljellinen olkalaukku 66001",
+        "da": "Skuldertaske med spænde 66001",
+        "nb": "Skulderveske med spenne 66001",
+        "cs": "Kabelka přes rameno s přezkou 66001",
+        "sk": "Kabelka cez plece s prackou 66001",
+        "hu": "Csatos válltáska 66001",
+        "ro": "Geantă de umăr cu cataramă 66001",
+        "el": "Τσάντα ώμου με αγκράφα 66001",
+        "tr": "Tokalı omuz çantası 66001",
+        "uk": "Сумка на плече з пряжкою 66001",
+        "ar": "حقيبة كتف بإبزيم 66001",
+        "ja": "バックルショルダーバッグ 66001",
+        "ko": "버클 숄더백 66001",
+        "vi": "Túi đeo vai có khóa cài 66001"
+      }
+    },
+    {
+      "name": "Woven Travel Duffel Bag 795287",
+      "source": "Woven Travel Duffel Bag",
+      "suffix": " 795287",
+      "translations": {
+        "fi": "Kudottu matkakassi 795287",
+        "da": "Vævet rejsetaske 795287",
+        "nb": "Vevd reisebag 795287",
+        "cs": "Tkaná cestovní taška 795287",
+        "sk": "Tkaná cestovná taška 795287",
+        "hu": "Szőtt utazótáska 795287",
+        "ro": "Geantă de voiaj țesută 795287",
+        "el": "Υφαντός ταξιδιωτικός σάκος 795287",
+        "tr": "Dokuma seyahat çantası 795287",
+        "uk": "Плетена дорожня сумка 795287",
+        "ar": "حقيبة سفر منسوجة 795287",
+        "ja": "織り素材のトラベルダッフルバッグ 795287",
+        "ko": "우븐 여행용 더플백 795287",
+        "vi": "Túi du lịch dệt 795287"
+      }
+    },
+    {
+      "name": "Sling Bag 41939",
+      "source": "Sling Bag",
+      "suffix": " 41939",
+      "translations": {
+        "fi": "Yliolan laukku 41939",
+        "da": "Slingtaske 41939",
+        "nb": "Slingveske 41939",
+        "cs": "Taška přes tělo 41939",
+        "sk": "Taška cez telo 41939",
+        "hu": "Vállon átvethető táska 41939",
+        "ro": "Geantă sling 41939",
+        "el": "Τσάντα sling 41939",
+        "tr": "Askılı çanta 41939",
+        "uk": "Сумка-слінг 41939",
+        "ar": "حقيبة سلينغ 41939",
+        "ja": "スリングバッグ 41939",
+        "ko": "슬링백 41939",
+        "vi": "Túi đeo chéo một quai 41939"
+      }
+    },
+    {
+      "name": "Backpack Collection CCC10",
+      "source": "Backpack Collection",
+      "suffix": " CCC10",
+      "translations": {
+        "fi": "Reppuvalikoima CCC10",
+        "da": "Rygsækkollektion CCC10",
+        "nb": "Ryggsekkolleksjon CCC10",
+        "cs": "Kolekce batohů CCC10",
+        "sk": "Kolekcia batohov CCC10",
+        "hu": "Hátizsák-kollekció CCC10",
+        "ro": "Colecție de rucsacuri CCC10",
+        "el": "Συλλογή σακιδίων CCC10",
+        "tr": "Sırt çantası koleksiyonu CCC10",
+        "uk": "Колекція рюкзаків CCC10",
+        "ar": "تشكيلة حقائب ظهر CCC10",
+        "ja": "バックパックコレクション CCC10",
+        "ko": "백팩 컬렉션 CCC10",
+        "vi": "Bộ sưu tập ba lô CCC10"
+      }
+    }
+  ]
+}

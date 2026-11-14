@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "name": "Waterfront Summer Slides",
+      "translations": {
+        "fi": "Waterfront-kesäpistokkaat",
+        "da": "Waterfront-sommerslippers",
+        "nb": "Waterfront-sommerslippers",
+        "cs": "Letní pantofle Waterfront",
+        "sk": "Letné šľapky Waterfront",
+        "hu": "Waterfront nyári papucs",
+        "el": "Καλοκαιρινές παντόφλες Waterfront",
+        "uk": "Літні шльопанці Waterfront",
+        "ar": "شبشب صيفي Waterfront",
+        "ja": "Waterfrontサマースライド",
+        "ko": "Waterfront 여름 슬라이드",
+        "vi": "Dép lê mùa hè Waterfront",
+        "tr": "Waterfront yazlık terlik"
+      }
+    },
+    {
+      "name": "MIND001 Massage Clog Shoes",
+      "translations": {
+        "fi": "MIND001-hierovat puukengät",
+        "da": "MIND001-massageclogs",
+        "nb": "MIND001-massasjetresko",
+        "cs": "Masážní nazouváky MIND001",
+        "sk": "Masážne nazúvaky MIND001",
+        "hu": "MIND001 masszírozó klumpa",
+        "el": "Σαμπό μασάζ MIND001",
+        "uk": "Масажні сабо MIND001",
+        "ar": "حذاء كلوغ للتدليك MIND001",
+        "ja": "MIND001マッサージクロッグ",
+        "ko": "MIND001 마사지 클로그",
+        "vi": "Giày clog massage MIND001",
+        "tr": "MIND001 masaj sabosu"
+      }
+    },
+    {
+      "name": "Value Fashion Slides 08",
+      "translations": {
+        "fi": "Edulliset muotipistokkaat 08",
+        "da": "Prisvenlige modeslippers 08",
+        "nb": "Rimelige moteslippers 08",
+        "cs": "Cenově dostupné módní pantofle 08",
+        "sk": "Cenovo dostupné módne šľapky 08",
+        "hu": "Kedvező árú divatpapucs 08",
+        "el": "Οικονομικές μοντέρνες παντόφλες 08",
+        "uk": "Доступні модні шльопанці 08",
+        "ar": "شبشب عصري بسعر مناسب 08",
+        "ja": "お手頃ファッションスライド 08",
+        "ko": "합리적인 가격의 패션 슬라이드 08",
+        "vi": "Dép lê thời trang giá hợp lý 08",
+        "tr": "Uygun fiyatlı moda terlik 08"
+      }
+    },
+    {
+      "name": "Premium Casual Slides X",
+      "translations": {
+        "fi": "Laadukkaat vapaa-ajan pistokkaat X",
+        "da": "Premium afslappede slippers X",
+        "nb": "Premium uformelle slippers X",
+        "cs": "Prémiové volnočasové pantofle X",
+        "sk": "Prémiové voľnočasové šľapky X",
+        "hu": "Prémium hétköznapi papucs X",
+        "el": "Premium καθημερινές παντόφλες X",
+        "uk": "Преміальні повсякденні шльопанці X",
+        "ar": "شبشب كاجوال فاخر X",
+        "ja": "プレミアムカジュアルスライド X",
+        "ko": "프리미엄 캐주얼 슬라이드 X",
+        "vi": "Dép lê thường ngày cao cấp X",
+        "tr": "Premium günlük terlik X"
+      }
+    },
+    {
+      "name": "Men's Outdoor Sport Slides",
+      "translations": {
+        "fi": "Miesten ulkoiluurheilupistokkaat",
+        "da": "Udendørs sportsslippers til mænd",
+        "nb": "Utendørs sportsslippers for menn",
+        "cs": "Pánské venkovní sportovní pantofle",
+        "sk": "Pánske vonkajšie športové šľapky",
+        "hu": "Férfi kültéri sportpapucs",
+        "el": "Ανδρικές αθλητικές παντόφλες εξωτερικού χώρου",
+        "uk": "Чоловічі спортивні шльопанці для відпочинку надворі",
+        "ar": "شبشب رياضي خارجي للرجال",
+        "ja": "メンズアウトドアスポーツスライド",
+        "ko": "남성 아웃도어 스포츠 슬라이드",
+        "vi": "Dép lê thể thao ngoài trời cho nam",
+        "tr": "Erkek outdoor spor terliği"
+      }
+    },
+    {
+      "name": "WM Massage Shoe Collection",
+      "translations": {
+        "fi": "WM-hierovien kenkien kokoelma",
+        "da": "WM-massageskokollektion",
+        "nb": "WM-massasjeskokolleksjon",
+        "cs": "Kolekce masážní obuvi WM",
+        "sk": "Kolekcia masážnej obuvi WM",
+        "hu": "WM masszírozócipő-kollekció",
+        "el": "Συλλογή παπουτσιών μασάζ WM",
+        "uk": "Колекція масажного взуття WM",
+        "ar": "مجموعة أحذية تدليك WM",
+        "ja": "WMマッサージシューズコレクション",
+        "ko": "WM 마사지 신발 컬렉션",
+        "vi": "Bộ sưu tập giày massage WM",
+        "tr": "WM masaj ayakkabısı koleksiyonu"
+      }
+    },
+    {
+      "name": "AGT Comfort Massage Slides",
+      "translations": {
+        "fi": "AGT Comfort -hierovat pistokkaat",
+        "da": "AGT Comfort-massageslippers",
+        "nb": "AGT Comfort-massasjeslippers",
+        "cs": "Masážní pantofle AGT Comfort",
+        "sk": "Masážne šľapky AGT Comfort",
+        "hu": "AGT Comfort masszírozó papucs",
+        "el": "Παντόφλες μασάζ AGT Comfort",
+        "uk": "Масажні шльопанці AGT Comfort",
+        "ar": "شبشب تدليك AGT Comfort",
+        "ja": "AGT Comfortマッサージスライド",
+        "ko": "AGT Comfort 마사지 슬라이드",
+        "vi": "Dép lê massage AGT Comfort",
+        "tr": "AGT Comfort masaj terliği"
+      }
+    },
+    {
+      "name": "GX Foam Slide Collection",
+      "translations": {
+        "fi": "GX-vaahtopistokaskokoelma",
+        "da": "GX-skumslipperkollektion",
+        "nb": "GX-skumslipperskolleksjon",
+        "cs": "Kolekce pěnových pantoflí GX",
+        "sk": "Kolekcia penových šľapiek GX",
+        "hu": "GX habpapucs-kollekció",
+        "el": "Συλλογή παντοφλών αφρού GX",
+        "uk": "Колекція шльопанців із піни GX",
+        "ar": "مجموعة شبشب فوم GX",
+        "ja": "GXフォームスライドコレクション",
+        "ko": "GX 폼 슬라이드 컬렉션",
+        "vi": "Bộ sưu tập dép lê xốp GX",
+        "tr": "GX köpük terlik koleksiyonu"
+      }
+    }
+  ]
+}

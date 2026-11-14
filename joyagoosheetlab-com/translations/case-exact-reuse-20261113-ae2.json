@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "name": "Ami Heart Logo T-Shirt",
+      "translations": {
+        "fi": "AMI-sydänlogollinen T-paita",
+        "da": "AMI-T-shirt med hjertelogo",
+        "nb": "AMI-T-skjorte med hjertelogo",
+        "cs": "Tričko AMI s logem srdce",
+        "sk": "Tričko AMI s logom srdca",
+        "hu": "AMI szívlogós póló",
+        "el": "Μπλουζάκι AMI με λογότυπο καρδιάς",
+        "tr": "AMI kalp logolu tişört",
+        "uk": "Футболка AMI з логотипом-серцем",
+        "ar": "تيشيرت AMI بشعار قلب",
+        "ja": "AMIハートロゴTシャツ",
+        "ko": "AMI 하트 로고 티셔츠",
+        "vi": "Áo thun AMI logo trái tim"
+      }
+    }
+  ]
+}

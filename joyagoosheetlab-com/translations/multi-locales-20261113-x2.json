@@ -1,0 +1,194 @@
+{
+  "items": [
+    {
+      "name": "Sp5der Brown Graphic Hoodie",
+      "translations": {
+        "fi": "Ruskea Sp5der-kuvioinen huppari",
+        "da": "Brun Sp5der-hættetrøje med grafik",
+        "nb": "Brun Sp5der-hettegenser med grafikk",
+        "cs": "Hnědá mikina Sp5der s kapucí a potiskem",
+        "sk": "Hnedá mikina Sp5der s kapucňou a potlačou",
+        "hu": "Barna Sp5der mintás kapucnis pulóver",
+        "ro": "Hanorac maro Sp5der cu imprimeu",
+        "el": "Καφέ φούτερ Sp5der με κουκούλα και σχέδιο",
+        "uk": "Коричневе худі Sp5der з принтом",
+        "ar": "هودي Sp5der بني برسمة",
+        "ja": "Sp5derグラフィック入りブラウンパーカー",
+        "ko": "Sp5der 브라운 그래픽 후드티",
+        "vi": "Áo hoodie Sp5der nâu có họa tiết",
+        "tr": "Sp5der kahverengi grafik desenli kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Script Graphic Black Hoodie",
+      "translations": {
+        "fi": "Musta kirjoituskuvioinen huppari",
+        "da": "Sort hættetrøje med skriftgrafik",
+        "nb": "Svart hettegenser med skriftgrafikk",
+        "cs": "Černá mikina s kapucí a písmovým potiskem",
+        "sk": "Čierna mikina s kapucňou a písmovou potlačou",
+        "hu": "Fekete írásmintás kapucnis pulóver",
+        "ro": "Hanorac negru cu imprimeu tip scris",
+        "el": "Μαύρο φούτερ με κουκούλα και γραπτό σχέδιο",
+        "uk": "Чорне худі з написом",
+        "ar": "هودي أسود برسمة كتابية",
+        "ja": "スクリプトグラフィック入りブラックパーカー",
+        "ko": "스크립트 그래픽 블랙 후드티",
+        "vi": "Áo hoodie đen họa tiết chữ viết",
+        "tr": "Yazı grafikli siyah kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Ami Heart Logo Mint T-Shirt",
+      "translations": {
+        "fi": "Mintunvärinen Ami-sydänlogo-T-paita",
+        "da": "Mintgrøn Ami-T-shirt med hjertelogo",
+        "nb": "Mintgrønn Ami-T-skjorte med hjertelogo",
+        "cs": "Mátové tričko Ami s logem srdce",
+        "sk": "Mätové tričko Ami s logom srdca",
+        "hu": "Mentaszínű Ami szívlogós póló",
+        "ro": "Tricou Ami verde mentă cu logo inimă",
+        "el": "Μπλουζάκι Ami σε χρώμα μέντας με λογότυπο καρδιάς",
+        "uk": "М’ятна футболка Ami з логотипом-серцем",
+        "ar": "تيشيرت Ami بلون النعناع وشعار قلب",
+        "ja": "AmiハートロゴミントTシャツ",
+        "ko": "Ami 하트 로고 민트 티셔츠",
+        "vi": "Áo thun Ami xanh bạc hà logo trái tim",
+        "tr": "Ami kalp logolu nane rengi tişört"
+      }
+    },
+    {
+      "name": "Dior Bee Logo Taupe T-Shirt",
+      "translations": {
+        "fi": "Taupenvärinen Dior-mehiläislogo-T-paita",
+        "da": "Taupe Dior-T-shirt med bilogo",
+        "nb": "Taupe Dior-T-skjorte med bilogo",
+        "cs": "Šedohnědé tričko Dior s logem včely",
+        "sk": "Sivohnedé tričko Dior s logom včely",
+        "hu": "Szürkésbarna Dior méhecske logós póló",
+        "ro": "Tricou Dior gri-maro cu logo albină",
+        "el": "Γκριζοκαφέ μπλουζάκι Dior με λογότυπο μέλισσας",
+        "uk": "Сіро-коричнева футболка Dior з логотипом-бджолою",
+        "ar": "تيشيرت Dior رمادي بني بشعار نحلة",
+        "ja": "DiorビーロゴトープTシャツ",
+        "ko": "Dior 벌 로고 토프 티셔츠",
+        "vi": "Áo thun Dior màu nâu xám logo ong",
+        "tr": "Dior arı logolu boz kahverengi tişört"
+      }
+    },
+    {
+      "name": "Embossed Logo Yellow Hoodie",
+      "translations": {
+        "fi": "Keltainen kohologollinen huppari",
+        "da": "Gul hættetrøje med præget logo",
+        "nb": "Gul hettegenser med preget logo",
+        "cs": "Žlutá mikina s kapucí a reliéfním logem",
+        "sk": "Žltá mikina s kapucňou a reliéfnym logom",
+        "hu": "Sárga dombornyomott logós kapucnis pulóver",
+        "ro": "Hanorac galben cu logo în relief",
+        "el": "Κίτρινο φούτερ με κουκούλα και ανάγλυφο λογότυπο",
+        "uk": "Жовте худі з рельєфним логотипом",
+        "ar": "هودي أصفر بشعار بارز",
+        "ja": "エンボスロゴ入りイエローパーカー",
+        "ko": "엠보 로고 옐로 후드티",
+        "vi": "Áo hoodie vàng logo dập nổi",
+        "tr": "Kabartmalı logolu sarı kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Swoosh Logo Pullover Hoodie",
+      "translations": {
+        "fi": "Swoosh-logollinen päälle puettava huppari",
+        "da": "Hættetrøje uden lynlås med Swoosh-logo",
+        "nb": "Hettegenser uten glidelås med Swoosh-logo",
+        "cs": "Mikina s kapucí bez zipu a logem Swoosh",
+        "sk": "Mikina s kapucňou bez zipsu a logom Swoosh",
+        "hu": "Swoosh logós bebújós kapucnis pulóver",
+        "ro": "Hanorac fără fermoar cu logo Swoosh",
+        "el": "Φούτερ με κουκούλα χωρίς φερμουάρ και λογότυπο Swoosh",
+        "uk": "Худі без блискавки з логотипом Swoosh",
+        "ar": "هودي دون سحاب بشعار Swoosh",
+        "ja": "Swooshロゴプルオーバーパーカー",
+        "ko": "Swoosh 로고 풀오버 후드티",
+        "vi": "Áo hoodie chui đầu logo Swoosh",
+        "tr": "Swoosh logolu fermuarsız kapüşonlu sweatshirt"
+      }
+    },
+    {
+      "name": "Blue Screen Graphic T-Shirt",
+      "translations": {
+        "fi": "Sininen Screen-kuvioinen T-paita",
+        "da": "Blå T-shirt med skærmgrafik",
+        "nb": "Blå T-skjorte med skjermgrafikk",
+        "cs": "Modré tričko s grafikou obrazovky",
+        "sk": "Modré tričko s grafikou obrazovky",
+        "hu": "Kék képernyőmintás póló",
+        "ro": "Tricou albastru cu imprimeu ecran",
+        "el": "Μπλε μπλουζάκι με σχέδιο οθόνης",
+        "uk": "Синя футболка з принтом екрана",
+        "ar": "تيشيرت أزرق برسمة شاشة",
+        "ja": "スクリーングラフィック入りブルーTシャツ",
+        "ko": "스크린 그래픽 블루 티셔츠",
+        "vi": "Áo thun xanh họa tiết màn hình",
+        "tr": "Ekran grafikli mavi tişört"
+      }
+    },
+    {
+      "name": "Hellstar Hoodies",
+      "translations": {
+        "fi": "Hellstar-hupparit",
+        "da": "Hellstar-hættetrøjer",
+        "nb": "Hellstar-hettegensere",
+        "cs": "Mikiny s kapucí Hellstar",
+        "sk": "Mikiny s kapucňou Hellstar",
+        "hu": "Hellstar kapucnis pulóverek",
+        "ro": "Hanorace Hellstar",
+        "el": "Φούτερ Hellstar με κουκούλα",
+        "uk": "Худі Hellstar",
+        "ar": "هوديات Hellstar",
+        "ja": "Hellstarパーカー",
+        "ko": "Hellstar 후드티",
+        "vi": "Áo hoodie Hellstar",
+        "tr": "Hellstar kapüşonlu sweatshirtler"
+      }
+    },
+    {
+      "name": "The North Face Down Jackets",
+      "translations": {
+        "fi": "The North Face -untuvatakit",
+        "da": "The North Face-dunjakker",
+        "nb": "The North Face-dunjakker",
+        "cs": "Péřové bundy The North Face",
+        "sk": "Páperové bundy The North Face",
+        "hu": "The North Face pehelykabátok",
+        "ro": "Geci cu puf The North Face",
+        "el": "Πουπουλένια μπουφάν The North Face",
+        "uk": "Пухові куртки The North Face",
+        "ar": "سترات داون The North Face",
+        "ja": "The North Faceダウンジャケット",
+        "ko": "The North Face 다운 재킷",
+        "vi": "Áo khoác lông vũ The North Face",
+        "tr": "The North Face kuş tüyü montlar"
+      }
+    },
+    {
+      "name": "NBA League Shorts",
+      "translations": {
+        "fi": "NBA-liigashortsit",
+        "da": "NBA-ligashorts",
+        "nb": "NBA-ligashorts",
+        "cs": "Ligové šortky NBA",
+        "sk": "Ligové šortky NBA",
+        "hu": "NBA liga rövidnadrágok",
+        "ro": "Pantaloni scurți ai ligii NBA",
+        "el": "Σορτς της λίγκας NBA",
+        "uk": "Шорти ліги NBA",
+        "ar": "شورتات دوري NBA",
+        "ja": "NBAリーグショーツ",
+        "ko": "NBA 리그 반바지",
+        "vi": "Quần short giải đấu NBA",
+        "tr": "NBA lig şortları"
+      }
+    }
+  ]
+}
