@@ -1,0 +1,14 @@
+(()=>{
+ const rows={
+ zh:['FindSpreadsheet 商品目录导出于 2026 年 11 月 10 日。商品和价格可能已变化。','美元价格来自导出时的 FindSpreadsheet，请在 OopBuy 确认最新价格。','不是。这里使用 2026 年 11 月 10 日的商品导出，请在 OopBuy 确认最新价格、库存和费用。'],
+ de:['FindSpreadsheet-Katalog vom 10. November 2026. Angebote und Preise können sich geändert haben.','USD-Preise stammen aus dem Export. Aktuellen Preis bei OopBuy prüfen.','Nein. Die Vorschau verwendet den Katalogexport vom 10. November 2026. Aktuelle Preise, Verfügbarkeit und Gebühren bei OopBuy prüfen.'],
+ fr:['Catalogue FindSpreadsheet exporté le 10 novembre 2026. Les offres et les prix peuvent avoir changé.','Prix en USD issus de l’export. Vérifiez le prix actuel sur OopBuy.','Non. Cet aperçu utilise le catalogue exporté le 10 novembre 2026. Vérifiez les prix, disponibilités et frais sur OopBuy.'],
+ es:['Catálogo de FindSpreadsheet exportado el 10 de noviembre de 2026. Los artículos y precios pueden haber cambiado.','Precios en USD del momento de la exportación. Confirma el precio actual en OopBuy.','No. La vista previa usa el catálogo exportado el 10 de noviembre de 2026. Comprueba precios, disponibilidad y cargos en OopBuy.'],
+ it:['Catalogo FindSpreadsheet esportato il 10 novembre 2026. Prodotti e prezzi potrebbero essere cambiati.','Prezzi in USD rilevati all’esportazione. Verifica il prezzo attuale su OopBuy.','No. Questa anteprima usa il catalogo esportato il 10 novembre 2026. Verifica prezzi, disponibilità e costi su OopBuy.'],
+ pt:['Catálogo FindSpreadsheet exportado em 10 de novembro de 2026. Produtos e preços podem ter mudado.','Preços em USD obtidos na exportação. Confirme o preço atual no OopBuy.','Não. A prévia usa o catálogo exportado em 10 de novembro de 2026. Confirme preços, disponibilidade e taxas no OopBuy.'],
+ nl:['FindSpreadsheet-catalogus geëxporteerd op 10 november 2026. Producten en prijzen kunnen zijn gewijzigd.','USD-prijzen komen uit de export. Controleer de actuele prijs op OopBuy.','Nee. Deze preview gebruikt de catalogusexport van 10 november 2026. Controleer actuele prijzen, voorraad en kosten op OopBuy.'],
+ pl:['Katalog FindSpreadsheet wyeksportowano 10 listopada 2026 r. Oferty i ceny mogły się zmienić.','Ceny USD pochodzą z eksportu. Sprawdź aktualną cenę w OopBuy.','Nie. Podgląd korzysta z eksportu katalogu z 10 listopada 2026 r. Sprawdź aktualne ceny, dostępność i opłaty w OopBuy.'],
+ sv:['FindSpreadsheet-katalogen exporterades den 10 november 2026. Produkter och priser kan ha ändrats.','USD-priserna kommer från exporten. Kontrollera aktuellt pris på OopBuy.','Nej. Förhandsvisningen använder katalogexporten från 10 november 2026. Kontrollera aktuella priser, tillgänglighet och avgifter hos OopBuy.']
+ };
+ for(const [lang,v] of Object.entries(rows))window.oopExtended[lang]={...(window.oopExtended[lang]||{}),snapshot:v[0],price_note:v[1],a5:v[2]};
+})();

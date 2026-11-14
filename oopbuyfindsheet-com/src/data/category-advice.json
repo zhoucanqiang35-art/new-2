@@ -1,0 +1,112 @@
+{
+  "shoes": {
+    "en": {
+      "weight": "Check shoe boxes and extra laces when packing. Confirm the actual packed weight and dimensions.",
+      "shipping": "For bulky boxes, check the destination rules and final OopBuy shipping quote."
+    },
+    "zh": {
+      "weight": "打包时留意鞋盒和备用鞋带，并确认实际包裹重量和尺寸。",
+      "shipping": "涉及较大的鞋盒时，查看目的地规定，并以 OopBuy 最终运费报价为准。"
+    }
+  },
+  "hoodies-sweaters": {
+    "en": {
+      "weight": "Check thick fabric, lining and folded bulk when packing. Confirm the actual packed weight and dimensions.",
+      "shipping": "For heavy or bulky knitwear, check the destination rules and final OopBuy shipping quote."
+    },
+    "zh": {
+      "weight": "打包时留意厚面料、里衬和折叠体积，并确认实际包裹重量和尺寸。",
+      "shipping": "涉及较厚或蓬松的针织衣物时，查看目的地规定，并以 OopBuy 最终运费报价为准。"
+    }
+  },
+  "t-shirts": {
+    "en": {
+      "weight": "Check fabric weight, print protection and folded size when packing. Confirm the actual packed weight and dimensions.",
+      "shipping": "For multiple shirts and printed surfaces, check the destination rules and final OopBuy shipping quote."
+    },
+    "zh": {
+      "weight": "打包时留意面料克重、印花保护和折叠尺寸，并确认实际包裹重量和尺寸。",
+      "shipping": "涉及多件 T 恤及印花面时，查看目的地规定，并以 OopBuy 最终运费报价为准。"
+    }
+  },
+  "jackets": {
+    "en": {
+      "weight": "Check lining, filling and protective wrapping when packing. Confirm the actual packed weight and dimensions.",
+      "shipping": "For bulky filled outerwear, check the destination rules and final OopBuy shipping quote."
+    },
+    "zh": {
+      "weight": "打包时留意里衬、填充物和保护包装，并确认实际包裹重量和尺寸。",
+      "shipping": "涉及体积较大的填充外套时，查看目的地规定，并以 OopBuy 最终运费报价为准。"
+    }
+  },
+  "pants-shorts": {
+    "en": {
+      "weight": "Check fabric thickness, hardware and folded size when packing. Confirm the actual packed weight and dimensions.",
+      "shipping": "For heavy denim or metal hardware, check the destination rules and final OopBuy shipping quote."
+    },
+    "zh": {
+      "weight": "打包时留意面料厚度、五金和折叠尺寸，并确认实际包裹重量和尺寸。",
+      "shipping": "涉及厚牛仔布或金属配件时，查看目的地规定，并以 OopBuy 最终运费报价为准。"
+    }
+  },
+  "headwear": {
+    "en": {
+      "weight": "Check brim protection and crush-resistant packaging when packing. Confirm the actual packed weight and dimensions.",
+      "shipping": "For rigid brims and protective boxes, check the destination rules and final OopBuy shipping quote."
+    },
+    "zh": {
+      "weight": "打包时留意帽檐保护和防压包装，并确认实际包裹重量和尺寸。",
+      "shipping": "涉及硬帽檐及保护盒时，查看目的地规定，并以 OopBuy 最终运费报价为准。"
+    }
+  },
+  "accessories": {
+    "en": {
+      "weight": "Check small parts, fastenings and protective boxes when packing. Confirm the actual packed weight and dimensions.",
+      "shipping": "For fragile parts or mixed materials, check the destination rules and final OopBuy shipping quote."
+    },
+    "zh": {
+      "weight": "打包时留意小配件、扣件和保护盒，并确认实际包裹重量和尺寸。",
+      "shipping": "涉及易碎部件或混合材质时，查看目的地规定，并以 OopBuy 最终运费报价为准。"
+    }
+  },
+  "jersey": {
+    "en": {
+      "weight": "Check printed details and any included patches when packing. Confirm the actual packed weight and dimensions.",
+      "shipping": "For printed garments and bundled patches, check the destination rules and final OopBuy shipping quote."
+    },
+    "zh": {
+      "weight": "打包时留意印花细节和随附徽章，并确认实际包裹重量和尺寸。",
+      "shipping": "涉及印花衣物及随附徽章时，查看目的地规定，并以 OopBuy 最终运费报价为准。"
+    }
+  },
+  "ShortSets": {
+    "en": {
+      "weight": "Check every included piece and combined packaging when packing. Confirm the actual packed weight and dimensions.",
+      "shipping": "For combined sets and parcel size, check the destination rules and final OopBuy shipping quote."
+    },
+    "zh": {
+      "weight": "打包时留意套装内每件商品及合并包装，并确认实际包裹重量和尺寸。",
+      "shipping": "涉及套装总件数与包裹尺寸时，查看目的地规定，并以 OopBuy 最终运费报价为准。"
+    }
+  },
+  "electronics": {
+    "en": {
+      "weight": "Check device, cables, adapters and protective padding when packing. Confirm the actual packed weight and dimensions.",
+      "shipping": "For batteries, plugs and destination restrictions, check the destination rules and final OopBuy shipping quote."
+    },
+    "zh": {
+      "weight": "打包时留意设备、线缆、适配器及防震包装，并确认实际包裹重量和尺寸。",
+      "shipping": "涉及电池、插头及目的地运输限制时，查看目的地规定，并以 OopBuy 最终运费报价为准。"
+    }
+  },
+  "other-stuff": {
+    "en": {
+      "weight": "Check the item’s shape, components and required protection when packing. Confirm the actual packed weight and dimensions.",
+      "shipping": "For the specific item and route restrictions, check the destination rules and final OopBuy shipping quote."
+    },
+    "zh": {
+      "weight": "打包时留意商品形状、配件和所需保护，并确认实际包裹重量和尺寸。",
+      "shipping": "涉及具体商品及线路限制时，查看目的地规定，并以 OopBuy 最终运费报价为准。"
+    }
+  }
+}

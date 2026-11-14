@@ -1,0 +1,16 @@
+---
+const steps = [{"index": "01", "title": "Find and explore", "description": "Spreadsheet · source links"}, {"index": "02", "title": "Check the listing", "description": "Price · size · material"}, {"index": "03", "title": "Register and order", "description": "Independent guide · OopBuy"}, {"index": "04", "title": "Warehouse and QC", "description": "Photos · visible details"}, {"index": "05", "title": "Review and resolve", "description": "Damage · returns · support"}, {"index": "06", "title": "Store and combine", "description": "Storage · multiple items"}, {"index": "07", "title": "Choose shipping", "description": "Weight · route · total cost"}, {"index": "08", "title": "Track and receive", "description": "Waybill · delivery · after-sales"}];
+---
+<svg class="faq-flow" viewBox="0 0 600 1220" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="faq-flow-title faq-flow-description">
+<title id="faq-flow-title" data-i18n="flow_title">From discovery to delivery</title>
+<desc id="faq-flow-description" data-i18n="flow_sub">A simple OopBuy shopping overview</desc>
+<defs><linearGradient id="flow-paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f9f8f7"/><stop offset="1" stop-color="#e8f1f3"/></linearGradient></defs>
+<rect x="1" y="1" width="598" height="1218" rx="24" fill="url(#flow-paper)" stroke="#d4e1e5" stroke-width="2"/>
+<circle cx="535" cy="94" r="94" fill="#e9cfd0" opacity=".35"/><circle cx="49" cy="1178" r="126" fill="#bdd2dd" opacity=".28"/>
+<text x="42" y="68" fill="#9a7880" font-size="13" font-weight="700" letter-spacing="3">OOPBUY / FAQ</text>
+<text x="42" y="113" fill="#385767" font-size="27" font-weight="700" data-i18n="flow_title">From discovery to delivery</text>
+<text x="42" y="143" fill="#68828d" font-size="16" data-i18n="flow_sub">A simple OopBuy shopping overview</text>
+<line x1="83" y1="207" x2="83" y2="1040" stroke="#bbd1d8" stroke-width="3" stroke-dasharray="5 7"/>
+{steps.map((step,i)=><g transform={`translate(0 ${175+i*117})`}><rect x="34" y="0" width="532" height="96" rx="18" fill="#fff" fill-opacity=".86" stroke="#dce8eb"/><circle cx="83" cy="48" r="27" fill={i%2?'#ecd8d9':'#d6e6ea'}/><text x="83" y="54" fill="#527181" font-size="17" font-weight="700" text-anchor="middle">{step.index}</text><text x="130" y="42" fill="#385767" font-size="20" font-weight="700" data-i18n={`flow_${i+1}`}>{step.title}</text><text x="130" y="68" fill="#72858d" font-size="14" data-i18n={`flow_${i+1}_sub`}>{step.description}</text></g>)}
+<text x="42" y="1170" fill="#68828d" font-size="14" data-i18n="flow_note">Check current conditions on OopBuy</text>
+</svg>

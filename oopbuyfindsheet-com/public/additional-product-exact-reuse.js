@@ -1,0 +1,1 @@
+(()=>{const ids={"8970":"8995","8965":"9015","8954":"9009","8924":"9015","8805":"9015","8798":"8990","8796":"8991"};const old=window.oopProductTitle;window.oopProductTitle=(p,l)=>{let id=ids[String(p.id)];return id&&["cs","hu","el","tr","uk","ru","ja","ko","ar","id"].includes(l)?old({...p,id},l):(old?.(p,l)||p.name)};})();

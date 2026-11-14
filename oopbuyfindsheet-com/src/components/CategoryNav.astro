@@ -1,0 +1,5 @@
+---
+import {categories} from '../data/categories.js';
+---
+<nav class="product-categories category-links" aria-label="All product categories" data-i18n-aria-label="ui_categories"><a href="/finds/#listing" data-category-filter="all" data-i18n="all_products">All products ↗</a>{categories.map(([slug,en,zh])=><a href={`/finds/?category=${encodeURIComponent(slug)}#listing`} data-category-filter={slug} data-en={en} data-zh={zh}>{en}</a>)}</nav>
+<style is:global>.category-links{display:flex;flex-wrap:wrap;gap:9px;margin:15px 0 30px}.category-links a{padding:10px 14px;background:#fff;border:1px solid #dedad4;border-radius:2px;font-size:12px;font-weight:700;color:#403c35}.category-links a:hover{background:#ece8e1}.category-links a[aria-current="true"]{background:#292722;color:white;border-color:#292722}@media(max-width:760px){.category-links{gap:7px;margin-bottom:25px}.category-links a{font-size:11px;padding:8px 11px}}</style>
