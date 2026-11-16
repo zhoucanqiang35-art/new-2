@@ -61,3 +61,70 @@ footer{background:#302638;color:#f7eef5}.footer-inner p,.footer-end{color:#d1c1c
 /* Keep identifiers and amounts readable inside the Arabic interface. */
 html[dir="rtl"] .money, html[dir="rtl"] .detail-product-id { direction:ltr; unicode-bidi:isolate; }
 html[dir="rtl"] .header nav, html[dir="rtl"] .header-settings { direction:rtl; }
+
+/* Compact mobile layout: retain every homepage section, product and FAQ. */
+@media (max-width:700px){
+  .header{height:auto;min-height:0;padding:10px 4%;gap:8px}
+  .header nav{gap:14px;padding:3px 0;margin:0;min-height:32px}
+  .header nav a{font-size:11px}
+  .header .litbuy-logo{width:88px}
+  .header-settings{display:flex;gap:4px}
+  .header-settings select{min-height:34px}
+  .header .nav-cta{padding:10px 8px;font-size:10px}
+  .signal-hero{width:92%;margin-inline:auto}
+  .signal-frame{padding:14px 5% 20px}
+  .signal-top{padding-bottom:10px;font-size:8px;letter-spacing:.08em;gap:8px}
+  .signal-eyebrow{margin:18px 0 10px;font-size:9px}
+  .signal-hero h1{font-size:clamp(38px,10.8vw,58px);line-height:.98}
+  .signal-caption{margin:14px 0}
+  .signal-caption p{font-size:12px;line-height:1.55}
+  .signal-caption a{font-size:11px;margin-top:8px}
+  .signal-search{height:48px;margin:14px 0 0;padding:4px 4px 4px 10px;gap:5px}
+  .signal-search input{font-size:12px}
+  .signal-search>span{margin:0 3px;font-size:22px}
+  .signal-search button[type=submit]{padding:10px;min-height:38px;font-size:11px}
+  .signal-search .image-search-trigger{width:36px;min-height:38px}
+  .canvas-categories,.canvas-finds,.canvas-faq{padding:24px 4%}
+  .canvas-heading{margin-bottom:16px;align-items:center;gap:10px}
+  .canvas-heading>div>p,.canvas-guide-header>p:first-child{font-size:9px}
+  .canvas-heading h2,.canvas-guide h2{font-size:27px;margin-top:6px;line-height:1.1}
+  .canvas-heading>a{font-size:11px;flex-shrink:0}
+  .canvas-category-list{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px 6px}
+  .canvas-category-list a{font-size:10px;line-height:1.3;min-width:0;overflow-wrap:anywhere}
+  .canvas-category-list a>span{width:40px;height:40px;margin-bottom:5px}
+  .canvas-category-list svg{width:22px;height:22px}
+  .canvas-finds{padding-top:4px}
+  .canvas-all{padding:10px 12px!important}
+  .canvas-products{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px 9px;align-items:start}
+  .canvas-products .product-card{min-width:0}
+  .canvas-products .product-image{aspect-ratio:1/1}
+  .canvas-products .card-arrow{width:26px;height:26px;top:5px;right:5px}
+  .canvas-products .card-meta{display:flex;flex-wrap:wrap;gap:3px;margin:6px 0;padding:4px 0;font-size:8px;letter-spacing:0;overflow-wrap:anywhere}
+  .canvas-products h3{font-size:11px;line-height:1.4;min-height:0;overflow-wrap:anywhere}
+  .canvas-products .card-price{font-size:12px;margin-top:6px;overflow-wrap:anywhere}
+  .canvas-products .product-card p{font-size:10px;margin-top:5px}
+  .canvas-finds>.data-note{font-size:10px;line-height:1.5;margin-top:14px}
+  .canvas-guide{padding:26px 4%;text-align:start}
+  .canvas-guide-header>p:not(:first-child){font-size:12px;line-height:1.6;margin:12px 0}
+  .canvas-guide-header>a{font-size:11px}
+  .canvas-steps{grid-template-columns:1fr;gap:0;margin-top:18px}
+  .canvas-steps article,.canvas-steps article:first-child{display:grid;grid-template-columns:30px minmax(0,1fr);column-gap:10px;padding:12px 0;border-right:0;border-bottom:1px solid #ffffff38}
+  .canvas-steps span{grid-row:1/3;font-size:22px}
+  .canvas-steps h3{font-size:13px;line-height:1.4;margin:0 0 4px}
+  .canvas-steps p{grid-column:2;font-size:12px;line-height:1.55}
+  .canvas-faq .faq-list summary{padding:12px 0;gap:12px;min-height:44px;align-items:center}
+  .canvas-faq .faq-list summary span:first-child{font-size:13px;line-height:1.45;font-weight:600}
+  .canvas-faq .faq-list summary span:last-child{font-size:20px;flex:0 0 16px;text-align:center}
+  .canvas-faq .faq-list details p{font-size:12px;line-height:1.65;padding-bottom:12px}
+  footer{padding:26px 4% 18px}
+  .footer-inner{gap:18px 14px}
+  .footer-inner p{font-size:11px;line-height:1.5;margin-top:10px}
+  .footer-inner strong,.footer-inner>div>a:not(.brand){font-size:11px;line-height:1.45;margin-bottom:10px}
+  .footer-end{font-size:10px;line-height:1.5;margin-top:18px;padding-top:12px;gap:6px}
+}
+@media (max-width:360px){
+  .header .litbuy-logo{width:76px}
+  .header .nav-cta{font-size:9px;padding-inline:6px}
+  .header-settings select{max-width:66px;font-size:10px}
+  .canvas-heading h2,.canvas-guide h2{font-size:24px}
+}
