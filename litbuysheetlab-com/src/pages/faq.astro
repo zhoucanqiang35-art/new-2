@@ -1,0 +1,5 @@
+---
+import Base from '../layouts/Base.astro';
+import { faqItems as items } from '../data/faq.js';
+---
+<Base title="Litbuy Spreadsheet FAQ | QC, shipping and product links"><main class="long-guide"><p class="eyebrow" data-home-i18n="faq">FAQ</p><h1 data-home-i18n="faq_title">Litbuy spreadsheet FAQ</h1><p class="guide-lead" data-home-i18n="faq_lead">Answers about product links, QC photos, warehouse steps and shipping.</p><div class="expanded-faq">{items.map(([q,a],i)=><details><summary><span data-home-i18n={`faq_question_${i}`}>{q}</span><span>+</span></summary><p data-home-i18n={`faq_answer_${i}`}>{a}</p></details>)}</div><a class="guide-footer-link" href="/guide/" data-home-i18n="faq_guide_link">Read the shopping guide ↗</a></main></Base>
