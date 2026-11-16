@@ -128,3 +128,24 @@ html[dir="rtl"] .header nav, html[dir="rtl"] .header-settings { direction:rtl; }
   .header-settings select{max-width:66px;font-size:10px}
   .canvas-heading h2,.canvas-guide h2{font-size:24px}
 }
+
+/* Keep shorter phone screens within the same compact reading range. */
+@media(max-width:700px){
+ .header{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:6px}
+ .header>.brand{grid-column:1;grid-row:1}
+ .header .litbuy-logo{width:76px}
+ .header-settings{grid-column:2;grid-row:1;justify-content:end;margin:0;min-width:0}
+ .header-settings select{max-width:65px;padding-inline:3px;font-size:10px}
+ .header>.nav-cta{grid-column:3;grid-row:1;font-size:9px;padding:10px 7px;white-space:nowrap}
+ .header nav{grid-column:1/-1;grid-row:2;min-width:0}
+ .canvas-heading{margin-bottom:12px}
+ .canvas-guide{padding-block:20px}
+ .canvas-guide-header>p:not(:first-child){margin-block:10px}
+ .canvas-steps{margin-top:12px}
+ .canvas-steps article,.canvas-steps article:first-child{padding-block:9px}
+ .canvas-faq .faq-list summary{padding-block:9px}
+ footer{padding-block:20px 14px}
+ .footer-inner{gap:14px}
+ .footer-inner strong,.footer-inner>div>a:not(.brand){margin-bottom:8px}
+ .footer-end{margin-top:12px;padding-top:10px}
+}
