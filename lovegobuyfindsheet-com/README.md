@@ -16,4 +16,4 @@ Run npm run dev after preparing the data for development. Refresh the source exp
 
 Connect the new-2 repository to a Pages project named lovegobuyfindsheet-com. Configure main as the production branch, lovegobuyfindsheet-com as the root directory, npm run build as the build command, and dist as the output directory. The repository pins Node 24.22.1. The build uses Python 3 and reads the sibling data directories from the same Git checkout.
 
-The preview declares noindex and blocks crawlers in robots.txt. Update indexing settings as part of a public domain rollout.
+Cloudflare Pages builds from main publish the sitemap and canonical URLs for https://lovegobuyfindsheet.com. Other branch builds block crawlers. The Pages host and its deployment subdomains send an X-Robots-Tag noindex header.

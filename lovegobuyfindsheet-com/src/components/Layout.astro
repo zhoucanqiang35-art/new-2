@@ -1,8 +1,13 @@
 ---
 import LanguagePicker from "./LanguagePicker.astro";
 import {registration} from "../lib/catalog";
+import {indexablePaths, isIndexableSite} from "../lib/seo.mjs";
 import "../styles/style.css";
 const {compactHome = false, title = "LoveGoBuy Spreadsheet | Findsheet", description = "Explore Weidian finds from FindSpreadsheet, search by photo, and open the original listing on LoveGoBuy."} = Astro.props;
+const path = Astro.url.pathname;
+const canonical = Astro.site && isIndexableSite(Astro.site) && indexablePaths.includes(path)
+  ? new URL(path, Astro.site).href
+  : undefined;
 const navigation = [
   ["Home", "/"], ["Browse finds", "/browse/"], ["Image search", "/image-search/"],
   ["Buying guide", "/guide/how-to-buy/"], ["FAQ", "/faq/"], ["SEO", "/seo/"],
@@ -13,7 +18,9 @@ const navigation = [
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="robots" content="noindex, nofollow" />
+  {canonical
+    ? <link rel="canonical" href={canonical} />
+    : <meta name="robots" content="noindex, follow" />}
   <meta name="description" content={description} />
   <meta name="theme-color" content="#f8f9f5" />
   <link rel="icon" href="/favicon.ico" />
