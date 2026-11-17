@@ -26,3 +26,10 @@ npx wrangler deploy --dry-run
 
 This import retains the preview site's crawler directives and canonical URLs.
 Review indexing and canonical URLs when promoting the site to the custom domain.
+
+## Cloudflare Pages
+
+Connect the same repository with production branch `main`, root directory
+`loongbuyfindsheet-com`, build command `npm run build:pages`, and output directory
+`dist/client`. Set the build watch path to `loongbuyfindsheet-com/*`. The Pages
+Function for `/api/qc` reuses the same handler as the Workers build.
