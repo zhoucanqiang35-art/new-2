@@ -1,0 +1,242 @@
+[
+  {
+    "group": "Spreadsheet & Search",
+    "q": "What is the LoongBuy spreadsheet?",
+    "a": "It is an independent product-discovery catalog for browsing items and opening their original listings through LoongBuy. Checkout and order management take place on the purchasing platform.",
+    "article": "loongbuy-spreadsheet-guide"
+  },
+  {
+    "group": "Spreadsheet & Search",
+    "q": "Is LoongBuy Findsheet the official LoongBuy website?",
+    "a": "No. Findsheet is an independent recommendation site. The official purchasing platform is loongbuy.com.",
+    "article": "loongbuy-beginner-guide"
+  },
+  {
+    "group": "Spreadsheet & Search",
+    "q": "How many products can I browse?",
+    "a": "This preview displays 8,094 records with usable Weidian product IDs from a historical FindSpreadsheet export. That count describes the preview catalog, not current seller inventory.",
+    "article": "loongbuy-finds-database"
+  },
+  {
+    "group": "Spreadsheet & Search",
+    "q": "Is the spreadsheet updated in real time?",
+    "a": "No. Search, category filters and price sorting currently use the historical export. The main-site live data service is not connected yet.",
+    "article": "loongbuy-finds-database"
+  },
+  {
+    "group": "Spreadsheet & Search",
+    "q": "How do I find a known Weidian item?",
+    "a": "Enter the numeric Weidian item ID in the search box. For the walkthrough example, search 7872202082 and open Findsheet record 8648. Confirm the ID on the detail page.",
+    "article": "loongbuy-finds-database"
+  },
+  {
+    "group": "Spreadsheet & Search",
+    "q": "Can I search for shoes, hoodies or jerseys?",
+    "a": "Yes. Use the category tabs or search a product name. Categories also include jackets, T-shirts, pants and shorts, accessories, headwear and other finds.",
+    "article": "loongbuy-finds-database"
+  },
+  {
+    "group": "Spreadsheet & Search",
+    "q": "Does “Newest in snapshot” mean newly released?",
+    "a": "No. It orders records within the historical export. It does not indicate a release date, live popularity or a newly restocked seller item.",
+    "article": "loongbuy-finds-database"
+  },
+  {
+    "group": "Spreadsheet & Search",
+    "q": "Can I sort by seller rating or verified QC score?",
+    "a": "Those signals are not available in this preview. The site supports the displayed category and price controls; it does not invent seller scores or inspection ratings.",
+    "article": "loongbuy-finds-database"
+  },
+  {
+    "group": "Buying & Prices",
+    "q": "How do I buy a product from this website?",
+    "a": "Open a Findsheet product and choose Buy on LoongBuy. On the official page, confirm the current item and choose your intended style, size and quantity. The illustrated guide shows the handoff with actual screenshots.",
+    "article": "loongbuy-beginner-guide"
+  },
+  {
+    "group": "Buying & Prices",
+    "q": "Why do I need a LoongBuy account?",
+    "a": "The catalog can be browsed here without an account, while your purchasing and private order records are managed on LoongBuy. Sign in through its official page when you continue there.",
+    "article": "loongbuy-beginner-guide"
+  },
+  {
+    "group": "Buying & Prices",
+    "q": "Are prices shown in USD?",
+    "a": "Yes. Catalog and detail prices are reference USD conversions from historical CNY amounts. The displayed rate and date explain the conversion. They are not a live checkout quote.",
+    "article": "loongbuy-shipping-cost"
+  },
+  {
+    "group": "Buying & Prices",
+    "q": "Why is the price different on the official product page?",
+    "a": "The catalog is a snapshot, the current listing may offer several variants, and the platform can use a different conversion or include additional charges. Confirm the selected variant and the current order total there.",
+    "article": "loongbuy-shipping-cost"
+  },
+  {
+    "group": "Buying & Prices",
+    "q": "Does the spreadsheet price include international shipping?",
+    "a": "No. Treat the product reference price separately from the parcel shipping quotation and any optional services. Compare the current quote for your own destination and parcel.",
+    "article": "loongbuy-shipping-cost"
+  },
+  {
+    "group": "Buying & Prices",
+    "q": "What if one listing contains different clothing styles?",
+    "a": "Match the product ID, then choose the actual style, color and size on the seller-linked official page. Do not assume that the first image or abbreviated catalog title describes every option.",
+    "article": "loongbuy-beginner-guide"
+  },
+  {
+    "group": "Buying & Prices",
+    "q": "What if the product link cannot be loaded by LoongBuy?",
+    "a": "Check the original URL and item ID first. The official process documentation describes a manual ordering route for links that cannot be imported. Use the current platform instructions or ask its support before proceeding.",
+    "article": "loongbuy-beginner-guide"
+  },
+  {
+    "group": "Buying & Prices",
+    "q": "Can I open the same item on another agent?",
+    "a": "Yes. The detail page has an Other purchasing platforms button with FindSpreadsheet platform link templates. Confirm the same variant and current terms on the selected platform.",
+    "article": "loongbuy-agent-comparison"
+  },
+  {
+    "group": "Buying & Prices",
+    "q": "Do purchasing links include referral parameters?",
+    "a": "Some platform templates inherited from FindSpreadsheet include referral parameters. Those parameters are preserved in the other-platform links. No extra discount is promised by this preview.",
+    "article": "loongbuy-agent-comparison"
+  },
+  {
+    "group": "Buying & Prices",
+    "q": "Which payment methods or coupons are available?",
+    "a": "Check the options and conditions currently shown in your own LoongBuy checkout or account. We do not present an unverified payment-method list or a guaranteed coupon offer.",
+    "article": "loongbuy-beginner-guide"
+  },
+  {
+    "group": "Image Search",
+    "q": "Where is the image-search page?",
+    "a": "Use Image Search in the top navigation or the camera icon in the homepage search box. Both open a dedicated page for selecting an image and viewing results.",
+    "article": "loongbuy-image-search"
+  },
+  {
+    "group": "Image Search",
+    "q": "What image formats can I use?",
+    "a": "The preview accepts JPG, PNG and WebP images up to 15 MB. A clear image with one main product is a useful starting point.",
+    "article": "loongbuy-image-search"
+  },
+  {
+    "group": "Image Search",
+    "q": "Is my uploaded image sent to a search server?",
+    "a": "The preview processes your selected image locally in the browser and downloads the historical catalog index for comparison. It does not upload your image to an image-search service.",
+    "article": "loongbuy-image-search"
+  },
+  {
+    "group": "Image Search",
+    "q": "Does an image match prove that it is the same item?",
+    "a": "No. Results are approximate visual comparisons. Open the listing and compare product identity and details before drawing a conclusion.",
+    "article": "loongbuy-image-search"
+  },
+  {
+    "group": "Image Search",
+    "q": "Why can an unrelated item appear in image-search results?",
+    "a": "The preview compares small image descriptors, so background, color and shape can influence the ranking. Try a tighter crop or another angle, or use text search.",
+    "article": "loongbuy-image-search"
+  },
+  {
+    "group": "Image Search",
+    "q": "Does image search cover products added after the export?",
+    "a": "No. It compares against the historical image index included in this preview. The live main-site image-search service has not been connected yet.",
+    "article": "loongbuy-image-search"
+  },
+  {
+    "group": "QC & Warehouse",
+    "q": "Are listing photos the same as QC photos?",
+    "a": "No. Listing photos belong to the product entry. QC photos document a particular inspected item. Check the product and order context before using a photo for a decision.",
+    "article": "loongbuy-qc-photos"
+  },
+  {
+    "group": "QC & Warehouse",
+    "q": "Can I retrieve live LoongBuy QC photos here?",
+    "a": "Open a product to check whether FindSpreadsheet has QC photos for its Weidian item ID. Use your LoongBuy account to see QC for your own orders.",
+    "article": "loongbuy-qc-photos"
+  },
+  {
+    "group": "QC & Warehouse",
+    "q": "What should I compare when reviewing QC?",
+    "a": "Start with the intended product, style, quantity, size and color, then note visible condition and unclear details. Ask a precise question about anything important you cannot confirm.",
+    "article": "loongbuy-qc-checklist"
+  },
+  {
+    "group": "QC & Warehouse",
+    "q": "Does warehouse inspection authenticate a product or test electronics?",
+    "a": "Do not treat it as an authenticity certificate or a complete functional test. LoongBuy’s official inspection information describes appearance checks and specific scope limitations.",
+    "article": "loongbuy-qc-checklist"
+  },
+  {
+    "group": "QC & Warehouse",
+    "q": "Where should I look for my own warehouse photos?",
+    "a": "Use the order and warehouse information in your own official account. The buying guide links to the official process documentation and labels its public tutorial examples.",
+    "article": "loongbuy-warehouse-tracking"
+  },
+  {
+    "group": "QC & Warehouse",
+    "q": "What should I do if the size or color looks wrong?",
+    "a": "Save the order reference and relevant photo, explain the exact mismatch and ask the platform which options are available. Check the current order stage and terms before assuming a return is accepted.",
+    "article": "loongbuy-returns-storage"
+  },
+  {
+    "group": "QC & Warehouse",
+    "q": "How long can I leave an item in the warehouse?",
+    "a": "Check the current retention policy and the dates displayed for your own item. Do not assume all orders share one start date or that an old article describes the current terms.",
+    "article": "loongbuy-returns-storage"
+  },
+  {
+    "group": "QC & Warehouse",
+    "q": "Are returns or refunds guaranteed?",
+    "a": "No. Consult the current policy and order-level options. Eligibility, seller involvement and the item’s stage matter; a request is not the same as a confirmed result.",
+    "article": "loongbuy-returns-storage"
+  },
+  {
+    "group": "Shipping & Tracking",
+    "q": "How much does LoongBuy shipping cost?",
+    "a": "Use a current quotation for the actual destination, contents and packing assumptions. There is no single price per kilogram that describes every parcel and service.",
+    "article": "loongbuy-shipping-cost"
+  },
+  {
+    "group": "Shipping & Tracking",
+    "q": "What is volumetric weight?",
+    "a": "It is a volume-based charging measure discussed in LoongBuy’s freight help. Check the calculation and chargeable-weight rule attached to the route you are comparing.",
+    "article": "loongbuy-shipping-cost"
+  },
+  {
+    "group": "Shipping & Tracking",
+    "q": "Which LoongBuy shipping line is fastest or cheapest?",
+    "a": "Compare the options currently available for the same parcel on the same date. This site does not publish a verified universal speed ranking, loss rate or fixed carrier price table.",
+    "article": "loongbuy-shipping-lines"
+  },
+  {
+    "group": "Shipping & Tracking",
+    "q": "How long does delivery to the USA, UK or Europe take?",
+    "a": "Read the time information on the current quote for your destination and ask which stages it covers. We do not copy guaranteed country-level delivery ranges from third-party articles.",
+    "article": "loongbuy-country-shipping"
+  },
+  {
+    "group": "Shipping & Tracking",
+    "q": "Can I ship to Canada or Australia?",
+    "a": "Check current route availability for your actual address and contents on LoongBuy. A country mentioned in this guide is a research topic, not a guarantee of every route’s availability.",
+    "article": "loongbuy-country-shipping"
+  },
+  {
+    "group": "Shipping & Tracking",
+    "q": "Does this site calculate taxes or import charges?",
+    "a": "No. Use current official destination information and the applicable platform or carrier instructions for your shipment. This preview does not publish customs thresholds or tax calculations.",
+    "article": "loongbuy-country-shipping"
+  },
+  {
+    "group": "Shipping & Tracking",
+    "q": "Where do I track an order or parcel?",
+    "a": "Use your official account and the reference relevant to the stage you are checking. The catalog cannot access private orders or live parcel tracking.",
+    "article": "loongbuy-warehouse-tracking"
+  },
+  {
+    "group": "Shipping & Tracking",
+    "q": "What should I include when asking about a delay?",
+    "a": "Give official support the order or parcel reference, last visible event, date checked and the specific point you need clarified. Keep personal delivery details out of public comments.",
+    "article": "loongbuy-warehouse-tracking"
+  }
+]

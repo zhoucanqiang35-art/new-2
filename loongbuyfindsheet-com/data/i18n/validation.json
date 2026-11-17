@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-16",
+  "language_count": 23,
+  "source_string_count": 742,
+  "browser_language_switches_passed": 23,
+  "checks": [
+    "cross-page language URL",
+    "Chinese article and FAQ search",
+    "Arabic RTL product detail",
+    "USD unchanged",
+    "JavaScript syntax",
+    "Astro build:19 pages",
+    "8 distinct homepage image hashes"
+  ]
+}

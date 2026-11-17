@@ -1,0 +1,163 @@
+[
+  {
+    "code": "en",
+    "name": "English",
+    "english": "English",
+    "dir": "ltr",
+    "note": "Choose your reading language."
+  },
+  {
+    "code": "zh-CN",
+    "name": "简体中文",
+    "english": "Simplified Chinese",
+    "dir": "ltr",
+    "note": "部分内容使用机器翻译。"
+  },
+  {
+    "code": "es",
+    "name": "Español",
+    "english": "Spanish",
+    "dir": "ltr",
+    "note": "Parte del contenido utiliza traducción automática."
+  },
+  {
+    "code": "fr",
+    "name": "Français",
+    "english": "French",
+    "dir": "ltr",
+    "note": "Certains contenus sont traduits automatiquement."
+  },
+  {
+    "code": "de",
+    "name": "Deutsch",
+    "english": "German",
+    "dir": "ltr",
+    "note": "Einige Inhalte sind maschinell übersetzt."
+  },
+  {
+    "code": "it",
+    "name": "Italiano",
+    "english": "Italian",
+    "dir": "ltr",
+    "note": "Alcuni contenuti sono tradotti automaticamente."
+  },
+  {
+    "code": "pt",
+    "name": "Português",
+    "english": "Portuguese",
+    "dir": "ltr",
+    "note": "Parte do conteúdo usa tradução automática."
+  },
+  {
+    "code": "nl",
+    "name": "Nederlands",
+    "english": "Dutch",
+    "dir": "ltr",
+    "note": "Een deel van de inhoud is automatisch vertaald."
+  },
+  {
+    "code": "pl",
+    "name": "Polski",
+    "english": "Polish",
+    "dir": "ltr",
+    "note": "Część treści przetłumaczono maszynowo."
+  },
+  {
+    "code": "ru",
+    "name": "Русский",
+    "english": "Russian",
+    "dir": "ltr",
+    "note": "Часть материалов переведена автоматически."
+  },
+  {
+    "code": "uk",
+    "name": "Українська",
+    "english": "Ukrainian",
+    "dir": "ltr",
+    "note": "Частину матеріалів перекладено автоматично."
+  },
+  {
+    "code": "tr",
+    "name": "Türkçe",
+    "english": "Turkish",
+    "dir": "ltr",
+    "note": "Bazı içerikler makine çevirisidir."
+  },
+  {
+    "code": "ar",
+    "name": "العربية",
+    "english": "Arabic",
+    "dir": "rtl",
+    "note": "بعض المحتوى مترجم آليًا."
+  },
+  {
+    "code": "he",
+    "name": "עברית",
+    "english": "Hebrew",
+    "dir": "rtl",
+    "note": "חלק מהתוכן תורגם אוטומטית."
+  },
+  {
+    "code": "ja",
+    "name": "日本語",
+    "english": "Japanese",
+    "dir": "ltr",
+    "note": "一部のコンテンツは機械翻訳です。"
+  },
+  {
+    "code": "ko",
+    "name": "한국어",
+    "english": "Korean",
+    "dir": "ltr",
+    "note": "일부 콘텐츠는 기계 번역되었습니다."
+  },
+  {
+    "code": "vi",
+    "name": "Tiếng Việt",
+    "english": "Vietnamese",
+    "dir": "ltr",
+    "note": "Một phần nội dung sử dụng bản dịch máy."
+  },
+  {
+    "code": "th",
+    "name": "ไทย",
+    "english": "Thai",
+    "dir": "ltr",
+    "note": "เนื้อหาบางส่วนแปลโดยอัตโนมัติ"
+  },
+  {
+    "code": "id",
+    "name": "Bahasa Indonesia",
+    "english": "Indonesian",
+    "dir": "ltr",
+    "note": "Sebagian konten menggunakan terjemahan mesin."
+  },
+  {
+    "code": "ms",
+    "name": "Bahasa Melayu",
+    "english": "Malay",
+    "dir": "ltr",
+    "note": "Sebahagian kandungan menggunakan terjemahan mesin."
+  },
+  {
+    "code": "hi",
+    "name": "हिन्दी",
+    "english": "Hindi",
+    "dir": "ltr",
+    "note": "कुछ सामग्री का मशीन अनुवाद किया गया है।"
+  },
+  {
+    "code": "sv",
+    "name": "Svenska",
+    "english": "Swedish",
+    "dir": "ltr",
+    "note": "En del innehåll är maskinöversatt."
+  },
+  {
+    "code": "ro",
+    "name": "Română",
+    "english": "Romanian",
+    "dir": "ltr",
+    "note": "O parte din conținut este tradus automat."
+  }
+]

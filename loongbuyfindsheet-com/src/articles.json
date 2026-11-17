@@ -1,0 +1,228 @@
+[
+  {
+    "slug": "loongbuy-spreadsheet-guide",
+    "title": "How to Use a LoongBuy Spreadsheet",
+    "description": "Find products, compare listing details and open the right item on LoongBuy.",
+    "tag": "SPREADSHEET",
+    "read": "3 min read",
+    "body": "<p>A LoongBuy spreadsheet brings product links into one browsable catalog. Start with a category or a specific product name, open a product that interests you, then use its LoongBuy button to continue on the shopping platform.</p><h2>Start with what you want to find</h2><p>On the <a href=\"/#spreadsheet\">spreadsheet page</a>, choose shoes, hoodies, jackets or another category. Search by name when you have an idea in mind. If you already have a Weidian product ID, search for that number to narrow the results to the matching item.</p><p>Use price sorting to compare reference prices across products. The preview converts historical CNY listing prices into USD. These estimates help with browsing; confirm the current price, selected options and applicable charges on the purchasing platform.</p><h2>Check the product before opening it</h2><p>Open the product detail page to see its title, Weidian ID and available listing images. Compare the ID with the original listing when checking that two pages refer to the same product. Similar names and photos do not always identify the same item.</p><h2>Continue on LoongBuy</h2><p>Choose “Buy on LoongBuy” from the product card or detail page. The link passes the original Weidian item URL to LoongBuy. Review the product and the platform’s current ordering information before proceeding.</p><p>If you want to use a different agent, choose “Other purchasing platforms” on the product detail page. The selector uses the same product ID and the platform link templates provided by FindSpreadsheet.</p><h2>Read photos in context</h2><p>Listing photos describe what the seller presents. They do not show a specific inspected item from your order. Read our <a href=\"/articles/loongbuy-qc-photos/\">guide to listing and QC photos</a> to understand the difference.</p><h2>What this preview includes</h2><p>The preview contains 8,094 products with usable Weidian IDs from a historical FindSpreadsheet export. Text search, categories and price sorting use that snapshot. The catalog continues to use that snapshot. Open a product to check whether FindSpreadsheet has QC photos for its Weidian item ID.</p><p class=\"article-note\">LoongBuy Findsheet is an independent discovery site. Orders, payments and shipping arrangements take place on the purchasing platform.</p><h2>Try the illustrated example</h2><p>The buying walkthrough uses Findsheet record 8648 and original Weidian ID 7872202082. It shows how to search that ID, open the product detail, and continue on LoongBuy. Titles and prices may differ between the historical snapshot and the current seller listing, so confirm the actual variant before proceeding.</p><p><a href=\"/guides/how-to-buy/\">Open the purchase guide with real operation screenshots →</a></p>",
+    "category": "Discovery",
+    "keywords": [
+      "Loongbuy spreadsheet",
+      "how to use Loongbuy spreadsheet",
+      "Loongbuy finds"
+    ],
+    "sources": []
+  },
+  {
+    "slug": "loongbuy-image-search",
+    "title": "LoongBuy Image Search: Find Products from a Photo",
+    "description": "Use a clear product photo to explore similar finds and compare the results.",
+    "tag": "IMAGE SEARCH",
+    "read": "3 min read",
+    "body": "<p>A photo is useful when you know the look you want but do not know the product name. The <a href=\"/image-search/\">image-search page</a> compares your selected photo with indexed listing images from the FindSpreadsheet catalog.</p><h2>Choose a photo with one clear subject</h2><p>Use a photo where the product fills most of the frame. Crop away unrelated objects, large borders and text before selecting the file. A plain background and a view similar to a typical listing photo can make visual comparisons more useful.</p><h2>Upload and explore the matches</h2><p>Choose a JPG, PNG or WebP file under 15 MB. The page reads the image locally in your browser, loads the catalog image index and ranks products by approximate visual similarity. When results appear, open a product to inspect its listing images and original product ID.</p><h2>Compare more than the first result</h2><p>Similar colors or outlines can cause unrelated products to appear together. Look at the shape, visible details, product name and original listing. A visual match does not establish the same seller, model, material or quality.</p><p>If the results do not help, try a different angle, a tighter crop, or a text search for the product category. You can clear the image and select another without leaving the page.</p><h2>Know the preview’s limits</h2><p>This version uses an approximate browser-based comparison of small image descriptors from a historical catalog. It does not call the live FindSpreadsheet image-search service. Products and photos added after the export will not be included.</p><p class=\"article-note\">Your chosen image stays in your browser. Product catalog and index files are downloaded for matching; your photo is not sent to an image-search server.</p><h2>Use a controlled comparison</h2><p>When testing a different photo, keep your question specific: are you looking for the same general shape, a color family or a particular product? Compare several results and their original listings. The ranking uses small image descriptors, so background colors can influence which products appear near the top.</p>",
+    "category": "Discovery",
+    "keywords": [
+      "Loongbuy image search",
+      "Loongbuy reverse image search",
+      "find products by photo"
+    ],
+    "sources": []
+  },
+  {
+    "slug": "loongbuy-qc-photos",
+    "title": "LoongBuy QC Photos vs. Product Listing Photos",
+    "description": "Understand what listing images and inspection photos show before comparing a product.",
+    "tag": "QC GUIDE",
+    "read": "3 min read",
+    "body": "<p>When browsing a LoongBuy spreadsheet, you may encounter product listing photos and QC photos. They have different purposes, so it helps to identify which kind of photo you are looking at.</p><h2>What listing photos show</h2><p>Listing photos are the images attached to a product catalog entry or original seller page. They help you compare the product’s appearance and find a listing. They do not verify the condition or details of the specific item you will receive.</p><h2>What QC photos show</h2><p>QC, or quality-control, photos document a particular inspected item. When reviewing them, check that the product ID, selected color and size match the item you are researching. A photo of another order may provide context but cannot confirm the state of your own item.</p><h2>Details to compare</h2><p>Look at the overall shape and color, visible stitching, markings and any defects shown in the photos. If measurements are visible, check what was measured and whether the measurement method is clear. Lighting and camera angles can affect how a product appears.</p><h2>Check your own order information</h2><p>Before arranging shipping, review the information and images available for your own order on your purchasing platform. If an important detail is unclear, use the platform’s support or inspection options to ask about that detail.</p><h2>QC availability in this preview</h2><p>The product detail page includes listing images and a link to the original FindSpreadsheet product page. Open a product to check whether FindSpreadsheet has QC photos for its Weidian item ID. Listing images are labeled as product photos and are not presented as verified QC photos.</p><p class=\"article-note\">Use photos as one source of information. A catalog listing or visually similar image does not establish product authenticity, quality or the outcome of an order.</p>",
+    "category": "QC & Warehouse",
+    "keywords": [
+      "Loongbuy QC photos",
+      "Loongbuy quality check",
+      "Loongbuy product photos"
+    ],
+    "sources": []
+  },
+  {
+    "slug": "loongbuy-beginner-guide",
+    "title": "LoongBuy Beginner Guide: Plan Your First Order",
+    "description": "Learn the terms, prepare a shortlist and separate product costs from shipping before starting your first LoongBuy order.",
+    "category": "Getting Started",
+    "tag": "GETTING STARTED",
+    "read": "3 min read",
+    "keywords": [
+      "Loongbuy beginner guide",
+      "Loongbuy first order",
+      "Loongbuy tutorial",
+      "how does Loongbuy work"
+    ],
+    "body": "<p>Your first order is easier to follow when you separate product discovery, purchasing and parcel shipping. Use this guide to decide what to prepare, then follow our illustrated buying walkthrough when you are ready to use the buttons.</p><h2>Understand the three websites involved</h2><p>Findsheet is the discovery layer: it shows products, categories and reference USD prices. The original seller listing identifies the item, often through a Weidian product ID. LoongBuy is the purchasing platform you open from the product page. Keep those roles separate when you save links or ask for help.</p><p>A product ID is a more useful reference than a shortened product title. Record the ID together with the style, color, size and quantity you want. One listing can contain several substantially different options.</p><h2>Learn the terms you will see</h2><table><thead><tr><th>Term</th><th>What to check</th></tr></thead><tbody><tr><td>W2C / product link</td><td>The original seller URL for the item.</td></tr><tr><td>SKU / variant</td><td>Your specific style, size and color selection.</td></tr><tr><td>QC</td><td>Inspection photos associated with an item in the warehouse.</td></tr><tr><td>Haul</td><td>The group of items you intend to ship.</td></tr><tr><td>Domestic shipping</td><td>The seller-to-warehouse part of the journey.</td></tr><tr><td>International shipping</td><td>The warehouse-to-destination parcel journey.</td></tr></tbody></table><h2>Make a shortlist you can compare</h2><p>Save a small set of products rather than repeatedly changing between unrelated categories. For each item, note what you like, the reference price, the size information you still need and the listing URL. If a detail is missing, resolve it before committing to that item.</p><p>Browse <a href=\"/#spreadsheet\">the spreadsheet</a> by category, or use <a href=\"/image-search/\">image search</a> to start with a photograph. Visual similarity helps with discovery; it does not establish that two listings are identical.</p><h2>Build a budget with separate lines</h2><p>Write down a product allowance, a shipping allowance and an amount you are comfortable setting aside for optional services or changes. Use current quotations rather than a fixed percentage copied from another person’s order. A light but bulky product and a compact heavy product can produce different shipping quotes.</p><p>Our USD figures convert historical CNY prices at the displayed reference rate. They are useful for browsing, but they are not a LoongBuy invoice or a complete delivered cost.</p><h2>Prepare before you start</h2><ul><li>Check the product ID and intended variant.</li><li>Keep the seller’s sizing information available.</li><li>Review the platform’s current order and service information.</li><li>Decide which questions must be resolved before payment.</li><li>Use your own account for orders and keep order references together.</li></ul><p>Continue with the <a href=\"/guides/how-to-buy/\">illustrated Findsheet-to-LoongBuy purchase guide</a>. It distinguishes current public screenshots from examples in the official help tutorial.</p>",
+    "sources": []
+  },
+  {
+    "slug": "loongbuy-shipping-cost",
+    "title": "LoongBuy Shipping Cost: Read and Compare a Quote",
+    "description": "Compare item prices, domestic freight, international shipping, chargeable weight and optional services without relying on a flat price per kilogram.",
+    "category": "Shipping",
+    "tag": "SHIPPING",
+    "read": "3 min read",
+    "keywords": [
+      "Loongbuy shipping cost",
+      "Loongbuy shipping calculator",
+      "Loongbuy shipping estimate",
+      "Loongbuy volumetric weight"
+    ],
+    "body": "<p>A spreadsheet price is a starting point for product discovery. To estimate the cost of receiving an order, build a separate shipping quote for the parcel you actually intend to send. This checklist helps you compare like with like.</p><h2>Separate the costs on your worksheet</h2><p>Create one row for the product and variant you want, another for any seller-to-warehouse freight, and another for the international parcel quote. Keep payment conversion, optional packaging and any selected services visible as their own entries. Record whether each number is a confirmed charge or an estimate.</p><p>Do not add a shipping amount from a different country or a differently packed parcel and assume it will apply to yours. Save the quote date so you can identify stale comparisons later.</p><h2>Understand the weight fields</h2><p>LoongBuy’s freight help distinguishes physical weight from volume-based charging and explains that minimum and additional weight units may apply. A bulky parcel may therefore cost more than its scale weight alone suggests. Read the calculation rule attached to the route you are being quoted.</p><p>When comparing quotes, keep the same packed dimensions and weight assumptions. If the packing estimate changes, repeat the comparison rather than treating the old amount as a fixed rate.</p><h2>Compare the complete quotation</h2><table><thead><tr><th>Field</th><th>Question to answer</th></tr></thead><tbody><tr><td>Destination</td><td>Is this the same country and postal area?</td></tr><tr><td>Parcel</td><td>Are the contents, weight and dimensions the same?</td></tr><tr><td>Route</td><td>Is the quote for an available route for these contents?</td></tr><tr><td>Extras</td><td>Which optional services have been included?</td></tr><tr><td>Currency</td><td>Are the currency and conversion assumptions comparable?</td></tr></tbody></table><h2>Treat packing changes as a decision</h2><p>Ask what a packing option changes before selecting it. Removing packaging may change size, but it can also remove protection or an item you wanted to keep. Consolidation should be compared against the quote for separate parcels using the same assumptions; do not assume either approach is always cheaper.</p><p>A useful note is: “I want to keep the original box; please explain the size and cost difference before any change.” Specific instructions are easier to assess than an open-ended request to make a parcel as cheap as possible.</p><h2>Use a quote log instead of remembered prices</h2><p>For each comparison, record the date, destination, parcel assumptions, route label and total. Save the reason you preferred one option, such as the quoted transit range or the packaging you retained. That gives you a repeatable decision process for a later order.</p><p>Read the <a href=\"/articles/loongbuy-shipping-lines/\">shipping line comparison checklist</a> and the official freight information linked below. This article does not publish a live rate table.</p>",
+    "sources": [
+      {
+        "label": "LoongBuy official freight help",
+        "url": "https://service.loongbuy.com/en/content/freight"
+      }
+    ]
+  },
+  {
+    "slug": "loongbuy-shipping-lines",
+    "title": "Fastest or Cheapest LoongBuy Shipping? Compare the Trade-offs",
+    "description": "A practical method for comparing LoongBuy shipping lines by route availability, total price, timing information and service terms.",
+    "category": "Shipping",
+    "tag": "SHIPPING",
+    "read": "3 min read",
+    "keywords": [
+      "fastest Loongbuy shipping",
+      "cheapest Loongbuy shipping",
+      "Loongbuy shipping lines",
+      "Loongbuy delivery time"
+    ],
+    "body": "<p>Searches for the fastest or cheapest LoongBuy shipping often lead to tables that look precise but lack a quote date, parcel specification or destination. A useful comparison starts with the options currently available for your own parcel.</p><h2>Define your priority before comparing</h2><p>Write down whether your main constraint is cost, a target arrival window, packaging or a particular service requirement. If you have a deadline, leave room for the stages before international dispatch as well. Your shortlist is easier to evaluate when you know what would make an option unsuitable.</p><p>Think in trade-offs: a lower quote with a wider delivery estimate may suit a flexible order, while an urgent order needs closer attention to the quoted service and its terms. These are preferences to compare, not guarantees about a named carrier.</p><h2>Compare the same parcel on the same day</h2><p>Use the same contents, destination and packing assumptions for each option. Record the route name exactly as shown, the chargeable weight assumption, the total quote and the time information. A familiar carrier name alone is not enough to identify every condition of a particular service.</p><p>Keep any eligibility restrictions alongside the price. LoongBuy’s freight help notes that delivery methods have weight limits, so an inexpensive route is irrelevant if your parcel cannot use it.</p><h2>Ask what the delivery estimate measures</h2><p>Read the description carefully: does the estimate refer to dispatch, transit, or delivery? Check whether weekends or handling stages are mentioned. If the wording is unclear, ask the platform to explain what the displayed range covers before relying on it for a deadline.</p><p>Record your own order stages separately. The time spent choosing a product is not carrier transit, and waiting for an item to reach the warehouse should not be mistaken for a parcel tracking delay.</p><h2>Look beyond the headline amount</h2><ul><li>Compare the full quoted amount and included services.</li><li>Check route eligibility for the actual contents.</li><li>Read the current terms for tracking, optional protection and claims.</li><li>Confirm packing choices before comparing parcel dimensions.</li><li>Keep a dated copy of the comparison you used.</li></ul><h2>Choose with evidence you can revisit</h2><p>A helpful conclusion is specific: “For this parcel and this quote date, I preferred this option because it fit my budget and stated requirements.” Avoid turning one order into a universal ranking.</p><p>We have not independently measured carrier delivery rates or published a verified speed ranking. Use the <a href=\"/articles/loongbuy-shipping-cost/\">shipping cost worksheet</a> to compare current quotations, and the <a href=\"/articles/loongbuy-country-shipping/\">destination checklist</a> to prepare the right questions.</p>",
+    "sources": [
+      {
+        "label": "LoongBuy official freight help",
+        "url": "https://service.loongbuy.com/en/content/freight"
+      }
+    ]
+  },
+  {
+    "slug": "loongbuy-country-shipping",
+    "title": "LoongBuy International Shipping: USA, UK, EU, Canada & Australia Checklist",
+    "description": "Prepare destination-specific questions for LoongBuy shipping to the USA, UK, Germany, France, Canada and Australia.",
+    "category": "Shipping",
+    "tag": "SHIPPING",
+    "read": "3 min read",
+    "keywords": [
+      "Loongbuy shipping USA",
+      "Loongbuy shipping UK",
+      "Loongbuy shipping Germany",
+      "Loongbuy shipping France",
+      "Loongbuy shipping Canada",
+      "Loongbuy shipping Australia"
+    ],
+    "body": "<p>A destination changes what you need to check before selecting a parcel quote. Use this page as a preparation checklist for your address and contents. It does not set customs thresholds, tax rates or guaranteed delivery times.</p><h2>For every destination: build an address-ready checklist</h2><p>Prepare the full recipient name, complete address and correct postal code in the format requested by the platform. Check that the shipping quote uses the destination you intend. If you are buying for someone else, confirm the delivery details with them before submitting a parcel.</p><p>Keep a record of the contents and their purchase information. Use the current instructions from LoongBuy and the relevant destination authority when checking import requirements. Do not treat an old forum reply as an instruction for your shipment.</p><h2>Shipping to the United States</h2><p>For a USA delivery, check the exact postal area, the available route description and any destination-specific notices on the current platform. Ask what documentation is required for the contents you intend to send. Keep the product records and the parcel reference together.</p><p>A useful support question is: “For these contents and this US postal code, which routes are currently available, what does the quote include, and which recipient details are required?” Use current official information for any import-cost question.</p><h2>Shipping to the United Kingdom</h2><p>For a UK delivery, check the complete postcode and address formatting before comparing quotes. Ask how any route-specific destination charges are described in the quotation, and where to find the applicable terms. Do not assume that a quote for a different part of the world describes your delivery.</p><p>When reading an estimate, write down whether it covers transit alone or includes earlier handling stages. Ask the platform to clarify any wording you need for planning an arrival date.</p><h2>Shipping to Germany and France</h2><p>For Germany or France, compare the routes actually offered for the destination country. Read the current information about required recipient details and shipment documentation. A general “EU” label in an article should not replace the country selected on your parcel quote.</p><p>Prepare your question using the exact destination, contents and quote reference. If the platform requests additional recipient information, understand the request through its official help or support before submitting it.</p><h2>Shipping to Canada and Australia</h2><p>For Canada, confirm the postal code and province details and compare the complete quote for that address. For Australia, check the postcode, state and destination-specific instructions. For both, use the actual parcel contents when asking about route availability.</p><p>If your items need special handling, resolve eligibility before selecting a service. Keep shipping guidance separate from product-quality claims: a product being discoverable in a catalog does not establish that a given shipping route will accept it.</p><h2>What to save with your quote</h2><ul><li>Country and postal area used for the comparison.</li><li>Contents, weight and packing assumptions.</li><li>Quoted route, total and date.</li><li>Any clarification received from official support.</li><li>Where to check the latest destination requirements before dispatch.</li></ul><p>Then read <a href=\"/articles/loongbuy-shipping-lines/\">how to compare shipping lines</a>. We have not copied country-by-country time guarantees or customs amounts from third-party recommendation sites.</p>",
+    "sources": []
+  },
+  {
+    "slug": "loongbuy-warehouse-tracking",
+    "title": "LoongBuy Warehouse & Tracking: Follow the Right Order Stage",
+    "description": "Separate seller dispatch, warehouse arrival, parcel preparation and international tracking when checking a LoongBuy order.",
+    "category": "QC & Warehouse",
+    "tag": "QC & WAREHOUSE",
+    "read": "3 min read",
+    "keywords": [
+      "Loongbuy warehouse",
+      "Loongbuy tracking",
+      "Loongbuy order status",
+      "Loongbuy parcel tracking"
+    ],
+    "body": "<p>An order and a parcel are related, but they are not the same reference. Keeping a simple stage log helps you find the right page when you want to know what happened next.</p><h2>Record the references as you go</h2><p>Keep the original product ID, the platform order reference and, when one exists, the parcel reference in a single note. Give each reference a label. If you ask for help using only a product title, it may be harder to distinguish the item from other orders or variants.</p><p>Record the last visible status and the date you checked it. That is more useful than a note saying “nothing has happened” without indicating which stage you are looking at.</p><h2>Check purchasing and warehouse information separately</h2><p>LoongBuy’s official help directs customers to the order area for progress and warehouse photos, and to the parcel area for shipment status. Use the page that matches the reference you are checking.</p><p>When inspecting the warehouse record, compare the product and chosen variant with your saved shortlist. If a photo leaves an important detail unclear, write a precise question and identify the order it belongs to. The <a href=\"/articles/loongbuy-qc-checklist/\">QC checklist</a> provides a structure for that review.</p><h2>Prepare a shipment note before asking about dispatch</h2><p>Write down which items you intend to include in the parcel and which packing decisions you still need to make. If several items are involved, do not assume they have all reached the same stage. Compare your intended contents with the parcel information actually shown.</p><p>Before proceeding, make sure the saved delivery details correspond to the parcel you are reviewing. This is a separate check from selecting a color or size when the product was purchased.</p><h2>Read tracking as a sequence of events</h2><p>Copy the last visible event into your stage log together with its date and the parcel reference. Distinguish a question about product purchasing from a question about a shipment already assigned to a parcel. If the displayed information is unclear, ask support which record or carrier page applies.</p><p>We do not infer a guaranteed arrival date from a generic status label. Use the current information attached to your parcel and ask for clarification when it does not answer your question.</p><h2>Use a focused support message</h2><p>A useful message includes the order or parcel reference, the last status, the date you observed it and the single thing you want clarified. Attach relevant order evidence through the platform’s own support flow when needed; avoid posting account or delivery details in public comments.</p><p>Our preview cannot read private LoongBuy orders or provide live parcel tracking. The screenshots in the <a href=\"/guides/how-to-buy/\">buying guide</a> distinguish public page captures from official tutorial examples.</p>",
+    "sources": [
+      {
+        "label": "LoongBuy official order and parcel help",
+        "url": "https://service.loongbuy.com/en/content/help"
+      }
+    ]
+  },
+  {
+    "slug": "loongbuy-qc-checklist",
+    "title": "LoongBuy QC Checklist: What to Compare Before Shipping",
+    "description": "Review identity, quantity, size, color and visible condition, then ask a precise follow-up question when a photo is unclear.",
+    "category": "QC & Warehouse",
+    "tag": "QC & WAREHOUSE",
+    "read": "3 min read",
+    "keywords": [
+      "how to QC on Loongbuy",
+      "Loongbuy QC checklist",
+      "Loongbuy QC mistakes",
+      "Loongbuy inspection"
+    ],
+    "body": "<p>A useful QC review begins with a clear record of what you ordered. Compare the photos with that record and identify any unanswered question before deciding your next step.</p><h2>Start with identity and quantity</h2><p>Open your saved product link and variant notes beside the warehouse photos. Check that you are reviewing the intended order and count the items shown where possible. A shared product title alone may not distinguish several variants within one seller listing.</p><p>Use a short checklist with one row for the product ID, one for the selected style or color, one for size and one for quantity. Mark each field as confirmed, unclear or mismatched. This makes a follow-up request specific.</p><h2>Compare size information carefully</h2><p>If a measurement photo is available, identify exactly where the measurement begins and ends. Compare the same dimension with the sizing information you saved. If the angle or scale makes the value hard to read, ask for clarification rather than treating it as a reliable measurement.</p><p>Do not assume that a label alone answers every sizing question. Decide which dimension matters for your intended fit and ask about that dimension before relying on it.</p><h2>Separate what is visible from what is unknown</h2><p>Look for visible differences in color, shape and condition. Note the location of any concern so support can identify it. A useful question is “Could you show the left sleeve seam more clearly?” rather than “Is the whole item good?”</p><p>LoongBuy’s inspection information describes appearance checks and limits the scope for sealed or specialist products. A warehouse photo is not a functional test or an authentication certificate.</p><h2>Avoid common review shortcuts</h2><ul><li>Do not review photos from a different product ID as if they were your order.</li><li>Do not treat listing photos as warehouse inspection evidence.</li><li>Do not assume a hidden detail was checked because one view looks fine.</li><li>Do not convert uncertain lighting into a confident color conclusion.</li><li>Do not assume a return request is guaranteed to be accepted.</li></ul><h2>Record the question and the response</h2><p>Keep a note of the specific detail, the image where it appears and the response you receive. If you are considering a return or exchange, check the current order-level options and the official policy promptly. This checklist is a method for documenting what you can see; it does not replace the platform’s service terms.</p><p>Read <a href=\"/articles/loongbuy-returns-storage/\">returns and storage checks</a> before making a time-sensitive decision. Open a product to check whether FindSpreadsheet has QC photos for its Weidian item ID.</p>",
+    "sources": [
+      {
+        "label": "LoongBuy official inspection information",
+        "url": "https://service.loongbuy.com/en/content/inspection"
+      },
+      {
+        "label": "LoongBuy official return information",
+        "url": "https://service.loongbuy.com/en/content/refunds"
+      }
+    ]
+  },
+  {
+    "slug": "loongbuy-returns-storage",
+    "title": "LoongBuy Returns, Refunds & Storage: Questions to Check Early",
+    "description": "Keep order-stage, return eligibility, storage dates and evidence together before making a change to an order.",
+    "category": "QC & Warehouse",
+    "tag": "QC & WAREHOUSE",
+    "read": "3 min read",
+    "keywords": [
+      "Loongbuy return policy",
+      "Loongbuy refund",
+      "Loongbuy storage",
+      "Loongbuy warehouse storage"
+    ],
+    "body": "<p>Replacing an item, requesting a refund and leaving an item in storage are different decisions. Check the relevant order record and the current platform terms before assuming that one rule applies to all three.</p><h2>Identify the stage of the item</h2><p>Write down the order reference and the latest status before asking for a change. Is your question about an item still being purchased, an item already received at the warehouse, or a parcel that has been dispatched? Giving the stage helps support identify the applicable process.</p><p>LoongBuy’s published return information distinguishes pre-dispatch and post-dispatch situations and describes seller involvement. It does not justify promising that every request will succeed.</p><h2>Prepare a clear return or exchange question</h2><p>State the specific issue, the variant ordered and the outcome you want to ask about. Keep the product page, relevant photos and order messages together. Ask whether the request is eligible, what costs may apply and what action is required from you.</p><p>A useful question is: “This is the order reference and the photo showing the issue. Is a return or exchange available for this item at its current stage, and which charges and deadlines apply?”</p><h2>Distinguish a request from a confirmed result</h2><p>Save the date when you submitted the request and the response you received. Record whether you are waiting for a review, a seller response, a return movement or a balance update. Do not turn an estimated processing period into a promised refund date.</p><p>If a message is unclear, ask which step is outstanding and where the final status will appear. Keep the conversation inside the platform’s official support or order flow.</p><h2>Track storage dates separately</h2><p>LoongBuy publishes a retention policy, so check the current policy and the dates shown for your own items. Set a reminder based on the actual record rather than assuming that all items share one start date. If you are waiting for another item, compare that plan with the applicable storage terms.</p><p>Before delaying shipment, ask about any current limits, extension options and consequences relevant to your order. This guide deliberately does not turn a historical storage policy into a permanent promise.</p><h2>Keep a decision record</h2><ul><li>Order reference, stage and date checked.</li><li>The issue and supporting photos.</li><li>The current policy or support answer you used.</li><li>Any stated deadline or required action.</li><li>The final confirmed outcome when it appears.</li></ul><p>Use the official links below for the policy text and our <a href=\"/articles/loongbuy-qc-checklist/\">QC checklist</a> for documenting visible concerns.</p>",
+    "sources": [
+      {
+        "label": "LoongBuy official returns and refunds",
+        "url": "https://service.loongbuy.com/en/content/refunds"
+      },
+      {
+        "label": "LoongBuy official retention information",
+        "url": "https://service.loongbuy.com/en/content/retention"
+      }
+    ]
+  },
+  {
+    "slug": "loongbuy-agent-comparison",
+    "title": "LoongBuy vs Other Agents: Compare the Same Product and Parcel",
+    "description": "Compare LoongBuy, Sugargoo, Joyagoo, Hipobuy and Mulebuy using the same item, variant, destination and quote date.",
+    "category": "Comparisons",
+    "tag": "COMPARISONS",
+    "read": "3 min read",
+    "keywords": [
+      "Loongbuy vs Sugargoo",
+      "Loongbuy vs Joyagoo",
+      "Loongbuy vs Hipobuy",
+      "Loongbuy vs Mulebuy",
+      "Loongbuy alternatives"
+    ],
+    "body": "<p>A useful agent comparison is a worksheet for your own intended order. It should separate what you observed from what you have not verified. A static fee table can look decisive while hiding different products, parcel sizes or quote dates.</p><h2>Start with one original product link</h2><p>Use the same Weidian product ID and the same variant when opening the item on each platform. Our product page’s “Other purchasing platforms” button provides links built from the main FindSpreadsheet platform templates. A successful link is a way to start the comparison, not proof that every platform will offer the same final terms.</p><p>Write down the size, color, style and quantity beside the ID. If the original listing includes several styles, verify the chosen option rather than comparing only the default price shown when the page opens.</p><h2>Compare LoongBuy vs Sugargoo</h2><p>For this pair, record the current item total, the payment or currency information shown to you, the available inspection options and the shipping quote for the same parcel. Mark any field you cannot verify as unknown.</p><p>Ask both platforms the same question if an important service is unclear. Do not infer the answer from a third-party article that has no dated supporting evidence.</p><h2>Compare LoongBuy vs Joyagoo</h2><p>Focus on whether the same variant is being quoted and whether the complete order amount is comparable. Note the date and currency of each observation. If the displayed totals differ, identify the line responsible before deciding which option fits your budget.</p><p>Keep the comparison factual: “This was the displayed total for this selection on this date” is more useful than a universal claim about which platform is always cheaper.</p><h2>Compare LoongBuy vs Hipobuy or Mulebuy</h2><p>Repeat the same worksheet with the same item and destination. If your main concern is parcel shipping, compare the actual quotes and current eligibility information for that parcel rather than the number of routes claimed on a marketing page.</p><p>If your main concern is a service option, save the current description and terms. A feature name alone does not tell you whether it includes the detail you need.</p><h2>Use one comparison table</h2><table><thead><tr><th>Check</th><th>Record for each agent</th></tr></thead><tbody><tr><td>Product</td><td>Original ID, exact variant and quantity.</td></tr><tr><td>Price</td><td>Displayed amount, currency and quote date.</td></tr><tr><td>Services</td><td>Current scope, optional charges and unanswered questions.</td></tr><tr><td>Parcel</td><td>Same destination, dimensions and weight assumptions.</td></tr><tr><td>Decision</td><td>Which verified detail matters most to your order.</td></tr></tbody></table><p>We have not published a fee winner or a reliability ranking. Use the <a href=\"/articles/loongbuy-shipping-cost/\">shipping quote checklist</a> and current platform information to complete the table.</p>",
+    "sources": []
+  },
+  {
+    "slug": "loongbuy-finds-database",
+    "title": "LoongBuy Finds Database: Search Categories, Prices and Product IDs",
+    "description": "Use the spreadsheet catalog, category filters, price sorting and image search to create a product shortlist.",
+    "category": "Discovery",
+    "tag": "DISCOVERY",
+    "read": "3 min read",
+    "keywords": [
+      "Loongbuy finds database",
+      "Loongbuy finds",
+      "Loongbuy shoes spreadsheet",
+      "Loongbuy hoodies spreadsheet",
+      "Loongbuy product search"
+    ],
+    "body": "<p>The finds database is most useful when you treat it as a catalog for building a shortlist. Start broad with a category, narrow the results with a name or ID, and then inspect the original listing before deciding what to buy.</p><h2>Pick the search that matches what you know</h2><p>If you know the category, use the category tabs. If you know a name or a distinctive term, use text search. If you already have a Weidian product ID, search for that number. If your starting point is a photograph, open the dedicated <a href=\"/image-search/\">image-search page</a>.</p><p>These routes answer different discovery questions. An image search can suggest visually similar items, while an ID search is a more direct way to locate a known listing.</p><h2>Browse clothing and shoe categories</h2><p>The preview includes shoes and sneakers, hoodies, T-shirts, jackets, pants and shorts, accessories, jerseys, electronics, headwear, short sets and other finds. Use the categories that match your shortlist instead of assuming a product belongs in the first tab you tried.</p><p>For shoes or clothing, keep a note of the sizing information you will need on the original listing. The catalog title can be abbreviated and may not describe every selectable variant.</p><h2>Use price sorting with the right expectation</h2><p>Low-to-high and high-to-low sorting use the historical catalog price. The site displays a USD reference conversion. It does not include a complete international parcel quote, and the platform may show a different current total or conversion.</p><p>The “Newest in snapshot” option orders records within the export. It is not a promise that the first result was recently released or is currently trending.</p><h2>Open the product and compare the details</h2><p>Read the product ID, inspect the available listing images and open the item on LoongBuy to confirm the current selection. If you want to compare another purchasing agent, use the platform selector on the detail page. Keep all comparisons tied to the same original item.</p><p>Listing photos are labeled separately from QC information. This preview does not attach a verified inspection score, seller reliability rating or live popularity rank to a product.</p><h2>Know what is included in the preview</h2><p>The historical export contains 8,094 records with usable Weidian IDs in the displayed catalog. Text search, categories and the local image index use that snapshot. The live main-site product and QC services have not yet been connected.</p><p>For a step-by-step next action, use the <a href=\"/guides/how-to-buy/\">illustrated purchase guide</a>. It starts on this website, then shows where the workflow continues on the official LoongBuy pages.</p>",
+    "sources": []
+  }
+]

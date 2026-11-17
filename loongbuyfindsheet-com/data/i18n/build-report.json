@@ -1,0 +1,207 @@
+{
+  "es": {
+    "keys": 742,
+    "generated": 9,
+    "seconds": 12.17,
+    "unchanged": [
+      "LoongBuy FAQ."
+    ]
+  },
+  "zh-CN": {
+    "keys": 742,
+    "generated": 28,
+    "seconds": 15.82,
+    "unchanged": [
+      "LoongBuy"
+    ]
+  },
+  "fr": {
+    "keys": 742,
+    "generated": 10,
+    "seconds": 4.97,
+    "unchanged": []
+  },
+  "de": {
+    "keys": 742,
+    "generated": 2,
+    "seconds": 1.69,
+    "unchanged": [
+      "LoongBuy"
+    ]
+  },
+  "it": {
+    "keys": 742,
+    "generated": 3,
+    "seconds": 1.54,
+    "unchanged": []
+  },
+  "nl": {
+    "keys": 742,
+    "generated": 1,
+    "seconds": 2.1,
+    "unchanged": []
+  },
+  "pt": {
+    "keys": 742,
+    "generated": 9,
+    "seconds": 3.69,
+    "unchanged": [
+      "LoongBuy"
+    ]
+  },
+  "pl": {
+    "keys": 742,
+    "generated": 6,
+    "seconds": 4.59,
+    "unchanged": [
+      "LoongBuy FAQ."
+    ]
+  },
+  "ru": {
+    "keys": 742,
+    "generated": 711,
+    "seconds": 75.05,
+    "unchanged": [
+      "LoongBuy",
+      "LoongBuy Articles — Spreadsheet, Shipping & QC Guides",
+      "LoongBuy FAQ.",
+      "LoongBuy Spreadsheet",
+      "LoongBuy Spreadsheet — Finds, Buying Guides & QC",
+      "QC"
+    ]
+  },
+  "uk": {
+    "keys": 742,
+    "generated": 711,
+    "seconds": 76.38,
+    "unchanged": [
+      "LoongBuy",
+      "LoongBuy Articles — Spreadsheet, Shipping & QC Guides",
+      "LoongBuy Spreadsheet"
+    ]
+  },
+  "tr": {
+    "keys": 742,
+    "generated": 711,
+    "seconds": 90.4,
+    "unchanged": [
+      "Haul",
+      "LoongBuy",
+      "QC"
+    ]
+  },
+  "ar": {
+    "keys": 742,
+    "generated": 711,
+    "seconds": 97.89,
+    "unchanged": [
+      "LoongBuy",
+      "LoongBuy Spreadsheet",
+      "QC"
+    ]
+  },
+  "he": {
+    "keys": 742,
+    "generated": 711,
+    "seconds": 111.53,
+    "unchanged": [
+      "LoongBuy",
+      "LoongBuy Articles — Spreadsheet, Shipping & QC Guides",
+      "LoongBuy Spreadsheet",
+      "QC"
+    ]
+  },
+  "ja": {
+    "keys": 742,
+    "generated": 711,
+    "seconds": 110.16,
+    "unchanged": [
+      "LoongBuy",
+      "QC"
+    ]
+  },
+  "ko": {
+    "keys": 742,
+    "generated": 711,
+    "seconds": 61.03,
+    "unchanged": [
+      "LoongBuy",
+      "QC"
+    ]
+  },
+  "vi": {
+    "keys": 742,
+    "generated": 711,
+    "seconds": 59.8,
+    "unchanged": [
+      "LoongBuy",
+      "LoongBuy Spreadsheet",
+      "Parcel",
+      "QC",
+      "Shipping & Tracking",
+      "Weidian item ID"
+    ]
+  },
+  "id": {
+    "keys": 742,
+    "generated": 711,
+    "seconds": 79.07,
+    "unchanged": [
+      "LoongBuy",
+      "Parcel",
+      "QC"
+    ]
+  },
+  "th": {
+    "keys": 742,
+    "generated": 711,
+    "seconds": 91.87,
+    "unchanged": [
+      "LoongBuy",
+      "QC",
+      "QC & WAREHOUSE"
+    ]
+  },
+  "ms": {
+    "keys": 742,
+    "generated": 711,
+    "seconds": 67.95,
+    "unchanged": [
+      "Parcel",
+      "QC"
+    ]
+  },
+  "hi": {
+    "keys": 742,
+    "generated": 711,
+    "seconds": 78.38,
+    "unchanged": [
+      "LoongBuy",
+      "QC",
+      "Read more →"
+    ]
+  },
+  "sv": {
+    "keys": 742,
+    "generated": 711,
+    "seconds": 58.83,
+    "unchanged": [
+      "Destination",
+      "Haul",
+      "Parcel",
+      "QC",
+      "Term"
+    ]
+  },
+  "ro": {
+    "keys": 742,
+    "generated": 711,
+    "seconds": 65.66,
+    "unchanged": [
+      "Extras",
+      "Haul",
+      "LoongBuy",
+      "QC"
+    ]
+  }
+}
