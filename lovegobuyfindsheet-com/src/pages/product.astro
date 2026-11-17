@@ -1,0 +1,103 @@
+---
+import Layout from "../components/Layout.astro";
+---
+<Layout title="Product details | LoveGoBuy Findsheet">
+  <div class="shell section utility">
+    <a class="inline-arrow" href="/#catalog">← Back to finds</a>
+    <p id="detail-status" class="notice" role="status">Loading the product…</p>
+    <div id="product" hidden>
+      <div class="detail-grid">
+        <div>
+          <div class="gallery">
+            <img id="main-photo" alt="" width="620" height="620" />
+            <div class="gallery-controls"><button id="gallery-prev" class="button button-outline" type="button" aria-label="Previous photo">←</button><span id="gallery-count" aria-live="polite"></span><button id="gallery-next" class="button button-outline" type="button" aria-label="Next photo">→</button></div>
+          </div>
+          <div id="thumbnails" class="thumbs" aria-label="Product photos"></div>
+          <p id="gallery-note" class="muted"></p>
+        </div>
+        <div class="detail-copy">
+          <p class="kicker"><span class="dot"></span> <span id="detail-category"></span> / WEIDIAN</p>
+          <h1 id="detail-title"></h1>
+          <p id="detail-price"></p>
+          <p id="detail-id" class="muted"></p>
+          <p class="muted">Preview catalog price. Check the official product page for current options, price and availability.</p>
+          <div class="detail-actions"><a id="buy" class="button" target="_blank" rel="sponsored noopener">Buy on LoveGoBuy ↗</a><a id="source" class="button button-outline" target="_blank" rel="noopener">FindSpreadsheet listing ↗</a></div>
+        </div>
+      </div>
+      <section class="qc-panel" aria-labelledby="detail-qc-title">
+        <h2 id="detail-qc-title">Warehouse QC photos</h2>
+        <p id="detail-qc-status" role="status">Checking the preview records…</p>
+        <div id="detail-qc-images" class="qc-photos"></div>
+        <a id="finder" class="inline-arrow" href="/qc/">Open QC Finder →</a>
+      </section>
+    </div>
+  </div>
+</Layout>
+<script>
+  import {buyUrl, categoryLabel, getData, priceLabel, upstream, type Product} from "../lib/catalog";
+  import {showQc} from "../lib/qc";
+
+  const status = document.querySelector<HTMLElement>("#detail-status")!;
+  const item = new URLSearchParams(location.search).get("id") ?? "";
+  const photo = document.querySelector<HTMLImageElement>("#main-photo")!;
+  const thumbnails = document.querySelector<HTMLElement>("#thumbnails")!;
+  const previous = document.querySelector<HTMLButtonElement>("#gallery-prev")!;
+  const next = document.querySelector<HTMLButtonElement>("#gallery-next")!;
+  const counter = document.querySelector<HTMLElement>("#gallery-count")!;
+
+  if (!/^\d{5,20}$/.test(item)) status.textContent = "Choose a product from the catalog.";
+  else void getData<Product[]>("catalog.json").then(async products => {
+    const p = products.find(product => product.weidianId === item);
+    if (!p) {
+      status.textContent = "This listing is outside the preview catalog.";
+      return;
+    }
+    document.title = p.name + " | LoveGoBuy Findsheet";
+    document.querySelector("#detail-title")!.textContent = p.name;
+    document.querySelector("#detail-category")!.textContent = categoryLabel(p.category);
+    document.querySelector("#detail-price")!.textContent = priceLabel(p.price);
+    document.querySelector("#detail-id")!.textContent = "Weidian item #" + item;
+    document.querySelector<HTMLAnchorElement>("#buy")!.href = buyUrl(item);
+    document.querySelector<HTMLAnchorElement>("#source")!.href = new URL(p.sourcePath, upstream).href;
+    document.querySelector<HTMLAnchorElement>("#finder")!.href = "/qc/?id=" + item;
+    let pictures = [p.image];
+    let active = 0;
+    function select(index: number) {
+      active = (pictures.length + index) % pictures.length;
+      photo.src = pictures[active];
+      photo.alt = p!.name + " · product image " + (active + 1);
+      counter.textContent = (active + 1) + " / " + pictures.length;
+      previous.disabled = next.disabled = pictures.length < 2;
+      for (const [i, button] of Array.from(thumbnails.children).entries()) button.setAttribute("aria-pressed", String(i === active));
+    }
+    previous.onclick = () => select(active - 1);
+    next.onclick = () => select(active + 1);
+    photo.addEventListener("error", () => {
+      if (photo.src !== p.image) photo.src = p.image;
+    });
+    select(0);
+    status.hidden = true;
+    document.querySelector<HTMLElement>("#product")!.hidden = false;
+    void showQc(item, document.querySelector("#detail-qc-status")!, document.querySelector("#detail-qc-images")!);
+    try {
+      const galleries = await getData<Record<string, string[]>>("gallery-" + item.slice(0,4) + ".json");
+      pictures = galleries[item]?.length ? galleries[item] : pictures;
+      thumbnails.replaceChildren(...pictures.map((url, index) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.setAttribute("aria-label", "Show product photo " + (index + 1));
+        const image = new Image();
+        image.src = url;
+        image.alt = "";
+        image.loading = "lazy";
+        image.width = image.height = 58;
+        button.append(image);
+        button.onclick = () => select(index);
+        return button;
+      }));
+      select(active);
+    } catch {
+      document.querySelector("#gallery-note")!.textContent = "Additional listing photos could not load.";
+    }
+  }).catch(() => { status.textContent = "The product could not load. Reload the page to try again."; });
+</script>

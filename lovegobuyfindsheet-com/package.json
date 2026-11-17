@@ -1,0 +1,14 @@
+{
+  "name": "lovegobuyfindsheet-com",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/build.mjs",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "7.4.12"
+  }
+}
