@@ -31,7 +31,7 @@ export async function showQc(id: string, status: HTMLElement, gallery: HTMLEleme
   status.textContent = "Checking preview QC records…";
   try {
     const [states, featured] = await records();
-    if (!isCurrent()) return;
+    if (!isCurrent()) return false;
     const record = featured[id] ?? states[id];
     if (record?.images?.length) {
       status.textContent = record.images.length + " verified warehouse photos from the FindSpreadsheet QC feed.";
@@ -48,6 +48,7 @@ export async function showQc(id: string, status: HTMLElement, gallery: HTMLEleme
         link.append(image);
         return link;
       }));
+      return true;
     } else {
       status.textContent = record?.status === "none"
         ? "The saved FindSpreadsheet check returned no warehouse photos for this item."
@@ -58,4 +59,5 @@ export async function showQc(id: string, status: HTMLElement, gallery: HTMLEleme
   } catch {
     if (isCurrent()) status.textContent = "QC records could not load. Try again.";
   }
+  return false;
 }

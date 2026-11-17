@@ -23,24 +23,13 @@ catalog = list(products.values())
 write("catalog.json", catalog)
 galleries = read("galleries.json")
 purchase = read("purchase-galleries.json")
-vectors = {}
-for shard in (1, 2):
-    vectors.update(read(f"image-index-{shard}.json")["images"])
-
 gallery_shards = {}
-rows = bytearray()
-for index, product in enumerate(catalog):
+for product in catalog:
     item_id = product["weidianId"]
     pictures = list(dict.fromkeys([product["image"], *purchase.get(item_id, []), *galleries.get(product["id"], [])]))
     gallery_shards.setdefault(item_id[:4], {})[item_id] = pictures[:16]
-    for url in pictures:
-        vector = vectors.get(url)
-        if vector and len(vector) == 192:
-            rows.extend(index.to_bytes(2, "little"))
-            rows.extend(vector)
 for prefix, shard in gallery_shards.items():
     write(f"gallery-{prefix}.json", shard)
-(output / "visual-index.bin").write_bytes(rows)
 
 qc_source = source / "usfansfindsheet-com" / "data" / "main-qc-snapshot.json"
 qc = {
@@ -50,4 +39,4 @@ qc = {
 }
 qc["7858402075"] = {"status": "none", "updatedAt": "2026-09-25T19:16:41.784Z"}
 write("qc.json", qc)
-print(f"{len(catalog)} products, {len(rows)//194} image vectors, {len(qc)} QC status records")
+print(f"{len(catalog)} products, {len(qc)} QC status records")

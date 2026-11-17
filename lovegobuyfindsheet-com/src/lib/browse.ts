@@ -1,4 +1,5 @@
-import {categoryLabel, detailsUrl, featuredImage, getData, priceLabel, type Product} from "./catalog";
+import {categoryLabel, getData, type Product} from "./catalog";
+import {productCard} from "./product-card";
 
 const form = document.querySelector<HTMLFormElement>("#search-form")!;
 const query = document.querySelector<HTMLInputElement>("#query")!;
@@ -9,28 +10,16 @@ const pagination = document.querySelector<HTMLElement>("#pagination")!;
 const previous = document.querySelector<HTMLButtonElement>("#prev")!;
 const next = document.querySelector<HTMLButtonElement>("#next")!;
 const catalogSection = document.querySelector<HTMLElement>("#catalog")!;
-const dialog = document.querySelector<HTMLDialogElement>("#image-dialog")!;
-const imageInput = document.querySelector<HTMLInputElement>("#image-file")!;
-const imageStatus = document.querySelector<HTMLElement>("#image-status")!;
 const pageSize = 24;
 let catalog: Promise<Product[]> | undefined;
-let index: Promise<ArrayBuffer> | undefined;
 let category = "";
 let page = 1;
-let visualMatches: Product[] | null = null;
 let revision = 0;
 let showingFeatured = true;
 
 function products() {
   return catalog ??= getData<Product[]>("catalog.json").catch(error => { catalog = undefined; throw error; });
 }
-function visualIndex() {
-  return index ??= fetch("/data/visual-index.bin").then(response => {
-    if (!response.ok) throw new Error("Index unavailable");
-    return response.arrayBuffer();
-  }).catch(error => { index = undefined; throw error; });
-}
-
 function readLocation() {
   const params = new URLSearchParams(location.search);
   query.value = params.get("q") ?? "";
@@ -50,21 +39,9 @@ function writeLocation() {
   history.replaceState(null, "", url);
 }
 
-function productCard(product: Product) {
-  const card = document.createElement("article");
-  card.className = "product-card";
-  card.innerHTML = '<a><div class="product-image"><img alt="" width="320" height="320" loading="lazy"></div><div class="product-copy"><span class="product-tag"></span><h3></h3><span class="product-price"><span></span><b aria-hidden="true">↗</b></span></div></a>';
-  card.querySelector("a")!.href = detailsUrl(product.weidianId);
-  card.querySelector("img")!.src = featuredImage(product);
-  card.querySelector("h3")!.textContent = product.name;
-  card.querySelector(".product-tag")!.textContent = categoryLabel(product.category);
-  card.querySelector(".product-price span")!.textContent = priceLabel(product.price);
-  return card;
-}
-
 function filterRows(all: Product[]) {
   const keywords = query.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
-  const rows = (visualMatches ?? all).filter(p => {
+  const rows = all.filter(p => {
     const text = [p.name, p.weidianId, categoryLabel(p.category)].join(" ").toLowerCase();
     return (!category || p.category === category) && keywords.every(word => text.includes(word));
   });
@@ -99,19 +76,11 @@ async function render({scroll = false, update = true} = {}) {
     const filtered = filterRows(all);
     const pageCount = Math.max(1, Math.ceil(filtered.length / pageSize));
     page = Math.min(page, pageCount);
-    if (update && !visualMatches) writeLocation();
-    status.replaceChildren(document.createTextNode(visualMatches
-      ? filtered.length + " visually similar products"
-      : new Intl.NumberFormat("en").format(filtered.length) + " finds" + (query.value.trim() ? " for “" + query.value.trim() + "”" : "")));
-    if (visualMatches) {
-      const clear = document.createElement("button");
-      clear.type = "button";
-      clear.className = "link-button";
-      clear.textContent = "Clear photo search";
-      clear.onclick = () => { visualMatches = null; page = 1; void render(); };
-      status.append(clear);
-    }
-    results.replaceChildren(...filtered.slice((page - 1) * pageSize, page * pageSize).map(productCard));
+    if (update) writeLocation();
+    const count = new Intl.NumberFormat("en").format(filtered.length);
+    status.textContent = count + (filtered.length === 1 ? " find" : " finds")
+      + (query.value.trim() ? " for “" + query.value.trim() + "”" : "");
+    results.replaceChildren(...filtered.slice((page - 1) * pageSize, page * pageSize).map(product => productCard(product)));
     if (!filtered.length) {
       const empty = document.createElement("p");
       empty.className = "notice";
@@ -131,7 +100,6 @@ async function render({scroll = false, update = true} = {}) {
 
 form.addEventListener("submit", event => {
   event.preventDefault();
-  visualMatches = null;
   category = "";
   page = 1;
   void render({scroll: true});
@@ -142,7 +110,6 @@ for (const control of document.querySelectorAll<HTMLElement>("[data-category]"))
     event.preventDefault();
     category = control.dataset.category ?? "";
     query.value = "";
-    visualMatches = null;
     page = 1;
     void render({scroll: control.tagName === "A"});
   });
@@ -150,65 +117,6 @@ for (const control of document.querySelectorAll<HTMLElement>("[data-category]"))
 sort.addEventListener("change", () => { page = 1; void render(); });
 previous.addEventListener("click", () => { page--; void render({scroll: true}); });
 next.addEventListener("click", () => { if (!showingFeatured) page++; void render({scroll: true}); });
-for (const button of document.querySelectorAll("[data-image-trigger]")) {
-  button.addEventListener("click", () => { imageStatus.textContent = ""; dialog.showModal(); });
-}
-dialog.addEventListener("close", () => { imageInput.value = ""; });
-
-async function fingerprint(file: File) {
-  const bitmap = await createImageBitmap(file);
-  try {
-    const canvas = document.createElement("canvas");
-    canvas.width = 8;
-    canvas.height = 8;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) throw new Error("Image processing unavailable");
-    ctx.fillStyle = "#ffffff";
-    ctx.fillRect(0, 0, 8, 8);
-    ctx.drawImage(bitmap, 0, 0, 8, 8);
-    return ctx.getImageData(0, 0, 8, 8).data.filter((_, offset) => offset % 4 !== 3);
-  } finally {
-    bitmap.close();
-  }
-}
-
-imageInput.addEventListener("change", async () => {
-  const file = imageInput.files?.[0];
-  if (!file) return;
-  if (!file.type.startsWith("image/") || file.size > 12 * 1024 ** 2) {
-    imageStatus.textContent = "Choose an image under 12 MB.";
-    return;
-  }
-  imageStatus.textContent = "Finding similar catalog photos…";
-  imageInput.disabled = true;
-  try {
-    const [all, buffer, rgb] = await Promise.all([products(), visualIndex(), fingerprint(file)]);
-    const bytes = new Uint8Array(buffer);
-    const view = new DataView(buffer);
-    const scores = new Map<number, number>();
-    const width = 194;
-    if (!bytes.length || bytes.length % width) throw new Error("Invalid image index");
-    for (let offset = 0; offset < bytes.length; offset += width) {
-      const id = view.getUint16(offset, true);
-      let difference = 0;
-      for (let channel = 0; channel < rgb.length; channel++) difference += Math.abs(rgb[channel] - bytes[offset + 2 + channel]);
-      if (difference < (scores.get(id) ?? Infinity)) scores.set(id, difference);
-    }
-    if (!dialog.open) return;
-    visualMatches = [...scores].sort((a, b) => a[1] - b[1]).slice(0, 60).map(([id]) => all[id]).filter(Boolean);
-    category = "";
-    query.value = "";
-    sort.value = "featured";
-    page = 1;
-    dialog.close();
-    void render({scroll: true});
-  } catch {
-    imageStatus.textContent = "Could not read the photo or search the catalog. Try another image.";
-  } finally {
-    imageInput.disabled = false;
-    imageInput.value = "";
-  }
-});
 readLocation();
 if (location.search || location.pathname === "/browse/") void render({update: false});
 else {

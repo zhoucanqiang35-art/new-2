@@ -10,6 +10,7 @@ import Icon from "../components/Icon.astro";
     <form id="search-form" class="hero-search" action="/browse/#catalog">
       <label class="visually-hidden" for="query">Search products or Weidian ID</label><Icon name="search" />
       <input type="search" id="query" name="q" placeholder="Search a product or Weidian ID" />
+      <a class="search-photo" href="/image-search/" aria-label="Search by image" title="Search by image"><Icon name="image" size={21} /></a>
       <button class="button" type="submit">Search <Icon name="arrow" size={17} /></button>
     </form>
   </section>

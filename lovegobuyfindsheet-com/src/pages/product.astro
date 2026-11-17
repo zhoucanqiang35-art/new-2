@@ -20,8 +20,15 @@ import Layout from "../components/Layout.astro";
           <h1 id="detail-title"></h1>
           <p id="detail-price"></p>
           <p id="detail-id" class="muted"></p>
-          <p class="muted">Preview catalog price. Check the official product page for current options, price and availability.</p>
-          <div class="detail-actions"><a id="buy" class="button" target="_blank" rel="sponsored noopener">Buy on LoveGoBuy ↗</a><a id="source" class="button button-outline" target="_blank" rel="noopener">FindSpreadsheet listing ↗</a></div>
+          <p class="muted">Estimated in USD. Confirm the item price, options and availability with your shopping agent.</p>
+          <div class="detail-actions">
+            <a id="buy" class="button" target="_blank" rel="sponsored noopener">Buy on LoveGoBuy ↗</a>
+            <details class="agent-menu">
+              <summary class="button button-outline">Other shopping agents</summary>
+              <div id="other-agents" class="agent-options"></div>
+            </details>
+            <a id="source" class="button button-outline" target="_blank" rel="noopener">FindSpreadsheet listing ↗</a>
+          </div>
         </div>
       </div>
       <section class="qc-panel" aria-labelledby="detail-qc-title">
@@ -30,12 +37,20 @@ import Layout from "../components/Layout.astro";
         <div id="detail-qc-images" class="qc-photos"></div>
         <a id="finder" class="inline-arrow" href="/qc/">Open QC Finder →</a>
       </section>
+      <section class="related-products" id="related-products" aria-labelledby="related-title" hidden>
+        <div class="section-heading">
+          <h2 id="related-title">Related products</h2>
+          <a id="related-category" class="inline-arrow" href="/browse/">Browse category ↗</a>
+        </div>
+        <div id="related-results" class="products"></div>
+      </section>
     </div>
   </div>
 </Layout>
 <script>
-  import {buyUrl, categoryLabel, getData, priceLabel, upstream, type Product} from "../lib/catalog";
+  import {buyUrl, categoryLabel, getData, otherAgentLinks, priceLabel, upstream, type Product} from "../lib/catalog";
   import {showQc} from "../lib/qc";
+  import {productCard} from "../lib/product-card";
 
   const status = document.querySelector<HTMLElement>("#detail-status")!;
   const item = new URLSearchParams(location.search).get("id") ?? "";
@@ -60,6 +75,26 @@ import Layout from "../components/Layout.astro";
     document.querySelector<HTMLAnchorElement>("#buy")!.href = buyUrl(item);
     document.querySelector<HTMLAnchorElement>("#source")!.href = new URL(p.sourcePath, upstream).href;
     document.querySelector<HTMLAnchorElement>("#finder")!.href = "/qc/?id=" + item;
+    document.querySelector("#other-agents")!.replaceChildren(...otherAgentLinks(item).map(agent => {
+      const link = document.createElement("a");
+      link.href = agent.url;
+      link.target = "_blank";
+      link.rel = "noopener";
+      link.textContent = agent.label + " ↗";
+      return link;
+    }));
+    const price = Number(p.price);
+    const related = products.filter(product => product.weidianId !== item && product.category === p.category);
+    if (price > 0) {
+      const difference = (product: Product) => Number(product.price) > 0
+        ? Math.abs(Number(product.price) - price) : Infinity;
+      related.sort((left, right) => difference(left) - difference(right));
+    }
+    if (related.length) {
+      document.querySelector<HTMLAnchorElement>("#related-category")!.href = "/browse/?category=" + encodeURIComponent(p.category) + "#catalog";
+      document.querySelector("#related-results")!.replaceChildren(...related.slice(0, 8).map(product => productCard(product)));
+      document.querySelector<HTMLElement>("#related-products")!.hidden = false;
+    }
     let pictures = [p.image];
     let active = 0;
     function select(index: number) {
@@ -78,7 +113,9 @@ import Layout from "../components/Layout.astro";
     select(0);
     status.hidden = true;
     document.querySelector<HTMLElement>("#product")!.hidden = false;
-    void showQc(item, document.querySelector("#detail-qc-status")!, document.querySelector("#detail-qc-images")!);
+    const qcStatus = document.querySelector<HTMLElement>("#detail-qc-status")!;
+    const qcGallery = document.querySelector<HTMLElement>("#detail-qc-images")!;
+    const warehousePhotos = showQc(item, qcStatus, qcGallery);
     try {
       const galleries = await getData<Record<string, string[]>>("gallery-" + item.slice(0,4) + ".json");
       pictures = galleries[item]?.length ? galleries[item] : pictures;
@@ -98,6 +135,21 @@ import Layout from "../components/Layout.astro";
       select(active);
     } catch {
       document.querySelector("#gallery-note")!.textContent = "Additional listing photos could not load.";
+    }
+    if (!await warehousePhotos) {
+      qcStatus.textContent += " Showing the listing photos from the carousel below.";
+      qcGallery.replaceChildren(...pictures.map((url, index) => {
+        const link = document.createElement("a");
+        link.href = url;
+        link.target = "_blank";
+        link.rel = "noopener";
+        const image = new Image(220, 220);
+        image.src = url;
+        image.alt = "Listing photo " + (index + 1);
+        image.loading = "lazy";
+        link.append(image);
+        return link;
+      }));
     }
   }).catch(() => { status.textContent = "The product could not load. Reload the page to try again."; });
 </script>

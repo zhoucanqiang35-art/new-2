@@ -1,4 +1,5 @@
 import {existsSync} from "node:fs";
+import {join} from "node:path";
 import {spawnSync} from "node:child_process";
 import {fileURLToPath} from "node:url";
 
@@ -11,7 +12,18 @@ function run(command, args) {
   if (result.status !== 0) process.exit(result.status ?? 1);
 }
 
-if (!existsSync(new URL("../public/data/catalog.json", import.meta.url))) {
+const refreshCatalog = !existsSync(join(root, "public/data/catalog.json"));
+if (refreshCatalog) {
   run("python3", ["scripts/prepare-catalog.py", upstream]);
+}
+if (refreshCatalog || !["visual-coverage.json", "visual-photos.json", "visual-index.bin"]
+  .every(file => existsSync(join(root, "public/data", file)))) {
+  const sourceData = join(upstream, "litbuysheetlab-com/public/data");
+  run("python3", ["scripts/build-visual-index.py",
+    join(sourceData, "image-index-1.json"),
+    join(sourceData, "image-index-2.json"),
+    "--supplement", join(root, "scripts/image-supplement.json.gz"),
+    "--offline",
+  ]);
 }
 run("astro", ["build"]);

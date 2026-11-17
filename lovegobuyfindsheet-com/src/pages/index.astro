@@ -21,10 +21,10 @@ const selections = [["shoes","Shoes","4509"],["hoodies-sweaters","Hoodies","7366
       <form id="search-form" class="hero-search" action="/#catalog">
         <label class="visually-hidden" for="query">Search products or Weidian ID</label><Icon name="search" />
         <input type="search" id="query" name="q" placeholder="Search a product or Weidian ID" />
-        <button class="button" type="submit">Search <Icon name="arrow" size={17} /></button>
+        <a class="search-photo" href="/image-search/" aria-label="Search by image" title="Search by image"><Icon name="image" size={21} /></a>
+      <button class="button" type="submit">Search <Icon name="arrow" size={17} /></button>
       </form>
       <div class="hero-links">
-        <button class="link-button" data-image-trigger type="button"><Icon name="image" /> Search by photo</button>
         <a href="/qc/"><Icon name="qc" /> Check QC photos</a>
       </div>
     </div>

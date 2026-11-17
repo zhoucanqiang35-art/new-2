@@ -124,11 +124,6 @@ h3{font-size:19px;letter-spacing:-.035em}
 .qc-photos:not(:empty){margin-bottom:12px}
 .qc-photos img{width:140px;height:100px;object-fit:cover;border-radius:8px;background:#dce3ef}
 .notice{grid-column:1/-1}
-dialog{width:min(500px,calc(100% - 32px));border:1px solid #d6dfe9;border-radius:14px;padding:20px;background:#f8faff;color:var(--ink)}
-dialog::backdrop{background:#17203e80}
-.dialog-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
-.dialog-head h2{font-size:34px}
-.close{border:1px solid #d8dfe4;background:#fff;border-radius:7px;font-size:27px;line-height:1;padding:2px 7px}
 .upload{padding:17px;background:#eaf0ff;border:1px dashed #8e9fe6;border-radius:9px;display:grid;gap:8px;justify-items:start;color:#183faf}
 .upload input{width:100%;color:var(--ink)}
 .visually-hidden,.skip:not(:focus){position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
@@ -175,3 +170,21 @@ dialog::backdrop{background:#17203e80}
   .buying-steps figure{margin:8px 7px 8px 2px}
   .buying-steps figcaption{font-size:10px}
 }
+
+.search-photo{display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:7px;color:var(--blue);background:#edf2ff}
+.search-photo:hover{background:#dce6ff}
+.image-search-controls{display:flex;gap:15px;align-items:stretch;margin-top:20px;flex-wrap:wrap}
+.image-search-controls .upload{min-width:min(100%,300px);cursor:pointer}
+#image-preview{margin:0;padding:9px 12px;border:1px solid var(--line);border-radius:9px;max-width:100%;overflow:hidden;background:white}
+#image-preview img{object-fit:contain;background:#f6f8fb}
+#image-preview figcaption{max-width:180px;overflow-wrap:anywhere;margin-top:5px;font-size:13px}
+#image-more{margin-top:16px}
+.related-products{margin-top:27px}
+.agent-menu{position:relative}
+.agent-menu summary{list-style:none}
+.agent-menu summary::-webkit-details-marker{display:none}
+.agent-menu summary::after{content:"▾";font-size:12px}
+.agent-options{position:absolute;z-index:2;min-width:100%;padding:5px;border:1px solid #d8e2ff;border-radius:8px;background:white;box-shadow:0 8px 18px #17214b20}
+.agent-options a{display:block;white-space:nowrap;padding:9px;border-radius:5px}
+.agent-options a:hover{background:#edf2ff;color:var(--blue)}
+@media(max-width:520px){.search-photo{width:32px;height:36px}.search-photo svg{width:18px}}
