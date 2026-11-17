@@ -1,38 +1,31 @@
 ---
-import {readFileSync} from "node:fs";
 import Layout from "../components/Layout.astro";
 import Icon from "../components/Icon.astro";
 import Catalog from "../components/Catalog.astro";
 import BuyingGuide from "../components/BuyingGuide.astro";
 import Faq from "../components/Faq.astro";
-import {detailsUrl, featuredImage, highlighted, priceLabel, type Product} from "../lib/catalog";
-
-const products: Product[] = JSON.parse(readFileSync("public/data/catalog.json", "utf8"));
-const highlights = highlighted.flatMap(id => products.find(p => p.id === id) ?? []);
-const hero = highlights[0];
 const selections = [["shoes","Shoes","4509"],["hoodies-sweaters","Hoodies","7366"],["accessories","Accessories","7980"],["jersey","Jerseys","7653"],["jackets","Jackets","8573"],["pants-shorts","Pants & shorts","8510"]];
 ---
 <Layout>
-  <section class="hero shell" aria-labelledby="home-title">
-    <div class="hero-copy">
-      <p class="kicker"><span class="dot"></span> INDEPENDENT WEIDIAN FINDS</p>
-      <h1 id="home-title">LoveGoBuy<br/><em>Spreadsheet.</em></h1>
-      <p class="hero-desc">Discover sneakers, streetwear and everyday finds from FindSpreadsheet. Search the catalog, compare photos and open the listing on LoveGoBuy.</p>
-      <form id="search-form" class="hero-search" action="/#catalog">
-        <label class="visually-hidden" for="query">Search products or Weidian ID</label><Icon name="search" />
-        <input type="search" id="query" name="q" placeholder="Search a product or Weidian ID" />
-        <a class="search-photo" href="/image-search/" aria-label="Search by image" title="Search by image"><Icon name="image" size={21} /></a>
-      <button class="button" type="submit">Search <Icon name="arrow" size={17} /></button>
-      </form>
-      <div class="hero-links">
-        <a href="/qc/"><Icon name="qc" /> Check QC photos</a>
+  <section class="home-banner" aria-labelledby="home-title">
+    <div class="hero shell">
+      <div class="hero-copy">
+        <h1 id="home-title">LoveGoBuy<br/><em>Spreadsheet.</em></h1>
+        <p class="hero-desc">Explore Weidian finds, compare product and warehouse photos, and choose where to buy.</p>
+        <form id="search-form" class="hero-search" action="/#catalog">
+          <label class="visually-hidden" for="query">Search products or Weidian ID</label><Icon name="search" />
+          <input type="search" id="query" name="q" placeholder="Search a product or Weidian ID" />
+          <a class="search-photo" href="/image-search/" aria-label="Search by image" title="Search by image"><Icon name="image" size={21} /></a>
+          <button class="button" type="submit">Search <Icon name="arrow" size={17} /></button>
+        </form>
+        <div class="hero-links">
+          <a href="/browse/?category=shoes#catalog">Shoes</a>
+          <a href="/browse/?category=hoodies-sweaters#catalog">Hoodies</a>
+          <a href="/qc/"><Icon name="qc" size={16} /> Check QC photos</a>
+        </div>
       </div>
+      <img class="hero-art" src="/hero-parcel.webp" alt="" width="960" height="640" fetchpriority="high" />
     </div>
-    <a class="hero-feature" href={detailsUrl(hero.weidianId)}>
-      <img src={featuredImage(hero)} alt={hero.name} width="720" height="720" fetchpriority="high" />
-      <div class="feature-top"><span>FROM THE CATALOG</span><span class="feature-open" aria-hidden="true">↗</span></div>
-      <div class="feature-caption"><div><span>WEIDIAN · SHOES</span><strong>{hero.name}</strong></div><span>{priceLabel(hero.price)}</span></div>
-    </a>
   </section>
   <section class="section shell category-section" aria-labelledby="category-title">
     <div class="section-heading"><div><h2 id="category-title">Browse by category</h2><p>Start with a style or explore the full spreadsheet.</p></div><a class="inline-arrow" href="/browse/">View all finds <Icon name="arrow" size={17}/></a></div>

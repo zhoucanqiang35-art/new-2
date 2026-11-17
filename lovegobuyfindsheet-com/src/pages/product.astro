@@ -23,14 +23,20 @@ import Layout from "../components/Layout.astro";
           <p class="muted">Estimated in USD. Confirm the item price, options and availability with your shopping agent.</p>
           <div class="detail-actions">
             <a id="buy" class="button" target="_blank" rel="sponsored noopener">Buy on LoveGoBuy ↗</a>
-            <details class="agent-menu">
-              <summary class="button button-outline">Other shopping agents</summary>
-              <div id="other-agents" class="agent-options"></div>
-            </details>
+            <button id="open-agents" class="button button-outline" type="button" aria-haspopup="dialog" aria-controls="agent-dialog">Other shopping agents</button>
             <a id="source" class="button button-outline" target="_blank" rel="noopener">FindSpreadsheet listing ↗</a>
           </div>
         </div>
       </div>
+      <dialog id="agent-dialog" class="agent-dialog" aria-labelledby="agent-dialog-title">
+        <div class="agent-dialog-header">
+          <h2 id="agent-dialog-title">Choose a shopping agent</h2>
+          <form method="dialog">
+            <button class="agent-close" type="submit" aria-label="Close shopping agents" autofocus>×</button>
+          </form>
+        </div>
+        <div id="other-agents" class="agent-options"></div>
+      </dialog>
       <section class="qc-panel" aria-labelledby="detail-qc-title">
         <h2 id="detail-qc-title">Warehouse QC photos</h2>
         <p id="detail-qc-status" role="status">Checking the preview records…</p>
@@ -48,7 +54,8 @@ import Layout from "../components/Layout.astro";
   </div>
 </Layout>
 <script>
-  import {buyUrl, categoryLabel, getData, otherAgentLinks, priceLabel, upstream, type Product} from "../lib/catalog";
+  import {buyUrl, categoryLabel, getData, priceLabel, upstream, type Product} from "../lib/catalog";
+  import {otherAgentLinks} from "../lib/agents";
   import {showQc} from "../lib/qc";
   import {productCard} from "../lib/product-card";
 
@@ -59,6 +66,8 @@ import Layout from "../components/Layout.astro";
   const previous = document.querySelector<HTMLButtonElement>("#gallery-prev")!;
   const next = document.querySelector<HTMLButtonElement>("#gallery-next")!;
   const counter = document.querySelector<HTMLElement>("#gallery-count")!;
+  const agentDialog = document.querySelector<HTMLDialogElement>("#agent-dialog")!;
+  document.querySelector("#open-agents")!.addEventListener("click", () => agentDialog.showModal());
 
   if (!/^\d{5,20}$/.test(item)) status.textContent = "Choose a product from the catalog.";
   else void getData<Product[]>("catalog.json").then(async products => {
@@ -79,8 +88,15 @@ import Layout from "../components/Layout.astro";
       const link = document.createElement("a");
       link.href = agent.url;
       link.target = "_blank";
-      link.rel = "noopener";
-      link.textContent = agent.label + " ↗";
+      link.rel = "sponsored noopener noreferrer";
+      const logo = new Image(28, 28);
+      logo.src = agent.logo;
+      logo.alt = "";
+      logo.loading = "lazy";
+      logo.addEventListener("error", () => { logo.hidden = true; }, {once: true});
+      const label = document.createElement("span");
+      label.textContent = agent.label;
+      link.append(logo, label);
       return link;
     }));
     const price = Number(p.price);

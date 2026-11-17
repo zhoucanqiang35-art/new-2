@@ -21,17 +21,6 @@ export const highlighted = ["4509", "7366", "7980", "7653", "8573", "8510", "832
 export const featuredImage = (product: Product) => highlighted.includes(product.id) ? "/featured/" + product.id + ".webp" : product.image;
 export const categoryLabel = (key: string) => categories.find(([slug]) => slug === key)?.[1] ?? key;
 export const detailsUrl = (item: string) => "/product/?id=" + encodeURIComponent(item);
-export function otherAgentLinks(item: string) {
-  const weidian = new URL("https://weidian.com/item.html");
-  weidian.searchParams.set("itemID", item);
-  const loongbuy = new URL("https://loongbuy.com/product-details");
-  loongbuy.searchParams.set("url", weidian.href);
-  return [
-    {label: "USFans", url: "https://usfans.com/product/3/" + encodeURIComponent(item)},
-    {label: "LoongBuy", url: loongbuy.href},
-  ];
-}
-
 export function buyUrl(item: string) {
   const url = new URL("https://www.lovegobuy.com/product");
   url.search = new URLSearchParams({id: item, shop_type: "weidian", invite_code: "161CPG"}).toString();
