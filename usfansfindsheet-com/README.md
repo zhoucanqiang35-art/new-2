@@ -13,7 +13,7 @@ Independent USFans product discovery site. This project lives in the
 | Worker name | `usfansfindsheet-com` |
 | Build command | `npm run build:cloudflare` |
 | Deploy command | `npm run deploy:cloudflare` |
-| Build watch path | `usfansfindsheet-com/**` |
+| Build watch path | `usfansfindsheet-com/*` |
 
 Cloudflare binds the Astro pages, assets and image index from `dist/client`.
 The Worker entry point in `dist/server/index.js` renders product and catalog
@@ -34,3 +34,7 @@ The imported preview preserves its noindex setting. The checked-in image index
 records its scope, including external galleries and QC data that could not be
 collected. Indexed FindSpreadsheet QC results resolve through the live public
 image endpoint. Historical snapshot references carry no reusable signatures.
+
+Cloudflare builds validate the homepage, search API and every image-index shard
+before deploying. Each deployment message includes the source revision.
+Check the live source revision at `https://usfansfindsheet.com/api/health`.
