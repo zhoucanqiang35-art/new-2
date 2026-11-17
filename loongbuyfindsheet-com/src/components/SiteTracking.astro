@@ -1,0 +1,25 @@
+---
+import { isIndexableSite, productionOrigin } from '../lib/seo.js';
+
+const enabled = isIndexableSite(Astro.site);
+const host = new URL(productionOrigin).hostname;
+const measurementId = 'G-2PRPEFSYRH';
+---
+{enabled && Astro.url.pathname === '/' && (
+  <meta name="msvalidate.01" content="E34A6C20A8A058592D1DC4B20523F6CB" />
+)}
+{enabled && (
+  <script define:vars={{ host, measurementId }}>
+    if (location.hostname === host || location.hostname === 'www.' + host) {
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      window.gtag('config', measurementId);
+
+      const tag = document.createElement('script');
+      tag.async = true;
+      tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + measurementId;
+      document.head.append(tag);
+    }
+  </script>
+)}
