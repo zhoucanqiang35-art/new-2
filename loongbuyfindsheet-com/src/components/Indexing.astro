@@ -1,0 +1,7 @@
+---
+import { isIndexableSite } from '../lib/seo.js';
+
+const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), Astro.site);
+---
+{!isIndexableSite(Astro.site) && <meta name="robots" content="noindex,nofollow" />}
+<link rel="canonical" href={canonical.href} />
