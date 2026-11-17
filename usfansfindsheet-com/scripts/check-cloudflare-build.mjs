@@ -79,3 +79,10 @@ assert(urls.some(url => url.includes('/product/?source=')));
 assert(urls.includes(canonicalOrigin + '/guides/how-to-buy/'));
 assert.equal((await publicRequest('/product/?source=%2Fshoes%2Finvalid-999999.html')).status, 404);
 console.log(`SEO checks passed: ${urls.length.toLocaleString('en-US')} unique sitemap URLs, public canonical, preview noindex.`);
+
+assert(publicHtml.includes('name="msvalidate.01"'));
+assert(publicHtml.includes('src="/usfans-analytics.js"'));
+const previewHtml = await (await request('/')).text();
+assert(!previewHtml.includes('name="msvalidate.01"'));
+assert(!previewHtml.includes('src="/usfans-analytics.js"'));
+console.log('Analytics and Bing verification are present on the production host only.');

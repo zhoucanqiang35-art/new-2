@@ -71,3 +71,10 @@ export function sitemapBody(categoryList, products) {
     + urls.map(path => '  <url><loc>' + siteOrigin + path.replaceAll('&', '&amp;') + '</loc></url>').join('\n')
     + '\n</urlset>\n';
 }
+
+
+function addProductionIntegrations(html) {
+  return html.replace('<!--PRODUCTION-INTEGRATIONS-->',
+    '<meta name="msvalidate.01" content="E34A6C20A8A058592D1DC4B20523F6CB">' +
+    '<script src="/usfans-analytics.js" defer></script>');
+}
