@@ -1,0 +1,61 @@
+---
+import Layout from "../components/Layout.astro";
+import Icon from "../components/Icon.astro";
+---
+<Layout title="LoveGoBuy QC Finder | Findsheet" description="Find warehouse QC photos for supported Weidian listings in the LoveGoBuy Findsheet preview.">
+  <section class="shell section utility qc-page">
+    <a class="inline-arrow" href="/browse/">← Back to finds</a>
+    <div class="utility-heading">
+      <p class="kicker"><span class="dot"></span> WEIDIAN QUALITY CHECK</p>
+      <h1>LoveGoBuy <em>QC Finder.</em></h1>
+      <p>Paste a Weidian product ID or a Weidian product link from LoveGoBuy. The preview checks saved warehouse photo records from FindSpreadsheet.</p>
+    </div>
+    <form id="qc-form" class="hero-search">
+      <label class="visually-hidden" for="qc-id">Weidian product ID or link</label><Icon name="qc" />
+      <input type="text" name="id" id="qc-id" placeholder="Paste a product link or Weidian ID" required />
+      <button class="button" type="submit">Check QC <Icon name="arrow" size={17} /></button>
+    </form>
+    <div class="hero-links qc-examples"><span>Try a sample</span><button type="button" class="link-button" data-sample="7321418559">With photos</button><button type="button" class="link-button" data-sample="7858402075">No photos</button></div>
+    <section id="qc-result" class="qc-panel" hidden aria-labelledby="qc-result-title">
+      <h2 id="qc-result-title">Warehouse QC photos</h2><p id="qc-status" role="status"></p>
+      <div id="qc-images" class="qc-photos"></div>
+      <a id="qc-source" class="inline-arrow" hidden>Open item in the catalog →</a>
+    </section>
+  </section>
+</Layout>
+<script>
+  import {detailsUrl, getData, type Product} from "../lib/catalog";
+  import {itemFromInput, showQc} from "../lib/qc";
+  const form = document.querySelector<HTMLFormElement>("#qc-form")!;
+  const input = document.querySelector<HTMLInputElement>("#qc-id")!;
+  const result = document.querySelector<HTMLElement>("#qc-result")!;
+  const status = document.querySelector<HTMLElement>("#qc-status")!;
+  const gallery = document.querySelector<HTMLElement>("#qc-images")!;
+  const link = document.querySelector<HTMLAnchorElement>("#qc-source")!;
+  let revision = 0;
+  async function check() {
+    const current = ++revision;
+    const id = itemFromInput(input.value);
+    result.hidden = false;
+    link.hidden = true;
+    if (!id) {
+      gallery.replaceChildren();
+      status.textContent = "Enter a Weidian product ID or a supported product link.";
+      return;
+    }
+    history.replaceState(null, "", "/qc/?id=" + id);
+    void showQc(id, status, gallery, () => current === revision);
+    try {
+      const catalog = await getData<Product[]>("catalog.json");
+      if (current !== revision || !catalog.some(product => product.weidianId === id)) return;
+      link.href = detailsUrl(id);
+      link.hidden = false;
+    } catch { /* The catalog link is optional when the catalog is unavailable. */ }
+  }
+  form.addEventListener("submit", event => { event.preventDefault(); void check(); });
+  for (const button of document.querySelectorAll<HTMLButtonElement>("[data-sample]")) {
+    button.onclick = () => { input.value = button.dataset.sample ?? ""; void check(); };
+  }
+  input.value = new URLSearchParams(location.search).get("id") ?? "";
+  if (input.value) void check();
+</script>

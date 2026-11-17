@@ -1,0 +1,80 @@
+---
+import {buyUrl, detailsUrl, registration} from "../lib/catalog";
+
+const {home = false} = Astro.props;
+const Heading = home ? "h2" : "h1";
+const StepHeading = home ? "h3" : "h2";
+const officialGuide = "https://www.lovegobuy.com/article/index?article_id=10003";
+const steps = [
+  {
+    title: "Find the Weidian product",
+    text: "Open the spreadsheet and search by name or Weidian ID. Try 7858402075 to find the hoodie used in this walkthrough. Open the result and compare the listing photos.",
+    image: "search", alt: "Findsheet search results showing one hoodie for Weidian ID 7858402075",
+    source: "Findsheet search", href: "/browse/?q=7858402075#catalog", label: "Try this search",
+  },
+  {
+    title: "Check available QC photos",
+    text: "Open the listing’s warehouse QC panel or enter the product ID in QC Finder. Sample 7321418559 shows how warehouse photos appear when available.",
+    image: "qc", alt: "Findsheet QC Finder showing four verified warehouse photos for item 7321418559",
+    source: "Findsheet QC Finder", href: "/qc/?id=7321418559", label: "Open the QC sample",
+  },
+  {
+    title: "Open the item on LoveGoBuy",
+    text: "Select Buy on LoveGoBuy on the Findsheet product page. Sign in or create a LoveGoBuy account, then verify the seller’s current price, options and stock.",
+    image: "product", alt: "Findsheet product page showing the Weidian ID and the Buy on LoveGoBuy button",
+    source: "Findsheet product page", href: detailsUrl("7858402075"), label: "Open the sample product",
+  },
+  {
+    title: "Select options and pay for the item",
+    text: "Choose the color, size and quantity shown on the LoveGoBuy listing. Use Add to Cart or Buy Now. Review the item and domestic shipping costs before paying. LoveGoBuy then orders from the seller.",
+    image: "order", alt: "LoveGoBuy product ordering screen with item options and the Add to Cart and Buy Now buttons",
+    source: "LoveGoBuy Help Center example", href: buyUrl("7858402075"), label: "Open LoveGoBuy listing", referral: true,
+  },
+  {
+    title: "Review warehouse QC and submit a parcel",
+    text: "When your order reaches the warehouse, open User Center → Warehouse to review photos of your item. Select the items you want to send, enter the delivery details, and choose an international shipping route.",
+    image: "warehouse", alt: "LoveGoBuy Warehouse screen with selected items and the Submit Parcel control",
+    source: "LoveGoBuy Help Center example",
+  },
+  {
+    title: "Pay for shipping and track delivery",
+    text: "Review the international shipping total and pay the parcel charge. LoveGoBuy packs and dispatches the parcel. Open Parcels to follow the tracking updates.",
+    image: "parcel", alt: "LoveGoBuy parcel management screen showing dispatched parcel records",
+    source: "LoveGoBuy Help Center example",
+  },
+];
+---
+<section class="guide buying-guide" id="guide" aria-labelledby="guide-title">
+  <div class="shell section">
+    <div class="section-heading">
+      <div class="content-heading">
+        <Heading id="guide-title">How to buy on LoveGoBuy</Heading>
+        <p>Follow the process from a Weidian listing in the spreadsheet to a parcel shipped by LoveGoBuy.</p>
+      </div>
+      {home && <a class="inline-arrow" href="/guide/how-to-buy/">Open buying guide <span aria-hidden="true">↗</span></a>}
+    </div>
+    <details class="mobile-section-fold" open data-mobile-fold={home ? "" : undefined}>
+      <summary>Expand the six illustrated buying steps</summary>
+      <ol class="buying-steps">
+        {steps.map((step, index) => <li>
+          <div class="step-copy">
+            <span class="step-number" aria-hidden="true">{index + 1}</span>
+            <StepHeading>{step.title}</StepHeading>
+            <p>{step.text}</p>
+            {step.href && <a class="inline-arrow" href={step.href} rel={step.referral ? "sponsored noopener" : undefined} target={step.referral ? "_blank" : undefined}>{step.label} <span aria-hidden="true">↗</span></a>}
+          </div>
+          <figure>
+            <a href={`/guide-images/${step.image}.webp`} target="_blank" rel="noopener" aria-label={`Enlarge screenshot for ${step.title}`}>
+              <img src={`/guide-images/${step.image}.webp`} alt={step.alt} loading="lazy" decoding="async" />
+            </a>
+            <figcaption>{step.source}</figcaption>
+          </figure>
+        </li>)}
+      </ol>
+      <div class="guide-actions">
+        <a class="button button-small" href={registration} target="_blank" rel="sponsored noopener">Join LoveGoBuy ↗</a>
+        <a class="inline-arrow" href={officialGuide} target="_blank" rel="noopener">Official purchase instructions ↗</a>
+      </div>
+    </details>
+  </div>
+</section>

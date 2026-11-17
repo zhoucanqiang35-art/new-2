@@ -1,0 +1,51 @@
+---
+import {readFileSync} from "node:fs";
+import Layout from "../components/Layout.astro";
+import Icon from "../components/Icon.astro";
+import ProductIntroduction from "../components/ProductIntroduction.astro";
+import Catalog from "../components/Catalog.astro";
+import BuyingGuide from "../components/BuyingGuide.astro";
+import Faq from "../components/Faq.astro";
+import {homeCategories} from "../lib/home-photos";
+import type {Product} from "../lib/catalog";
+
+const products = new Map((JSON.parse(readFileSync("public/data/catalog.json", "utf8")) as Product[])
+  .map(product => [product.id, product]));
+const example = products.get("7046");
+const selections = homeCategories.flatMap(([key, label, id]) => {
+  const photo = products.get(id)?.image;
+  return photo ? [{key, label, photo}] : [];
+});
+---
+<Layout compactHome>
+  <section class="home-banner" aria-labelledby="home-title">
+    <img class="hero-art" src="/hero-peach-freight.webp" alt="" width="1536" height="1024" fetchpriority="high" />
+    <div class="hero shell">
+      <div class="hero-copy">
+        <h1 id="home-title">LoveGoBuy <em>Spreadsheet.</em></h1>
+        <p class="hero-desc">Explore Weidian finds, compare product and warehouse photos, and choose where to buy.</p>
+        <form id="search-form" class="hero-search" action="/#catalog">
+          <label class="visually-hidden" for="query">Search products or Weidian ID</label><Icon name="search" />
+          <input type="search" id="query" name="q" placeholder="Search a product or Weidian ID" />
+          <a class="search-photo" href="/image-search/" aria-label="Search by image" title="Search by image"><Icon name="image" size={21} /></a>
+          <button class="button" type="submit">Search <Icon name="arrow" size={17} /></button>
+        </form>
+        <div class="hero-links">
+          <a href="/browse/?category=shoes#catalog">Shoes</a>
+          <a href="/browse/?category=hoodies-sweaters#catalog">Hoodies</a>
+          <a href="/qc/"><Icon name="qc" size={16} /> Check QC photos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section shell category-section" aria-labelledby="category-title">
+    <div class="section-heading"><div><h2 id="category-title">Browse by category</h2><p>Start with a style or explore the full spreadsheet.</p></div><a class="inline-arrow" href="/browse/">View all finds <Icon name="arrow" size={17}/></a></div>
+    <div class="category-grid">
+      {selections.map(({key,label,photo}) => <a class="category-card" href={"/browse/?category=" + key + "#catalog"}><img src={photo} alt="" width="240" height="190" loading="lazy" /><span>{label}<b aria-hidden="true">↗</b></span></a>)}
+    </div>
+  </section>
+  <Catalog home />
+  {example && <ProductIntroduction product={example} />}
+  <BuyingGuide home />
+  <Faq home />
+</Layout>

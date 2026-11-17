@@ -1,0 +1,59 @@
+---
+import {readFileSync} from "node:fs";
+import {buyUrl, categoryLabel, detailsUrl, priceLabel, upstream, type Product} from "../lib/catalog";
+
+const {product} = Astro.props as {product: Product};
+const item = product.weidianId;
+const photos = JSON.parse(readFileSync("public/data/gallery-" + item.slice(0, 4) + ".json", "utf8"))[item] as string[];
+const warehouse = JSON.parse(readFileSync("public/data/qc-featured.json", "utf8"))[item].images;
+const details = detailsUrl(item);
+const source = new URL(product.sourcePath, upstream).href;
+const facts = [
+  {label: "Catalog category", value: categoryLabel(product.category)},
+  {label: "Source marketplace", value: "Weidian"},
+  {label: "Weidian item ID", value: item},
+  {label: "Estimated item price", value: priceLabel(product.price), isPrice: true},
+  {label: "Listing photos", value: String(photos.length)},
+  {label: "Warehouse QC photos", value: String(warehouse.length)},
+];
+const steps = [
+  {title: "Check the listing photographs", body: "Open the product carousel and look through each view. Compare the overall shape and finish with close-ups of the neckline, cuffs and printed details. Use the original FindSpreadsheet listing to confirm you are looking at the same Weidian product."},
+  {title: "Use the warehouse photos", body: "The QC gallery shows warehouse photos associated with this listing. Use the shots to look at the print placement, stitching and visible measurements. After ordering, review your own warehouse inspection photos before submitting the parcel."},
+  {title: "Check sizing and seller options", body: "Open the current seller options through your shopping agent. Compare chest width, garment length and sleeve length with a similar item you already own. Check the measurement units and choose your size and color before paying."},
+  {title: "Work out the total price", body: "The spreadsheet shows an estimated item price in US dollars. Review the agent’s current item price and any domestic delivery charge. Once your items are in the warehouse, compare the available international routes, estimated parcel weight and shipping fees."},
+  {title: "Compare agents for the same item", body: "Use the product detail page to open LoveGoBuy or another supported shopping agent with the same Weidian ID. Compare the current options, warehouse photo service and routes available for your destination."},
+  {title: "Find similar products", body: "Use the product’s category or the related products below its detail page to compare alternatives. For visual comparison, open image search and select a reference photo to find similar listing and warehouse images."},
+];
+---
+<section class="shell section product-intro" id="product-introduction" aria-labelledby="product-intro-title">
+  <div class="section-heading">
+    <div>
+      <h2 id="product-intro-title">Product details and buying checklist</h2>
+      <p>Follow a real catalog example to compare listing photos, warehouse QC, sizes, price and shopping agents before ordering.</p>
+    </div>
+  </div>
+  <div class="intro-feature">
+    <a class="intro-photo" href={details} aria-label="Open the featured product details">
+      <img src={product.image} alt="" width="640" height="640" loading="lazy" />
+    </a>
+    <div class="intro-copy">
+      <h3 data-product-name={item}>{product.name}</h3>
+      <p>This black graphic crewneck is a Weidian listing in the FindSpreadsheet catalog. Open the product page for the complete gallery and agent links.</p>
+      <dl class="intro-facts">
+        {facts.map(({label,value,isPrice}) => <div><dt>{label}</dt><dd>{isPrice ? <bdi dir="ltr">{value}</bdi> : value}</dd></div>)}
+      </dl>
+      <div class="intro-actions">
+        <a class="button button-small" href={details}>View product details</a>
+        <a class="button button-small button-outline" href={"/qc/?id=" + item}>View warehouse QC</a>
+        <a class="button button-small button-outline" href={source} target="_blank" rel="noopener">FindSpreadsheet listing</a>
+        <a class="inline-arrow" href={buyUrl(item)} target="_blank" rel="sponsored noopener">Open on LoveGoBuy</a>
+      </div>
+    </div>
+  </div>
+  <details class="mobile-section-fold" open data-mobile-fold>
+    <summary>Expand the six-point buying checklist</summary>
+    <div class="intro-checklist">
+      {steps.map(({title,body}) => <article><h3>{title}</h3><p>{body}</p></article>)}
+    </div>
+  </details>
+</section>
