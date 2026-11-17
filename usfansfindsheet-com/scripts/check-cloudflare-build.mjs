@@ -53,3 +53,29 @@ for (const shard of manifest.shards) {
 }
 assert.equal(images, manifest.indexedImages);
 console.log(`Release checks passed: homepage, search, release metadata, and ${images.toLocaleString('en-US')} indexed images in ${manifest.shards.length} shards.`);
+
+const canonicalOrigin = 'https://usfansfindsheet.com';
+const publicRequest = path => worker.fetch(new Request(canonicalOrigin + path), env);
+const publicHome = await publicRequest('/?lang=zh-CN');
+assert.equal(publicHome.headers.get('x-robots-tag'), null);
+const publicHtml = await publicHome.text();
+assert(publicHtml.includes('<link rel="canonical" href="' + canonicalOrigin + '/">'));
+assert(!publicHtml.includes('<meta name="robots" content="noindex,nofollow"'));
+assert.match((await request('/')).headers.get('x-robots-tag'), /noindex/);
+assert.equal((await request('/sitemap.xml')).status, 404);
+
+const robots = await (await publicRequest('/robots.txt')).text();
+assert(robots.includes('Sitemap: ' + canonicalOrigin + '/sitemap.xml'));
+assert(!robots.includes('Disallow: /'));
+const xmlResponse = await publicRequest('/sitemap.xml');
+assert.equal(xmlResponse.status, 200);
+assert.match(xmlResponse.headers.get('content-type'), /^application\/xml/);
+const xml = await xmlResponse.text();
+const urls = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => match[1]);
+assert(xml.startsWith('<?xml') && xml.includes('http://www.sitemaps.org/schemas/sitemap/0.9'));
+assert.equal(urls.length, new Set(urls).size);
+assert(urls.every(url => url.startsWith(canonicalOrigin + '/')));
+assert(urls.some(url => url.includes('/product/?source=')));
+assert(urls.includes(canonicalOrigin + '/guides/how-to-buy/'));
+assert.equal((await publicRequest('/product/?source=%2Fshoes%2Finvalid-999999.html')).status, 404);
+console.log(`SEO checks passed: ${urls.length.toLocaleString('en-US')} unique sitemap URLs, public canonical, preview noindex.`);

@@ -1,10 +1,14 @@
 import fs from 'node:fs';import path from 'node:path';import {gzipSync} from 'node:zlib';
 import { releaseInfo } from './release-info.mjs';
+import { sitemapBody } from '../server/seo.mjs';
 const pages = process.argv.includes("--pages");
 const cloudflare = pages || process.argv.includes("--cloudflare");
-const files={};function walk(dir){for(const x of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,x.name);if(x.isDirectory())walk(p);else {const relative=p.slice(5);const key=relative.endsWith('index.html')?'/'+relative.slice(0,-10):'/'+relative;const compress=key.startsWith('/image-index/');files[key]={body:(compress?gzipSync(fs.readFileSync(p)):fs.readFileSync(p)).toString('base64'),...(compress?{encoding:'gzip'}:{}),type:p.endsWith('.html')?'text/html; charset=utf-8':p.endsWith('.png')?'image/png':p.endsWith('.webp')?'image/webp':p.endsWith('.jpg')||p.endsWith('.jpeg')?'image/jpeg':p.endsWith('.css')?'text/css':p.endsWith('.js')?'application/javascript':p.endsWith('.json')?'application/json':'text/plain'};}}}if (!cloudflare) walk('dist');
-const source=fs.readFileSync('src/lib/pricing.mjs','utf8').replaceAll('export ','')+'\n'+fs.readFileSync('server/purchase-images.mjs','utf8').replaceAll('export ','')+'\n'+fs.readFileSync('server/catalog.mjs','utf8').replaceAll('export ','')+'\n'+fs.readFileSync('server/search.mjs','utf8').replaceAll('export ','')+'\n'+fs.readFileSync('server/exchange-rates.mjs','utf8').replaceAll('export ','');const cats=fs.readFileSync('src/all-categories.json','utf8');
+const files={};function walk(dir){for(const x of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,x.name);if(x.isDirectory())walk(p);else {const relative=p.slice(5);const key=relative.endsWith('index.html')?'/'+relative.slice(0,-10):'/'+relative;const compress=key.startsWith('/image-index/');files[key]={body:(compress?gzipSync(fs.readFileSync(p)):fs.readFileSync(p)).toString('base64'),...(compress?{encoding:'gzip'}:{}),type:p.endsWith('.html')?'text/html; charset=utf-8':p.endsWith('.png')?'image/png':p.endsWith('.webp')?'image/webp':p.endsWith('.jpg')||p.endsWith('.jpeg')?'image/jpeg':p.endsWith('.css')?'text/css':p.endsWith('.js')?'application/javascript':p.endsWith('.json')?'application/json':p.endsWith('.xml')?'application/xml; charset=utf-8':'text/plain'};}}}
+const source=fs.readFileSync('src/lib/pricing.mjs','utf8').replaceAll('export ','')+'\n'+fs.readFileSync('server/purchase-images.mjs','utf8').replaceAll('export ','')+'\n'+fs.readFileSync('server/catalog.mjs','utf8').replaceAll('export ','')+'\n'+fs.readFileSync('server/search.mjs','utf8').replaceAll('export ','')+'\n'+fs.readFileSync('server/exchange-rates.mjs','utf8').replaceAll('export ','')+'\n'+fs.readFileSync('server/seo.mjs','utf8').replaceAll('export ','');const cats=fs.readFileSync('src/all-categories.json','utf8');
 const snapshot=fs.readFileSync('data/catalog-snapshot.json','utf8');
+fs.writeFileSync('dist/sitemap.xml', sitemapBody(JSON.parse(cats),
+  Object.values(JSON.parse(snapshot).pages).flatMap(page => page.products)));
+if (!cloudflare) walk('dist');
 const details=fs.readFileSync('data/product-details.json','utf8');
 const officialSnapshots=fs.readFileSync('data/usfans-purchase-images.json','utf8');
 const mainQc=fs.readFileSync('data/main-qc-snapshot.json','utf8');
@@ -48,6 +52,10 @@ const assets = ${JSON.stringify(assets)};
 const categories = ${cats};
 const release = ${JSON.stringify(releaseInfo())};
 export default {async fetch(request, env){const u=new URL(request.url);let route=u.pathname;
+const crawler = crawlerResponse(request, u);
+if (crawler) return crawler;
+let pageStatus = 200;
+if (route === '/product/' && !productSeoPath(u.searchParams.get('source'))) pageStatus = 404;
 if (route === '/api/health') {
   const headers = { 'cache-control': 'no-store', 'x-robots-tag': 'noindex, nofollow' };
   if (request.method !== 'GET') return new Response('Method not allowed', { status: 405, headers: { ...headers, allow: 'GET' } });
@@ -57,6 +65,11 @@ if(route==='/api/qc-image'){const item=getProductIndex()[u.searchParams.get('pro
 if (${cloudflare}) {
   const template = await env.ASSETS.fetch(request);
   const headers = new Headers(template.headers);
+  if (route === '/sitemap.xml' && template.ok) {
+    headers.set('content-type', 'application/xml; charset=utf-8');
+    headers.set('cache-control', 'public, max-age=300');
+    return new Response(template.body, { status: template.status, headers });
+  }
   headers.set('x-robots-tag', 'noindex, nofollow');
   if (route === '/image-index.json') headers.set('cache-control', 'public, max-age=60');
   if (route.startsWith('/image-index/')) headers.set('cache-control', 'public, max-age=31536000, immutable');
@@ -68,7 +81,10 @@ if (${cloudflare}) {
   if(!asset)return new Response('Page not found',{status:404});
   body=Uint8Array.from(atob(assetData.slice(asset.start,asset.end)),c=>c.charCodeAt(0));
 }
-if(asset.encoding==='gzip'){const json=new Blob([body]).stream().pipeThrough(new DecompressionStream('gzip'));return new Response(json,{headers:{'content-type':asset.type,'cache-control':'public, max-age=31536000, immutable','x-robots-tag':'noindex, nofollow'}})}if(asset.type.startsWith('text/html')){if(typeof body!=='string')body=new TextDecoder().decode(body);if(body.includes('<!--SEARCH-->')){const page=Math.max(1,Math.floor(Number(u.searchParams.get('page')||1))||1);body=body.replace('<!--SEARCH-->',renderSearch(u.searchParams.get('q')||'',page));body=body.replace('id="global-search"','id="global-search" value="'+esc((u.searchParams.get('q')||'').slice(0,200))+'"');}const marker=body.match(/<!--CATALOG:([\\w-]+)-->/);if(marker){const page=Number(u.searchParams.get('page')||1);if(!Number.isSafeInteger(page)||page<1||page>1000)return new Response('Invalid page',{status:400});try{body=body.replace(marker[0],await renderCatalog(marker[1],page,categories))}catch{body=body.replace(marker[0],failure)}}if(body.includes('<!--PRODUCT-->')){try{const productHtml=await renderProduct(u.searchParams.get('source')||'',categories);body=body.replace('<!--PRODUCT-->',productHtml);const productTitle=productHtml.match(new RegExp('<h1[^>]*>([^<]*)</h1>'))?.[1];if(productTitle)body=body.replace(body.slice(body.indexOf('<title>'),body.indexOf('</title>')+8),'<title>'+productTitle+' | USFans Findsheet</title>')}catch{body=body.replace('<!--PRODUCT-->',failure)}}}return new Response(body,{headers:{'content-type':asset.type,'cache-control':asset.type.startsWith('text/html')?'public, max-age=0, must-revalidate':route==='/image-index.json'?'public, max-age=60':'public, max-age=86400','x-robots-tag':'noindex, nofollow'}})}};`;
+if(asset.encoding==='gzip'){const json=new Blob([body]).stream().pipeThrough(new DecompressionStream('gzip'));return new Response(json,{headers:{'content-type':asset.type,'cache-control':'public, max-age=31536000, immutable','x-robots-tag':'noindex, nofollow'}})}if(asset.type.startsWith('text/html')){if(typeof body!=='string')body=new TextDecoder().decode(body);if(body.includes('<!--SEARCH-->')){const page=Math.max(1,Math.floor(Number(u.searchParams.get('page')||1))||1);body=body.replace('<!--SEARCH-->',renderSearch(u.searchParams.get('q')||'',page));body=body.replace('id="global-search"','id="global-search" value="'+esc((u.searchParams.get('q')||'').slice(0,200))+'"');}const marker=body.match(/<!--CATALOG:([\\w-]+)-->/);if(marker){const page=Number(u.searchParams.get('page')||1);if(!Number.isSafeInteger(page)||page<1||page>1000)return new Response('Invalid page',{status:400});try{body=body.replace(marker[0],await renderCatalog(marker[1],page,categories))}catch{pageStatus=503;body=body.replace(marker[0],failure)}}if(body.includes('<!--PRODUCT-->')){if(pageStatus===404){body=body.replace('<!--PRODUCT-->','<div class="notice">Product not found.</div>')}else try{const productHtml=await renderProduct(u.searchParams.get('source')||'',categories);body=body.replace('<!--PRODUCT-->',productHtml);const productTitle=productHtml.match(new RegExp('<h1[^>]*>([^<]*)</h1>'))?.[1];if(productTitle)body=body.replace(body.slice(body.indexOf('<title>'),body.indexOf('</title>')+8),'<title>'+productTitle+' | USFans Findsheet</title>')}catch{pageStatus=503;body=body.replace('<!--PRODUCT-->',failure)}}}
+const canonical = pageStatus === 200 && asset.type.startsWith('text/html') ? pageCanonical(u) : null;
+if (canonical) body = withCanonical(body, canonical);
+return new Response(request.method === 'HEAD' ? null : body,{status:pageStatus,headers:{'content-type':asset.type,'cache-control':asset.type.startsWith('text/html')?'public, max-age=0, must-revalidate':route==='/image-index.json'?'public, max-age=60':'public, max-age=86400',...(canonical||route==='/sitemap.xml'?{}:{'x-robots-tag':'noindex, nofollow'})}})}};`;
 if (cloudflare) {
   fs.renameSync('dist', 'dist-public-tmp');
   fs.mkdirSync('dist');
