@@ -38,3 +38,11 @@ image endpoint. Historical snapshot references carry no reusable signatures.
 Cloudflare builds validate the homepage, search API and every image-index shard
 before deploying. Each deployment message includes the source revision.
 Check the live source revision at `https://usfansfindsheet.com/api/health`.
+
+## Cloudflare Pages
+
+Connect the same GitHub repository and set production branch to `main`.
+Use root directory `usfansfindsheet-com`, build command `npm run build:pages`,
+output directory `dist/client` and include path `usfansfindsheet-com/*`.
+Use Node 24. The Pages advanced-mode entry point is generated as
+`dist/client/_worker.js` so dynamic catalog and search routes remain available.

@@ -1,6 +1,7 @@
 import fs from 'node:fs';import path from 'node:path';import {gzipSync} from 'node:zlib';
 import { releaseInfo } from './release-info.mjs';
-const cloudflare = process.argv.includes("--cloudflare");
+const pages = process.argv.includes("--pages");
+const cloudflare = pages || process.argv.includes("--cloudflare");
 const files={};function walk(dir){for(const x of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,x.name);if(x.isDirectory())walk(p);else {const relative=p.slice(5);const key=relative.endsWith('index.html')?'/'+relative.slice(0,-10):'/'+relative;const compress=key.startsWith('/image-index/');files[key]={body:(compress?gzipSync(fs.readFileSync(p)):fs.readFileSync(p)).toString('base64'),...(compress?{encoding:'gzip'}:{}),type:p.endsWith('.html')?'text/html; charset=utf-8':p.endsWith('.png')?'image/png':p.endsWith('.webp')?'image/webp':p.endsWith('.jpg')||p.endsWith('.jpeg')?'image/jpeg':p.endsWith('.css')?'text/css':p.endsWith('.js')?'application/javascript':p.endsWith('.json')?'application/json':'text/plain'};}}}if (!cloudflare) walk('dist');
 const source=fs.readFileSync('src/lib/pricing.mjs','utf8').replaceAll('export ','')+'\n'+fs.readFileSync('server/purchase-images.mjs','utf8').replaceAll('export ','')+'\n'+fs.readFileSync('server/catalog.mjs','utf8').replaceAll('export ','')+'\n'+fs.readFileSync('server/search.mjs','utf8').replaceAll('export ','')+'\n'+fs.readFileSync('server/exchange-rates.mjs','utf8').replaceAll('export ','');const cats=fs.readFileSync('src/all-categories.json','utf8');
 const snapshot=fs.readFileSync('data/catalog-snapshot.json','utf8');
@@ -76,3 +77,12 @@ if (cloudflare) {
   fs.rmSync('dist',{recursive:true});
 }
 fs.mkdirSync('dist/server',{recursive:true});fs.writeFileSync('dist/server/index.js',code);console.log(cloudflare ? 'Cloudflare Worker and static assets built.' : 'Embedded Astro pages and live catalog Worker built.');
+
+if (pages) {
+  fs.copyFileSync('dist/server/index.js', 'dist/client/_worker.js');
+  fs.writeFileSync('dist/client/_routes.json', JSON.stringify({
+    version: 1,
+    include: ['/*'],
+    exclude: [],
+  }));
+}

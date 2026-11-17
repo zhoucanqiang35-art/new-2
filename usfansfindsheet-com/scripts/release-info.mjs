@@ -12,9 +12,9 @@ function readGit(...args) {
 }
 
 export function releaseInfo() {
-  const sha = process.env.WORKERS_CI_COMMIT_SHA || readGit('rev-parse', 'HEAD');
+  const sha = process.env.WORKERS_CI_COMMIT_SHA || process.env.CF_PAGES_COMMIT_SHA || readGit('rev-parse', 'HEAD');
   const revision = /^[a-f0-9]{40}$/i.test(sha) ? sha : null;
-  const branch = process.env.WORKERS_CI_BRANCH || readGit('branch', '--show-current') || null;
+  const branch = process.env.WORKERS_CI_BRANCH || process.env.CF_PAGES_BRANCH || readGit('branch', '--show-current') || null;
   return { revision, branch };
 }
 
