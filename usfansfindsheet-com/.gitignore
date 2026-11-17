@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.astro/
+.openai/local/
+
+data/image-index-parts/
+__pycache__/
+
+data/gallery-harvest-parts/
+data/purchase-image-harvest-parts/
+data/qc-harvest-parts/
+
+*.sql
+data/image-feature-harvest-finished.signal
+
+data/image-publication.lock

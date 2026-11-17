@@ -1,0 +1,94 @@
+{
+  "en": [
+    "options may change the price",
+    "shipping excluded"
+  ],
+  "zh-CN": [
+    "所选款式可能影响价格",
+    "不含运费"
+  ],
+  "es": [
+    "las opciones pueden cambiar el precio",
+    "envío no incluido"
+  ],
+  "fr": [
+    "les options peuvent modifier le prix",
+    "hors frais de livraison"
+  ],
+  "de": [
+    "Optionen können den Preis ändern",
+    "Versand nicht enthalten"
+  ],
+  "it": [
+    "le opzioni possono cambiare il prezzo",
+    "spedizione esclusa"
+  ],
+  "pt": [
+    "as opções podem alterar o preço",
+    "frete não incluído"
+  ],
+  "nl": [
+    "opties kunnen de prijs wijzigen",
+    "exclusief verzendkosten"
+  ],
+  "pl": [
+    "opcje mogą zmienić cenę",
+    "bez kosztów wysyłki"
+  ],
+  "ru": [
+    "цена зависит от выбранных вариантов",
+    "без доставки"
+  ],
+  "uk": [
+    "ціна залежить від вибраних варіантів",
+    "без доставки"
+  ],
+  "tr": [
+    "seçenekler fiyatı değiştirebilir",
+    "kargo hariç"
+  ],
+  "ar": [
+    "قد تغيّر الخيارات السعر",
+    "الشحن غير مشمول"
+  ],
+  "he": [
+    "האפשרויות עשויות לשנות את המחיר",
+    "לא כולל משלוח"
+  ],
+  "ja": [
+    "選択した仕様により価格が変わる場合があります",
+    "送料別"
+  ],
+  "ko": [
+    "선택한 옵션에 따라 가격이 달라질 수 있습니다",
+    "배송비 별도"
+  ],
+  "vi": [
+    "tùy chọn có thể làm thay đổi giá",
+    "chưa gồm phí vận chuyển"
+  ],
+  "th": [
+    "ตัวเลือกอาจทำให้ราคาเปลี่ยนแปลง",
+    "ไม่รวมค่าจัดส่ง"
+  ],
+  "id": [
+    "pilihan dapat mengubah harga",
+    "belum termasuk ongkir"
+  ],
+  "ms": [
+    "pilihan boleh mengubah harga",
+    "tidak termasuk penghantaran"
+  ],
+  "hi": [
+    "विकल्पों से कीमत बदल सकती है",
+    "शिपिंग शामिल नहीं है"
+  ],
+  "sv": [
+    "val kan ändra priset",
+    "frakt ingår inte"
+  ],
+  "ro": [
+    "opțiunile pot modifica prețul",
+    "transportul nu este inclus"
+  ]
+}

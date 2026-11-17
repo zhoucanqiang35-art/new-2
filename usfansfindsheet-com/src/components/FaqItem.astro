@@ -1,0 +1,9 @@
+---
+const { item, expanded = false } = Astro.props;
+const [question, answer, source] = item;
+---
+<details class="faq-item" open={expanded}>
+  <summary>{question}</summary>
+  <p>{answer}</p>
+  {source && <a class="faq-source" href={source} target="_blank" rel="noopener">Official USFans source →</a>}
+</details>

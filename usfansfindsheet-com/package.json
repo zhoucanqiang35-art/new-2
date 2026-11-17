@@ -1,0 +1,1 @@
+{"name":"usfansfindsheet","version":"0.1.0","type":"module","scripts":{"build":"astro build && node scripts/build-worker.mjs","dev":"node scripts/preview-worker.mjs","build:cloudflare":"astro build && node scripts/build-worker.mjs --cloudflare","deploy:cloudflare":"wrangler deploy"},"dependencies":{"astro":"7.4.12"},"devDependencies":{"wrangler":"4.163.0"}}
