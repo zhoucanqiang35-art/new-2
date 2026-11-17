@@ -2,6 +2,10 @@
 import {registration} from "../lib/catalog";
 import "../styles/style.css";
 const {title = "LoveGoBuy Spreadsheet | Findsheet", description = "Explore Weidian finds from FindSpreadsheet, search by photo, and open the original listing on LoveGoBuy."} = Astro.props;
+const navigation = [
+  ["Home", "/"], ["Browse finds", "/browse/"], ["QC Finder", "/qc/"],
+  ["Buying guide", "/guide/how-to-buy/"], ["FAQ", "/faq/"], ["SEO", "/seo/"],
+];
 ---
 <!doctype html>
 <html lang="en">
@@ -26,7 +30,7 @@ const {title = "LoveGoBuy Spreadsheet | Findsheet", description = "Explore Weidi
         <span>FINDSHEET</span>
       </a>
       <nav aria-label="Main navigation">
-        <a href="/#catalog">Browse finds</a><a href="/qc/">QC Finder</a><a href="/#guide">Buying guide</a>
+        {navigation.map(([label, href]) => <a href={href} aria-current={Astro.url.pathname === href ? "page" : undefined}>{label}</a>)}
       </nav>
       <a class="button button-small" href={registration} rel="sponsored noopener" target="_blank">Join LoveGoBuy <span aria-hidden="true">↗</span></a>
     </div>
@@ -35,7 +39,7 @@ const {title = "LoveGoBuy Spreadsheet | Findsheet", description = "Explore Weidi
   <footer class="site-footer">
     <div class="shell foot-inner">
       <div><a class="wordmark" href="/"><img src="/lovegobuy-logo.png" width="122" height="23" alt="LoveGoBuy" /><span>FINDSHEET</span></a><p>Independent shopping guide. Some outbound links are referral links.</p></div>
-      <div><a href="https://findspreadsheet.com/">Catalog by FindSpreadsheet ↗</a><a href={registration} rel="sponsored noopener" target="_blank">Open LoveGoBuy ↗</a></div>
+      <div><a href="/guide/how-to-buy/">Buying guide</a><a href="/faq/">FAQ</a><a href="https://findspreadsheet.com/">Catalog by FindSpreadsheet ↗</a><a href={registration} rel="sponsored noopener" target="_blank">Open LoveGoBuy ↗</a></div>
     </div>
   </footer>
 </body>

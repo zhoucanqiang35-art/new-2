@@ -12,3 +12,10 @@
 - 预览设 noindex 和 robots Disallow。正式上线前仍需取得主站实时目录、搜索、搜图和 QC 接入，并确认价格及排序契约和正式域名部署。
 - 预览地址：https://lovegobuy-finds-preview.zhoucanqiang35.chatgpt.site/
 - GitHub 预览源代码目标：zhoucanqiang35-art/new-2 的 lovegobuy-preview 分支，目录 lovegobuyfindsheet-com。
+
+## 2026-11-17 导航与图文购买指南
+
+- 顶部导航提供独立路由：Home /、Browse finds /browse/、QC Finder /qc/、Buying guide /guide/how-to-buy/、FAQ /faq/、SEO /seo/。独立目录继续使用既有搜索、分类、排序、分页和搜图组件。移动端展示同样的导航入口。
+- 首页与独立页共用 FAQ 和购买指南内容。SEO 页覆盖 Weidian 选品、QC、搜图和购买流程，并链接对应工具。
+- 指南对照 LoveGoBuy Help Center https://www.lovegobuy.com/article/index?article_id=10003 编写。6 个步骤依次为商品搜索、查 QC、打开购买页、选规格并支付商品款、仓库验货并提交包裹、付国际运费并追踪。本站操作图使用真实界面，后半程使用官方公开示例并标明来源。已遮盖官方示例中的订单和物流号码。
+- 操作样例：7858402075 搜商品与购买跳转，7321418559 展示 4 张实际仓库 QC 照片。线上预览继续使用 HR595U 注册链接、161CPG 购买参数及 noindex。

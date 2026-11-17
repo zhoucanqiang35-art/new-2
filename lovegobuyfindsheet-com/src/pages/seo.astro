@@ -1,0 +1,29 @@
+---
+import Layout from "../components/Layout.astro";
+const resources = [
+  {title: "LoveGoBuy Weidian finds", description: "Search by product ID or name and browse shoes, streetwear and accessories.", href: "/browse/", label: "Browse Weidian finds"},
+  {title: "LoveGoBuy QC photos", description: "Check the spreadsheet’s warehouse-photo coverage with a Weidian link or product ID.", href: "/qc/", label: "Open QC Finder"},
+  {title: "How to buy on LoveGoBuy", description: "Follow the illustrated steps from a spreadsheet listing through checkout, warehouse inspection and parcel tracking.", href: "/guide/how-to-buy/", label: "Read the buying guide"},
+];
+---
+<Layout title="LoveGoBuy Spreadsheet SEO | Weidian Finds, QC & Buying Guide" description="Explore LoveGoBuy Weidian finds, warehouse QC photos, product image search and an illustrated guide to ordering through LoveGoBuy.">
+  <section class="shell section resource-page" aria-labelledby="seo-title">
+    <div class="content-heading">
+      <h1 id="seo-title">LoveGoBuy finds, QC &amp; buying resources</h1>
+      <p>Find products on Weidian, check available QC photos, and follow the steps to order through LoveGoBuy.</p>
+    </div>
+    <div class="resource-grid">
+      {resources.map(resource => <article class="resource-card">
+        <h2>{resource.title}</h2>
+        <p>{resource.description}</p>
+        <a class="inline-arrow" href={resource.href}>{resource.label} <span aria-hidden="true">↗</span></a>
+      </article>)}
+    </div>
+    <div class="resource-topics">
+      <h2>Search by product photo</h2>
+      <p>Have a reference photo? Open the <a href="/browse/">catalog</a> and choose <strong>Search by photo</strong> to see visually similar listings. You can also start with <a href="/browse/?category=shoes#catalog">shoes</a>, <a href="/browse/?category=hoodies-sweaters#catalog">hoodies</a> or <a href="/browse/?category=jersey#catalog">jerseys</a>.</p>
+      <h2>Product photos and warehouse photos</h2>
+      <p>The product gallery shows listing images. Where available, the QC section shows warehouse inspection photos. The <a href="/faq/">FAQ</a> explains QC coverage and the two stages of payment.</p>
+    </div>
+  </section>
+</Layout>

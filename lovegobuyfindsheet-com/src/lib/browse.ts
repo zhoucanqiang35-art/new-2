@@ -210,7 +210,7 @@ imageInput.addEventListener("change", async () => {
   }
 });
 readLocation();
-if (location.search) void render({update: false});
+if (location.search || location.pathname === "/browse/") void render({update: false});
 else {
   // Keep the editorial selection visible while enabling pagination into the full catalog.
   void products().then(all => {

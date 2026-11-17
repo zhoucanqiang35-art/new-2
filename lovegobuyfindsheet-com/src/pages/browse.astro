@@ -1,0 +1,17 @@
+---
+import Layout from "../components/Layout.astro";
+import Catalog from "../components/Catalog.astro";
+import Icon from "../components/Icon.astro";
+---
+<Layout title="Browse LoveGoBuy Finds | Weidian Product Catalog" description="Search and filter Weidian finds by name, product ID, category or reference photo.">
+  <section class="shell utility-heading content-heading" aria-labelledby="browse-title">
+    <h1 id="browse-title">Browse LoveGoBuy finds</h1>
+    <p>Search Weidian listings by product name or ID, then filter by category and price.</p>
+    <form id="search-form" class="hero-search" action="/browse/#catalog">
+      <label class="visually-hidden" for="query">Search products or Weidian ID</label><Icon name="search" />
+      <input type="search" id="query" name="q" placeholder="Search a product or Weidian ID" />
+      <button class="button" type="submit">Search <Icon name="arrow" size={17} /></button>
+    </form>
+  </section>
+  <Catalog />
+</Layout>

@@ -1,0 +1,19 @@
+---
+const {home = false} = Astro.props;
+const Heading = home ? "h2" : "h1";
+---
+<section class="shell section faq" id="faq" aria-labelledby="faq-title">
+  <div class="section-heading">
+    <div>
+      <Heading id="faq-title">LoveGoBuy spreadsheet FAQ</Heading>
+      <p>Answers about finding, checking and ordering Weidian products.</p>
+    </div>
+    {home && <a class="inline-arrow" href="/faq/">Open FAQ <span aria-hidden="true">↗</span></a>}
+  </div>
+  <details><summary>What is the LoveGoBuy spreadsheet?</summary><p>It is an independent catalog of Weidian finds from FindSpreadsheet. Use <a href="/browse/">Browse finds</a> to compare products and open a listing on LoveGoBuy.</p></details>
+  <details><summary>Can I search with a product photo?</summary><p>Yes. Select <strong>Search by photo</strong> in the catalog and choose a reference photo. The preview ranks catalog photos by visual similarity and processes the upload in your browser.</p></details>
+  <details><summary>Where do the prices and QC photos come from?</summary><p>Catalog prices are snapshot values in Chinese yuan. Confirm the current price on LoveGoBuy. Available QC photos come from FindSpreadsheet’s warehouse-photo feed and may show an earlier unit of the same listing.</p></details>
+  <details><summary>What if a product has no QC photos?</summary><p>Try the Weidian link or product ID in <a href="/qc/">QC Finder</a>. If photos are still unavailable, use the listing gallery to review seller images. After ordering, check your own item’s inspection photos in your LoveGoBuy warehouse.</p></details>
+  <details><summary>When do I pay for the item and international shipping?</summary><p>LoveGoBuy collects the item cost at checkout. International shipping is paid when you submit the parcel from the warehouse and choose a route. See the <a href="/guide/how-to-buy/">buying guide</a> for the full flow.</p></details>
+  <details><summary>Where do I track a parcel?</summary><p>Open <strong>Parcels</strong> in your LoveGoBuy account after dispatch. The parcel record shows the tracking information when it’s available.</p></details>
+</section>
