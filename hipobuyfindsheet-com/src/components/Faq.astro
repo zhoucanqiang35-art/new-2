@@ -1,0 +1,40 @@
+---
+import Text from './Text.astro';
+const { standalone = false } = Astro.props;
+const groups = [
+  ['faqFindGroup', [1, 2, 5, 7, 8, 16]],
+  ['faqQcGroup', [3, 9, 10, 11]],
+  ['faqShipGroup', [4, 6, 12, 13, 14, 15]],
+];
+const resources = {
+  2: ['spreadsheet', '/spreadsheet/'],
+  5: ['imageSearch', '/image-search/'],
+  6: ['guideSignup', 'https://hipobuy.com/register'],
+  7: ['officialGuide', 'https://hipobuy.com/notice/1902974843402932226'],
+  9: ['findQc', '/qc/'],
+  12: ['shippingEstimator', 'https://hipobuy.com/estimation'],
+  14: ['buyingGuide', '/how-to-buy/'],
+  15: ['buyingGuide', '/how-to-buy/'],
+  16: ['saved', '/saved/'],
+};
+---
+<section class:list={["container", "section", "faq-section", {"faq-full": standalone}]} aria-labelledby={standalone ? 'faq-page-title' : 'faq-title'}>
+  {!standalone && <div class="section-head"><h2 id="faq-title"><Text id="faqTitle" /></h2><Text as="a" id="faq" href="/faq/" class="text-link" /></div>}
+  <div class="faq-groups">
+    {groups.map(([group, numbers]) => <section class="faq-group">
+      <Text as={standalone ? 'h2' : 'h3'} id={group} />
+      <div class="faq-list">
+        {(standalone ? numbers : numbers.slice(0, 2)).map((number) => {
+          const resource = resources[number];
+          const Answer = standalone ? 'article' : 'details';
+          const Question = standalone ? 'h3' : 'summary';
+          return <Answer id={'faq-' + number} class={standalone ? 'faq-answer' : undefined}>
+            <Text as={Question} id={'faq' + number} />
+            <Text as="p" id={'faq' + number + 'Body'} />
+            {resource && <Text as="a" id={resource[0]} href={resource[1]} class="inline-link" target={resource[1].startsWith('http') ? '_blank' : undefined} rel={resource[1].startsWith('http') ? 'noopener noreferrer' : undefined} />}
+          </Answer>;
+        })}
+      </div>
+    </section>)}
+  </div>
+</section>

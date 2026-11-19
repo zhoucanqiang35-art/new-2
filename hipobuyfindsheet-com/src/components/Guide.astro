@@ -1,0 +1,46 @@
+---
+import Text from './Text.astro';
+import { registrationUrl } from '../lib/catalog.mjs';
+import { copy } from '../lib/messages.mjs';
+const official = 'https://hipobuy.com/notice/1902974843402932226';
+const { standalone = false } = Astro.props;
+const StepText = standalone ? 'div' : 'details';
+const stepImages = [
+  ['stepFind', [['01-search.webp','officialScreen']]],
+  ['stepOpen', [['02-open-link.webp','officialScreen'], ['03-options.webp','officialScreen']]],
+  ['stepOrder', [['04-confirm.webp','officialScreen'], ['05-payment.webp','officialScreen']]],
+  ['stepWarehouse', [['06-warehouse.webp','officialScreen']]],
+  ['stepShip', [['07-submit-parcel.webp','officialScreen'], ['08-tracking.webp','officialScreen']]],
+];
+---
+<section class="container section guide-section" aria-labelledby="guide-steps-title">
+  <div class="section-head">
+    <div>
+      {!standalone && <Text as="p" id="buyingGuide" class="kicker" />}
+      <h2 id="guide-steps-title"><Text id={standalone ? 'guideSteps' : 'guideTitle'} /></h2>
+    </div>
+    {!standalone && <Text as="a" id="buyingGuide" href="/how-to-buy/" class="text-link" />}
+  </div>
+  <ol class="illustrated-steps">
+    {stepImages.map(([key, files]) => <li>
+      <StepText class:list={['guide-step-text', {'home-disclosure': !standalone}]} open={standalone ? undefined : true}>
+        {standalone ? <Text as="h3" id={key} /> : <summary><Text as="h3" id={key} /></summary>}
+        <Text as="p" id={key + 'Body'} />
+        {key === 'stepFind' && <Text as="a" id="openProduct" href="/spreadsheet/?q=7869664333" class="inline-link" />}
+      </StepText>
+      {files.length > 0 && <div class="step-images">
+        {files.map(([file, label]) => <figure>
+          <a href={'/guide-images/' + file} target="_blank" rel="noopener noreferrer">
+            <img src={'/guide-images/' + file} alt={copy(key)} data-i18n-alt={key} loading="lazy" decoding="async" />
+          </a>
+          <Text as="figcaption" id={label} />
+        </figure>)}
+      </div>}
+    </li>)}
+  </ol>
+  <div class="tool-samples guide-links">
+    <Text as="a" id="officialGuide" href={official} target="_blank" rel="noopener noreferrer" />
+    <Text as="a" id="shippingEstimator" href="https://hipobuy.com/estimation" target="_blank" rel="noopener noreferrer" />
+    <Text as="a" id="guideSignup" href={registrationUrl} target="_blank" rel="noopener noreferrer" />
+  </div>
+</section>

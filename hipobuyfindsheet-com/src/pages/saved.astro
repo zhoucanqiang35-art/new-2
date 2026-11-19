@@ -1,0 +1,11 @@
+---
+import Layout from '../components/Layout.astro';
+import Text from '../components/Text.astro';
+---
+<Layout title="Saved products | Hipobuy Findsheet" description="Reopen Weidian listings saved on this device.">
+  <div class="container inner-hero"><Text as="h1" id="saved" /><Text as="a" id="browseMore" class="button button-orange" href="/spreadsheet/" /></div>
+  <section class="container results-section"><p id="saved-message" class="result-status" role="status"></p><div id="saved-results" class="product-grid"></div></section>
+</Layout>
+<script>
+  import '../lib/saved.mjs';
+</script>

@@ -1,0 +1,46 @@
+---
+import Text from './Text.astro';
+import { productUrl, sourceOrigin } from '../lib/catalog.mjs';
+const { product } = Astro.props;
+const href = productUrl(product.weidianId);
+const qcExample = '/product/?id=7321418559';
+const topics = [
+  ['productIntroGallery', null],
+  ['productIntroVariants', null],
+  ['productIntroPrice', null],
+  ['productIntroAgent', ['mainListing', new URL(product.sourcePath, sourceOrigin).href, true]],
+  ['productIntroQc', ['qcExample', qcExample]],
+  ['productIntroRelated', ['imageSearch', '/image-search/']],
+];
+---
+<section class="container section product-intro" aria-labelledby="product-intro-title">
+  <div class="section-head">
+    <h2 id="product-intro-title"><Text id="productIntroTitle" /></h2>
+  </div>
+  <Text as="p" id="productIntroLead" class="product-intro-lead" />
+  <div class="product-intro-grid">
+    <article class="intro-example">
+      <a href={href} class="intro-photo">
+        <img src="/images/contrast-seam-shirt-colors.webp" alt={product.name} width="800" height="697" loading="lazy" decoding="async" />
+      </a>
+      <div class="intro-example-copy">
+        <Text as="p" id="productIntroExample" class="kicker" />
+        <h3><a href={href}>{product.name}</a></h3>
+        <dl class="intro-facts">
+          <Text as="dt" id="marketplace" /><dd>Weidian</dd>
+          <Text as="dt" id="itemId" /><dd>{product.weidianId}</dd>
+          <Text as="dt" id="category" /><Text as="dd" id={'category.' + product.category} />
+          <Text as="dt" id="referencePrice" /><dd>¥{product.price}</dd>
+        </dl>
+        <Text as="a" id="openProduct" href={href} class="button button-orange" />
+      </div>
+    </article>
+    <div class="intro-topics">
+      {topics.map(([key, link]) => <details class="intro-topic home-disclosure" open>
+        <summary><Text as="h3" id={key} /></summary>
+        <Text as="p" id={key + 'Body'} />
+        {link && <Text as="a" class="inline-link" id={link[0]} href={link[1]} target={link[2] ? '_blank' : undefined} rel={link[2] ? 'noopener noreferrer' : undefined} />}
+      </details>)}
+    </div>
+  </div>
+</section>

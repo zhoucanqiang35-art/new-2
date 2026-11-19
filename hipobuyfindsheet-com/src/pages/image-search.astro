@@ -1,0 +1,29 @@
+---
+import Layout from '../components/Layout.astro';
+import Text from '../components/Text.astro';
+import Icon from '../components/Icon.astro';
+---
+<Layout title="Hipobuy Image Search | Hipobuy Findsheet" description="Search the Findspreadsheet catalog by uploading a reference image." page="image-search">
+  <div class="container inner-hero"><Text id="imageSearch" as="h1"/><Text id="imageLead" as="p"/></div>
+  <section class="container tool-page">
+    <div class="search-tool-grid">
+      <div class="upload-panel">
+        <Icon name="camera" size={36}/><Text as="label" id="choosePhoto" for="image-file" />
+        <input id="image-file" type="file" accept="image/jpeg,image/png,image/webp" class="visually-hidden" />
+        <button type="button" class="button" id="image-example"><Text id="samplePhoto" /></button>
+        <img id="image-preview" width="150" height="150" alt="" hidden />
+      </div>
+      <aside class="qc-shortcut">
+        <Icon name="shield" size={30} />
+        <Text as="h2" id="qc" />
+        <Text as="p" id="qcLead" />
+        <Text as="a" id="findQc" href="/qc/" class="button button-orange" />
+      </aside>
+    </div>
+    <p id="image-status" class="result-status" role="status"></p>
+    <div id="image-results" class="product-grid"></div>
+  </section>
+</Layout>
+<script>
+  import '../lib/image-search.mjs';
+</script>

@@ -1,0 +1,10 @@
+---
+import Layout from '../components/Layout.astro';
+import Text from '../components/Text.astro';
+---
+<Layout title="Product Details | Hipobuy Findsheet" description="Review reference pricing, seller images and available QC for a Weidian listing before opening Hipobuy." page="spreadsheet">
+  <section class="container product-shell"><p class="crumb"><Text as="a" id="spreadsheet" href="/spreadsheet/" /> / <Text id="productDetails" /></p><div id="product-detail" aria-live="polite"><Text as="p" id="loadingProduct" /></div></section>
+</Layout>
+<script>
+  import '../lib/detail.mjs';
+</script>

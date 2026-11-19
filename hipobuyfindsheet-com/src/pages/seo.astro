@@ -1,0 +1,16 @@
+---
+import Layout from '../components/Layout.astro';
+import Text from '../components/Text.astro';
+const topics = [
+  ['seoFinds', 'seoFindsBody', 'spreadsheet', '/spreadsheet/'],
+  ['imageSearch', 'imageLead', 'findByPhoto', '/image-search/'],
+  ['qc', 'seoQcBody', 'findQc', '/qc/'],
+  ['guideTitle', 'seoOrderBody', 'buyingGuide', '/how-to-buy/'],
+];
+---
+<Layout title="Hipobuy Spreadsheet Search Guide | Finds, QC & Image Search" description="Learn how to find Hipobuy product links, browse Weidian finds and check warehouse photos before placing an order." page="seo">
+  <div class="container inner-hero"><Text as="h1" id="seoTitle" /><Text as="p" id="seoLead" /></div>
+  <div class="container seo-topics">
+    {topics.map(([heading, description, label, href]) => <section class="detail-panel"><Text id={heading} as="h2" /><Text id={description} as="p" /><Text id={label} as="a" href={href} class="inline-link" /></section>)}
+  </div>
+</Layout>

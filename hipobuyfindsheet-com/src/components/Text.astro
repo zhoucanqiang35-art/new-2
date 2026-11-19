@@ -1,0 +1,5 @@
+---
+import { copy, message } from '../lib/messages.mjs';
+const { id, as: Tag = 'span', args = [], ...attributes } = Astro.props;
+---
+<Tag {...attributes} {...message(id, ...args)}>{copy(id, ...args)}</Tag>

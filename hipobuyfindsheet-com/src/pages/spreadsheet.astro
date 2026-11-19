@@ -1,0 +1,25 @@
+---
+import Layout from '../components/Layout.astro';
+import Text from '../components/Text.astro';
+import Icon from '../components/Icon.astro';
+import catalog from '../../public/data/catalog.json';
+import { copy } from '../lib/messages.mjs';
+const categories = [...new Set(catalog.map((row) => row.category))].sort();
+---
+<Layout title="Browse the Hipobuy Spreadsheet | Hipobuy Findsheet" description="Search Weidian products by name, ID or category and compare reference prices." page="spreadsheet" showShopping>
+  <div class="container inner-hero"><Text as="p" id="directoryKicker" class="kicker" /><Text as="h1" id="spreadsheetTitle" /><Text as="p" id="listingCount" args={[catalog.length.toLocaleString('en')]} /></div>
+  <section class="container results-section" data-directory>
+    <form id="filters" class="filters">
+      <label class="filter-search"><Icon name="search"/><input type="search" name="q" placeholder={copy('searchPlaceholder')} data-i18n-placeholder="searchPlaceholder" aria-label={copy('search')} data-i18n-label="search" /></label>
+      <label><Text id="category" class="visually-hidden" /><select name="category"><Text as="option" id="allCategories" value="" />{categories.map((category) => <Text as="option" id={'category.'+category} value={category} />)}</select></label>
+      <label><Text id="sort" class="visually-hidden" /><select name="sort"><Text as="option" id="latest" value="" /><Text as="option" id="priceLow" value="low" /><Text as="option" id="priceHigh" value="high" /><Text as="option" id="az" value="name" /></select></label>
+      <Text as="button" id="apply" class="button button-orange" type="submit" />
+    </form>
+    <p class="result-status" id="result-status" role="status"><Text id="loading" /></p>
+    <div id="results" class="product-grid"></div>
+    <nav class="pagination" id="pagination" aria-label="Product pages" hidden><button class="button" type="button" id="previous"><Text id="previous" /></button><span id="page-number"></span><button class="button" type="button" id="next"><Text id="next" /></button></nav>
+  </section>
+</Layout>
+<script>
+  import '../lib/directory.mjs';
+</script>

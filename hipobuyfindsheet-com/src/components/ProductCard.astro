@@ -1,0 +1,17 @@
+---
+import { productUrl } from '../lib/catalog.mjs';
+import Text from './Text.astro';
+import Icon from './Icon.astro';
+import { copy } from '../lib/messages.mjs';
+const { product, image = product.image } = Astro.props;
+---
+<article class="product-card">
+  <div class="product-media"><a class="product-photo" href={productUrl(product.weidianId)}>
+    <img src={image} alt={product.name} width="350" height="300" loading="lazy" />
+  </a><button class="favorite-icon" type="button" data-favorite={product.weidianId} aria-label={copy('save')} data-i18n-label="save" aria-pressed="false"><Icon name="heart" size={18} /></button></div>
+  <div class="product-info">
+    <Text id={'category.' + product.category} class="product-category" />
+    <a class="product-name" href={productUrl(product.weidianId)}>{product.name}</a>
+    {product.price && <strong class="product-price" data-price-amount={product.price}>¥{product.price}</strong>}
+  </div>
+</article>

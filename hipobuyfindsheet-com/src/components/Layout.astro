@@ -1,0 +1,63 @@
+---
+import Icon from './Icon.astro';
+import Text from './Text.astro';
+import ShoppingMenu from './ShoppingMenu.astro';
+import { registrationUrl } from '../lib/catalog.mjs';
+import { languages, copy } from '../lib/messages.mjs';
+import '../styles/site.css';
+import '../styles/festival.css';
+const { title, description, page = '', showShopping = false } = Astro.props;
+const links = [['home','/',''],['spreadsheet','/spreadsheet/','spreadsheet'],['imageSearch','/image-search/','image-search'],['buyingGuide','/how-to-buy/','how-to-buy'],['faq','/faq/','faq']];
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content={description} />
+  <meta name="theme-color" content="#fff8ec" />
+  <title>{title}</title>
+  <link rel="icon" href="/brand/favicon.png" type="image/png" />
+</head>
+<body>
+  <Text as="a" id="skip" class="skip" href="#main" />
+  <header class="header"><div class="container header-inner">
+    <a class="brand" href="/" aria-label="Hipobuy Findsheet">
+      <img src="/brand/logo.png" alt="Hipobuy" width="132" height="32" />
+      <span>Findsheet</span>
+    </a>
+    <nav class="navigation" aria-label="Main navigation">
+      {links.map(([key, href, pageKey]) => <Text as="a" id={key} href={href} aria-current={page === pageKey ? 'page' : undefined} />)}
+    </nav>
+    <div class="header-actions">
+      {showShopping && <ShoppingMenu />}
+      <details id="language-menu" class="disclosure language-menu">
+        <summary class="button small" aria-label={copy('language')} data-i18n-label="language">
+          <Icon name="globe" size={17} /><span id="language-name">English</span><Icon name="chevron" size={14} />
+        </summary>
+        <div class="disclosure-panel">
+          <Text as="p" id="language" class="disclosure-heading"/>
+          <div class="language-options">
+            {languages.map(([code, label]) => <button type="button" lang={code} data-language={code} aria-pressed={code === 'en'}>{label}</button>)}
+          </div>
+          <p id="language-status" role="status"></p>
+        </div>
+      </details>
+      <Text as="a" id="join" class="button small button-dark signup" href={registrationUrl} target="_blank" rel="noopener noreferrer" />
+      <details class="mobile-nav"><summary aria-label={copy('menu')} data-i18n-label="menu"><Icon name="menu" /></summary>
+        <nav aria-label="Mobile navigation">{links.map(([key, href, pageKey]) => <Text as="a" id={key} href={href} aria-current={page === pageKey ? 'page' : undefined} />)}<Text as="a" id="join" class="mobile-signup" href={registrationUrl} target="_blank" rel="noopener noreferrer" /></nav>
+      </details>
+    </div>
+  </div></header>
+  <main id="main" class:list={{'home-main': Astro.url.pathname === '/', 'faq-main': page === 'faq'}}><slot /></main>
+  <footer class="footer"><div class="container footer-inner">
+    <div><a class="footer-brand" href="/">Hipobuy Findsheet</a><Text as="p" id="powered" /></div>
+    <div class="footer-links"><Text as="a" id="spreadsheet" href="/spreadsheet/" /><Text as="a" id="buyingGuide" href="/how-to-buy/" /><Text as="a" id="faq" href="/faq/" /><Text as="a" id="seo" href="/seo/" /><a href="https://findspreadsheet.com/">Findspreadsheet.com</a></div>
+  </div></footer>
+</body>
+</html>
+<script>
+  import '../lib/language.mjs';
+  import '../lib/shopping.mjs';
+</script>

@@ -1,0 +1,86 @@
+---
+import Layout from '../components/Layout.astro';
+import Icon from '../components/Icon.astro';
+import ProductCard from '../components/ProductCard.astro';
+import ProductIntro from '../components/ProductIntro.astro';
+import Guide from '../components/Guide.astro';
+import Text from '../components/Text.astro';
+import Faq from '../components/Faq.astro';
+import catalog from '../../public/data/catalog.json';
+import { copy } from '../lib/messages.mjs';
+const example = catalog.find((product) => product.weidianId === '7869664333');
+const selected = ['9018','7079','8477','7357','6297','8563','8648','7953']
+  .map((id) => catalog.find((row) => row.id === id)).filter(Boolean);
+const shortcuts = [
+  ['shoes','shoe'],['t-shirts','shirt'],['hoodies-sweaters','layers'],
+  ['pants-shorts','layers'],['accessories','cap'],['jersey','shirt'],
+];
+const ivoryGift = '/images/hero-gift-ivory.webp';
+const espressoGift = '/images/hero-gift-espresso.webp';
+const shoppingTools = [
+  { href: '/image-search/', icon: 'camera', title: 'findByPhoto', description: 'imageLead' },
+  { href: '/qc/', icon: 'shield', title: 'qc', description: 'qcLead' },
+  { href: '/how-to-buy/', icon: 'box', title: 'guideTitle', description: 'guideLead' },
+];
+---
+<Layout title="Hipobuy Spreadsheet | Product Finds & QC Photos" description="Browse Weidian finds, search products by photo and check available warehouse QC on Hipobuy Findsheet.">
+  <section class="hero-wrap">
+    <div class="container hero">
+      <div class="hero-copy">
+        <p class="kicker"><span></span> <Text id="directoryKicker" /></p>
+        <h1><Text id="spreadsheetTitle" /></h1>
+        <Text as="p" id="heroLead" class="lede" />
+        <form class="search-box" action="/spreadsheet/">
+          <Icon name="search" />
+          <input name="q" aria-label={copy('search')} data-i18n-label="search" placeholder={copy('searchPlaceholder')} data-i18n-placeholder="searchPlaceholder" />
+          <Text as="button" id="search" class="button button-orange" type="submit" />
+        </form>
+      </div>
+      <div class="hero-gift-field" aria-hidden="true">
+        <img class="hero-gift gift-main" src={espressoGift} alt="" fetchpriority="high" />
+        <img class="hero-gift gift-left" src={ivoryGift} alt="" decoding="async" />
+        <img class="hero-gift gift-right" src={ivoryGift} alt="" decoding="async" />
+        <img class="hero-gift gift-upper-left" src={espressoGift} alt="" decoding="async" />
+        <img class="hero-gift gift-upper-right" src={espressoGift} alt="" decoding="async" />
+        <img class="hero-gift gift-lower-left" src={ivoryGift} alt="" decoding="async" />
+        <img class="hero-gift gift-lower-right" src={ivoryGift} alt="" decoding="async" />
+        <img class="hero-gift gift-far-right" src={espressoGift} alt="" decoding="async" />
+      </div>
+      <div class="hero-tools">
+        {shoppingTools.map(({href, icon, title, description}) => <a href={href}>
+          <Icon name={icon} size={24} />
+          <Text as="strong" id={title} />
+          <Text as="span" id={description} class="hero-tool-description" />
+        </a>)}
+      </div>
+    </div>
+  </section>
+  <section class="container section categories" aria-labelledby="category-title">
+    <div class="section-head"><h2 id="category-title"><Text id="browseCategory" /></h2><Text as="a" id="allProducts" class="text-link" href="/spreadsheet/" /></div>
+    <div class="category-grid">{shortcuts.map(([cat, icon]) => <a href={'/spreadsheet/?category=' + cat}><span><Icon name={icon} size={24} /></span><Text as="strong" id={'category.' + cat} /></a>)}</div>
+  </section>
+  <section class="container section" aria-labelledby="featured-title">
+    <div class="section-head"><h2 id="featured-title"><Text id="featured" /></h2><Text as="a" id="openSpreadsheet" class="text-link" href="/spreadsheet/" /></div>
+    <div class="product-grid">{selected.map((product) => <ProductCard product={product} image={'/images/' + product.id + '.webp'} />)}</div>
+  </section>
+  {example && <ProductIntro product={example} />}
+  <section class="container tool-band" aria-label="Shopping tools">
+    {shoppingTools.map(({href, icon, title, description}) => <a href={href}>
+      <Icon name={icon} size={28} /><Text as="strong" id={title} /><Text id={description} />
+    </a>)}
+  </section>
+  <Guide />
+  <Faq />
+</Layout>
+
+<script>
+  const compactScreen = window.matchMedia('(max-width: 770px)');
+  const disclosures = document.querySelectorAll<HTMLDetailsElement>('.home-disclosure');
+
+  function applyLayout({matches}: MediaQueryList | MediaQueryListEvent) {
+    for (const panel of disclosures) panel.open = !matches;
+  }
+
+  applyLayout(compactScreen);
+  compactScreen.addEventListener('change', applyLayout);
+</script>

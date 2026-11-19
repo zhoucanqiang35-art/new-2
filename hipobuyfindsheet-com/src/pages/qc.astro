@@ -1,0 +1,17 @@
+---
+import Layout from '../components/Layout.astro';
+import Text from '../components/Text.astro';
+import Icon from '../components/Icon.astro';
+import { copy } from '../lib/messages.mjs';
+---
+<Layout title="Hipobuy QC Photos & Finder | Hipobuy Findsheet" description="Look up historical warehouse QC photo references by Weidian product ID.">
+  <div class="container inner-hero"><Text as="h1" id="qc" /><Text as="p" id="qcLead" /></div>
+  <section class="container tool-page">
+    <form class="search-box tool-search" id="qc-form"><Icon name="shield"/><input name="id" aria-label={copy('itemId')} data-i18n-label="itemId" placeholder={copy('searchPlaceholder')} data-i18n-placeholder="searchPlaceholder" required /><Text as="button" type="submit" id="findQc" class="button button-orange" /></form>
+    <div class="tool-samples"><Text as="a" id="sampleWith" href="/qc/?id=7321418559" /><Text as="a" id="sampleWithout" href="/qc/?id=7869664333" /><Text as="a" id="imageSearch" href="/image-search/" /></div>
+    <div id="qc-result" class="tool-results" aria-live="polite"></div>
+  </section>
+</Layout>
+<script>
+  import '../lib/qc-page.mjs';
+</script>
