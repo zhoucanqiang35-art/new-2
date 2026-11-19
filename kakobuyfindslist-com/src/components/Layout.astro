@@ -22,6 +22,23 @@ const navigation = [
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  {production && <meta name="msvalidate.01" content="E34A6C20A8A058592D1DC4B20523F6CB" />}
+  {production && (
+    <script is:inline>
+      if (["kakobuyfindslist.com", "www.kakobuyfindslist.com"].includes(window.location.hostname)) {
+        const measurementId = "G-GPNZQYGH44";
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { window.dataLayer.push(arguments); }
+        gtag("js", new Date());
+        gtag("config", measurementId);
+
+        const tag = document.createElement("script");
+        tag.async = true;
+        tag.src = "https://www.googletagmanager.com/gtag/js?id=" + measurementId;
+        document.head.appendChild(tag);
+      }
+    </script>
+  )}
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content={production ? "index, follow" : "noindex, nofollow"} />
   {production && <link rel="canonical" href={canonical} />}
