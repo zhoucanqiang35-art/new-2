@@ -4,9 +4,11 @@ import Text from './Text.astro';
 import ShoppingMenu from './ShoppingMenu.astro';
 import { registrationUrl } from '../lib/catalog.mjs';
 import { languages, copy } from '../lib/messages.mjs';
+import { canonicalUrl } from '../lib/indexing.mjs';
 import '../styles/site.css';
 import '../styles/festival.css';
 const { title, description, page = '', showShopping = false } = Astro.props;
+const canonical = canonicalUrl(Astro.url.pathname);
 const links = [['home','/',''],['spreadsheet','/spreadsheet/','spreadsheet'],['imageSearch','/image-search/','image-search'],['buyingGuide','/how-to-buy/','how-to-buy'],['faq','/faq/','faq']];
 ---
 <!doctype html>
@@ -14,7 +16,7 @@ const links = [['home','/',''],['spreadsheet','/spreadsheet/','spreadsheet'],['i
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="robots" content="noindex, nofollow" />
+  {canonical ? <link rel="canonical" href={canonical} /> : <meta name="robots" content="noindex, follow" />}
   <meta name="description" content={description} />
   <meta name="theme-color" content="#fff8ec" />
   <title>{title}</title>
