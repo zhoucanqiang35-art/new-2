@@ -1,0 +1,5 @@
+---
+import { inspectionSections } from '../lib/product-guide';
+const { selected = inspectionSections } = Astro.props;
+---
+<div class="overview-sections">{selected.map(({id,title,paragraphs,points}) => <section id={'read-'+id}><h2>{title}</h2>{paragraphs.map(paragraph => <p>{paragraph}</p>)}<ul>{points.map(point => <li>{point}</li>)}</ul></section>)}</div>

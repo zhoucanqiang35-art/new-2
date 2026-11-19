@@ -1,0 +1,109 @@
+---
+import { buyUrl, detailsUrl, registration } from "../lib/catalog";
+import { official } from "../lib/sugargoo-help";
+const { home = false } = Astro.props;
+const Heading = home ? "h2" : "h1";
+const sample = "7405460467";
+const steps = [
+  { title: "Register on Sugargoo", paragraphs: ["You can browse this directory and use its search tools as a guest. Use a Sugargoo account when managing orders and parcels. Review any coupon’s expiry, minimum spend, and eligibility in your account before including it in your budget."], image: "register", caption: "Open Sugargoo registration", links: [["Register on Sugargoo", registration]] },
+  {
+    title: "Find a product in the Sugargoo spreadsheet",
+    paragraphs: [
+      "Search the product name or Weidian item ID from the homepage. If you have a photo, select the image icon to open Image search and upload it there. Open the best match and check the item ID against the original listing.",
+      "Try item 7405460467 as a practice search. Compare the seller’s gallery, the category and the USD reference price before opening a buying link.",
+    ],
+    image: "search",
+    caption: "Sugargoo Finds List example showing a search by Weidian item ID.",
+    links: [["Browse finds", "/browse/"], ["Search by image", "/image-search/"]],
+  },
+  {
+    title: "Check available reference QC photos",
+    paragraphs: [
+      "On the item page, open QC Finder or paste the Weidian ID or supported item link into the tool. Look for a matching variant and readable details such as labels, pattern, shape and stitching.",
+      "Historical warehouse photos may come from another agent. When none are available, the reference section displays the seller’s gallery. For a real warehouse photo example, try item 7405460467.",
+    ],
+    image: "reference-qc",
+    caption: "Sugargoo Finds List QC Finder showing saved warehouse photos for item 7405460467.",
+    links: [["See the QC example", "/qc/?id=7405460467"]],
+  },
+  {
+    title: "Open Sugargoo and choose the exact variant",
+    paragraphs: [
+      "Select Buy on Sugargoo to open the same Weidian item on the agent’s site. Check the seller’s size chart, choose the color, size, version and quantity, then use the cart or the purchase button.",
+      "If the listing does not import, verify the original link before using Sugargoo’s manual purchase form. Enter the original URL and exact options so the buyer can identify the right item.",
+    ],
+    image: "product",
+    caption: "Sugargoo Finds List product detail showing the purchase link for the selected Weidian item.",
+    links: [["Open the example item", detailsUrl(sample)], ["Open on Sugargoo", buyUrl(sample)], ["Register on Sugargoo", registration]],
+  },
+  {
+    title: "Review the item order and domestic delivery",
+    paragraphs: [
+      "Review the item price, quantity, and seller delivery to the warehouse in China before paying. The product price shown in this spreadsheet is a USD estimate. The amount shown by Sugargoo applies to your order.",
+      "After payment, Sugargoo processes the purchase and the seller dispatches the item to its warehouse. Check the order record for updates and respond if the buyer needs more information about the listing or variant.",
+    ],
+    image: "cart",
+    caption: "Sugargoo’s public tutorial shows how to review options and quantity before checkout.",
+    links: [["Sugargoo cost breakdown", official.fees]],
+  },
+  {
+    title: "Inspect your own warehouse QC pictures",
+    paragraphs: [
+      "After the seller’s delivery reaches Sugargoo, open the warehouse record for the item. Check the option, quantity, size tag, and visible condition of the goods against your order. Ask about additional photos if you need to read a label or see a detail more clearly.",
+      "If something appears wrong, contact Sugargoo from the relevant order or warehouse record while the goods are still in storage. Check the order’s current after-sales options and deadline.",
+    ],
+    image: "qc",
+    caption: "Sugargoo’s public tutorial illustrates warehouse intake, inspection and packing.",
+    links: [["Sugargoo’s purchase and QC overview", official.purchases]],
+  },
+  {
+    title: "Submit a parcel and compare international routes",
+    paragraphs: [
+      "Select the stored items you want to ship together. Confirm the recipient details, check any route restrictions, and compare packing options and international shipping costs before paying for the parcel.",
+      "Use the official shipping estimator to plan around the destination, packed weight and dimensions. Check the final cost and available routes on the actual parcel screen.",
+    ],
+    image: "route",
+    caption: "Sugargoo’s public tutorial shows the international parcel checkout.",
+    links: [["Open the official shipping estimator", official.estimate]],
+  },
+  {
+    title: "Track the parcel and confirm receipt",
+    paragraphs: [
+      "After dispatch, open the parcel record in your Sugargoo account for the carrier and tracking number. When the parcel arrives, check the contents and packaging before confirming receipt.",
+      "If anything is missing or damaged, keep the label and photographs and contact Sugargoo with the parcel number and the details of the problem.",
+    ],
+    image: "",
+    caption: "Sugargoo’s public tutorial shows where to confirm receipt in the parcel list.",
+    links: [["Open Sugargoo’s official walkthrough", official.tutorial]],
+  },
+];
+---
+<section class:list={["shell section guide-page", !home && "utility"]} id="buying-guide" aria-labelledby="buying-guide-title">
+  <header class="content-heading">
+    <Heading id="buying-guide-title">How to buy on Sugargoo</Heading>
+    <p>Follow a Weidian product from the Sugargoo Finds List to warehouse inspection and delivery. Open each step to see the instructions and screenshots.</p>
+    <div class="guide-actions">
+      <a class="inline-arrow" href={official.tutorial} target="_blank" rel="noopener">Sugargoo’s official tutorial</a>
+      
+      {home && <a class="inline-arrow" href="/guide/">Open the full guide</a>}
+    </div>
+  </header>
+  <ol class="guide-steps">
+    {steps.map(({ title, paragraphs, image, caption, links }, index) => (
+      <li>
+        <details open={index === 0}>
+          <summary>{title}</summary>
+          <div class="guide-step-body">
+            <div>
+              {paragraphs.map(paragraph => <p>{paragraph}</p>)}
+              <div class="guide-actions">{links.map(([label, href]) => <a class="inline-arrow" href={href}>{label}</a>)}</div>
+            </div>
+            {image && <figure><a href={`/tutorial/${image}.webp`} aria-label={`Enlarge screenshot: ${title}`}><img loading="lazy" decoding="async" src={`/tutorial/${image}.webp`} alt={caption} /></a><figcaption>{caption}</figcaption></figure>}
+            {image === 'product' && <figure><a href="/tutorial/variants.webp"><img loading="lazy" src="/tutorial/variants.webp" alt="Sugargoo’s public tutorial shows how to review options and quantity before checkout." /></a><figcaption>Sugargoo’s public tutorial shows how to review options and quantity before checkout.</figcaption></figure>}
+            {image === 'route' && <figure><a href="/tutorial/parcel.webp"><img loading="lazy" src="/tutorial/parcel.webp" alt="Submit a parcel and compare international routes" /></a><figcaption>Submit a parcel and compare international routes</figcaption></figure>}
+          </div>
+        </details>
+      </li>
+    ))}
+  </ol>
+</section>

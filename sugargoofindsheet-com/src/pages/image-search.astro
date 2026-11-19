@@ -1,0 +1,21 @@
+---
+import Layout from '../components/Layout.astro';
+import Icon from '../components/Icon.astro';
+---
+<Layout title="Sugargoo Image Search | Find Similar Products">
+  <section class="wrap tool-page">
+    <h1>Sugargoo <em>Image Search</em></h1>
+    <p class="lede">Choose a reference photo to compare against listing and QC photos in the saved Findspreadsheet index.</p>
+    <div class="upload-panel">
+      <div><Icon name="camera" size={30} /><h2>Find a similar product</h2><p>Choose an image up to 12 MB. The image stays in your browser.</p></div>
+      <div class="upload-actions"><label class="button dark upload-label">Choose photo <input id="image-file" type="file" accept="image/*" aria-label="Choose photo" /></label><button type="button" id="try-image" class="button clear">Try an example</button></div>
+    </div>
+    <figure id="image-preview" hidden><img alt="Reference photo" /><figcaption></figcaption></figure>
+    <p id="image-status" class="status" role="status"></p>
+    <div id="image-results" class="products"></div>
+    <div class="pagination"><button type="button" id="image-more" class="button clear" hidden>Show more matches</button></div>
+  </section>
+</Layout>
+<script>
+  import '../lib/image-search';
+</script>

@@ -1,0 +1,90 @@
+---
+import Layout from '../components/Layout.astro';
+import ProductOverview from '../components/ProductOverview.astro';
+import Icon from '../components/Icon.astro';
+---
+<Layout title="Sugargoo QC Finder | Finds List" description="Find warehouse QC photos for supported Weidian listings in the Sugargoo Finds List preview.">
+  <section class="wrap tool-page qc-page">
+    <h1>Sugargoo QC Finder</h1>
+    <p class="lede">Paste a Weidian ID, original Weidian URL or supported Sugargoo item link. The finder checks saved FindSpreadsheet warehouse records for that exact item. Check any agent name shown on the images because these records can come from different agents.</p>
+    <form id="qc-form" class="search-bar tool-form"><Icon name="check" /><input id="qc-input" type="text" required aria-label="Weidian product ID or link" placeholder="Paste a product link or Weidian ID" /><button type="submit">Search</button></form>
+    <button type="button" class="example-link" id="qc-example">Try a sample</button>
+    <p id="qc-status" class="status" role="status"></p>
+    <div id="qc-gallery" class="photo-grid"></div>
+    <article id="qc-product" class="qc-product" hidden>
+      <div><img id="qc-product-image" class="detail-photo" width="460" height="460" /><div id="qc-product-thumbnails" class="thumbnails" aria-label="Listing images"></div></div>
+      <div class="detail-info"><span id="qc-product-category" class="product-category"></span><h2 id="qc-product-name"></h2><p id="qc-product-price" class="detail-price"></p><p id="qc-product-id"></p><p>The product title and category help narrow your search. The original seller page is where you can confirm the current listing content, availability and seller-specific options.</p><dl class="product-facts"><div><dt>Weidian item ID</dt><dd id="qc-fact-id"></dd></div><div><dt>Listing images</dt><dd id="qc-fact-images"></dd></div><div><dt>Category</dt><dd id="qc-fact-category"></dd></div></dl><div class="detail-actions"><a class="button dark" id="qc-buy" target="_blank" rel="noopener sponsored">Buy on Sugargoo</a><a class="button clear" id="qc-details">View details</a><a class="text-link" id="qc-source" target="_blank" rel="noopener">FindSpreadsheet listing</a></div></div>
+    </article>
+    <div class="qc-intro"><h2>Sugargoo Product Details</h2><p>See how to read a Weidian product page, review pictures and reference prices, check warehouse QC, and choose a shopping agent.</p></div>
+    <ProductOverview />
+    <div class="guide-actions"><a class="button dark" href="/guide/">Open buying guide</a><a class="button clear" href="/browse/">Browse finds</a><a class="button clear" href="/faq/">FAQ</a></div>
+  </section>
+</Layout>
+<script>
+  import { itemFromInput, lookupQc } from '../lib/qc';
+  import { buyUrl, categoryLabel, detailsUrl, galleryPhotos, getData, priceLabel, sourceUrl, type Product } from '../lib/catalog';
+  const input = document.querySelector<HTMLInputElement>('#qc-input')!;
+  const status = document.querySelector<HTMLElement>('#qc-status')!;
+  const gallery = document.querySelector<HTMLElement>('#qc-gallery')!;
+  const panel = document.querySelector<HTMLElement>('#qc-product')!;
+  const photo = document.querySelector<HTMLImageElement>('#qc-product-image')!;
+  const thumbs = document.querySelector<HTMLElement>('#qc-product-thumbnails')!;
+  let request = 0;
+  async function showProduct(id: string, sequence: number) {
+    const products = await getData<Product[]>('catalog.json');
+    if (sequence !== request) return;
+    const product = products.find(item => item.weidianId === id);
+    if (!product) return;
+    const title = document.querySelector<HTMLElement>('#qc-product-name')!;
+    title.textContent = product.name;
+    title.dataset.productName = product.weidianId;
+    photo.src = product.image;
+    photo.alt = product.name;
+    document.querySelector('#qc-product-category')!.textContent = categoryLabel(product.category);
+    document.querySelector('#qc-product-price')!.textContent = priceLabel(product.price);
+    document.querySelector<HTMLElement>('#qc-product-price')!.dataset.priceCny = product.price;
+    document.querySelector('#qc-product-price')!.setAttribute('data-i18n-ignore', '');
+    document.querySelector('#qc-product-id')!.textContent = 'Weidian item #' + product.weidianId;
+    document.querySelector('#qc-fact-id')!.textContent = product.weidianId;
+    document.querySelector('#qc-fact-category')!.textContent = categoryLabel(product.category);
+    document.querySelector<HTMLAnchorElement>('#qc-buy')!.href = buyUrl(id);
+    document.querySelector<HTMLAnchorElement>('#qc-details')!.href = detailsUrl(id);
+    document.querySelector<HTMLAnchorElement>('#qc-source')!.href = sourceUrl(product);
+    panel.hidden = false;
+    const photos = await galleryPhotos(product).catch(() => [product.image]);
+    if (sequence !== request) return;
+    document.querySelector('#qc-fact-images')!.textContent = String(photos.length);
+    thumbs.replaceChildren(...photos.map((url,index) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.setAttribute('aria-label', 'Show product photo ' + (index + 1));
+      button.setAttribute('aria-pressed', String(index === 0));
+      const image = new Image();image.src = url;image.alt = '';image.width = image.height = 62;image.loading = 'lazy';
+      button.append(image);
+      button.addEventListener('click', () => {photo.src = url;for (const item of thumbs.children) item.setAttribute('aria-pressed', String(item === button));});
+      return button;
+    }));
+    if (!gallery.children.length) {
+      status.textContent += ' Showing the listing gallery photos for reference.';
+      gallery.replaceChildren(...photos.slice(0,6).map((url,index) => {
+        const link = document.createElement('a');link.href = url;link.target = '_blank';link.rel = 'noopener';
+        const image = new Image();image.src = url;image.alt = 'Listing photo ' + (index + 1);image.width = image.height = 240;image.loading = 'lazy';link.append(image);return link;
+      }));
+    }
+  }
+  async function run() {
+    const sequence = ++request;
+    panel.hidden = true;
+    thumbs.replaceChildren();
+    const id = itemFromInput(input.value);
+    if (!id) {status.textContent = 'Enter a valid Weidian ID or a supported product link.';gallery.replaceChildren();return;}
+    const url = new URL(location.href);url.searchParams.set('id',id);history.replaceState(null,'',url);
+    await lookupQc(id,status,gallery,() => sequence === request);
+    await showProduct(id,sequence).catch(() => { /* Retain the independent QC result if the catalogue is unavailable. */ });
+  }
+  document.querySelector('#qc-form')!.addEventListener('submit',event => {event.preventDefault();void run();});
+  document.querySelector('#qc-example')!.addEventListener('click',()=>{input.value='7321418559';void run();});
+  const id = new URLSearchParams(location.search).get('id') ?? '7869128383';
+  input.value = id;
+  void run();
+</script>

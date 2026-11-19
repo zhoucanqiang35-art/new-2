@@ -1,0 +1,24 @@
+---
+import { signup } from '../lib/catalog';
+
+const steps = [
+  ['Find a listing', 'Search by name or item ID, pick a category, or upload a reference photo to find similar items.'],
+  ['Review the listing and QC', 'Compare the seller’s gallery and any saved warehouse photos. Check the exact item, size, and colour before ordering.'],
+  ['Open it on Sugargoo', 'Use the link on the product page. Confirm the current price, available options, restrictions, and shipping estimate on Sugargoo.'],
+  ['Review your warehouse order', 'Once your item reaches the Sugargoo warehouse, review the photos attached to your own order before arranging international shipping.'],
+];
+const questions = [
+  ['What is a Sugargoo spreadsheet?', 'It is a searchable collection of marketplace finds you can open through Sugargoo. This preview uses products, photos and QC records from Findspreadsheet.'],
+  ['Where do QC photos come from?', 'Available QC images are saved Findspreadsheet warehouse records. They are historical references for a listing. Sugargoo shows the photos of your own item in your order.'],
+  ['Can I search using a photo?', 'Yes. Open Image Search and choose a photo. The preview compares it with indexed listing and QC photos in your browser.'],
+  ['Are these the final Sugargoo prices?', 'Prices shown are reference CNY listing prices from the saved catalogue. Check the listing for current prices, options, fees and shipping.'],
+  ['Why are there no QC photos for an item?', 'The saved QC dataset covers selected listings. Open the listing gallery for product photos, or check the warehouse photos of your own order on Sugargoo.'],
+];
+---
+<div class="guide-flow" id="buying-guide">
+  {steps.map(([title, body]) => <article><h3>{title}</h3><p>{body}</p></article>)}
+</div>
+<a class="button dark" href={signup} target="_blank" rel="noopener sponsored">Register on Sugargoo</a>
+<div class="faq" id="faq"><h2>Frequently asked questions</h2>
+  {questions.map(([q, a]) => <details><summary>{q}<span aria-hidden="true">+</span></summary><p>{a}</p></details>)}
+</div>
