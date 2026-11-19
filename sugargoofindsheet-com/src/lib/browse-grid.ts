@@ -36,7 +36,7 @@ export function setupBrowseGrid(template: HTMLTemplateElement, refresh: (resetPa
   let agent = catalogAgents.find(item => item.label === (preferredAgent === "Direct link" ? "FindSpreadsheet" : preferredAgent)) ?? defaultCatalogAgent;
   const preferredCurrency = readPreference("currency") ?? "USD";
   let currency = Object.hasOwn(rates, preferredCurrency) ? preferredCurrency : "USD";
-  let favorites = false;
+  let favorites = new URLSearchParams(location.search).has('saved');
 
   function updateMenu() {
     if (agent.logo) logo.src = agent.logo;

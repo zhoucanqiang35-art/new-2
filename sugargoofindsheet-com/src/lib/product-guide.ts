@@ -4,11 +4,11 @@ export const inspectionSections = [
     "The product title and category help narrow your search. The original seller page is where you can confirm the current listing content, availability and seller-specific options.",
   ], points: ["Copy the item ID before comparing listings with similar names.", "Check whether the seller page still opens and whether the available version matches the preview."] },
   { id: "gallery", title: "Product gallery, color and style", paragraphs: [
-    "The carousel shows images from the seller listing. Select a thumbnail or use the previous and next controls to inspect the available front, back, close-up and packaging views.",
+    "The carousel shows images from the seller listing. Select a thumbnail to inspect the available front, back, close-up and packaging views.",
     "A gallery can show several colors or versions in the same listing. Compare the image with the exact option name on Sugargoo before ordering.",
   ], points: ["Check the color, silhouette, materials described by the seller, and visible markings.", "Check whether pictured accessories are included in the selected option."] },
-  { id: "pricing", title: "Price in USD and what you pay", paragraphs: [
-    "The dollar amount is a reference estimate from the saved seller price in CNY. It helps compare listings, including when sorting the product directory by price.",
+  { id: "pricing", title: "Reference price and total purchase cost", paragraphs: [
+    "The displayed amount is a reference estimate from the saved seller price in CNY. It helps compare listings, including when sorting the product directory by price.",
     "On Sugargoo, confirm the live price for the option you select. Domestic delivery, international freight, packing and optional services can add to the final total.",
   ], points: ["Compare prices for the same size, color and version.", "Use the agent checkout for the actual payable amount and billing currency."] },
   { id: "size", title: "Size, measurements and options", paragraphs: [
@@ -20,7 +20,7 @@ export const inspectionSections = [
     "If the preview has no warehouse photos, it shows the seller carousel images in the QC section and labels them as listing photos. After you order, use your own warehouse record to verify the specific item.",
   ], points: ["Compare labels, stitching, logos, colors and packaging where visible.", "If there is a discrepancy, use the order’s support channel while the item is still stored."] },
   { id: "agents", title: "Buy on Sugargoo or compare agents", paragraphs: [
-    "Buy on Sugargoo opens the same Weidian item. The Other shopping agents menu lists the additional purchase routes used by FindSpreadsheet. The original listing link gives you another way to verify the item ID.",
+    "Buy on Sugargoo opens the same Weidian item. The Other shopping agents section lists the additional purchase routes used by FindSpreadsheet. The original listing link gives you another way to verify the item ID.",
     "Compare the experience on each agent using the same item and option. Availability, local shipment fees, warehouse services and international routes can vary.",
   ], points: ["Verify the item ID after the agent loads the listing.", "Select the exact variant and quantity in the agent cart."] },
   { id: "related", title: "Related products and image search", paragraphs: [

@@ -4,7 +4,7 @@ import { registration } from "../lib/catalog";
 
 const { home = false } = Astro.props;
 const GroupHeading = home ? "h3" : "h2";
-const Group = home ? "details" : "section";
+const Group = "section";
 
 interface Question {
   title: string;
@@ -53,13 +53,13 @@ const groups: { title: string; questions: Question[] }[] = [
 <div class="faq-groups">
   {groups.map(group => (
     <Group class:list={[home && "home-faq-group"]}>
-      {home ? <summary><GroupHeading class="faq-group-heading">{group.title}</GroupHeading></summary> : <GroupHeading class="faq-group-heading">{group.title}</GroupHeading>}
+      <GroupHeading class="faq-group-heading">{group.title}</GroupHeading>
       {group.questions.map(({ title, answer, link }) => (
-        <details>
-          <summary>{title}</summary>
+        <section class="faq-answer">
+          <h3>{title}</h3>
           <p>{answer}</p>
           {link && <p><a class="inline-arrow" href={link[1]}>{link[0]}</a></p>}
-        </details>
+        </section>
       ))}
     </Group>
   ))}
