@@ -38,7 +38,7 @@ const links = [['/', 'Home'], ['/browse/', 'Spreadsheet'], ['/qc/', 'QC Finder']
     <div class="wrap header-inner">
       <a class="brand" data-i18n-ignore href="/" aria-label="Sugargoo home"><img src="/brand/logo.png" alt="Sugargoo" width="132" height="40" /></a>
       <nav class="main-nav" aria-label="Main navigation">{links.map(([href,label]) => <a href={href} aria-current={Astro.url.pathname === href ? 'page' : undefined}>{label}</a>)}</nav>
-      <div class="header-actions"><LanguagePicker /><a class="join button" href="https://www.superbuy.com/en/page/login?partnercode=8dcUtX&type=register" target="_blank" rel="noopener sponsored" data-i18n-ignore>Join Superbuy</a>
+      <div class="header-actions"><LanguagePicker /><a class="join button" href="https://www.sugargoo.com/register?memberId=3914891758646228603" target="_blank" rel="noopener sponsored" data-i18n-ignore>Join Sugargoo</a>
         <details class="mobile-nav"><summary aria-label="Navigation menu"><Icon name="menu" /></summary><nav aria-label="Mobile navigation">{links.map(([href,label]) => <a href={href}>{label}</a>)}</nav></details>
       </div>
     </div>
