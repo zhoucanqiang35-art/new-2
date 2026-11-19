@@ -1,0 +1,79 @@
+.faq .home-faq-group { padding: 0; border: 0; }
+.home-example > summary,
+.home-faq-group > summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+}
+.home-example > summary::-webkit-details-marker, .home-faq-group > summary::-webkit-details-marker { display: none; }
+.home-example > summary::after,
+.home-faq-group > summary::after {
+  content: "";
+  flex: none;
+  width: 7px;
+  height: 7px;
+  margin-inline-end: 5px;
+  border-inline-end: 2px solid var(--accent);
+  border-block-end: 2px solid var(--accent);
+  transform: rotate(45deg);
+}
+.home-example[open] > summary::after, .home-faq-group[open] > summary::after { transform: rotate(225deg); }
+.home-example > summary { cursor: pointer; }
+.home-faq-group + .home-faq-group { margin-block-start: 20px; }
+
+@media (max-width: 640px) {
+  .compact-home .section { padding-block: 18px; }
+  .compact-home .site-header nav { column-gap: 10px; }
+  .compact-home .site-header nav a { min-height: 34px; }
+  .compact-home .directory-hero-inner { padding-block: 24px 20px; }
+  .compact-home .directory-intro h1 { font-size: clamp(41px, 10.4vw, 60px); }
+  .compact-home .directory-intro p { margin-top: 8px; font-size: 14px; line-height: 1.45; }
+  .compact-home .directory-intro .directory-subtitle { font-size: 18px; }
+  .compact-home .directory-search { margin-top: 13px; }
+  .compact-home .directory-tools { gap: 7px; margin-top: 9px; }
+  .compact-home .directory-tools .button { padding: 7px 10px; min-height: 40px; font-size: 13px; }
+
+  .compact-home .catalog-section { gap: 9px; }
+  .compact-home .catalog-heading h2, .compact-home .section-heading h2,
+  .compact-home .guide-page .content-heading h2 { font-size: clamp(28px, 7.8vw, 42px); }
+  .compact-home .catalog-heading { gap: 7px; align-items: flex-start; }
+  .compact-home .catalog-heading p { margin-top: 3px; font-size: 12px; }
+  .compact-home .catalog-status { margin: 10px 0 7px; }
+  .compact-home .catalog-content .product-card a { min-height: 53px; padding-block: 4px; }
+  .compact-home .catalog-content .product-image img { height: 43px; }
+  .compact-home .pagination { margin-top: 13px; gap: 7px; }
+  .compact-home .pagination .button { min-height: 40px; padding: 7px 9px; font-size: 12px; }
+
+  .compact-home .intro-feature { grid-template-columns: 76px minmax(0, 1fr); align-items: start; gap: 9px; padding: 9px; }
+  .compact-home .intro-photo img { aspect-ratio: 1; }
+  .compact-home .intro-copy h3 { font-size: 19px; }
+  .compact-home .intro-copy p { margin: 6px 0; font-size: 13px; line-height: 1.45; }
+  .compact-home .intro-facts { margin: 7px 0; gap: 4px; }
+  .compact-home .intro-facts div { padding: 5px; font-size: 12px; }
+  .compact-home .intro-actions { gap: 4px; }
+  .compact-home .intro-actions .button { min-height: 40px; padding: 6px 7px; font-size: 12px; }
+
+  .compact-home .guide-page .content-heading p { margin: 7px 0; }
+  .compact-home .guide-actions { gap: 7px 12px; margin-top: 7px; }
+  .compact-home .guide-actions a { font-size: 12px; }
+  .compact-home .guide-steps { margin-top: 12px; }
+  .compact-home .guide-steps summary { padding: 10px 0; min-height: 42px; font-size: 15px; }
+  .compact-home .guide-step-body { gap: 8px; padding-bottom: 10px; }
+  .compact-home .guide-step-body p { font-size: 14px; margin-bottom: 6px; }
+  .compact-home .guide-step-body img { max-height: 155px; object-fit: contain; object-position: left; }
+
+  .compact-home .home-faq-group > summary { min-height: 44px; padding-inline: 9px; border: 1px solid var(--line); border-radius: 5px; background: #fff; }
+  .compact-home .faq-groups .faq-group-heading { margin-block: 7px; font-size: 15px; }
+  .compact-home .home-faq-group + .home-faq-group { margin-block-start: 5px; }
+  .compact-home .home-faq-group > details { padding: 8px 3px; font-size: 14px; }
+  .compact-home .home-faq-group > details > summary { min-height: 28px; }
+  .compact-home .foot-inner { min-height: 0; padding-block: 13px; }
+  .compact-home .foot-inner > div:last-child { display: flex; flex-wrap: wrap; gap: 6px 12px; }
+}
+
+@media (max-width: 340px) and (max-height: 680px) {
+  .compact-home .home-example > summary { min-height: 44px; padding-inline: 9px; border: 1px solid var(--line); border-radius: 5px; background: #fff; }
+  .compact-home .home-example:not([open]) > summary { margin-bottom: 0; }
+}

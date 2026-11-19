@@ -1,0 +1,35 @@
+---
+import Layout from "../components/Layout.astro";
+import { categories } from "../lib/catalog";
+import { official } from "../lib/kakobuy-help";
+
+const topics = [
+  {title:"Kakobuy spreadsheet and Weidian finds",href:"/browse/", link:"Search the spreadsheet", text:"Look up a product name or a Weidian item ID, then compare listings by category and reference price. Open a find to verify the product photos, seller listing and exact agent link before buying."},
+  {title:"Kakobuy QC photos and QC Finder",href:"/qc/",link:"Look up an item’s QC",text:"Paste a Weidian ID or product link to check for warehouse photos of that listing. When none are available in the preview, the product page labels and displays the seller’s listing images. Check your own Kakobuy warehouse record after buying."},
+  {title:"Kakobuy image search and reverse photo lookup",href:"/image-search/",link:"Upload a reference photo",text:"Use a clear product photo if you do not know the item name. The image search compares the preview’s covers, carousel photos and available warehouse QC. Verify the best matches against color, details and the original item ID."},
+  {title:"How to buy on Kakobuy and order from Weidian",href:"/guide/how-to-buy/",link:"Follow the illustrated guide",text:"Start with a listing from the spreadsheet, check reference QC, select your variant on Kakobuy, and review the first purchase total. The guide continues through warehouse inspection, submitting a parcel and tracking."},
+  {title:"Kakobuy shipping calculator and haul costs",href:official.estimate,link:"Open the official shipping estimator",text:"Estimate delivery before you order several products. Compare eligible routes using your country, expected weight and parcel size. Budget for domestic shipping, packing and international delivery alongside the product price."},
+  {title:"Kakobuy warehouse, returns and parcel tracking",href:"/faq/",link:"Read warehouse and shipping FAQs",text:"Check your order’s warehouse photos, confirm the correct variant, and contact support about any discrepancy before submitting the parcel. After dispatch, check the carrier and tracking number in your parcel record."},
+];
+const searchNames: Record<string,string> = {
+  shoes:"Shoes and sneakers", "hoodies-sweaters":"Hoodies and sweaters", jackets:"Jackets and outerwear",
+  jersey:"Football jerseys", accessories:"Bags and accessories", "t-shirts":"T-shirts", "pants-shorts":"Pants and shorts",
+};
+---
+<Layout title="Kakobuy Spreadsheet | Finds, QC Photos, Image Search & Shipping" description="Find Kakobuy spreadsheet products by category or Weidian ID. Search by image, compare QC photos and check the Kakobuy buying guide and shipping calculator.">
+  <section class="shell section utility seo-page">
+    <header class="content-heading">
+      <h1>Kakobuy Spreadsheet and Shopping Guides</h1>
+      <p>Find Weidian products for Kakobuy and follow the steps from product search and quality checks to warehouse storage and international shipping.</p>
+    </header>
+    <ul class="resource-list">
+      {topics.map(({ title, href, link, text }) => <li><h2>{title}</h2><p>{text}</p><a class="inline-arrow" href={href}>{link} ↗</a></li>)}
+    </ul>
+    <h2>Browse Kakobuy finds by category</h2>
+    <p class="muted">Choose a category to see its listings in the spreadsheet. Each item page shows the reference price in USD and links the same Weidian item to shopping agents.</p>
+    <ul class="resource-categories">
+      {categories.map(([key, label]) => <li><a class="button button-outline" href={`/browse/?category=${key}#catalog`}>{searchNames[key] ?? label}</a></li>)}
+    </ul>
+    <p><a class="inline-arrow" href={official.purchases}>Kakobuy’s official purchase process ↗</a></p>
+  </section>
+</Layout>

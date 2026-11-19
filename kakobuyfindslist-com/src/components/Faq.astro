@@ -1,0 +1,66 @@
+---
+import { official } from "../lib/kakobuy-help";
+import { registration } from "../lib/catalog";
+
+const { home = false } = Astro.props;
+const GroupHeading = home ? "h3" : "h2";
+const Group = home ? "details" : "section";
+
+interface Question {
+  title: string;
+  answer: string;
+  link?: [string, string];
+}
+const groups: { title: string; questions: Question[] }[] = [
+  {
+    title: "Kakobuy spreadsheet, Weidian finds and image search",
+    questions: [
+      {title: "What is a Kakobuy spreadsheet?", answer: "It is a searchable directory of product finds for shopping through Kakobuy. This independent directory uses FindSpreadsheet’s Weidian catalog. A listing gives you the item ID, product images, a reference price, and purchase links for the same item.", link: ["Browse Kakobuy finds", "/browse/"]},
+      {title: "How do I find Kakobuy shoes, hoodies, jerseys or bags?", answer: "Start with a category, then search the product name or Weidian ID. Compare a few listings and open the gallery to check that the style, material, and color match what you want.", link: ["Browse Kakobuy shoes", "/browse/?category=shoes#catalog"]},
+      {title: "How does Kakobuy image search work on this site?", answer: "The picture button beside Search opens the independent image-search page. Choose a clear photo or crop a screenshot around the item. The search compares product covers, gallery images, and available warehouse QC photos across the entire preview catalog. It processes the file in your browser.", link: ["Search by image", "/image-search/"]},
+      {title: "Where do I find the original Weidian item ID?", answer: "Look under the product title or find the itemID parameter in the original Weidian URL. Use the same ID to locate the listing here, check QC, or compare the item across shopping agents."},
+    ],
+  },
+  {
+    title: "How to buy on Kakobuy and understand prices",
+    questions: [
+      {title: "How do I order a Weidian find through Kakobuy?", answer: "Open the product page and use Buy on Kakobuy. On Kakobuy, verify the product, choose the seller’s color, size, and quantity options, then review the cart. Use the measurements on the listing when choosing a size.", link: ["See the illustrated buying guide", "/guide/how-to-buy/"]},
+      {title: "What if Kakobuy cannot import my product link?", answer: "Confirm the original listing opens. Kakobuy’s manual purchase instructions allow you to fill in the seller link and item information when automatic import is unavailable. Enter the exact variant, quantity and listed price before reviewing the order.", link: ["Kakobuy manual purchase instructions", official.manualOrder]},
+      {title: "Why is the Kakobuy checkout total different from the USD price here?", answer: "The dollar price here converts the saved product price from CNY at a reference rate. Kakobuy’s total can include the current seller price, delivery within China, international freight, packing, and selected extras. Check the amounts on the product order and parcel screens before paying.", link: ["Kakobuy cost breakdown", official.fees]},
+      {title: "Do I need a Kakobuy account, and where can I check coupons?", answer: "You can browse this directory and use its search tools as a guest. Use a Kakobuy account when managing orders and parcels. Review any coupon’s expiry, minimum spend, and eligibility in your account before including it in your budget.", link: ["Open Kakobuy registration", registration]},
+      {title: "Can I order the same item through a different shopping agent?", answer: "Yes. Product pages include an Other shopping agents menu for the same Weidian item. Compare available options, total charges, and delivery routes at each agent before deciding."},
+    ],
+  },
+  {
+    title: "Kakobuy QC photos and warehouse checks",
+    questions: [
+      {title: "How do I use the Kakobuy QC Finder?", answer: "Paste a Weidian ID, original Weidian URL or supported Kakobuy item link. The finder checks saved FindSpreadsheet warehouse records for that exact item. Check any agent name shown on the images because these records can come from different agents.", link: ["Open an example with warehouse photos", "/qc/?id=7321418559"]},
+      {title: "What if a product has no warehouse QC photos?", answer: "The preview shows the carousel’s seller photos and labels them as listing photos. You can use them to compare the design. After ordering, open your Kakobuy warehouse record to inspect the specific item you received."},
+      {title: "What should I check when my order reaches the Kakobuy warehouse?", answer: "Check the size tag, color, quantity and visible condition. Compare seams, prints, included accessories, and any readable measurements with the chosen variant. If something appears wrong, send the order number and the specific issue to support while the item is still in the warehouse.", link: ["Kakobuy purchase and quality check overview", official.purchases]},
+      {title: "Can I return or exchange an item after seeing its warehouse photos?", answer: "Check the order’s after-sales options as soon as you see a problem. Seller eligibility, product exclusions and the deadline can affect the request. Keep the item in the warehouse while Kakobuy reviews the request."},
+    ],
+  },
+  {
+    title: "Kakobuy shipping calculator, parcels and tracking",
+    questions: [
+      {title: "How do I estimate Kakobuy shipping costs?", answer: "Open the official estimator and enter your destination, anticipated package weight and any dimensions or product details it requests. Compare eligible routes. Final costs depend on the actual packed parcel, destination, shipping route and selected services.", link: ["Open Kakobuy’s shipping estimator", official.estimate]},
+      {title: "How do I combine several orders into a Kakobuy haul?", answer: "When the items are in your warehouse, choose the ones you want in the same parcel. Check category restrictions, permitted weight, packing options and delivery address before you create and pay for the parcel.", link: ["Kakobuy parcel consolidation overview", official.purchases]},
+      {title: "How do I track a Kakobuy parcel and confirm delivery?", answer: "Open the parcel record in your Kakobuy account after dispatch. Use the tracking number with the carrier when available. After delivery, check the contents and keep the label and any evidence of damage before confirming receipt.", link: ["Kakobuy official walkthrough", official.tutorial]},
+    ],
+  },
+];
+---
+<div class="faq-groups">
+  {groups.map(group => (
+    <Group class:list={[home && "home-faq-group"]} open={home || undefined}>
+      {home ? <summary><GroupHeading class="faq-group-heading">{group.title}</GroupHeading></summary> : <GroupHeading class="faq-group-heading">{group.title}</GroupHeading>}
+      {group.questions.map(({ title, answer, link }) => (
+        <details>
+          <summary>{title}</summary>
+          <p>{answer}</p>
+          {link && <p><a class="inline-arrow" href={link[1]}>{link[0]} ↗</a></p>}
+        </details>
+      ))}
+    </Group>
+  ))}
+</div>

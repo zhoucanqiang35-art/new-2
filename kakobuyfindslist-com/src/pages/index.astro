@@ -1,0 +1,86 @@
+---
+import { readFileSync } from "node:fs";
+import Layout from "../components/Layout.astro";
+import Catalog from "../components/Catalog.astro";
+import Icon from "../components/Icon.astro";
+import ProductSearch from "../components/ProductSearch.astro";
+import Faq from "../components/Faq.astro";
+import BuyingGuide from "../components/BuyingGuide.astro";
+import { buyUrl, detailsUrl, priceLabel, type Product } from "../lib/catalog";
+
+const products: Product[] = JSON.parse(readFileSync("public/data/catalog.json", "utf8"));
+const sample = products.find((product) => product.id === "7978")!;
+---
+
+<Layout compactHome>
+  <section class="directory-hero" aria-labelledby="directory-title">
+    <div class="shell directory-hero-inner">
+      <div class="directory-intro">
+        <h1 id="directory-title">Kakobuy Spreadsheet</h1>
+        <p class="directory-subtitle">Find products for your next Kakobuy haul.</p>
+        <p>Browse Weidian finds from FindSpreadsheet, compare available warehouse photos, and open the same listing with your preferred shopping agent.</p>
+        <ProductSearch home />
+        <div class="directory-tools">
+          <a class="button" href="#catalog">Explore products <Icon name="arrow" size={17} /></a>
+          <a class="button button-outline" href="/product-details/">Product Details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Catalog />
+
+  <section class="shell section product-intro" aria-labelledby="sample-title">
+    <details class="home-example" open>
+      <summary class="section-heading"><h2 id="sample-title">From a find to Kakobuy</h2></summary>
+      <div class="intro-feature">
+        <a class="intro-photo" href={detailsUrl(sample.weidianId)}><img src={`/home/featured/${sample.id}.webp`} data-product-photo={sample.weidianId} width="500" height="500" alt={sample.name} loading="lazy" /></a>
+        <div class="intro-copy">
+          <h3 data-product-name={sample.weidianId}>{sample.name}</h3>
+          <p>Open the listing to review the gallery and catalog price. Use the Weidian ID to look up any saved warehouse photos.</p>
+          <dl class="intro-facts"><div><dt>Weidian ID</dt><dd>{sample.weidianId}</dd></div><div><dt>Catalog price</dt><dd>{priceLabel(sample.price)}</dd></div></dl>
+          <div class="intro-actions"><a class="button" href={detailsUrl(sample.weidianId)}>View product ↗</a><a class="button button-outline" href={buyUrl(sample.weidianId)} target="_blank" rel="noopener">Open on Kakobuy ↗</a></div>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <BuyingGuide home />
+
+  <section class="shell section faq" aria-labelledby="faq-title">
+    <div class="section-heading"><h2 id="faq-title">Kakobuy spreadsheet FAQ</h2><a href="/faq/" class="inline-arrow">See all FAQs ↗</a></div>
+    <Faq home />
+  </section>
+</Layout>
+
+<script>
+  const smallViewport = matchMedia("(max-width: 640px)");
+  const shortViewport = matchMedia("(max-width: 640px) and (max-height: 680px)");
+  const smallestViewport = matchMedia("(max-width: 340px) and (max-height: 680px)");
+  const faqGroups = document.querySelectorAll<HTMLDetailsElement>(".home-faq-group");
+  const firstGuideStep = document.querySelector<HTMLDetailsElement>("#buying-guide .guide-steps details");
+
+  function setFaqDefaults() {
+    faqGroups.forEach((group, index) => {
+      group.open = !smallViewport.matches || (index === 0 && !smallestViewport.matches);
+    });
+  }
+
+  const productExample = document.querySelector<HTMLDetailsElement>(".home-example");
+
+  function setExampleDefault() {
+    if (productExample) productExample.open = !smallestViewport.matches;
+  }
+
+  function setGuideDefault() {
+    if (firstGuideStep) firstGuideStep.open = !shortViewport.matches;
+  }
+
+  smallViewport.addEventListener("change", setFaqDefaults);
+  smallestViewport.addEventListener("change", setFaqDefaults);
+  smallestViewport.addEventListener("change", setExampleDefault);
+  shortViewport.addEventListener("change", setGuideDefault);
+  setFaqDefaults();
+  setGuideDefault();
+  setExampleDefault();
+</script>

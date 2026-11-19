@@ -1,0 +1,51 @@
+---
+import GridCard from "./GridCard.astro";
+import { readFileSync } from "node:fs";
+import { categories, categoryLabel, detailsUrl, highlighted, priceLabel, type Product } from "../lib/catalog";
+
+const { grid = false } = Astro.props;
+const products: Product[] = JSON.parse(readFileSync("public/data/catalog.json", "utf8"));
+const homeFeatured = ["4282", "8661", "8380", "7626", "6641", "7976", "8389", "8945"];
+const highlights = (grid ? highlighted : homeFeatured).flatMap((id) => products.find((product) => product.id === id) ?? []);
+const displayCount = new Intl.NumberFormat("en").format(products.length);
+const counts = new Map<string, number>();
+for (const product of products) counts.set(product.category, (counts.get(product.category) ?? 0) + 1);
+const formatCount = (count: number) => count.toLocaleString("en");
+---
+
+<section class:list={["section shell catalog-section", grid && "catalog-grid"]} id="catalog" aria-labelledby="catalog-title">
+  <aside class="catalog-sidebar" aria-labelledby="category-title">
+    <h2 id="category-title" class:list={[grid && "visually-hidden"]}>Categories</h2>
+    <div class="catalog-categories" aria-label="Filter by category">
+      <button class="chip is-active" type="button" data-category="" aria-pressed="true"><span>All finds</span><small aria-hidden="true">{displayCount}</small></button>
+      {categories.map(([key, label]) => (
+        <button class="chip" type="button" data-category={key} aria-pressed="false"><span>{label}</span><small aria-hidden="true">{formatCount(counts.get(key) ?? 0)}</small></button>
+      ))}
+    </div>
+  </aside>
+  <div class="catalog-content">
+    <div class="catalog-heading">
+      <div>{grid ? <h1 id="catalog-title">All Finds on Kakobuy Spreadsheet</h1> : <h2 id="catalog-title">The product index</h2>}<p>{displayCount} Weidian listings from FindSpreadsheet</p></div>
+      <label class="sort" for="sort"><span>Sort by</span><select id="sort"><option value="featured">Featured</option><option value="latest">Latest added</option><option value="asc">Price low to high</option><option value="desc">Price high to low</option></select></label>
+    </div>
+    <div id="catalog-status" class="catalog-status" role="status" aria-live="polite">Featured finds</div>
+    {!grid && <div class="product-columns" aria-hidden="true"><span>Product</span><span>Category</span><span>Price</span></div>}
+    <div id="results" class="products">
+      {highlights.map((product) => grid ? <GridCard product={product} /> : (
+        <article class="product-card">
+          <a href={detailsUrl(product.weidianId)}>
+            <div class="product-image"><img src={`/home/featured/${product.id}.webp`} alt="" width="320" height="320" loading="lazy" /></div>
+            <div class="product-copy"><span class="product-tag">{categoryLabel(product.category)}</span><h3 data-product-name={product.weidianId}>{product.name}</h3><span class="product-price"><span>{priceLabel(product.price)}</span><b aria-hidden="true">↗</b></span></div>
+          </a>
+        </article>
+      ))}
+    </div>
+    {grid && <template id="browse-card-template"><GridCard /></template>}
+    <div id="pagination" class="pagination" hidden><button id="prev" class="button button-outline" type="button">← Previous</button><span id="pages"></span><button id="next" class="button button-outline" type="button">Next →</button></div>
+    <noscript><p>Enable JavaScript to search and filter the full catalog.</p></noscript>
+  </div>
+</section>
+
+<script>
+  import "../lib/browse";
+</script>

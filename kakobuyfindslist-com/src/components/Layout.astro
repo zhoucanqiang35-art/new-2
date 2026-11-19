@@ -1,0 +1,58 @@
+---
+import LanguagePicker from "./LanguagePicker.astro";
+import { registration } from "../lib/catalog";
+import "../styles/style.css";
+import "../styles/kakobuy.css";
+import "../styles/browse-grid.css";
+import "../styles/mobile-home.css";
+const { compactHome = false, catalogView = false, title = "Kakobuy Spreadsheet | Kakobuy Finds List", description = "Browse FindSpreadsheet product finds, check warehouse reference photos and open Weidian listings on Kakobuy." } = Astro.props;
+const production = process.env.CF_PAGES === "1";
+const canonical = new URL(Astro.url.pathname, "https://kakobuyfindslist.com").href;
+const navigation = [
+  ["Home", "/"],
+  ["Browse finds", "/browse/"],
+  ["Product Details", "/product-details/"],
+  ["Image search", "/image-search/"],
+  ["Buying guide", "/guide/how-to-buy/"],
+  ["FAQ", "/faq/"],
+  ["SEO", "/seo/"],
+];
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content={production ? "index, follow" : "noindex, nofollow"} />
+  {production && <link rel="canonical" href={canonical} />}
+  <meta name="description" content={description} />
+  <meta name="theme-color" content="#edf5ff" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <title>{title}</title>
+</head>
+<body class:list={["site", compactHome && "compact-home", catalogView && "browse-catalog"]}>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell head-inner">
+      <a class="wordmark" href="/" aria-label="Kakobuy Finds List home"><img src="/kakobuy-logo.png" width="126" height="32" alt="Kakobuy" /><span>FINDS LIST</span></a>
+      <nav aria-label="Main navigation">
+        {navigation.map(([label, href]) => <a href={href} aria-current={Astro.url.pathname === href ? "page" : undefined}>{label}</a>)}
+      </nav>
+      <div class="head-actions">
+        <LanguagePicker />
+        <a class="button button-small join" href={registration} rel="sponsored noopener" target="_blank">Join Kakobuy <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </header>
+  <main id="main"><slot /></main>
+  <footer class="site-footer">
+    <div class="shell foot-inner">
+      <div><a class="wordmark" href="/">Kakobuy Finds List</a><p>Independent product directory by FindSpreadsheet.</p></div>
+      <div><a href="/guide/how-to-buy/">Buying guide</a><a href="/product-details/">Product Details</a><a href="https://findspreadsheet.com/">FindSpreadsheet ↗</a></div>
+    </div>
+  </footer>
+</body>
+</html>

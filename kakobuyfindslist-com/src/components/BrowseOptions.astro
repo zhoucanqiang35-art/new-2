@@ -1,0 +1,34 @@
+---
+import Icon from "./Icon.astro";
+import { catalogAgents, defaultCatalogAgent } from "../lib/agents";
+import currency from "../lib/currency-rates.json";
+---
+<div class="browse-preferences">
+  <button id="saved-only" class="browse-control saved-toggle" type="button" aria-pressed="false" aria-label="Show saved products" title="Show saved products" hidden>
+    <Icon name="heart" size={20} /><span id="saved-count" hidden></span>
+  </button>
+  <details class="market-options" id="market-options">
+    <summary class="browse-control" aria-label="Choose shopping agent and currency">
+      <img id="market-logo" src={defaultCatalogAgent.logo} width="18" height="18" alt="" />
+      <strong id="market-agent">Kakobuy</strong><span class="market-divider" aria-hidden="true"></span><span id="market-currency">USD</span><Icon name="chevron" size={16} />
+    </summary>
+    <div class="market-menu">
+      <fieldset><legend>Shopping agent</legend>
+        <div class="market-agents">
+          {catalogAgents.map(({label, logo}) => (
+            <button type="button" data-agent={label} aria-pressed={label === defaultCatalogAgent.label}>
+              {logo ? <img src={logo} alt="" width="18" height="18" loading="lazy" /> : <Icon name="box" size={18} />}
+              <span>{label}</span><span class="agent-check" aria-hidden="true">✓</span>
+            </button>
+          ))}
+        </div>
+      </fieldset>
+      <fieldset><legend>Currency</legend>
+        <div class="market-currencies">
+          {Object.keys(currency.rates).map(code => <button type="button" data-currency={code} aria-pressed={code === "USD"}>{code}</button>)}
+        </div>
+      </fieldset>
+      <p class="market-rate-note">Reference rates <time datetime={currency.date}>{currency.date}</time></p>
+    </div>
+  </details>
+</div>

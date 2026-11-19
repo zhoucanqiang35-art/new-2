@@ -1,0 +1,15 @@
+---
+import Layout from "../components/Layout.astro";
+import Catalog from "../components/Catalog.astro";
+import ProductSearch from "../components/ProductSearch.astro";
+import BrowseOptions from "../components/BrowseOptions.astro";
+---
+<Layout catalogView title="Browse Kakobuy Finds | Weidian Product Catalog" description="Search and filter Weidian finds by name, product ID, category or reference photo. Compare shopping agents and display reference prices in your preferred currency.">
+  <div class="browse-toolbar">
+    <div class="shell browse-toolbar-inner">
+      <ProductSearch />
+      <BrowseOptions />
+    </div>
+  </div>
+  <Catalog grid />
+</Layout>

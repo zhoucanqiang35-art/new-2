@@ -1,0 +1,24 @@
+---
+import Icon from "./Icon.astro";
+import { defaultCatalogAgent } from "../lib/agents";
+import { categoryLabel, detailsUrl, featuredImage, priceLabel, type Product } from "../lib/catalog";
+const { product } = Astro.props as { product?: Product };
+const item = product?.weidianId;
+---
+<article class="product-card browse-card" data-browse-product={item}>
+  <div class="browse-card-media">
+    <a class="browse-image-link" href={item && detailsUrl(item)} aria-label="View details">
+      <img src={product && featuredImage(product)} alt="" loading="lazy" width="320" height="320" />
+    </a>
+    <button class="save-card" type="button" aria-label="Save product" aria-pressed="false" hidden><Icon name="heart" size={19} /></button>
+  </div>
+  <div class="browse-card-info">
+    <span class="product-tag">{product && categoryLabel(product.category)}</span>
+    <h3><a data-product-name={item} href={item && detailsUrl(item)}>{product?.name}</a></h3>
+    <p class="product-price">{product && priceLabel(product.price)}</p>
+    <div class="browse-card-actions">
+      <a class="button grid-details" href={item && detailsUrl(item)}>View details</a>
+      <a class="button grid-buy" href={product && defaultCatalogAgent.url(product)} target="_blank" rel="sponsored noopener"><span>View on Kakobuy</span><Icon name="arrow" size={14} /></a>
+    </div>
+  </div>
+</article>
