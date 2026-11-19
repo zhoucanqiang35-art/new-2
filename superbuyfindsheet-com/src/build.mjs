@@ -6,6 +6,20 @@ import { officialGuide, demo, estimate, tracking, signup, guide, faq, topics, ch
 
 const output = fileURLToPath(new URL('../dist/', import.meta.url));
 const siteOrigin = 'https://superbuyfindsheet.com';
+const analyticsId = 'G-EZW91KL0CY';
+const bingVerification = 'E34A6C20A8A058592D1DC4B20523F6CB';
+const analyticsTag = `<script>
+if (location.hostname === 'superbuyfindsheet.com' || location.hostname === 'www.superbuyfindsheet.com') {
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { window.dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', '${analyticsId}', { allow_google_signals: false, allow_ad_personalization_signals: false });
+  const tag = document.createElement('script');
+  tag.async = true;
+  tag.src = 'https://www.googletagmanager.com/gtag/js?id=${analyticsId}';
+  document.head.append(tag);
+}
+</script>`;
 const sitemapUrls = [];
 const read = path => JSON.parse(readFileSync(join(output, path), 'utf8'));
 const records = read('data/catalog.json');
@@ -66,6 +80,8 @@ function page({path,title,description,body,active='',kind='',indexable=false}) {
   if (canonical) sitemapUrls.push(canonical);
   write(path,`<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+${analyticsTag}
+${kind === 'home' ? `<meta name="msvalidate.01" content="${bingVerification}">` : ''}
 ${canonical ? `<link rel="canonical" href="${escape(canonical)}">` : '<meta name="robots" content="noindex, follow">'}
 <meta name="description" content="${escape(description)}">
 <meta name="theme-color" content="#eff0ff">
