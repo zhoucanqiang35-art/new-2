@@ -5,6 +5,8 @@ import { fileURLToPath } from 'node:url';
 import { officialGuide, demo, estimate, tracking, signup, guide, faq, topics, checks } from './editorial.mjs';
 
 const output = fileURLToPath(new URL('../dist/', import.meta.url));
+const siteOrigin = 'https://superbuyfindsheet.com';
+const sitemapUrls = [];
 const read = path => JSON.parse(readFileSync(join(output, path), 'utf8'));
 const records = read('data/catalog.json');
 const rateTable = read('data/rates.json');
@@ -59,10 +61,12 @@ function shoppingPreferences() {
     </div><p id="currency-source"></p></section>
   </div></details>`;
 }
-function page({path,title,description,body,active='',kind=''}) {
+function page({path,title,description,body,active='',kind='',indexable=false}) {
+  const canonical = indexable ? siteOrigin + '/' + path.replace(/index\.html$/, '') : '';
+  if (canonical) sitemapUrls.push(canonical);
   write(path,`<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, follow">
+${canonical ? `<link rel="canonical" href="${escape(canonical)}">` : '<meta name="robots" content="noindex, follow">'}
 <meta name="description" content="${escape(description)}">
 <meta name="theme-color" content="#eff0ff">
 <title>${escape(title)} | Superbuy Findsheet</title>
@@ -149,7 +153,7 @@ function productIntroContent() {
   ${homeFold('Read the full product guide', `<div class="detail-articles product-intro-grid">${productIntroduction.map(([heading,,body])=>`<article><h3>${t(heading)}</h3><p>${t(body)}</p></article>`).join('')}</div>`)}`;
 }
 
-page({path:'index.html',title:'Superbuy Spreadsheet – Weidian Finds & QC Photos',description:'Browse Weidian finds by category, search by item ID or photo, compare reference prices and see available warehouse QC. Follow the illustrated Superbuy buying guide.',active:'/',kind:'home',body:
+page({path:'index.html',indexable:true,title:'Superbuy Spreadsheet – Weidian Finds & QC Photos',description:'Browse Weidian finds by category, search by item ID or photo, compare reference prices and see available warehouse QC. Follow the illustrated Superbuy buying guide.',active:'/',kind:'home',body:
   `<header class="home-intro" id="home-banner"><div class="wrap home-intro-inner"><div class="home-intro-copy"><h1>${t("Superbuy Spreadsheet")}</h1><p>${t(homeIntro)}</p>
   <div class="home-actions"><a class="btn primary" href="/spreadsheet/">${t('Browse finds')}</a><a class="btn outline" href="/image-search/">${t('Search by image')}</a></div></div>
   </div><picture class="home-banner-art"><source media="(max-width: 670px)" srcset="/assets/superbuy-air-delivery-mobile.webp" width="720" height="514"><img class="home-banner-image" src="/assets/superbuy-air-delivery.webp" width="1920" height="768" alt="A blue dragon pilot flying a parcel delivery plane above the clouds" data-alt="A blue dragon pilot flying a parcel delivery plane above the clouds" fetchpriority="high"></picture></header>
@@ -157,18 +161,18 @@ page({path:'index.html',title:'Superbuy Spreadsheet – Weidian Finds & QC Photo
   ${section('product-details',detailIntroHeading,productIntroContent(),'/products/','View all products')}
   ${section('guide',guidesTitle,guideContent(),'/guide/','Open buying guide')}
   ${section('faq',faqTitle,faqContent(),'/faq/','See all FAQs')}</div>`});
-page({path:'spreadsheet/index.html',title:'Superbuy Finds – Weidian Product Catalog',description:'Browse Weidian sneakers, hoodies, jackets, jerseys and more. Filter by category, search by product name or Weidian ID, and compare reference prices.',active:'/spreadsheet/',kind:'catalog',body:catalog()});
-page({path:'products/index.html',title:'Superbuy Product Details',description:overviewText,active:'/products/',kind:'catalog',body:
+page({path:'spreadsheet/index.html',indexable:true,title:'Superbuy Finds – Weidian Product Catalog',description:'Browse Weidian sneakers, hoodies, jackets, jerseys and more. Filter by category, search by product name or Weidian ID, and compare reference prices.',active:'/spreadsheet/',kind:'catalog',body:catalog()});
+page({path:'products/index.html',indexable:true,title:'Superbuy Product Details',description:overviewText,active:'/products/',kind:'catalog',body:
   `<aside class="intro-panel product-index-intro"><p>${t(overviewText)}</p><a class="btn outline" href="${detail('7405460467')}">${t('Open example product')}</a></aside>${catalog({productIndex:true})}`});
 page({path:'product/index.html',title:'Superbuy Product Details',description:'Explore Weidian listing images, USD prices, category-specific checks, warehouse QC where available and Superbuy purchase links.',active:'/products/',kind:'product',body:
   `<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">${t('Home')}</a><a href="/products/">${t('Product Details')}</a><span id="product-crumb"></span></nav>
   <div id="product-view"><h1>${t('Product Details')}</h1><p role="status">${t('Loading product…')}</p></div>
   <noscript><p>${t('Enable JavaScript to search and filter the full catalog.')}</p></noscript>`});
-page({path:'guide/index.html',title:'How to Buy with Superbuy – Illustrated Guide',description:'An illustrated Superbuy guide to exact Weidian links, order options, payment, warehouse QC, parcel submission and tracking.',active:'/guide/',body:
+page({path:'guide/index.html',indexable:true,title:'How to Buy with Superbuy – Illustrated Guide',description:'An illustrated Superbuy guide to exact Weidian links, order options, payment, warehouse QC, parcel submission and tracking.',active:'/guide/',body:
   heading(guidesTitle,'Follow a Weidian find from this catalog to Superbuy’s official order, warehouse and shipping screens.')+guideContent(true)});
-page({path:'faq/index.html',title:'Superbuy Spreadsheet FAQ',description:'Answers about Weidian IDs, reverse image search, listing photos, QC, prices, sizing, parcel shipping, and tracking.',active:'/faq/',body:heading(faqTitle,'Answers for finding products, checking photos and placing orders with Superbuy.')+faqContent(true)});
+page({path:'faq/index.html',indexable:true,title:'Superbuy Spreadsheet FAQ',description:'Answers about Weidian IDs, reverse image search, listing photos, QC, prices, sizing, parcel shipping, and tracking.',active:'/faq/',body:heading(faqTitle,'Answers for finding products, checking photos and placing orders with Superbuy.')+faqContent(true)});
 page({path:'seo/index.html',title:'Superbuy Spreadsheet Search Guide – Weidian, QC & Shipping',description:seoDescription,body:heading(seoTitle,seoIntro)+seoContent()+
-  `<section class="home-section"><h2>${t('Site directory')}</h2><ul class="directory">${links.map(([href,label])=>`<li><a href="${href}">${t(label)}</a></li>`).join('')}<li><a href="/image-search/">${t('Search by image')}</a></li></ul><p>${t('This public preview is marked noindex until the production domain is configured.')}</p></section>
+  `<section class="home-section"><h2>${t('Site directory')}</h2><ul class="directory">${links.map(([href,label])=>`<li><a href="${href}">${t(label)}</a></li>`).join('')}<li><a href="/image-search/">${t('Search by image')}</a></li></ul></section>
   <section class="home-section"><h2>${t('Research references')}</h2>
     <ul class="directory">
       <li><a class="text-link" href="${officialGuide}">${t('Superbuy official buying guide')}</a></li>
@@ -190,4 +194,9 @@ page({path:'404.html',title:'Page not found',description:'Return to Superbuy Fin
 const legacy=[['mesh-runner','shoes'],['heavyweight-hoodie','hoodies-sweaters'],['utility-jacket','jackets'],['straight-cargo-pants','pants-shorts'],['nylon-sling-bag','accessories'],['boxy-cotton-tee','t-shirts']];
 for(const [slug,cat] of legacy) write(`products/${slug}/index.html`,`<!doctype html><html lang="en"><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=/spreadsheet/?category=${cat}"><title>Browse real product listings</title><a href="/spreadsheet/?category=${cat}">Browse this category</a></html>`);
 write('data/site-meta.json',JSON.stringify({categories,languages,spotlight,local:[...local],checks,agents,rates:rateTable.rates,ratesDate:rateTable.date,count:records.length,indexedImages:read('data/visual-photos.json').length}));
-write('robots.txt','User-agent: *\nAllow: /\n');
+write('sitemap.xml',`<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapUrls.map(url=>`  <url><loc>${escape(url)}</loc></url>`).join('\n')}
+</urlset>
+`);
+write('robots.txt',`User-agent: *\nAllow: /\n\nSitemap: ${siteOrigin}/sitemap.xml\n`);
