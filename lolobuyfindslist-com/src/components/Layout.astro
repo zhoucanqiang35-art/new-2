@@ -12,10 +12,26 @@ const links = [
   ['/guides/how-to-buy/', 'Buying guide', 'guide'], ['/faq/', 'FAQ', 'faq'],
 ];
 const indexable = productionBuild && indexablePaths.includes(Astro.url.pathname);
+const analyticsId = 'G-FZ8D1KV9T3';
+const analyticsHost = new URL(publicOrigin).hostname;
 ---
 <!doctype html>
 <html lang="en">
 <head>
+  {productionBuild && (
+    <>
+      <meta name="msvalidate.01" content="E34A6C20A8A058592D1DC4B20523F6CB" />
+      <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${analyticsId}`}></script>
+      <script is:inline define:vars={{analyticsId, analyticsHost}}>
+        if (location.hostname === analyticsHost) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { window.dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', analyticsId);
+        }
+      </script>
+    </>
+  )}
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   {indexable ? <link rel="canonical" href={new URL(Astro.url.pathname, publicOrigin).href} /> : <meta name="robots" content="noindex, follow" />}
