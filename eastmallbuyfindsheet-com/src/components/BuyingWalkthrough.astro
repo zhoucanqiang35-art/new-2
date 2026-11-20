@@ -1,0 +1,29 @@
+---
+import {buyingSteps, officialOrder} from '../lib/buying-help.mjs';
+const {home = false} = Astro.props;
+---
+<section class:list={['buying-walkthrough', {'wrap home-section': home}]} aria-labelledby="walkthrough-heading">
+  {home ? <h2 id="walkthrough-heading">How to buy on EastMallBuy</h2> : <h2 id="walkthrough-heading">From listing to shipment</h2>}
+  <p class="walkthrough-lead">Follow the purchasing process using real Findsheet screens and the official EastMallBuy shipping calculator.</p>
+  <ol class="walkthrough-grid">
+    {buyingSteps.map(({title, text, image, width, height, caption, label, href}) => (
+      <li class="walkthrough-step">
+        {image && <figure>
+          <a href={'https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/guide/' + image} target="_blank" rel="noopener" aria-label={caption}>
+            <img src={'https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/guide/' + image} alt={caption} loading="lazy" width={width} height={height} />
+          </a>
+          <figcaption>{caption}</figcaption>
+        </figure>}
+        <div class="walkthrough-step-copy">
+          <h3>{title}</h3>
+          <p>{text}</p>
+          <a class="section-link" href={href} target={href.startsWith('https:') ? '_blank' : undefined} rel={href.startsWith('https:') ? 'noopener' : undefined}>{label}</a>
+        </div>
+      </li>
+    ))}
+  </ol>
+  <div class="actions">
+    {home && <a class="button dark" href="/guides/how-to-buy/">Open the full buying guide</a>}
+    <a class="button outline" href={officialOrder} target="_blank" rel="noopener">Official EastMallBuy ordering guide</a>
+  </div>
+</section>

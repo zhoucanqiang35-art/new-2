@@ -1,0 +1,211 @@
+---
+import Layout from '../components/Layout.astro';
+import catalog from '../../public/data/catalog.json';
+import {categoryEntries} from '../lib/categories.mjs';
+import {categoryGuides} from '../lib/category-guides.mjs';
+import {productImage, productUrl} from '../lib/catalog.mjs';
+
+const categoryPhotoIds = {
+  shoes: '5841',
+  'hoodies-sweaters': '8648',
+  't-shirts': '8779',
+  jackets: '8352',
+  'pants-shorts': '8510',
+  headwear: '8944',
+  ShortSets: '8397',
+  jersey: '7656',
+  accessories: '9018',
+  electronics: '8702',
+  'other-stuff': '8179',
+};
+
+const number = new Intl.NumberFormat('en-US');
+const entries = categoryEntries.map(({key, name, count}) => {
+  const {searches, ...guide} = categoryGuides[key];
+  const availableSearches = searches.filter((query) => catalog.some((product) =>
+    product.category === key && /^\d+$/.test(product.weidianId) && product.name.toLowerCase().includes(query)));
+  const href = '/spreadsheet/?category=' + encodeURIComponent(key);
+  const photo = catalog.find((product) => product.id === categoryPhotoIds[key] && product.category === key);
+  return {name, count, guide, photo, availableSearches, href, anchor: key.toLowerCase()};
+});
+---
+<Layout
+  title="EastMallBuy Category Guides | Findsheet"
+  description="Browse 11 EastMallBuy catalog categories with practical notes on styles, sizing, listing options and warehouse QC. Open each category in the EastMallBuy spreadsheet."
+  page="categories"
+>
+  <section class="wrap page category-guide-page" aria-labelledby="category-guide-title">
+    <h1 id="category-guide-title">Shop by category</h1>
+    <p class="lead">Explore the 11 categories in the EastMallBuy spreadsheet. Compare styles, check measurements and know which details to look for in seller and warehouse photos.</p>
+    <nav class="category-index" aria-label="Jump to a category">
+      {entries.map(({name, anchor}) => <a href={'#' + anchor}>{name}</a>)}
+    </nav>
+
+    <div class="category-guides">
+      {entries.map(({name, count, guide, photo, availableSearches, href, anchor}) => (
+        <article class="category-guide" id={anchor} aria-labelledby={anchor + '-heading'}>
+          <div class="category-guide-visual">
+            {photo && (
+              <a class="category-guide-photo" href={productUrl(photo.weidianId)} translate="no">
+                <img src={productImage(photo)} alt={photo.name} width="384" height="341" loading="lazy" />
+              </a>
+            )}
+            <span>{number.format(count)} listings in the preview</span>
+            <a class="button dark" href={href}>Browse {name}</a>
+          </div>
+          <div class="category-guide-copy">
+            <h2 id={anchor + '-heading'}>{name}</h2>
+            <p>{guide.intro}</p>
+            <section>
+              <h3>Styles and details to compare</h3>
+              <ul>{guide.compare.map((point) => <li>{point}</li>)}</ul>
+            </section>
+            <div class="category-guide-checks">
+              <section>
+                <h3>Size and measurements</h3>
+                <p>{guide.fit}</p>
+              </section>
+              <section>
+                <h3>Seller and warehouse photos</h3>
+                <p>{guide.photos}</p>
+              </section>
+            </div>
+            {availableSearches.length > 0 && (
+              <div class="category-guide-searches">
+                <h3>Try a search</h3>
+                <ul>{availableSearches.map((query) => <li><a href={href + '&q=' + encodeURIComponent(query)}>{query}</a></li>)}</ul>
+              </div>
+            )}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .category-guide-page .lead { max-width: 640px; }
+
+  .category-index,
+  .category-guide-searches ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .category-index {
+    padding: 0 0 23px;
+    border-bottom: 1px solid var(--edge);
+  }
+
+  .category-index a,
+  .category-guide-searches a {
+    display: block;
+    padding: 5px 11px;
+    border: 1px solid var(--control-border);
+    border-radius: 7px;
+    color: var(--deep);
+    text-decoration: none;
+    font-size: .88rem;
+    font-weight: 680;
+  }
+
+  .category-index a:hover,
+  .category-guide-searches a:hover {
+    background: var(--tint);
+    text-decoration: underline;
+  }
+
+  .category-guides {
+    display: grid;
+    gap: 17px;
+    margin-top: 23px;
+  }
+
+  .category-guide {
+    display: grid;
+    grid-template-columns: minmax(220px, .43fr) minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(20px, 4.2vw, 52px);
+    padding: clamp(16px, 2.8vw, 31px);
+    border: 1px solid var(--edge);
+    border-radius: 13px;
+    background: var(--surface);
+    scroll-margin: 18px;
+  }
+
+  .category-guide:target { border-color: var(--focus); }
+
+  .category-guide-visual {
+    display: grid;
+    gap: 10px;
+    justify-items: start;
+  }
+
+  .category-guide-photo { width: 100%; }
+
+  .category-guide-photo img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 384 / 341;
+    object-fit: contain;
+    border-radius: 8px;
+    background: var(--tint);
+  }
+
+  .category-guide-visual span {
+    color: var(--muted);
+    font-size: .86rem;
+  }
+
+  .category-guide-copy {
+    display: grid;
+    gap: 13px;
+    color: var(--muted);
+  }
+
+  .category-guide-copy h2 { color: var(--ink); }
+
+  .category-guide-copy h3 {
+    margin: 0 0 6px;
+    color: var(--deep);
+    font-size: 1rem;
+    letter-spacing: 0;
+  }
+
+  .category-guide-copy ul {
+    margin: 0;
+    padding-left: 19px;
+    line-height: 1.55;
+  }
+
+  .category-guide-copy li + li { margin-top: 4px; }
+
+  .category-guide-checks {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+    padding-top: 13px;
+    border-top: 1px solid var(--edge);
+  }
+
+  .category-guide-searches ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  .category-guide-searches li + li { margin-top: 0; }
+
+  @media (max-width: 760px) {
+    .category-guide {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .category-guide-photo img { height: clamp(150px, 38vw, 230px); }
+  }
+
+  @media (max-width: 480px) {
+    .category-guide-checks { grid-template-columns: 1fr; }
+  }
+</style>

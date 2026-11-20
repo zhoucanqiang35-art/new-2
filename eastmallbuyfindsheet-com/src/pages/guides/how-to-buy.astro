@@ -1,0 +1,14 @@
+---
+import Layout from '../../components/Layout.astro';
+import BuyingWalkthrough from '../../components/BuyingWalkthrough.astro';
+import {registrationUrl} from '../../lib/catalog.mjs';
+---
+<Layout title="How to Buy on EastMallBuy | Illustrated Findsheet Guide" description="A practical EastMallBuy buying guide with real screenshots, from finding a Weidian product to reviewing warehouse QC and estimating international shipping." page="guide">
+  <div class="wrap page">
+    <h1>How to buy on EastMallBuy</h1>
+    <p class="lead">Use Findsheet to find your listing, then place and manage your order through your EastMallBuy account.</p>
+    <div class="actions"><a href="/spreadsheet/" class="button dark">Browse the spreadsheet</a><a class="button outline" href={registrationUrl} rel="sponsored noopener" target="_blank">Register on EastMallBuy</a></div>
+    <div class="subsection"><BuyingWalkthrough /></div>
+    <div class="actions subsection"><a class="button outline" href="/faq/">Read the EastMallBuy FAQ</a></div>
+  </div>
+</Layout>

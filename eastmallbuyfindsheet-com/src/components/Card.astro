@@ -1,0 +1,13 @@
+---
+import {categoryLabel, productImage, productUrl} from '../lib/catalog.mjs';
+import {priceFor} from '../lib/shopping.mjs';
+const {product, hasQc = false} = Astro.props;
+const estimate = priceFor(product.price);
+---
+<a class="product-card" href={productUrl(product.weidianId)}>
+  <div class="product-pic">
+    <img src={productImage(product)} alt={product.name} translate="no" loading="lazy" width="350" height="280" />
+    {hasQc && <span class="qc-card-label">QC photos</span>}
+  </div>
+  <div class="product-info"><small>{categoryLabel(product.category)}</small><strong translate="no">{product.name}</strong>{estimate && <strong class="reference-price" data-reference-price={product.price}>{estimate}</strong>}</div>
+</a>

@@ -1,0 +1,20 @@
+---
+import CategoryIcon from './CategoryIcon.astro';
+import {categoryEntries} from '../lib/categories.mjs';
+const number = new Intl.NumberFormat('en-US');
+const entries = categoryEntries.filter(({key}) => !['electronics', 'other-stuff'].includes(key));
+const combined = categoryEntries.filter(({key}) => ['electronics', 'other-stuff'].includes(key));
+const tiles = [...entries.map((item) => [item]), combined];
+---
+<div class="catalog-categories">
+  {tiles.map((tile) => (
+    <div class:list={['catalog-category-tile', {'catalog-category-pair': tile.length > 1}]}>
+      {tile.map(({key, name, count}) => (
+        <a class="catalog-category" href={'/spreadsheet/?category=' + encodeURIComponent(key)}>
+          <span class="category-icon"><CategoryIcon category={key} /></span>
+          <span class="category-caption"><strong>{name}</strong><small>{number.format(count)} listings</small></span>
+        </a>
+      ))}
+    </div>
+  ))}
+</div>

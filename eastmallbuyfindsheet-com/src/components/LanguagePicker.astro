@@ -1,0 +1,128 @@
+---
+import {languages} from '../lib/languages.mjs';
+---
+<div class="language-picker">
+  <label class="visually-hidden" for="site-language">Website language</label>
+  <select id="site-language">
+    {languages.map(([code, label]) => <option value={code} selected={code === 'en'} lang={code} translate="no">{label}</option>)}
+  </select>
+</div>
+<p id="language-status" class="visually-hidden" role="status"></p>
+<script>
+  import {languages} from '../lib/languages.mjs';
+  import {navigationLabels} from '../lib/language-labels.mjs';
+
+  const input = document.querySelector<HTMLSelectElement>('#site-language')!;
+  const status = document.querySelector('#language-status')!;
+  const attributes = ['placeholder', 'aria-label', 'alt', 'title'];
+  const ignored = 'script, style, noscript, [translate="no"], [data-reference-price]';
+  const textOriginals = new WeakMap<Text, string>();
+  const knownCodes = new Set(languages.map(([code]) => code));
+  const storageKey = 'eastmallbuy-language';
+  type Dictionary = Record<string, string>;
+  let dictionary: Dictionary = {};
+  let active = 'en';
+  let requestId = 0;
+
+  function translated(source: string) {
+    const exact = dictionary[source];
+    if (exact) return exact;
+    if (source.startsWith('Buy on ') && dictionary['Buy on ZZ1ZZ']) {
+      return dictionary['Buy on ZZ1ZZ'].replace('ZZ1ZZ', source.slice(7));
+    }
+    const parts: string[] = [];
+    const template = source.replace(/\d+(?:,\d{3})*/g, (part) => {
+      parts.push(part);
+      return 'ZZ' + parts.length + 'ZZ';
+    });
+    if (!parts.length || !dictionary[template]) return source;
+    return dictionary[template].replace(/ZZ(\d+)ZZ/g, (_, i) => parts[Number(i) - 1] ?? '');
+  }
+
+  function apply(root: Node) {
+    if (root instanceof Element) {
+      if (root.closest(ignored)) return;
+      for (const name of attributes) {
+        const value = root.getAttribute(name);
+        if (!value?.trim()) continue;
+        // Remember the visible English label alongside the translated attribute.
+        const originalName = 'data-source-' + name;
+        const original = root.getAttribute(originalName) ?? value;
+        const replacement = translated(original.trim());
+        if (replacement !== value) {
+          root.setAttribute(originalName, original);
+          root.setAttribute(name, replacement);
+        }
+      }
+    }
+    if (root instanceof Text) {
+      if (root.parentElement?.closest(ignored)) return;
+      const original = textOriginals.get(root) ?? root.data;
+      if (!original.trim()) return;
+      const next = original.replace(/\S(?:[\s\S]*\S)?/, (trimmed) => translated(trimmed.replace(/\s+/g, ' ')));
+      if (next !== root.data) {
+        textOriginals.set(root, original);
+        root.data = next;
+      }
+    }
+    for (const child of root.childNodes) apply(child);
+  }
+
+  async function setLanguage(code: string) {
+    const id = ++requestId;
+    try {
+      let next = {};
+      if (code !== 'en') {
+        const response = await fetch('/data/languages/' + encodeURIComponent(code) + '.json');
+        if (!response.ok) throw new Error('Translation unavailable');
+        next = await response.json();
+      }
+      if (id !== requestId) return;
+      dictionary = {...next, ...navigationLabels(code)};
+      active = code;
+      document.documentElement.lang = code;
+      document.documentElement.dir = code === 'ar' ? 'rtl' : 'ltr';
+      input.value = code;
+      status.textContent = '';
+      apply(document.querySelector('title')!);
+      apply(document.body);
+      try { localStorage.setItem(storageKey, code); } catch {}
+    } catch {
+      if (id === requestId) {
+        input.value = active;
+        status.textContent = 'Could not load that language. Please try again.';
+      }
+    }
+  }
+
+  new MutationObserver((changes) => {
+    if (active === 'en') return;
+    for (const change of changes) {
+      for (const node of change.addedNodes) apply(node);
+    }
+  }).observe(document.body, {childList: true, subtree: true});
+
+  input.addEventListener('change', () => {
+    if (knownCodes.has(input.value)) void setLanguage(input.value);
+  });
+  try {
+    const stored = localStorage.getItem(storageKey);
+    if (stored && knownCodes.has(stored) && stored !== 'en') void setLanguage(stored);
+  } catch {}
+</script>
+<style>
+  .language-picker select {
+    min-height: 42px;
+    max-width: 8.3rem;
+    padding: 5px 8px;
+    border: 1px solid var(--control-border);
+    border-radius: 8px;
+    color: var(--ink);
+    background: var(--tint);
+    font-size: .84rem;
+    font-weight: 720;
+  }
+  @media (max-width: 720px) {
+    .language-picker select { min-height: 34px; max-width: 6.3rem; font-size: .74rem; }
+  }
+</style>

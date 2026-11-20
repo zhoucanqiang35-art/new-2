@@ -1,0 +1,121 @@
+[
+  {
+    "id": "findspreadsheet",
+    "name": "Findspreadsheet",
+    "logo": "/assets/findspreadsheet-mark.svg"
+  },
+  {
+    "id": "joyagoo",
+    "name": "Joyagoo",
+    "template": "https://joyagoo.com/product?id={productId}&platform=WEIDIAN&productUrl=&productPwd=",
+    "logo": "https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/agents/joyagoo.webp"
+  },
+  {
+    "id": "oopbuy",
+    "name": "Oopbuy",
+    "template": "https://oopbuy.com/product/weidian/{productId}?inviteCode=U68CWQBN5",
+    "logo": "https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/agents/oopbuy.webp"
+  },
+  {
+    "id": "litbuy",
+    "name": "Litbuy",
+    "template": "https://litbuy.com/product/weidian/{productId}",
+    "logo": "https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/agents/litbuy.webp"
+  },
+  {
+    "id": "lovegobuy",
+    "name": "Lovegobuy",
+    "template": "https://www.lovegobuy.com/product?id={productId}&shop_type=weidian&invite_code=161CPG",
+    "logo": "https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/agents/lovegobuy.webp"
+  },
+  {
+    "id": "hipobuy",
+    "name": "Hipobuy",
+    "template": "https://hipobuy.com/product/weidian/{productId}",
+    "logo": "https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/agents/hipobuy.webp"
+  },
+  {
+    "id": "sugargoo",
+    "name": "Sugargoo",
+    "template": "https://www.sugargoo.com/#/home/productDetail?productLink=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D{productId}&memberId=1771881989097259278",
+    "logo": "https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/agents/sugargoo.webp"
+  },
+  {
+    "id": "kakobuy",
+    "name": "Kakobuy",
+    "template": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D{productId}",
+    "logo": "https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/agents/kakobuy.webp"
+  },
+  {
+    "id": "superbuy",
+    "name": "Superbuy",
+    "template": "https://www.superbuy.com/en/page/buy/?nTag=Home-search&from=search-input&url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D{productId}&partnercode=ES7pVI",
+    "logo": "https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/agents/superbuy.webp"
+  },
+  {
+    "id": "loongbuy",
+    "name": "Loongbuy",
+    "template": "https://loongbuy.com/product-details?url=https://weidian.com/item.html?itemID={productId}",
+    "logo": "https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/agents/loongbuy.webp"
+  },
+  {
+    "id": "usfans",
+    "name": "USFans",
+    "template": "https://usfans.com/product/3/{productId}",
+    "logo": "https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/agents/usfans.webp"
+  },
+  {
+    "id": "mulebuy",
+    "name": "Mulebuy",
+    "template": "https://mulebuy.com/zh/product/?shop_type=weidian&id={productId}&ref=200232406",
+    "logo": "https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/agents/mulebuy.webp"
+  },
+  {
+    "id": "hoobuy",
+    "name": "Hoobuy",
+    "template": "https://hoobuy.com/product/2/{productId}?utm_source=share&utm_medium=product_details&inviteCode=vXpLpmrX",
+    "logo": "https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/agents/hoobuy.webp"
+  },
+  {
+    "id": "ootdbuy",
+    "name": "Ootdbuy",
+    "template": "https://www.ootdbuy.com/goods/details?id={productId}&channel=weidian&inviteCode=179LQ1SVA",
+    "logo": "https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/agents/ootdbuy.webp"
+  },
+  {
+    "id": "orientdig",
+    "name": "Orientdig",
+    "template": "https://orientdig.com/product/?shop_type=weidian&id={productId}&ref=100114240",
+    "logo": "https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/agents/orientdig.webp"
+  },
+  {
+    "id": "eastmallbuy",
+    "name": "EastMallBuy",
+    "template": "https://eastmallbuy.com/index/weidian/itemID={productId}&inviter=lianglook520",
+    "logo": "https://findspreadsheet.com/template/pc/skin/images/platform-logos/eastmallbuy.jpg"
+  },
+  {
+    "id": "ponybuy",
+    "name": "Ponybuy",
+    "template": "https://www.ponybuy.com/en-gb/goods?tracking=e6cd1dcf21&product_id={productId}&platform=weidian",
+    "logo": "https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/agents/ponybuy.webp"
+  },
+  {
+    "id": "pikobuy",
+    "name": "Pikobuy",
+    "template": "https://www.pikobuy.com/product/detail?productUrl=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D{productId}",
+    "logo": "https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/agents/pikobuy.webp"
+  },
+  {
+    "id": "lolobuy",
+    "name": "Lolobuy",
+    "template": "https://www.lolobuy.com/productDetail/1783404849631986?url=https://weidian.com/item.html?itemID={productId}",
+    "logo": "https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/agents/lolobuy.webp"
+  },
+  {
+    "id": "panglobalbuy",
+    "name": "Panglobalbuy",
+    "template": "https://panglobalbuy.com/#/details?type=3&offerId={productId}&share_id=14918",
+    "logo": "https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/agents/panglobalbuy.webp"
+  }
+]

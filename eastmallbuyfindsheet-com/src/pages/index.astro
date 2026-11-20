@@ -1,0 +1,83 @@
+---
+import Layout from '../components/Layout.astro';
+import Card from '../components/Card.astro';
+import CategoryGrid from '../components/CategoryGrid.astro';
+import {categoryEntries, listingCount} from '../lib/categories.mjs';
+import catalog from '../../public/data/catalog.json';
+import qc from '../../public/data/qc-featured.json';
+import {productImage, productUrl} from '../lib/catalog.mjs';
+import BuyingWalkthrough from '../components/BuyingWalkthrough.astro';
+import BuyingFaq from '../components/BuyingFaq.astro';
+import '../home.css';
+
+const selected = ['5954', '8608', '6818', '7357', '8768', '8891', '8313', '7637', '6250', '8765', '8676', '8984'];
+const featured = selected.map((id) => catalog.find((item) => item.id === id));
+const number = new Intl.NumberFormat('en-US');
+const qcSample = '7403509728';
+const qcSampleProduct = catalog.find((item) => item.weidianId === qcSample);
+---
+<Layout title="EastMallBuy Spreadsheet | Browse Finds & Warehouse QC" description="Explore shoes, streetwear and accessories in the EastMallBuy spreadsheet. Browse 11 Findspreadsheet categories, search by image, and check available warehouse QC photos." page="home">
+  <section class="catalog-hero">
+    <picture class="catalog-hero-photo">
+      <source media="(max-width: 720px)" srcset="https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/shipping-hero-mobile.webp" />
+      <img src="https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/shipping-hero.webp" width="1536" height="1024" alt="" fetchpriority="high" />
+    </picture>
+    <div class="wrap catalog-hero-content">
+      <p class="catalog-kicker">The Findspreadsheet catalog</p>
+      <h1>EastMallBuy <span>Spreadsheet</span></h1>
+      <p class="catalog-lead">Browse streetwear, shoes and accessories. Check seller photos and available warehouse QC before opening a listing on EastMallBuy.</p>
+      <form class="search-form home-search" action="/spreadsheet/">
+        <label class="visually-hidden" for="home-search">Search by name or Weidian ID</label>
+        <input id="home-search" name="q" type="search" placeholder="Search a product or Weidian ID" />
+        <button class="button dark" type="submit">Search</button>
+      </form>
+      <div class="home-actions">
+        <a class="button catalog-primary" href="/spreadsheet/">Browse spreadsheet</a>
+        <a class="button catalog-quiet" href="/image-search/#qc-finder">Find QC photos</a>
+      </div>
+      <div class="catalog-hero-summary" aria-label="Catalog at a glance">
+        <a href="/spreadsheet/"><strong>{number.format(listingCount)}</strong><span>Weidian listings</span></a>
+        <a href="/categories/"><strong>{categoryEntries.length}</strong><span>Product categories</span></a>
+        <a href="/image-search/"><strong>Image Search</strong><span>Find by reference photo</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap home-section" id="categories">
+    <div class="home-section-head">
+      <div><h2>Shop by category</h2><p>Open a category to browse matching listings.</p></div>
+      <a class="section-link" href="/categories/">View all categories</a>
+    </div>
+    <CategoryGrid />
+  </section>
+
+  <section class="wrap home-section">
+    <div class="home-section-head">
+      <div><h2>Popular finds</h2><p>Selected from frequently viewed listings on Findspreadsheet category pages. Open an item to compare seller photos and options.</p></div>
+      <a class="section-link" href="/spreadsheet/">Open the spreadsheet</a>
+    </div>
+    <div class="product-grid home-products">{featured.map((product) => <Card product={product} hasQc={Boolean(qc[product.weidianId]?.status === 'available')} />)}</div>
+  </section>
+
+  <section class="wrap home-section home-tool-pair" aria-label="Product research tools">
+    <article class="home-qc">
+      <div class="home-qc-copy">
+        <h2>See warehouse QC</h2>
+        <p>Look up a Weidian link or item ID. Open a saved example to see what warehouse photos can show.</p>
+        <div class="home-tool-links"><a class="button dark" href="/image-search/#qc-finder">Open QC Finder</a><a class="section-link" href={'/image-search/?id=' + qcSample + '#qc-finder'}>View QC example</a></div>
+      </div>
+      <a class="home-qc-photo" href={productUrl(qcSample)} aria-label={qcSampleProduct.name + ' product details'}>
+        <img src={productImage(qcSampleProduct)} alt={qcSampleProduct.name} width="420" height="380" loading="lazy" />
+        <span>Seller photo · {qcSample}</span>
+      </a>
+    </article>
+    <article class="home-image-tool">
+      <h2>Find it by photo</h2>
+      <p>Start with a reference image to find similar-looking listings in the saved catalog. The photo stays on your device.</p>
+      <a class="button outline" href="/image-search/">Search by image</a>
+    </article>
+  </section>
+
+  <BuyingWalkthrough home />
+  <BuyingFaq home />
+</Layout>

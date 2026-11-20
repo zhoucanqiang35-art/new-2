@@ -1,0 +1,53 @@
+---
+import '../styles.css';
+import ShoppingMenu from './ShoppingMenu.astro';
+import LanguagePicker from './LanguagePicker.astro';
+import {registrationUrl} from '../lib/catalog.mjs';
+const { title, description = 'Browse the EastMallBuy spreadsheet, explore Weidian finds, and check available QC photos.', page = '' } = Astro.props;
+const nav = [['/', 'Home', 'home'], ['/categories/', 'Categories', 'categories'], ['/spreadsheet/', 'Spreadsheet', 'sheet'], ['/image-search/', 'Image Search', 'image'], ['/guides/how-to-buy/', 'Buying Guide', 'guide'], ['/faq/', 'FAQ', 'faq']];
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="theme-color" content="#eaf0ef" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content={description} />
+  <link rel="icon" href="https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/favicon.jpg" />
+  <title>{title}</title>
+</head>
+<body class:list={{"home-layout": page === "home"}}>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="wrap nav">
+      <a class="brand" href="/" aria-label="EastMallBuy Findsheet home"><img src="https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/eastmallbuy.png" width="157" height="24" alt="EastMallBuy" /><span>Findsheet</span></a>
+      <nav aria-label="Main navigation">{nav.map(([href, label, key]) => <a href={href} aria-current={page === key ? 'page' : undefined}>{label}</a>)}</nav>
+      <div class="nav-actions">
+        {page === 'sheet' && <ShoppingMenu />}
+        <LanguagePicker />
+        <a class="button dark account" href={registrationUrl} rel="sponsored noopener" target="_blank">Join EastMallBuy</a>
+      </div>
+    </div>
+  </header>
+  <main id="main"><slot /></main>
+  <footer>
+    <div class="wrap footer-inner">
+      <div><a class="footer-brand" href="/">EastMallBuy Findsheet</a><p>Independent directory maintained by Findspreadsheet. Accounts and orders are handled by EastMallBuy. Some links contain referral codes.</p></div>
+      <div class="footer-links"><a href="https://findspreadsheet.com/eastmallbuy/">Findspreadsheet</a><a href="/guides/how-to-buy/">Buying guide</a><a href="/faq/">FAQ</a><a href={registrationUrl} rel="sponsored noopener" target="_blank">Join EastMallBuy</a><span>Public preview</span></div>
+    </div>
+  </footer>
+  <script>
+    import {priceFor, shoppingOptions} from '../lib/shopping.mjs';
+    function updateDisplayedPrices() {
+      const {currency} = shoppingOptions();
+      for (const node of document.querySelectorAll<HTMLElement>('[data-reference-price]')) {
+        node.textContent = priceFor(node.dataset.referencePrice, currency);
+      }
+    }
+    window.addEventListener('shopping-change', updateDisplayedPrices);
+    window.addEventListener('pageshow', updateDisplayedPrices);
+    updateDisplayedPrices();
+  </script>
+</body>
+</html>

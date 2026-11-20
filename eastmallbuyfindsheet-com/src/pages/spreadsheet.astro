@@ -1,0 +1,25 @@
+---
+import Layout from '../components/Layout.astro';
+import {categories} from '../lib/catalog.mjs';
+---
+<Layout title="EastMallBuy Product Spreadsheet | Browse and Search" page="sheet">
+  <section class="wrap page">
+    <p class="eyebrow">PRODUCT DIRECTORY</p><h1>EastMallBuy Spreadsheet</h1>
+    <p class="lead">Browse the saved Findspreadsheet catalog. Search by name or paste a Weidian item link. The directory shows estimated item prices. Confirm the current price and availability with your selected agent.</p>
+    <form id="filters" class="filter-bar" action="/spreadsheet/">
+      <label class="visually-hidden" for="query">Product name or item ID</label><input id="query" name="q" placeholder="Product name, Weidian link or item ID" />
+      <label class="visually-hidden" for="category">Category</label><select id="category" name="category"><option value="">All categories</option>{Object.entries(categories).map(([key, label]) => <option value={key}>{label}</option>)}</select>
+      <label class="visually-hidden" for="sort">Sort</label><select id="sort" name="sort"><option value="latest">Latest in snapshot</option><option value="oldest">Oldest in snapshot</option><option value="price-low">Price low to high</option><option value="price-high">Price high to low</option></select>
+      <button class="button dark" type="submit">Search</button>
+    </form>
+    <p class="result-status" id="catalog-status" role="status">Loading the saved directory…</p>
+    <div id="catalog-results" class="product-grid"></div>
+    <nav class="pagination" aria-label="Product pages" id="pagination" hidden>
+      <button type="button" id="prev" class="button outline">Previous</button><span id="page-label"></span><button type="button" id="next" class="button outline">Next</button>
+    </nav>
+  </section>
+</Layout>
+<script>
+  import '../lib/directory.mjs';
+</script>
+<style>[hidden]{display:none}</style>

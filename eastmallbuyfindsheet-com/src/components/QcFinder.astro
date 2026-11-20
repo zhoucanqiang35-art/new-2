@@ -1,0 +1,39 @@
+  <section class="qc-tool" id="qc-finder">
+    <h2>QC Finder</h2>
+    <p class="lead">Look up saved warehouse photos from Findspreadsheet by Weidian link or item ID. For a recent order, check your photos in your EastMallBuy account.</p>
+    <form class="search-form" id="qc-form" action="/image-search/#qc-finder">
+      <label class="visually-hidden" for="qc-query">Weidian item ID or link</label>
+      <input name="id" id="qc-query" placeholder="Weidian link or item ID" required />
+      <button class="button dark" type="submit">Find QC</button>
+    </form>
+    <p class="sample">Try an item with saved photos <a href="/image-search/?id=7321418559#qc-finder">7321418559</a></p>
+    <div class="result-status" id="qc-result" role="status"></div>
+  </section>
+<script>
+  import {parseId} from '../lib/catalog.mjs';
+  import {readJson, showQc} from '../lib/browser.mjs';
+
+  const field = document.querySelector<HTMLInputElement>('#qc-query')!;
+  const result = document.querySelector<HTMLElement>('#qc-result')!;
+  const form = document.querySelector<HTMLFormElement>('#qc-form')!;
+  const lookup = async () => {
+    const id = parseId(field.value);
+    result.dataset.item = id || 'invalid';
+    if (!id) {
+      result.textContent = 'Enter a numeric Weidian item ID or a valid product link.';
+      return;
+    }
+    result.textContent = 'Checking saved QC records…';
+    const catalog = await readJson('/data/catalog.json').catch(() => []);
+    const product = catalog.find((item: {weidianId: string}) => item.weidianId === id);
+    if (result.dataset.item === id) await showQc(result, id, product?.sourcePath);
+  };
+  field.value = new URLSearchParams(location.search).get('id') ?? '';
+  if (field.value) lookup();
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const id = parseId(field.value);
+    if (id) history.replaceState(null, '', '/image-search/?id=' + id + '#qc-finder');
+    lookup();
+  });
+</script>
