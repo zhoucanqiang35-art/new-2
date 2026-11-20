@@ -1,0 +1,89 @@
+---
+const labels = {
+  en: ['Find warehouse QC photos', 'Weidian item ID', 'Check photos', 'Checking photos…', 'No QC photos are available for this item.', 'QC photos are still being prepared.', 'QC is temporarily unavailable.', 'Warehouse QC photo'],
+  de: ['Lagerfotos zur Qualitätskontrolle suchen', 'Weidian-Artikel-ID', 'Fotos prüfen', 'Fotos werden gesucht…', 'Für diesen Artikel sind keine QC-Fotos verfügbar.', 'Die QC-Fotos werden noch vorbereitet.', 'Die QC-Suche ist vorübergehend nicht verfügbar.', 'QC-Foto aus dem Lager'],
+  fr: ['Rechercher les photos QC de l’entrepôt', 'Identifiant de l’article Weidian', 'Voir les photos', 'Recherche des photos…', 'Aucune photo QC pour cet article.', 'Les photos QC sont en cours de préparation.', 'La recherche QC est temporairement indisponible.', 'Photo QC de l’entrepôt'],
+  es: ['Buscar fotos de control del almacén', 'ID del artículo de Weidian', 'Consultar fotos', 'Buscando fotos…', 'No hay fotos de control para este artículo.', 'Las fotos de control se están preparando.', 'La búsqueda no está disponible temporalmente.', 'Foto de control del almacén'],
+  it: ['Cerca le foto QC del magazzino', 'ID articolo Weidian', 'Cerca foto', 'Ricerca delle foto…', 'Non ci sono foto QC per questo articolo.', 'Le foto QC sono in preparazione.', 'La ricerca QC è temporaneamente indisponibile.', 'Foto QC del magazzino'],
+  pt: ['Encontre fotos de controlo do armazém', 'ID do artigo na Weidian', 'Consultar fotos', 'A procurar fotos…', 'Não há fotos QC para este artigo.', 'As fotos QC estão a ser preparadas.', 'A pesquisa QC está temporariamente indisponível.', 'Foto QC do armazém'],
+  nl: ['Zoek QC-foto’s uit het magazijn', 'Weidian-artikel-ID', 'Foto’s zoeken', 'Foto’s zoeken…', 'Er zijn geen QC-foto’s voor dit artikel.', 'De QC-foto’s worden nog voorbereid.', 'QC zoeken is tijdelijk niet beschikbaar.', 'QC-foto uit het magazijn'],
+  pl: ['Znajdź zdjęcia kontroli jakości z magazynu', 'ID produktu Weidian', 'Sprawdź zdjęcia', 'Wyszukiwanie zdjęć…', 'Brak zdjęć QC tego produktu.', 'Zdjęcia QC są jeszcze przygotowywane.', 'Wyszukiwanie QC jest chwilowo niedostępne.', 'Zdjęcie kontroli jakości z magazynu'],
+  fi: ['Hae varaston laaduntarkastuskuvia', 'Weidian-tuotetunnus', 'Hae kuvia', 'Haetaan kuvia…', 'Tuotteelle ei ole QC-kuvia.', 'QC-kuvia valmistellaan vielä.', 'QC-haku on tilapäisesti poissa käytöstä.', 'Varaston laaduntarkastuskuva'],
+};
+const { lang } = Astro.props;
+const [title, label, button, loading, none, pending, unavailable, alt] = labels[lang] ?? labels.en;
+---
+
+<section class="qc-lookup" aria-labelledby="qc-lookup-title">
+  <h2 id="qc-lookup-title">{title}</h2>
+  <form id="qc-form" data-loading={loading} data-none={none} data-pending={pending} data-unavailable={unavailable} data-alt={alt}>
+    <label for="qc-item">{label}</label>
+    <div class="filters">
+      <input id="qc-item" name="item" type="search" inputmode="numeric" pattern="[0-9]{1,20}" maxlength="20" required />
+      <button type="submit" class="btn darkbtn">{button}</button>
+    </div>
+  </form>
+  <p id="qc-status" role="status"></p>
+  <div id="qc-images" class="qc-images"></div>
+</section>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('#qc-form');
+  const status = document.querySelector('#qc-status');
+  const gallery = document.querySelector('#qc-images');
+  if (form && status && gallery) {
+    let lookup: AbortController | undefined;
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      lookup?.abort();
+      const current = new AbortController();
+      lookup = current;
+      const item = String(new FormData(form).get('item'));
+      status.textContent = form.dataset.loading ?? '';
+      gallery.replaceChildren();
+
+      try {
+        const query = new URLSearchParams({ item });
+        const response = await fetch(`/api/qc?${query}`, { signal: current.signal });
+        if (!response.ok) throw new Error('QC unavailable');
+        const result = await response.json();
+        if (current.signal.aborted) return;
+        if (result.status === 'ready') {
+          for (const [index, url] of result.images.entries()) {
+            const link = document.createElement('a');
+            link.href = url;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            const image = document.createElement('img');
+            image.src = url;
+            image.alt = `${form.dataset.alt} ${index + 1}`;
+            image.loading = 'lazy';
+            image.referrerPolicy = 'no-referrer';
+            link.append(image);
+            gallery.append(link);
+          }
+          status.textContent = `${form.dataset.alt} · ${result.images.length}`;
+        } else {
+          status.textContent = (result.status === 'pending' ? form.dataset.pending : form.dataset.none) ?? '';
+        }
+      } catch {
+        if (!current.signal.aborted) status.textContent = form.dataset.unavailable ?? '';
+      }
+    });
+  }
+</script>
+
+<style>
+  .qc-lookup { margin-block: 1.5rem 2.5rem; }
+  label { display: block; }
+  .qc-images { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: .75rem; }
+  .qc-images:empty { display: none; }
+  .qc-images :global(img) {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+    background: #f5f5f5;
+    border-radius: .5rem;
+  }
+</style>
