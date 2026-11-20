@@ -3,7 +3,9 @@ import '../styles.css';
 import ShoppingMenu from './ShoppingMenu.astro';
 import LanguagePicker from './LanguagePicker.astro';
 import {registrationUrl} from '../lib/catalog.mjs';
+import {indexablePaths, siteOrigin} from '../lib/indexing.mjs';
 const { title, description = 'Browse the EastMallBuy spreadsheet, explore Weidian finds, and check available QC photos.', page = '' } = Astro.props;
+const canonical = indexablePaths.includes(Astro.url.pathname) ? new URL(Astro.url.pathname, siteOrigin) : null;
 const nav = [['/', 'Home', 'home'], ['/categories/', 'Categories', 'categories'], ['/spreadsheet/', 'Spreadsheet', 'sheet'], ['/image-search/', 'Image Search', 'image'], ['/guides/how-to-buy/', 'Buying Guide', 'guide'], ['/faq/', 'FAQ', 'faq']];
 ---
 <!doctype html>
@@ -12,7 +14,7 @@ const nav = [['/', 'Home', 'home'], ['/categories/', 'Categories', 'categories']
   <meta charset="utf-8" />
   <meta name="theme-color" content="#eaf0ef" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="robots" content="noindex, nofollow" />
+  {canonical ? <link rel="canonical" href={canonical.href} /> : <meta name="robots" content="noindex" />}
   <meta name="description" content={description} />
   <link rel="icon" href="https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/favicon.jpg" />
   <title>{title}</title>
