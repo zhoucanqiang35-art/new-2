@@ -1,30 +1,27 @@
 # Litbuy Sheet Lab
 
-Astro 静态网站，包含源码和已构建的 `dist/`。
+Astro static catalog for https://litbuysheetlab.com, deployed by Cloudflare Pages from this source directory.
 
-## 部署
+## Build and checks
 
-- 项目根目录：`litbuysheetlab-com`
-- 安装：`npm ci`
-- 构建：`npm run build`
-- 输出目录：`dist`
-- 无需构建时，也可直接将 `dist/` 交给静态托管服务。
-- 页面资源使用根路径，请将此目录作为独立站点部署；仓库上传本身不会绑定域名。
+- Root directory: `litbuysheetlab-com`
+- Install: `npm ci`
+- Build: `npm run build`
+- Output: `dist`
+- Regression checks after build: `npm test` and `npm run preview:check`
 
-## 本地检查
+The build generates 8,911 product pages and 11 category pages from the source catalog, plus the main and information pages. `/sitemap.xml` is generated at build time and includes 8,931 canonical URLs. Do not upload an old `dist` directory in place of building current source. Build output is intentionally ignored by Git.
 
-```sh
-npm ci
-npm run build
-npm test
-npm run preview:check
-npm run preview
-```
+## Catalog and prices
 
-预览地址：http://localhost:4321 。
+All source records are retained, including items without a valid Weidian number. Only valid seller IDs receive direct buying-agent links. The data snapshot is dated 2026-10-19; prices are reference CNY amounts, not live Litbuy quotes. Currency estimates use Frankfurter reference rates and show the reference date. Failed rate requests retain original CNY or explicitly dated cached rates. Platform conversions and fees can differ.
 
-## 内容状态
+## Images and QC
 
-包含 8,911 条商品记录和 24 种语言选项，部分商品标题和页面文案仍缺少译文，缺项回退原文。商品数据为历史快照，价格和库存以购买平台为准。部分外部商品图片可能失效；QC 图片的来源尚需进一步核实。当前页面保留 `noindex,nofollow`，正式开放搜索引擎收录前请检查 SEO 设置。
+Source and seller photos are labelled as listing images, never as verified warehouse QC. Actual QC availability is not inferred from the existence of a gallery. The current client-side visual index has usable descriptors for 35,688 of 39,269 source images. Matching is approximate and missing images may not match. Uploads are processed in the browser.
 
-翻译维护需要 Python 3：`npm run i18n:audit` 可检查缺项。翻译脚本遇到服务限流会停止并保留已完成内容，审计和运行记录保存在本地忽略的 `reports/` 目录。
+## Compatibility and operations
+
+Legacy `/product/?id=...` URLs redirect in the browser to `/products/ID/`. Product pages are rendered in the initial HTML and do not download the entire catalog or all galleries. The English homepage also uses pre-rendered product cards. Catalog filters and paging retain keywords, category, price bounds, image-result state and sorting in the URL.
+
+Existing GA4 measurement `G-QXBPND9VPN`, Bing verification and referral destinations are preserved. Privacy, about, contact-routing and referral-disclosure pages explain the independent role of this site. Contact details are not invented. Core new controls and price/QC notices are localized; unsupported new long-form translations fall back to English. Existing product title translations remain source data and may contain abbreviations.

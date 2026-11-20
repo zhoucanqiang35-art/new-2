@@ -1,0 +1,38 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import {products,categoryNames,categoryDescriptions,listingImages,sourceImages,hasSeller,agentLinks,productUrl,snapshotDate} from '../../lib/catalog.js';
+export function getStaticPaths(){return products.map(product=>({params:{id:String(product.id)},props:{product}}));}
+const {product:p}=Astro.props;
+const images=listingImages(p), source=sourceImages(p);
+const related=products.filter(x=>x.category===p.category&&x.id!==p.id).slice(0,12);
+const sourceUrl='https://findspreadsheet.com'+p.sourcePath;
+const description=`${p.name}: compare ${categoryNames[p.category].toLowerCase()} listing photos, the archived CNY reference price, seller ID and buying checks before continuing to Litbuy.`;
+const schema={'@context':'https://schema.org','@type':'WebPage',name:p.name,description,url:'https://litbuysheetlab.com'+productUrl(p),isPartOf:{'@type':'WebSite',name:'Litbuy Sheet Lab',url:'https://litbuysheetlab.com/'}};
+---
+<Base title={`${p.name} | Litbuy Sheet Lab`} description={description} indexable={true} schema={schema}>
+<main class="section product-detail static-product">
+ <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href={'/categories/'+p.category+'/'} data-home-category={p.category}>{categoryNames[p.category]}</a><span>/</span><span>#{p.id}</span></nav>
+ <div class="detail-grid">
+  <div class="product-visual"><div class="detail-image"><img id="slide-image" src={images[0]} alt={p.name} width="700" height="700" fetchpriority="high"/></div>
+   <div class="source-carousel" aria-label="Product listing gallery"><button class="source-prev" aria-label="Previous product image">‹</button><div class="source-thumbs">{images.map((url,i)=><button data-source-slide={i} aria-label={`Show product image ${i+1}`} aria-pressed={i===0}><img src={url} alt="" loading="lazy"/></button>)}</div><button class="source-next" aria-label="Next product image">›</button></div>
+   <p class="source-caption" data-home-i18n="listing_photos_notice">Listing photos from the source catalog or seller. Not verified warehouse QC.</p>
+  </div>
+  <div class="detail-copy"><p class="eyebrow" data-home-category={p.category}>{categoryNames[p.category]}</p><h1 data-product-title={p.id}>{p.name}</h1>
+   <p class="detail-product-id"><span data-home-i18n="product_id_label">Product ID</span> {p.weidianId||'Unavailable'} · #{p.id}</p>
+   <p class="price-label" data-home-i18n="reference_item_price">Reference item price</p><p class="detail-price"><span class="money" data-cny={p.price} data-usd={(Number(p.price)/7.26).toFixed(6)}>¥{Number(p.price).toFixed(2)} CNY</span></p>
+   <p class="original-price"><span data-home-i18n="original_cny">Original catalog price</span>: ¥{Number(p.price).toFixed(2)} CNY</p>
+   <p class="price-warning" data-home-i18n="price_warning">Archived reference, not a live Litbuy quote. Excludes domestic delivery, service fees, international shipping and taxes. Litbuy may use a different conversion rate.</p>
+   <p class="price-date"><span data-home-i18n="catalog_date">Catalog snapshot</span>: <time datetime={snapshotDate}>{snapshotDate}</time>. <span class="rate-status" aria-live="polite"></span></p>
+   <div class="detail-actions">{hasSeller(p)?<a class="button-dark" href={'https://litbuy.com/product/weidian/'+p.weidianId} target="_blank" rel="noopener sponsored" data-home-i18n="check_litbuy">Check current price on Litbuy</a>:<a class="button-dark" href={sourceUrl} target="_blank" rel="noopener" data-home-i18n="open_source">Open source listing</a>}</div>
+   {hasSeller(p)&&<div class="product-tools"><details class="agents"><summary><span data-home-i18n="other_agents">Other shopping agents</span><span>＋</span></summary><div class="agent-grid">{agentLinks(p).map(([name,url])=><a href={url} target="_blank" rel="noopener sponsored">{name}</a>)}</div></details><button id="copy-weidian" data-url={'https://weidian.com/item.html?itemID='+p.weidianId} data-home-i18n="copy_source">Copy original product link</button><p class="copy-status" aria-live="polite"></p></div>}
+   <p class="detail-notice" data-home-i18n="affiliate_short">Independent discovery site. Some outgoing links contain referral codes; platform prices and terms apply.</p>
+  </div>
+ </div>
+ <section class="product-facts"><h2 data-home-i18n="listing_facts">Listing information</h2><dl><div><dt data-home-i18n="category_label">Category</dt><dd data-home-category={p.category}>{categoryNames[p.category]}</dd></div><div><dt data-home-i18n="catalog_id">Catalog ID</dt><dd>{p.id}</dd></div><div><dt data-home-i18n="seller_item_id">Seller item ID</dt><dd>{p.weidianId||'Unavailable'}</dd></div><div><dt data-home-i18n="photo_count">Available listing photos</dt><dd>{images.length}</dd></div></dl><p data-home-i18n="facts_notice">The catalog does not verify material, measurements, available options or stock. Confirm these details on the current seller listing.</p></section>
+ <section class="product-checks"><h2 data-home-i18n="before_buying">What to check before buying</h2><p data-home-i18n={'cat_detail_'+p.category}>{categoryDescriptions[p.category]}</p><ul><li data-home-i18n="check_id">Match the seller item ID and selected option before payment.</li><li data-home-i18n="check_size">Check the seller's measurements and included pieces; do not infer them from photos.</li><li data-home-i18n="check_total">Review the full checkout total and shipping restrictions for your destination.</li></ul><a href="/guide/" data-home-i18n="guide">How it works</a></section>
+ <section class="qc-panel"><h2 data-home-i18n="warehouse_qc">Warehouse QC photos</h2><p class="qc-empty" data-home-i18n="qc_unverified">No verified warehouse QC photos are supplied for this catalog item. The listing gallery below contains product photos and must not be treated as QC evidence.</p><p data-home-i18n="qc_help">After warehouse arrival, check inspection photos in your Litbuy account for the selected option, labels, visible damage and measurements. Contact platform support before shipping if something is wrong.</p><a class="text-link" href={sourceUrl} target="_blank" rel="noopener" data-home-i18n="open_source">Open source listing</a></section>
+ <section class="related-panel"><h2 data-home-i18n="related_products">Related products</h2><div class="products related-products">{related.map(product=><ProductCard product={product}/>)}</div></section>
+ <section class="gallery-panel"><h2 data-home-i18n="listing_photos">Source listing photos</h2><p data-home-i18n="listing_photos_notice">Listing photos from the source catalog or seller. Not verified warehouse QC.</p><div class="gallery-grid">{source.map((url,i)=><a href={url} target="_blank" rel="noopener"><img src={url} alt={`${p.name} listing photo ${i+1}`} loading="lazy" width="360" height="360"/></a>)}</div></section>
+</main><script src="/product-page.js" is:inline></script>
+</Base>

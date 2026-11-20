@@ -84,6 +84,7 @@
     const version = ++revision;
     active = selected; picker.value = selected; storage.set(selected);
     apply();
+    if(selected === 'en'){window.dispatchEvent(new CustomEvent('litbuy:languagechange', {detail:selected}));return;}
     try {
       await loadDictionaries();
       if (selected !== 'en' && !titles.has(selected)) {

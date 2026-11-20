@@ -1,0 +1,12 @@
+---
+import {categoryNames, productUrl} from '../lib/catalog.js';
+const {product:p} = Astro.props;
+---
+<a class="product-card" href={productUrl(p)}>
+ <div class="product-image"><img loading="lazy" decoding="async" src={p.image} alt={p.name} width="360" height="360"/></div>
+ <div class="card-meta"><span data-home-category={p.category}>{categoryNames[p.category]}</span><span>#{p.id}</span></div>
+ <h3 data-product-title={p.id}>{p.name}</h3>
+ <div class="card-price"><span class="money" data-cny={p.price} data-usd={(Number(p.price)/7.26).toFixed(6)}>¥{Number(p.price).toFixed(2)} CNY</span></div>
+ <small class="price-caption" data-home-i18n="reference_price">Reference · excludes shipping</small>
+ <p data-home-i18n="details">View details</p>
+</a>
