@@ -1,4 +1,5 @@
 import { readJson, card } from './browser.mjs';
+import { productImage } from './catalog.mjs';
 
 const file = document.getElementById('image-file');
 const example = document.getElementById('image-example');
@@ -57,18 +58,35 @@ function match(input, buffer, totalProducts, totalPhotos) {
   return [...best.values()].sort((a, b) => a.score - b.score).slice(0, limit);
 }
 
-async function search(src) {
+async function search(src, sampleId = '') {
   const run = ++runNumber;
-  preview.src = src;
-  preview.hidden = false;
+  if (src) preview.src = src;
+  preview.hidden = !src;
   status.textContent = 'Searching the saved image index…';
   results.replaceChildren();
   try {
-    const image = new Image();
-    image.src = src;
-    const [[catalog, photos, buffer]] = await Promise.all([loadDataset(), image.decode()]);
+    const [catalog, photos, buffer] = await loadDataset();
     if (run !== runNumber) return;
-    const findings = match(feature(image), buffer, catalog.length, photos.length);
+    let input;
+    if (sampleId) {
+      const index = catalog.findIndex((product) => product.id === sampleId);
+      const rows = new DataView(buffer);
+      for (let offset = 0; offset + rowBytes <= rows.byteLength; offset += rowBytes) {
+        if (rows.getUint16(offset, true) !== index) continue;
+        input = new Uint8Array(buffer, offset + 2, channels);
+        preview.src = photos[offset / rowBytes] || productImage(catalog[index]);
+        preview.hidden = false;
+        break;
+      }
+      if (!input) throw new Error('The example is missing from the image index');
+    } else {
+      const image = new Image();
+      image.src = src;
+      await image.decode();
+      if (run !== runNumber) return;
+      input = feature(image);
+    }
+    const findings = match(input, buffer, catalog.length, photos.length);
     const valid = findings.filter(({product}) => /^\d+$/.test(catalog[product].weidianId ?? ''));
     results.replaceChildren(...valid.map(({product, photo}) => card(catalog[product], photos[photo])));
     status.textContent = valid.length + ' visually similar listings from the saved index.';
@@ -91,5 +109,5 @@ file.addEventListener('change', () => {
 example.addEventListener('click', () => {
   clearObjectUrl();
   file.value = '';
-  search('https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/product-5985.webp');
+  search('', '5985');
 });
