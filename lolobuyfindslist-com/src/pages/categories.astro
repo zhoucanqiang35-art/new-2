@@ -1,0 +1,112 @@
+---
+import Layout from '../components/Layout.astro';
+import catalog from '../../public/data/catalog.json';
+import {categoryEntries} from '../lib/categories.mjs';
+import {categoryGuides} from '../lib/category-guides.mjs';
+import {buyerCategories} from '../lib/buyer-catalog.mjs';
+
+const number = new Intl.NumberFormat('en-US');
+const entries = categoryEntries.map(({key, name, count}) => {
+  const {searches, ...guide} = categoryGuides[key];
+  const availableSearches = searches.filter((query) => catalog.some((product) =>
+    product.category === key && /^\d+$/.test(product.weidianId) && product.name.toLowerCase().includes(query)));
+  const href = '/spreadsheet/?category=' + encodeURIComponent(key);
+  return {key, name, count, guide, availableSearches, href, anchor: key.toLowerCase()};
+});
+---
+<Layout
+  title="LoloBuy Category Guides | Findslist"
+  description="Browse 11 LoloBuy catalog categories with practical notes on styles, sizing, listing options and warehouse QC. Open each category in the LoloBuy spreadsheet."
+  page="categories"
+>
+  <section class="wrap page category-guide-page" aria-labelledby="category-guide-title">
+    <h1 id="category-guide-title">Shop by category</h1>
+    <p class="lead">Explore the 11 categories in the LoloBuy spreadsheet. Compare styles, check measurements and know which details to look for in seller and warehouse photos.</p>
+    <div class="category-workspace">
+    <nav class="category-index" aria-label="Jump to a category"><strong>Category guides</strong>
+      {entries.map(({name, count, anchor}) => <a href={'#' + anchor}>{name}<span>{number.format(count)}</span></a>)}
+    </nav>
+
+    <div class="category-guides">
+      {entries.map(({key, name, count, guide, availableSearches, href, anchor}) => (
+        <article class="category-guide" id={anchor} aria-labelledby={anchor + '-heading'}>
+          <div class="category-guide-visual">
+            <img src={'/assets/category-guides/' + key + '.webp'} alt="" width="356" height="356" loading="lazy" />
+            <span>{number.format(count)} listings in the preview</span>
+            <a class="button dark" href={href}>Browse {name}</a>
+            {buyerCategories[key] && <a href={buyerCategories[key].path}>{buyerCategories[key].title}</a>}
+          </div>
+          <div class="category-guide-copy">
+            <h2 id={anchor + '-heading'}>{name}</h2>
+            <p>{guide.intro}</p>
+            <section>
+              <h3>Styles and details to compare</h3>
+              <ul>{guide.compare.map((point) => <li>{point}</li>)}</ul>
+            </section>
+            <div class="category-guide-checks">
+              <section>
+                <h3>Size and measurements</h3>
+                <p>{guide.fit}</p>
+              </section>
+              <section>
+                <h3>Warehouse QC</h3>
+                <p>{guide.photos}</p>
+                <a href="/qc/">Look up QC</a>
+              </section>
+            </div>
+            {availableSearches.length > 0 && (
+              <div class="category-guide-searches">
+                <h3>Try a search</h3>
+                <ul>{availableSearches.map((query) => <li><a href={href + '&q=' + encodeURIComponent(query)}>{query}</a></li>)}</ul>
+              </div>
+            )}
+          </div>
+        </article>
+      ))}
+    </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .category-workspace { display: grid; grid-template-columns: minmax(170px, .29fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+  .category-index { position: sticky; top: 16px; display: grid; background: var(--soft); border-top: 3px solid var(--rail); padding: 12px; }
+  .category-index strong { margin-bottom: 6px; }
+  .category-index a { display: flex; justify-content: space-between; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--edge); font-size: .87rem; text-decoration: none; font-weight: 650; }
+  .category-index span { font-weight: 500; font-variant-numeric: tabular-nums; color: var(--muted); }
+  .category-index a:last-child { border-bottom: 0; }
+  .category-index a:hover { text-decoration: underline; }
+  .category-guides { display: grid; gap: 18px; }
+  .category-guide {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(120px, .39fr);
+    align-items: start;
+    gap: 20px;
+    padding: clamp(14px, 2.5vw, 25px);
+    border-top: 3px solid var(--rail);
+    background: white;
+    scroll-margin: 18px;
+  }
+  .category-guide:target { border-color: #83a142; }
+  .category-guide-visual { grid-column: 2; grid-row: 1; display: grid; gap: 8px; }
+  .category-guide-visual img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
+  .category-guide-visual span { color: var(--muted); font-size: .84rem; }
+  .category-guide-copy { grid-column: 1; grid-row: 1; display: grid; gap: 12px; color: var(--muted); }
+  .category-guide-copy h2 { color: var(--ink); font-size: clamp(1.65rem, 3vw, 2.5rem); }
+  .category-guide-copy h3 { margin-bottom: 4px; color: var(--deep); font-size: 1rem; }
+  .category-guide-copy ul { padding-left: 18px; line-height: 1.55; margin-block: 6px; }
+  .category-guide-checks { display: grid; gap: 10px; padding-top: 10px; border-top: 1px solid var(--edge); }
+  .category-guide-searches ul { display: flex; flex-wrap: wrap; gap: 6px 13px; padding: 0; list-style: none; }
+  .category-guide-searches a { font-weight: 650; }
+  @media (max-width: 1000px) {
+    .category-guide { grid-template-columns: 1fr; gap: 14px; }
+    .category-guide-visual { grid-column: 1; grid-row: 2; grid-template-columns: auto minmax(0, 1fr); align-items: center; }
+    .category-guide-visual img { width: 80px; grid-row: span 2; }
+    .category-guide-visual .button { justify-self: start; }
+  }
+  @media (max-width: 730px) {
+    .category-workspace { grid-template-columns: 1fr; }
+    .category-index { position: relative; top: auto; grid-template-columns: 1fr 1fr; column-gap: 10px; }
+    .category-index strong { grid-column: 1/-1; }
+  }
+</style>

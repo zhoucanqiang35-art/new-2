@@ -1,0 +1,196 @@
+---
+import Card from './Card.astro';
+const { products, qc } = Astro.props;
+---
+<section class="wrap edit-section featured-finds" aria-labelledby="featured-heading">
+  <div class="section-title">
+    <h2 id="featured-heading">Featured finds</h2>
+    <div class="featured-actions">
+      <a href="/spreadsheet/">View all listings</a>
+      <div class="featured-controls" hidden>
+        <button type="button" class="button outline" data-rotate aria-label="Automatic scrolling" aria-pressed="true" aria-controls="featured-products">
+          <span data-pause-icon aria-hidden="true" translate="no">Ⅱ</span>
+          <span data-play-icon aria-hidden="true" translate="no">▶</span>
+        </button>
+        <button type="button" class="button outline" data-previous aria-label="Previous" aria-controls="featured-products">
+          <span aria-hidden="true" translate="no">‹</span>
+        </button>
+        <button type="button" class="button outline" data-next aria-label="Next" aria-controls="featured-products">
+          <span aria-hidden="true" translate="no">›</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="featured-products" class="featured-track" tabindex="0" aria-labelledby="featured-heading" role="region">
+    {products.map(product => <Card product={product} hasQc={Boolean(qc[product.weidianId]?.images.length)} />)}
+  </div>
+</section>
+
+<script>
+  const track = document.querySelector<HTMLElement>('#featured-products')!;
+  const controls = document.querySelector<HTMLElement>('.featured-controls')!;
+  const previous = controls.querySelector<HTMLButtonElement>('[data-previous]')!;
+  const next = controls.querySelector<HTMLButtonElement>('[data-next]')!;
+
+  const rotate = controls.querySelector<HTMLButtonElement>('[data-rotate]')!;
+  const section = track.closest('section')!;
+  const motion = matchMedia('(prefers-reduced-motion: reduce)');
+  const pixelsPerSecond = 62;
+  const interactionDelay = 3200;
+  const originals = Array.from(track.children);
+  const firstCard = originals[0];
+  // Keep one viewport of real links available across the seam.
+  const copies = originals.slice(0, 5).map(card => {
+    const copy = card.cloneNode(true) as HTMLAnchorElement;
+    copy.dataset.carouselClone = '';
+    copy.setAttribute('aria-hidden', 'true');
+    copy.tabIndex = -1;
+    return copy;
+  });
+  track.append(...copies);
+  track.dataset.looping = '';
+
+  let autoplay = !motion.matches;
+  let inView = false;
+  let frame = 0;
+  let timer = 0;
+  let waitUntil = 0;
+  let previousTime = 0;
+  let position = 0;
+  let cycle = 0;
+  let step = 0;
+  let direction = 1;
+
+  function toggleAutoplay(enabled: boolean) {
+    autoplay = enabled;
+    rotate.setAttribute('aria-pressed', String(enabled));
+    reconcilePlayback();
+  }
+
+  function measure() {
+    if (!firstCard) return;
+    const style = getComputedStyle(track);
+    const start = firstCard.getBoundingClientRect();
+    direction = style.direction === 'rtl' ? -1 : 1;
+    cycle = Math.abs(copies[0].getBoundingClientRect().left - start.left);
+    step = cycle / originals.length;
+    controls.hidden = cycle <= track.clientWidth;
+    stop();
+    reconcilePlayback();
+  }
+
+  function offset() {
+    return Math.max(0, track.scrollLeft * direction);
+  }
+
+  function move(slide: number) {
+    if (!cycle) return;
+    const current = offset();
+    const target = (current + slide * step + cycle) % cycle;
+    const crossesSeam = Math.abs(target - current) > step + 1;
+    track.scrollTo({left: target * direction, behavior: motion.matches || crossesSeam ? 'instant' : 'smooth'});
+  }
+
+  function canAutoplay() {
+    const focus = document.activeElement;
+    const keyboardBrowsing = focus !== rotate && section.contains(focus) && focus?.matches(':focus-visible');
+    return autoplay && inView && !controls.hidden && !document.hidden && !keyboardBrowsing;
+  }
+
+  function stop() {
+    cancelAnimationFrame(frame);
+    frame = 0;
+    previousTime = 0;
+  }
+
+  function tick(now: number) {
+    if (previousTime) {
+      position = (position + (now - previousTime) * pixelsPerSecond / 1000) % cycle;
+      track.scrollLeft = position * direction;
+    }
+    previousTime = now;
+    frame = requestAnimationFrame(tick);
+  }
+
+  function reconcilePlayback() {
+    window.clearTimeout(timer);
+    if (!canAutoplay() || !cycle) {
+      stop();
+      return;
+    }
+    const remaining = waitUntil - performance.now();
+    if (remaining > 0) {
+      stop();
+      timer = window.setTimeout(reconcilePlayback, remaining);
+    } else if (!frame) {
+      position = offset() % cycle;
+      frame = requestAnimationFrame(tick);
+    }
+  }
+
+  function noteInteraction() {
+    waitUntil = performance.now() + interactionDelay;
+    reconcilePlayback();
+  }
+
+  previous.addEventListener('click', () => { noteInteraction(); move(-1); });
+  next.addEventListener('click', () => { noteInteraction(); move(1); });
+  rotate.addEventListener('click', () => {
+    waitUntil = 0;
+    toggleAutoplay(!autoplay);
+  });
+  motion.addEventListener('change', () => toggleAutoplay(!motion.matches));
+  track.addEventListener('pointerdown', noteInteraction, {passive: true});
+  track.addEventListener('wheel', noteInteraction, {passive: true});
+  track.addEventListener('keydown', noteInteraction);
+  section.addEventListener('focusin', reconcilePlayback);
+  section.addEventListener('focusout', () => queueMicrotask(reconcilePlayback));
+  document.addEventListener('visibilitychange', reconcilePlayback);
+  new IntersectionObserver(([entry]) => {
+    inView = entry.isIntersecting && entry.intersectionRatio >= .25;
+    reconcilePlayback();
+  }, {threshold: .25}).observe(track);
+  new ResizeObserver(measure).observe(track);
+  new MutationObserver(measure).observe(document.documentElement, {attributeFilter: ['dir']});
+  toggleAutoplay(autoplay);
+  measure();
+</script>
+
+<style>
+  .featured-actions, .featured-controls { display: flex; align-items: center; gap: 8px; }
+  .featured-actions > a { margin-inline-end: 4px; }
+  .featured-controls[hidden] { display: none; }
+  .featured-controls button { padding: 0; font-size: 1.45rem; line-height: 1; min-width: 36px; min-height: 36px; }
+  .featured-controls button:disabled { opacity: .42; cursor: default; }
+  [data-rotate][aria-pressed="true"] [data-play-icon],
+  [data-rotate][aria-pressed="false"] [data-pause-icon] { display: none; }
+  [data-rotate] span { font-size: .9rem; }
+  :global([dir="rtl"]) :is([data-previous], [data-next]) span { transform: scaleX(-1); }
+  .featured-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - 39px) / 4);
+    gap: 13px;
+    padding: 3px 0 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  .featured-track :global(.product-card) { scroll-snap-align: start; }
+  .featured-track[data-looping] {
+    scroll-snap-type: none;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: none;
+  }
+  .featured-track :global(.product-card:focus-visible) { outline-offset: -3px; }
+  @media (max-width: 900px) {
+    .featured-track { grid-auto-columns: calc((100% - 26px) / 3); }
+  }
+  @media (max-width: 610px) {
+    .featured-track { grid-auto-columns: calc((100% - 8px) / 2); gap: 8px; }
+    .featured-finds .section-title { align-items: center; }
+    .featured-actions { gap: 4px; }
+    .featured-actions > a { white-space: normal; text-align: end; margin-inline-end: 2px; }
+    .featured-controls { gap: 4px; }
+    .featured-controls button { min-width: 30px; min-height: 34px; }
+  }
+</style>

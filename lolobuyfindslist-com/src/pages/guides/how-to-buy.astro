@@ -1,0 +1,13 @@
+---
+import Layout from '../../components/Layout.astro';
+import IllustratedGuide from '../../components/IllustratedGuide.astro';
+import {officialBuyingGuide} from '../../lib/buying-help.mjs';
+---
+<Layout title="How to Buy with LoloBuy | Weidian, Warehouse QC and Shipping" description="Follow LoloBuy from product selection and order payment through QC, consolidation, international freight and parcel tracking." page="guide">
+  <section class="wrap page">
+    <h1>How to buy with LoloBuy</h1>
+    <p class="lead">Follow a product from our spreadsheet through LoloBuy order payment, warehouse inspection, parcel consolidation and delivery. The guide uses screenshots of our spreadsheet, public LoloBuy pages and the official tutorial, plus a saved warehouse inspection photo.</p>
+    <p><a href={officialBuyingGuide}>Read LoloBuy’s official buying tutorial</a></p>
+    <IllustratedGuide />
+  </section>
+</Layout>

@@ -1,0 +1,31 @@
+---
+import Layout from '../components/Layout.astro';
+---
+<Layout title="Saved Finds | LoloBuy Findslist" page="saved">
+  <section class="wrap page">
+    <h1>Saved finds</h1>
+    <p class="lead">Save an item from its product page to find it here later on this device.</p>
+    <p id="saved-status" class="result-status" role="status"></p>
+    <div id="saved-results" class="product-grid"></div>
+    <a class="button outline subsection" href="/spreadsheet/">Browse the spreadsheet</a>
+  </section>
+</Layout>
+<script>
+  import {card, readJson} from '../lib/browser.mjs';
+  import {savedItems} from '../lib/shopping.mjs';
+
+  const status = document.querySelector('#saved-status')!;
+  const results = document.querySelector('#saved-results')!;
+  async function render() {
+    const saved = new Set(savedItems());
+    results.replaceChildren();
+    if (!saved.size) { status.textContent = 'No saved finds yet.'; return; }
+    try {
+      const catalog = await readJson('/data/catalog.json');
+      const products = catalog.filter((item: {weidianId: string}) => saved.has(item.weidianId));
+      results.replaceChildren(...products.map((item: Parameters<typeof card>[0]) => card(item)));
+      status.textContent = products.length ? '' : 'These listings are unavailable in the saved catalog.';
+    } catch { status.textContent = 'The saved catalog could not load.'; }
+  }
+  window.addEventListener('pageshow', render);
+</script>

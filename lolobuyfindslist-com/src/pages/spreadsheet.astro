@@ -1,0 +1,37 @@
+---
+import Layout from '../components/Layout.astro';
+import {categories} from '../lib/catalog.mjs';
+---
+<Layout title="LoloBuy Product Spreadsheet | Browse and Search" page="sheet">
+  <section class="wrap page">
+    <h1>LoloBuy Spreadsheet</h1>
+    <p class="lead">Find items by name or Weidian link and compare estimated prices from the saved FindSpreadsheet catalog. Check current price and stock with your agent.</p>
+    <div class="spreadsheet-layout">
+      <form id="filters" class="spreadsheet-filters" action="/spreadsheet/">
+
+        <label for="query">Search</label><input id="query" name="q" placeholder="Name, ID or link" />
+        <label for="category">Category</label><select id="category" name="category"><option value="">All categories</option>{Object.entries(categories).map(([key, label]) => <option value={key}>{label}</option>)}</select>
+        <label for="sort">Sort by</label><select id="sort" name="sort"><option value="latest">Latest in snapshot</option><option value="oldest">Oldest in snapshot</option><option value="price-low">Price low to high</option><option value="price-high">Price high to low</option></select>
+        <button class="button dark" type="submit">Apply filters</button>
+        <label class="catalog-qc-filter"><input type="checkbox" id="qc-only" name="qc" value="1" /> With warehouse QC</label>
+      </form>
+      <div class="spreadsheet-list">
+        <div class="directory-toolbar">
+          <p class="result-status" id="catalog-status" role="status">Loading the saved directory…</p>
+          <div id="directory-view" class="directory-view" role="group" aria-label="Spreadsheet view" hidden>
+            <button type="button" data-view="grid" aria-pressed="true">Photos</button>
+            <button type="button" data-view="table" aria-pressed="false">Table</button>
+          </div>
+        </div>
+        <div id="catalog-results"></div>
+        <nav class="pagination" aria-label="Product pages" id="pagination" hidden>
+          <button type="button" id="prev" class="button outline">Previous</button><span id="page-label"></span><button type="button" id="next" class="button outline">Next</button>
+        </nav>
+      </div>
+    </div>
+  </section>
+</Layout>
+<script>
+  import '../lib/directory.mjs';
+</script>
+<style>[hidden]{display:none}</style>

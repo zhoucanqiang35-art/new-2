@@ -1,0 +1,30 @@
+---
+import {faqGroups} from '../lib/buying-help.mjs';
+const {home = false} = Astro.props;
+const GroupHeading = home ? 'h3' : 'h2';
+const Answer = home ? 'details' : 'article';
+const Question = home ? 'summary' : 'h3';
+---
+<section class:list={['buying-faq', {'wrap home-section home-faq': home}]} aria-labelledby="buying-faq-heading">
+  {home ? <h2 id="buying-faq-heading">LoloBuy FAQ</h2> : <h1 id="buying-faq-heading">LoloBuy FAQ</h1>}
+  <p class="walkthrough-lead">Answers on finding Weidian products, ordering with the agent, checking QC, estimating shipping and tracking a parcel.</p>
+  <div class="buying-faq-groups" tabindex={home ? 0 : undefined} aria-labelledby="buying-faq-heading">
+    {faqGroups.map(({title, entries}) => (
+      <section class="buying-faq-group">
+        <GroupHeading>{title}</GroupHeading>
+        <div class="questions">
+          {entries.map(([question, answer, href, label]) => (
+            <Answer class="faq-answer">
+              <Question>{question}</Question>
+              <p>{answer}</p>
+              <p><a class="section-link" href={href} target={href.startsWith('https:') ? '_blank' : undefined} rel={href.startsWith('https:') ? 'noopener' : undefined}>{label}</a></p>
+            </Answer>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+  <div class="actions">
+    {home ? <a class="button outline" href="/faq/">Open the full FAQ</a> : <a class="button dark" href="/guides/how-to-buy/">Read the buying guide</a>}
+  </div>
+</section>

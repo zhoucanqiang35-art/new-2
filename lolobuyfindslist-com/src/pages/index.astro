@@ -1,0 +1,91 @@
+---
+import Layout from '../components/Layout.astro';
+import CategoryIcon from '../components/CategoryIcon.astro';
+import FeaturedFinds from '../components/FeaturedFinds.astro';
+import BuyingFaq from '../components/BuyingFaq.astro';
+import IllustratedGuide from '../components/IllustratedGuide.astro';
+import ConveyorMotion from '../components/ConveyorMotion.astro';
+import {categoryEntries} from '../lib/categories.mjs';
+import {productUrl} from '../lib/catalog.mjs';
+import {freightUrl} from '../lib/buying-help.mjs';
+import {buyerCategories, qcPhotos, qcProducts} from '../lib/buyer-catalog.mjs';
+import catalog from '../../public/data/catalog.json';
+
+const categoryTiles = [
+  ...categoryEntries.slice(0, 9).map(entry => [entry]),
+  categoryEntries.slice(9),
+];
+const selection = ['8352', '8661', '8510', '8891', '5954', '8702', '9018', '7046', '7637', '7352', '7357', '7091'];
+const featured = [...new Map(
+  [...qcProducts, ...selection.map(id => catalog.find(item => item.id === id)!)].map(product => [product.weidianId, product])
+).values()].slice(0, selection.length);
+const sample = '7321418559';
+const categoryPath = (key: string) => buyerCategories[key]?.path ?? '/spreadsheet/?category=' + encodeURIComponent(key);
+---
+<Layout title="LoloBuy Spreadsheet | Weidian Finds and Warehouse QC" description="Browse the LoloBuy Findslist. Search Weidian products, compare available seller and warehouse QC photos, and open the item on LoloBuy." page="home">
+  <section class="edit-cover" aria-labelledby="home-title">
+    <img class="cover-photo" src="/assets/neon-logistics-cover.webp" width="1600" height="900" alt="" fetchpriority="high" />
+    <ConveyorMotion />
+    <div class="wrap cover-content">
+      <h1 id="home-title">LoloBuy<br /><span>Spreadsheet</span></h1>
+      <p>Find Weidian products, check real warehouse photos, and open the listing on LoloBuy.</p>
+      <div class="cover-search-row">
+        <form class="search-form cover-search" action="/spreadsheet/">
+          <label class="visually-hidden" for="home-query">Name, item ID or link</label>
+          <input id="home-query" name="q" type="search" placeholder="Name, item ID or link" />
+          <button class="button dark" type="submit">Search</button>
+        </form>
+        <a class="cover-photo-search" href="/image-search/">Search by photo</a>
+      </div>
+      <div class="cover-links">
+        <a href="/spreadsheet/">Browse All Finds</a>
+        <a class="cover-qc-link" href="/spreadsheet/?qc=1">Finds with QC Photos</a>
+        <a href={freightUrl}>Estimate Shipping</a>
+      </div>
+    </div>
+    <label class="cover-motion-switch">
+      <span class="visually-hidden">Background animation</span>
+      <input type="checkbox" class="visually-hidden" role="switch" checked />
+      <span class="cover-motion-icon" aria-hidden="true"></span>
+    </label>
+  </section>
+
+  <div class="home-sections">
+    <section class="edit-qc" aria-labelledby="qc-heading">
+      <div class="wrap edit-qc-inner">
+        <div class="edit-proof">
+          <figure><img src="/assets/product-7046.webp" alt="Seller listing photo of a black crewneck" width="340" height="340" loading="lazy" /><figcaption>Seller photo</figcaption></figure>
+          <figure><img src={qcPhotos[sample].images[0].url} alt="Saved warehouse QC photo for Weidian item 7321418559" width="340" height="340" loading="lazy" /><figcaption>Warehouse QC photo</figcaption></figure>
+        </div>
+        <div class="edit-qc-copy">
+          <h2 id="qc-heading">Check it at the warehouse</h2>
+          <p>A saved QC photo lets you compare an inspected item with the seller’s listing. Look up an item you already found, or browse listings with QC photos.</p>
+          <div class="actions"><a class="button dark" href="/spreadsheet/?qc=1">Browse finds with QC</a><a href="/qc/">Look up QC</a></div>
+          <a class="qc-example-link" href={productUrl(sample) + '#warehouse-qc'}>View this listing and its QC photos</a>
+        </div>
+      </div>
+    </section>
+
+    <FeaturedFinds products={featured} qc={qcPhotos} />
+
+    <section class="wrap edit-section" aria-labelledby="category-heading">
+      <div class="section-title category-heading">
+        <div class="category-heading-copy">
+          <h2 id="category-heading">Browse by category</h2>
+          <p>Pick a category to find matching products, then compare seller photos and available warehouse QC.</p>
+        </div>
+        <a href="/categories/">All category guides</a>
+      </div>
+      <ul class="edit-categories">
+        {categoryTiles.map(tile => (
+          <li class:list={['category-tile', {'category-tile-pair': tile.length > 1}]}>
+            {tile.map(({key, name}) => <a href={categoryPath(key)}><CategoryIcon category={key} /><span>{name}</span></a>)}
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <IllustratedGuide home />
+    <BuyingFaq home />
+  </div>
+</Layout>

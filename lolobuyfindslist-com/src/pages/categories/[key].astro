@@ -1,0 +1,43 @@
+---
+import Layout from '../../components/Layout.astro';
+import Card from '../../components/Card.astro';
+import {buyerCategories, categoryProducts, qcPhotos} from '../../lib/buyer-catalog.mjs';
+import {categoryGuides} from '../../lib/category-guides.mjs';
+
+export function getStaticPaths() {
+  return Object.entries(buyerCategories).map(([key, category]) => ({params: {key}, props: {category}}));
+}
+
+const {key} = Astro.params;
+const {category} = Astro.props;
+const guide = categoryGuides[key];
+const products = categoryProducts(key, category.selectedIds);
+const hasQc = ({weidianId}) => Boolean(qcPhotos[weidianId]?.images?.length);
+const directoryUrl = '/spreadsheet/?category=' + encodeURIComponent(key);
+---
+<Layout title={category.title} description={category.description} page="categories">
+  <section class="wrap page">
+    <a href="/categories/">All category guides</a>
+    <h1>{category.title}</h1>
+    <p class="lead">{guide.intro}</p>
+    <div class="actions">
+      <a class="button dark" href={directoryUrl}>View all listings</a>
+      {products.some(hasQc) && <a class="button outline" href={directoryUrl + '&qc=1'}>Finds with QC Photos</a>}
+      <a href="/qc/">Look up QC</a>
+    </div>
+    <section class="edit-section" aria-labelledby="category-finds">
+      <div class="section-title"><h2 id="category-finds">Selected listings</h2></div>
+      <div class="product-grid buyer-product-grid">
+        {products.map(product => <Card product={product} hasQc={hasQc(product)} />)}
+      </div>
+      {!products.some(hasQc) && <p class="lead">These listings have seller photos. Search by Weidian item ID to check whether a warehouse QC photo is available.</p>}
+    </section>
+    <section class="edit-section qc-reading" aria-labelledby="category-qc">
+      <h2 id="category-qc">What to check before ordering</h2>
+      <div class="qc-reading-grid">
+        <article><h3>Size and measurements</h3><p>{guide.fit}</p></article>
+        <article><h3>Warehouse QC</h3><p>{guide.photos}</p></article>
+      </div>
+    </section>
+  </section>
+</Layout>

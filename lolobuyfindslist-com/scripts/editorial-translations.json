@@ -1,0 +1,145 @@
+{
+  "zh-Hans": {
+    "LoloBuy Spreadsheet | Weidian Finds and Warehouse QC": "LoloBuy 商品表格 | 微店商品与仓库质检",
+    "LoloBuy Category Guides | Findslist": "LoloBuy 商品分类指南 | Findslist",
+    "LoloBuy QC Photos | Weidian Warehouse Photo Finder": "LoloBuy 仓库质检照片 | 微店商品查询",
+    "LoloBuy QC Photos and Warehouse Quality Control | Weidian QC Finder": "LoloBuy 仓库质检与 QC 照片 | 微店商品查询",
+    "LoloBuy FAQ | Spreadsheet, Weidian, QC and Shipping": "LoloBuy 常见问题 | 微店下单、仓库质检与运费",
+    "How to Buy with LoloBuy | Weidian, Warehouse QC and Shipping": "LoloBuy 购买指南 | 微店下单、仓库质检与跨境运费",
+    "LoloBuy QC Photos": "LoloBuy 仓库质检照片",
+    "Warehouse QC": "仓库质检",
+    "Warehouse QC photo": "仓库质检照",
+    "Warehouse QC photos": "仓库质检照片",
+    "With warehouse QC": "仅显示有仓库质检照的商品",
+    "Seller photos": "卖家照片",
+    "Seller photo": "卖家照片",
+    "Seller and QC photos": "卖家图与仓库质检图",
+    "Name, item ID or link": "商品名称、编号或链接",
+    "Discover Weidian finds, check warehouse photos and open the listing on LoloBuy.": "浏览微店商品，对照仓库质检照片，再前往 LoloBuy 查看商品。",
+    "Browse finds with QC": "浏览有质检照片的商品",
+    "Check it at the warehouse": "对照实拍仓库质检图",
+    "Look up QC": "查询质检照",
+    "Open the QC finder": "打开质检照查询工具",
+    "Try warehouse QC lookup": "查询仓库质检照",
+    "Saved QC examples": "已保存的质检样例",
+    "LoloBuy warehouse quality control checklist": "LoloBuy 仓库质检检查清单",
+    "Where do I see my own LoloBuy QC photos?": "在哪里查看我自己的 LoloBuy 订单质检照片？",
+    "How do I use the LoloBuy freight estimator?": "如何使用 LoloBuy 运费估算工具？",
+    "Full buying guide": "查看完整购买指南",
+    "From a Weidian link to your parcel": "从微店商品链接到国际包裹",
+    "Find the listing and open it in LoloBuy": "找到商品并在 LoloBuy 打开",
+    "Confirm your option before paying": "付款前核对商品和所选规格",
+    "Inspect your warehouse QC photos": "核对仓库质检照片",
+    "Estimate freight and submit the parcel": "估算运费并提交包裹",
+    "Open the freight estimator": "打开运费估算工具",
+    "Questions before ordering?": "下单前还有问题？",
+    "Find answers on order status, QC photos, warehouse storage, returns and shipping estimates.": "了解订单状态、质检照片、仓库存放期限、退换货和运费估算。",
+    "What should I do if QC shows the wrong item or damage?": "仓库质检发现发错货或商品破损怎么办？",
+    "Do QC photos prove authenticity or that electronics work?": "质检照片能证明商品真伪或电子产品功能正常吗？",
+    "How many QC photos are included? Can I request more?": "默认提供几张质检照片？可以申请额外拍照吗？",
+    "How long can I keep items in the warehouse?": "商品可以在仓库放多久？",
+    "What if a product has no saved QC photos?": "商品没有已保存的质检照片怎么办？",
+    "Crop around one item and use a clear photo. Open a visual match to compare the seller gallery with any available QC.": "保留一个商品并裁剪多余背景，尽量使用清晰照片。打开匹配结果，对照卖家照片和可用的仓库质检照片。",
+    "Automatic scrolling": "自动滚动",
+    "Pick a category to find matching products, then compare seller photos and available warehouse QC.": "选择分类浏览商品，再对照卖家图片和已有的仓库质检照。",
+    "Pay for the order and check warehouse intake": "支付商品订单并跟进仓库入库",
+    "The LoloBuy product screen separates the item payment from international freight. Review the order total, including the seller’s domestic shipping charge, before paying. After payment, follow the order in your account until the seller ships and the warehouse receives it. Keep the order number so support can distinguish a seller delay from warehouse processing.": "LoloBuy 将商品付款与国际运费分开。付款前，核对包含卖家国内运费的订单总额。付款后，在账号内跟进卖家发货和仓库入库状态。保留订单号，方便客服确认延迟发生在卖家发货还是仓库处理阶段。",
+    "Resolve QC issues before shipping": "国际发货前处理质检问题",
+    "If the warehouse photos show a wrong variant, missing piece or damage, save the relevant photo and order number. Ask LoloBuy support or use the available after-sales option for that order. Check the deadline, eligibility and any fee before requesting a return or exchange. If a detail is unclear, specify the exact angle or measurement you need.": "若质检照显示规格发错、配件缺失或商品损坏，保存相关照片和订单号。联系 LoloBuy 客服，或使用该订单提供的售后入口。申请退换前核对期限、适用条件和费用。图片细节不足时，说明需要补拍的角度或测量位置。",
+    "Estimate your international freight": "估算国际运费",
+    "Open Freight estimate on LoloBuy. Choose the destination and enter weight in grams. Add packed dimensions in centimetres and the product category when available, then select Query. Compare available routes, including weight rules and product restrictions. Use the warehouse’s final packed figures to check the payable amount.": "打开 LoloBuy 的运费估算，选择目的地并输入克重。有打包尺寸和商品类别时，一并填写后点击查询。比较可选线路的计重规则和商品限制，再用仓库最终测量的数据核对实际应付金额。",
+    "Combine eligible items and submit a parcel": "合并符合条件的商品并提交包裹",
+    "Select the inspected items you want to ship together in your LoloBuy account. Check each item’s storage deadline before waiting for the rest. Confirm the recipient’s address, parcel contents, and any packing options shown. Compare the final shipping route, charges and terms on the parcel screen before paying.": "在 LoloBuy 账号内选择要合并发运、已完成质检的商品。等待其他商品时，留意每件商品的仓库存放期限。核对收件地址、包裹内容和可选包装服务，付款前确认最终线路、费用及条款。",
+    "Track delivery and record any problem": "追踪包裹并留存异常凭证",
+    "Use the international parcel record in LoloBuy to find the carrier and tracking number after dispatch. For a delay, compare the parcel status in LoloBuy with the carrier’s update. If something arrives damaged or missing, keep the packaging, shipping label and photos and check the claim procedure and deadline for your route.": "包裹发出后，在 LoloBuy 国际包裹记录中查看承运商和运单号。遇到延误时，对照平台与承运商的最新状态。若收到的商品损坏或缺失，保留外包装、运单面单和照片，并核对该线路的申诉流程及期限。",
+    "Follow a product from our spreadsheet through LoloBuy order payment, warehouse inspection, parcel consolidation and delivery. The screenshots show public screens and a saved inspection example.": "从本站商品表格开始，了解 LoloBuy 商品付款、仓库质检、合包和收货。图解包含官网公开页面和已保存的质检示例。",
+    "Enter a product name, Weidian item ID or seller link in our spreadsheet and choose Apply filters. Open a result, compare its seller photos and choose Buy on LoloBuy. You can also paste a seller link into the official LoloBuy homepage.": "在本站商品表格输入商品名称、微店商品 ID 或卖家链接，点击「应用筛选」。打开匹配结果，对照卖家图片，然后点击「在 LoloBuy 购买」。你也可以把卖家链接直接粘贴到 LoloBuy 官网首页的搜索框。",
+    "Our spreadsheet after searching for Weidian item 7321418559. Open the matching card to reach the purchase link.": "在本站商品表格搜索微店商品 7321418559 后的结果。打开匹配的商品卡片即可找到购买入口。",
+    "LoloBuy product page with the selected item, available options and price.": "LoloBuy 官网商品页显示商品信息、可选规格和当前价格。",
+    "LoloBuy product screen showing item payment, warehouse intake and international freight as separate stages.": "LoloBuy 官网商品页列出商品付款、仓库入库及国际运费三个阶段。",
+    "Once the item arrives, open My LoloBuy → My Warehouse to check your inspection photos. Compare the variant, size label, colour and visible condition against your order. Use the order’s after-sales options for any discrepancy before submitting your parcel.": "商品入库后，打开 My LoloBuy → My Warehouse（我的仓库）查看质检照，并对照订单核对规格、尺码标签、颜色和外观。如有异常，在提交国际包裹前使用该订单的售后入口。",
+    "LoloBuy’s public Help Center. Sign in and select the affected order to ask about returns or refunds.": "LoloBuy 官网帮助中心。登录后选择有问题的订单，即可咨询退货或退款。",
+    "In My Warehouse, select the inspected items you want to ship together and choose Submit for Delivery. Check storage deadlines, the recipient’s address, parcel contents and packing options. Review the route, terms and estimated freight deposit, then check the final charge after packing.": "在 My Warehouse（我的仓库）勾选要一起寄送且已质检的商品，再点击 Submit for Delivery（提交发货）。核对仓库存放期限、收件地址、包裹内容和包装选项。确认线路、条款和预估运费预付款，打包后再核对最终费用。",
+    "LoloBuy’s public tutorial covers warehouse item selection, parcel submission and the estimated freight deposit.": "LoloBuy 官网购买教程里的仓库商品勾选、包裹提交及国际运费预付款说明。",
+    "After dispatch, open My LoloBuy → Parcels for the carrier and tracking number. For a delay, compare the LoloBuy status with the carrier’s updates. For missing or damaged goods, keep the packaging, shipping label and photos, then check your route’s claim procedure and deadline.": "包裹发出后，打开 My LoloBuy → Parcels（包裹）查看承运商和运单号。如有延误，对照 LoloBuy 与承运商的更新。若商品缺失或损坏，保留包装、面单和照片，并核对所选线路的申诉流程及期限。",
+    "LoloBuy’s public tutorial shows where to check tracking and what to do after delivery.": "LoloBuy 官网购买教程里的物流追踪入口和签收后操作说明。",
+    "Follow a product from our spreadsheet through LoloBuy order payment, warehouse inspection, parcel consolidation and delivery. The guide uses screenshots of our spreadsheet, public LoloBuy pages and the official tutorial, plus a saved warehouse inspection photo.": "从本站商品表格开始，了解 LoloBuy 下单付款、仓库质检、合包和追踪收货的完整流程。指南配有本站实操截图、LoloBuy 官网公开界面与教程截图，以及已保存的仓库实拍质检照。",
+    "Read LoloBuy’s official buying tutorial": "查看 LoloBuy 官网购买教程",
+    "Track your parcel": "追踪包裹物流",
+    "After dispatch, open My LoloBuy → Parcels for the carrier and tracking number. If delivery is delayed, compare the parcel status in LoloBuy with the carrier’s updates.": "包裹发出后，在 My LoloBuy → Parcels（包裹）查看承运商和运单号。如果配送延迟，对照 LoloBuy 的包裹状态和承运商的最新物流记录。",
+    "LoloBuy’s public tutorial shows where to track a parcel in your account.": "LoloBuy 官网教程标出了账号内的物流追踪入口。",
+    "Inspect your delivery and confirm receipt": "验货并确认收货",
+    "Check the contents and condition when the parcel arrives. If everything matches your order, confirm receipt in My LoloBuy → Parcels. For missing or damaged goods, keep the packaging, shipping label and photos, then check your route’s claim procedure and deadline.": "包裹送达后，检查内件是否齐全、外观是否完好。核对无误后，在 My LoloBuy → Parcels（包裹）确认收货。如有缺件或损坏，保留包装、运单面单和照片，并核对所选物流线路的申诉流程及期限。",
+    "LoloBuy’s public tutorial shows where to confirm receipt or request after-sales help.": "LoloBuy 官网教程标出了确认收货和申请售后的入口。"
+  },
+  "fr": {
+    "Browse by category": "Parcourir par catégorie",
+    "Warehouse QC": "Contrôle qualité en entrepôt",
+    "With warehouse QC": "Avec photos de contrôle qualité",
+    "LoloBuy warehouse quality control checklist": "Contrôle qualité LoloBuy en entrepôt : les points à vérifier",
+    "Open the freight estimator": "Ouvrir le calculateur de frais de livraison",
+    "Automatic scrolling": "Défilement automatique"
+  },
+  "es": {
+    "Browse by category": "Explorar por categoría",
+    "Warehouse QC": "Control de calidad en almacén",
+    "With warehouse QC": "Con fotos de control de calidad",
+    "LoloBuy warehouse quality control checklist": "Lista de verificación del control de calidad en el almacén de LoloBuy",
+    "Open the freight estimator": "Abrir el calculador de gastos de envío",
+    "Automatic scrolling": "Desplazamiento automático"
+  },
+  "de": {
+    "Automatic scrolling": "Automatisches Scrollen"
+  },
+  "it": {
+    "Automatic scrolling": "Scorrimento automatico"
+  },
+  "pt": {
+    "Automatic scrolling": "Rolagem automática"
+  },
+  "ru": {
+    "Automatic scrolling": "Автоматическая прокрутка"
+  },
+  "ja": {
+    "Automatic scrolling": "自動スクロール"
+  },
+  "ko": {
+    "Automatic scrolling": "자동 스크롤"
+  },
+  "ar": {
+    "Automatic scrolling": "تمرير تلقائي"
+  },
+  "tr": {
+    "Automatic scrolling": "Otomatik kaydırma"
+  },
+  "pl": {
+    "Automatic scrolling": "Automatyczne przewijanie"
+  },
+  "nl": {
+    "Automatic scrolling": "Automatisch scrollen"
+  },
+  "sv": {
+    "Automatic scrolling": "Automatisk rullning"
+  },
+  "da": {
+    "Automatic scrolling": "Automatisk rulning"
+  },
+  "fi": {
+    "Automatic scrolling": "Automaattinen vieritys"
+  },
+  "no": {
+    "Automatic scrolling": "Automatisk rulling"
+  },
+  "hu": {
+    "Automatic scrolling": "Automatikus görgetés"
+  },
+  "ro": {
+    "Automatic scrolling": "Derulare automată"
+  },
+  "cs": {
+    "Automatic scrolling": "Automatické posouvání"
+  },
+  "uk": {
+    "Automatic scrolling": "Автоматичне прокручування"
+  }
+}

@@ -1,0 +1,12 @@
+---
+import {categoryEntries} from '../lib/categories.mjs';
+const number = new Intl.NumberFormat('en-US');
+---
+<div class="catalog-categories">
+  {categoryEntries.map(({key, name, count}) => (
+    <a class="catalog-category" href={'/spreadsheet/?category=' + encodeURIComponent(key)}>
+      <img src={'/assets/categories/' + key + '.webp'} alt="" width="384" height="341" loading="lazy" />
+      <span class="category-caption"><strong>{name}</strong><small>{number.format(count)} listings</small></span>
+    </a>
+  ))}
+</div>

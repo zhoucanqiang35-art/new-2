@@ -1,0 +1,30 @@
+---
+import {illustratedSteps} from '../lib/buying-help.mjs';
+const {home = false} = Astro.props;
+---
+<section class:list={['illustrated-guide', {'wrap edit-section home-guide': home}]} aria-labelledby="illustrated-heading">
+  <div class="section-title">
+    <h2 id="illustrated-heading">{home ? 'How to buy with LoloBuy' : 'From a Weidian link to your parcel'}</h2>
+    {home && <a href="/guides/how-to-buy/">Full buying guide</a>}
+  </div>
+  <ol tabindex={home ? 0 : undefined} aria-labelledby="illustrated-heading">
+    {illustratedSteps.map(({title, text, image, caption, source, href, label}, index) => (
+      <li>
+        <div class="guide-text">
+          <h3><span aria-hidden="true">{index + 1}.</span> {title}</h3>
+          <p>{text}</p>
+          <div class="guide-links">
+            <a href={href}>{label}</a>
+            {!image && source && source !== href && <a href={source}>Official page</a>}
+          </div>
+        </div>
+        {image && <figure>
+          <a class="guide-image-link" href={image.startsWith('/') ? image : '/assets/guide/' + image} target="_blank" rel="noopener">
+            <img src={image.startsWith('/') ? image : '/assets/guide/' + image} width="1060" height="580" loading="lazy" alt={caption} />
+          </a>
+          <figcaption>{caption} {source && <a href={source}>Official page</a>}</figcaption>
+        </figure>}
+      </li>
+    ))}
+  </ol>
+</section>

@@ -1,0 +1,43 @@
+---
+import Layout from '../components/Layout.astro';
+import {qcPhotos, qcProducts} from '../lib/buyer-catalog.mjs';
+import {productUrl} from '../lib/catalog.mjs';
+import {qcChecks, productQcChecks} from '../lib/buying-help.mjs';
+import QcFinder from '../components/QcFinder.astro';
+---
+<Layout title="LoloBuy QC Photos and Warehouse Quality Control | Weidian QC Finder" description="Look up LoloBuy warehouse QC photos by Weidian link or item ID. Learn what to check for shoes, clothing and accessories before shipping." page="qc">
+  <section class="wrap page">
+    <h1>LoloBuy QC Photos</h1>
+    <p class="lead">Look up saved warehouse quality control photos by Weidian item ID or product link. Inspect your own warehouse order in LoloBuy before shipping.</p>
+    <div class="actions"><a class="button dark" href="/spreadsheet/?qc=1">Finds with QC Photos</a></div>
+    <div class="research-workspace">
+      <QcFinder />
+      <aside class="research-notes">
+        <h2>Saved QC examples</h2>
+        <div class="example-set">
+          {qcProducts.map(({name, weidianId}) => (
+            <a href={productUrl(weidianId) + '#warehouse-qc'}><img src={qcPhotos[weidianId].images[0].url} width="56" height="56" loading="lazy" alt="" /><span><span translate="no">{name}</span><small>{qcPhotos[weidianId].images.length} warehouse photos</small></span></a>
+          ))}
+        </div>
+      </aside>
+    </div>
+    <section class="edit-section qc-reading" aria-labelledby="qc-checks">
+      <h2 id="qc-checks">LoloBuy warehouse quality control checklist</h2>
+      <p>After warehouse intake, LoloBuy says it inspects the goods and takes photos. Use the photos to compare visible details against the option you ordered. A historical example here may show a different variant or order.</p>
+      <div class="qc-reading-grid">
+        {qcChecks.map(({title, text}) => <article><h3>{title}</h3><p>{text}</p></article>)}
+      </div>
+    </section>
+    <section class="edit-section qc-reading" aria-labelledby="qc-by-item">
+      <h2 id="qc-by-item">What to look for by product type</h2>
+      <div class="qc-reading-grid">
+        {productQcChecks.map(([title, text]) => <article><h3>{title}</h3><p>{text}</p></article>)}
+      </div>
+    </section>
+    <section class="edit-section qc-reading" aria-labelledby="qc-next">
+      <h2 id="qc-next">If warehouse photos show a problem</h2>
+      <p>Save the inspection photo and note the Weidian item ID, the exact variant and the issue. Review the order’s after-sales entry or contact LoloBuy support before parcel submission. Confirm the deadline, options and possible charges for that order.</p>
+      <div class="actions"><a class="button dark" href="/faq/">Read the LoloBuy FAQ</a><a class="button outline" href="/guides/how-to-buy/">Read the buying guide</a></div>
+    </section>
+  </section>
+</Layout>

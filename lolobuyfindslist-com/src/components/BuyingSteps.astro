@@ -1,0 +1,16 @@
+---
+import {steps} from '../lib/buying-help.mjs';
+const {home = false} = Astro.props;
+---
+<section class:list={['buying-steps', {'wrap home-section': home}]} aria-labelledby="buying-steps-heading">
+  <div class="section-title"><h2 id="buying-steps-heading">From listing to delivery</h2>{home && <a href="/guides/how-to-buy/">Buying guide</a>}</div>
+  <ol>
+    {steps.map(({title, text, href, label}) => (
+      <li>
+        <h3>{title}</h3>
+        <p>{text}</p>
+        <a href={href} rel={href.includes('inviteCode=') ? 'sponsored' : undefined}>{label}</a>
+      </li>
+    ))}
+  </ol>
+</section>
