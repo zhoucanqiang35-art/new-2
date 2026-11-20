@@ -1,4 +1,5 @@
 ---
+import {asset} from '../lib/assets.js';
 import Base from '../layouts/Base.astro';
 import ProductCard from '../components/ProductCard.astro';
 import {products,categoryNames,snapshotDate} from '../lib/catalog.js';
@@ -11,4 +12,4 @@ import {products,categoryNames,snapshotDate} from '../lib/catalog.js';
 <div class="list-meta"><span id="result-count" aria-live="polite">{products.length} products</span><span><span data-home-i18n="catalog_date">Catalog snapshot</span>: {snapshotDate}</span></div>
 <p class="catalog-price-note" data-home-i18n="price_warning">Archived reference, not a live Litbuy quote. Excludes domestic delivery, service fees, international shipping and taxes. Litbuy may use a different conversion rate.</p><p class="rate-status" aria-live="polite"></p>
 <div class="products" id="catalog">{products.slice(0,24).map(product=><ProductCard product={product}/>)}</div><nav id="catalog-pagination" class="pagination" aria-label="Product pages"></nav>
-</main><script src="/app.js" is:inline></script></Base>
+</main><script src={asset('/app.js')} is:inline></script></Base>

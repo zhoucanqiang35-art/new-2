@@ -1,4 +1,5 @@
 ---
+import {asset} from '../lib/assets.js';
 import Base from '../layouts/Base.astro';
 ---
-<Base title="Product Detail | Litbuy Sheet Lab"><main class="section product-detail"><a href="/products/" class="back">← Back to spreadsheet</a><div id="product-detail"><p>Opening the product page. If it does not open automatically, <a href="/products/">browse the catalog</a>.</p></div></main><script src="/app.js" is:inline></script></Base>
+<Base title="Product Detail | Litbuy Sheet Lab"><main class="section product-detail"><a href="/products/" class="back">← Back to spreadsheet</a><div id="product-detail"><p>Opening the product page. If it does not open automatically, <a href="/products/">browse the catalog</a>.</p></div></main><script src={asset('/app.js')} is:inline></script></Base>

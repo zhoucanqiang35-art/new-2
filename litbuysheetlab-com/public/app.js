@@ -10,7 +10,7 @@ if(catalog){
  const imageOrder=new Map(imageIds.map((id,i)=>[String(id),i]));
  const [gallery,purchase]=await Promise.all(['/data/galleries.json','/data/purchase-galleries.json'].map(url=>fetch(url).then(r=>r.ok?r.json():{}).catch(()=>({}))));
  let translatedTitles={},translatedCategories={};
- async function dictionaries(){const lang=localStorage.getItem('litbuyLang')||'en';if(lang==='en'){translatedTitles={};translatedCategories={};return;}const [rows,home]=await Promise.all([fetch('/data/titles/'+encodeURIComponent(lang)+'.json').then(r=>r.ok?r.json():{}).catch(()=>({})),fetch('/data/home-ui.json').then(r=>r.ok?r.json():{}).catch(()=>({}))]);translatedTitles=rows;translatedCategories=home[lang]?.categoryNames||{};}
+ async function dictionaries(){const lang=localStorage.getItem('litbuyLang')||'en';if(lang==='en'){translatedTitles={};translatedCategories={};return;}const [rows,home]=await Promise.all([fetch('/data/titles/'+encodeURIComponent(lang)+'.json').then(r=>r.ok?r.json():{}).catch(()=>({})),fetch('/data/home-ui.json',{cache:'no-cache'}).then(r=>r.ok?r.json():{}).catch(()=>({}))]);translatedTitles=rows;translatedCategories=home[lang]?.categoryNames||{};}
  await dictionaries();
  const form=document.querySelector('#catalog-form'),controls=document.querySelector('#catalog-controls');
  function render(page=1){
