@@ -6,6 +6,7 @@ const example = document.getElementById('image-example');
 const preview = document.getElementById('image-preview');
 const status = document.getElementById('image-status');
 const results = document.getElementById('image-results');
+const progress = document.getElementById('image-download-progress');
 const dimensions = 8;
 const channels = dimensions * dimensions * 3;
 const rowBytes = 2 + channels;
@@ -14,14 +15,32 @@ let runNumber = 0;
 let dataset;
 let activeObjectUrl;
 
+async function loadIndex() {
+  const compressed = typeof DecompressionStream === 'function';
+  const response = await fetch(compressed ? '/visual-index.bin.gz' : '/data/visual-index.bin');
+  if (!response.ok || !response.body) throw new Error('The image index could not be loaded');
+  const total = Number(response.headers.get('Content-Length'));
+  let loaded = 0;
+  const download = response.body.pipeThrough(new TransformStream({
+    transform(chunk, controller) {
+      loaded += chunk.byteLength;
+      const mb = (loaded / 1e6).toFixed(1);
+      progress.textContent = total > 0 ? mb + ' / ' + (total / 1e6).toFixed(1) + ' MB' : mb + ' MB';
+      controller.enqueue(chunk);
+    },
+  }));
+  try {
+    return await new Response(compressed ? download.pipeThrough(new DecompressionStream('gzip')) : download).arrayBuffer();
+  } finally {
+    progress.textContent = '';
+  }
+}
+
 function loadDataset() {
   dataset ??= Promise.all([
     readJson('/data/catalog.json'),
     readJson('/data/visual-photos.json'),
-    fetch('/data/visual-index.bin').then((response) => {
-      if (!response.ok) throw new Error('The image index could not be loaded');
-      return response.arrayBuffer();
-    }),
+    loadIndex(),
   ]).catch((error) => { dataset = undefined; throw error; });
   return dataset;
 }
@@ -62,11 +81,12 @@ async function search(src, sampleId = '') {
   const run = ++runNumber;
   if (src) preview.src = src;
   preview.hidden = !src;
-  status.textContent = 'Searching the saved image index…';
+  status.textContent = dataset ? 'Searching the saved image index…' : 'Loading the image search index…';
   results.replaceChildren();
   try {
     const [catalog, photos, buffer] = await loadDataset();
     if (run !== runNumber) return;
+    status.textContent = 'Searching the saved image index…';
     let input;
     if (sampleId) {
       const index = catalog.findIndex((product) => product.id === sampleId);

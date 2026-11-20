@@ -1,9 +1,10 @@
-import {card, element, external, readJson, referencePrice, showQc} from './browser.mjs';
-import {categoryLabel, originalUrl, parseId, productImage, sourceOrigin} from './catalog.mjs';
+import {card, element, external, readJson, referencePrice, showQc, readQc} from './browser.mjs';
+import {categoryLabel, officialFavicon, originalUrl, parseId, productImage, productUrl, sourceOrigin} from './catalog.mjs';
+import {categoryFinds, categoryLanding} from './landing-paths.mjs';
 import {agents, purchaseFor, shoppingOptions} from './shopping.mjs';
 
 const target = document.querySelector('#product-detail');
-const id = parseId(new URLSearchParams(location.search).get('id') ?? '');
+const id = target.dataset.item || parseId(new URLSearchParams(location.search).get('id') ?? '');
 
 function gallery(product, images) {
   const photos = [...new Set([productImage(product), ...images.filter((image) => image !== product.image)])];
@@ -73,7 +74,7 @@ function shoppingDialog(product) {
     const link = external('', destination.url, 'button agent-dialog-button');
     if (destination.sponsored) link.rel = 'sponsored noopener';
     link.append(
-      element('img', {src: agent.id === 'eastmallbuy' ? 'https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/favicon.jpg' : agent.logo, alt: '', width: 22, height: 22, loading: 'lazy'}),
+      element('img', {src: agent.id === 'eastmallbuy' ? officialFavicon : agent.logo, alt: '', width: 22, height: 22, loading: 'lazy'}),
       element('span', {textContent: agent.name, translate: false}),
     );
     return link;
@@ -96,7 +97,7 @@ function shoppingDialog(product) {
 }
 
 function render(product, photos, catalog) {
-  document.title = product.name + ' | EastMallBuy Findsheet';
+  if (!target.dataset.listing) document.title = product.name + ' | EastMallBuy Findsheet';
   const buy = external('', '', 'button dark');
   const updatePurchase = () => {
     const destination = purchaseFor(shoppingOptions().agent, id, product.sourcePath);
@@ -109,12 +110,18 @@ function render(product, photos, catalog) {
   window.addEventListener('pageshow', updatePurchase);
   const [otherAgents, agentDialog] = shoppingDialog(product);
   const estimate = referencePrice(product.price);
+  const qcLink = element('a', {href: '#warehouse-qc', textContent: 'Checking saved QC records…'});
+  readQc(id).then((record) => {
+    qcLink.textContent = record?.status === 'available' ? 'Historical QC available' :
+      record?.status === 'pending' ? 'QC check pending' : 'No saved QC record here';
+  }).catch(() => { qcLink.textContent = 'QC status unavailable'; });
   const info = element('div', {className: 'detail-copy'}, [
     element('p', {className: 'eyebrow', textContent: categoryLabel(product.category).toUpperCase()}),
     element('h1', {textContent: product.name, translate: false}),
     element('p', {textContent: 'Weidian item ' + id}),
     ...(estimate ? [element('p', {className: 'detail-estimate'}, [estimate, ' estimated item price'])] : []),
-    element('p', {textContent: 'Compare the seller photos and available warehouse QC. Check the current item price, sizes and shipping quote with your selected shopping agent.'}),
+    element('p', {}, [element('strong', {textContent: 'Size check.'}), ' Confirm the seller’s current size chart and selected variant. ', external('Check seller sizing', originalUrl(id))]),
+    element('p', {}, [element('strong', {textContent: 'QC status.'}), ' ', qcLink]),
     element('div', {className: 'actions'}, [buy, external('Original Weidian listing', originalUrl(id), 'button outline'), otherAgents]),
     agentDialog,
     element('p', {textContent: 'Agent links may contain a referral code. Your selected agent handles orders and payment.'}),
@@ -125,14 +132,26 @@ function render(product, photos, catalog) {
   const related = catalog.filter((item) => item.category === product.category && item.weidianId !== id && /^\d+$/.test(item.weidianId ?? '')).slice(0, 4);
   target.replaceChildren(
     element('div', {className: 'detail-grid'}, [gallery(product, photos), info]),
-    element('section', {className: 'subsection'}, [element('h2', {textContent: 'Warehouse QC photos'}), qcStatus]),
-    element('section', {className: 'subsection'}, [element('div', {className: 'section-title'}, [element('h2', {textContent: 'More in ' + categoryLabel(product.category)}), element('a', {textContent: 'Browse category', href: '/spreadsheet/?category=' + encodeURIComponent(product.category)})]), element('div', {className: 'product-grid'}, related.map((item) => card(item)))]),
+    element('section', {className: 'subsection', id: 'warehouse-qc'}, [element('h2', {textContent: 'Warehouse QC photos'}), qcStatus]),
+    element('section', {className: 'subsection'}, [element('div', {className: 'section-title'}, [element('h2', {textContent: 'More in ' + categoryLabel(product.category)}), element('a', {textContent: 'Browse category', href: categoryLanding(product.category) || categoryFinds(product.category)})]), element('div', {className: 'product-grid'}, related.map((item) => card(item)))]),
   );
   showQc(qcStatus, id, product.sourcePath);
 }
 
 async function init() {
   try {
+    if (target.dataset.listing) {
+      const {product, photos, related} = JSON.parse(target.dataset.listing);
+      const sizeGuide = target.querySelector('.subsection');
+      render(product, photos, related);
+      target.querySelector('#warehouse-qc').after(sizeGuide);
+      return;
+    }
+    const canonical = productUrl(id);
+    if (canonical.startsWith('/products/')) {
+      location.replace(canonical);
+      return;
+    }
     const catalog = await readJson('/data/catalog.json');
     const product = catalog.find((item) => id && item.weidianId === id);
     if (!product) {

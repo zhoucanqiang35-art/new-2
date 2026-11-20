@@ -1,0 +1,48 @@
+---
+import Layout from '../../components/Layout.astro';
+import Card from '../../components/Card.astro';
+import catalog from '../../../public/data/catalog.json';
+import qc from '../../../public/data/qc-featured.json';
+import {categoryGuides} from '../../lib/category-guides.mjs';
+import {categoryLabel} from '../../lib/catalog.mjs';
+import {categoryFinds, categoryLanding, featuredCategories, indexedProductIds} from '../../lib/landing-paths.mjs';
+
+export function getStaticPaths() {
+  return featuredCategories.map((category) => ({params: {category}, props: {category}}));
+}
+const {category} = Astro.props;
+const name = categoryLabel(category);
+const guide = categoryGuides[category];
+const products = indexedProductIds.map((id) => catalog.find((item) => item.weidianId === id))
+  .filter((item) => item?.category === category);
+const description = guide.intro;
+---
+<Layout title={name + ' | EastMallBuy Spreadsheet Finds'} description={description} page="categories">
+  <div class="wrap page">
+    <p class="eyebrow"><a href="/categories/">All 11 categories</a></p>
+    <h1>{name} in the EastMallBuy Spreadsheet</h1>
+    <p class="lead">{description}</p>
+    <div class="actions">
+      <a class="button dark" href={categoryFinds(category)}>Browse all {name}</a>
+      <a class="button outline" href="/image-search/#qc-finder">Check QC by ID</a>
+    </div>
+    <section class="section" aria-labelledby="category-picks">
+      <div class="section-title"><h2 id="category-picks">Selected listings</h2></div>
+      <div class="product-grid">
+        {products.map((product) => <Card product={product} hasQc={qc[product.weidianId]?.status === 'available'} />)}
+      </div>
+    </section>
+    <section class="section" aria-labelledby="category-checks">
+      <div class="section-title"><h2 id="category-checks">What to check before ordering</h2></div>
+      <ul class="steps">
+        {guide.compare.map((tip) => <li><p>{tip}</p></li>)}
+        <li><p><strong>Size and measurements</strong> {guide.fit}</p></li>
+        <li><p><strong>Seller and warehouse photos</strong> {guide.photos}</p></li>
+      </ul>
+    </section>
+    <div class="actions">
+      {featuredCategories.filter((key) => key !== category).map((key) => <a class="button outline" href={categoryLanding(key)}>{categoryLabel(key)}</a>)}
+      <a class="button outline" href="/guides/how-to-buy/">Read the buying guide</a>
+    </div>
+  </div>
+</Layout>

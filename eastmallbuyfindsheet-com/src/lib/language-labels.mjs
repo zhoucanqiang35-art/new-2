@@ -64,8 +64,8 @@ const catalogKicker = {
 };
 
 const chineseHomeActions = {
-  'zh-Hans': {'Browse spreadsheet': '浏览电子表格', 'Find QC photos': '查找 QC 照片', 'Weidian listings': '微店商品', 'Find by reference photo': '按参考图搜索'},
-  'zh-Hant': {'Browse spreadsheet': '瀏覽電子表格', 'Find QC photos': '查找 QC 照片', 'Weidian listings': '微店商品', 'Find by reference photo': '按參考圖搜尋'},
+  'zh-Hans': {'Browse spreadsheet': '浏览电子表格', 'Find QC photos': '查找 QC 照片', 'Weidian listings': '微店商品', 'Find by reference photo': '按参考图搜索', 'Name, Weidian link or ID': '商品名称、微店链接或 ID', 'Check QC by ID': '按 ID 查 QC', 'View all ZZ1ZZ categories': '查看全部 ZZ1ZZ 类', 'Historical QC available': '已有历史质检照片', 'QC check pending': '正在等待质检结果', 'No saved QC record here': '本站暂无质检记录', 'View saved QC on the preview site': '前往预览站看质检照片'},
+  'zh-Hant': {'Browse spreadsheet': '瀏覽電子表格', 'Find QC photos': '查找 QC 照片', 'Weidian listings': '微店商品', 'Find by reference photo': '按參考圖搜尋', 'Name, Weidian link or ID': '商品名稱、微店連結或 ID', 'Check QC by ID': '按 ID 查 QC', 'View all ZZ1ZZ categories': '查看全部 ZZ1ZZ 類', 'Historical QC available': '已有歷史驗貨照片', 'QC check pending': '正在等待驗貨結果', 'No saved QC record here': '本站暫無驗貨紀錄', 'View saved QC on the preview site': '前往預覽站看驗貨照片'},
 };
 
 export function navigationLabels(code) {
@@ -75,6 +75,7 @@ export function navigationLabels(code) {
   return {
     ...Object.fromEntries(labels.map((label, index) => [label, row[index]])),
     'The Findspreadsheet catalog': catalogKicker[code],
+    'Search by image': row[3],
     ...chineseHomeActions[code],
     'Buy on ZZ1ZZ': purchase,
     'ZZ1ZZ listing': listing,

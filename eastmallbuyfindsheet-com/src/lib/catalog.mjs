@@ -1,7 +1,7 @@
-export const publicAsset = (path) => 'https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site' + path;
+import {hasProductLanding, indexedProductPath} from './landing-paths.mjs';
 export const sourceOrigin = 'https://findspreadsheet.com';
 export const registrationUrl = 'https://www.eastmallbuy.com/web/#/register?inviter=bretosparvinyf78';
-export const productUrl = (id) => '/product/?id=' + encodeURIComponent(id);
+export const productUrl = (id) => hasProductLanding(id) ? indexedProductPath(id) : '/product/?id=' + encodeURIComponent(id);
 export const originalUrl = (id) => 'https://weidian.com/item.html?itemID=' + encodeURIComponent(id);
 export const purchaseUrl = (id) => 'https://www.eastmallbuy.com/web/#/item/index?tp=taobao&tid=&searchlang=en&url=' + encodeURIComponent(originalUrl(id)) + '&inviter=zhoucanqiang35';
 
@@ -11,8 +11,9 @@ export const categories = {
   jersey: 'Jerseys', electronics: 'Electronics', 'other-stuff': 'Other Finds',
 };
 export const categoryLabel = (key) => categories[key] ?? 'Other Finds';
-export const featuredIds = ['5954', '8608', '6818', '7357', '8768', '8891', '8313', '7637', '4491', '7079', '7352', '8334', '8477', '8940', '7091', '7653', '6250', '5841', '8510', '8397', '7656', '8702', '8661', '8944', '8779', '8352', '7046', '9018', '8648', '5985', '8179', '8765', '8676', '8984'];
-export const productImage = (product) => featuredIds.includes(product.id) ? publicAsset('/assets/product-' + product.id + '.webp') : product.image;
+export const productImage = (product) => product.image;
+export const officialLogo = 'https://cdn.eastmallbuy.com/img/20251105/25c59ea663a79b39eb6cb1f3edd71325.png';
+export const officialFavicon = 'https://www.eastmallbuy.com/web/favicon.jpg';
 
 export function parseId(input) {
   const value = input.trim();

@@ -19,21 +19,22 @@ const qcSampleProduct = catalog.find((item) => item.weidianId === qcSample);
 <Layout title="EastMallBuy Spreadsheet | Browse Finds & Warehouse QC" description="Explore shoes, streetwear and accessories in the EastMallBuy spreadsheet. Browse 11 Findspreadsheet categories, search by image, and check available warehouse QC photos." page="home">
   <section class="catalog-hero">
     <picture class="catalog-hero-photo">
-      <source media="(max-width: 720px)" srcset="https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/shipping-hero-mobile.webp" />
-      <img src="https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/shipping-hero.webp" width="1536" height="1024" alt="" fetchpriority="high" />
+      <source media="(max-width: 720px)" srcset="/assets/shipping-hero-mobile.webp" />
+      <img src="/assets/shipping-hero.webp" width="1536" height="1024" alt="" fetchpriority="high" />
     </picture>
     <div class="wrap catalog-hero-content">
       <p class="catalog-kicker">The Findspreadsheet catalog</p>
       <h1>EastMallBuy <span>Spreadsheet</span></h1>
       <p class="catalog-lead">Browse streetwear, shoes and accessories. Check seller photos and available warehouse QC before opening a listing on EastMallBuy.</p>
       <form class="search-form home-search" action="/spreadsheet/">
-        <label class="visually-hidden" for="home-search">Search by name or Weidian ID</label>
-        <input id="home-search" name="q" type="search" placeholder="Search a product or Weidian ID" />
+        <label class="visually-hidden" for="home-search">Search by name, Weidian link or ID</label>
+        <input id="home-search" name="q" type="search" placeholder="Name, Weidian link or ID" />
         <button class="button dark" type="submit">Search</button>
       </form>
       <div class="home-actions">
         <a class="button catalog-primary" href="/spreadsheet/">Browse spreadsheet</a>
-        <a class="button catalog-quiet" href="/image-search/#qc-finder">Find QC photos</a>
+        <a class="button catalog-quiet" href="/image-search/#image-upload">Search by image</a>
+        <a class="button catalog-quiet" href="/image-search/#qc-finder">Check QC by ID</a>
       </div>
       <div class="catalog-hero-summary" aria-label="Catalog at a glance">
         <a href="/spreadsheet/"><strong>{number.format(listingCount)}</strong><span>Weidian listings</span></a>
@@ -46,7 +47,7 @@ const qcSampleProduct = catalog.find((item) => item.weidianId === qcSample);
   <section class="wrap home-section" id="categories">
     <div class="home-section-head">
       <div><h2>Shop by category</h2><p>Open a category to browse matching listings.</p></div>
-      <a class="section-link" href="/categories/">View all categories</a>
+      <a class="section-link" href="/categories/">View all {categoryEntries.length} categories</a>
     </div>
     <CategoryGrid />
   </section>

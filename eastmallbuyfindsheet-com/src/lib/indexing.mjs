@@ -1,3 +1,5 @@
+import {categoryLanding, featuredCategories, indexedProductIds, indexedProductPath} from './landing-paths.mjs';
+
 export const siteOrigin = 'https://eastmallbuyfindsheet.com';
 
 export const indexablePaths = [
@@ -7,4 +9,6 @@ export const indexablePaths = [
   '/categories/',
   '/faq/',
   '/image-search/',
+  ...featuredCategories.map(categoryLanding),
+  ...indexedProductIds.map(indexedProductPath),
 ];

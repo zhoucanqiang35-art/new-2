@@ -2,7 +2,7 @@
 import '../styles.css';
 import ShoppingMenu from './ShoppingMenu.astro';
 import LanguagePicker from './LanguagePicker.astro';
-import {registrationUrl} from '../lib/catalog.mjs';
+import {officialFavicon, officialLogo, registrationUrl} from '../lib/catalog.mjs';
 import {indexablePaths, siteOrigin} from '../lib/indexing.mjs';
 const { title, description = 'Browse the EastMallBuy spreadsheet, explore Weidian finds, and check available QC photos.', page = '' } = Astro.props;
 const canonical = indexablePaths.includes(Astro.url.pathname) ? new URL(Astro.url.pathname, siteOrigin) : null;
@@ -16,14 +16,14 @@ const nav = [['/', 'Home', 'home'], ['/categories/', 'Categories', 'categories']
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   {canonical ? <link rel="canonical" href={canonical.href} /> : <meta name="robots" content="noindex" />}
   <meta name="description" content={description} />
-  <link rel="icon" href="https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/favicon.jpg" />
+  <link rel="icon" href={officialFavicon} />
   <title>{title}</title>
 </head>
 <body class:list={{"home-layout": page === "home"}}>
   <a class="skip" href="#main">Skip to content</a>
   <header class="masthead">
     <div class="wrap nav">
-      <a class="brand" href="/" aria-label="EastMallBuy Findsheet home"><img src="https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/eastmallbuy.png" width="157" height="24" alt="EastMallBuy" /><span>Findsheet</span></a>
+      <a class="brand" href="/" aria-label="EastMallBuy Findsheet home"><img src={officialLogo} width="157" height="24" alt="EastMallBuy" /><span>Findsheet</span></a>
       <nav aria-label="Main navigation">{nav.map(([href, label, key]) => <a href={href} aria-current={page === key ? 'page' : undefined}>{label}</a>)}</nav>
       <div class="nav-actions">
         {page === 'sheet' && <ShoppingMenu />}

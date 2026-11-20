@@ -2,6 +2,7 @@
 import Layout from '../components/Layout.astro';
 import catalog from '../../public/data/catalog.json';
 import {categoryEntries} from '../lib/categories.mjs';
+import {categoryLanding} from '../lib/landing-paths.mjs';
 import {categoryGuides} from '../lib/category-guides.mjs';
 import {productImage, productUrl} from '../lib/catalog.mjs';
 
@@ -26,7 +27,7 @@ const entries = categoryEntries.map(({key, name, count}) => {
     product.category === key && /^\d+$/.test(product.weidianId) && product.name.toLowerCase().includes(query)));
   const href = '/spreadsheet/?category=' + encodeURIComponent(key);
   const photo = catalog.find((product) => product.id === categoryPhotoIds[key] && product.category === key);
-  return {name, count, guide, photo, availableSearches, href, anchor: key.toLowerCase()};
+  return {name, count, guide, photo, availableSearches, href, landing: categoryLanding(key), anchor: key.toLowerCase()};
 });
 ---
 <Layout
@@ -42,7 +43,7 @@ const entries = categoryEntries.map(({key, name, count}) => {
     </nav>
 
     <div class="category-guides">
-      {entries.map(({name, count, guide, photo, availableSearches, href, anchor}) => (
+      {entries.map(({name, count, guide, photo, availableSearches, href, landing, anchor}) => (
         <article class="category-guide" id={anchor} aria-labelledby={anchor + '-heading'}>
           <div class="category-guide-visual">
             {photo && (
@@ -52,6 +53,7 @@ const entries = categoryEntries.map(({key, name, count}) => {
             )}
             <span>{number.format(count)} listings in the preview</span>
             <a class="button dark" href={href}>Browse {name}</a>
+            {landing && <a class="section-link" href={landing}>{name} picks and buying guide</a>}
           </div>
           <div class="category-guide-copy">
             <h2 id={anchor + '-heading'}>{name}</h2>

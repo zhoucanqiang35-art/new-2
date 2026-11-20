@@ -270,3 +270,6 @@ footer{margin-top:54px;padding:27px 0 32px}.footer-inner{display:flex;justify-co
 .agent-picker-button:active,
 .agent-dialog-options .agent-dialog-button:active { box-shadow: none; }
 .agent-dialog-options img { object-fit: contain; flex: none; }
+
+#image-download-progress:empty { display: none; }
+#image-upload, #warehouse-qc { scroll-margin-top: 16px; }

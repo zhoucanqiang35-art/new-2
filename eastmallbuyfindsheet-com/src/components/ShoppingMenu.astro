@@ -1,4 +1,5 @@
 ---
+import {officialFavicon} from "../lib/catalog.mjs";
 import {agents, currencies, rateDate} from '../lib/shopping.mjs';
 const defaultAgent = agents.find(({id}) => id === 'eastmallbuy');
 ---
@@ -8,7 +9,7 @@ const defaultAgent = agents.find(({id}) => id === 'eastmallbuy');
   </a>
   <details class="shopping-menu" id="shopping-menu">
     <summary>
-      <img src="https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/favicon.jpg" alt="" width="18" height="18" id="shopping-logo" />
+      <img src={officialFavicon} alt="" width="18" height="18" id="shopping-logo" />
       <span id="shopping-agent">{defaultAgent.name}</span>
       <span class="shopping-code" id="shopping-currency">USD</span>
       <span class="shopping-chevron" aria-hidden="true"></span>
@@ -17,7 +18,7 @@ const defaultAgent = agents.find(({id}) => id === 'eastmallbuy');
       <fieldset>
         <legend>Shopping agent</legend>
         <div class="agent-options">{agents.map((agent) => (
-          <label><input type="radio" name="site-agent" value={agent.id} checked={agent.id === defaultAgent.id} /><img src={agent.id === 'eastmallbuy' ? 'https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/favicon.jpg' : agent.logo} alt="" width="19" height="19" loading="lazy" /><span>{agent.name}</span></label>
+          <label><input type="radio" name="site-agent" value={agent.id} checked={agent.id === defaultAgent.id} /><img src={agent.id === 'eastmallbuy' ? officialFavicon : agent.logo} alt="" width="19" height="19" loading="lazy" /><span>{agent.name}</span></label>
         ))}</div>
       </fieldset>
       <fieldset>
@@ -31,6 +32,7 @@ const defaultAgent = agents.find(({id}) => id === 'eastmallbuy');
   </details>
 </div>
 <script>
+  import {officialFavicon} from "../lib/catalog.mjs";
   import {agents, shoppingOptions, updateShopping} from '../lib/shopping.mjs';
 
   const menu = document.querySelector<HTMLDetailsElement>('#shopping-menu')!;
@@ -42,7 +44,7 @@ const defaultAgent = agents.find(({id}) => id === 'eastmallbuy');
     document.querySelector('#shopping-agent')!.textContent = selected.name;
     document.querySelector('#shopping-currency')!.textContent = currency;
     const logo = document.querySelector<HTMLImageElement>('#shopping-logo')!;
-    logo.src = selected.id === 'eastmallbuy' ? 'https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/favicon.jpg' : selected.logo;
+    logo.src = selected.id === 'eastmallbuy' ? officialFavicon : selected.logo;
     for (const input of menu.querySelectorAll<HTMLInputElement>('input')) {
       input.checked = input.value === (input.name === 'site-agent' ? agent : currency);
     }

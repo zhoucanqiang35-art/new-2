@@ -339,11 +339,14 @@
   }
 
   .home-actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 430px;
     gap: 6px;
     margin-top: 7px;
   }
 
-  .home-actions .button { min-height: 36px; padding: 6px 10px; font-size: .8rem; }
+  .home-actions .button { min-height: 36px; padding: 5px 4px; font-size: .78rem; }
   .home-search input { padding-inline: 7px; font-size: .83rem; }
   .home-search .button { min-height: 34px; padding: 5px 10px; }
 

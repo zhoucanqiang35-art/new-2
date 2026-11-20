@@ -1,5 +1,6 @@
 ---
 import CategoryIcon from './CategoryIcon.astro';
+import {categoryLanding, categoryFinds} from '../lib/landing-paths.mjs';
 import {categoryEntries} from '../lib/categories.mjs';
 const number = new Intl.NumberFormat('en-US');
 const entries = categoryEntries.filter(({key}) => !['electronics', 'other-stuff'].includes(key));
@@ -10,7 +11,7 @@ const tiles = [...entries.map((item) => [item]), combined];
   {tiles.map((tile) => (
     <div class:list={['catalog-category-tile', {'catalog-category-pair': tile.length > 1}]}>
       {tile.map(({key, name, count}) => (
-        <a class="catalog-category" href={'/spreadsheet/?category=' + encodeURIComponent(key)}>
+        <a class="catalog-category" href={categoryLanding(key) || categoryFinds(key)}>
           <span class="category-icon"><CategoryIcon category={key} /></span>
           <span class="category-caption"><strong>{name}</strong><small>{number.format(count)} listings</small></span>
         </a>

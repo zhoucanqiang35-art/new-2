@@ -41,28 +41,39 @@ export function external(text, href, className = '') {
 }
 
 let qcData;
+export async function readQc(id) {
+  qcData ??= Promise.all([readJson('/data/qc-featured.json'), readJson('/data/qc.json')])
+    .catch((error) => { qcData = undefined; throw error; });
+  const [photos, checks] = await qcData;
+  return photos[id] ?? checks[id];
+}
+
 export async function showQc(target, id, sourcePath = '') {
   target.textContent = 'Checking saved QC records…';
   try {
-    qcData ??= Promise.all([readJson('/data/qc-featured.json'), readJson('/data/qc.json')])
-      .catch((error) => { qcData = undefined; throw error; });
-    const [photos, checks] = await qcData;
+    const record = await readQc(id);
     if (target.dataset.item && target.dataset.item !== id) return;
-    const record = photos[id] ?? checks[id];
+    const destinations = [];
+    let heading;
+    let explanation;
     if (record?.status === 'available') {
+      heading = 'Historical QC available';
+      explanation = 'The saved photos are hosted on the EastMallBuy Findsheet preview.';
       const publishedQc = new URL('/image-search/', 'https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site');
       publishedQc.searchParams.set('id', id);
       publishedQc.hash = 'qc-finder';
-      target.replaceChildren(
-        element('p', {textContent: 'Historical warehouse photos for Weidian item ' + id + '.'}),
-        external('View QC example', publishedQc.href, 'button outline'),
-      );
-      if (sourcePath) target.append(external('Check the current listing on Findspreadsheet', new URL(sourcePath, sourceOrigin).href));
-      return;
+      destinations.push(external('View saved QC on the preview site', publishedQc.href, 'button outline'));
+    } else if (record?.status === 'pending') {
+      heading = 'QC check pending';
+      explanation = 'The last saved QC check was pending.';
+    } else {
+      heading = 'No saved QC record here';
+      explanation = record?.status === 'none' ? 'The saved QC check found no warehouse photos for this item.' :
+        'Check the current listing for newer warehouse photos.';
     }
-    const message = {none: 'The saved QC check found no warehouse photos for this item.', pending: 'The last saved QC check was pending.'};
-    target.replaceChildren(element('p', {textContent: message[record?.status] ?? 'This item has no saved QC record here.'}));
-    if (sourcePath) target.append(external('Check the current listing on Findspreadsheet', new URL(sourcePath, sourceOrigin).href));
+    if (sourcePath) destinations.push(external('Check the current listing on Findspreadsheet', new URL(sourcePath, sourceOrigin).href, 'button outline'));
+    target.replaceChildren(element('p', {}, [element('strong', {textContent: heading})]), element('p', {textContent: explanation}),
+      ...(destinations.length ? [element('div', {className: 'actions'}, destinations)] : []));
   } catch {
     if (!target.dataset.item || target.dataset.item === id) target.textContent = 'Saved QC records could not load. Try again in a moment.';
   }
