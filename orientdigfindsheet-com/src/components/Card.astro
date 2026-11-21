@@ -1,0 +1,8 @@
+---
+import { categories, itemUrl, priceLabel } from '../lib/catalog.mjs';
+const { product, image = product.image } = Astro.props;
+---
+<a class="card" href={itemUrl(product.weidianId)}>
+  <img src={image} alt={product.name} translate="no" loading="lazy" width="360" height="265" />
+  <span class="card-body"><span class="small muted">{categories[product.category]}</span><strong translate="no">{product.name}</strong><span class="card-price" data-price-cny={product.price ?? ""}>{priceLabel(product.price)}</span></span>
+</a>

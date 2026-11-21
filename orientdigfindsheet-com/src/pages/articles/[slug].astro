@@ -1,0 +1,25 @@
+---
+import Layout from '../../components/Layout.astro';
+import { articles } from '../../lib/articles.mjs';
+
+export function getStaticPaths() {
+  return articles.map(article => ({ params: { slug: article.slug }, props: article }));
+}
+const { title, intro, sections } = Astro.props;
+---
+<Layout title={title + ' | OrientDig Findsheet'} description={intro}>
+  <article class="wrap page">
+    <p><a class="text-link" href="/articles/">All articles</a></p>
+    <h1>{title}</h1>
+    <p class="lead">{intro}</p>
+    <div class="prose">
+      {sections.map(({ title, text, links }) => (
+        <section class="content-block">
+          <h2>{title}</h2>
+          <p>{text}</p>
+          {links && <div class="row">{links.map(([href, label]) => <a class="text-link" href={href}>{label}</a>)}</div>}
+        </section>
+      ))}
+    </div>
+  </article>
+</Layout>

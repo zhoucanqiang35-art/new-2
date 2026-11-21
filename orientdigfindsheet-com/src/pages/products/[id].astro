@@ -1,0 +1,16 @@
+---
+import ProductPage from '../../components/ProductPage.astro';
+import catalog from '../../../public/data/catalog.json';
+import galleries from '../../../public/data/galleries.json';
+import { findItemId } from '../../lib/catalog.mjs';
+import { relatedProducts } from '../../lib/related.mjs';
+
+export const prerender = false;
+const rawId = Astro.params.id ?? '';
+const id = /^\d{5,20}$/.test(rawId) ? findItemId(rawId) : '';
+const product = id ? catalog.find(entry => entry.weidianId === id) : null;
+if (!product) Astro.response.status = 404;
+const related = product ? relatedProducts(product, catalog) : [];
+const gallery = product ? galleries[product.id] ?? [] : [];
+---
+<ProductPage product={product} related={related} gallery={gallery} invalidId={id} />

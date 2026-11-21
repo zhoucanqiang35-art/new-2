@@ -1,0 +1,63 @@
+---
+import { register, origin } from '../lib/catalog.mjs';
+import { official } from '../lib/orientdig.mjs';
+import { canonicalUrl, indexable } from '../lib/seo.mjs';
+import LanguagePicker from './LanguagePicker.astro';
+import ShoppingControls from './ShoppingControls.astro';
+import './site.css';
+const { title, noIndex = false, description = 'Search Findspreadsheet product links, compare listing photos and check warehouse QC before buying on OrientDig.' } = Astro.props;
+const links = [
+  ['/', 'Home'],
+  ['/spreadsheet/', 'Spreadsheet'],
+  ['/categories/', 'Categories'],
+  ['/tools/', 'Image Search & QC'],
+  ['/guides/how-to-buy/', 'How to use'],
+  ['/articles/', 'Blog'],
+  ['/guides/shipping/', 'Shipping'],
+];
+const path = Astro.url.pathname;
+const isSection = href => ['/categories/', '/guides/', '/articles/'].includes(href) &&
+  path.startsWith(href) && !links.some(([link]) => link === path);
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content={description} />
+  {!indexable || noIndex
+    ? <meta name="robots" content="noindex, nofollow" />
+    : <link rel="canonical" href={canonicalUrl(path)} />}
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <title>{title}</title>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="OrientDig Findsheet home">
+      <img src="/media/orientdig-logo.svg" alt="OrientDig" width="240" height="64" />
+    </a>
+    <nav aria-label="Main navigation">
+      {links.map(([href,label]) => <a href={href} aria-current={path === href ? 'page' : isSection(href) ? 'location' : undefined}>{label}</a>)}
+    </nav>
+    <div class="header-options">
+      <LanguagePicker />
+      {path === '/spreadsheet/' ? <ShoppingControls /> : <a class="button join" href={register} rel="sponsored noopener">Sign up</a>}
+    </div>
+  </div>
+</header>
+<main id="main"><slot /></main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div><strong>OrientDig Findsheet</strong><p>Independent product directory powered by <a href={origin}>Findspreadsheet</a>.</p></div>
+    <div class="footer-links"><a href={register} rel="sponsored noopener">Join OrientDig</a><a href={official.help}>OrientDig help center</a><a href={official.estimate}>Official shipping estimator</a></div>
+    <p>Some OrientDig links are affiliate links.</p>
+  </div>
+</footer>
+<script>
+  import '../lib/shopping-controls.mjs';
+  import '../lib/localize.mjs';
+</script>
+</body>
+</html>

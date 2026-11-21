@@ -1,0 +1,41 @@
+---
+import QcResults from './QcResults.astro';
+import { warehouseSample } from '../lib/orientdig.mjs';
+---
+<div class="tool-grid">
+  <section class="panel tool-panel" id="image-search">
+    <h2>Image search</h2>
+    <p>Upload a product photo to find visually similar listings. The photo stays in your browser.</p>
+    <div class="row"><label class="field">Reference photo<input id="image-file" class="input" type="file" accept="image/*" /></label>
+      <button class="button outline" type="button" id="image-example">Try a sample photo</button></div>
+    <img id="image-preview" alt="Reference photo" hidden />
+    <p class="status muted" id="image-status" role="status">Use a clear photo with one product in frame.</p>
+  </section>
+  <section class="panel tool-panel" id="qc">
+    <h2>Warehouse QC</h2>
+    <p>Look up current warehouse QC using a Weidian item ID or an OrientDig product link.</p>
+    <form id="qc-form">
+      <label class="field">Product link or Weidian ID<input class="input" id="qc-query" placeholder={'Example: '+warehouseSample} required /></label>
+      <div class="row"><button class="button primary">Check QC</button><button class="button outline" id="qc-example" type="button">Try a QC sample</button></div>
+      <p id="qc-error" class="small muted" role="alert" hidden></p>
+    </form>
+    <QcResults limit={4} />
+    <div class="row" id="qc-actions" hidden><a class="text-link" id="qc-item">Product &amp; QC details</a></div>
+  </section>
+</div>
+<div class="grid photo-results" id="image-results"></div>
+<style>
+.tool-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.tool-panel .row{align-items:end;gap:8px;margin-top:10px}
+.tool-panel .field{min-width:0}
+.tool-panel .status{margin-bottom:0}
+.tool-panel .button{font-size:.86rem}
+.tool-panel p{color:var(--muted)}
+.tool-panel #image-preview{max-width:190px;max-height:145px;object-fit:contain;border-radius:8px;margin-top:12px}
+.photo-results:not(:empty){margin-top:15px}
+@media(max-width:690px){.tool-grid{grid-template-columns:1fr}}
+</style>
+<script>
+  import '../lib/image-search.mjs';
+  import '../lib/qc-search.mjs';
+</script>

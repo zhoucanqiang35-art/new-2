@@ -1,0 +1,13 @@
+---
+import CatalogPage from '../../components/CatalogPage.astro';
+import { categoryEntries } from '../../lib/category-content.mjs';
+
+export function getStaticPaths() {
+  return categoryEntries.map(entry => ({
+    params: { category: entry.key.toLowerCase() },
+    props: entry,
+  }));
+}
+const { key, intro } = Astro.props;
+---
+<CatalogPage category={key} intro={intro} />

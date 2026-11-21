@@ -1,0 +1,10 @@
+---
+const { limit } = Astro.props;
+---
+<div data-qc-results data-qc-limit={limit} hidden>
+  <p class="status muted" data-qc-status role="status"></p>
+  <div class="grid qc-grid" data-qc-gallery></div>
+</div>
+<style>
+.qc-grid a{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#f4f5f6}.qc-grid img{width:100%;aspect-ratio:1;object-fit:contain}.qc-grid span{display:block;padding:6px 9px;font-size:.83rem;color:var(--muted);background:#fff}
+</style>

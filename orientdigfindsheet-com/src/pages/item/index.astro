@@ -1,0 +1,10 @@
+---
+import ProductPage from '../../components/ProductPage.astro';
+import catalog from '../../../public/data/catalog.json';
+import { findItemId, itemUrl } from '../../lib/catalog.mjs';
+export const prerender = false;
+const id = findItemId(Astro.url.searchParams.get('id') ?? '');
+if (id && catalog.some(product => product.weidianId === id)) return Astro.redirect(itemUrl(id), 301);
+Astro.response.status = 404;
+---
+<ProductPage invalidId={id} />

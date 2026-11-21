@@ -1,0 +1,14 @@
+---
+import Layout from '../../components/Layout.astro';
+import TopicCards from '../../components/TopicCards.astro';
+import { articles } from '../../lib/articles.mjs';
+
+const description = 'Research OrientDig orders, warehouse inspections, returns, packing and shipping. Compare routes and workflows with other agents.';
+---
+<Layout title="OrientDig Articles & Agent Comparisons" description={description}>
+  <section class="wrap page">
+    <h1>Articles and agent comparisons</h1>
+    <p class="lead">{description}</p>
+    <TopicCards entries={articles} />
+  </section>
+</Layout>

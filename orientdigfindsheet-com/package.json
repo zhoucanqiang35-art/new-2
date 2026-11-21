@@ -1,0 +1,24 @@
+{
+  "name": "orientdigfindsheet-com",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "node scripts/build-site.mjs",
+    "dev": "astro dev",
+    "build:production": "node scripts/build-site.mjs --production",
+    "build:pages": "npm run build:production && node scripts/build-pages.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@astrojs/cloudflare": "14.4.9",
+    "astro": "7.4.13",
+    "wrangler": "4.166.0"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=22.23.4"
+  }
+}

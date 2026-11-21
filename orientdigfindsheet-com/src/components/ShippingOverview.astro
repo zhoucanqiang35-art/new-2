@@ -1,0 +1,63 @@
+---
+import { help, official } from '../lib/orientdig.mjs';
+const { headingLevel: Heading = 'h3', compact = false } = Astro.props;
+---
+<div class:list={["shipping-details", { "shipping-compact": compact }]}>
+  <div class="panel shipping-overview">
+    <div><Heading>Estimate international shipping</Heading><p>Compare live routes with the official calculator. Plan the seller-to-warehouse leg separately from the international parcel.</p></div>
+    <a class="button primary" href={official.estimate}>Open OrientDig estimator</a>
+  </div>
+  <div class="shipping-grid">
+    <section class="panel">
+      <Heading>1. Enter packed parcel details</Heading>
+      <p>Choose the destination and enter the packed weight in grams. Enter length, width and height in centimeters. Use the mail restriction options for the actual contents, then calculate available routes.</p>
+      <a class="text-link small" href="/media/tutorial/official-estimator.webp">View the calculator screenshot</a>
+    </section>
+    <section class="panel">
+      <Heading>2. Compare billable weight</Heading>
+      <p>Some routes bill whichever is greater, scale weight or volumetric weight.</p>
+      <div class="weight-example">
+        <p dir="ltr" translate="no">40 × 30 × 25 cm ÷ 6,000 = 5 kg</p>
+        <dl><div><dt>Scale weight</dt><dd translate="no">2 kg</dd></div><div><dt>Example billable weight</dt><dd translate="no">5 kg</dd></div></dl>
+      </div>
+      <a class="text-link small" href={help.weight}>Official volumetric weight guide</a>
+    </section>
+    <section class="panel">
+      <Heading>3. Check route terms</Heading>
+      <p>Compare eligible lines using the same parcel details. Read the size and item rules, tracking, insurance and estimated delivery window. Review the route terms and destination rules for possible import charges.</p>
+      <a class="text-link small" href={help.logistics}>Official logistics guidance</a>
+    </section>
+    <section class="panel">
+      <Heading>4. Pack, pay and track</Heading>
+      <p>Review your warehouse QC before selecting items for the parcel. If dimensions are uncertain, look for rehearsal packing. Review the deposit and final charge after packing, then follow tracking in your account once the parcel ships.</p>
+      <div class="row"><a class="text-link small" href={help.packing}>Packing options</a><a class="text-link small" href={help.buying}>Official parcel walkthrough</a></div>
+    </section>
+  </div>
+  <p class="small muted">The worked example shows weight only. The route quote in OrientDig depends on destination, packed size, contents and available services.</p>
+</div>
+<style>
+.shipping-details{display:grid;gap:12px}
+.shipping-overview{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--accent-soft)}
+.shipping-overview p,.shipping-grid p{color:var(--muted)}
+.weight-example{border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin-block:8px 10px;background:var(--accent-soft)}
+.weight-example p{margin:0 0 6px;text-align:start;font-weight:750;color:var(--ink)}
+.weight-example dl{display:flex;gap:6px 16px;flex-wrap:wrap;margin:0;font-size:.82rem}
+.weight-example dt,.weight-example dd{display:inline;margin:0}
+.weight-example dd{font-weight:750;margin-inline-start:4px}
+.shipping-overview p,.shipping-details>p{margin-bottom:0}
+.shipping-overview .button{flex-shrink:0}
+.shipping-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media(max-width:690px){.shipping-overview{flex-direction:column;align-items:flex-start}.shipping-grid{grid-template-columns:1fr}}
+@media(max-width:680px){
+  .shipping-compact{gap:6px}
+  .shipping-compact .shipping-overview{flex-direction:row;align-items:center;gap:6px;padding:8px}
+  .shipping-compact .shipping-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+  .shipping-compact .shipping-grid .panel{padding:7px}
+  .shipping-compact .shipping-overview .button{flex-shrink:1;min-height:32px;padding:4px 7px;font-size:.7rem}
+  .shipping-compact .panel h3{font-size:.88rem;line-height:1.25}
+  .shipping-compact .panel a:not(.button){font-size:.72rem;line-height:1.3}
+  .shipping-compact .shipping-overview p,.shipping-compact .shipping-grid .panel>p,.shipping-compact .weight-example dl{display:none}
+  .shipping-compact .weight-example{padding:3px 5px;margin-block:3px}
+  .shipping-compact .weight-example p,.shipping-compact>p{font-size:.72rem;margin:0;line-height:1.35}
+}
+</style>

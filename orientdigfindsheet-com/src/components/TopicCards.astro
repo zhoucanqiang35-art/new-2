@@ -1,0 +1,15 @@
+---
+const { entries, headingLevel: Heading = "h2" } = Astro.props;
+---
+<ul class="topic-grid">
+  {entries.map(({ href, title, intro }) => (
+    <li><a class="panel topic-card" href={href}><Heading>{title}</Heading><p>{intro}</p></a></li>
+  ))}
+</ul>
+<style>
+.topic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 275px), 1fr)); gap: 14px; list-style: none; padding: 0; margin: 25px 0 0; }
+.topic-card { display: block; height: 100%; }
+.topic-card:hover { border-color: var(--accent-dark); background: var(--accent-soft); }
+.topic-card h2,.topic-card h3 { font-size: 1.3rem; }
+.topic-card p { margin: .7rem 0 0; color: var(--muted); }
+</style>

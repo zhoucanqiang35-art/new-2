@@ -1,0 +1,68 @@
+---
+import { itemUrl, register } from '../lib/catalog.mjs';
+import { official, warehouseSample } from '../lib/orientdig.mjs';
+const { headingLevel: Heading = 'h3', compact = false } = Astro.props;
+const steps = [
+  {
+    title: 'Find the product and open it on OrientDig',
+    body: 'Search the spreadsheet by product name, Weidian ID, or link. Open the item and choose Buy on OrientDig, or copy the original Weidian link into the search field on the official site.',
+    image: 'official-link-search', alt: 'OrientDig homepage with a real Weidian product link entered in the search field',
+    credit: 'OrientDig homepage', width: 1190, height: 557, href: '/spreadsheet/', action: 'Find a product',
+  },
+  {
+    title: 'Review the listing and sign in to order',
+    body: 'Check the original seller link, item price, options, and domestic delivery on OrientDig. Choose the variant and quantity when available. If OrientDig shows a restriction or disables checkout, choose another listing or contact its support. DIY Order requires an OrientDig account.',
+    image: 'official-diy-login', alt: 'OrientDig sign-in screen displayed when opening DIY Order without an account session',
+    credit: 'OrientDig DIY Order sign-in', width: 1240, height: 630, href: official.diy, action: 'Open official DIY Order',
+  },
+  {
+    title: 'Inspect warehouse photos',
+    body: 'Use the QC tool to look up saved photos by the exact Weidian ID. Compare the available photos with your intended variant. A saved example can show a different color or design for the same listing. After ordering, inspect the photos for your own item in the OrientDig warehouse before submitting a parcel.',
+    image: 'findsheet-warehouse-qc', alt: 'Findsheet product example comparing the seller photo and saved warehouse inspection photo for item 7321418559',
+    credit: 'OrientDig Findsheet · saved QC example', width: 1218, height: 430, href: itemUrl(warehouseSample), action: 'Open the QC example',
+  },
+  {
+    title: 'Estimate international shipping and submit your parcel',
+    body: 'Open the official estimator and enter the destination, packed weight in grams, and dimensions in centimeters. Compare available routes and restrictions. When the items are ready, select them in your warehouse and confirm the final charge in your OrientDig account.',
+    image: 'official-estimator', alt: 'OrientDig shipping calculator filled with sample packed weight and dimensions',
+    credit: 'OrientDig shipping calculator · sample measurements', width: 1515, height: 330, href: official.estimate, action: 'Open the official estimator',
+  },
+];
+---
+<ol class:list={["walkthrough", { "walkthrough-compact": compact }]}>
+  {steps.map(step => <li class="panel walkthrough-step">
+    <div class="walkthrough-copy">
+      <Heading class="step-title">{step.title}</Heading>
+      <p>{step.body}</p>
+      <a class="text-link" href={step.href}>{step.action}</a>
+    </div>
+    <figure>
+      <a href={'/media/tutorial/' + step.image + '.webp'} target="_blank" rel="noopener" aria-label={'Enlarge screenshot: ' + step.credit}>
+        <img src={'/media/tutorial/' + step.image + '.webp'} alt={step.alt} loading="lazy" width={step.width} height={step.height} />
+      </a>
+      <figcaption>{step.credit}</figcaption>
+    </figure>
+  </li>)}
+</ol>
+<div class:list={["row walkthrough-links", { "walkthrough-compact-links": compact }]}><a class="text-link" href={register} rel="sponsored noopener">Join OrientDig</a><a class="text-link" href={official.help}>OrientDig help center</a><a class="text-link" href="/guides/agent/">How the agent works</a></div>
+<style>
+.walkthrough{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:12px;counter-reset:steps}
+.walkthrough-step{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.25fr);align-items:center;gap:18px;counter-increment:steps}
+.walkthrough-step .step-title::before{content:counter(steps);display:inline-grid;place-items:center;background:var(--accent-soft);color:var(--accent-dark);border-radius:50%;width:32px;height:32px;margin:0 7px 7px 0;font-size:1rem;vertical-align:middle}
+.walkthrough-step p{color:var(--muted)}
+.walkthrough figure{margin:0}
+.walkthrough figure a{display:block;background:#f4f5f6;border:1px solid var(--line);border-radius:9px;overflow:hidden}
+.walkthrough img{width:100%;height:auto}
+.walkthrough figcaption{font-size:.81rem;color:var(--muted);margin-top:5px}
+.walkthrough-links{margin-top:14px;gap:14px}
+@media(max-width:740px){.walkthrough-step{grid-template-columns:1fr;gap:11px}}
+@media(max-width:680px){
+  .walkthrough-compact{margin-top:7px;gap:6px}
+  .walkthrough-compact .walkthrough-step{grid-template-columns:minmax(0,1fr) minmax(64px,27%);gap:6px;padding:7px;align-items:center}
+  .walkthrough-compact .step-title{font-size:.9rem;line-height:1.25}
+  .walkthrough-compact .step-title::before{width:20px;height:20px;margin:0 4px 0 0;font-size:.7rem}
+  .walkthrough-compact .walkthrough-step p,.walkthrough-compact figcaption{display:none}
+  .walkthrough-compact .walkthrough-copy a{display:inline-block;font-size:.72rem;margin-top:3px}
+  .walkthrough-compact-links{margin-top:7px;gap:8px;font-size:.73rem}
+}
+</style>
