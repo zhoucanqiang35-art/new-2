@@ -16,6 +16,7 @@ LOCALES = json.loads((ROOT / 'locales.json').read_text())
 LEGACY = tuple(LOCALES)[:9]
 MENU_LOCALES = (*LEGACY, 'ja', 'ko', 'ar', 'tr', 'ru', 'uk', 'sv', 'da', 'no', 'fi', 'cs', 'ro', 'hu', 'vi')
 DOMAIN = 'https://pikobuychina.com'
+GA_MEASUREMENT_ID = 'G-BB4V2BBCGT'
 TRACKING = '/guides/pikobuy-tracking-order-status-guide-2026'
 BUYING = '/guides/how-to-buy-from-pikobuy-2026'
 QC_GUIDE = '/articles/pikobuy-qc-photo-checklist-2026'
@@ -600,9 +601,16 @@ def head_meta(doc,page,code,production, indexable):
             schema.pop('datePublished',None)
             schema.pop('dateModified',None)
         tag.text=json.dumps(schema,ensure_ascii=False).replace('<','\\u003c')
-    if not production:
-        for tag in doc.xpath('//script[contains(@src,"googletagmanager") or contains(text(),"window.dataLayer")]'):
-            remove(tag)
+    for tag in doc.xpath('//script[contains(@src,"googletagmanager") or contains(text(),"window.dataLayer")]'):
+        remove(tag)
+    if production:
+        add(head, 'script', src=f'https://www.googletagmanager.com/gtag/js?id={GA_MEASUREMENT_ID}', async_='')
+        add(head, 'script', f"""
+window.dataLayer = window.dataLayer || [];
+function gtag() {{ dataLayer.push(arguments); }}
+gtag('js', new Date());
+gtag('config', '{GA_MEASUREMENT_ID}');
+""")
 
 
 def english_phrases(main):
