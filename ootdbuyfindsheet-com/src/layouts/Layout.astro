@@ -23,6 +23,34 @@ const activePath = ['/guides/', '/guides/shipping/'].includes(path) ? '/how-to-o
     {isProductionSite && indexable && <link rel="canonical" href={siteUrl(canonicalPath ?? path)}>}
     <link rel="icon" href="/favicon.ico">
     <title>{title}</title>
+    {isProductionSite && <meta name="msvalidate.01" content="E34A6C20A8A058592D1DC4B20523F6CB">}
+    {isProductionSite && (
+      <script is:inline>
+        if (location.hostname === 'ootdbuyfindsheet.com') {
+          const measurementId = 'G-77F4XD2EXS';
+          const pageLocation = location.origin + location.pathname;
+          const referrer = document.referrer ? new URL(document.referrer) : null;
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            window.dataLayer.push(arguments);
+          }
+
+          gtag('js', new Date());
+          gtag('config', measurementId, {
+            page_location: pageLocation,
+            page_referrer: referrer ? referrer.origin + referrer.pathname : '',
+            allow_google_signals: false,
+            allow_ad_personalization_signals: false,
+          });
+
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + measurementId;
+          document.head.append(script);
+        }
+      </script>
+    )}
   </head>
   <body>
     <a href="#content" class="skip-link">Skip to content</a>
