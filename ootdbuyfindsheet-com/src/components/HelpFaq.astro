@@ -1,0 +1,8 @@
+---
+import { faqs } from '../lib/ootdbuy-guides.mjs';
+---
+<div class="faq-grid">
+  {faqs.map(([question, answer, href, action]) => <details>
+    <summary>{question}</summary><p>{answer}</p><a href={href}>{action}</a>
+  </details>)}
+</div>

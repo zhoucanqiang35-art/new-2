@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HelpFaq from '../../components/HelpFaq.astro';
+import { official } from '../../lib/ootdbuy-guides.mjs';
+---
+<Layout title="Help and FAQ | Ootdbuy Findsheet">
+  <section class="wrap tool-page">
+    <p class="eyebrow"><a href="/">Home</a> / Help &amp; FAQ</p>
+    <h1>Help &amp; FAQ</h1>
+    <p class="intro">Answers for finding a product, checking photos and getting help with an order.</p>
+    <HelpFaq />
+    <div class="button-row"><a class="button outline" href={official.support}>Contact Ootdbuy support</a></div>
+  </section>
+</Layout>

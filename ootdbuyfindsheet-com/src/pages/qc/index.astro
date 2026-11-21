@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { sampleQc } from '../../lib/settings.mjs';
+---
+<Layout indexable={false} title="Ootdbuy QC Photo Lookup | Ootdbuy Findsheet">
+  <section class="wrap tool-page">
+    <p class="eyebrow"><a href="/">Home</a> / QC photos</p>
+    <h1>Warehouse QC photos</h1>
+    <p class="intro">Enter a Weidian item ID or paste its Weidian or Ootdbuy link to look up warehouse photos from Findspreadsheet. Saved photos appear first when available.</p>
+    <form class="filter-bar compact" action="/qc/">
+      <label>Item ID or product link<input id="qc-query" name="id" placeholder="e.g. 7321418559" required></label>
+      <button class="button primary">Check QC</button>
+      <a class="button outline" href={'/qc/?id=' + sampleQc}>Try an example</a>
+    </form>
+    <div id="qc-result">
+      <p class="status" data-qc-status role="status">Look up an item or try the example.</p>
+      <button class="button outline" type="button" data-qc-refresh hidden>Check for newer photos</button>
+      <div class="qc-grid" data-qc-gallery></div>
+    </div>
+  </section>
+</Layout>
+<script>
+  import { findItemId } from '../../lib/settings.mjs';
+  import { renderQc } from '../../lib/qc.mjs';
+  const value = new URLSearchParams(location.search).get('id') ?? '';
+  document.querySelector('#qc-query').value = value;
+  const id = findItemId(value);
+  if (id) await renderQc(id, document.querySelector('#qc-result'));
+  else if (value) document.querySelector('[data-qc-status]').textContent = 'Enter a valid Weidian ID, Weidian item link or Ootdbuy Weidian product link.';
+</script>

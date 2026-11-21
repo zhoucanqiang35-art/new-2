@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { register } from '../../lib/settings.mjs';
+import { official } from '../../lib/ootdbuy-guides.mjs';
+import OrderWalkthrough from '../../components/OrderWalkthrough.astro';
+---
+<Layout canonicalPath="/how-to-order/" title="How to Buy with Ootdbuy | Ootdbuy Findsheet">
+  <section class="wrap tool-page">
+    <p class="eyebrow"><a href="/">Home</a> / Buying guide</p>
+    <h1>How to buy with Ootdbuy</h1>
+    <p class="intro">Follow a product from the spreadsheet to the Ootdbuy warehouse and onward to your address.</p>
+    <OrderWalkthrough />
+    <section class="section ordering-costs" id="costs">
+      <h2>Who pays and when</h2>
+    <div class="guide-list">
+      <article><h2>Item order</h2><p>Review the item subtotal and any domestic delivery charge shown on Ootdbuy before you place the order. The price displayed in Findsheet is a reference estimate.</p></article>
+      <article><h2>International shipment</h2><p>Check the parcel quote after choosing your destination, packing options and shipping line. Use the packed dimensions and weight to compare quotes.</p></article>
+      <article><h2>Destination charges</h2><p>Check the shipping line terms for how duties and import taxes are handled. These costs depend on the destination and carrier service.</p></article>
+    </div>
+      <p class="button-row"><a class="button outline" href="https://ootdbuy.com/notice/details?id=1740653781924810754">Official service and fees</a></p>
+    </section>
+    <div class="button-row"><a class="button primary" href={register} target="_blank" rel="sponsored noopener">Join Ootdbuy</a><a class="button outline" href={official.guide}>Official novice guide</a><a class="button outline" href="/guides/shipping/">Shipping guide</a></div>
+  </section>
+</Layout>

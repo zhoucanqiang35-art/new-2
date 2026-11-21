@@ -1,0 +1,66 @@
+---
+import { register, mainSite } from '../lib/settings.mjs';
+import '../site.css';
+import { isProductionSite, siteUrl } from '../lib/seo.mjs';
+import LanguagePicker from '../components/LanguagePicker.astro';
+const { title, indexable = true, canonicalPath, description = 'Browse Ootdbuy finds with product photos, saved warehouse QC and direct links to Ootdbuy.' } = Astro.props;
+const path = Astro.url.pathname;
+const links = [
+  ['/', 'Home'], ['/categories/', 'Categories'], ['/spreadsheet/', 'The spreadsheet'],
+  ['/how-to-order/', 'Ordering'], ['/handoffs/', 'Handoffs'],
+  ['/help/', 'Help & FAQ'],
+];
+const toolLinks = [['/qc/', 'QC photos'], ['/image-search/', 'Image search']];
+const activePath = ['/guides/', '/guides/shipping/'].includes(path) ? '/how-to-order/' : path;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content={description}>
+    {(!isProductionSite || !indexable) && <meta name="robots" content="noindex, follow">}
+    {isProductionSite && indexable && <link rel="canonical" href={siteUrl(canonicalPath ?? path)}>}
+    <link rel="icon" href="/favicon.ico">
+    <title>{title}</title>
+  </head>
+  <body>
+    <a href="#content" class="skip-link">Skip to content</a>
+    <header class="header">
+      <div class="wrap header-row">
+        <a class="brand" href="/" aria-label="Ootdbuy Findsheet home">
+          <img src="/media/ootdbuy-logo.png" alt="Ootdbuy">
+          <span>Findsheet</span>
+        </a>
+        <button class="control-button nav-toggle" type="button" aria-controls="main-navigation" aria-expanded="false">Menu</button>
+        <nav id="main-navigation" aria-label="Main navigation">
+          {links.map(([href, label]) => <a href={href} aria-current={activePath === href ? 'page' : undefined}>{label}</a>)}
+          <a class="mobile-signup" href={register} target="_blank" rel="sponsored noopener">Join Ootdbuy</a>
+        </nav>
+        <div class="header-actions">
+          <LanguagePicker />
+          <a class="button signup" href={register} target="_blank" rel="sponsored noopener">Join Ootdbuy</a>
+        </div>
+      </div>
+    </header>
+    <main id="content"><slot /></main>
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <div><strong translate="no">Ootdbuy Findsheet</strong><p>An independent catalog from <a href={mainSite}>Findspreadsheet</a>. Orders are placed on Ootdbuy.</p></div>
+        <nav aria-label="Footer navigation">
+          {[...links, ...toolLinks].map(([href, label]) => <a href={href}>{label}</a>)}
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script>
+  import '../lib/localize.mjs';
+  import '../lib/shopping-controls.mjs';
+  const toggle = document.querySelector('.nav-toggle');
+  toggle?.addEventListener('click', () => {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+  });
+</script>

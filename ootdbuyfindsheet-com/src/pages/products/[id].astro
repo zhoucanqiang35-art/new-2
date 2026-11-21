@@ -1,0 +1,10 @@
+---
+import { featuredIds, itemData } from '../../lib/item-data-at-build.mjs';
+import ItemDetail from '../../components/ItemDetail.astro';
+
+export function getStaticPaths() {
+  return featuredIds.map(id=>({params:{id},props:{initial:itemData(id)}}));
+}
+const { initial } = Astro.props;
+---
+<ItemDetail {initial} />

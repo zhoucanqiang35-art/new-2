@@ -1,0 +1,230 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { buyUrl, categories, mainSite, priceLabel, productCategory } from '../lib/settings.mjs';
+import { productChecks } from '../lib/product-guide.mjs';
+const { initial } = Astro.props;
+const product = initial?.product;
+const category = product && categories[productCategory(product)];
+const title = product ? product.name + ' | Ootdbuy Findsheet' : 'Product details | Ootdbuy Findsheet';
+const description = product && 'Browse photos, price and seller information for ' + product.name + ' on Ootdbuy Findsheet.';
+
+---
+<Layout {title} {description} indexable={Boolean(product)}>
+  <section class="wrap tool-page">
+    <p class="eyebrow"><a href="/spreadsheet/">Spreadsheet</a> / Product details</p>
+    <p id="item-status" class="status" role="status" hidden={Boolean(product)}>Loading product details…</p>
+    <div class="detail" id="item" hidden={!product} data-item={initial && JSON.stringify(initial)}>
+      <div class="detail-imagery">
+        <div class="detail-photo"><img id="item-photo" src={initial?.photos[0]} alt={product?.name ?? ''} fetchpriority="high"></div>
+        <p id="photo-status" role="status" hidden>The saved photos could not be loaded. Try the seller listing below.</p>
+        <div class="thumbs" id="item-thumbs" aria-label="Product photos"></div>
+      </div>
+      <div class="detail-copy">
+        <p class="eyebrow" id="item-category">{category}</p><h1 id="item-name" translate="no">{product?.name}</h1>
+        <div class="detail-price"><strong id="item-price" data-price-cny={product?.price}>{product && priceLabel(product.price)}</strong> <small>Estimated item price · <span data-currency-code>USD</span></small></div>
+        <p id="item-id">{product && 'Weidian item ' + product.weidianId}</p>
+        <p>Check the seller’s current price, options and availability on Ootdbuy before ordering.</p>
+        <div class="button-row">
+          <a class="button primary" id="item-buy" href={product && buyUrl(product.weidianId)} target="_blank" rel="sponsored noopener">Buy on Ootdbuy</a>
+          <a class="button outline" id="item-source" href={product && new URL(product.sourcePath, mainSite).href}>Findspreadsheet listing</a>
+          <button class="button outline" id="item-save" type="button" aria-pressed="false">Save product</button>
+        </div>
+        <details class="other-agents">
+          <summary class="button outline">Other shopping agents</summary>
+          <ul id="item-agents" class="item-agent-grid"></ul>
+        </details>
+        <a id="item-qc-link" href="#item-qc">View warehouse photos</a>
+      </div>
+    </div>
+    <section class="section product-profile" id="product-profile" hidden={!product}>
+      <h2>About this listing</h2>
+      <div class="profile-grid">
+        <article>
+          <h3>Listing information</h3>
+          <dl class="profile-facts">
+            <div><dt>Product</dt><dd id="profile-name" translate="no">{product?.name}</dd></div>
+            <div><dt>Category</dt><dd id="profile-category">{category}</dd></div>
+            <div><dt>Marketplace</dt><dd>Weidian</dd></div>
+            <div><dt>Seller item ID</dt><dd id="profile-id">{product?.weidianId}</dd></div>
+            <div><dt>Seller photos</dt><dd id="profile-count">{initial?.photos.length}</dd></div>
+          </dl>
+          <a id="profile-source" href={product && ('https://weidian.com/item.html?itemID=' + product.weidianId)} target="_blank" rel="noopener">View the original seller listing</a>
+        </article>
+        <article>
+          <h3>What to check before ordering</h3>
+          <ul id="profile-checks">{product && productChecks(productCategory(product)).map(text=><li>{text}</li>)}</ul>
+          <p>Current price, stock and variant options come from the seller or your chosen shopping agent.</p>
+          <h3>What the photos show</h3>
+          <p>The product gallery comes from the listing. The warehouse section shows saved inspection photos where available. Use the photos from your own order to confirm what arrived.</p>
+        </article>
+      </div>
+      <article class="seller-options" id="seller-options" hidden>
+        <h3>Seller options</h3>
+        <dl class="profile-facts" id="seller-facts"></dl>
+        <p>Confirm the selected variant and current availability on the agent’s product page.</p>
+      </article>
+    </section>
+    <section class="item-qc section" id="item-qc" hidden>
+      <h2>Warehouse QC</h2>
+      <p class="status" data-qc-status role="status">Select View warehouse photos to check this item.</p>
+      <button class="button outline" type="button" data-qc-refresh hidden>Check for newer photos</button>
+      <div class="qc-grid" data-qc-gallery></div>
+    </section>
+    <section class="section related-section" id="related-section" hidden>
+      <h2>Related products</h2>
+      <div class="product-grid" id="related-products"></div>
+    </section>
+  </section>
+</Layout>
+<script>
+  import { buyUrl, categories, coverUrl, mainSite, findItemId, itemShard, priceLabel, productCategory } from '../lib/settings.mjs';
+  import { card, element, readJson } from '../lib/dom.mjs';
+  import { agents, agentUrl, currentAgent } from '../lib/agents.mjs';
+  import { productChecks, readSellerDetails } from '../lib/product-guide.mjs';
+  import { renderQc } from '../lib/qc.mjs';
+
+  const byId = id => document.getElementById(id);
+  const status = byId('item-status');
+  const initial = JSON.parse(byId('item').dataset.item || 'null');
+  const id = initial?.product.weidianId ?? findItemId(new URLSearchParams(location.search).get('id') ?? '');
+  async function showItem() {
+    if (!id) {
+      status.textContent = 'Choose a product from the spreadsheet.';
+      return;
+    }
+    const data = initial ?? await readJson('/data/items/' + itemShard(id) + '.json')
+      .then(rows=>rows[id]).catch(error=>{
+        if (error.status === 404) return null;
+        throw error;
+      });
+    if (!data) {
+      status.textContent = 'This item is not in the saved catalog.';
+      return;
+    }
+    const {product, photos, related} = data;
+    const mainPhoto = byId('item-photo');
+    const photoStatus = byId('photo-status');
+    const thumbnails = byId('item-thumbs');
+    mainPhoto.alt = product.name;
+    mainPhoto.translate = false;
+
+    const category = productCategory(product);
+    byId('item-category').textContent = categories[category] ?? 'Weidian product';
+    byId('item-name').textContent = product.name;
+    byId('item-price').textContent = priceLabel(product.price);
+    byId('item-price').dataset.priceCny = product.price ?? '';
+    byId('item-id').textContent = 'Weidian item ' + id;
+    byId('item-buy').href = buyUrl(id);
+    byId('item-buy').dataset.agentProduct = id;
+    byId('item-buy').dataset.sourcePath = product.sourcePath;
+    byId('item-save').dataset.saveProduct = id;
+    byId('item-save').dataset.productName = product.name;
+    byId('item-source').href = new URL(product.sourcePath, mainSite);
+    document.title = product.name + ' | Ootdbuy Findsheet';
+    byId('profile-name').textContent = product.name;
+    byId('profile-category').textContent = categories[category] ?? 'Weidian product';
+    byId('profile-id').textContent = id;
+    byId('profile-count').textContent = String(photos.length);
+    byId('profile-source').href = 'https://weidian.com/item.html?' + new URLSearchParams({itemID:id});
+    byId('profile-checks').replaceChildren(...productChecks(category).map(text => element('li', {}, text)));
+    byId('product-profile').hidden = false;
+    const selectedAgent = currentAgent();
+    for (const agent of agents.filter(entry => entry.key !== selectedAgent)) {
+      const row = element('li');
+      const link = element('a', {
+        href: agentUrl(agent.key, id, product.sourcePath), target: '_blank',
+        rel: agent.key === 'findspreadsheet' ? 'noopener' : 'sponsored noopener',
+      });
+      link.translate = false;
+      if (agent.icon) link.append(element('img', {src:agent.icon,width:20,height:20,alt:'',loading:'lazy'}));
+      link.append(document.createTextNode(agent.name));
+      row.append(link);
+      byId('item-agents').append(row);
+    }
+    byId('related-products').replaceChildren(...related.map(card));
+    byId('related-section').hidden = related.length === 0;
+    status.hidden = true;
+    byId('item').hidden = false;
+    document.dispatchEvent(new Event('product:ready'));
+    byId('item-qc').hidden = false;
+    const checkQc = () => void renderQc(id, byId('item-qc'));
+    byId('item-qc-link').addEventListener('click', checkQc);
+    if (location.hash === '#item-qc') checkQc();
+    else void renderQc(id, byId('item-qc'), 'preview');
+    const photoButtons = [];
+    function addPhotoButton(url, index) {
+      const thumb = element('button', { type:'button' });
+      thumb.setAttribute('aria-label','Show product photo ' + (index + 1));
+      thumb.setAttribute('aria-pressed','false');
+      const preview = element('img', { src:url, alt:'', loading:'lazy' });
+      preview.addEventListener('error', () => { thumb.hidden = true; }, { once:true });
+      thumb.append(preview);
+      thumb.addEventListener('click', () => showPhoto(url));
+      thumbnails.append(thumb);
+      photoButtons.push(thumb);
+    }
+    photos.forEach(addPhotoButton);
+
+    let remaining = [];
+    let liveImages = [];
+    const attempted = new Set();
+    let shown = '';
+    function tryNextPhoto() {
+      shown = remaining.shift() ?? liveImages.find(url => !attempted.has(url));
+      if (shown) {
+        attempted.add(shown);
+        mainPhoto.src = shown;
+      }
+      else {
+        mainPhoto.hidden = true;
+        photoStatus.hidden = false;
+      }
+    }
+    function showPhoto(url) {
+      attempted.clear();
+      remaining = [...new Set([url, product.image, ...photos])].filter(Boolean);
+      tryNextPhoto();
+    }
+    mainPhoto.addEventListener('load', () => {
+      mainPhoto.hidden = false;
+      photoStatus.hidden = true;
+      const index = photos.indexOf(shown === product.image ? coverUrl(product) : shown);
+      photoButtons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === index)));
+    });
+    mainPhoto.addEventListener('error', tryNextPhoto);
+    showPhoto(photos[0]);
+
+    void readSellerDetails(id).then(seller => {
+      if (!seller) return;
+      const facts = byId('seller-facts');
+      const fields = [
+        {name: 'Seller', values: [seller.seller]},
+        {name: 'Seller listing title', values: [seller.title]},
+        ...seller.options,
+      ];
+      for (const {name, values} of fields) {
+        if (!values.some(Boolean)) continue;
+        const row = element('div');
+        const content = element('dd', {}, values.join(' · '));
+        content.translate = false;
+        row.append(element('dt', {}, name), content);
+        facts.append(row);
+      }
+      byId('seller-options').hidden = facts.childElementCount === 0;
+
+      liveImages = seller.images;
+      if (photos.length < 2 || !photoStatus.hidden) {
+        for (const url of seller.images) {
+          if (photos.includes(url) || url === product.image) continue;
+          photos.push(url);
+          addPhotoButton(url, photos.length - 1);
+        }
+        byId('profile-count').textContent = String(photos.length);
+        const backup = liveImages.find(url => !attempted.has(url));
+        if (!photoStatus.hidden && backup) showPhoto(backup);
+      }
+    }).catch(() => {});
+  }
+  try { await showItem(); }
+  catch { status.hidden = false; status.textContent = 'The product could not be loaded. Refresh to try again.'; }
+</script>

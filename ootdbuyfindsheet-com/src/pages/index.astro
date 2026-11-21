@@ -1,0 +1,70 @@
+---
+import { categoryPath, productPath } from '../lib/seo.mjs';
+import Layout from '../layouts/Layout.astro';
+import OrderWalkthrough from '../components/OrderWalkthrough.astro';
+import HandoffGuide from '../components/HandoffGuide.astro';
+import HelpFaq from '../components/HelpFaq.astro';
+import { priceLabel, sampleProduct, sampleQc } from '../lib/settings.mjs';
+import { categoryCards, catalog } from '../lib/categories-at-build.mjs';
+const sample = catalog.find((item) => item.weidianId === sampleProduct);
+const number = new Intl.NumberFormat('en').format(catalog.length);
+---
+<Layout title="Ootdbuy Spreadsheet | Finds, QC Photos & Product Links">
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow hero-tag"><span></span> A Findspreadsheet catalog</p>
+        <h1><span translate="no">Ootdbuy</span>{' '}<em>Spreadsheet.</em></h1>
+        <p class="hero-lead">Find your next piece, check product and warehouse photos, then open the listing on Ootdbuy.</p>
+        <form class="hero-search" action="/spreadsheet/">
+          <label class="sr-only" for="hero-query">Find a product</label>
+          <input id="hero-query" name="q" placeholder="Try “hoodie” or a Weidian link">
+          <button class="button primary">Search finds</button>
+        </form>
+        <div class="hero-links">
+          <a href="/image-search/">Search by image</a>
+          <a href="/qc/">Look up QC photos</a>
+          <a href="#ordering">Ordering</a>
+          <a href="#handoffs">Handoffs</a>
+          <a href="#faq">Help &amp; FAQ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrap section">
+    <div class="section-head">
+      <div><h2>Shop by category</h2><p>{number} Weidian listings from Findspreadsheet’s saved catalog.</p></div>
+      <a class="button outline" href="/categories/">Browse all categories</a>
+    </div>
+    <div class="category-grid">
+       {categoryCards.map(({key, name, image, price}) =>
+        <a href={categoryPath(key)} class="category-card">
+          <img src={image} alt="" loading="lazy"><span>{name}<br><small>Example price <span data-price-cny={price}>{priceLabel(price)}</span></small></span>
+        </a>)}
+    </div>
+  </section>
+  <section class="wrap section check-section">
+    <div class="split">
+      <div class="check-panel">
+        <div><p class="eyebrow">Before you order</p><h2>See the actual warehouse photos.</h2><p>Paste a Weidian or Ootdbuy item link to check Findspreadsheet for warehouse photos.</p><a class="button primary" href={'/qc/?id=' + sampleQc}>Open a QC example</a></div>
+        <img src="/media/qc-7321418559-7.webp" alt="Saved warehouse QC of a sweatshirt" loading="lazy">
+      </div>
+      <div class="check-panel light">
+        <div><p class="eyebrow">Product walkthrough</p><h2>From the spreadsheet to Ootdbuy.</h2><p>Open a real listing and check the product gallery, source and current seller price before ordering.</p><a class="button outline" href={productPath(sampleProduct)}>View sample listing</a></div>
+        {sample && <img src="/media/detail-7358-3.webp" alt="Cable-knit crewneck sweater" loading="lazy">}
+      </div>
+    </div>
+  </section>
+  <section class="wrap section guide-home" id="ordering">
+    <div class="section-head"><div><h2>How to order with Ootdbuy</h2><p>Follow the real screens from your first item search to parcel tracking.</p></div><a class="button outline" href="/how-to-order/">Read the full ordering guide</a></div>
+    <OrderWalkthrough compact />
+  </section>
+  <section class="wrap section guide-home" id="handoffs">
+    <div class="section-head"><div><h2>From seller to delivery</h2><p>See who has your item and what you can check at each handoff.</p></div><a class="button outline" href="/handoffs/">Open the handoff guide</a></div>
+    <HandoffGuide compact />
+  </section>
+  <section class="wrap section guide-home" id="faq">
+    <div class="section-head"><div><h2>Help &amp; FAQ</h2></div><a class="button outline" href="/help/">Open the help page</a></div>
+    <HelpFaq />
+  </section>
+</Layout>

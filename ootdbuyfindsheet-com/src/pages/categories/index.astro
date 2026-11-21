@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { categoryCards } from '../../lib/categories-at-build.mjs';
+import { categoryPath } from '../../lib/seo.mjs';
+import { priceLabel } from '../../lib/settings.mjs';
+---
+<Layout title="Ootdbuy Spreadsheet Categories | Ootdbuy Findsheet">
+  <section class="wrap tool-page">
+    <p class="eyebrow"><a href="/">Home</a> / Categories</p>
+    <h1>Browse by category</h1>
+    <div class="category-list">
+      {categoryCards.map(({key, href, name, count, image, price, description}) =>
+        <article class="category-detail" id={key}>
+          <a href={href} class="category-detail-image" aria-label={name}><img src={image} alt="" loading="lazy" decoding="async"></a>
+          <div>
+            <h2>{name}</h2>
+            <p>{description}</p>
+            <p class="category-meta"><span>{count.toLocaleString('en-US')} finds</span><span>Example price <strong data-price-cny={price}>{priceLabel(price)}</strong></span></p>
+            <a class="button outline" href={categoryPath(key)}>Browse products</a>
+          </div>
+        </article>)}
+    </div>
+  </section>
+</Layout>

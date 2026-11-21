@@ -1,0 +1,72 @@
+---
+import ShoppingControls from '../../components/ShoppingControls.astro';
+import Layout from '../../layouts/Layout.astro';
+import { categories } from '../../lib/settings.mjs';
+---
+<Layout title="Browse the Ootdbuy Spreadsheet | Ootdbuy Findsheet">
+  <section class="wrap tool-page">
+    <p class="eyebrow"><a href="/">Home</a> / Spreadsheet</p>
+    <div class="section-head"><h1>Browse the spreadsheet</h1><ShoppingControls /></div>
+    <p class="intro">Search Findspreadsheet’s saved catalog by title, product ID or Weidian link.</p>
+    <form class="filter-bar" id="catalog-filter" action="/spreadsheet/">
+      <label>Search finds<input name="q" placeholder="Name, item ID or Weidian link"></label>
+      <label>Category<select name="category"><option value="">All categories</option>{Object.entries(categories).map(([value, text]) => <option value={value}>{text}</option>)}</select></label>
+      <label>Sort by<select name="sort"><option value="">Newest in catalog</option><option value="price-up">Price low to high</option><option value="price-down">Price high to low</option></select></label>
+      <button class="button primary">Apply filters</button>
+    </form>
+    <p class="status" id="catalog-status" role="status">Loading saved finds…</p>
+    <div class="product-grid" id="catalog-grid"></div>
+    <nav class="pagination" id="catalog-pages" aria-label="Product pages"></nav>
+  </section>
+</Layout>
+<script>
+  import { card, element, readJson } from '../../lib/dom.mjs';
+  import { categories, findItemId, productCategory } from '../../lib/settings.mjs';
+  const form = document.querySelector('#catalog-filter');
+  const params = new URLSearchParams(location.search);
+  const query = (params.get('q') || '').trim();
+  const category = params.get('category');
+  const sort = params.get('sort');
+  const pageSize = 24;
+  const status = document.querySelector('#catalog-status');
+  const result = document.querySelector('#catalog-grid');
+  const navigation = document.querySelector('#catalog-pages');
+  const input = form.querySelector('[name=q]');
+  input.value = query;
+  if (Object.hasOwn(categories, category)) form.querySelector('[name=category]').value = category;
+  if (['price-up','price-down'].includes(sort)) form.querySelector('[name=sort]').value = sort;
+  function pageLink(number, label) {
+    const next = new URLSearchParams(params);
+    number > 1 ? next.set('page', String(number)) : next.delete('page');
+    return element('a', { href: '/spreadsheet/?' + next.toString(), className: 'button outline' }, label);
+  }
+  try {
+    const startup = await readJson('/data/catalog.json');
+    const id = findItemId(query);
+    const words = query.toLocaleLowerCase().split(/\s+/).filter(Boolean);
+    const matching = startup.filter(product => {
+      if (Object.hasOwn(categories, category) && productCategory(product) !== category) return false;
+      if (id) return product.weidianId === id || product.id === id;
+      const searchable = [product.name, categories[productCategory(product)], product.sourcePath].join(' ').toLocaleLowerCase();
+      return words.every(word => searchable.includes(word));
+    });
+    const price = item => Number(item.price) > 0 ? Number(item.price) : null;
+    if (['price-up','price-down'].includes(sort)) matching.sort((a,b) => {
+      const first = price(a), second = price(b);
+      if (first === null) return second === null ? 0 : 1;
+      if (second === null) return -1;
+      return sort === 'price-up' ? first - second : second - first;
+    });
+    const pageCount = Math.ceil(matching.length / pageSize);
+    const page = Math.min(Math.max(Number.parseInt(params.get('page'),10) || 1,1),pageCount || 1);
+    const offset = (page - 1) * pageSize;
+    result.replaceChildren(...matching.slice(offset, offset + pageSize).map(card));
+    status.textContent = matching.length
+      ? matching.length.toLocaleString('en-US') + (matching.length === 1 ? ' find' : ' finds') + (pageCount > 1 ? ' · Page ' + page + ' of ' + pageCount : '')
+      : 'No results. Try a shorter title, a different category or a Weidian item ID.';
+    if (page > 1) navigation.append(pageLink(page - 1,'Previous page'));
+    if (page < pageCount) navigation.append(pageLink(page + 1,'Next page'));
+  } catch {
+    status.textContent = 'The saved catalog could not be loaded. Refresh to try again.';
+  }
+</script>

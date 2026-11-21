@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { catalog, categoryCards } from '../../lib/categories-at-build.mjs';
+import { featuredIds } from '../../lib/item-data-at-build.mjs';
+import { productPath } from '../../lib/seo.mjs';
+import { itemUrl, coverUrl, priceLabel, productCategory } from '../../lib/settings.mjs';
+export function getStaticPaths() {
+  return categoryCards.map(category=>({params:{category:category.key.toLowerCase()},props:{category}}));
+}
+const {category} = Astro.props;
+const products = catalog.filter(product=>productCategory(product)===category.key);
+const featured = new Set(featuredIds);
+const rows = [...products.filter(product=>featured.has(product.weidianId)), ...products.filter(product=>!featured.has(product.weidianId))].slice(0,12);
+---
+<Layout title={category.name + ' | Ootdbuy Findsheet'} description={category.description}>
+  <section class="wrap tool-page">
+    <p class="eyebrow"><a href="/categories/">Categories</a> / {category.name}</p>
+    <div class="category-detail">
+      <div class="category-detail-image"><img src={category.image} alt={category.name} fetchpriority="high"></div>
+      <div><h1>{category.name}</h1><p>{category.description}</p>
+        <p>{category.count.toLocaleString('en-US')} finds</p>
+        <a class="button primary" href={category.href}>Browse all products</a>
+      </div>
+    </div>
+    <section class="section">
+      <h2>Product picks</h2>
+      <div class="product-grid">
+        {rows.map(product=><a class="product-card" href={featured.has(product.weidianId) ? productPath(product.weidianId) : itemUrl(product.weidianId)}>
+          <span class="product-media"><img src={coverUrl(product)} alt="" loading="lazy"></span>
+          <span class="product-info"><strong translate="no">{product.name}</strong><span data-price-cny={product.price}>{priceLabel(product.price)}</span></span>
+        </a>)}
+      </div>
+    </section>
+  </section>
+</Layout>

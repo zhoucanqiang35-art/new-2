@@ -1,0 +1,32 @@
+---
+import { official, orderSteps } from '../lib/ootdbuy-guides.mjs';
+const { compact = false } = Astro.props;
+---
+<div class:list={["walkthrough-grid", { "walkthrough-compact": compact }]}>
+  {orderSteps.map(({title, text, image, caption, href, action, official: fromTutorial}, index) => (
+    compact ? <details class="walkthrough-preview">
+      <summary><span class="step-index" aria-hidden="true">{index + 1}</span>{title}</summary>
+      <p>{text}</p>
+      {href && <p><a href={href}>{action}</a></p>}
+      <figure>
+        <a href={'/media/ordering/' + image} target="_blank" rel="noopener">
+          <img src={'/media/ordering/' + image} loading="lazy" decoding="async" alt={caption} width="1348" height="900">
+        </a>
+        <figcaption>{caption} {fromTutorial && <a href={official.guide}>Official novice guide</a>}</figcaption>
+      </figure>
+    </details> : <article class="walkthrough-step">
+      <div class="walkthrough-copy">
+        <span class="step-index" aria-hidden="true">{index + 1}</span>
+        <h3>{title}</h3>
+        <p>{text}</p>
+        {href && <a href={href}>{action}</a>}
+      </div>
+      <figure>
+        <a href={'/media/ordering/' + image} target="_blank" rel="noopener">
+          <img src={'/media/ordering/' + image} loading="lazy" decoding="async" alt={caption} width="1348" height="900">
+        </a>
+        <figcaption>{caption} {fromTutorial && <a href={official.guide}>Official novice guide</a>}</figcaption>
+      </figure>
+    </article>
+  ))}
+</div>

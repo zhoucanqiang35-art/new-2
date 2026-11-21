@@ -1,0 +1,1 @@
+{"name":"ootdbuy-findsheet","version":"0.1.0","type":"module","private":true,"scripts":{"build":"astro build","dev":"astro dev --host 0.0.0.0","build:pages":"SITE_INDEXABLE=1 astro build"},"dependencies":{"astro":"7.4.13"}}

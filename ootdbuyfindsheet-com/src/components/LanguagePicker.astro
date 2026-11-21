@@ -1,0 +1,15 @@
+---
+import { languages } from '../lib/languages.mjs';
+---
+<label class="language-control">
+  <span class="sr-only">Website language</span>
+  <select id="site-language" aria-label="Website language" translate="no">
+    {languages.map(([code, label]) => <option value={code} lang={code} selected={code === 'en'}>{label}</option>)}
+  </select>
+</label>
+<span id="language-status" class="sr-only" role="status"></span>
+<style>
+.language-control{display:block;min-width:0}
+.language-control select{min-height:39px;max-width:8.6rem;border:1px solid var(--border-strong);border-radius:8px;background:var(--surface-soft);color:var(--forest);padding:6px 9px;font-size:.82rem;font-weight:700}
+@media(max-width:480px){.language-control select{max-width:6.4rem;padding-inline:5px;font-size:.75rem}}
+</style>

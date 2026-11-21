@@ -1,0 +1,10 @@
+---
+import { handoffs } from '../lib/ootdbuy-guides.mjs';
+const { compact = false } = Astro.props;
+---
+<ol class:list={["handoff-grid", { "handoff-compact": compact }]}>
+  {handoffs.map(({title, text, href, action}) => <li>
+    {compact ? <details><summary>{title}</summary><p>{text}</p><a href={href}>{action}</a></details>
+      : <><h3>{title}</h3><p>{text}</p><a href={href}>{action}</a></>}
+  </li>)}
+</ol>
