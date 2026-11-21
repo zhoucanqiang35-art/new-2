@@ -5,6 +5,7 @@ import { canonicalUrl, indexable } from '../lib/seo.mjs';
 import LanguagePicker from './LanguagePicker.astro';
 import ShoppingControls from './ShoppingControls.astro';
 import './site.css';
+const analyticsId = 'G-4H3EFYLXKJ';
 const { title, noIndex = false, description = 'Search Findspreadsheet product links, compare listing photos and check warehouse QC before buying on OrientDig.' } = Astro.props;
 const links = [
   ['/', 'Home'],
@@ -30,6 +31,26 @@ const isSection = href => ['/categories/', '/guides/', '/articles/'].includes(hr
     : <link rel="canonical" href={canonicalUrl(path)} />}
   <link rel="icon" type="image/png" href="/favicon.png" />
   <title>{title}</title>
+  {indexable && (
+    <script is:inline define:vars={{ analyticsId }}>
+      if (['orientdigfindsheet.com', 'www.orientdigfindsheet.com'].includes(location.hostname)) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { window.dataLayer.push(arguments); }
+        const withoutQuery = (url) => url.split(/[?#]/, 1)[0];
+        gtag('js', new Date());
+        gtag('config', analyticsId, {
+          page_location: withoutQuery(location.href),
+          page_referrer: withoutQuery(document.referrer),
+          allow_google_signals: false,
+          allow_ad_personalization_signals: false,
+        });
+        const tag = document.createElement('script');
+        tag.async = true;
+        tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + analyticsId;
+        document.head.append(tag);
+      }
+    </script>
+  )}
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
