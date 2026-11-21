@@ -1,0 +1,48 @@
+---
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import {categories} from '../../lib/platform.mjs';
+import {categoryGuides} from '../../data/category-guides.mjs';
+import {categoryCoverIds} from '../../data/category-covers.mjs';
+import {productImageSource} from '../../lib/product-images.mjs';
+import data from '../../data/catalog.json';
+import '../../styles/categories.css';
+
+const groups = categories.map(([slug, label, copy, icon]) => ({
+  slug, label, copy, icon, photo: data.items.find((item) => item.id === categoryCoverIds[slug])?.image,
+}));
+---
+<Base title="Pikobuy Finds by Category | Pikobuy Findsheet">
+  <section class="category-hero">
+    <div class="container category-hero-content">
+      <div class="breadcrumbs"><a href="/">Home</a></div>
+      <h1>Browse Pikobuy finds by category</h1>
+      <p>Explore the FindSpreadsheet catalog and jump to the buying, shipping or QC guide for each category.</p>
+    </div>
+  </section>
+  <section class="container section category-catalog">
+    <div class="section-head"><h2>Buying, shipping and QC by category</h2></div>
+    <div class="category-panels">
+      {groups.map(({slug, label, copy, icon, photo}) => {
+        const path = '/categories/' + slug + '/';
+        return (
+          <article class="category-panel">
+            <a class="category-panel-image" href={path} aria-label={label}>
+              {photo && <img src={productImageSource(photo)} data-product-image={photo} alt="" width="440" height="320" loading="lazy" referrerpolicy="no-referrer"/>}
+            </a>
+            <div class="category-panel-copy">
+              <div class="category-panel-title"><Icon name={icon} size={22}/><h3><a href={path}>{label}</a></h3></div>
+              <p>{copy}</p>
+              <p class="category-overview">{categoryGuides[slug][0]}</p>
+              <div class="category-panel-links">
+                <a href={path + '#catalog'}>Browse products</a>
+                <a href={path + '#category-shipping'}>Shipping</a>
+                <a href={path + '#category-qc'}>Find QC photos</a>
+              </div>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+  </section>
+</Base>

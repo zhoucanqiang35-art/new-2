@@ -1,0 +1,20 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import {faqs} from '../../data/faq.mjs';
+---
+<Base title="Pikobuy FAQ | Weidian Links, QC Photos, Shipping Costs & Returns" description="Answers to common Pikobuy questions about Weidian orders, warehouse inspection photos, shipping calculator inputs, parcel tracking, returns and forwarding.">
+  <PageHead title="Pikobuy Findsheet FAQ" copy="Answers for finding Weidian products, reviewing warehouse QC photos, calculating shipping and handling tracking or returns."/>
+  <section class="container section help-document">
+    <div class="help-grid">
+      {faqs.map(([title, copy, href, label]) => (
+        <article class="help-card">
+          <h2>{title}</h2>
+          <p>{copy}</p>
+          {href && <p><a class="text-link" href={href}>{label}</a></p>}
+        </article>
+      ))}
+    </div>
+    <div class="help-links"><a class="text-link" href="/guides/">Browse the buying guides</a><a class="text-link" href="/guides/shipping/">Read the shipping guide</a></div>
+  </section>
+</Base>

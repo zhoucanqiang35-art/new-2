@@ -1,0 +1,17 @@
+---
+import {categoryName} from '../lib/platform.mjs';
+import {productImageSource} from '../lib/product-images.mjs';
+import {formatPrice} from '../lib/shopping.mjs';
+const {product} = Astro.props;
+const target = '/finds/?' + new URLSearchParams(product.id ? {id: product.id, from: product.path} : {from: product.path});
+---
+<article class="product">
+  <a class="product-art" href={target}>
+    <img src={productImageSource(product.image)} data-product-image={product.image} referrerpolicy="no-referrer" alt={product.title} translate="no" width="300" height="300" loading="lazy" decoding="async"/>
+    <span>{categoryName(product.category)}</span>
+  </a>
+  <div class="product-copy">
+    <a href={target} translate="no">{product.title}</a>
+    <div>{product.price === null ? <strong>See source</strong> : <strong data-cny-price={product.price} translate="no">{formatPrice(product.price, 'USD')}</strong>}<span>{product.id ? 'Weidian' : 'FindSpreadsheet'}</span></div>
+  </div>
+</article>

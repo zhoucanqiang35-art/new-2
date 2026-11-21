@@ -1,0 +1,47 @@
+---
+import Base from '../../../layouts/Base.astro';
+import PageHead from '../../../components/PageHead.astro';
+---
+<Base title="Pikobuy Shipping Cost Calculator Guide | Weight, Routes & Tracking" description="Learn how to use the Pikobuy shipping calculator, compare actual and volumetric weight, choose a route and track an international parcel.">
+  <PageHead title="Pikobuy shipping guide" copy="Estimate delivery costs before you buy and compare actual parcel options once the warehouse has your items."/>
+  <section class="container section reading">
+    <nav class="help-links" aria-label="Shipping guide topics">
+      <a href="#shipping-cost">Shipping costs</a><a href="#calculator">Shipping calculator</a><a href="#volumetric-weight">Volumetric weight</a><a href="#packing">Packing</a><a href="#route-restrictions">Route restrictions</a><a href="#tracking">Tracking</a>
+    </nav>
+    <article id="shipping-cost">
+      <h2>Separate the two shipping legs</h2>
+      <p>The seller sends the purchase to the Pikobuy warehouse in China. Review any charge for that leg on the selected product or purchase order. International delivery is a second leg, quoted when you prepare the parcel. A Findsheet price is a listing reference and does not include a quote for your international parcel.</p>
+    </article>
+    <article id="calculator">
+      <h2>How to use the Pikobuy shipping calculator</h2>
+      <p>Pikobuy’s estimator asks for a destination country or region, product type, weight in kilograms, and length, width and height in centimeters. Use estimated packed measurements for budgeting, then rerun the calculation once warehouse measurements are available. Measure the outside of the packed parcel. If your parcel weighs 1,850 g, enter 1.85 kg in the weight field.</p>
+      <p><a class="text-link" href="https://www.pikobuy.com/shipping-cost" rel="noopener" target="_blank">Open the official shipping estimator</a></p>
+    </article>
+    <article id="volumetric-weight">
+      <h2>Actual weight, volumetric weight and route pricing</h2>
+      <dl class="guide-details">
+        <div><dt>Chargeable weight</dt><dd>Check whether the route bills by actual weight, volumetric weight or another rule. A bulky box may price differently even at the same scale weight. Use the selected line’s formula and rounding rules.</dd></div>
+      </dl>
+      <p>For illustration, a 35 × 26 × 18 cm box has a volume of 16,380 cm³. If a route specified a divisor of 6,000, the volumetric weight would be 2.73 kg. If that route billed the larger of actual and volumetric weight, a parcel weighing 1.85 kg would start at 2.73 kg before any rounding. Check the actual divisor, billing method and increments on the route you select.</p>
+    </article>
+    <article id="packing">
+      <h2>Review packing and consolidation</h2>
+      <p>Review the photos for every order you plan to include. Compare keeping original boxes with smaller packing or added protection, where offered. Removing boxes may reduce dimensions but can also remove protection, packaging you want to keep or evidence relevant to a return.</p>
+      <p>When combining orders, compare one parcel with separate parcels using the same set of items. Include each route’s restrictions and final quote in that comparison.</p>
+      <p><a class="text-link" href="/articles/check-a-combined-parcel/">Read the combined parcel checklist</a></p>
+    </article>
+    <article id="route-restrictions">
+      <h2>Check restricted items and the route’s coverage</h2>
+      <p>Check route eligibility using the actual items in the parcel, especially when it contains battery-powered electronics, liquids or mixed item types. If the estimator shows no route, check the destination, units and item classification, then ask support which lines can take the parcel before you pay.</p>
+      <p>Compare the estimated delivery time and tracking options for each eligible route.</p>
+      <p>Compare what any optional coverage includes, which documents an enquiry requires, and whether duties or handling fees are included in the quoted line. Use the carrier and destination guidance for declaration requirements.</p>
+      <p><a class="text-link" href="https://www.pikobuy.com/protocol/shipping" rel="noopener" target="_blank">Read Pikobuy’s shipping terms</a></p>
+    </article>
+    <article id="tracking">
+      <h2>Track a Pikobuy parcel after dispatch</h2>
+      <p>Before paying, match the parcel contents, delivery address, route and final shipping charge to what you intended. Save the parcel reference and final quote. After dispatch, use the parcel’s tracking number and last scan when checking a delay. If a route or quote changes after packing, review the updated dimensions and charges before proceeding.</p>
+    </article>
+    <p><a class="text-link" href="https://www.pikobuy.com/contact" rel="noopener" target="_blank">Contact Pikobuy about a parcel or tracking issue</a></p>
+    <p class="notice">If you bought the items yourself and sent them to Pikobuy, check the forwarding rules. Pikobuy directs after-sales requests for forwarded goods to the original sender or seller. <a class="text-link" href="/guides/forwarding/">Read the forwarding guide</a>.</p>
+  </section>
+</Base>

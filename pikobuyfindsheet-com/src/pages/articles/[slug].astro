@@ -1,0 +1,19 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import {articles} from '../../data/articles.mjs';
+
+export function getStaticPaths() {
+  return articles.map((article) => ({params: {slug: article.slug}, props: {article}}));
+}
+
+const {article} = Astro.props;
+---
+<Base title={article.title + ' | Pikobuy Findsheet'} description={article.description}>
+  <PageHead title={article.title} copy={article.description}/>
+  <section class="container section reading">
+    {article.sections.map(([title, copy]) => <article><h2>{title}</h2><p>{copy}</p></article>)}
+    <p><a class="text-link" href={article.next[0]}>{article.next[1]}</a></p>
+    <p><a class="text-link" href="/#articles">View more buying articles</a></p>
+  </section>
+</Base>

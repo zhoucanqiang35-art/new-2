@@ -1,0 +1,83 @@
+---
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import Catalog from '../../components/Catalog.astro';
+import {categories} from '../../lib/platform.mjs';
+import {categoryGuides} from '../../data/category-guides.mjs';
+import {categoryExamples} from '../../data/category-examples.mjs';
+import {categoryCoverIds} from '../../data/category-covers.mjs';
+import {productImageSource} from '../../lib/product-images.mjs';
+import data from '../../data/catalog.json';
+import '../../styles/categories.css';
+export function getStaticPaths() {return categories.map(([slug,label,copy])=>({params:{category:slug},props:{label,copy}}));}
+const {label,copy}=Astro.props;
+const {category}=Astro.params;
+const [overview, shipping, qc] = categoryGuides[category];
+const [buyingExample, inspectionExample] = categoryExamples[category];
+const featured = data.items.find((item) => item.id === categoryCoverIds[category]);
+---
+<Base title={label+' | Pikobuy Spreadsheet Finds'} description={overview}>
+  <section class="category-hero">
+    <div class="container category-hero-content category-hero-split">
+      <div>
+        <div class="breadcrumbs"><a href="/categories/">Categories</a></div>
+        <h1>{label+' on the Pikobuy spreadsheet'}</h1>
+        <p>{copy+' from FindSpreadsheet. Open a listing to check its source and available QC photos.'}</p>
+        <nav class="category-tabs" aria-label="Category guide sections">
+          <a href="#catalog"><Icon name="grid" size={18}/>Browse products</a>
+          <a href="#category-overview"><Icon name="bag" size={18}/>Category guide</a>
+          <a href="#category-shipping"><Icon name="truck" size={19}/>Shipping</a>
+          <a href="#category-qc"><Icon name="camera" size={18}/>QC photos</a>
+        </nav>
+      </div>
+      {featured && <a class="category-hero-product" href={'/finds/?id=' + featured.id} aria-label={featured.title} translate="no">
+        <img src={productImageSource(featured.image)} data-product-image={featured.image} width="440" height="440" alt="" referrerpolicy="no-referrer" fetchpriority="high"/>
+      </a>}
+    </div>
+  </section>
+  <Catalog category={category}/>
+  <section class="container section category-handbook" aria-labelledby="category-handbook-title">
+    <div class="category-handbook-heading">
+      <h2 id="category-handbook-title">Category guide</h2>
+      <p>Compare the listing details, shipping options and the QC photos available for your item.</p>
+    </div>
+    <div>
+      <article class="category-guide-panel" id="category-overview">
+        <header><span><Icon name="bag"/></span><h2>What to check before ordering</h2></header>
+        <p>{overview}</p>
+        <div class="panel-example">
+          <h3>What to record from the seller listing</h3>
+          <p>{buyingExample}</p>
+        </div>
+        <p>Open a product to compare the seller listing and available options. Record the Weidian ID, selected size or model, color and quantity so you can check the warehouse photos against the actual order.</p>
+        <p><a class="text-link" href="/guides/how-to-buy/#options">How to verify a listing</a></p>
+      </article>
+      <article class="category-guide-panel" id="category-shipping">
+        <header><span><Icon name="truck"/></span><h2>How to estimate shipping</h2></header>
+        <p>{shipping}</p>
+        <div class="panel-example">
+          <h3>Compare the same shipment each time</h3>
+          <p>Use the same destination and item quantity when you compare packing choices. Save the estimate date, route, chargeable weight and outside dimensions. Recheck the route after packing or if you add another item, and check whether extras are included in the quote.</p>
+        </div>
+        <p>Seller-to-warehouse delivery and international shipping are separate charges. Enter your destination, actual item type and packed weight in kilograms, then add outer parcel dimensions in centimeters. Compare available routes and confirm the current quote on Pikobuy before paying.</p>
+        <p><a class="text-link" href="/guides/shipping/">Read the shipping guide</a></p>
+        <p><a class="text-link" href="https://www.pikobuy.com/shipping-cost" rel="noopener" target="_blank">Open the official shipping estimator</a></p>
+      </article>
+      <article class="category-guide-panel" id="category-qc">
+        <header><span><Icon name="camera"/></span><h2>How to find and review QC photos</h2></header>
+        <ol>
+          <li>Open the product and copy the Weidian ID or link.</li>
+          <li>Paste it into the QC finder. Historical photos may show another color, size or seller order.</li>
+          <li>For a purchase you already placed, use the photos attached to your own Pikobuy order. Ask for a close-up or measurement if an important detail is missing.</li>
+        </ol>
+        <p>{qc}</p>
+        <div class="panel-example">
+          <h3>Example photo request for this category</h3>
+          <p>{inspectionExample}</p>
+        </div>
+        <p><a class="text-link" href="/qc/">Search by Weidian ID in the QC finder</a></p>
+        <p><a class="text-link" href="/guides/returns/">Review options if the item differs from your order</a></p>
+      </article>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,32 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+---
+<Base title="Saved Products | Pikobuy Findsheet" noindex={true}>
+  <PageHead title="Saved products" copy="Keep a shortlist of FindSpreadsheet products on this device."/>
+  <section class="container section">
+    <p id="saved-message" role="status">Loading saved products…</p>
+    <div class="product-grid" id="saved-products"></div>
+    <p class="list-actions"><a class="text-link" href="/spreadsheet/">Browse the spreadsheet</a></p>
+  </section>
+</Base>
+<script>
+  import {savedPaths} from '../../lib/shopping.mjs';
+  import {productCard} from '../../lib/catalog-client.mjs';
+  const status = document.querySelector('#saved-message')!;
+  const grid = document.querySelector('#saved-products')!;
+  const saved = new Set(savedPaths());
+  if (!saved.size) {
+    status.textContent = 'Save a product from its detail page to start a shortlist.';
+  } else {
+    fetch('/catalog-data.json').then((response) => {
+      if (!response.ok) throw new Error('Catalog unavailable');
+      return response.json();
+    }).then(({items}) => {
+      const products = items.filter(({path}) => saved.has(path));
+      grid.replaceChildren(...products.map((product) => productCard(product)));
+      status.hidden = products.length > 0;
+      if (!products.length) status.textContent = 'These saved products are no longer in the synced catalog.';
+    }).catch(() => { status.textContent = 'Saved products could not be loaded.'; });
+  }
+</script>

@@ -1,0 +1,60 @@
+---
+import Base from '../../../layouts/Base.astro';
+import PageHead from '../../../components/PageHead.astro';
+import {registerUrl} from '../../../lib/platform.mjs';
+
+const sections = [
+  ['find', 'Find a listing'],
+  ['options', 'Confirm the seller and variant'],
+  ['order', 'Place the purchase order'],
+  ['qc', 'Review the warehouse check'],
+  ['parcel', 'Submit a parcel'],
+  ['track', 'Follow the shipment'],
+];
+---
+<Base title="How to Buy on Pikobuy | Findsheet, Weidian, QC & Shipping" description="Find a Weidian listing on Pikobuy Findsheet, verify the variant, place an order, review warehouse photos and submit an international parcel.">
+  <PageHead title="How to buy on Pikobuy" copy="Follow a product from the FindSpreadsheet catalog through seller checkout, warehouse inspection and international delivery."/>
+  <section class="container section reading">
+    <nav class="guide-index" aria-label="Guide sections">
+      <ol>{sections.map(([id, label]) => <li><a class="text-link" href={'#' + id}>{label}</a></li>)}</ol>
+    </nav>
+    <article id="find">
+      <h2>1. Find a listing on Pikobuy Findsheet</h2>
+      <p>Start with a name or model in the spreadsheet search. For a specific listing, paste the Weidian URL, the Weidian item ID, or a Pikobuy product URL containing that Weidian source. Use the category filter to narrow a broad search, and sort by date, popularity or listed price as needed.</p>
+      <p>Open a result to see its source ID, available listing images and links to Weidian, Pikobuy and FindSpreadsheet. If you cannot find the listing in the preview catalog, follow its FindSpreadsheet search link or paste the original seller URL into Pikobuy's official search box.</p>
+      <p><a class="text-link" href="/spreadsheet/">Search the spreadsheet</a></p>
+    </article>
+    <article id="options">
+      <h2>2. Confirm the seller and variant</h2>
+      <p>Use <strong>View Weidian listing</strong> to confirm the seller, option names and what one unit includes. Save the product ID along with the exact color, size and quantity. Compare the seller’s size chart with a similar item you own. For shoes, look for the seller’s foot-length or insole measurements when available.</p>
+      <p>Open <strong>Buy on Pikobuy</strong> from the same product page. Confirm that the imported listing matches before choosing the color and size. Compare the site’s listed price with the price and currency displayed for your selected option in Pikobuy.</p>
+      <p>Use the seller photo carousel to inspect labels, patterns and included pieces. If comparing agents, open <strong>Other shopping agents</strong> on the same listing and verify that each destination imports the same Weidian item. Compare stock, domestic shipping and the service terms at the destination before paying.</p>
+      <p><a class="text-link" href="/articles/save-a-product-shortlist/">What to save from a product listing</a></p>
+    </article>
+    <article id="order">
+      <h2>3. Place the purchase order</h2>
+      <p>Sign in on Pikobuy and review the selected options, quantity, item price and any seller-to-warehouse delivery charge shown for the order. If you add an order note, make it specific. For example, ask the buyer to confirm a color label before buying or to contact you if the seller proposes a substitute.</p>
+      <p>Pikobuy’s published workflow has a purchase payment first and an international shipping payment at parcel submission. Save the purchase order number and keep the item in your order list until the warehouse confirms receipt.</p>
+      <p>If the seller offers a replacement or the selected option is no longer available, reconfirm the new variant, price and quantity before accepting it. Keep the original option in your notes so you can match the arrival record.</p>
+      <p><a class="text-link" href={registerUrl} target="_blank" rel="sponsored noopener">Create a Pikobuy account</a></p>
+    </article>
+    <article id="qc">
+      <h2>4. Review your warehouse photos</h2>
+      <p>When the seller’s shipment reaches the warehouse, Pikobuy checks in the order and photographs the item. Compare your order’s photos with the saved option names and size chart. Check the pieces included, labels, visible condition and measurements. If something looks wrong, keep the item out of your parcel while you ask for more evidence or contact support.</p>
+      <p>The Findsheet QC finder is useful before purchasing because it can show earlier photos for the same Weidian ID. For a decision about the item you ordered, use the photos attached to your own Pikobuy order.</p>
+      <p><a class="text-link" href="/qc/#qc-checklist">Use the warehouse checklist</a></p>
+    </article>
+    <article id="parcel">
+      <h2>5. Submit and pay for an international parcel</h2>
+      <p>When the items you plan to send are ready, choose them in Pikobuy and review the shipping address and packing options. Compare routes for your destination, product types, packed weight and dimensions. Check any item restrictions and the quote shown at parcel submission before paying.</p>
+      <p><a class="text-link" href="/guides/shipping/">Plan shipping and compare routes</a></p>
+      <p><a class="text-link" href="/guides/forwarding/">See the forwarding workflow if you placed the seller order yourself</a></p>
+    </article>
+    <article id="track">
+      <h2>6. Follow the shipment after dispatch</h2>
+      <p>Keep the parcel number separate from the purchase order number. Once the shipment is dispatched, open the parcel record for its tracking number and follow the logistics updates. For a delay, check whether the parcel has actually dispatched, then share the parcel reference, route and last tracking event if you need to contact Pikobuy.</p>
+      <p><a class="text-link" href="https://www.pikobuy.com/contact" target="_blank" rel="noopener">Contact Pikobuy support</a></p>
+    </article>
+    <p class="notice">Pikobuy publishes the platform workflow and current instructions in its <a class="text-link" href="https://www.pikobuy.com/guide" target="_blank" rel="noopener">official shopping guide</a>.</p>
+  </section>
+</Base>

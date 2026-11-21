@@ -1,0 +1,21 @@
+---
+import {imageIndexVersion} from '../lib/image-index-version.mjs';
+---
+<div data-image-lookup data-image-version={imageIndexVersion}>
+    <div class="image-lookup">
+      <div>
+        <label for="image-file"><strong>Choose a product photo</strong></label>
+        <input id="image-file" type="file" accept="image/jpeg,image/png,image/webp,image/avif,image/gif" disabled/>
+        <p>Search product covers, seller galleries and indexed warehouse QC photos. Your upload stays in this browser.</p>
+        <button id="image-example" class="button outline" type="button" disabled>Try an example photo</button>
+      </div>
+      <img id="image-preview" alt="Selected search image" width="170" height="170" hidden/>
+    </div>
+    <p id="image-status" class="catalog-status" role="status">Loading image search…</p>
+    <p id="image-coverage" class="catalog-status"></p>
+    <div id="image-results" class="product-grid"></div>
+</div>
+<script>
+  import {setupImageSearch} from '../lib/image-search.mjs';
+  for (const lookup of document.querySelectorAll('[data-image-lookup]')) setupImageSearch(lookup);
+</script>

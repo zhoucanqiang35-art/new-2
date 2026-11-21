@@ -1,0 +1,8 @@
+---
+import Icon from './Icon.astro';
+import {categories} from '../lib/platform.mjs';
+const {limit=categories.length} = Astro.props;
+---
+<div class="category-grid">
+  {categories.slice(0,limit).map(([slug,label,copy,icon]) => <a class="category" href={'/categories/' + slug + '/'}><span class="category-icon"><Icon name={icon} size={25}/></span><span><strong>{label}</strong><small>{copy}</small></span></a>)}
+</div>

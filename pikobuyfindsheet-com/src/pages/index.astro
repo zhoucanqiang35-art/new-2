@@ -1,0 +1,164 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import Product from '../components/Product.astro';
+import HomeSearch from '../components/HomeSearch.astro';
+import data from '../data/catalog.json';
+import {articles} from '../data/articles.mjs';
+import {faqs} from '../data/faq.mjs';
+import {categories, sourceOrigin} from '../lib/platform.mjs';
+import {categoryCoverIds} from '../data/category-covers.mjs';
+import {productImageSource} from '../lib/product-images.mjs';
+import '../styles/home.css';
+
+const covers = Object.fromEntries(Object.entries(categoryCoverIds).map(([slug, id]) => [slug, data.items.find((item) => item.id === id)]));
+const selected = ['shoes','hoodies-sweaters','t-shirts','jackets','pants-shorts','accessories','jersey','electronics'].map((slug) => covers[slug]).filter(Boolean);
+const mainCategories = categories.filter(([slug], index) => index < 5 || slug === 'accessories');
+const otherCategories = categories.filter((category) => !mainCategories.includes(category));
+const ordering = [
+  ['Choose a listing', 'Find the product and compare the seller photos, size chart and options.'],
+  ['Open it on Pikobuy', 'Use the product page’s Buy on Pikobuy link or paste the Weidian link into Pikobuy.'],
+  ['Place the order', 'Confirm the variant, quantity and first payment before submitting.'],
+  ['Review warehouse photos', 'Check the item against your order and ask for any missing close-ups.'],
+  ['Choose a shipping route', 'Confirm the parcel contents, compare routes and pay for shipping.'],
+  ['Track delivery', 'After dispatch, follow the parcel’s tracking updates in Pikobuy.'],
+];
+const homeFaqs = [0, 1, 2, 3, 9, 11].map((index) => faqs[index]);
+const guides = [
+  ['search', '/guides/how-to-buy/', 'How to buy on Pikobuy from Weidian', 'Find the seller listing by link or item ID. Compare the size chart, chosen variant and quantity before placing the order.'],
+  ['camera', '/qc/#qc-checklist', 'How to check warehouse QC photos', 'Look up earlier photos by item ID. Review your own order’s label, measurements and visible condition before shipping.'],
+  ['truck', '/guides/shipping/', 'Pikobuy order and shipping guide', 'Compare international routes after inspection. Confirm the parcel contents, quote and address before you pay.'],
+];
+---
+<Base>
+  <section class="showcase">
+    <div class="container showcase-grid">
+      <div class="showcase-copy">
+        <p class="source-credit">Product directory by <a href={sourceOrigin}>FindSpreadsheet</a></p>
+        <h1>Pikobuy<br/>Spreadsheet</h1>
+        <p>Browse shoes, clothing and accessories. Compare Weidian listings and check warehouse photos when available.</p>
+        <HomeSearch id="home-search" label="Search from the homepage"/>
+        <div class="showcase-links">
+          <a href="/spreadsheet/">Browse spreadsheet</a>
+          <a href="/image-search/">Search by image</a>
+          <a href="/guides/how-to-buy/">How to buy</a>
+          <a href="#shipping-guide">Shipping costs</a>
+        </div>
+      </div>
+      <div class="showcase-cart">
+        <span class="cart-handle" aria-hidden="true"></span>
+        <nav class="showcase-categories" aria-labelledby="browse-heading">
+          <h2 id="browse-heading">Browse by category</h2>
+          <div class="category-grid">
+            {mainCategories.map(([slug, label, copy]) => (
+              <a class="category" href={'/categories/' + slug + '/'}>
+                {covers[slug] && <img class="home-category-photo" src={productImageSource(covers[slug].image)} data-product-image={covers[slug].image} alt="" width="57" height="57" referrerpolicy="no-referrer"/>}
+                <span><strong>{label}</strong><small>{copy}</small></span>
+              </a>
+            ))}
+          </div>
+          <a class="text-link" href="/categories/">All categories</a>
+        </nav>
+        <span class="cart-undercarriage" aria-hidden="true"></span>
+      </div>
+    </div>
+  </section>
+
+  <nav class="home-shortcuts" aria-label="More product categories">
+    <div class="container">
+      {otherCategories.map(([slug, label, , icon]) => (
+        <a href={'/categories/' + slug + '/'}><Icon name={icon} size={20}/> {label}</a>
+      ))}
+    </div>
+  </nav>
+
+  <section class="home-featured">
+    <div class="container section">
+      <div class="section-head"><h2>Featured finds</h2><a class="text-link" href="/spreadsheet/">View all products</a></div>
+      <div class="product-grid">{selected.map((product) => <Product product={product}/>)}</div>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="home-qc">
+      <div>
+        <h2>Check warehouse photos</h2>
+        <p>Look up a Weidian listing before you buy, then review the warehouse photos for your own order before you ship.</p>
+        <a class="text-link" href="/qc/#qc-checklist">Read the QC checklist</a>
+      </div>
+      <form action="/qc/" class="search-form" role="search" aria-label="Warehouse photo lookup">
+        <Icon name="camera" size={22}/>
+        <label class="sr" for="home-qc-item">Weidian item ID or link</label>
+        <input id="home-qc-item" name="item" placeholder="Weidian item ID or link" maxlength="250" required/>
+        <button class="button primary">Check photos</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="container section home-ordering">
+    <div class="section-head"><h2>How to order on Pikobuy</h2><a class="text-link" href="/guides/how-to-buy/">Full buying guide</a></div>
+    <ol class="steps">
+      {ordering.map(([title, copy]) => <li><h3>{title}</h3><p>{copy}</p></li>)}
+    </ol>
+  </section>
+
+  <section class="container section home-guides">
+    <div class="section-head"><h2>Pikobuy buying guides</h2><a class="text-link" href="/guides/">All guides</a></div>
+    <div class="steps">
+      {guides.map(([icon, href, title, copy]) => (
+        <article>
+          <span class="category-icon"><Icon name={icon}/></span>
+          <h3><a class="text-link" href={href}>{title}</a></h3>
+          <p>{copy}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="container section home-guides" id="shipping-guide">
+    <div class="home-shipping">
+      <div>
+        <h2>Pikobuy shipping costs and calculator</h2>
+        <p>Estimate international delivery before you buy. Use packed measurements to compare actual weight, volumetric weight and eligible routes after the warehouse receives your orders.</p>
+        <div class="list-actions">
+          <a class="button primary" href="https://www.pikobuy.com/shipping-cost" rel="noopener" target="_blank">Open official shipping calculator</a>
+          <a class="text-link" href="/guides/shipping/">Read the full shipping guide</a>
+        </div>
+      </div>
+      <ul>
+        <li><strong>Destination and item type</strong><span>Choose the delivery country or region and check which routes accept your parcel contents.</span></li>
+        <li><strong>Packed weight and dimensions</strong><span>Enter kilograms and outside measurements in centimeters. For example, enter 1.85 kg for 1,850 g.</span></li>
+        <li><strong>Final quote and tracking</strong><span>Confirm the packed quote, delivery estimate and coverage. Keep the tracking number after dispatch.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="home-articles" id="articles">
+    <div class="container section">
+      <div class="section-head"><h2>Practical buying articles</h2></div>
+      <div class="steps">
+        {articles.map((article) => (
+          <article>
+            <h3><a class="text-link" href={'/articles/' + article.slug + '/'}>{article.title}</a></h3>
+            <p>{article.description}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="container section" id="home-faq">
+    <div class="section-head"><h2>Pikobuy FAQ</h2><a class="text-link" href="/faq/">All questions and answers</a></div>
+    <div class="help-grid">
+      {homeFaqs.map(([title, copy, href, label]) => (
+        <article class="help-card"><h3>{title}</h3><p>{copy}</p>{href && <a class="text-link" href={href}>{label}</a>}</article>
+      ))}
+    </div>
+  </section>
+  <section class="home-final-search">
+    <div class="container section">
+      <h2>Search the Pikobuy spreadsheet</h2>
+      <HomeSearch id="footer-search" label="Search from the end of the homepage"/>
+    </div>
+  </section>
+</Base>

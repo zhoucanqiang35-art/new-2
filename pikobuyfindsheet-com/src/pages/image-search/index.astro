@@ -1,0 +1,16 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import ImageLookup from '../../components/ImageLookup.astro';
+import ShoppingMenu from '../../components/ShoppingMenu.astro';
+---
+<Base title="Image Search | Pikobuy Findsheet" noindex={true}>
+  <PageHead title="Search by image" copy="Choose a product photo or screenshot to compare it with the FindSpreadsheet catalog image index."/>
+  <section class="container section" id="image-search">
+    <div class="catalog-heading">
+      <a class="text-link" href="/spreadsheet/">Back to the spreadsheet</a>
+      <ShoppingMenu/>
+    </div>
+    <ImageLookup/>
+  </section>
+</Base>

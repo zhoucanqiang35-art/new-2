@@ -1,0 +1,58 @@
+---
+import {agents, currencies, rateDate} from '../lib/shopping.mjs';
+---
+<div class="shopping-controls">
+  <a class="saved-link" href="/saved/" aria-label="Saved products" title="Saved products">
+    <svg aria-hidden="true" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 8.6c0 4.3-8.8 9.5-8.8 9.5s-8.8-5.2-8.8-9.5a4.3 4.3 0 0 1 8.8-.3 4.3 4.3 0 0 1 8.8.3Z"/></svg>
+  </a>
+  <details class="shopping-menu" id="shopping-menu">
+    <summary aria-label="Shopping agent and currency">
+      <img src="/assets/agents/pikobuy.webp" alt="" width="19" height="19" id="shopping-logo"/>
+      <span id="shopping-agent" translate="no">Pikobuy</span>
+      <span class="shopping-code" id="shopping-currency" translate="no">USD</span>
+    </summary>
+    <div class="shopping-panel">
+      <fieldset>
+        <legend>Shopping agent</legend>
+        <div class="agent-options">{agents.map((agent) => (
+          <label><input type="radio" name="site-agent" value={agent.id} checked={agent.id === 'pikobuy'}/><img src={agent.logo} alt="" width="19" height="19" loading="lazy"/><span translate="no">{agent.name}</span></label>
+        ))}</div>
+      </fieldset>
+      <fieldset>
+        <legend>Currency</legend>
+        <div class="currency-options">{currencies.map((currency) => (
+          <label><input type="radio" name="site-currency" value={currency} checked={currency === 'USD'}/><span translate="no">{currency}</span></label>
+        ))}</div>
+      </fieldset>
+      <p>USD follows the FindSpreadsheet display rate. Other currency estimates use reference rates dated <time datetime={rateDate} translate="no">{rateDate}</time>.</p>
+    </div>
+  </details>
+</div>
+<script>
+  import {agents, shoppingOptions, updateShopping} from '../lib/shopping.mjs';
+
+  const menu = document.querySelector<HTMLDetailsElement>('#shopping-menu')!;
+  const trigger = menu.querySelector('summary')!;
+  function refresh() {
+    const {agent, currency} = shoppingOptions();
+    const selected = agents.find(({id}) => id === agent)!;
+    document.querySelector('#shopping-agent')!.textContent = selected.name;
+    document.querySelector('#shopping-currency')!.textContent = currency;
+    document.querySelector<HTMLImageElement>('#shopping-logo')!.src = selected.logo;
+    for (const input of menu.querySelectorAll<HTMLInputElement>('input')) {
+      input.checked = input.value === (input.name === 'site-agent' ? agent : currency);
+    }
+  }
+  menu.addEventListener('change', ({target}) => {
+    if (!(target instanceof HTMLInputElement)) return;
+    updateShopping(target.name === 'site-agent' ? {agent: target.value} : {currency: target.value});
+  });
+  document.addEventListener('click', (event) => {
+    if (menu.open && event.target instanceof Node && !menu.contains(event.target)) menu.open = false;
+  });
+  menu.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') { menu.open = false; trigger.focus(); }
+  });
+  window.addEventListener('shopping-change', refresh);
+  refresh();
+</script>

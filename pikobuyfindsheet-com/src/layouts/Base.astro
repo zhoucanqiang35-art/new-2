@@ -1,0 +1,57 @@
+---
+import '../styles/site.css';
+import LanguagePicker from '../components/LanguagePicker.astro';
+import {registerUrl,sourceOrigin} from '../lib/platform.mjs';
+const {title='Pikobuy Spreadsheet | Finds, Product Links & QC Photos', description='Browse FindSpreadsheet product finds for Pikobuy. Compare catalog listings, open Weidian links, check available QC photos and learn how to order.', noindex=false} = Astro.props;
+const production = import.meta.env.PUBLIC_SITE_INDEXABLE === 'true';
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const active = Astro.url.pathname;
+const nav = [
+  ['/spreadsheet/', 'Spreadsheet'], ['/categories/', 'Categories'], ['/qc/', 'QC Photos'],
+  ['/guides/', 'Guides'], ['/guides/shipping/', 'Shipping'], ['/faq/', 'FAQ'],
+];
+const activeLink = nav.findLast(([href]) => active.startsWith(href))?.[0];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description}/>
+    <meta name="robots" content={production && !noindex ? 'index,follow' : 'noindex,follow'}/>
+    <link rel="canonical" href={canonical}/>
+    <meta property="og:title" content={title}/>
+    <meta property="og:description" content={description}/>
+    <meta property="og:url" content={canonical}/>
+    <link rel="icon" type="image/png" href="/assets/pikobuy-icon.png"/>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="header">
+      <div class="container head">
+        <a href="/" class="brand" aria-label="Pikobuy Findsheet home"><img src="/assets/pikobuy-logo.png" width="112" height="26" alt="Pikobuy"/> <span>FINDSHEET</span></a>
+        <nav aria-label="Main navigation">{nav.map(([href,label]) => <a href={href} aria-current={activeLink === href ? (active === href ? 'page' : 'location') : undefined}>{label}</a>)}</nav>
+        <div class="header-tools">
+          <LanguagePicker/>
+          <a href={registerUrl} class="button primary signup" target="_blank" rel="sponsored noopener">Join Pikobuy</a>
+        </div>
+      </div>
+    </header>
+    <main id="main"><slot/></main>
+    <footer class="footer">
+      <div class="container foot">
+        <div><a class="brand" href="/"><img src="/assets/pikobuy-logo.png" width="112" height="26" alt="Pikobuy"/> <span>FINDSHEET</span></a><p>Independent shopping guide. Product data from <a href={sourceOrigin}>FindSpreadsheet</a>.</p></div>
+        <nav aria-label="Footer navigation">{nav.map(([href,label])=><a href={href}>{label}</a>)}</nav>
+      </div>
+      <div class="container footnote">Registration uses a referral link. Purchases and shipping are handled on Pikobuy.</div>
+    </footer>
+  </body>
+</html>
+<script>
+  import {refreshPrices} from '../lib/shopping.mjs';
+  import {enableProductImageFallback} from '../lib/product-images.mjs';
+  window.addEventListener('shopping-change', () => refreshPrices());
+  refreshPrices();
+  enableProductImageFallback();
+</script>

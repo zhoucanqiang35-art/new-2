@@ -1,0 +1,4 @@
+---
+const {title,copy,parent='/'}=Astro.props;
+---
+<section class="page-head"><div class="container"><div class="breadcrumbs"><a href={parent}>{parent==='/'?'Home':'Categories'}</a></div><h1>{title}</h1><p>{copy}</p></div></section>

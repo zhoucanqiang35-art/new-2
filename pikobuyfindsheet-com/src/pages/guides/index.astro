@@ -1,0 +1,33 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+
+const topics = [
+  ['buy', '/guides/how-to-buy/', 'How to buy on Pikobuy from Weidian', 'Search the spreadsheet with a product name, Weidian link or item ID. Open the seller listing to check the color, size chart, quantity and stock, then use the Pikobuy purchase link. At checkout, verify that the option you selected matches the original listing before making the first payment.', 'Read the step-by-step buying guide'],
+  ['qc', '/qc/#qc-checklist', 'How to find and review Pikobuy QC photos', 'Look up earlier warehouse photos by Weidian item ID. Once your own order arrives, compare its inspection photos with the selected variant. Check size labels, relevant measurements and visible defects. For sets, verify all pieces are present. If an important view is missing, ask whether an additional photo is available.', 'Open the warehouse QC checklist'],
+  ['ship', '/guides/shipping/', 'Pikobuy shipping estimator and parcel packing', 'Budget international shipping before buying using your destination, item type and estimated packed size. After warehouse inspection, use the parcel’s measured dimensions and weight to compare routes, delivery estimates and fees. Keep any unresolved QC items out of the shipment.', 'Compare shipping costs and routes'],
+  ['return', '/guides/returns/', 'Pikobuy returns, exchanges and refunds', 'If a warehouse photo shows the wrong size, color or visible damage, record the order number and keep the packaging and tags intact. Use the order page to check eligibility, deadlines and fees. Keep the item in the warehouse while the seller or agent reviews the request.', 'Check return eligibility and fees'],
+  ['forward', '/guides/forwarding/', 'Pikobuy forwarding for an order you already placed', 'Get the receiving address from Pikobuy, send it to the seller and submit the forwarding form. Keep the domestic tracking number so the parcel can be matched to your account. If a forwarded item needs after-sales support, contact the sender or seller.', 'Read the warehouse forwarding guide'],
+];
+---
+<Base title="Pikobuy Buying Guide | Weidian Orders, QC, Shipping & Returns" description="Learn how to buy on Pikobuy from Weidian, check warehouse QC photos, use the shipping estimator, request a return and forward an existing order.">
+  <PageHead title="Pikobuy buying guides" copy="Follow a FindSpreadsheet listing from a Weidian link through your first purchase, warehouse inspection and international parcel."/>
+  <div class="container section help-document">
+    <nav class="help-links" aria-label="Buying guide topics">
+      <a href="#buy">Buying from Weidian</a><a href="#qc">QC photos</a><a href="#ship">Shipping</a><a href="#return">Returns</a><a href="#forward">Forwarding</a>
+    </nav>
+    <div class="help-grid">
+      {topics.map(([id, href, title, copy, label]) => (
+        <article class="help-card" id={id}>
+          <h2>{title}</h2>
+          <p>{copy}</p>
+          <a class="text-link" href={href}>{label}</a>
+        </article>
+      ))}
+    </div>
+    <div class="help-links">
+      <a class="text-link" href="/faq/">Browse Pikobuy FAQ</a>
+      <a class="text-link" href="https://www.pikobuy.com/guide" rel="noopener">Pikobuy’s official shopping guide</a>
+    </div>
+  </div>
+</Base>

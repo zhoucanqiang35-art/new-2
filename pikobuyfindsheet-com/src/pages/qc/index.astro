@@ -1,0 +1,57 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import ImageLookup from '../../components/ImageLookup.astro';
+import Icon from '../../components/Icon.astro';
+---
+<Base title="Pikobuy QC Photos | Warehouse Photo Finder & Inspection Checklist" description="Look up FindSpreadsheet warehouse photos by Weidian item ID and use a product-specific checklist before approving your Pikobuy parcel.">
+  <PageHead title="Pikobuy QC photos" copy="Search by Weidian item ID or link to see the warehouse photos FindSpreadsheet has for that listing."/>
+  <div class="container section qc-workspace">
+    <section class="qc-finder" aria-labelledby="qc-finder-title">
+    <h2 id="qc-finder-title">Find warehouse QC photos</h2>
+    <form class="search-form" style="margin-top:0" id="qc-form">
+      <Icon name="camera" size={23}/><label class="sr" for="qc-input">Item ID or link</label><input id="qc-input" required maxlength="250" type="text" placeholder="Weidian item ID or link"/><button class="button primary">Check photos</button>
+    </form>
+    <div class="list-actions"><button type="button" class="button outline" id="qc-example">Try sample 7321418559</button><a class="text-link" href="/finds/?id=7321418559">Open the sample product with warehouse photos</a></div>
+    <div class="qc-results" id="qc-results"><p role="status"></p><div class="product-grid"></div></div>
+    <p class="notice">QC photos can show a different variant or an earlier order. Confirm your selection and review your own warehouse photos on Pikobuy.</p>
+    </section>
+    <section class="qc-image-search" aria-labelledby="qc-image-search-title">
+      <h2 id="qc-image-search-title">Search by image</h2>
+      <ImageLookup/>
+    </section>
+  </div>
+  <section class="container section reading" id="qc-checklist">
+    <article>
+      <h2>Find the right photo set</h2>
+      <p>Copy the Weidian item ID from a Findsheet product page, or paste its Weidian link into the finder above. Historically available photos are matched to the listing ID and may show another order’s size or color. If the finder reports no photos or an error, check the ID and return later. For an existing purchase, open the photos attached to your order in Pikobuy.</p>
+      <p>Seller photos appear above the purchase links on the product page. Scroll to Warehouse QC photos for actual inspection images when available. A saved photo can help you plan what to ask for, but decisions about shipping or returning your purchase should use the warehouse record for your own order.</p>
+      <p><a href="/spreadsheet/" class="text-link">Find a product and its Weidian ID</a></p>
+    </article>
+    <article>
+      <h2>Warehouse photo checklist</h2>
+      <dl class="guide-details">
+        <div><dt>Shoes</dt><dd>Compare both shoes, the size labels, outside panels and soles. If fit depends on a measurement, ask for a picture with the tape visible from heel to toe on the removable insole, if available.</dd></div>
+        <div><dt>Clothing</dt><dd>Check the size tag, front and back, seams, hems and closures. Compare flat chest width, length or waist against the seller chart using the same measuring points.</dd></div>
+        <div><dt>Bags and accessories</dt><dd>Check closures, strap attachments, corners and any included pieces. For a bag intended to fit a specific object, request the opening and interior dimensions.</dd></div>
+        <div><dt>Multipacks and sets</dt><dd>Ask for the individual pieces to be laid out together so you can compare the quantity, colors and options with your order.</dd></div>
+      </dl>
+    </article>
+    <article>
+      <h2>Ask for the photo that would resolve the question</h2>
+      <p>Refer to the order number and say which view you need. For example, ask for a flat chest measurement with the tape’s start and end visible, plus a separate photo of the size tag. Check availability and any charge in Pikobuy before requesting extra photos.</p>
+      <p>Photos can confirm visible details and photographed measurements. Fit, long-term durability, electrical performance and authenticity may need separate evidence. If the order differs or is damaged, save the relevant pictures and check the return options before shipping.</p>
+      <p><a href="/guides/returns/" class="text-link">Check returns and exchanges</a></p>
+    </article>
+    <p class="notice">See Pikobuy’s description of warehouse check-in and inspection in its <a class="text-link" href="https://www.pikobuy.com/guide" rel="noopener" target="_blank">official shopping guide</a>.</p>
+  </section>
+</Base>
+<script>
+  import {showQc} from '../../lib/qc-client.mjs';
+  const input=document.querySelector('#qc-input');
+  const results=document.querySelector('#qc-results');
+  const initial=new URLSearchParams(location.search).get('item');
+  if(initial) {input.value=initial;showQc(initial,results);}
+  document.querySelector('#qc-form').addEventListener('submit',(event)=>{event.preventDefault();showQc(input.value,results);});
+  document.querySelector('#qc-example').addEventListener('click',()=>{input.value='7321418559';showQc(input.value,results);});
+</script>
