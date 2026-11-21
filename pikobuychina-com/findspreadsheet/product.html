@@ -1,0 +1,37 @@
+<p id="find-status" class="action-panel" role="status">Opening product…</p>
+<div id="find-detail" class="product-layout">
+  <section class="listing-gallery" aria-label="Seller photo carousel">
+    <h2>Seller photos</h2>
+    <div class="listing-gallery-stage">
+      <a id="gallery-open" target="_blank" rel="noopener noreferrer" aria-label="Open seller photo in full size" hidden><img id="find-image" alt="" width="550" height="550" fetchpriority="high" decoding="async"></a>
+      <p id="gallery-empty" hidden>Open the original listing to check its photos.</p>
+      <button id="gallery-prev" class="button" type="button" aria-label="Previous seller photo" hidden>‹</button>
+      <button id="gallery-next" class="button" type="button" aria-label="Next seller photo" hidden>›</button>
+    </div>
+    <p id="gallery-position" role="status"></p>
+    <div id="find-gallery" class="detail-gallery"></div>
+  </section>
+  <div class="detail-copy">
+    <h1 id="find-title">Product details</h1>
+    <p id="find-id"></p><p id="find-price" class="catalog-price" translate="no"></p>
+    <div class="catalog-actions">
+      <a id="find-buy" class="button" target="_blank" rel="sponsored noopener" hidden>Buy on Pikobuy</a>
+      <a id="find-weidian" target="_blank" rel="noopener" hidden>View Weidian listing</a>
+      <a id="find-source" target="_blank" rel="noopener" hidden>View product on FindSpreadsheet</a>
+    </div>
+    <button id="find-save" class="button secondary" type="button" aria-pressed="false" data-remove-label="Remove saved product" hidden>Save product</button>
+    <details id="other-agents" class="detail-agents" hidden>
+      <summary class="button secondary">Other shopping agents</summary>
+      <p data-no-agent-id hidden>This listing has no verified Weidian item ID. Open the FindSpreadsheet listing to check the available purchase links.</p>
+      <div class="detail-agent-grid"></div>
+    </details>
+    <p>Check the selected option, price and availability on the seller page before ordering.</p>
+  </div>
+</div>
+<section id="product-qc" class="action-panel qc-results" hidden>
+  <h2>Warehouse QC photos</h2><p role="status"></p><div class="product-grid qc-grid"></div>
+  <a id="original-qc" target="_blank" rel="noopener" hidden>Check QC on the original product page</a>
+</section>
+<section id="related-section" hidden>
+  <h2>Related products</h2><a id="related-category">Browse this category</a><div id="related-grid" class="catalog-grid"></div>
+</section>

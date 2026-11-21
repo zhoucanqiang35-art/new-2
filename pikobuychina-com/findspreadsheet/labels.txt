@@ -1,0 +1,31 @@
+zh|注册|搜图
+fr|S’inscrire|Recherche par image
+de|Registrieren|Bildersuche
+es|Registrarse|Buscar por imagen
+it|Registrati|Ricerca per immagine
+pl|Zarejestruj się|Wyszukiwanie obrazem
+nl|Registreren|Zoeken op afbeelding
+pt|Cadastrar-se|Busca por imagem
+ja|登録|画像検索
+ko|회원가입|이미지 검색
+ar|التسجيل|البحث بالصورة
+he|הרשמה|חיפוש לפי תמונה
+tr|Kayıt ol|Görselle arama
+ru|Регистрация|Поиск по фото
+uk|Реєстрація|Пошук за фото
+sv|Registrera dig|Bildsökning
+da|Registrer dig|Billedsøgning
+no|Registrer deg|Bildesøk
+fi|Rekisteröidy|Kuvahaku
+cs|Registrace|Vyhledávání obrázkem
+sk|Registrácia|Vyhľadávanie obrázkom
+ro|Înregistrare|Căutare după imagine
+hu|Regisztráció|Képkeresés
+el|Εγγραφή|Αναζήτηση με εικόνα
+bg|Регистрация|Търсене по изображение
+hr|Registracija|Pretraživanje slikom
+sr|Регистрација|Претрага по слици
+id|Daftar|Pencarian gambar
+vi|Đăng ký|Tìm kiếm bằng hình ảnh
+th|สมัครสมาชิก|ค้นหาด้วยรูปภาพ
+hi|पंजीकरण|तस्वीर से खोजें

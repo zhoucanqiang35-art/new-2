@@ -1,0 +1,32 @@
+# Shoes | Sweatshirts | T-shirts | Jackets | Pants and shorts | Headwear | Accessories | Short sets | Electronics | Other items | Jerseys
+zh|鞋子|卫衣|T 恤|夹克|长裤和短裤|帽子|配饰|短裤套装|电子产品|其他商品|球衣
+fr|Chaussures|Sweat-shirts|T-shirts|Vestes|Pantalons et shorts|Casquettes et chapeaux|Accessoires|Ensembles avec short|Électronique|Autres articles|Maillots
+de|Schuhe|Sweatshirts und Hoodies|T-Shirts|Jacken|Hosen und Shorts|Kopfbedeckungen|Accessoires|Shorts-Sets|Elektronik|Sonstige Artikel|Trikots
+es|Calzado|Sudaderas|Camisetas|Chaquetas|Pantalones y shorts|Gorras y sombreros|Accesorios|Conjuntos con shorts|Electrónica|Otros artículos|Camisetas deportivas
+it|Scarpe|Felpe|Magliette|Giacche|Pantaloni e shorts|Cappelli e berretti|Accessori|Completi con shorts|Elettronica|Altri articoli|Maglie sportive
+pl|Buty|Bluzy|Koszulki|Kurtki|Spodnie i szorty|Nakrycia głowy|Akcesoria|Komplety z szortami|Elektronika|Inne produkty|Koszulki sportowe
+nl|Schoenen|Sweatshirts en hoodies|T-shirts|Jassen|Broeken en shorts|Hoofddeksels|Accessoires|Sets met shorts|Elektronica|Overige artikelen|Sportshirts
+pt|Calçados|Moletons|Camisetas|Jaquetas|Calças e shorts|Bonés e chapéus|Acessórios|Conjuntos com shorts|Eletrônicos|Outros itens|Camisas esportivas
+ja|靴|スウェット・パーカー|Tシャツ|ジャケット|長ズボン・ショートパンツ|帽子|アクセサリー|ショートパンツのセット|電子機器|その他の商品|スポーツユニフォーム
+ko|신발|맨투맨·후드티|티셔츠|재킷|바지·반바지|모자|액세서리|반바지 세트|전자제품|기타 상품|스포츠 유니폼
+ar|الأحذية|البلوزات والكنزات بغطاء رأس|القمصان القصيرة|السترات|السراويل الطويلة والقصيرة|أغطية الرأس|الإكسسوارات|أطقم بسراويل قصيرة|الإلكترونيات|منتجات أخرى|القمصان الرياضية
+he|נעליים|סווטשירטים וקפוצ׳ונים|חולצות טי|ז׳קטים|מכנסיים ארוכים וקצרים|כובעים|אביזרים|סטים עם מכנסיים קצרים|אלקטרוניקה|פריטים נוספים|חולצות ספורט
+tr|Ayakkabılar|Sweatshirt ve kapüşonlular|Tişörtler|Ceketler|Pantolon ve şortlar|Şapkalar|Aksesuarlar|Şortlu takımlar|Elektronik ürünler|Diğer ürünler|Spor formaları
+ru|Обувь|Свитшоты и худи|Футболки|Куртки|Брюки и шорты|Головные уборы|Аксессуары|Комплекты с шортами|Электроника|Другие товары|Спортивные джерси
+uk|Взуття|Світшоти й худі|Футболки|Куртки|Штани та шорти|Головні убори|Аксесуари|Комплекти із шортами|Електроніка|Інші товари|Спортивні джерсі
+sv|Skor|Sweatshirts och huvtröjor|T-shirts|Jackor|Byxor och shorts|Huvudbonader|Accessoarer|Set med shorts|Elektronik|Övriga produkter|Matchtröjor
+da|Sko|Sweatshirts og hættetrøjer|T-shirts|Jakker|Bukser og shorts|Hovedbeklædning|Tilbehør|Sæt med shorts|Elektronik|Andre produkter|Sportstrøjer
+no|Sko|Gensere og hettegensere|T-skjorter|Jakker|Bukser og shorts|Hodeplagg|Tilbehør|Sett med shorts|Elektronikk|Andre produkter|Sportstrøyer
+fi|Kengät|Collegepaidat ja hupparit|T-paidat|Takit|Housut ja shortsit|Päähineet|Asusteet|Shortsiasut|Elektroniikka|Muut tuotteet|Pelipaidat
+cs|Boty|Mikiny a mikiny s kapucí|Trička|Bundy|Kalhoty a kraťasy|Pokrývky hlavy|Doplňky|Komplety s kraťasy|Elektronika|Ostatní zboží|Sportovní dresy
+sk|Topánky|Mikiny s kapucňou aj bez nej|Tričká|Bundy|Nohavice a šortky|Pokrývky hlavy|Doplnky|Súpravy so šortkami|Elektronika|Ostatný tovar|Športové dresy
+ro|Încălțăminte|Hanorace și bluze sport|Tricouri|Jachete|Pantaloni și pantaloni scurți|Șepci și pălării|Accesorii|Seturi cu pantaloni scurți|Electronice|Alte produse|Tricouri de echipă
+hu|Cipők|Pulóverek és kapucnis felsők|Pólók|Dzsekik|Nadrágok és rövidnadrágok|Fejfedők|Kiegészítők|Rövidnadrágos szettek|Elektronika|Egyéb termékek|Sportmezek
+el|Παπούτσια|Φούτερ και μπλούζες με κουκούλα|Μπλουζάκια|Μπουφάν|Παντελόνια και σορτς|Καπέλα|Αξεσουάρ|Σετ με σορτς|Ηλεκτρονικά|Άλλα προϊόντα|Αθλητικές φανέλες
+bg|Обувки|Суитшърти и горнища с качулка|Тениски|Якета|Панталони и шорти|Шапки|Аксесоари|Комплекти с шорти|Електроника|Други продукти|Спортни фланелки
+hr|Obuća|Majice dugih rukava i hoodice|Majice kratkih rukava|Jakne|Hlače i kratke hlače|Kape i šeširi|Dodaci|Kompleti s kratkim hlačama|Elektronika|Ostali proizvodi|Sportski dresovi
+sr|Обућа|Дуксеви и дуксеви с капуљачом|Мајице|Јакне|Панталоне и шортсеви|Капе и шешири|Додаци|Комплети са шортсом|Електроника|Остали производи|Спортски дресови
+id|Sepatu|Sweter dan hoodie|Kaus|Jaket|Celana panjang dan pendek|Topi|Aksesori|Setelan celana pendek|Elektronik|Produk lainnya|Jersi olahraga
+vi|Giày|Áo nỉ và áo hoodie|Áo thun|Áo khoác|Quần dài và quần short|Mũ|Phụ kiện|Bộ đồ quần short|Đồ điện tử|Sản phẩm khác|Áo đấu thể thao
+th|รองเท้า|เสื้อสเวตเชิ้ตและฮู้ดดี้|เสื้อยืด|เสื้อแจ็กเก็ต|กางเกงขายาวและขาสั้น|หมวก|เครื่องประดับและอุปกรณ์เสริม|ชุดกางเกงขาสั้น|อุปกรณ์อิเล็กทรอนิกส์|สินค้าอื่น ๆ|เสื้อกีฬา
+hi|जूते|स्वेटशर्ट और हुडी|टी-शर्ट|जैकेट|पैंट और शॉर्ट्स|टोपियाँ|एक्सेसरीज़|शॉर्ट्स के सेट|इलेक्ट्रॉनिक सामान|अन्य उत्पाद|खेल जर्सी
