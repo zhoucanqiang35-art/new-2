@@ -19,6 +19,20 @@ const links = [['home','/',''],['spreadsheet','/spreadsheet/','spreadsheet'],['i
   {canonical ? <link rel="canonical" href={canonical} /> : <meta name="robots" content="noindex, follow" />}
   <meta name="description" content={description} />
   <meta name="theme-color" content="#fff8ec" />
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-1NPQQHP9E9"></script>
+  <script is:inline>
+    if (location.hostname === 'hipobuyfindsheet.com' || location.hostname === 'www.hipobuyfindsheet.com') {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { window.dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-1NPQQHP9E9');
+      document.addEventListener('click', event => {
+        const link = event.target.closest?.('a[data-agent-item]');
+        if (!link || !link.hostname || link.hostname === location.hostname) return;
+        gtag('event', 'product_outbound_click', { agent_host: link.hostname });
+      });
+    }
+  </script>
   <title>{title}</title>
   <link rel="icon" href="/brand/favicon.png" type="image/png" />
 </head>

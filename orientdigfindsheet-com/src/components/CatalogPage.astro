@@ -14,16 +14,22 @@ const products = category ? catalog.filter(product => product.category === categ
 const withWarehousePhotos = category
   ? products.filter(product => savedQc[product.weidianId]?.photos?.length).slice(0, 3)
   : [];
+const picks = category ? [...new Map(
+  [...withWarehousePhotos, ...products.slice(24, 27)].map(product => [product.weidianId, product])
+).values()].slice(0, 3) : [];
 ---
 <Layout title={title + " | Search Weidian Finds"} description={description}>
   <section class="wrap page">
     {category && <p><a class="text-link" href="/categories/">All categories</a></p>}
     <h1>{title}</h1>
     <p class="lead">{description}</p>
-    {withWarehousePhotos.length > 0 && (
-      <aside class="panel" aria-label="Listings with warehouse photos">
-        <h2>Listings with warehouse photos</h2>
-        <ul>{withWarehousePhotos.map(product => <li><a class="text-link" href={itemUrl(product.weidianId)} translate="no">{product.name}</a></li>)}</ul>
+    {picks.length > 0 && (
+      <aside class="panel" aria-label="Listings to compare">
+        <h2>Listings to compare</h2>
+        <ul>{picks.map(product => <li>
+          <a class="text-link" href={itemUrl(product.weidianId)} translate="no">{product.name}</a>
+          {savedQc[product.weidianId]?.photos?.length > 0 && <small> · Saved warehouse photos</small>}
+        </li>)}</ul>
       </aside>
     )}
     <form id="catalog-form" class="panel filters" action={path} data-category={category || undefined} role="search">
