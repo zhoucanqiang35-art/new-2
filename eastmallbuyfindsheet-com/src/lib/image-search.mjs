@@ -120,11 +120,37 @@ function clearObjectUrl() {
   if (activeObjectUrl) URL.revokeObjectURL(activeObjectUrl);
   activeObjectUrl = undefined;
 }
-file.addEventListener('change', () => {
-  if (!file.files.length) return;
+function choosePhoto(photo) {
+  if (!photo) return;
+  if (photo.type && !photo.type.startsWith('image/')) {
+    ++runNumber;
+    clearObjectUrl();
+    preview.hidden = true;
+    results.replaceChildren();
+    status.textContent = 'Choose a supported image file.';
+    return;
+  }
   clearObjectUrl();
-  activeObjectUrl = URL.createObjectURL(file.files[0]);
-  search(activeObjectUrl);
+  activeObjectUrl = URL.createObjectURL(photo);
+  void search(activeObjectUrl);
+}
+file.addEventListener('change', () => choosePhoto(file.files[0]));
+
+const dropZone = file.closest('label');
+dropZone.addEventListener('dragover', (event) => {
+  if (!event.dataTransfer.types.includes('Files')) return;
+  event.preventDefault();
+  event.dataTransfer.dropEffect = 'copy';
+  dropZone.dataset.dropActive = '';
+});
+dropZone.addEventListener('dragleave', (event) => {
+  if (!dropZone.contains(event.relatedTarget)) delete dropZone.dataset.dropActive;
+});
+dropZone.addEventListener('drop', (event) => {
+  event.preventDefault();
+  delete dropZone.dataset.dropActive;
+  file.value = '';
+  choosePhoto(event.dataTransfer.files[0]);
 });
 example.addEventListener('click', () => {
   clearObjectUrl();

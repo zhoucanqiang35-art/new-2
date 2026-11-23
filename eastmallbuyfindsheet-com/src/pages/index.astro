@@ -6,7 +6,6 @@ import CategoryGrid from '../components/CategoryGrid.astro';
 import {categoryEntries, listingCount} from '../lib/categories.mjs';
 import catalog from '../../public/data/catalog.json';
 import qc from '../../public/data/qc-featured.json';
-import {productImage, productUrl} from '../lib/catalog.mjs';
 import BuyingWalkthrough from '../components/BuyingWalkthrough.astro';
 import BuyingFaq from '../components/BuyingFaq.astro';
 import '../home.css';
@@ -14,8 +13,6 @@ import '../home.css';
 const selected = ['5954', '8608', '6818', '7357', '8768', '8891', '8313', '7637', '6250', '8765', '8676', '8984'];
 const featured = selected.map((id) => catalog.find((item) => item.id === id));
 const number = new Intl.NumberFormat('en-US');
-const qcSample = '7403509728';
-const qcSampleProduct = catalog.find((item) => item.weidianId === qcSample);
 ---
 <Layout title="EastMallBuy Spreadsheet | Browse Finds & Warehouse QC" description="Explore shoes, streetwear and accessories in the EastMallBuy spreadsheet. Browse 11 Findspreadsheet categories, search by image, and check available warehouse QC photos." page="home">
   <section class="catalog-hero">
@@ -54,25 +51,6 @@ const qcSampleProduct = catalog.find((item) => item.weidianId === qcSample);
       <a class="section-link" href="/spreadsheet/">Open the spreadsheet</a>
     </div>
     <div class="product-grid home-products">{featured.map((product) => <Card product={product} hasQc={Boolean(qc[product.weidianId]?.status === 'available')} />)}</div>
-  </section>
-
-  <section class="wrap home-section home-tool-pair" aria-label="Product research tools">
-    <article class="home-qc">
-      <div class="home-qc-copy">
-        <h2>See warehouse QC</h2>
-        <p>Look up a Weidian link or item ID. Open a saved example to see what warehouse photos can show.</p>
-        <div class="home-tool-links"><a class="button dark" href="/qc/#qc-finder">Open QC Finder</a><a class="section-link" href={'/qc/?id=' + qcSample + '#qc-finder'}>View QC example</a></div>
-      </div>
-      <a class="home-qc-photo" href={productUrl(qcSample)} aria-label={qcSampleProduct.name + ' product details'}>
-        <img src={productImage(qcSampleProduct)} alt={qcSampleProduct.name} width="420" height="380" loading="lazy" />
-        <span>Seller photo · {qcSample}</span>
-      </a>
-    </article>
-    <article class="home-image-tool">
-      <h2>Find it by photo</h2>
-      <p>Start with a reference image to find similar-looking listings in the saved catalog. The photo stays on your device.</p>
-      <a class="button outline" href="/image-search/">Search by image</a>
-    </article>
   </section>
 
   <BuyingWalkthrough home />

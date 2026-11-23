@@ -25,16 +25,22 @@ function gallery(product, images) {
   previous.setAttribute('aria-label', 'Previous seller photo');
   next.setAttribute('aria-label', 'Next seller photo');
   const stage = element('div', {className: 'gallery-stage'}, [cover, previous, next, counter]);
-  const heading = element('h2', {id: 'listing-photo-options', textContent: 'Seller photos'});
+  const sellerThumbs = element('div', {className: 'seller-photo-filmstrip'});
+  sellerThumbs.setAttribute('aria-label', 'Seller photos');
+  sellerThumbs.hidden = photos.length < 2;
+  const sellerGallery = element('div', {className: 'detail-gallery'}, [stage, sellerThumbs]);
+
+  const heading = element('h2', {id: 'listing-photo-options', textContent: 'Styles'});
   const selectedLabel = element('span', {className: 'photo-option-label', translate: false});
   const thumbs = element('div', {className: 'detail-photo-options'});
-  const options = element('section', {className: 'detail-options'}, [
-    element('div', {className: 'media-heading'}, [heading, selectedLabel]),
-    thumbs,
-  ]);
-  options.setAttribute('aria-labelledby', heading.id);
+  const choices = element('section', {hidden: true}, [element('div', {className: 'media-heading'}, [heading, selectedLabel]), thumbs]);
+  choices.setAttribute('aria-labelledby', heading.id);
+  const sizeHeading = element('h2', {id: 'listing-sizes', textContent: 'Size'});
+  const sizeButtons = element('div', {className: 'detail-size-buttons'});
+  const sizeOptions = element('section', {className: 'detail-size-options', hidden: true}, [sizeHeading, sizeButtons]);
+  sizeOptions.setAttribute('aria-labelledby', sizeHeading.id);
+  const options = element('div', {className: 'detail-options', hidden: true}, [choices, sizeOptions]);
   let current = 0;
-  let choices = photos.map((photo) => ({photo, label: ''}));
 
   function selectPhoto(url, label = '') {
     cover.src = url;
@@ -42,7 +48,8 @@ function gallery(product, images) {
     selectedLabel.textContent = label;
     const position = photos.indexOf(url);
     counter.textContent = label ? 'Style' : (position + 1) + ' / ' + photos.length;
-    for (const button of thumbs.children) button.setAttribute('aria-pressed', String(button.dataset.photo === url));
+    for (const button of sellerThumbs.children) button.setAttribute('aria-pressed', String(position >= 0 && !label && button.dataset.photo === url));
+    for (const button of thumbs.children) button.setAttribute('aria-pressed', String(Boolean(label) && button.dataset.photo === url && button.title === label));
   }
 
   function showPhoto(index) {
@@ -50,23 +57,19 @@ function gallery(product, images) {
     selectPhoto(photos[current]);
   }
 
-  function renderOptions(styles = false) {
-    options.hidden = !styles && photos.length < 2;
-    heading.textContent = styles ? 'Styles' : 'Seller photos';
-    thumbs.replaceChildren(...choices.map(({photo, label}, index) => {
-      const button = element('button', {type: 'button', title: label}, [
-        element('img', {src: photo, alt: '', width: 74, height: 74, loading: 'lazy'}),
-      ]);
-      button.setAttribute('aria-label', label ? 'View style ' + label : 'View seller photo ' + (index + 1));
-      button.setAttribute('aria-pressed', String(cover.getAttribute('src') === photo));
-      button.dataset.photo = photo;
-      button.draggable = false;
-      button.addEventListener('click', () => {
-        if (styles) selectPhoto(photo, label || String(index + 1));
-        else showPhoto(index);
-      });
-      return button;
-    }));
+  function thumbnail(photo, label, description, select) {
+    const button = element('button', {type: 'button', title: label}, [
+      element('img', {src: photo, alt: '', width: 74, height: 74, loading: 'lazy', draggable: false}),
+    ]);
+    button.setAttribute('aria-label', description);
+    button.setAttribute('aria-pressed', 'false');
+    button.dataset.photo = photo;
+    button.addEventListener('click', select);
+    return button;
+  }
+
+  for (const [index, photo] of photos.entries()) {
+    sellerThumbs.append(thumbnail(photo, '', 'View seller photo ' + (index + 1), () => showPhoto(index)));
   }
 
   previous.hidden = next.hidden = photos.length < 2;
@@ -94,14 +97,25 @@ function gallery(product, images) {
     if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.4) showPhoto(current + (dx < 0 ? 1 : -1));
   }, {passive: true});
 
-  renderOptions();
   showPhoto(0);
-  productMedia('styles').catch(savedProductMedia).then(({styles = []}) => {
-    if (!styles.length) return;
-    choices = [...new Map(styles.map((style) => [style.photo, style])).values()];
-    renderOptions(true);
+  productMedia('styles').catch(savedProductMedia).then(({styles = [], sizes = []}) => {
+    choices.hidden = !styles.length;
+    sizeOptions.hidden = !sizes.length;
+    options.hidden = choices.hidden && sizeOptions.hidden;
+    thumbs.replaceChildren(...styles.map(({photo, label}, index) => {
+      const name = label || String(index + 1);
+      return thumbnail(photo, name, 'View style ' + name, () => selectPhoto(photo, name));
+    }));
+    sizeButtons.replaceChildren(...sizes.map((size) => {
+      const button = element('button', {type: 'button', textContent: size, translate: false});
+      button.setAttribute('aria-pressed', 'false');
+      button.addEventListener('click', () => {
+        for (const option of sizeButtons.children) option.setAttribute('aria-pressed', String(option === button));
+      });
+      return button;
+    }));
   }).catch(() => {});
-  return {stage, options};
+  return {sellerGallery, options, detailPhotos: photos.slice(1)};
 }
 
 async function copyLink(url, status) {
@@ -204,7 +218,7 @@ function render(product, photos, catalog) {
   window.addEventListener('pageshow', updatePurchase);
   const [otherAgents, agentDialog] = shoppingDialog(product);
   const estimate = referencePrice(product.price);
-  const {stage, options} = gallery(product, photos);
+  const {sellerGallery, options, detailPhotos} = gallery(product, photos);
   const copy = element('button', {type: 'button', className: 'button outline', textContent: 'Copy Weidian link'});
   const copyStatus = element('div', {className: 'copy-link-status'});
   copyStatus.setAttribute('role', 'status');
@@ -224,7 +238,19 @@ function render(product, photos, catalog) {
       external('View on Findspreadsheet', new URL(product.sourcePath, sourceOrigin).href),
       element('a', {href: '#warehouse-qc', textContent: 'Warehouse QC photos'}),
     ]),
-    element('p', {className: 'detail-purchase-note', textContent: 'Check sizing and availability with the seller. Agent links may contain a referral code.'}),
+    element('p', {className: 'detail-purchase-note', textContent: 'Confirm your style and size with the seller. Agent links may contain a referral code.'}),
+  ]);
+  const sellerDetails = element('section', {className: 'subsection detail-seller-photos'}, [
+    element('div', {className: 'media-heading'}, [
+      element('h2', {textContent: 'Product detail photos'}),
+      element('span', {className: 'qc-photo-count', textContent: detailPhotos.length + (detailPhotos.length === 1 ? ' photo' : ' photos')}),
+    ]),
+    element('div', {className: 'detail-qc-grid'}, detailPhotos.map((url, index) => {
+      const label = 'Seller detail photo ' + (index + 1);
+      const link = external('', url);
+      link.append(element('img', {src: url, alt: label, loading: 'lazy', width: 232, height: 177}));
+      return link;
+    })),
   ]);
   const qcStatus = element('div', {className: 'result-status', textContent: 'Checking Findspreadsheet for warehouse photos…'});
   qcStatus.setAttribute('role', 'status');
@@ -237,7 +263,8 @@ function render(product, photos, catalog) {
   ]);
   const related = catalog.filter((item) => item.category === product.category && item.weidianId !== id && /^\d+$/.test(item.weidianId ?? '')).slice(0, 4);
   target.replaceChildren(
-    element('div', {className: 'detail-grid'}, [stage, info]),
+    element('div', {className: 'detail-grid'}, [sellerGallery, info]),
+    ...(detailPhotos.length ? [sellerDetails] : []),
     qcSection,
     element('section', {className: 'subsection'}, [element('div', {className: 'section-title'}, [element('h2', {textContent: 'More in ' + categoryLabel(product.category)}), element('a', {textContent: 'Browse category', href: categoryLanding(product.category) || categoryFinds(product.category)})]), element('div', {className: 'product-grid'}, related.map((item) => card(item)))]),
   );

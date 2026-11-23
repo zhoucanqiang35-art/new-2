@@ -6,7 +6,12 @@ import Layout from '../components/Layout.astro';
     <p class="eyebrow">VISUAL PRODUCT SEARCH</p><h1>Image Search</h1>
     <p class="lead">Pick a product photo to find visually similar listings in the saved Findspreadsheet image index. The search runs in your browser and keeps the photo on your device.</p>
     <div class="upload" id="image-upload">
-      <label class="button dark image-upload-control" for="image-file"><span>Upload image</span><input id="image-file" type="file" accept="image/*" /></label>
+      <label class="image-upload-control" for="image-file">
+        <span class="upload-mark" aria-hidden="true">↑</span>
+        <strong class="upload-title" id="upload-title">Upload image</strong>
+        <span class="upload-hint" id="upload-hint">Click to choose a photo or drop one here.</span>
+        <input id="image-file" type="file" accept="image/*" aria-labelledby="upload-title" aria-describedby="upload-hint" />
+      </label>
       <button class="button outline" type="button" id="image-example">Try a sample photo</button>
       <img id="image-preview" alt="Search reference photo" hidden />
     </div>

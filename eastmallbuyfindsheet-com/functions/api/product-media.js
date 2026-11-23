@@ -71,13 +71,17 @@ export async function onRequestGet({request}) {
 
     const listing = data.data ?? data;
     if (String(listing.weidian_id) !== id) throw new Error('Unexpected SKU response');
-    const styles = (listing.specifications?.attrs ?? []).flatMap((group) => group.attr_values ?? [])
+    const groups = listing.specifications?.attrs ?? [];
+    const isSize = (group) => /\b(?:size|sizing)\b|尺[码碼寸]|鞋[码碼]/i.test(group.attr_title ?? group.name ?? '');
+    const sizes = [...new Set(groups.filter(isSize).flatMap((group) => (group.attr_values ?? [])
+      .map((option) => String(option.attr_value ?? option.name ?? '').trim().slice(0, 60))).filter(Boolean))];
+    const styles = groups.filter((group) => !isSize(group)).flatMap((group) => group.attr_values ?? [])
       .map((option) => ({
         photo: imageUrl(option.img || option.image, (url) => sellerImageHosts.has(url.hostname)),
-        label: String(option.attr_value || option.name || '').trim().slice(0, 120),
+        label: String(option.attr_value ?? option.name ?? '').trim().slice(0, 120),
       }))
       .filter(({photo}) => photo);
-    return Response.json({styles}, {headers: {'Cache-Control': 'public, max-age=300'}});
+    return Response.json({styles, sizes}, {headers: {'Cache-Control': 'public, max-age: 300'}});
   } catch {
     return unavailable(controller.signal.aborted ? 'source-timeout' : failure);
   } finally {
