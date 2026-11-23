@@ -8,8 +8,9 @@ import Icon from './Icon.astro';
 import BrowseOptions from './BrowseOptions.astro';
 import '../styles/details-update.css';
 import LanguagePicker from './LanguagePicker.astro';
-const { title = 'Sugargoo Spreadsheet | Sugargoo Finds List', description = 'Browse FindSpreadsheet product finds, check warehouse reference photos and open Weidian listings on Sugargoo.', catalogView = false } = Astro.props;
+const { title = 'Sugargoo Spreadsheet | Sugargoo Finds List', description = 'Browse FindSpreadsheet product finds, check warehouse reference photos and open Weidian listings on Sugargoo.', catalogView = false, indexable = true } = Astro.props;
 const home = Astro.url.pathname === '/';
+const canonical = new URL(Astro.url.pathname, 'https://sugargoofindsheet.com');
 const links = [['/', 'Home'], ['/browse/', 'Spreadsheet'], ['/qc/', 'QC Finder'], ['/image-search/', 'Image search'], ['/guide/', 'Buying guide'], ['/faq/', 'FAQ'], ['/seo/', 'SEO']];
 ---
 <!doctype html>
@@ -26,7 +27,8 @@ const links = [['/', 'Home'], ['/browse/', 'Spreadsheet'], ['/qc/', 'QC Finder']
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content={description} />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content={indexable ? "index, follow" : "noindex, follow"} />
+  {indexable && <link rel="canonical" href={canonical} />}
   <meta name="theme-color" content="#f5f6f8" />
   <link rel="icon" href="/brand/favicon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
