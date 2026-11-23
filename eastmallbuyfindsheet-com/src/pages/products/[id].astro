@@ -1,29 +1,18 @@
 ---
 import {readFileSync} from 'node:fs';
 import Layout from '../../components/Layout.astro';
-import Card from '../../components/Card.astro';
 import catalog from '../../../public/data/catalog.json';
-import qc from '../../../public/data/qc-featured.json';
-import {categoryLabel, originalUrl, productImage, sourceOrigin} from '../../lib/catalog.mjs';
+import {categoryLabel, productImage, purchaseUrl, sourceOrigin} from '../../lib/catalog.mjs';
 import {categoryFinds, categoryLanding, indexedProductIds, isShopItem} from '../../lib/landing-paths.mjs';
 import {categoryGuides} from '../../lib/category-guides.mjs';
 import {priceFor} from '../../lib/shopping.mjs';
 
 export function getStaticPaths() {
-  const byId = new Map();
-  const previewByCategory = new Map();
-  for (const product of catalog) {
-    if (!/^\d+$/.test(product.weidianId)) continue;
-    byId.set(product.weidianId, product);
-    const preview = previewByCategory.get(product.category) ?? [];
-    if (preview.length < 5) preview.push(product);
-    previewByCategory.set(product.category, preview);
-  }
+  const byId = new Map(catalog.map((product) => [product.weidianId, product]));
   const galleries = new Map();
   return indexedProductIds.map((id) => {
     const product = byId.get(id);
     if (!product) throw new Error('Missing indexed listing: ' + id);
-    const related = (previewByCategory.get(product.category) ?? []).filter((item) => item.weidianId !== id).slice(0, 4);
     const prefix = id.slice(0, 4);
     if (!galleries.has(prefix)) {
       try {
@@ -34,24 +23,22 @@ export function getStaticPaths() {
       }
     }
     const photos = galleries.get(prefix)[id] ?? [];
-    return {params: {id}, props: {product, related, photos}};
+    return {params: {id}, props: {product, photos}};
   });
 }
-const {product, related, photos} = Astro.props;
+const {product, photos} = Astro.props;
 const id = product.weidianId;
 const category = categoryLabel(product.category);
 const categoryUrl = categoryLanding(product.category) || categoryFinds(product.category);
 const price = priceFor(product.price);
 const fromOurStore = isShopItem(id);
-const hasQc = qc[id]?.status === 'available';
-const qcUrl = '/qc/?id=' + id + '#qc-finder';
 const sourceUrl = new URL(product.sourcePath, sourceOrigin).href;
 const description = product.name + ' on the EastMallBuy spreadsheet. Compare seller photos, reference price and ordering options for Weidian item ' + id + '.';
 ---
 <Layout title={product.name + ' | EastMallBuy Spreadsheet'} description={description}>
   <section class="wrap page">
     <a href={categoryUrl}>Browse {category}</a>
-    <div id="product-detail" data-item={id} data-listing={JSON.stringify({product, related, photos})}>
+    <div id="product-detail" data-item={id} data-listing={JSON.stringify({product, photos})}>
       <div class="detail-grid">
         <img src={productImage(product)} alt={product.name} class="detail-image" fetchpriority="high" />
         <div class="detail-copy">
@@ -60,10 +47,9 @@ const description = product.name + ' on the EastMallBuy spreadsheet. Compare sel
           <p>Weidian item {id}</p>
           {price && <p class="detail-estimate"><strong class="reference-price" data-reference-price={product.price}>{price}</strong> estimated item price</p>}
           <p><strong>Size check.</strong> Confirm the seller’s current size chart and selected variant.</p>
-          <p><strong>QC status.</strong> <a href={qcUrl}>{hasQc ? 'Historical QC available' : 'Check for warehouse QC'}</a></p>
           <div class="detail-buy">
             {fromOurStore
-              ? <a class="button dark" href={originalUrl(id)} rel="noopener" target="_blank">Buy on our Weidian store</a>
+              ? <a class="button dark" href={purchaseUrl(id)} rel="sponsored noopener" target="_blank">Buy on EastMallBuy</a>
               : <a class="button outline" href="/spreadsheet/?store=1">Browse our Weidian store products</a>}
           </div>
           <div class="detail-listing-links">
@@ -72,10 +58,6 @@ const description = product.name + ' on the EastMallBuy spreadsheet. Compare sel
         </div>
       </div>
       {categoryGuides[product.category] && <section class="subsection" data-size-guide><h2>Size and measurements</h2><p>{categoryGuides[product.category].fit}</p></section>}
-      <section class="subsection">
-        <div class="section-title"><h2>More in {category}</h2><a href={categoryUrl}>Browse category</a></div>
-        <div class="product-grid">{related.map((item) => <Card product={item} />)}</div>
-      </section>
     </div>
   </section>
 </Layout>

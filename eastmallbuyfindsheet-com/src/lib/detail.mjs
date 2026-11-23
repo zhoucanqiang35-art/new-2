@@ -1,14 +1,14 @@
-import {card, element, external, readJson, readCatalog, referencePrice, showQc} from './browser.mjs';
-import {categoryLabel, officialFavicon, originalUrl, parseId, productImage, productUrl, sourceOrigin} from './catalog.mjs';
-import {categoryFinds, categoryLanding, isShopItem} from './landing-paths.mjs';
+import {element, external, readJson, readCatalog, referencePrice} from './browser.mjs';
+import {categoryLabel, officialFavicon, originalUrl, parseId, productImage, productUrl, purchaseUrl, sourceOrigin} from './catalog.mjs';
+import {isShopItem} from './landing-paths.mjs';
 import {categoryGuides} from './category-guides.mjs';
 import {agents, purchaseFor} from './shopping.mjs';
 
 const target = document.querySelector('#product-detail');
 const id = target.dataset.item || parseId(new URLSearchParams(location.search).get('id') ?? '');
 
-function productMedia(type) {
-  return readJson('/api/product-media?type=' + type + '&id=' + encodeURIComponent(id));
+function productOptions() {
+  return readJson('/api/product-media?type=styles&id=' + encodeURIComponent(id));
 }
 
 let savedMedia;
@@ -31,11 +31,14 @@ function gallery(product, images) {
   sellerThumbs.hidden = photos.length < 2;
   const sellerGallery = element('div', {className: 'detail-gallery'}, [stage, sellerThumbs]);
 
-  const heading = element('h2', {id: 'listing-photo-options', textContent: 'Styles'});
+  const heading = element('h2', {id: 'listing-photo-options', textContent: 'Weidian styles and photos'});
   const selectedLabel = element('span', {className: 'photo-option-label', translate: false});
   const thumbs = element('div', {className: 'detail-photo-options'});
   const choices = element('section', {hidden: true}, [element('div', {className: 'media-heading'}, [heading, selectedLabel]), thumbs]);
   choices.setAttribute('aria-labelledby', heading.id);
+  thumbs.tabIndex = 0;
+  thumbs.setAttribute('role', 'group');
+  thumbs.setAttribute('aria-labelledby', heading.id);
   const sizeHeading = element('h2', {id: 'listing-sizes', textContent: 'Size'});
   const sizeButtons = element('div', {className: 'detail-size-buttons'});
   const sizeOptions = element('section', {className: 'detail-size-options', hidden: true}, [sizeHeading, sizeButtons]);
@@ -48,7 +51,7 @@ function gallery(product, images) {
     cover.alt = label ? product.name + ' · ' + label : product.name;
     selectedLabel.textContent = label;
     const position = photos.indexOf(url);
-    counter.textContent = label ? 'Style' : (position + 1) + ' / ' + photos.length;
+    counter.textContent = label || (position + 1) + ' / ' + photos.length;
     for (const button of sellerThumbs.children) button.setAttribute('aria-pressed', String(position >= 0 && !label && button.dataset.photo === url));
     for (const button of thumbs.children) button.setAttribute('aria-pressed', String(Boolean(label) && button.dataset.photo === url && button.title === label));
   }
@@ -99,13 +102,17 @@ function gallery(product, images) {
   }, {passive: true});
 
   showPhoto(0);
-  productMedia('styles').catch(savedProductMedia).then(({styles = [], sizes = []}) => {
-    choices.hidden = !styles.length;
+  const media = isShopItem(id) ? productOptions().catch(savedProductMedia) : savedProductMedia();
+  media.then(({styles = [], sizes = [], photos: listingPhotos = []}) => {
+    const styleUrls = new Set(styles.map(({photo}) => photo));
+    const availablePhotos = [...styles, ...listingPhotos.filter((photo) => !styleUrls.has(photo))
+      .map((photo, index) => ({photo, label: 'Listing photo ' + (index + 1)}))];
+    choices.hidden = !availablePhotos.length;
     sizeOptions.hidden = !sizes.length;
     options.hidden = choices.hidden && sizeOptions.hidden;
-    thumbs.replaceChildren(...styles.map(({photo, label}, index) => {
+    thumbs.replaceChildren(...availablePhotos.map(({photo, label}, index) => {
       const name = label || String(index + 1);
-      return thumbnail(photo, name, 'View style ' + name, () => selectPhoto(photo, name));
+      return thumbnail(photo, name, 'View ' + name, () => selectPhoto(photo, name));
     }));
     sizeButtons.replaceChildren(...sizes.map((size) => {
       const button = element('button', {type: 'button', textContent: size, translate: false});
@@ -130,36 +137,6 @@ async function copyLink(url, status) {
     const field = status.querySelector('input');
     field.focus();
     field.select();
-  }
-}
-
-function showWarehouseGrid(heading, status, grid, photos, historical) {
-  heading.textContent = photos.length + (photos.length === 1 ? ' photo' : ' photos');
-  status.hidden = !historical;
-  if (historical) status.textContent = 'Historical warehouse photos from Findspreadsheet.';
-  grid.replaceChildren(...photos.map((url, index) => {
-    const label = 'Warehouse QC photo ' + (index + 1);
-    const link = external('', url);
-    link.setAttribute('aria-label', label + ' · open image');
-    link.referrerPolicy = 'no-referrer';
-    link.append(element('img', {src: url, alt: label, loading: 'lazy', width: 232, height: 177, referrerPolicy: 'no-referrer'}));
-    return link;
-  }));
-}
-
-async function warehousePhotos(heading, status, grid, product) {
-  try {
-    const {status: state, photos} = await productMedia('qc');
-    if (state === 'ready' && photos.length) {
-      showWarehouseGrid(heading, status, grid, photos, false);
-      return;
-    }
-    status.textContent = state === 'pending' ? 'The main site is checking for warehouse QC photos.' :
-      'Findspreadsheet currently has no warehouse QC photos for this item.';
-  } catch {
-    const {photos = []} = await savedProductMedia();
-    if (photos.length) showWarehouseGrid(heading, status, grid, photos, true);
-    else await showQc(status, id, product.sourcePath);
   }
 }
 
@@ -211,12 +188,13 @@ function shoppingDialog(product) {
   return [trigger, dialog];
 }
 
-function render(product, photos, catalog) {
+function render(product, photos) {
   if (!target.dataset.listing) document.title = product.name + ' | EastMallBuy Findsheet';
   const fromOurStore = isShopItem(id);
   const buy = fromOurStore
-    ? external('Buy on our Weidian store', originalUrl(id), 'button dark')
+    ? external('Buy on EastMallBuy', purchaseUrl(id), 'button dark')
     : element('a', {href: '/spreadsheet/?store=1', className: 'button outline', textContent: 'Browse our Weidian store products'});
+  if (fromOurStore) buy.rel = 'sponsored noopener';
   const [otherAgents, agentDialog] = fromOurStore ? shoppingDialog(product) : [];
   const estimate = referencePrice(product.price);
   const {sellerGallery, options, detailPhotos} = gallery(product, photos);
@@ -236,10 +214,9 @@ function render(product, photos, catalog) {
       element('h2', {textContent: 'Size and fit guide'}),
       element('p', {textContent: categoryGuides[product.category].fit}),
     ])] : []),
-    element('div', {className: 'detail-listing-links'}, [
-      ...(fromOurStore ? [external('View on Findspreadsheet', new URL(product.sourcePath, sourceOrigin).href)] : []),
-      element('a', {href: '#warehouse-qc', textContent: 'Warehouse QC photos'}),
-    ]),
+    ...(fromOurStore ? [element('div', {className: 'detail-listing-links'}, [
+      external('View on Findspreadsheet', new URL(product.sourcePath, sourceOrigin).href),
+    ])] : []),
     element('p', {className: 'detail-purchase-note', textContent: fromOurStore
       ? 'Confirm your style and size on Weidian. Agent links may contain a referral code.'
       : 'Catalog reference. Direct purchase is available for items listed in our Weidian store.'}),
@@ -247,39 +224,26 @@ function render(product, photos, catalog) {
   const sellerDetails = element('section', {className: 'subsection detail-seller-photos'}, [
     element('div', {className: 'media-heading'}, [
       element('h2', {textContent: 'Product detail photos'}),
-      element('span', {className: 'qc-photo-count', textContent: detailPhotos.length + (detailPhotos.length === 1 ? ' photo' : ' photos')}),
+      element('span', {className: 'detail-photo-count', textContent: detailPhotos.length + (detailPhotos.length === 1 ? ' photo' : ' photos')}),
     ]),
-    element('div', {className: 'detail-qc-grid'}, detailPhotos.map((url, index) => {
+    element('div', {className: 'detail-seller-photo-grid'}, detailPhotos.map((url, index) => {
       const label = 'Seller detail photo ' + (index + 1);
       const link = external('', url);
       link.append(element('img', {src: url, alt: label, loading: 'lazy', width: 232, height: 177}));
       return link;
     })),
   ]);
-  const qcStatus = element('div', {className: 'result-status', textContent: 'Checking Findspreadsheet for warehouse photos…'});
-  qcStatus.setAttribute('role', 'status');
-  const qcCount = element('span', {className: 'qc-photo-count'});
-  const qcGrid = element('div', {className: 'detail-qc-grid'});
-  const qcSection = element('section', {className: 'subsection detail-qc', id: 'warehouse-qc'}, [
-    element('div', {className: 'media-heading'}, [element('h2', {textContent: 'Warehouse QC photos'}), qcCount]),
-    qcStatus,
-    qcGrid,
-  ]);
-  const related = catalog.filter((item) => item.category === product.category && item.weidianId !== id && /^\d+$/.test(item.weidianId ?? '')).slice(0, 4);
   target.replaceChildren(
     element('div', {className: 'detail-grid'}, [sellerGallery, info]),
     ...(detailPhotos.length ? [sellerDetails] : []),
-    qcSection,
-    element('section', {className: 'subsection'}, [element('div', {className: 'section-title'}, [element('h2', {textContent: 'More in ' + categoryLabel(product.category)}), element('a', {textContent: 'Browse category', href: categoryLanding(product.category) || categoryFinds(product.category)})]), element('div', {className: 'product-grid'}, related.map((item) => card(item)))]),
   );
-  void warehousePhotos(qcCount, qcStatus, qcGrid, product);
 }
 
 async function init() {
   try {
     if (target.dataset.listing) {
-      const {product, photos, related} = JSON.parse(target.dataset.listing);
-      render(product, photos, related);
+      const {product, photos} = JSON.parse(target.dataset.listing);
+      render(product, photos);
       return;
     }
     const canonical = productUrl(id);
@@ -294,7 +258,7 @@ async function init() {
       return;
     }
     const galleries = await readJson('/data/gallery-' + id.slice(0, 4) + '.json').catch(() => ({}));
-    render(product, Array.isArray(galleries[id]) ? galleries[id] : [], catalog);
+    render(product, Array.isArray(galleries[id]) ? galleries[id] : []);
   } catch {
     target.textContent = 'The listing could not load. Reload the page to try again.';
   }

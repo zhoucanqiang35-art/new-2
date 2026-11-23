@@ -1,6 +1,7 @@
+import {publicShopMedia} from '../../src/lib/weidian-media.mjs';
+
 const source = 'https://findspreadsheet.com';
 const qcImageHost = 'a3146e426bcaaac6c813bbc910619829.eu.r2.cloudflarestorage.com';
-const sellerImageHosts = new Set(['si.geilicdn.com', 'img.alicdn.com', 'gw.alicdn.com', 'findspreadsheet.com']);
 
 let retryAfter = 0;
 
@@ -35,10 +36,10 @@ export async function onRequestGet({request}) {
   const timeout = setTimeout(() => controller.abort(), 8000);
   let failure = 'source-connection';
   try {
-    const endpoint = type === 'qc' ? '/qcradar-qc.php?item=' : '/api/Goods/getSkuData?weidian_id=';
-    const response = await fetch(source + endpoint + id, {
+    const endpoint = type === 'qc' ? source + '/qcradar-qc.php?item=' : 'https://weidian.com/item.html?itemID=';
+    const response = await fetch(endpoint + id, {
       headers: {
-        Accept: 'application/json',
+        Accept: type === 'qc' ? 'application/json' : 'text/html',
         'User-Agent': 'EastMallBuy Findsheet (+https://eastmallbuyfindsheet.com/)',
       },
       signal: controller.signal,
@@ -55,6 +56,10 @@ export async function onRequestGet({request}) {
       throw new Error('Source unavailable');
     }
     failure = 'source-response';
+    if (type === 'styles') {
+      const media = publicShopMedia(await response.text(), id);
+      return Response.json(media, {headers: {'Cache-Control': 'public, max-age=300'}});
+    }
     const data = await response.json();
 
     if (type === 'qc') {
@@ -69,19 +74,6 @@ export async function onRequestGet({request}) {
       return Response.json({status: data.status, photos}, {headers: {'Cache-Control': 'no-store'}});
     }
 
-    const listing = data.data ?? data;
-    if (String(listing.weidian_id) !== id) throw new Error('Unexpected SKU response');
-    const groups = listing.specifications?.attrs ?? [];
-    const isSize = (group) => /\b(?:size|sizing)\b|尺[码碼寸]|鞋[码碼]/i.test(group.attr_title ?? group.name ?? '');
-    const sizes = [...new Set(groups.filter(isSize).flatMap((group) => (group.attr_values ?? [])
-      .map((option) => String(option.attr_value ?? option.name ?? '').trim().slice(0, 60))).filter(Boolean))];
-    const styles = groups.filter((group) => !isSize(group)).flatMap((group) => group.attr_values ?? [])
-      .map((option) => ({
-        photo: imageUrl(option.img || option.image, (url) => sellerImageHosts.has(url.hostname)),
-        label: String(option.attr_value ?? option.name ?? '').trim().slice(0, 120),
-      }))
-      .filter(({photo}) => photo);
-    return Response.json({styles, sizes}, {headers: {'Cache-Control': 'public, max-age: 300'}});
   } catch {
     return unavailable(controller.signal.aborted ? 'source-timeout' : failure);
   } finally {
