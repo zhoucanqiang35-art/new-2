@@ -4,7 +4,6 @@ import Layout from '../../components/Layout.astro';
 import {storeCatalog as catalog} from '../../lib/store-catalog.mjs';
 import {categoryLabel, productImage, purchaseUrl, sourceOrigin} from '../../lib/catalog.mjs';
 import {categoryFinds, categoryLanding, indexedProductIds} from '../../lib/landing-paths.mjs';
-import {categoryGuides} from '../../lib/category-guides.mjs';
 import {priceFor} from '../../lib/shopping.mjs';
 
 export function getStaticPaths() {
@@ -46,12 +45,14 @@ const description = product.name + ' on the EastMallBuy spreadsheet. Compare sel
           <h1 translate="no">{product.name}</h1>
           <p>Weidian item {id}</p>
           {price && <p class="detail-estimate"><strong class="reference-price" data-reference-price={product.price}>{price}</strong> estimated item price</p>}
-          <p><strong>Size check.</strong> Confirm the seller’s current size chart and selected variant.</p>
           <div class="detail-buy">
             <a class="button dark" href={purchaseUrl(id)} rel="sponsored noopener" target="_blank">Buy on EastMallBuy</a>
           </div>
           <section class="detail-options" aria-labelledby="listing-photo-options">
-            <div class="media-heading"><h2 id="listing-photo-options">Catalog photos</h2></div>
+            <div class="media-heading">
+              <h2 id="listing-photo-options">Catalog photos</h2>
+              <span class="detail-photo-count">{catalogPhotos.length} {catalogPhotos.length === 1 ? 'photo' : 'photos'}</span>
+            </div>
             <div class="detail-photo-options" tabindex="0" role="group" aria-labelledby="listing-photo-options">
               {catalogPhotos.map((photo, index) => (
                 <a href={photo} aria-label={'View catalog photo ' + (index + 1)} target="_blank" rel="noopener">
@@ -65,7 +66,6 @@ const description = product.name + ' on the EastMallBuy spreadsheet. Compare sel
           </div>
         </div>
       </div>
-      {categoryGuides[product.category] && <section class="subsection" data-size-guide><h2>Size and measurements</h2><p>{categoryGuides[product.category].fit}</p></section>}
     </div>
   </section>
 </Layout>

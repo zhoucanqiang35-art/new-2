@@ -1,7 +1,6 @@
 import {element, external, readJson, referencePrice} from './browser.mjs';
 import {categoryLabel, officialFavicon, originalUrl, parseId, productImage, productUrl, purchaseUrl, sourceOrigin} from './catalog.mjs';
 import {isShopItem} from './landing-paths.mjs';
-import {categoryGuides} from './category-guides.mjs';
 import {agents, purchaseFor} from './shopping.mjs';
 
 const target = document.querySelector('#product-detail');
@@ -32,18 +31,17 @@ function gallery(product, images) {
   const sellerGallery = element('div', {className: 'detail-gallery'}, [stage, sellerThumbs]);
 
   const heading = element('h2', {id: 'listing-photo-options', textContent: 'Catalog photos'});
+  const count = element('span', {className: 'detail-photo-count'});
   const selectedLabel = element('span', {className: 'photo-option-label', translate: false});
+  selectedLabel.setAttribute('aria-live', 'polite');
   const thumbs = element('div', {className: 'detail-photo-options'});
-  const choices = element('section', {}, [element('div', {className: 'media-heading'}, [heading, selectedLabel]), thumbs]);
-  choices.setAttribute('aria-labelledby', heading.id);
+  const options = element('section', {className: 'detail-options'}, [
+    element('div', {className: 'media-heading'}, [heading, count]), thumbs, selectedLabel,
+  ]);
+  options.setAttribute('aria-labelledby', heading.id);
   thumbs.tabIndex = 0;
   thumbs.setAttribute('role', 'group');
   thumbs.setAttribute('aria-labelledby', heading.id);
-  const sizeHeading = element('h2', {id: 'listing-sizes', textContent: 'Size'});
-  const sizeButtons = element('div', {className: 'detail-size-buttons'});
-  const sizeOptions = element('section', {className: 'detail-size-options', hidden: true}, [sizeHeading, sizeButtons]);
-  sizeOptions.setAttribute('aria-labelledby', sizeHeading.id);
-  const options = element('div', {className: 'detail-options'}, [choices, sizeOptions]);
   let current = 0;
   let activeLabel = '';
 
@@ -111,32 +109,31 @@ function gallery(product, images) {
   }, {passive: true});
 
   function showPhotoOptions(styles, listingPhotos, name, label) {
-    const styleUrls = new Set(styles.map(({photo}) => photo));
-    const available = [...styles, ...listingPhotos.filter((photo) => !styleUrls.has(photo))
-      .map((photo, index) => ({photo, label: label + ' ' + (index + 1)}))];
-    if (!available.length) return;
+    const available = new Map();
+    for (const {photo, label: caption} of styles) {
+      if (!available.has(photo)) available.set(photo, caption);
+    }
+    listingPhotos.forEach((photo, index) => {
+      if (!available.has(photo)) available.set(photo, label + ' ' + (index + 1));
+    });
+    if (!available.size) return;
     heading.textContent = name;
-    thumbs.replaceChildren(...available.map(({photo, label: caption}, index) => {
+    count.textContent = available.size + (available.size === 1 ? ' photo' : ' photos');
+    thumbs.replaceChildren(...[...available].map(([photo, caption], index) => {
       const description = caption || 'Photo ' + (index + 1);
       return thumbnail(photo, description, 'View ' + description, () => selectPhoto(photo, description));
     }));
+    if (activeLabel) {
+      const caption = available.get(cover.getAttribute('src'));
+      if (caption) activeLabel = selectedLabel.textContent = caption;
+    }
     highlightPhoto();
   }
 
   showPhoto(0);
   showPhotoOptions([], photos, 'Catalog photos', 'Catalog photo');
-  const media = productOptions().catch(savedProductMedia);
-  media.then(({styles = [], sizes = [], photos: listingPhotos = []}) => {
+  productOptions().catch(savedProductMedia).then(({styles = [], photos: listingPhotos = []}) => {
     showPhotoOptions(styles, listingPhotos, 'Weidian styles and photos', 'Listing photo');
-    sizeOptions.hidden = !sizes.length;
-    sizeButtons.replaceChildren(...sizes.map((size) => {
-      const button = element('button', {type: 'button', textContent: size, translate: false});
-      button.setAttribute('aria-pressed', 'false');
-      button.addEventListener('click', () => {
-        for (const option of sizeButtons.children) option.setAttribute('aria-pressed', String(option === button));
-      });
-      return button;
-    }));
   }).catch(() => {});
   return {sellerGallery, options, detailPhotos: photos.slice(1)};
 }
@@ -159,8 +156,6 @@ function shoppingDialog(product) {
   const trigger = element('button', {type: 'button', className: 'button agent-picker-button', textContent: 'Other shopping agents'});
   const title = element('h2', {id: 'agent-dialog-title', textContent: 'Other shopping agents'});
   const close = element('button', {type: 'button', className: 'button outline', textContent: 'Close'});
-  const search = element('input', {type: 'search', placeholder: 'Search buying agents', className: 'agent-dialog-search'});
-  search.setAttribute('aria-label', 'Search buying agents');
   const options = element('div', {className: 'agent-dialog-options'}, agents.filter(({id}) => id !== 'findspreadsheet').map((agent) => {
     const destination = purchaseFor(agent.id, product.weidianId, product.sourcePath);
     const link = external('', destination.url, 'button agent-dialog-button');
@@ -173,26 +168,15 @@ function shoppingDialog(product) {
   }));
   const dialog = element('dialog', {id: 'agent-dialog', className: 'agent-dialog'}, [
     element('div', {className: 'agent-dialog-heading'}, [title, close]),
-    search,
     options,
   ]);
-  const links = [...options.children];
-  const empty = element('p', {className: 'agent-dialog-empty', textContent: 'No matching shopping agents.', hidden: true});
-  empty.setAttribute('role', 'status');
-  options.append(empty);
-  search.addEventListener('input', () => {
-    const term = search.value.trim().toLowerCase();
-    for (const link of links) link.hidden = !link.textContent.toLowerCase().includes(term);
-    empty.hidden = links.some((link) => !link.hidden);
-    options.scrollTop = 0;
-  });
   dialog.setAttribute('aria-labelledby', title.id);
   trigger.setAttribute('aria-haspopup', 'dialog');
   trigger.setAttribute('aria-controls', dialog.id);
   trigger.setAttribute('aria-expanded', 'false');
   trigger.addEventListener('click', () => {
     dialog.showModal();
-    search.focus();
+    close.focus();
     trigger.setAttribute('aria-expanded', 'true');
   });
   dialog.addEventListener('close', () => {
@@ -224,14 +208,10 @@ function render(product, photos) {
     copyStatus,
     agentDialog,
     options,
-    ...(categoryGuides[product.category] ? [element('section', {className: 'detail-fit-card'}, [
-      element('h2', {textContent: 'Size and fit guide'}),
-      element('p', {textContent: categoryGuides[product.category].fit}),
-    ])] : []),
     element('div', {className: 'detail-listing-links'}, [
       external('View on Findspreadsheet', new URL(product.sourcePath, sourceOrigin).href),
     ]),
-    element('p', {className: 'detail-purchase-note', textContent: 'Confirm your style and size on Weidian. Agent links may contain a referral code.'}),
+    element('p', {className: 'detail-purchase-note', textContent: 'Confirm available options on Weidian. Agent links may contain a referral code.'}),
   ]);
   const sellerDetails = element('section', {className: 'subsection detail-seller-photos'}, [
     element('div', {className: 'media-heading'}, [

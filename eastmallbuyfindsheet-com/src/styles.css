@@ -371,7 +371,6 @@ footer{margin-top:54px;padding:27px 0 32px}.footer-inner{display:flex;justify-co
   .detail-options { padding: 9px; }
 }
 
-.agent-dialog-search { width: 100%; margin-bottom: 10px; }
 
 .detail-gallery { min-width: 0; }
 .detail-gallery .detail-image { aspect-ratio: 1; border-radius: 13px; }
@@ -384,21 +383,20 @@ footer{margin-top:54px;padding:27px 0 32px}.footer-inner{display:flex;justify-co
   padding: 3px 3px 7px;
   overflow-x: auto;
 }
-.seller-photo-filmstrip button, .detail-size-buttons button {
+.seller-photo-filmstrip button {
   border: 1px solid var(--control-border);
   border-radius: 7px;
   background: var(--surface);
 }
 .seller-photo-filmstrip button { padding: 0; aspect-ratio: 1; overflow: hidden; }
 .seller-photo-filmstrip img { width: 100%; height: 100%; object-fit: contain; }
-.seller-photo-filmstrip [aria-pressed="true"],
-.detail-size-buttons [aria-pressed="true"] {
+.seller-photo-filmstrip [aria-pressed="true"] {
   border-color: var(--brand);
   outline: 2px solid var(--brand);
   outline-offset: 1px;
   background: var(--tint);
 }
-.detail-options { padding: 12px 0 0; border-radius: 0; background: transparent; }
+.detail-options { margin-top: 14px; padding: 12px; border: 1px solid var(--edge); border-radius: 10px; background: var(--surface); }
 .detail-photo-options {
   width: 100%;
   grid-auto-rows: clamp(49px, 4.9vw, 68px);
@@ -406,10 +404,6 @@ footer{margin-top:54px;padding:27px 0 32px}.footer-inner{display:flex;justify-co
 }
 .detail-photo-options :is(button, a) { width: 100%; aspect-ratio: auto; background: var(--surface); }
 .detail-photo-options img { object-fit: contain; }
-.detail-size-options { margin-top: 12px; }
-.detail-size-buttons { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
-.detail-size-buttons button { min-width: 42px; min-height: 36px; padding: 4px 10px; }
-.detail-size-buttons button:hover { border-color: var(--brand); }
 .detail-seller-photos { border-top: 1px solid var(--edge); }
 .detail-seller-photos .detail-seller-photo-grid img { object-fit: contain; background: var(--surface); }
 
@@ -425,13 +419,12 @@ footer{margin-top:54px;padding:27px 0 32px}.footer-inner{display:flex;justify-co
 }
 .agent-dialog[open] {
   display: grid;
-  grid-template-rows: auto auto minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr);
   overflow: hidden;
 }
 .agent-dialog-heading { margin-bottom: 7px; }
 .agent-dialog-heading h2 { font-size: 1.08rem; }
 .agent-dialog-heading .button { min-height: 34px; padding: 5px 9px; font-size: .82rem; }
-.agent-dialog-search { min-height: 34px; padding: 5px 7px; margin-bottom: 7px; }
 .agent-dialog-options {
   max-height: clamp(85px, 34dvh, 230px);
   overflow-y: auto;
@@ -441,17 +434,6 @@ footer{margin-top:54px;padding:27px 0 32px}.footer-inner{display:flex;justify-co
 }
 .agent-dialog-options .agent-dialog-button { min-height: 36px; padding: 5px; gap: 5px; font-size: .8rem; }
 .detail-secondary-actions .agent-picker-button { justify-self: start; width: auto; min-height: 38px; padding-inline: 12px; }
-.agent-dialog-empty { grid-column: 1 / -1; font-size: .85rem; color: var(--muted); }
-.detail-fit-card {
-  margin-top: 14px;
-  padding: 12px 14px;
-  border: 1px solid var(--edge);
-  border-radius: 8px;
-  background: var(--surface);
-}
-.detail-fit-card h2 { font-size: 1.03rem; }
-.detail-copy .detail-fit-card p { margin: 5px 0 0; font-size: .9rem; }
-
 .detail-photo-options {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-auto-rows: clamp(56px, 5.2vw, 76px);
@@ -463,4 +445,13 @@ footer{margin-top:54px;padding:27px 0 32px}.footer-inner{display:flex;justify-co
 
 @media (max-width: 720px) {
   .detail-photo-options { grid-auto-rows: 56px; max-height: 178px; }
+}
+
+.detail-options .media-heading { align-items: center; }
+.detail-options .detail-photo-count { white-space: nowrap; }
+.detail-options .photo-option-label { display: block; margin-top: 6px; }
+.detail-options .photo-option-label:empty { display: none; }
+@media (max-width: 480px) {
+  .detail-secondary-actions .button { width: 100%; min-height: 44px; }
+  .detail-options { padding: 9px; }
 }
