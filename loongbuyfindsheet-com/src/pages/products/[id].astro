@@ -1,0 +1,55 @@
+---
+import Header from '../../components/Header.astro';
+import Indexing from '../../components/Indexing.astro';
+import PilotProductLinks from '../../components/PilotProductLinks.astro';
+import { pilotProducts, pilotPath, sellerPhotos, buyUrl } from '../../lib/pilot-products.js';
+import { usd } from '../../lib/currency.js';
+import '../../styles/global.css';
+
+export function getStaticPaths() {
+  return pilotProducts.map(product => ({ params: { id: product.id }, props: { product } }));
+}
+const { product } = Astro.props;
+const photos = sellerPhotos(product);
+const related = pilotProducts.filter(item => item.id !== product.id && item.category === product.category).slice(0, 4);
+const description = `Compare seller photos, reference price and purchase options for ${product.name}, Weidian item ${product.weidianId}.`;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{product.name} | LoongBuy Findsheet</title>
+  <meta name="description" content={description} />
+  <Indexing />
+</head>
+<body>
+  <Header />
+  <main>
+    <nav class="section" aria-label="Product navigation"><a href={'/products/#' + product.category}>Browse selected products</a></nav>
+    <div id="product-detail" data-product-id={product.id}>
+      <div class="detail-layout">
+        <div class="product-media">
+          <a href={photos[0]}><img src={product.localImage || photos[0]} alt={product.name} fetchpriority="high" /></a>
+        </div>
+        <div>
+          <h1>{product.name}</h1>
+          <p>Weidian item {product.weidianId}</p>
+          <p class="detail-price">{usd(product.price)} USD</p>
+          <p>Reference price from the FindSpreadsheet catalog. Confirm the current price, options and availability on LoongBuy.</p>
+          <div class="detail-links">
+            <a class="button" href={buyUrl(product.weidianId)} target="_blank" rel="sponsored noopener">Buy on LoongBuy</a>
+            <a class="outline" href={new URL(product.sourcePath, 'https://findspreadsheet.com').href} target="_blank" rel="noopener">View original listing</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {related.length > 0 && <section class="section"><h2>Compare similar listings</h2>
+      <ul>{related.map(item => <li><a href={pilotPath(item.id)}>{item.name}</a></li>)}</ul>
+    </section>}
+  </main>
+  <footer><p class="data-note">Independent recommendation site. Orders and payments are handled on loongbuy.com.</p></footer>
+  <PilotProductLinks />
+  <script src="/app.js?v=featured-detail-v1" is:inline></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+---
+import { readFileSync } from 'node:fs';
+import Layout from '../../components/Layout.astro';
+import indexedProductIds from '../../lib/indexed-products.json';
+import { categoryLabel, detailsUrl, priceLabel, type Product } from '../../lib/catalog';
+
+const catalog = JSON.parse(readFileSync('public/data/catalog.json', 'utf8')) as Product[];
+const products = indexedProductIds.map(id => {
+  const product = catalog.find(item => item.weidianId === id);
+  if (!product) throw new Error('Indexed product missing from catalog: ' + id);
+  return product;
+});
+---
+<Layout title="Selected Weidian Products | Sugargoo Spreadsheet" description="Compare seller photos, reference prices and available warehouse QC on selected Weidian product pages.">
+  <section class="wrap section">
+    <header class="section-heading"><h1>Selected Weidian products</h1><a href="/browse/" class="text-link">Browse all finds</a></header>
+    <p>Open each listing to compare photos, check available warehouse QC and choose a buying agent.</p>
+    <div class="products">
+      {products.map(product => (
+        <article class="product-card">
+          <a href={detailsUrl(product.weidianId)}><img src={product.image} alt={product.name} width="360" height="360" loading="lazy" /></a>
+          <div class="product-info">
+            <span class="product-category">{categoryLabel(product.category)}</span>
+            <h2><a href={detailsUrl(product.weidianId)}>{product.name}</a></h2>
+            <strong>{priceLabel(product.price)}</strong>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</Layout>

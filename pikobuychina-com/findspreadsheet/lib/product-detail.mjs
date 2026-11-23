@@ -21,6 +21,11 @@ export function setupDetail() {
   const qc = select('#product-qc');
   const save = select('#find-save');
   const saveLabel = save.textContent;
+  select('#find-detail').addEventListener('click', event => {
+    const purchase = event.target.closest?.('a[data-product-purchase][href]');
+    if (!purchase || purchase.protocol !== 'https:' || purchase.origin === location.origin) return;
+    window.gtag?.('event', 'product_outbound_click', { agent_host: purchase.hostname });
+  });
   const alternatives = select('#other-agents');
   const agentLinks = [...alternatives.querySelectorAll('[data-agent]')];
   let product;
@@ -75,6 +80,7 @@ export function setupDetail() {
     const purchase = purchaseFor(product,agent);
     select('#find-buy').hidden = false;
     select('#find-buy').href = purchase.href;
+    select('#find-buy').toggleAttribute('data-product-purchase', Boolean(product.id) && agent !== 'findspreadsheet');
     select('#find-buy').textContent = purchase.label;
     select('#find-buy').rel = !product.id || agent === 'findspreadsheet' ? 'noopener' : 'sponsored noopener';
     alternatives.hidden = false;
@@ -83,6 +89,7 @@ export function setupDetail() {
       const target = link.dataset.agent;
       link.hidden = product.id ? target === agent : target !== 'findspreadsheet';
       if (!link.hidden) link.href = purchaseFor(product,target).href;
+      link.toggleAttribute('data-product-purchase', !link.hidden && Boolean(product.id) && target !== 'findspreadsheet');
     }
     select('#find-price').textContent = product.price == null ? '' : formatPrice(product.price);
   }

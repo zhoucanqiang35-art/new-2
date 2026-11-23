@@ -17,6 +17,12 @@
     allow_ad_personalization_signals: false,
   });
 
+  document.addEventListener('click', event => {
+    const link = event.target.closest?.('a[data-product-purchase][href]');
+    if (!link || link.protocol !== 'https:' || link.origin === location.origin) return;
+    gtag('event', 'product_outbound_click', { agent_host: link.hostname });
+  });
+
   const tag = document.createElement('script');
   tag.async = true;
   tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + measurementId;

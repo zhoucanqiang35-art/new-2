@@ -8,7 +8,7 @@ export interface Product {
   price: string;
 }
 
-import featuredProductIds from './featured-products.json';
+import indexedProductIds from './indexed-products.json';
 import referenceRates from '../../public/data/rates.json';
 export const signup = 'https://www.sugargoo.com/register?memberId=3914891758646228603';
 export const registration = signup;
@@ -25,7 +25,7 @@ export const highlighted = ['4502', '8648', '7357', '7652', '8477', '7953', '707
 export const featuredImage = (product: Product) => highlighted.includes(product.id) ? '/featured/' + product.id + '.webp' : product.image;
 
 export const categoryLabel = (slug: string) => labels.get(slug) ?? 'Other finds';
-export const detailsUrl = (id: string) => featuredProductIds.includes(id)
+export const detailsUrl = (id: string) => indexedProductIds.includes(id)
   ? `/products/${id}/`
   : '/product/?id=' + encodeURIComponent(id);
 export const sourceUrl = (product: Product) => new URL(product.sourcePath, upstream).href;

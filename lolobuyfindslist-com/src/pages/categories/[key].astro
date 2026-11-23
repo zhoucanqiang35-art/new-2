@@ -23,7 +23,8 @@ const directoryUrl = '/spreadsheet/?category=' + encodeURIComponent(key);
     <div class="actions">
       <a class="button dark" href={directoryUrl}>View all listings</a>
       {products.some(hasQc) && <a class="button outline" href={directoryUrl + '&qc=1'}>Finds with QC Photos</a>}
-      <a href="/qc/">Look up QC</a>
+      <a href="/qc/">Look up QC by item ID</a>
+      {key === 'shoes' && <a href="#shoe-size-check">Compare shoe sizes</a>}
     </div>
     <section class="edit-section" aria-labelledby="category-finds">
       <div class="section-title"><h2 id="category-finds">Selected listings</h2></div>
@@ -35,7 +36,14 @@ const directoryUrl = '/spreadsheet/?category=' + encodeURIComponent(key);
     <section class="edit-section qc-reading" aria-labelledby="category-qc">
       <h2 id="category-qc">What to check before ordering</h2>
       <div class="qc-reading-grid">
-        <article><h3>Size and measurements</h3><p>{guide.fit}</p></article>
+        <article id={key === 'shoes' ? 'shoe-size-check' : undefined}>
+          <h3>Size and measurements</h3><p>{guide.fit}</p>
+          {key === 'shoes' && <ul>
+            <li>Measure both feet while standing. Use the longer foot in centimetres.</li>
+            <li>Compare foot length with the seller’s foot-length column. If the seller lists insole length, compare it with the insole of a pair that fits.</li>
+            <li>Confirm both size labels in QC photos. Ask for an insole measurement when the seller’s chart leaves you between sizes.</li>
+          </ul>}
+        </article>
         <article><h3>Warehouse QC</h3><p>{guide.photos}</p></article>
       </div>
     </section>

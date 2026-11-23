@@ -1,4 +1,5 @@
 import articles from '../articles.json';
+import { pilotProducts, pilotPath } from '../lib/pilot-products.js';
 import { isIndexableSite } from '../lib/seo.js';
 
 export function GET({ site }) {
@@ -11,6 +12,8 @@ export function GET({ site }) {
     '/faq/',
     '/articles/',
     '/image-search/',
+    '/products/',
+    ...pilotProducts.map(({ id }) => pilotPath(id)),
     ...articles.map(({ slug }) => `/articles/${encodeURIComponent(slug)}/`),
   ];
   const entries = routes.map(path => `  <url><loc>${new URL(path, site).href}</loc></url>`);
