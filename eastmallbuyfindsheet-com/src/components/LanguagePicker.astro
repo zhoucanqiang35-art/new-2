@@ -1,18 +1,27 @@
 ---
 import {languages} from '../lib/languages.mjs';
 ---
-<div class="language-picker">
-  <label class="visually-hidden" for="site-language">Website language</label>
-  <select id="site-language">
-    {languages.map(([code, label]) => <option value={code} selected={code === 'en'} lang={code} translate="no">{label}</option>)}
-  </select>
-</div>
+<details class="language-picker" id="site-language">
+  <summary aria-label="Website language">
+    <span aria-hidden="true">◎</span>
+    <span data-current-language translate="no">English</span>
+    <span class="language-chevron" aria-hidden="true"></span>
+  </summary>
+  <div class="language-options" role="group" aria-label="Choose a language">
+    {languages.map(([code, label]) => (
+      <button type="button" data-language={code} aria-pressed={code === 'en'} lang={code} translate="no">{label}</button>
+    ))}
+  </div>
+</details>
 <p id="language-status" class="visually-hidden" role="status"></p>
 <script>
   import {languages} from '../lib/languages.mjs';
   import {navigationLabels} from '../lib/language-labels.mjs';
 
-  const input = document.querySelector<HTMLSelectElement>('#site-language')!;
+  const picker = document.querySelector<HTMLDetailsElement>('#site-language')!;
+  const toggle = picker.querySelector('summary')!;
+  const currentLabel = picker.querySelector('[data-current-language]')!;
+  const buttons = [...picker.querySelectorAll<HTMLButtonElement>('[data-language]')];
   const status = document.querySelector('#language-status')!;
   const attributes = ['placeholder', 'aria-label', 'alt', 'title'];
   const ignored = 'script, style, noscript, [translate="no"], [data-reference-price]';
@@ -82,14 +91,17 @@ import {languages} from '../lib/languages.mjs';
       active = code;
       document.documentElement.lang = code;
       document.documentElement.dir = code === 'ar' ? 'rtl' : 'ltr';
-      input.value = code;
+      for (const button of buttons) {
+        const selected = button.dataset.language === code;
+        button.setAttribute('aria-pressed', String(selected));
+        if (selected) currentLabel.textContent = button.textContent;
+      }
       status.textContent = '';
       apply(document.querySelector('title')!);
       apply(document.body);
       try { localStorage.setItem(storageKey, code); } catch {}
     } catch {
       if (id === requestId) {
-        input.value = active;
         status.textContent = 'Could not load that language. Please try again.';
       }
     }
@@ -102,8 +114,20 @@ import {languages} from '../lib/languages.mjs';
     }
   }).observe(document.body, {childList: true, subtree: true});
 
-  input.addEventListener('change', () => {
-    if (knownCodes.has(input.value)) void setLanguage(input.value);
+  for (const button of buttons) {
+    button.addEventListener('click', () => {
+      picker.open = false;
+      toggle.focus();
+      void setLanguage(button.dataset.language!);
+    });
+  }
+  picker.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape' || !picker.open) return;
+    picker.open = false;
+    toggle.focus();
+  });
+  document.addEventListener('click', (event) => {
+    if (event.target instanceof Node && !picker.contains(event.target)) picker.open = false;
   });
   try {
     const stored = localStorage.getItem(storageKey);
@@ -111,18 +135,66 @@ import {languages} from '../lib/languages.mjs';
   } catch {}
 </script>
 <style>
-  .language-picker select {
+  .language-picker { position: relative; z-index: 10; }
+  summary {
+    display: flex;
+    align-items: center;
+    gap: .42rem;
     min-height: 42px;
-    max-width: 8.3rem;
-    padding: 5px 8px;
+    padding: 5px 10px;
     border: 1px solid var(--control-border);
     border-radius: 8px;
     color: var(--ink);
-    background: var(--tint);
+    background: var(--surface);
     font-size: .84rem;
     font-weight: 720;
+    list-style: none;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  summary::-webkit-details-marker { display: none; }
+  .language-chevron {
+    width: .42rem;
+    height: .42rem;
+    border: solid currentColor;
+    border-width: 0 1px 1px 0;
+    transform: translateY(-2px) rotate(45deg);
+  }
+  [open] .language-chevron { transform: translateY(1px) rotate(225deg); }
+  .language-options {
+    position: absolute;
+    inset-block-start: calc(100% + 7px);
+    inset-inline-end: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px;
+    width: min(18.5rem, calc(100vw - 28px));
+    max-height: min(22rem, 65dvh);
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+    padding: 7px;
+    border: 1px solid var(--edge);
+    border-radius: 11px;
+    background: var(--surface);
+    box-shadow: 0 10px 26px rgb(55 15 30 / 14%);
+  }
+  .language-options button {
+    border: 0;
+    border-radius: 6px;
+    min-height: 42px;
+    padding: 6px 10px;
+    text-align: start;
+    color: var(--ink);
+    background: transparent;
+    font-size: .84rem;
+  }
+  .language-options button:hover,
+  .language-options button[aria-pressed="true"] {
+    color: var(--brand);
+    background: var(--tint);
   }
   @media (max-width: 720px) {
-    .language-picker select { min-height: 34px; max-width: 6.3rem; font-size: .74rem; }
+    summary { min-height: 34px; padding-inline: 7px; font-size: .74rem; }
+    .language-options { width: min(15rem, calc(100vw - 28px)); }
   }
 </style>

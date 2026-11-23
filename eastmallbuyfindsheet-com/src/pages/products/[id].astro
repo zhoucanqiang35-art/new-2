@@ -48,14 +48,16 @@ const description = product.name + ' on the EastMallBuy spreadsheet. Compare sel
           {price && <p class="detail-estimate"><strong class="reference-price" data-reference-price={product.price}>{price}</strong> estimated item price</p>}
           <p><strong>Size check.</strong> Confirm the seller’s current size chart and selected variant.</p>
           <p><strong>QC status.</strong> <a href={qcUrl}>{hasQc ? 'Historical QC available' : 'Check for warehouse QC'}</a></p>
-          <div class="actions">
+          <div class="detail-buy">
             <a class="button dark" href={destination.url} rel={destination.sponsored ? 'sponsored noopener' : 'noopener'} target="_blank">{destination.name}</a>
-            <a class="button outline" href={originalUrl(id)} target="_blank" rel="noopener">Original Weidian listing</a>
           </div>
-          <p><a href={sourceUrl}>View on Findspreadsheet</a></p>
+          <div class="detail-listing-links">
+            <a href={originalUrl(id)} target="_blank" rel="noopener">Original Weidian listing</a>
+            <a href={sourceUrl}>View on Findspreadsheet</a>
+          </div>
         </div>
       </div>
-      {categoryGuides[product.category] && <section class="subsection"><h2>Size and measurements</h2><p>{categoryGuides[product.category].fit}</p></section>}
+      {categoryGuides[product.category] && <section class="subsection" data-size-guide><h2>Size and measurements</h2><p>{categoryGuides[product.category].fit}</p></section>}
       <section class="subsection">
         <div class="section-title"><h2>More in {category}</h2><a href={categoryUrl}>Browse category</a></div>
         <div class="product-grid">{related.map((item) => <Card product={item} />)}</div>

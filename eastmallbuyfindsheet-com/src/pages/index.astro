@@ -1,5 +1,6 @@
 ---
 import Layout from '../components/Layout.astro';
+import ProductSearch from '../components/ProductSearch.astro';
 import Card from '../components/Card.astro';
 import CategoryGrid from '../components/CategoryGrid.astro';
 import {categoryEntries, listingCount} from '../lib/categories.mjs';
@@ -23,8 +24,7 @@ const qcSampleProduct = catalog.find((item) => item.weidianId === qcSample);
       <h1>EastMallBuy <span>Spreadsheet</span></h1>
       <p class="catalog-lead">Browse streetwear, shoes and accessories. Check seller photos and available warehouse QC before opening a listing on EastMallBuy.</p>
       <form class="search-form home-search" action="/spreadsheet/">
-        <label class="visually-hidden" for="home-search">Search by name, Weidian link or ID</label>
-        <input id="home-search" name="q" type="search" placeholder="Name, Weidian link or ID" />
+        <ProductSearch id="home-search" />
         <button class="button dark" type="submit">Search</button>
       </form>
       <div class="home-actions">

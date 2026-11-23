@@ -38,10 +38,6 @@ const entries = categoryEntries.map(({key, name, count}) => {
   <section class="wrap page category-guide-page" aria-labelledby="category-guide-title">
     <h1 id="category-guide-title">Shop by category</h1>
     <p class="lead">Explore the 11 categories in the EastMallBuy spreadsheet. Compare styles, check measurements and know which details to look for in seller and warehouse photos.</p>
-    <nav class="category-index" aria-label="Jump to a category">
-      {entries.map(({name, anchor}) => <a href={'#' + anchor}>{name}</a>)}
-    </nav>
-
     <div class="category-guides">
       {entries.map(({name, count, guide, photo, availableSearches, href, landing, anchor}) => (
         <article class="category-guide" id={anchor} aria-labelledby={anchor + '-heading'}>
@@ -88,19 +84,12 @@ const entries = categoryEntries.map(({key, name, count}) => {
 <style>
   .category-guide-page .lead { max-width: 640px; }
 
-  .category-index,
   .category-guide-searches ul {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
   }
 
-  .category-index {
-    padding: 0 0 23px;
-    border-bottom: 1px solid var(--edge);
-  }
-
-  .category-index a,
   .category-guide-searches a {
     display: block;
     padding: 5px 11px;
@@ -112,7 +101,6 @@ const entries = categoryEntries.map(({key, name, count}) => {
     font-weight: 680;
   }
 
-  .category-index a:hover,
   .category-guide-searches a:hover {
     background: var(--tint);
     text-decoration: underline;

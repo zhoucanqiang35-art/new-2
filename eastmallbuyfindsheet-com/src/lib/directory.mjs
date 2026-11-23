@@ -1,4 +1,4 @@
-import {readJson, card} from './browser.mjs';
+import {readCatalog, card} from './browser.mjs';
 import {parseId} from './catalog.mjs';
 
 const form = document.querySelector('#filters');
@@ -61,8 +61,8 @@ function render(updateUrl = false) {
 function reset() { page = 1; render(true); }
 
 fromUrl();
-readJson('/data/catalog.json').then((data) => {
-  catalog = data.filter((item) => /^\d+$/.test(item.weidianId ?? ''));
+readCatalog().then((data) => {
+  catalog = data;
   render();
   form.addEventListener('submit', (event) => { event.preventDefault(); reset(); });
   category.addEventListener('change', reset);

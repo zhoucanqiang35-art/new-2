@@ -1,0 +1,41 @@
+---
+const {id} = Astro.props;
+---
+<label class="visually-hidden" for={id}>Search by product name, Weidian link or ID</label>
+<input id={id} name="q" type="search" placeholder="Try sneakers, hoodie or a Weidian ID" list={id + '-suggestions'} data-product-search autocomplete="off" />
+<datalist id={id + '-suggestions'}>
+  {['Sneakers', 'Hoodie', 'Jacket', 'Football jersey', 'Cargo pants'].map((term) => <option value={term} />)}
+</datalist>
+<script>
+  import {readCatalog} from '../lib/browser.mjs';
+
+  for (const input of document.querySelectorAll<HTMLInputElement>('[data-product-search]')) {
+    const list = input.list!;
+    const examples = Array.from(list.options, (option) => option.value);
+    const show = (values: string[]) => {
+      list.replaceChildren(...values.map((value) => {
+        const option = document.createElement('option');
+        option.value = value;
+        return option;
+      }));
+    };
+    input.addEventListener('input', async () => {
+      const term = input.value.trim().toLowerCase();
+      show(examples);
+      if (term.length < 2 || /^(?:\d|https?:)/.test(term)) return;
+      try {
+        const catalog = await readCatalog();
+        if (term !== input.value.trim().toLowerCase()) return;
+        const category = input.form?.querySelector<HTMLSelectElement>('#category')?.value;
+        const suggestions = new Map(examples.filter((value) => value.toLowerCase().includes(term)).map((value) => [value.toLowerCase(), value]));
+        for (const item of catalog) {
+          if (suggestions.size >= 8) break;
+          if (category && item.category !== category) continue;
+          const name = item.name.trim().toLowerCase();
+          if (name.includes(term) && !suggestions.has(name)) suggestions.set(name, item.name.trim());
+        }
+        show([...suggestions.values()]);
+      } catch {}
+    });
+  }
+</script>

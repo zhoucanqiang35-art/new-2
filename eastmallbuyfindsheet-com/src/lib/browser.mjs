@@ -7,6 +7,14 @@ export async function readJson(url) {
   return response.json();
 }
 
+let catalogData;
+export function readCatalog() {
+  catalogData ??= readJson('/data/catalog.json')
+    .then((items) => items.filter((item) => /^\d+$/.test(item.weidianId ?? '')))
+    .catch((error) => { catalogData = undefined; throw error; });
+  return catalogData;
+}
+
 export function element(tag, properties = {}, children = []) {
   const node = Object.assign(document.createElement(tag), properties);
   node.append(...children);
