@@ -38,7 +38,10 @@ const steps = [
     </div>
     <figure>
       <a href={'/media/tutorial/' + step.image + '.webp'} target="_blank" rel="noopener" aria-label={'Enlarge screenshot: ' + step.credit}>
-        <img src={'/media/tutorial/' + step.image + '.webp'} alt={step.alt} loading="lazy" width={step.width} height={step.height} />
+        <img src={'/media/tutorial/' + step.image + '.webp'}
+          srcset={`/media/tutorial/${step.image}-480.webp 480w, /media/tutorial/${step.image}.webp ${step.width}w`}
+          sizes={compact ? '(max-width: 680px) 27vw, (max-width: 740px) 95vw, 55vw' : '(max-width: 740px) 95vw, 55vw'}
+          alt={step.alt} loading="lazy" decoding="async" width={step.width} height={step.height} />
       </a>
       <figcaption>{step.credit}</figcaption>
     </figure>

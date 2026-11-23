@@ -246,9 +246,15 @@ def grid(parent, products, **attrs):
         picture=link(card,None,destination)
         photo=item.get('image','')
         if photo:
-            url=THUMBNAILS.get(photo) or (photo if photo.startswith('https://') else FIND_ORIGIN+photo)
+            original = photo if photo.startswith('https://') else FIND_ORIGIN + photo
+            parsed = urlsplit(original)
+            url = original
+            if original.startswith(FIND_ORIGIN + '/uploads/'):
+                local = THUMBNAILS.get(parsed.path)
+                url = local if local and not local.startswith('/assets/catalog/single-') else (
+                    'https://wsrv.nl/?' + urlencode({'url': original, 'w': 520, 'output': 'webp'}))
             add(picture,'img',src=url,alt=name,width=520,height=520,loading='lazy',decoding='async',
-                translate='no',data_product_image=photo,referrerpolicy='no-referrer')
+                translate='no',data_product_image=photo,data_image_size=520,referrerpolicy='no-referrer')
         copy=add(card,'div')
         link(add(copy,'h3'),name,destination,translate='no')
         add(copy,'small',labels[category])

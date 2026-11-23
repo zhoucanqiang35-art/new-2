@@ -57,7 +57,10 @@
 #catalog-more{margin-block:18px}
 #catalog .catalog-form label[data-filter]{flex:0 1 170px}
 .catalog-card h3 a{overflow-wrap:anywhere}
-.listing-gallery-stage{position:relative}
+.listing-gallery-stage{position:relative;aspect-ratio:1}
+#find-status{position:absolute;inset-inline:0;inset-block-start:0;margin:0}
+#gallery-open:not([hidden]){display:block}
+#gallery-position{min-height:1.5em}
 .listing-gallery-stage img{width:100%;aspect-ratio:1;object-fit:contain;background:white;border:1px solid var(--line);border-radius:13px}
 #gallery-prev,#gallery-next{position:absolute;inset-block-start:50%;min-width:42px}
 #gallery-prev{inset-inline-start:6px}#gallery-next{inset-inline-end:6px}
