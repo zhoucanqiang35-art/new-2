@@ -418,3 +418,39 @@ footer{margin-top:54px;padding:27px 0 32px}.footer-inner{display:flex;justify-co
   .detail-gallery .detail-image { aspect-ratio: 1.18; }
   .detail-photo-options { grid-auto-rows: 52px; max-height: 172px; }
 }
+
+.agent-dialog {
+  width: min(340px, calc(100vw - 28px));
+  max-height: calc(100dvh - 30px);
+  padding: 12px;
+}
+.agent-dialog[open] {
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
+  overflow: hidden;
+}
+.agent-dialog-heading { margin-bottom: 7px; }
+.agent-dialog-heading h2 { font-size: 1.08rem; }
+.agent-dialog-heading .button { min-height: 34px; padding: 5px 9px; font-size: .82rem; }
+.agent-dialog-search { min-height: 34px; padding: 5px 7px; margin-bottom: 7px; }
+.agent-dialog-options {
+  max-height: clamp(85px, 34dvh, 230px);
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  overscroll-behavior-y: contain;
+  padding: 2px 3px 4px 2px;
+}
+.agent-dialog-options .agent-dialog-button { min-height: 36px; padding: 5px; gap: 5px; font-size: .8rem; }
+.detail-secondary-actions .agent-picker-button { justify-self: start; width: auto; min-height: 38px; padding-inline: 12px; }
+.agent-dialog-empty { grid-column: 1 / -1; font-size: .85rem; color: var(--muted); }
+.detail-fit-card {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--edge);
+  border-radius: 8px;
+  background: var(--surface);
+}
+.detail-fit-card h2 { font-size: 1.03rem; }
+.detail-copy .detail-fit-card p { margin: 5px 0 0; font-size: .9rem; }
+.store-listings-filter { display: inline-flex; align-items: center; gap: 7px; color: var(--ink); font-size: .92rem; }
+.store-listings-filter input { accent-color: var(--brand); }

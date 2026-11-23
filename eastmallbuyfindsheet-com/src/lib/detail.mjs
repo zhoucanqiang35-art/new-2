@@ -1,7 +1,8 @@
 import {card, element, external, readJson, readCatalog, referencePrice, showQc} from './browser.mjs';
 import {categoryLabel, officialFavicon, originalUrl, parseId, productImage, productUrl, sourceOrigin} from './catalog.mjs';
-import {categoryFinds, categoryLanding} from './landing-paths.mjs';
-import {agents, purchaseFor, shoppingOptions} from './shopping.mjs';
+import {categoryFinds, categoryLanding, isShopItem} from './landing-paths.mjs';
+import {categoryGuides} from './category-guides.mjs';
+import {agents, purchaseFor} from './shopping.mjs';
 
 const target = document.querySelector('#product-detail');
 const id = target.dataset.item || parseId(new URLSearchParams(location.search).get('id') ?? '');
@@ -183,9 +184,15 @@ function shoppingDialog(product) {
     search,
     options,
   ]);
+  const links = [...options.children];
+  const empty = element('p', {className: 'agent-dialog-empty', textContent: 'No matching shopping agents.', hidden: true});
+  empty.setAttribute('role', 'status');
+  options.append(empty);
   search.addEventListener('input', () => {
     const term = search.value.trim().toLowerCase();
-    for (const link of options.children) link.hidden = !link.textContent.toLowerCase().includes(term);
+    for (const link of links) link.hidden = !link.textContent.toLowerCase().includes(term);
+    empty.hidden = links.some((link) => !link.hidden);
+    options.scrollTop = 0;
   });
   dialog.setAttribute('aria-labelledby', title.id);
   trigger.setAttribute('aria-haspopup', 'dialog');
@@ -206,17 +213,11 @@ function shoppingDialog(product) {
 
 function render(product, photos, catalog) {
   if (!target.dataset.listing) document.title = product.name + ' | EastMallBuy Findsheet';
-  const buy = external('', '', 'button dark');
-  const updatePurchase = () => {
-    const destination = purchaseFor(shoppingOptions().agent, id, product.sourcePath);
-    buy.textContent = destination.name;
-    buy.href = destination.url;
-    buy.rel = destination.sponsored ? 'sponsored noopener' : 'noopener';
-  };
-  updatePurchase();
-  window.addEventListener('shopping-change', updatePurchase);
-  window.addEventListener('pageshow', updatePurchase);
-  const [otherAgents, agentDialog] = shoppingDialog(product);
+  const fromOurStore = isShopItem(id);
+  const buy = fromOurStore
+    ? external('Buy on our Weidian store', originalUrl(id), 'button dark')
+    : element('a', {href: '/spreadsheet/?store=1', className: 'button outline', textContent: 'Browse our Weidian store products'});
+  const [otherAgents, agentDialog] = fromOurStore ? shoppingDialog(product) : [];
   const estimate = referencePrice(product.price);
   const {sellerGallery, options, detailPhotos} = gallery(product, photos);
   const copy = element('button', {type: 'button', className: 'button outline', textContent: 'Copy Weidian link'});
@@ -229,16 +230,19 @@ function render(product, photos, catalog) {
     element('p', {className: 'detail-item-id', textContent: 'Weidian item ' + id}),
     ...(estimate ? [element('p', {className: 'detail-estimate'}, [estimate, ' estimated item price'])] : []),
     element('div', {className: 'detail-buy'}, [buy]),
-    element('div', {className: 'detail-secondary-actions'}, [otherAgents, copy]),
-    copyStatus,
-    agentDialog,
+    ...(fromOurStore ? [element('div', {className: 'detail-secondary-actions'}, [otherAgents, copy]), copyStatus, agentDialog] : []),
     options,
+    ...(categoryGuides[product.category] ? [element('section', {className: 'detail-fit-card'}, [
+      element('h2', {textContent: 'Size and fit guide'}),
+      element('p', {textContent: categoryGuides[product.category].fit}),
+    ])] : []),
     element('div', {className: 'detail-listing-links'}, [
-      external('Original Weidian listing', originalUrl(id)),
-      external('View on Findspreadsheet', new URL(product.sourcePath, sourceOrigin).href),
+      ...(fromOurStore ? [external('View on Findspreadsheet', new URL(product.sourcePath, sourceOrigin).href)] : []),
       element('a', {href: '#warehouse-qc', textContent: 'Warehouse QC photos'}),
     ]),
-    element('p', {className: 'detail-purchase-note', textContent: 'Confirm your style and size with the seller. Agent links may contain a referral code.'}),
+    element('p', {className: 'detail-purchase-note', textContent: fromOurStore
+      ? 'Confirm your style and size on Weidian. Agent links may contain a referral code.'
+      : 'Catalog reference. Direct purchase is available for items listed in our Weidian store.'}),
   ]);
   const sellerDetails = element('section', {className: 'subsection detail-seller-photos'}, [
     element('div', {className: 'media-heading'}, [
@@ -275,9 +279,7 @@ async function init() {
   try {
     if (target.dataset.listing) {
       const {product, photos, related} = JSON.parse(target.dataset.listing);
-      const sizeGuide = target.querySelector('[data-size-guide]');
       render(product, photos, related);
-      if (sizeGuide) target.querySelector('#warehouse-qc').after(sizeGuide);
       return;
     }
     const canonical = productUrl(id);

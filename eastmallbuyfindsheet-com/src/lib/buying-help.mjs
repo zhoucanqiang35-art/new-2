@@ -18,7 +18,7 @@ export const buyingSteps = [
   },
   {
     title: 'Open the item on EastMallBuy and review the order',
-    text: 'Use Buy on EastMallBuy from the product page. To use a marketplace link directly, paste the original link into EastMallBuy. Choose the exact color, size and quantity, then review the current item price and any domestic delivery charges before paying in your EastMallBuy account.',
+    text: 'Choose Buy on our Weidian store for verified store items. To order through EastMallBuy, open Other shopping agents or paste the original Weidian link into EastMallBuy. Choose the exact color, size and quantity, then review the current item price and any domestic delivery charges before paying in your EastMallBuy account.',
     image: 'guide-product.webp',
     width: 1210,
     height: 630,
@@ -49,7 +49,7 @@ export const faqGroups = [
     title: 'Spreadsheet and shopping',
     entries: [
       ['What is the EastMallBuy spreadsheet?', 'It is a searchable Findspreadsheet directory for finding products you can open through EastMallBuy. Browse by category, search by product name or paste a Weidian link. Each detail page brings together the original listing, seller photos, a reference price and the shopping-agent link. Registration, checkout and account support take place on the shopping platform.', '/spreadsheet/', 'Browse the spreadsheet'],
-      ['How do I use a Weidian link on EastMallBuy?', 'Use the original item link or open a supported listing and choose Buy on EastMallBuy. If a listing opens with multiple options, check the exact sizing chart, color and quantity before you submit it. The independent directory preview currently indexes Weidian listings. Other marketplace links can be checked directly with EastMallBuy.', officialOrder, 'Official ordering guide'],
+      ['How do I use a Weidian link on EastMallBuy?', 'Use the original item link or select EastMallBuy under Other shopping agents on a verified Weidian store listing. If a listing opens with multiple options, check the exact sizing chart, color and quantity before you submit it. The independent directory preview currently indexes Weidian listings. Other marketplace links can be checked directly with EastMallBuy.', officialOrder, 'Official ordering guide'],
       ['How do I find a product from a photo?', 'Open Image Search and choose a clear image of one item for the best comparison. The Findsheet preview compares its saved image index in your browser. Open likely matches and compare their seller photos, measurements and source links. You can also search with a product name or item ID if the image returns similar-looking alternatives.', '/image-search/', 'Try Image Search'],
       ['How do I change the shopping agent or currency?', 'Open the Spreadsheet and use the selector in its header. The agent changes the purchase destination on product detail pages, and the currency changes displayed estimates. The preview uses a saved exchange-rate snapshot. Review the final amount, domestic delivery and agent charges at checkout.', '/spreadsheet/', 'Open the spreadsheet'],
     ],

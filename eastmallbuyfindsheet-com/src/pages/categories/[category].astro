@@ -5,16 +5,17 @@ import catalog from '../../../public/data/catalog.json';
 import qc from '../../../public/data/qc-featured.json';
 import {categoryGuides} from '../../lib/category-guides.mjs';
 import {categoryLabel} from '../../lib/catalog.mjs';
-import {categoryFinds, categoryLanding, featuredCategories, indexedProductIds} from '../../lib/landing-paths.mjs';
+import {categoryFinds, categoryLanding, categoryOrder, categorySlug, isShopItem} from '../../lib/landing-paths.mjs';
 
 export function getStaticPaths() {
-  return featuredCategories.map((category) => ({params: {category}, props: {category}}));
+  return categoryOrder.map((category) => ({params: {category: categorySlug(category)}, props: {category}}));
 }
 const {category} = Astro.props;
 const name = categoryLabel(category);
 const guide = categoryGuides[category];
-const products = indexedProductIds.map((id) => catalog.find((item) => item.weidianId === id))
-  .filter((item) => item?.category === category);
+const listings = catalog.filter((item) => item.category === category && /^\d+$/.test(item.weidianId));
+const storeProducts = listings.filter((item) => isShopItem(item.weidianId));
+const products = (storeProducts.length ? storeProducts : listings).slice(0, 12);
 const description = guide.intro;
 ---
 <Layout title={name + ' | EastMallBuy Spreadsheet Finds'} description={description} page="categories">
@@ -27,7 +28,7 @@ const description = guide.intro;
       <a class="button outline" href="/qc/#qc-finder">Check QC by ID</a>
     </div>
     <section class="section" aria-labelledby="category-picks">
-      <div class="section-title"><h2 id="category-picks">Selected listings</h2></div>
+      <div class="section-title"><h2 id="category-picks">{storeProducts.length ? "From our Weidian store" : "Selected listings"}</h2></div>
       <div class="product-grid">
         {products.map((product) => <Card product={product} hasQc={qc[product.weidianId]?.status === 'available'} />)}
       </div>
@@ -41,7 +42,7 @@ const description = guide.intro;
       </ul>
     </section>
     <div class="actions">
-      {featuredCategories.filter((key) => key !== category).map((key) => <a class="button outline" href={categoryLanding(key)}>{categoryLabel(key)}</a>)}
+      {categoryOrder.filter((key) => key !== category).map((key) => <a class="button outline" href={categoryLanding(key)}>{categoryLabel(key)}</a>)}
       <a class="button outline" href="/guides/how-to-buy/">Read the buying guide</a>
     </div>
   </div>

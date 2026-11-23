@@ -5,22 +5,35 @@ import Card from '../../components/Card.astro';
 import catalog from '../../../public/data/catalog.json';
 import qc from '../../../public/data/qc-featured.json';
 import {categoryLabel, originalUrl, productImage, sourceOrigin} from '../../lib/catalog.mjs';
-import {categoryFinds, categoryLanding, indexedProductIds} from '../../lib/landing-paths.mjs';
+import {categoryFinds, categoryLanding, indexedProductIds, isShopItem} from '../../lib/landing-paths.mjs';
 import {categoryGuides} from '../../lib/category-guides.mjs';
-import {priceFor, purchaseFor} from '../../lib/shopping.mjs';
+import {priceFor} from '../../lib/shopping.mjs';
 
 export function getStaticPaths() {
+  const byId = new Map();
+  const previewByCategory = new Map();
+  for (const product of catalog) {
+    if (!/^\d+$/.test(product.weidianId)) continue;
+    byId.set(product.weidianId, product);
+    const preview = previewByCategory.get(product.category) ?? [];
+    if (preview.length < 5) preview.push(product);
+    previewByCategory.set(product.category, preview);
+  }
+  const galleries = new Map();
   return indexedProductIds.map((id) => {
-    const product = catalog.find((item) => item.weidianId === id);
+    const product = byId.get(id);
     if (!product) throw new Error('Missing indexed listing: ' + id);
-    const related = catalog.filter((item) => item.category === product.category && item.weidianId !== id && /^\d+$/.test(item.weidianId)).slice(0, 4);
-    let photos = [];
-    try {
-      const url = 'public/data/gallery-' + id.slice(0, 4) + '.json';
-      photos = JSON.parse(readFileSync(url, 'utf8'))[id] ?? [];
-    } catch (error) {
-      if (error.code !== 'ENOENT') throw error;
+    const related = (previewByCategory.get(product.category) ?? []).filter((item) => item.weidianId !== id).slice(0, 4);
+    const prefix = id.slice(0, 4);
+    if (!galleries.has(prefix)) {
+      try {
+        galleries.set(prefix, JSON.parse(readFileSync('public/data/gallery-' + prefix + '.json', 'utf8')));
+      } catch (error) {
+        if (error.code !== 'ENOENT') throw error;
+        galleries.set(prefix, {});
+      }
     }
+    const photos = galleries.get(prefix)[id] ?? [];
     return {params: {id}, props: {product, related, photos}};
   });
 }
@@ -29,7 +42,7 @@ const id = product.weidianId;
 const category = categoryLabel(product.category);
 const categoryUrl = categoryLanding(product.category) || categoryFinds(product.category);
 const price = priceFor(product.price);
-const destination = purchaseFor('eastmallbuy', id, product.sourcePath);
+const fromOurStore = isShopItem(id);
 const hasQc = qc[id]?.status === 'available';
 const qcUrl = '/qc/?id=' + id + '#qc-finder';
 const sourceUrl = new URL(product.sourcePath, sourceOrigin).href;
@@ -49,10 +62,11 @@ const description = product.name + ' on the EastMallBuy spreadsheet. Compare sel
           <p><strong>Size check.</strong> Confirm the seller’s current size chart and selected variant.</p>
           <p><strong>QC status.</strong> <a href={qcUrl}>{hasQc ? 'Historical QC available' : 'Check for warehouse QC'}</a></p>
           <div class="detail-buy">
-            <a class="button dark" href={destination.url} rel={destination.sponsored ? 'sponsored noopener' : 'noopener'} target="_blank">{destination.name}</a>
+            {fromOurStore
+              ? <a class="button dark" href={originalUrl(id)} rel="noopener" target="_blank">Buy on our Weidian store</a>
+              : <a class="button outline" href="/spreadsheet/?store=1">Browse our Weidian store products</a>}
           </div>
           <div class="detail-listing-links">
-            <a href={originalUrl(id)} target="_blank" rel="noopener">Original Weidian listing</a>
             <a href={sourceUrl}>View on Findspreadsheet</a>
           </div>
         </div>

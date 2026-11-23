@@ -1,8 +1,8 @@
 import catalog from '../../public/data/catalog.json';
 import {categories} from './catalog.mjs';
 
-export const categoryOrder = ['shoes', 'hoodies-sweaters', 't-shirts', 'jackets', 'pants-shorts', 'headwear',
-  'ShortSets', 'jersey', 'accessories', 'electronics', 'other-stuff'];
+import {categoryOrder} from './landing-paths.mjs';
+
 const counts = new Map(categoryOrder.map((key) => [key, 0]));
 for (const item of catalog) {
   if (counts.has(item.category) && /^\d+$/.test(item.weidianId)) counts.set(item.category, counts.get(item.category) + 1);
