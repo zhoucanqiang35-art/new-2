@@ -11,7 +11,7 @@ import Layout from '../components/Layout.astro';
   </section>
 </Layout>
 <script>
-  import {card, readJson} from '../lib/browser.mjs';
+  import {card, readCatalog} from '../lib/browser.mjs';
   import {savedItems} from '../lib/shopping.mjs';
 
   const status = document.querySelector('#saved-status')!;
@@ -21,7 +21,7 @@ import Layout from '../components/Layout.astro';
     results.replaceChildren();
     if (!saved.size) { status.textContent = 'No saved finds yet.'; return; }
     try {
-      const catalog = await readJson('/data/catalog.json');
+      const catalog = await readCatalog();
       const products = catalog.filter((item: {weidianId: string}) => saved.has(item.weidianId));
       results.replaceChildren(...products.map((item: Parameters<typeof card>[0]) => card(item)));
       status.textContent = products.length ? '' : 'These listings are unavailable in the saved catalog.';

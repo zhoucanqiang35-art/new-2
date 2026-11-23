@@ -6,8 +6,7 @@ import {categories} from '../lib/catalog.mjs';
 <Layout title="EastMallBuy Product Spreadsheet | Browse and Search" page="sheet">
   <section class="wrap page">
     <p class="eyebrow">PRODUCT DIRECTORY</p><h1>EastMallBuy Spreadsheet</h1>
-    <p class="lead">Browse the saved Findspreadsheet catalog. Search by name or paste a Weidian item link. The directory shows estimated item prices. Confirm the current price and availability with your selected agent.</p>
-    <label class="store-listings-filter"><input id="store-listings-only" name="store" value="1" form="filters" type="checkbox" /> Our Weidian store only</label>
+    <p class="lead">Browse products from our Weidian store. Search by name or paste a Weidian item link. The directory shows estimated item prices. Confirm the current price and availability with your selected agent.</p>
     <form id="filters" class="filter-bar" action="/spreadsheet/">
       <ProductSearch id="query" />
       <label class="visually-hidden" for="category">Category</label><select id="category" name="category"><option value="">All categories</option>{Object.entries(categories).map(([key, label]) => <option value={key}>{label}</option>)}</select>

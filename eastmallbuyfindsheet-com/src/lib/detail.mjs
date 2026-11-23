@@ -1,4 +1,4 @@
-import {element, external, readJson, readCatalog, referencePrice} from './browser.mjs';
+import {element, external, readJson, referencePrice} from './browser.mjs';
 import {categoryLabel, officialFavicon, originalUrl, parseId, productImage, productUrl, purchaseUrl, sourceOrigin} from './catalog.mjs';
 import {isShopItem} from './landing-paths.mjs';
 import {categoryGuides} from './category-guides.mjs';
@@ -31,10 +31,10 @@ function gallery(product, images) {
   sellerThumbs.hidden = photos.length < 2;
   const sellerGallery = element('div', {className: 'detail-gallery'}, [stage, sellerThumbs]);
 
-  const heading = element('h2', {id: 'listing-photo-options', textContent: 'Weidian styles and photos'});
+  const heading = element('h2', {id: 'listing-photo-options', textContent: 'Catalog photos'});
   const selectedLabel = element('span', {className: 'photo-option-label', translate: false});
   const thumbs = element('div', {className: 'detail-photo-options'});
-  const choices = element('section', {hidden: true}, [element('div', {className: 'media-heading'}, [heading, selectedLabel]), thumbs]);
+  const choices = element('section', {}, [element('div', {className: 'media-heading'}, [heading, selectedLabel]), thumbs]);
   choices.setAttribute('aria-labelledby', heading.id);
   thumbs.tabIndex = 0;
   thumbs.setAttribute('role', 'group');
@@ -43,17 +43,26 @@ function gallery(product, images) {
   const sizeButtons = element('div', {className: 'detail-size-buttons'});
   const sizeOptions = element('section', {className: 'detail-size-options', hidden: true}, [sizeHeading, sizeButtons]);
   sizeOptions.setAttribute('aria-labelledby', sizeHeading.id);
-  const options = element('div', {className: 'detail-options', hidden: true}, [choices, sizeOptions]);
+  const options = element('div', {className: 'detail-options'}, [choices, sizeOptions]);
   let current = 0;
+  let activeLabel = '';
 
   function selectPhoto(url, label = '') {
     cover.src = url;
     cover.alt = label ? product.name + ' · ' + label : product.name;
     selectedLabel.textContent = label;
+    activeLabel = label;
     const position = photos.indexOf(url);
-    counter.textContent = label || (position + 1) + ' / ' + photos.length;
+    counter.textContent = position < 0 ? 'Product photo' : (position + 1) + ' / ' + photos.length;
     for (const button of sellerThumbs.children) button.setAttribute('aria-pressed', String(position >= 0 && !label && button.dataset.photo === url));
-    for (const button of thumbs.children) button.setAttribute('aria-pressed', String(Boolean(label) && button.dataset.photo === url && button.title === label));
+    highlightPhoto();
+  }
+
+  function highlightPhoto() {
+    for (const button of thumbs.children) {
+      button.setAttribute('aria-pressed', String(button.dataset.photo === cover.getAttribute('src') &&
+        (!activeLabel || button.title === activeLabel)));
+    }
   }
 
   function showPhoto(index) {
@@ -101,19 +110,25 @@ function gallery(product, images) {
     if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.4) showPhoto(current + (dx < 0 ? 1 : -1));
   }, {passive: true});
 
-  showPhoto(0);
-  const media = isShopItem(id) ? productOptions().catch(savedProductMedia) : savedProductMedia();
-  media.then(({styles = [], sizes = [], photos: listingPhotos = []}) => {
+  function showPhotoOptions(styles, listingPhotos, name, label) {
     const styleUrls = new Set(styles.map(({photo}) => photo));
-    const availablePhotos = [...styles, ...listingPhotos.filter((photo) => !styleUrls.has(photo))
-      .map((photo, index) => ({photo, label: 'Listing photo ' + (index + 1)}))];
-    choices.hidden = !availablePhotos.length;
-    sizeOptions.hidden = !sizes.length;
-    options.hidden = choices.hidden && sizeOptions.hidden;
-    thumbs.replaceChildren(...availablePhotos.map(({photo, label}, index) => {
-      const name = label || String(index + 1);
-      return thumbnail(photo, name, 'View ' + name, () => selectPhoto(photo, name));
+    const available = [...styles, ...listingPhotos.filter((photo) => !styleUrls.has(photo))
+      .map((photo, index) => ({photo, label: label + ' ' + (index + 1)}))];
+    if (!available.length) return;
+    heading.textContent = name;
+    thumbs.replaceChildren(...available.map(({photo, label: caption}, index) => {
+      const description = caption || 'Photo ' + (index + 1);
+      return thumbnail(photo, description, 'View ' + description, () => selectPhoto(photo, description));
     }));
+    highlightPhoto();
+  }
+
+  showPhoto(0);
+  showPhotoOptions([], photos, 'Catalog photos', 'Catalog photo');
+  const media = productOptions().catch(savedProductMedia);
+  media.then(({styles = [], sizes = [], photos: listingPhotos = []}) => {
+    showPhotoOptions(styles, listingPhotos, 'Weidian styles and photos', 'Listing photo');
+    sizeOptions.hidden = !sizes.length;
     sizeButtons.replaceChildren(...sizes.map((size) => {
       const button = element('button', {type: 'button', textContent: size, translate: false});
       button.setAttribute('aria-pressed', 'false');
@@ -190,12 +205,9 @@ function shoppingDialog(product) {
 
 function render(product, photos) {
   if (!target.dataset.listing) document.title = product.name + ' | EastMallBuy Findsheet';
-  const fromOurStore = isShopItem(id);
-  const buy = fromOurStore
-    ? external('Buy on EastMallBuy', purchaseUrl(id), 'button dark')
-    : element('a', {href: '/spreadsheet/?store=1', className: 'button outline', textContent: 'Browse our Weidian store products'});
-  if (fromOurStore) buy.rel = 'sponsored noopener';
-  const [otherAgents, agentDialog] = fromOurStore ? shoppingDialog(product) : [];
+  const buy = external('Buy on EastMallBuy', purchaseUrl(id), 'button dark');
+  buy.rel = 'sponsored noopener';
+  const [otherAgents, agentDialog] = shoppingDialog(product);
   const estimate = referencePrice(product.price);
   const {sellerGallery, options, detailPhotos} = gallery(product, photos);
   const copy = element('button', {type: 'button', className: 'button outline', textContent: 'Copy Weidian link'});
@@ -208,18 +220,18 @@ function render(product, photos) {
     element('p', {className: 'detail-item-id', textContent: 'Weidian item ' + id}),
     ...(estimate ? [element('p', {className: 'detail-estimate'}, [estimate, ' estimated item price'])] : []),
     element('div', {className: 'detail-buy'}, [buy]),
-    ...(fromOurStore ? [element('div', {className: 'detail-secondary-actions'}, [otherAgents, copy]), copyStatus, agentDialog] : []),
+    element('div', {className: 'detail-secondary-actions'}, [otherAgents, copy]),
+    copyStatus,
+    agentDialog,
     options,
     ...(categoryGuides[product.category] ? [element('section', {className: 'detail-fit-card'}, [
       element('h2', {textContent: 'Size and fit guide'}),
       element('p', {textContent: categoryGuides[product.category].fit}),
     ])] : []),
-    ...(fromOurStore ? [element('div', {className: 'detail-listing-links'}, [
+    element('div', {className: 'detail-listing-links'}, [
       external('View on Findspreadsheet', new URL(product.sourcePath, sourceOrigin).href),
-    ])] : []),
-    element('p', {className: 'detail-purchase-note', textContent: fromOurStore
-      ? 'Confirm your style and size on Weidian. Agent links may contain a referral code.'
-      : 'Catalog reference. Direct purchase is available for items listed in our Weidian store.'}),
+    ]),
+    element('p', {className: 'detail-purchase-note', textContent: 'Confirm your style and size on Weidian. Agent links may contain a referral code.'}),
   ]);
   const sellerDetails = element('section', {className: 'subsection detail-seller-photos'}, [
     element('div', {className: 'media-heading'}, [
@@ -240,25 +252,17 @@ function render(product, photos) {
 }
 
 async function init() {
+  if (!isShopItem(id)) {
+    target.textContent = 'This item is unavailable in our Weidian store catalog.';
+    return;
+  }
   try {
     if (target.dataset.listing) {
       const {product, photos} = JSON.parse(target.dataset.listing);
       render(product, photos);
       return;
     }
-    const canonical = productUrl(id);
-    if (canonical.startsWith('/products/')) {
-      location.replace(canonical);
-      return;
-    }
-    const catalog = await readCatalog();
-    const product = catalog.find((item) => id && item.weidianId === id);
-    if (!product) {
-      target.textContent = 'This item is missing from the saved catalog.';
-      return;
-    }
-    const galleries = await readJson('/data/gallery-' + id.slice(0, 4) + '.json').catch(() => ({}));
-    render(product, Array.isArray(galleries[id]) ? galleries[id] : []);
+    location.replace(productUrl(id));
   } catch {
     target.textContent = 'The listing could not load. Reload the page to try again.';
   }

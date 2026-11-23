@@ -1,3 +1,4 @@
+import {isShopItem} from './landing-paths.mjs';
 import {categoryLabel, productImage, productUrl, sourceOrigin} from './catalog.mjs';
 import {priceFor, shoppingOptions} from './shopping.mjs';
 
@@ -10,7 +11,7 @@ export async function readJson(url) {
 let catalogData;
 export function readCatalog() {
   catalogData ??= readJson('/data/catalog.json')
-    .then((items) => items.filter((item) => /^\d+$/.test(item.weidianId ?? '')))
+    .then((items) => items.filter((item) => isShopItem(item.weidianId)))
     .catch((error) => { catalogData = undefined; throw error; });
   return catalogData;
 }

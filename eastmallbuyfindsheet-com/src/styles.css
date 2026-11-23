@@ -347,7 +347,7 @@ footer{margin-top:54px;padding:27px 0 32px}.footer-inner{display:flex;justify-co
   overscroll-behavior-y: contain;
   padding: 3px;
 }
-.detail-photo-options button {
+.detail-photo-options :is(button, a) {
   padding: 0;
   overflow: hidden;
   border: 1px solid var(--edge);
@@ -404,7 +404,7 @@ footer{margin-top:54px;padding:27px 0 32px}.footer-inner{display:flex;justify-co
   grid-auto-rows: clamp(49px, 4.9vw, 68px);
   max-height: calc(3 * clamp(49px, 4.9vw, 68px) + 18px);
 }
-.detail-photo-options button { width: 100%; aspect-ratio: auto; background: var(--surface); }
+.detail-photo-options :is(button, a) { width: 100%; aspect-ratio: auto; background: var(--surface); }
 .detail-photo-options img { object-fit: contain; }
 .detail-size-options { margin-top: 12px; }
 .detail-size-buttons { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
@@ -451,8 +451,6 @@ footer{margin-top:54px;padding:27px 0 32px}.footer-inner{display:flex;justify-co
 }
 .detail-fit-card h2 { font-size: 1.03rem; }
 .detail-copy .detail-fit-card p { margin: 5px 0 0; font-size: .9rem; }
-.store-listings-filter { display: inline-flex; align-items: center; gap: 7px; color: var(--ink); font-size: .92rem; }
-.store-listings-filter input { accent-color: var(--brand); }
 
 .detail-photo-options {
   grid-template-columns: repeat(4, minmax(0, 1fr));

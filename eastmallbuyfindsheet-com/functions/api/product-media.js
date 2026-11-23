@@ -1,8 +1,10 @@
+import verifiedItems from '../../src/lib/weidian-shop-items.json';
 import {publicShopMedia} from '../../src/lib/weidian-media.mjs';
 
 const source = 'https://findspreadsheet.com';
 const qcImageHost = 'a3146e426bcaaac6c813bbc910619829.eu.r2.cloudflarestorage.com';
 
+const store = new Set(verifiedItems);
 let retryAfter = 0;
 
 function unavailable(reason, status = 502, wait = 0) {
@@ -28,6 +30,8 @@ export async function onRequestGet({request}) {
   if (!/^\d{5,18}$/.test(id ?? '') || !['qc', 'styles'].includes(type)) {
     return Response.json({error: 'Invalid item or media type'}, {status: 400});
   }
+
+  if (!store.has(id)) return Response.json({error: 'Item unavailable in this store'}, {status: 404});
 
   const remaining = Math.ceil((retryAfter - Date.now()) / 1000);
   if (remaining > 0) return unavailable('source-rate-limited', 429, remaining);

@@ -4,32 +4,24 @@ export const officialOrder = help + '101.html';
 export const shippingEstimate = 'https://www.eastmallbuy.com/estimate';
 export const officialReturns = 'https://www.eastmallbuy.com/index/information/index/information_id/8.html';
 
-const exampleId = '7403509728';
+const exampleId = '7857139190';
 export const buyingSteps = [
   {
     title: 'Find an item in the EastMallBuy spreadsheet',
-    text: 'Open the Spreadsheet and search by product name, Weidian link or item ID. Check the selected category and open a product card to compare the listing photos and reference price. The screenshot searches for Weidian item 7403509728.',
-    image: 'guide-catalog.webp',
-    width: 1210,
-    height: 530,
-    caption: 'Findsheet screenshot showing a product search by Weidian item ID.',
+    text: 'Open the Spreadsheet and search by product name, Weidian link or item ID. Check the selected category and open a product card to compare the listing photos and reference price. Try the example below to search a listing from our Weidian store.',
     label: 'Try the example search',
     href: '/spreadsheet/?q=' + exampleId,
   },
   {
     title: 'Open the item on EastMallBuy and review the order',
     text: 'Choose Buy on EastMallBuy to open the purchase page for a verified Weidian store item. You can also paste the original Weidian link into EastMallBuy. Choose the exact color, size and quantity, then review the current item price and any domestic delivery charges before paying in your EastMallBuy account.',
-    image: 'guide-product.webp',
-    width: 1210,
-    height: 630,
-    caption: 'Findsheet product page showing the EastMallBuy purchase link and the original Weidian listing.',
     label: 'Open the example product',
     href: '/product/?id=' + exampleId,
   },
   {
     title: 'Review warehouse QC before shipping',
-    text: 'The seller sends the purchase to the agent warehouse. Once your own inspection photos are available in EastMallBuy, check the size label, color, count, measurements and visible condition. On Findsheet, use QC Finder to look at saved historical examples before you order.',
-    label: 'Open the QC example',
+    text: 'The seller sends the purchase to the agent warehouse. Once your own inspection photos are available in EastMallBuy, check the size label, color, count, measurements and visible condition. On Findsheet, use QC Finder to check for saved records for a store item.',
+    label: 'Check QC for the example item',
     href: '/qc/?id=' + exampleId + '#qc-finder',
   },
   {

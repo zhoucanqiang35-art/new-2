@@ -1,4 +1,4 @@
-import catalog from '../../public/data/catalog.json';
+import {storeCatalog as catalog} from './store-catalog.mjs';
 import {categories} from './catalog.mjs';
 
 import {categoryOrder} from './landing-paths.mjs';

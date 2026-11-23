@@ -1,5 +1,6 @@
 import { readJson, card } from './browser.mjs';
 import { productImage } from './catalog.mjs';
+import { isShopItem } from './landing-paths.mjs';
 
 const file = document.getElementById('image-file');
 const example = document.getElementById('image-example');
@@ -57,14 +58,14 @@ function feature(image) {
   return Uint8Array.from({length: channels}, (_, i) => pixels[Math.floor(i / 3) * 4 + i % 3]);
 }
 
-function match(input, buffer, totalProducts, totalPhotos) {
+function match(input, buffer, catalog, totalPhotos) {
   if (buffer.byteLength !== totalPhotos * rowBytes) throw new Error('Image index length mismatch');
   const rows = new Uint8Array(buffer);
   const view = new DataView(buffer);
   const best = new Map();
   for (let offset = 0; offset < rows.length; offset += rowBytes) {
     const product = view.getUint16(offset, true);
-    if (product >= totalProducts) continue;
+    if (!isShopItem(catalog[product]?.weidianId)) continue;
     let score = 0;
     for (let j = 0; j < channels; j += 1) {
       const difference = input[j] - rows[offset + 2 + j];
@@ -89,7 +90,7 @@ async function search(src, sampleId = '') {
     status.textContent = 'Searching the saved image index…';
     let input;
     if (sampleId) {
-      const index = catalog.findIndex((product) => product.id === sampleId);
+      const index = catalog.findIndex((product) => product.weidianId === sampleId);
       const rows = new DataView(buffer);
       for (let offset = 0; offset + rowBytes <= rows.byteLength; offset += rowBytes) {
         if (rows.getUint16(offset, true) !== index) continue;
@@ -106,8 +107,7 @@ async function search(src, sampleId = '') {
       if (run !== runNumber) return;
       input = feature(image);
     }
-    const findings = match(input, buffer, catalog.length, photos.length);
-    const valid = findings.filter(({product}) => /^\d+$/.test(catalog[product].weidianId ?? ''));
+    const valid = match(input, buffer, catalog, photos.length);
     results.replaceChildren(...valid.map(({product, photo}) => card(catalog[product], photos[photo])));
     status.textContent = valid.length + ' visually similar listings from the saved index.';
   } catch {
@@ -155,5 +155,5 @@ dropZone.addEventListener('drop', (event) => {
 example.addEventListener('click', () => {
   clearObjectUrl();
   file.value = '';
-  search('', '5985');
+  search('', '7857139190');
 });

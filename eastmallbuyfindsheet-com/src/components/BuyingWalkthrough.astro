@@ -5,7 +5,7 @@ const screenshotUrl = (image) => image.startsWith('/') ? image : 'https://eastma
 ---
 <section class:list={['buying-walkthrough', {'wrap home-section walkthrough-phones': home}]} aria-labelledby="walkthrough-heading">
   {home ? <h2 id="walkthrough-heading">How to buy on EastMallBuy</h2> : <h2 id="walkthrough-heading">From listing to shipment</h2>}
-  <p class="walkthrough-lead">Follow the purchasing process using real Findsheet screens and the official EastMallBuy shipping calculator.</p>
+  <p class="walkthrough-lead">Follow the purchasing process using examples from our store and the official EastMallBuy shipping calculator.</p>
   <ol class="walkthrough-grid">
     {buyingSteps.map(({title, text, image, width, height, caption, label, href}) => (
       <li class="walkthrough-step">
@@ -21,7 +21,7 @@ const screenshotUrl = (image) => image.startsWith('/') ? image : 'https://eastma
           </a>
         ) : (
           <div class="walkthrough-screen walkthrough-screen-tool">
-            <a class="button outline" href={href}>QC Finder</a>
+            <a class="button outline" href={href}>{label}</a>
           </div>
         ))}
         <div class="walkthrough-step-copy">

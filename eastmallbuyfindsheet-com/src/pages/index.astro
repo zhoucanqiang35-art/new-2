@@ -4,14 +4,15 @@ import ProductSearch from '../components/ProductSearch.astro';
 import Card from '../components/Card.astro';
 import CategoryGrid from '../components/CategoryGrid.astro';
 import {categoryEntries, listingCount} from '../lib/categories.mjs';
-import catalog from '../../public/data/catalog.json';
+import {storeCatalog as catalog} from '../lib/store-catalog.mjs';
 import qc from '../../public/data/qc-featured.json';
 import BuyingWalkthrough from '../components/BuyingWalkthrough.astro';
 import BuyingFaq from '../components/BuyingFaq.astro';
 import '../home.css';
 
 const selected = ['5954', '8608', '6818', '7357', '8768', '8891', '8313', '7637', '6250', '8765', '8676', '8984'];
-const featured = selected.map((id) => catalog.find((item) => item.id === id));
+const preferred = selected.map((id) => catalog.find((item) => item.id === id)).filter(Boolean);
+const featured = [...new Set([...preferred, ...catalog])].slice(0, 12);
 const number = new Intl.NumberFormat('en-US');
 ---
 <Layout title="EastMallBuy Spreadsheet | Browse Finds & Warehouse QC" description="Explore shoes, streetwear and accessories in the EastMallBuy spreadsheet. Browse 11 Findspreadsheet categories, search by image, and check available warehouse QC photos." page="home">

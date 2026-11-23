@@ -1,9 +1,7 @@
 import {readCatalog, card} from './browser.mjs';
 import {parseId} from './catalog.mjs';
-import {isShopItem} from './landing-paths.mjs';
 
 const form = document.querySelector('#filters');
-const storeOnly = document.querySelector('#store-listings-only');
 const query = document.querySelector('#query');
 const category = document.querySelector('#category');
 const sort = document.querySelector('#sort');
@@ -19,7 +17,6 @@ let page = 1;
 
 function fromUrl() {
   const params = new URLSearchParams(location.search);
-  storeOnly.checked = params.get('store') === '1';
   query.value = params.get('q') ?? '';
   category.value = params.get('category') ?? '';
   sort.value = params.get('sort') ?? 'latest';
@@ -37,7 +34,7 @@ function comparePrices(a, b) {
 function render(updateUrl = false) {
   const term = query.value.trim().toLowerCase();
   const id = parseId(query.value);
-  const matches = catalog.filter((item) => (!storeOnly.checked || isShopItem(item.weidianId)) && (!category.value || item.category === category.value) &&
+  const matches = catalog.filter((item) => (!category.value || item.category === category.value) &&
     (!term || (id ? item.weidianId === id || item.id === id : item.name.toLowerCase().includes(term))));
   if (sort.value === 'oldest') matches.reverse();
   if (sort.value.startsWith('price-')) matches.sort(comparePrices);
@@ -52,7 +49,6 @@ function render(updateUrl = false) {
   next.disabled = page >= pages;
   if (updateUrl) {
     const params = new URLSearchParams();
-    if (storeOnly.checked) params.set('store', '1');
     if (term) params.set('q', query.value.trim());
     if (category.value) params.set('category', category.value);
     if (sort.value !== 'latest') params.set('sort', sort.value);
@@ -70,7 +66,6 @@ readCatalog().then((data) => {
   render();
   form.addEventListener('submit', (event) => { event.preventDefault(); reset(); });
   category.addEventListener('change', reset);
-  storeOnly.addEventListener('change', reset);
   sort.addEventListener('change', reset);
   prev.addEventListener('click', () => { page -= 1; render(true); status.scrollIntoView({block: 'center'}); });
   next.addEventListener('click', () => { page += 1; render(true); status.scrollIntoView({block: 'center'}); });

@@ -1,6 +1,6 @@
 ---
 import Layout from '../components/Layout.astro';
-import catalog from '../../public/data/catalog.json';
+import {storeCatalog as catalog} from '../lib/store-catalog.mjs';
 import {categoryEntries} from '../lib/categories.mjs';
 import {categoryLanding} from '../lib/landing-paths.mjs';
 import {categoryGuides} from '../lib/category-guides.mjs';
@@ -26,7 +26,7 @@ const entries = categoryEntries.map(({key, name, count}) => {
   const availableSearches = searches.filter((query) => catalog.some((product) =>
     product.category === key && /^\d+$/.test(product.weidianId) && product.name.toLowerCase().includes(query)));
   const href = '/spreadsheet/?category=' + encodeURIComponent(key);
-  const photo = catalog.find((product) => product.id === categoryPhotoIds[key] && product.category === key);
+  const photo = catalog.find((product) => product.id === categoryPhotoIds[key] && product.category === key) ?? catalog.find((product) => product.category === key);
   return {name, count, guide, photo, availableSearches, href, landing: categoryLanding(key), anchor: key.toLowerCase()};
 });
 ---

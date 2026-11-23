@@ -6,12 +6,12 @@
       <input name="id" id="qc-query" placeholder="Weidian link or item ID" required />
       <button class="button dark" type="submit">Find QC</button>
     </form>
-    <p class="sample">Try an item with saved photos <a href="/qc/?id=7321418559#qc-finder">7321418559</a></p>
     <div class="result-status" id="qc-result" role="status"></div>
   </section>
 <script>
+  import {isShopItem} from '../lib/landing-paths.mjs';
   import {parseId} from '../lib/catalog.mjs';
-  import {readJson, showQc} from '../lib/browser.mjs';
+  import {readCatalog, showQc} from '../lib/browser.mjs';
 
   const field = document.querySelector<HTMLInputElement>('#qc-query')!;
   const result = document.querySelector<HTMLElement>('#qc-result')!;
@@ -23,8 +23,12 @@
       result.textContent = 'Enter a numeric Weidian item ID or a valid product link.';
       return;
     }
+    if (!isShopItem(id)) {
+      result.textContent = 'This item is unavailable in our Weidian store catalog.';
+      return;
+    }
     result.textContent = 'Checking saved QC records…';
-    const catalog = await readJson('/data/catalog.json').catch(() => []);
+    const catalog = await readCatalog().catch(() => []);
     const product = catalog.find((item: {weidianId: string}) => item.weidianId === id);
     if (result.dataset.item === id) await showQc(result, id, product?.sourcePath);
   };
