@@ -1,29 +1,32 @@
 ---
 import {buyingSteps, officialOrder} from '../lib/buying-help.mjs';
 const {home = false} = Astro.props;
-const screenshotUrl = (image) => image.startsWith('/') ? image : 'https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/guide/' + image;
 ---
 <section class:list={['buying-walkthrough', {'wrap home-section walkthrough-phones': home}]} aria-labelledby="walkthrough-heading">
   {home ? <h2 id="walkthrough-heading">How to buy on EastMallBuy</h2> : <h2 id="walkthrough-heading">From listing to shipment</h2>}
   <p class="walkthrough-lead">Follow the purchasing process using examples from our store and the official EastMallBuy shipping calculator.</p>
   <ol class="walkthrough-grid">
-    {buyingSteps.map(({title, text, image, width, height, caption, label, href}) => (
+    {buyingSteps.map(({title, text, image, width, height, caption, arrows, label, href}, index) => (
       <li class="walkthrough-step">
-        {(!home && image) && <figure>
-          <a href={screenshotUrl(image)} target="_blank" rel="noopener" aria-label={caption}>
-            <img src={screenshotUrl(image)} alt={caption} loading="lazy" width={width} height={height} />
+        <figure>
+          <a class="walkthrough-screen" href={href} target={href.startsWith('https:') ? '_blank' : undefined} rel={href.startsWith('https:') ? 'noopener' : undefined} aria-label={label}>
+            <img src={image} alt={caption} loading="lazy" width={width} height={height} />
+            <svg class="walkthrough-arrows" viewBox={`0 0 ${width} ${height}`} aria-hidden="true">
+              <defs>
+                <marker id={'guide-arrow-' + index} viewBox="0 0 10 10" refX="9" refY="5" markerWidth="3.5" markerHeight="3.5" orient="auto">
+                  <path d="M 0 0 L 10 5 L 0 10 Z" fill="#0b63d1" stroke="white" stroke-width=".6" />
+                </marker>
+              </defs>
+              {arrows.map(([x1, y1, x2, y2]) => (
+                <>
+                  <line x1={x1} y1={y1} x2={x2} y2={y2} stroke="white" stroke-width="15" stroke-linecap="round" />
+                  <line x1={x1} y1={y1} x2={x2} y2={y2} stroke="#0b63d1" stroke-width="9" stroke-linecap="round" marker-end={`url(#guide-arrow-${index})`} />
+                </>
+              ))}
+            </svg>
           </a>
-          <figcaption>{caption}</figcaption>
-        </figure>}
-        {home && (image ? (
-          <a class="walkthrough-screen" href={screenshotUrl(image)} target="_blank" rel="noopener" aria-label={caption}>
-            <img src={screenshotUrl(image)} alt={caption} loading="lazy" width={width} height={height} />
-          </a>
-        ) : (
-          <div class="walkthrough-screen walkthrough-screen-tool">
-            <a class="button outline" href={href}>{label}</a>
-          </div>
-        ))}
+          {!home && <figcaption>{caption}</figcaption>}
+        </figure>
         <div class="walkthrough-step-copy">
           <h3>{title}</h3>
           <p>{text}</p>
@@ -64,21 +67,12 @@ const screenshotUrl = (image) => image.startsWith('/') ? image : 'https://eastma
     content: '';
   }
 
-  .walkthrough-screen {
-    display: grid;
-    place-items: center;
-    padding: 3px;
-    border-radius: 8px;
-    background: var(--tint);
-  }
-
-  .walkthrough-screen-tool { aspect-ratio: 2.05; }
-  .walkthrough-phones .walkthrough-screen img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 2.05;
-    object-fit: contain;
-  }
+  .walkthrough-step figure { margin: 0; }
+  .walkthrough-screen { position: relative; display: block; background: var(--tint); }
+  .walkthrough-screen img { display: block; width: 100%; height: auto; aspect-ratio: auto; }
+  .walkthrough-arrows { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+  .walkthrough-phones figure { border: 1px solid var(--edge); border-radius: 8px; overflow: hidden; }
+  .walkthrough-phones .walkthrough-screen { align-content: center; }
 
   .walkthrough-phones .walkthrough-step-copy { padding: 11px 4px 5px; }
 
@@ -107,7 +101,5 @@ const screenshotUrl = (image) => image.startsWith('/') ? image : 'https://eastma
   }
   @media (max-width: 335px) {
     .walkthrough-phones .walkthrough-grid { grid-template-columns: repeat(4, 250px); }
-    .walkthrough-phones .walkthrough-screen,
-    .walkthrough-phones .walkthrough-screen img { height: 58px; aspect-ratio: auto; }
   }
 </style>

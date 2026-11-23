@@ -4,33 +4,49 @@ export const officialOrder = help + '101.html';
 export const shippingEstimate = 'https://www.eastmallbuy.com/estimate';
 export const officialReturns = 'https://www.eastmallbuy.com/index/information/index/information_id/8.html';
 
-const exampleId = '7857139190';
+const exampleId = '7869431459';
 export const buyingSteps = [
   {
     title: 'Find an item in the EastMallBuy spreadsheet',
-    text: 'Open the Spreadsheet and search by product name, Weidian link or item ID. Check the selected category and open a product card to compare the listing photos and reference price. Try the example below to search a listing from our Weidian store.',
+    text: 'Open the Spreadsheet and search by product name, Weidian link or item ID. Select Search, then open the matching card. The example uses Weidian item 7869431459 from our store.',
+    image: '/assets/guide/search.jpg',
+    width: 1214,
+    height: 563,
+    caption: 'Findsheet spreadsheet with a store item ID and its matching product card.',
+    arrows: [[240, 242, 144, 180], [1102, 250, 1156, 201], [435, 340, 309, 340]],
     label: 'Try the example search',
     href: '/spreadsheet/?q=' + exampleId,
   },
   {
     title: 'Open the item on EastMallBuy and review the order',
-    text: 'Choose Buy on EastMallBuy to open the purchase page for a verified Weidian store item. You can also paste the original Weidian link into EastMallBuy. Choose the exact color, size and quantity, then review the current item price and any domestic delivery charges before paying in your EastMallBuy account.',
+    text: 'Choose Buy on EastMallBuy to open the purchase page for a verified Weidian store item. You can also paste the original Weidian link into EastMallBuy. On the official purchase page, choose the options and quantity, review the item price and any domestic delivery charges, then use Buy Now or Add to Cart.',
+    image: '/assets/guide/purchase.jpg',
+    width: 666,
+    height: 324,
+    caption: 'Findsheet product page with the Buy on EastMallBuy button.',
+    arrows: [[552, 177, 501, 238]],
     label: 'Open the example product',
-    href: '/product/?id=' + exampleId,
+    href: '/products/' + exampleId + '/',
   },
   {
     title: 'Review warehouse QC before shipping',
-    text: 'The seller sends the purchase to the agent warehouse. Once your own inspection photos are available in EastMallBuy, check the size label, color, count, measurements and visible condition. On Findsheet, use QC Finder to check for saved records for a store item.',
+    text: 'The seller sends the purchase to the agent warehouse. Once your own inspection photos are available in EastMallBuy, check the size label, color, count, measurements and visible condition. Find QC checks for saved records for a store item. For photos of an order you placed, open the order in your EastMallBuy account.',
+    image: '/assets/guide/qc.jpg',
+    width: 850,
+    height: 270,
+    caption: 'Findsheet QC Finder with the item ID field and Find QC button.',
+    arrows: [[146, 237, 102, 203], [565, 223, 505, 186]],
     label: 'Check QC for the example item',
     href: '/qc/?id=' + exampleId + '#qc-finder',
   },
   {
     title: 'Estimate shipping and submit your parcel',
     text: 'Use the EastMallBuy shipping calculator to compare routes. Enter the destination, weight, goods type and dimensions where required. When your items are ready in storage, select the items for the parcel in EastMallBuy, review the packed dimensions, shipping quote and delivery details, then confirm the parcel there.',
-    image: 'guide-shipping.webp',
-    width: 1235,
-    height: 395,
-    caption: 'Public EastMallBuy shipping estimator showing destination, weight and parcel dimensions.',
+    image: '/assets/guide/shipping.jpg',
+    width: 1225,
+    height: 285,
+    caption: 'EastMallBuy shipping calculator with destination, weight, goods type and Estimate button.',
+    arrows: [[265, 65, 242, 108], [540, 66, 525, 109], [1012, 65, 987, 109], [1094, 268, 1033, 224]],
     label: 'Open the official shipping calculator',
     href: shippingEstimate,
   },
@@ -43,7 +59,7 @@ export const faqGroups = [
       ['What is the EastMallBuy spreadsheet?', 'It is a searchable Findspreadsheet directory for finding products you can open through EastMallBuy. Browse by category, search by product name or paste a Weidian link. Each detail page brings together the original listing, seller photos, a reference price and the shopping-agent link. Registration, checkout and account support take place on the shopping platform.', '/spreadsheet/', 'Browse the spreadsheet'],
       ['How do I use a Weidian link on EastMallBuy?', 'Use the original item link or select Buy on EastMallBuy on a verified Weidian store listing. If a listing opens with multiple options, check the exact sizing chart, color and quantity before you submit it. The independent directory preview currently indexes Weidian listings. Other marketplace links can be checked directly with EastMallBuy.', officialOrder, 'Official ordering guide'],
       ['How do I find a product from a photo?', 'Open Image Search and choose a clear image of one item for the best comparison. The Findsheet preview compares its saved image index in your browser. Open likely matches and compare their seller photos, measurements and source links. You can also search with a product name or item ID if the image returns similar-looking alternatives.', '/image-search/', 'Try Image Search'],
-      ['How do I change the shopping agent or currency?', 'Open the Spreadsheet and use the selector in its header. The agent changes the purchase destination on product detail pages, and the currency changes displayed estimates. The preview uses a saved exchange-rate snapshot. Review the final amount, domestic delivery and agent charges at checkout.', '/spreadsheet/', 'Open the spreadsheet'],
+      ['How do I change the shopping agent or currency?', 'Open the Spreadsheet and use the selector in its header. Currency changes displayed estimates. On a product page, use Other shopping agents to open that item with a different agent. The preview uses a saved exchange-rate snapshot. Review the final amount, domestic delivery and agent charges at checkout.', '/spreadsheet/', 'Open the spreadsheet'],
     ],
   },
   {
