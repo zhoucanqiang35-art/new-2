@@ -8,14 +8,21 @@ const checks:Record<string,string[]>={
  'jersey':['Confirm the team, season, player/number and selected sizing version with the seller. Compare chest and length measurements rather than relying only on a size label.','Review the front/back artwork, name and number placement, crest and sleeve details. Verify whether personalization is included and whether it affects return eligibility.'],
  'electronics':['Confirm the exact model, plug type, charging standard, voltage and included accessories using the seller’s technical specifications. Check compatibility with your existing devices.','Inspect the casing, ports, labels and packaging. Appearance photos do not prove functional performance; request any available functional check and confirm battery-related shipping restrictions.'],
 };
-export function describeProduct(product:Product){
- const area=document.querySelector('#product-description')!; const category=categoryLabel(product.category);
+export function productCopy(product: Product) {
+ const category = categoryLabel(product.category);
  const paragraphs=[product.name+' is listed in '+category+' in the FindSpreadsheet catalog. This page refers specifically to Weidian item '+product.weidianId+'. Compare this identifier when opening seller or agent links so that similar product names are not confused.',
  'The reference price is displayed above. Use the currency selector to compare the reference amount in another currency. Variant prices, seller stock and the final checkout amount may have changed; domestic delivery, international freight and optional services are additional costs.',
  ...(checks[product.category]||['Check the seller’s dimensions, size or model options, materials and included accessories. Compare the selected version with the listing images and your requirements.','Inspect all available views, labels, closures, finish and packaging where visible. Confirm any specification that is not explicitly provided by the seller.']),
  'Use the listing gallery for style and option comparison and the warehouse section for any available historical inspection images. When no warehouse record exists, seller pictures are identified as listing reference photos. Your own order’s QC images are the relevant record for the unit you actually receive.',
  'Before ordering, verify the exact variant, measurements, quantity, return eligibility and route restrictions on the selected agent. This catalog does not provide verified material composition, item weight, stock or authenticity certification; those fields cannot be inferred reliably from a product title or photograph.'];
+ const facts = [['Product',product.name],['Category',category],['Weidian item ID',product.weidianId],['Catalog record',product.id],['Source marketplace','Weidian'],['Price basis','Saved seller price; delivery and services excluded']];
+ return { paragraphs, facts };
+}
+
+export function describeProduct(product: Product) {
+ const { paragraphs, facts } = productCopy(product);
+ const area = document.querySelector('#product-description')!;
  area.replaceChildren(...paragraphs.map(text=>{const p=document.createElement('p');p.textContent=text;return p}));
- const facts=document.querySelector('#product-facts')!;
- facts.replaceChildren(...[['Product',product.name],['Category',category],['Weidian item ID',product.weidianId],['Catalog record',product.id],['Source marketplace','Weidian'],['Price basis','Saved seller price; delivery and services excluded']].map(([key,value])=>{const div=document.createElement('div');const dt=document.createElement('dt');const dd=document.createElement('dd');dt.textContent=key;dd.textContent=value;div.append(dt,dd);return div}));
+ const list = document.querySelector('#product-facts')!;
+ list.replaceChildren(...facts.map(([key,value])=>{const div=document.createElement('div');const dt=document.createElement('dt');const dd=document.createElement('dd');dt.textContent=key;dd.textContent=value;div.append(dt,dd);return div}));
 }

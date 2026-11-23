@@ -1,0 +1,16 @@
+---
+import { readFileSync } from 'node:fs';
+import ProductDetail from '../../components/ProductDetail.astro';
+import type { Product } from '../../lib/catalog';
+import featuredProductIds from '../../lib/featured-products.json';
+
+export function getStaticPaths() {
+  const products = JSON.parse(readFileSync('public/data/catalog.json', 'utf8')) as Product[];
+  return featuredProductIds.map(id => {
+    const product = products.find(entry => entry.weidianId === id);
+    if (!product) throw new Error('Featured product missing from catalog: ' + id);
+    return { params: { id }, props: { product } };
+  });
+}
+---
+<ProductDetail product={Astro.props.product} />

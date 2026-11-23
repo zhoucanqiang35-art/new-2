@@ -1,12 +1,13 @@
 ---
 import fs from 'node:fs';
+import featuredProductIds from '../lib/featured-products.json';
 import Layout from '../components/Layout.astro';
 import Icon from '../components/Icon.astro';
 import BuyingGuide from '../components/BuyingGuide.astro';
 import Faq from '../components/Faq.astro';
 import { categories, detailsUrl, buyUrl, signup, priceLabel, categoryLabel, type Product } from '../lib/catalog';
 const products = JSON.parse(fs.readFileSync('public/data/catalog.json','utf8')) as Product[];
-const featured = ['4502','8648','7357','8563','8477','7953','6297','7652'].map(id => products.find(product => product.id === id)!);
+const featured = featuredProductIds.map(id => products.find(product => product.weidianId === id)!);
 ---
 <Layout>
   <section class="hero-dark">

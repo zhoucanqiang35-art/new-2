@@ -12,7 +12,7 @@ const purchaseVersion=version('purchase.js'), appVersion=version('app.js'), allV
 const {lang='en',page='',title='Pikobuy Spreadsheet',description='Explore Pikobuy spreadsheet finds, categories, QC and shipping guides.'}=Astro.props;
 const t=langs[lang];
 const canonicalPath=`/${lang}/${page ? page+'/' : ''}`;
-const titleText=title === 'Pikobuy Spreadsheet' ? 'PikoBuy Spreadsheet | Finds, QC & Shipping Guides' : `${title} | PikoBuy Spreadsheet`;
+const titleText=lang === 'fi' && !page ? 'PikoBuy Suomi | Löydöt, laadunvalvonta ja toimitus' : title === 'Pikobuy Spreadsheet' ? 'PikoBuy Spreadsheet | Finds, QC & Shipping Guides' : `${title} | PikoBuy Spreadsheet`;
 const shell=commonShell(lang);
 const categoryLabels=Object.fromEntries(['shoes','hoodies-sweaters','t-shirts','jackets','pants-shorts','accessories','jersey','electronics','headwear','ShortSets','other-stuff'].map((slug,i)=>[slug,categoryNames(lang)[i]]));
 const signup='https://www.pikobuy.com/register?invitedCode=KPNJVF&inviteUserId=1109716';

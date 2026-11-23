@@ -11,12 +11,21 @@ const description = intro ?? 'Compare Weidian listings and see which items have 
 const useCards = !category;
 const path = category ? `/categories/${category.toLowerCase()}/` : '/spreadsheet/';
 const products = category ? catalog.filter(product => product.category === category) : catalog;
+const withWarehousePhotos = category
+  ? products.filter(product => savedQc[product.weidianId]?.photos?.length).slice(0, 3)
+  : [];
 ---
 <Layout title={title + " | Search Weidian Finds"} description={description}>
   <section class="wrap page">
     {category && <p><a class="text-link" href="/categories/">All categories</a></p>}
     <h1>{title}</h1>
     <p class="lead">{description}</p>
+    {withWarehousePhotos.length > 0 && (
+      <aside class="panel" aria-label="Listings with warehouse photos">
+        <h2>Listings with warehouse photos</h2>
+        <ul>{withWarehousePhotos.map(product => <li><a class="text-link" href={itemUrl(product.weidianId)} translate="no">{product.name}</a></li>)}</ul>
+      </aside>
+    )}
     <form id="catalog-form" class="panel filters" action={path} data-category={category || undefined} role="search">
       <label class="field search-field">Product search<input class="input" name="q" placeholder="Product name, item ID or link" /></label>
       {!category && <label class="field">Category<select name="category"><option value="">All categories</option>{Object.entries(categories).map(([slug,name])=><option value={slug}>{name}</option>)}</select></label>}

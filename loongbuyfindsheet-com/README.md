@@ -24,8 +24,8 @@ npm run build
 npx wrangler deploy --dry-run
 ```
 
-This import retains the preview site's crawler directives and canonical URLs.
-Review indexing and canonical URLs when promoting the site to the custom domain.
+Cloudflare builds on `main` use the production canonical URLs and sitemap.
+Other branches and local builds default to the preview origin and block crawlers.
 
 ## Cloudflare Pages
 
