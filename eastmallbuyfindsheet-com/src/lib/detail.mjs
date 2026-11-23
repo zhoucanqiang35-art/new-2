@@ -16,8 +16,10 @@ async function savedProductMedia() {
   return (await savedMedia)[id] ?? {};
 }
 
-function gallery(product, images) {
-  const photos = [...new Set([productImage(product), ...images])];
+function gallery(product, images, purchasePhotos = []) {
+  const catalogCover = productImage(product);
+  const detailPhotos = [...new Set(images)].filter((photo) => photo !== catalogCover);
+  let photos = purchasePhotos.length ? purchasePhotos : [catalogCover];
   const cover = element('img', {src: photos[0], alt: product.name, className: 'detail-image', translate: false, fetchPriority: 'high'});
   const counter = element('span', {className: 'gallery-count'});
   const previous = element('button', {type: 'button', className: 'gallery-arrow gallery-previous', textContent: '‹'});
@@ -26,8 +28,7 @@ function gallery(product, images) {
   next.setAttribute('aria-label', 'Next seller photo');
   const stage = element('div', {className: 'gallery-stage'}, [cover, previous, next, counter]);
   const sellerThumbs = element('div', {className: 'seller-photo-filmstrip'});
-  sellerThumbs.setAttribute('aria-label', 'Seller photos');
-  sellerThumbs.hidden = photos.length < 2;
+  sellerThumbs.setAttribute('aria-label', 'Purchase listing photos');
   const sellerGallery = element('div', {className: 'detail-gallery'}, [stage, sellerThumbs]);
 
   const heading = element('h2', {id: 'listing-photo-options', textContent: 'Catalog photos'});
@@ -52,7 +53,7 @@ function gallery(product, images) {
     activeLabel = label;
     const position = photos.indexOf(url);
     counter.textContent = position < 0 ? 'Product photo' : (position + 1) + ' / ' + photos.length;
-    for (const button of sellerThumbs.children) button.setAttribute('aria-pressed', String(position >= 0 && !label && button.dataset.photo === url));
+    for (const button of sellerThumbs.children) button.setAttribute('aria-pressed', String(button.dataset.photo === url));
     highlightPhoto();
   }
 
@@ -66,6 +67,14 @@ function gallery(product, images) {
   function showPhoto(index) {
     current = (index + photos.length) % photos.length;
     selectPhoto(photos[current]);
+    const selected = sellerThumbs.children[current];
+    if (selected) {
+      const strip = sellerThumbs.getBoundingClientRect();
+      const tile = selected.getBoundingClientRect();
+      if (tile.left < strip.left || tile.right > strip.right) {
+        sellerThumbs.scrollLeft += tile.left < strip.left ? tile.left - strip.left : tile.right - strip.right;
+      }
+    }
   }
 
   function thumbnail(photo, label, description, select) {
@@ -79,11 +88,18 @@ function gallery(product, images) {
     return button;
   }
 
-  for (const [index, photo] of photos.entries()) {
-    sellerThumbs.append(thumbnail(photo, '', 'View seller photo ' + (index + 1), () => showPhoto(index)));
+  function setPurchaseGallery(list) {
+    const selectedUrl = cover.getAttribute('src');
+    const focusedIndex = [...sellerThumbs.children].indexOf(document.activeElement);
+    photos = list;
+    sellerThumbs.replaceChildren(...photos.map((photo, index) =>
+      thumbnail(photo, '', 'View purchase listing photo ' + (index + 1), () => showPhoto(index))
+    ));
+    previous.hidden = next.hidden = photos.length < 2;
+    showPhoto(Math.max(0, photos.indexOf(selectedUrl)));
+    if (focusedIndex >= 0) sellerThumbs.children[Math.min(focusedIndex, photos.length - 1)]?.focus({preventScroll: true});
   }
 
-  previous.hidden = next.hidden = photos.length < 2;
   previous.addEventListener('click', () => showPhoto(current - 1));
   next.addEventListener('click', () => showPhoto(current + 1));
   stage.addEventListener('keydown', (event) => {
@@ -92,7 +108,7 @@ function gallery(product, images) {
     showPhoto(current + (event.key === 'ArrowLeft' ? -1 : 1));
   });
   cover.addEventListener('error', () => {
-    if (cover.getAttribute('src') !== photos[0]) showPhoto(0);
+    if (cover.getAttribute('src') !== catalogCover) cover.src = catalogCover;
   });
   let swipeStart;
   stage.addEventListener('touchstart', (event) => {
@@ -130,12 +146,19 @@ function gallery(product, images) {
     highlightPhoto();
   }
 
-  showPhoto(0);
-  showPhotoOptions([], photos, 'Catalog photos', 'Catalog photo');
-  productOptions().catch(savedProductMedia).then(({styles = [], photos: listingPhotos = []}) => {
+  setPurchaseGallery(photos);
+  showPhotoOptions([], [catalogCover, ...detailPhotos], 'Catalog photos', 'Catalog photo');
+  productOptions().then(async (media) => {
+    if (media.photos?.length) return media;
+    const saved = await savedProductMedia();
+    return {...media, photos: saved.photos};
+  }).catch(savedProductMedia).then(({styles = [], photos: listingPhotos = []}) => {
     showPhotoOptions(styles, listingPhotos, 'Weidian styles and photos', 'Listing photo');
+    if (listingPhotos.length && (listingPhotos.length !== photos.length || listingPhotos.some((photo, index) => photo !== photos[index]))) {
+      setPurchaseGallery(listingPhotos);
+    }
   }).catch(() => {});
-  return {sellerGallery, options, detailPhotos: photos.slice(1)};
+  return {sellerGallery, options, detailPhotos};
 }
 
 async function copyLink(url, status) {
@@ -187,13 +210,13 @@ function shoppingDialog(product) {
   return [trigger, dialog];
 }
 
-function render(product, photos) {
+function render(product, photos, purchasePhotos) {
   if (!target.dataset.listing) document.title = product.name + ' | EastMallBuy Findsheet';
   const buy = external('Buy on EastMallBuy', purchaseUrl(id), 'button dark');
   buy.rel = 'sponsored noopener';
   const [otherAgents, agentDialog] = shoppingDialog(product);
   const estimate = referencePrice(product.price);
-  const {sellerGallery, options, detailPhotos} = gallery(product, photos);
+  const {sellerGallery, options, detailPhotos} = gallery(product, photos, purchasePhotos);
   const copy = element('button', {type: 'button', className: 'button outline', textContent: 'Copy Weidian link'});
   const copyStatus = element('div', {className: 'copy-link-status'});
   copyStatus.setAttribute('role', 'status');
@@ -238,8 +261,8 @@ async function init() {
   }
   try {
     if (target.dataset.listing) {
-      const {product, photos} = JSON.parse(target.dataset.listing);
-      render(product, photos);
+      const {product, photos, purchasePhotos} = JSON.parse(target.dataset.listing);
+      render(product, photos, purchasePhotos);
       return;
     }
     location.replace(productUrl(id));

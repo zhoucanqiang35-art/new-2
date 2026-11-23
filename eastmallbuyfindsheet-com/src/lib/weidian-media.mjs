@@ -39,6 +39,6 @@ export function publicShopMedia(html, id) {
   const styles = groups.filter((group) => !sizeField.test(group.attr_title)).flatMap((group) => group.attr_values ?? [])
     .map((option) => ({photo: imageUrl(option.img), label: String(option.attr_value ?? '').trim().slice(0, 120)}))
     .filter(({photo}) => photo);
-  const photos = [...new Set((item.imgs ?? []).map((photo) => imageUrl(typeof photo === 'string' ? photo : photo?.url)).filter(Boolean))];
+  const photos = (item.imgs ?? []).map((photo) => imageUrl(typeof photo === 'string' ? photo : photo?.url)).filter(Boolean);
   return {styles, sizes, photos};
 }

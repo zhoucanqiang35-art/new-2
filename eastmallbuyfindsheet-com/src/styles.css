@@ -383,12 +383,12 @@ footer{margin-top:54px;padding:27px 0 32px}.footer-inner{display:flex;justify-co
   padding: 3px 3px 7px;
   overflow-x: auto;
 }
-.seller-photo-filmstrip button {
+.seller-photo-filmstrip :is(button, a) {
   border: 1px solid var(--control-border);
   border-radius: 7px;
   background: var(--surface);
 }
-.seller-photo-filmstrip button { padding: 0; aspect-ratio: 1; overflow: hidden; }
+.seller-photo-filmstrip :is(button, a) { padding: 0; aspect-ratio: 1; overflow: hidden; }
 .seller-photo-filmstrip img { width: 100%; height: 100%; object-fit: contain; }
 .seller-photo-filmstrip [aria-pressed="true"] {
   border-color: var(--brand);

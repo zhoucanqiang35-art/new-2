@@ -1,5 +1,6 @@
 ---
 import {readFileSync} from 'node:fs';
+import savedMedia from '../../../public/data/product-media-saved.json';
 import Layout from '../../components/Layout.astro';
 import {storeCatalog as catalog} from '../../lib/store-catalog.mjs';
 import {categoryLabel, productImage, purchaseUrl, sourceOrigin} from '../../lib/catalog.mjs';
@@ -30,6 +31,8 @@ const id = product.weidianId;
 const category = categoryLabel(product.category);
 const categoryUrl = categoryLanding(product.category) || categoryFinds(product.category);
 const price = priceFor(product.price);
+const purchasePhotos = savedMedia[id]?.photos ?? [];
+const galleryPreview = purchasePhotos.length ? purchasePhotos : [productImage(product)];
 const catalogPhotos = [...new Set([productImage(product), ...photos])];
 const sourceUrl = new URL(product.sourcePath, sourceOrigin).href;
 const description = product.name + ' on the EastMallBuy spreadsheet. Compare seller photos, reference price and ordering options for Weidian item ' + id + '.';
@@ -37,9 +40,18 @@ const description = product.name + ' on the EastMallBuy spreadsheet. Compare sel
 <Layout title={product.name + ' | EastMallBuy Spreadsheet'} description={description}>
   <section class="wrap page">
     <a href={categoryUrl}>Browse {category}</a>
-    <div id="product-detail" data-item={id} data-listing={JSON.stringify({product, photos})}>
+    <div id="product-detail" data-item={id} data-listing={JSON.stringify({product, photos, purchasePhotos})}>
       <div class="detail-grid">
-        <img src={productImage(product)} alt={product.name} class="detail-image" fetchpriority="high" />
+        <div class="detail-gallery">
+          <img src={galleryPreview[0]} alt={product.name} class="detail-image" fetchpriority="high" />
+          <div class="seller-photo-filmstrip" aria-label="Purchase listing photos">
+            {galleryPreview.map((photo, index) => (
+              <a href={photo} aria-label={'View purchase listing photo ' + (index + 1)} target="_blank" rel="noopener">
+                <img src={photo} width="74" height="74" alt="" loading="lazy" />
+              </a>
+            ))}
+          </div>
+        </div>
         <div class="detail-copy">
           <p class="eyebrow">{category}</p>
           <h1 translate="no">{product.name}</h1>
