@@ -430,3 +430,9 @@
   .category-icon { min-height: 40px; }
   .home-layout footer { margin-top: 14px; }
 }
+
+@media (max-width: 335px) {
+  .home-section-head { margin-bottom: 5px; }
+  .catalog-hero-content { padding-top: 12px; }
+  .catalog-hero-summary { margin-top: 7px; }
+}

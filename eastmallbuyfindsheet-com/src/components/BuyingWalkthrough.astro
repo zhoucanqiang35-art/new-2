@@ -105,4 +105,9 @@ const screenshotUrl = (image) => image.startsWith('/') ? image : 'https://eastma
     .walkthrough-phones .walkthrough-step p { font-size: .81rem; line-height: 1.35; }
     .walkthrough-phones .walkthrough-step .section-link { font-size: .78rem; }
   }
+  @media (max-width: 335px) {
+    .walkthrough-phones .walkthrough-grid { grid-template-columns: repeat(4, 250px); }
+    .walkthrough-phones .walkthrough-screen,
+    .walkthrough-phones .walkthrough-screen img { height: 58px; aspect-ratio: auto; }
+  }
 </style>
