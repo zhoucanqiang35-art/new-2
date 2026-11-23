@@ -20,14 +20,23 @@ export async function onRequestGet({request}) {
     return Response.json({error: 'Invalid item or media type'}, {status: 400});
   }
 
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 8000);
+  let failure = 'source-connection';
   try {
     const endpoint = type === 'qc' ? '/qcradar-qc.php?item=' : '/api/Goods/getSkuData?weidian_id=';
     const response = await fetch(source + endpoint + id, {
-      headers: {Accept: 'application/json'},
-      redirect: 'error',
-      signal: AbortSignal.timeout(8000),
+      headers: {
+        Accept: 'application/json',
+        'User-Agent': 'EastMallBuy Findsheet (+https://eastmallbuyfindsheet.com/)',
+      },
+      signal: controller.signal,
     });
-    if (!response.ok) throw new Error('Source unavailable');
+    if (!response.ok) {
+      failure = 'source-http-' + response.status;
+      throw new Error('Source unavailable');
+    }
+    failure = 'source-response';
     const data = await response.json();
 
     if (type === 'qc') {
@@ -52,9 +61,11 @@ export async function onRequestGet({request}) {
       .filter(({photo}) => photo);
     return Response.json({styles}, {headers: {'Cache-Control': 'public, max-age=300'}});
   } catch {
-    return Response.json({error: 'Product media currently unavailable'}, {
+    return Response.json({error: 'Product media currently unavailable', reason: controller.signal.aborted ? 'source-timeout' : failure}, {
       status: 502,
       headers: {'Cache-Control': 'no-store'},
     });
+  } finally {
+    clearTimeout(timeout);
   }
 }
