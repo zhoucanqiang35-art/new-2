@@ -31,7 +31,7 @@ const categoryUrl = categoryLanding(product.category) || categoryFinds(product.c
 const price = priceFor(product.price);
 const destination = purchaseFor('eastmallbuy', id, product.sourcePath);
 const hasQc = qc[id]?.status === 'available';
-const qcUrl = '/image-search/?id=' + id + '#qc-finder';
+const qcUrl = '/qc/?id=' + id + '#qc-finder';
 const sourceUrl = new URL(product.sourcePath, sourceOrigin).href;
 const description = product.name + ' on the EastMallBuy spreadsheet. Compare seller photos, reference price and ordering options for Weidian item ' + id + '.';
 ---

@@ -1,19 +1,29 @@
 ---
 import {buyingSteps, officialOrder} from '../lib/buying-help.mjs';
 const {home = false} = Astro.props;
+const screenshotUrl = (image) => image.startsWith('/') ? image : 'https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/guide/' + image;
 ---
-<section class:list={['buying-walkthrough', {'wrap home-section': home}]} aria-labelledby="walkthrough-heading">
+<section class:list={['buying-walkthrough', {'wrap home-section walkthrough-phones': home}]} aria-labelledby="walkthrough-heading">
   {home ? <h2 id="walkthrough-heading">How to buy on EastMallBuy</h2> : <h2 id="walkthrough-heading">From listing to shipment</h2>}
   <p class="walkthrough-lead">Follow the purchasing process using real Findsheet screens and the official EastMallBuy shipping calculator.</p>
   <ol class="walkthrough-grid">
     {buyingSteps.map(({title, text, image, width, height, caption, label, href}) => (
       <li class="walkthrough-step">
-        {image && <figure>
-          <a href={'https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/guide/' + image} target="_blank" rel="noopener" aria-label={caption}>
-            <img src={'https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site/assets/guide/' + image} alt={caption} loading="lazy" width={width} height={height} />
+        {(!home && image) && <figure>
+          <a href={screenshotUrl(image)} target="_blank" rel="noopener" aria-label={caption}>
+            <img src={screenshotUrl(image)} alt={caption} loading="lazy" width={width} height={height} />
           </a>
           <figcaption>{caption}</figcaption>
         </figure>}
+        {home && (image ? (
+          <a class="walkthrough-screen" href={screenshotUrl(image)} target="_blank" rel="noopener" aria-label={caption}>
+            <img src={screenshotUrl(image)} alt={caption} loading="lazy" width={width} height={height} />
+          </a>
+        ) : (
+          <div class="walkthrough-screen walkthrough-screen-tool">
+            <a class="button outline" href={href}>QC Finder</a>
+          </div>
+        ))}
         <div class="walkthrough-step-copy">
           <h3>{title}</h3>
           <p>{text}</p>
@@ -27,3 +37,72 @@ const {home = false} = Astro.props;
     <a class="button outline" href={officialOrder} target="_blank" rel="noopener">Official EastMallBuy ordering guide</a>
   </div>
 </section>
+
+<style>
+  .walkthrough-phones .walkthrough-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    gap: clamp(8px, 1.7vw, 20px);
+  }
+
+  .walkthrough-phones .walkthrough-step {
+    position: relative;
+    padding: 30px 9px 10px;
+    border: 5px solid var(--deep);
+    border-radius: 24px;
+  }
+
+  .walkthrough-phones .walkthrough-step::before {
+    position: absolute;
+    inset: 7px auto auto 50%;
+    width: 35px;
+    height: 5px;
+    transform: translateX(-50%);
+    border-radius: 8px;
+    background: var(--deep);
+    content: '';
+  }
+
+  .walkthrough-screen {
+    display: grid;
+    place-items: center;
+    padding: 3px;
+    border-radius: 8px;
+    background: var(--tint);
+  }
+
+  .walkthrough-screen-tool { aspect-ratio: 2.05; }
+  .walkthrough-phones .walkthrough-screen img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2.05;
+    object-fit: contain;
+  }
+
+  .walkthrough-phones .walkthrough-step-copy { padding: 11px 4px 5px; }
+
+  @media (max-width: 760px) {
+    .walkthrough-phones .walkthrough-grid {
+      grid-template-columns: repeat(4, 190px);
+      overflow-x: auto;
+      overscroll-behavior-inline: contain;
+      scroll-snap-type: inline proximity;
+      scrollbar-width: thin;
+      padding-block: 3px 8px;
+    }
+
+    .walkthrough-phones .walkthrough-step {
+      padding: 18px 6px 6px;
+      border-width: 3px;
+      border-radius: 17px;
+      scroll-snap-align: start;
+    }
+
+    .walkthrough-phones .walkthrough-step::before { inset-block-start: 5px; height: 4px; }
+    .walkthrough-phones .walkthrough-step-copy { padding: 8px 2px 3px; }
+    .walkthrough-phones .walkthrough-step h3 { font-size: .88rem; }
+    .walkthrough-phones .walkthrough-step p { font-size: .81rem; line-height: 1.35; }
+    .walkthrough-phones .walkthrough-step .section-link { font-size: .78rem; }
+  }
+</style>

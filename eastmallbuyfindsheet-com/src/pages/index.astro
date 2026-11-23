@@ -18,10 +18,6 @@ const qcSampleProduct = catalog.find((item) => item.weidianId === qcSample);
 ---
 <Layout title="EastMallBuy Spreadsheet | Browse Finds & Warehouse QC" description="Explore shoes, streetwear and accessories in the EastMallBuy spreadsheet. Browse 11 Findspreadsheet categories, search by image, and check available warehouse QC photos." page="home">
   <section class="catalog-hero">
-    <picture class="catalog-hero-photo">
-      <source media="(max-width: 720px)" srcset="/assets/shipping-hero-mobile.webp" />
-      <img src="/assets/shipping-hero.webp" width="1536" height="1024" alt="" fetchpriority="high" />
-    </picture>
     <div class="wrap catalog-hero-content">
       <p class="catalog-kicker">The Findspreadsheet catalog</p>
       <h1>EastMallBuy <span>Spreadsheet</span></h1>
@@ -34,7 +30,7 @@ const qcSampleProduct = catalog.find((item) => item.weidianId === qcSample);
       <div class="home-actions">
         <a class="button catalog-primary" href="/spreadsheet/">Browse spreadsheet</a>
         <a class="button catalog-quiet" href="/image-search/#image-upload">Search by image</a>
-        <a class="button catalog-quiet" href="/image-search/#qc-finder">Check QC by ID</a>
+        <a class="button catalog-quiet" href="/qc/#qc-finder">Check QC by ID</a>
       </div>
       <div class="catalog-hero-summary" aria-label="Catalog at a glance">
         <a href="/spreadsheet/"><strong>{number.format(listingCount)}</strong><span>Weidian listings</span></a>
@@ -65,7 +61,7 @@ const qcSampleProduct = catalog.find((item) => item.weidianId === qcSample);
       <div class="home-qc-copy">
         <h2>See warehouse QC</h2>
         <p>Look up a Weidian link or item ID. Open a saved example to see what warehouse photos can show.</p>
-        <div class="home-tool-links"><a class="button dark" href="/image-search/#qc-finder">Open QC Finder</a><a class="section-link" href={'/image-search/?id=' + qcSample + '#qc-finder'}>View QC example</a></div>
+        <div class="home-tool-links"><a class="button dark" href="/qc/#qc-finder">Open QC Finder</a><a class="section-link" href={'/qc/?id=' + qcSample + '#qc-finder'}>View QC example</a></div>
       </div>
       <a class="home-qc-photo" href={productUrl(qcSample)} aria-label={qcSampleProduct.name + ' product details'}>
         <img src={productImage(qcSampleProduct)} alt={qcSampleProduct.name} width="420" height="380" loading="lazy" />

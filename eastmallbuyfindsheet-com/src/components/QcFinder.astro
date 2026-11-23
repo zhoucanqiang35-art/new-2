@@ -1,12 +1,12 @@
   <section class="qc-tool" id="qc-finder">
     <h2>QC Finder</h2>
     <p class="lead">Check historical QC availability by Weidian link or item ID. If a saved record has photos, the result links to the gallery. For your own order, check your EastMallBuy account.</p>
-    <form class="search-form" id="qc-form" action="/image-search/#qc-finder">
+    <form class="search-form" id="qc-form" action="/qc/#qc-finder">
       <label class="visually-hidden" for="qc-query">Weidian item ID or link</label>
       <input name="id" id="qc-query" placeholder="Weidian link or item ID" required />
       <button class="button dark" type="submit">Find QC</button>
     </form>
-    <p class="sample">Try an item with saved photos <a href="/image-search/?id=7321418559#qc-finder">7321418559</a></p>
+    <p class="sample">Try an item with saved photos <a href="/qc/?id=7321418559#qc-finder">7321418559</a></p>
     <div class="result-status" id="qc-result" role="status"></div>
   </section>
 <script>
@@ -33,7 +33,7 @@
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     const id = parseId(field.value);
-    if (id) history.replaceState(null, '', '/image-search/?id=' + id + '#qc-finder');
+    if (id) history.replaceState(null, '', '/qc/?id=' + id + '#qc-finder');
     lookup();
   });
 </script>

@@ -25,7 +25,7 @@ import {languages} from '../lib/languages.mjs';
   let requestId = 0;
 
   function translated(source: string) {
-    const exact = dictionary[source];
+    const exact = dictionary[source] ?? (source === 'Upload image' ? dictionary['Choose a reference image'] : undefined);
     if (exact) return exact;
     if (source.startsWith('Buy on ') && dictionary['Buy on ZZ1ZZ']) {
       return dictionary['Buy on ZZ1ZZ'].replace('ZZ1ZZ', source.slice(7));

@@ -28,9 +28,9 @@ export const buyingSteps = [
   },
   {
     title: 'Review warehouse QC before shipping',
-    text: 'The seller sends the purchase to the agent warehouse. Once your own inspection photos are available in EastMallBuy, check the size label, color, count, measurements and visible condition. On Findsheet, use Image Search and QC Finder to look at saved historical examples before you order.',
+    text: 'The seller sends the purchase to the agent warehouse. Once your own inspection photos are available in EastMallBuy, check the size label, color, count, measurements and visible condition. On Findsheet, use QC Finder to look at saved historical examples before you order.',
     label: 'Open the QC example',
-    href: '/image-search/?id=' + exampleId + '#qc-finder',
+    href: '/qc/?id=' + exampleId + '#qc-finder',
   },
   {
     title: 'Estimate shipping and submit your parcel',
@@ -57,7 +57,7 @@ export const faqGroups = [
   {
     title: 'QC and warehouse',
     entries: [
-      ['Where can I find EastMallBuy QC photos before buying?', 'Open QC Finder in Image Search and enter the Weidian link or item ID. When a saved record includes historical warehouse photos, the result links to that gallery. EastMallBuy may also show previous QC on its product page. Compare the exact size, variant, finish and condition in the photos and review the inspection photos of your own order before arranging shipment.', '/image-search/#qc-finder', 'Open QC Finder'],
+      ['Where can I find EastMallBuy QC photos before buying?', 'Open QC Finder and enter the Weidian link or item ID. When a saved record includes historical warehouse photos, the result links to that gallery. EastMallBuy may also show previous QC on its product page. Compare the exact size, variant, finish and condition in the photos and review the inspection photos of your own order before arranging shipment.', '/qc/#qc-finder', 'Open QC Finder'],
       ['Why are my EastMallBuy warehouse QC photos missing?', 'For a newly stored order, EastMallBuy says the warehouse may still be uploading photos. Check the order status and allow time for the images to appear. If the order view still lacks photos, contact EastMallBuy with the order number. An empty result in the Findsheet preview means the saved directory has no matching photo record.', help + '98.html', 'Official help for missing QC photos'],
       ['What should I check in warehouse photos?', 'Verify the variant and quantity first. Then inspect visible stitching, closures, labels and any areas that are easy to misread in seller photos. If fit matters, compare a measured warehouse photo against the seller chart and a garment that fits. Contact the agent before parcel submission if an inspection shows a clear mismatch.', help + '94.html', 'Official guidance on QC before buying'],
       ['How do I check my EastMallBuy order or warehouse storage status?', 'Look up the order inside your EastMallBuy account and compare its status with the order-status help page. Check your warehouse inventory for items that have arrived. Before combining purchases in one parcel, verify the dates and storage terms shown for your own orders.', help + '103.html', 'Official order status guide'],

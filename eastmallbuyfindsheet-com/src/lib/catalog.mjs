@@ -12,7 +12,7 @@ export const categories = {
 };
 export const categoryLabel = (key) => categories[key] ?? 'Other Finds';
 export const productImage = (product) => product.image;
-export const officialLogo = 'https://cdn.eastmallbuy.com/img/20251105/25c59ea663a79b39eb6cb1f3edd71325.png';
+export const officialLogo = 'https://cdn.eastmallbuy.com/img/20261113/ee025dd93561ffc214b528de006615c9.png';
 export const officialFavicon = 'https://www.eastmallbuy.com/web/favicon.jpg';
 
 export function parseId(input) {

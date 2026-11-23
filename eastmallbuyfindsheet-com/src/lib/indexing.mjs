@@ -9,6 +9,7 @@ export const indexablePaths = [
   '/categories/',
   '/faq/',
   '/image-search/',
+  '/qc/',
   ...featuredCategories.map(categoryLanding),
   ...indexedProductIds.map(indexedProductPath),
 ];

@@ -13,7 +13,7 @@ const nav = [['/', 'Home', 'home'], ['/categories/', 'Categories', 'categories']
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="theme-color" content="#eaf0ef" />
+  <meta name="theme-color" content="#520916" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   {canonical ? <link rel="canonical" href={canonical.href} /> : <meta name="robots" content="noindex" />}
   <meta name="description" content={description} />
@@ -25,7 +25,7 @@ const nav = [['/', 'Home', 'home'], ['/categories/', 'Categories', 'categories']
   <a class="skip" href="#main">Skip to content</a>
   <header class="masthead">
     <div class="wrap nav">
-      <a class="brand" href="/" aria-label="EastMallBuy Findsheet home"><img src={officialLogo} width="157" height="24" alt="EastMallBuy" /><span>Findsheet</span></a>
+      <a class="brand" href="/" aria-label="EastMallBuy Findsheet home"><img src={officialLogo} width="306" height="47" alt="EastMallBuy" /></a>
       <nav aria-label="Main navigation">{nav.map(([href, label, key]) => <a href={href} aria-current={page === key ? 'page' : undefined}>{label}</a>)}</nav>
       <div class="nav-actions">
         {page === 'sheet' && <ShoppingMenu />}
