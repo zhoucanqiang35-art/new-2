@@ -33,11 +33,18 @@ for (const [row, url] of inputPhotos.entries()) {
   photos.push(url);
 }
 const index = newIndex.subarray(0, photos.length * rowBytes);
+const compressed = gzipSync(index, {level: 9});
+const catalogJson = JSON.stringify(store);
+const photoJson = JSON.stringify(photos);
 await Promise.all([
-  write('catalog.json', JSON.stringify(store)),
-  write('visual-photos.json', JSON.stringify(photos)),
+  write('catalog.json', catalogJson),
+  write('visual-photos.json', photoJson),
   write('visual-index.bin', index),
-  writeFile(new URL('../dist/visual-index.bin.gz', import.meta.url), gzipSync(index, {level: 9})),
+  writeFile(new URL('../dist/visual-index.bin.gz', import.meta.url), compressed),
+  write('store-catalog-v1.json', catalogJson),
+  write('store-visual-photos-v1.json', photoJson),
+  write('store-visual-index-v1.bin', index),
+  write('store-visual-index-v1.bin.gz', compressed),
   ...(await readdir(input)).filter((name) => /^(gallery-\d+|qc|qc-featured|product-media-saved)\.json$/.test(name))
     .map(async (name) => {
       const items = JSON.parse(await read(name));
