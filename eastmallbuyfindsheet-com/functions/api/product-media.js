@@ -2,6 +2,14 @@ const source = 'https://findspreadsheet.com';
 const qcImageHost = 'a3146e426bcaaac6c813bbc910619829.eu.r2.cloudflarestorage.com';
 const sellerImageHosts = new Set(['si.geilicdn.com', 'img.alicdn.com', 'gw.alicdn.com', 'findspreadsheet.com']);
 
+let retryAfter = 0;
+
+function unavailable(reason, status = 502, wait = 0) {
+  const headers = {'Cache-Control': 'no-store'};
+  if (wait > 0) headers['Retry-After'] = String(wait);
+  return Response.json({error: 'Product media currently unavailable', reason}, {status, headers});
+}
+
 function imageUrl(value, allowed) {
   if (typeof value !== 'string' || !value) return null;
   try {
@@ -20,6 +28,9 @@ export async function onRequestGet({request}) {
     return Response.json({error: 'Invalid item or media type'}, {status: 400});
   }
 
+  const remaining = Math.ceil((retryAfter - Date.now()) / 1000);
+  if (remaining > 0) return unavailable('source-rate-limited', 429, remaining);
+
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 8000);
   let failure = 'source-connection';
@@ -32,6 +43,13 @@ export async function onRequestGet({request}) {
       },
       signal: controller.signal,
     });
+    if (response.status === 429) {
+      const hint = response.headers.get('Retry-After');
+      const seconds = hint ? Number(hint) : NaN;
+      const wait = Math.max(15, Number.isFinite(seconds) ? seconds : Math.ceil((Date.parse(hint) - Date.now()) / 1000) || 60);
+      retryAfter = Date.now() + wait * 1000;
+      return unavailable('source-rate-limited', 429, wait);
+    }
     if (!response.ok) {
       failure = 'source-http-' + response.status;
       throw new Error('Source unavailable');
@@ -61,10 +79,7 @@ export async function onRequestGet({request}) {
       .filter(({photo}) => photo);
     return Response.json({styles}, {headers: {'Cache-Control': 'public, max-age=300'}});
   } catch {
-    return Response.json({error: 'Product media currently unavailable', reason: controller.signal.aborted ? 'source-timeout' : failure}, {
-      status: 502,
-      headers: {'Cache-Control': 'no-store'},
-    });
+    return unavailable(controller.signal.aborted ? 'source-timeout' : failure);
   } finally {
     clearTimeout(timeout);
   }

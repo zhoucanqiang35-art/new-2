@@ -10,6 +10,12 @@ function productMedia(type) {
   return readJson('/api/product-media?type=' + type + '&id=' + encodeURIComponent(id));
 }
 
+let savedMedia;
+async function savedProductMedia() {
+  savedMedia ??= readJson('/data/product-media-saved.json').catch(() => ({}));
+  return (await savedMedia)[id] ?? {};
+}
+
 function gallery(product, images) {
   const photos = [...new Set([productImage(product), ...images])];
   const cover = element('img', {src: photos[0], alt: product.name, className: 'detail-image', translate: false, fetchPriority: 'high'});
@@ -90,7 +96,7 @@ function gallery(product, images) {
 
   renderOptions();
   showPhoto(0);
-  productMedia('styles').then(({styles}) => {
+  productMedia('styles').catch(savedProductMedia).then(({styles = []}) => {
     if (!styles.length) return;
     choices = [...new Map(styles.map((style) => [style.photo, style])).values()];
     renderOptions(true);
@@ -112,26 +118,33 @@ async function copyLink(url, status) {
   }
 }
 
+function showWarehouseGrid(heading, status, grid, photos, historical) {
+  heading.textContent = photos.length + (photos.length === 1 ? ' photo' : ' photos');
+  status.hidden = !historical;
+  if (historical) status.textContent = 'Historical warehouse photos from Findspreadsheet.';
+  grid.replaceChildren(...photos.map((url, index) => {
+    const label = 'Warehouse QC photo ' + (index + 1);
+    const link = external('', url);
+    link.setAttribute('aria-label', label + ' · open image');
+    link.referrerPolicy = 'no-referrer';
+    link.append(element('img', {src: url, alt: label, loading: 'lazy', width: 232, height: 177, referrerPolicy: 'no-referrer'}));
+    return link;
+  }));
+}
+
 async function warehousePhotos(heading, status, grid, product) {
   try {
     const {status: state, photos} = await productMedia('qc');
     if (state === 'ready' && photos.length) {
-      heading.textContent = photos.length + (photos.length === 1 ? ' photo' : ' photos');
-      status.hidden = true;
-      grid.replaceChildren(...photos.map((url, index) => {
-        const label = 'Warehouse QC photo ' + (index + 1);
-        const link = external('', url);
-        link.setAttribute('aria-label', label + ' · open image');
-        link.referrerPolicy = 'no-referrer';
-        link.append(element('img', {src: url, alt: label, loading: 'lazy', width: 232, height: 177, referrerPolicy: 'no-referrer'}));
-        return link;
-      }));
+      showWarehouseGrid(heading, status, grid, photos, false);
       return;
     }
     status.textContent = state === 'pending' ? 'The main site is checking for warehouse QC photos.' :
       'Findspreadsheet currently has no warehouse QC photos for this item.';
   } catch {
-    await showQc(status, id, product.sourcePath);
+    const {photos = []} = await savedProductMedia();
+    if (photos.length) showWarehouseGrid(heading, status, grid, photos, true);
+    else await showQc(status, id, product.sourcePath);
   }
 }
 
