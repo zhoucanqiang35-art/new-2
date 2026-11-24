@@ -43,6 +43,7 @@ const serialized = JSON.stringify({product:p, pictures, warehouse}).replace(/</g
         </div>
       </div>
       <dialog id="agent-dialog" class="agent-dialog" aria-labelledby="agent-dialog-title"><div class="agent-dialog-header"><h2 id="agent-dialog-title">Choose a shopping agent</h2><form method="dialog"><button class="agent-close" type="submit" aria-label="Close shopping agents" autofocus>×</button></form></div><div id="other-agents" class="agent-options"></div></dialog>
+      {warehouse.length > 0 && <section class="qc-panel" aria-labelledby="listing-photos-title"><h2 id="listing-photos-title">Product photos</h2><div id="listing-full-photos" class="qc-photos direct-detail-photos">{pictures.map((url,index) => <a href={url} target="_blank" rel="noopener"><img src={url} alt={p.name + " · product image " + (index + 1)} width="640" height="640" loading={index < 2 ? "eager" : "lazy"} decoding="async" /></a>)}</div></section>}
       <section class="qc-panel" aria-labelledby="detail-qc-title">
         <h2 id="detail-qc-title">Detail photos</h2>
         <p id="detail-qc-status" role="status">{warehouse.length ? "Warehouse QC photos" : "Listing photos"}</p>
@@ -180,6 +181,23 @@ const serialized = JSON.stringify({product:p, pictures, warehouse}).replace(/</g
         pictures = seller.images;
         thumbnails.replaceChildren(...pictures.map(pictureButton));
         select(0);
+        const fullPhotos = document.querySelector<HTMLElement>("#listing-full-photos") || document.querySelector<HTMLElement>("#detail-qc-images")!;
+        const existing = new Set(Array.from(fullPhotos.querySelectorAll("img"), image => image.src));
+        for (const url of pictures) {
+          if (existing.has(url)) continue;
+          existing.add(url);
+          const link = document.createElement("a");
+          link.href = url;
+          link.target = "_blank";
+          link.rel = "noopener";
+          const image = new Image(640, 640);
+          image.src = url;
+          image.alt = p.name;
+          image.loading = "lazy";
+          image.decoding = "async";
+          link.append(image);
+          fullPhotos.append(link);
+        }
       }
       const groups = seller.groups || [];
       sellerStatus.hidden = groups.length > 0;
