@@ -177,5 +177,13 @@
   "productIntroQc": "仓库 QC 与验货照片",
   "productIntroQcBody": "卖家图用来了解商品，历史 QC 图来自过往仓库验货。示例 T 恤暂无保存的仓库图，可以打开下面另一个有图的 QC 示例。自己的订单到仓后，发货前请核对该订单的验货图。",
   "productIntroRelated": "相关商品与以图搜图",
-  "productIntroRelatedBody": "在 QC 下方可以比较同类相关商品。手上只有图片时，可用搜图找相似商品，再打开详情核对准确链接和规格。图片相似的商品也可能是不同款。"
+  "productIntroRelatedBody": "在 QC 下方可以比较同类相关商品。手上只有图片时，可用搜图找相似商品，再打开详情核对准确链接和规格。图片相似的商品也可能是不同款。",
+  "uploadPhoto": "上传图片",
+  "currencyByLanguage": "跟随语言",
+  "copyProductLink": "复制商品链接",
+  "productLinkCopied": "已复制链接",
+  "productLinkCopyFailed": "无法复制",
+  "detailPhotos": "细节照片",
+  "style": "款式",
+  "size": "尺寸"
 }

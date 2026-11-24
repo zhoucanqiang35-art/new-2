@@ -3,30 +3,42 @@ import Text from './Text.astro';
 import Icon from './Icon.astro';
 import { copy, message } from '../lib/messages.mjs';
 import { agents, defaultAgent, defaultCurrency, currencies, ratesDate } from '../lib/shopping-data.mjs';
+
+const { kind } = Astro.props;
 ---
-<div class="shopping-actions">
-  <a class="button small saved-link" href="/saved/" aria-label={copy('saved')} data-i18n-label="saved">
-    <Icon name="heart" size={18} /><span id="saved-count" hidden></span>
-  </a>
-  <details id="shopping-menu" class="disclosure shopping-menu">
-    <summary class="button small" aria-label={copy('shoppingPreferences')} data-i18n-label="shoppingPreferences">
-      <img id="shopping-logo" src={defaultAgent.logo} alt="" width="18" height="18" />
-      <strong id="shopping-agent">{defaultAgent.name}</strong>
+{kind === 'agent' ? (
+  <div class="shopping-actions">
+    <a class="button small saved-link" href="/saved/" aria-label={copy('saved')} data-i18n-label="saved">
+      <Icon name="heart" size={18} /><span id="saved-count" hidden></span>
+    </a>
+    <details id="shopping-menu" class="disclosure shopping-menu" data-shopping-menu>
+      <summary class="button small" aria-label={copy('agent')} data-i18n-label="agent">
+        <img id="shopping-logo" src={defaultAgent.logo} alt="" width="18" height="18" />
+        <strong id="shopping-agent">{defaultAgent.name}</strong><Icon name="chevron" size={13} />
+      </summary>
+      <div class="disclosure-panel shopping-panel">
+        <Text as="p" id="agent" class="disclosure-heading" />
+        <div class="agent-options">
+          {agents.map(({id, name, logo}) => <button type="button" class="shopping-choice" data-shop-agent={id} aria-pressed={id === defaultAgent.id}>
+            {logo ? <img src={logo} alt="" width="19" height="19" /> : <Icon name="box" size={19} />}
+            <span>{name}</span>
+          </button>)}
+        </div>
+      </div>
+    </details>
+  </div>
+) : (
+  <details class="disclosure currency-menu" data-shopping-menu>
+    <summary class="button small" aria-label={copy('currency')} data-i18n-label="currency">
       <span id="shopping-currency">{defaultCurrency}</span><Icon name="chevron" size={13} />
     </summary>
-    <div class="disclosure-panel shopping-panel">
-      <Text as="p" id="agent" class="disclosure-heading" />
-      <div class="agent-options">
-        {agents.map(({id, name, logo}) => <button type="button" class="shopping-choice" data-shop-agent={id} aria-pressed={id === defaultAgent.id}>
-          {logo ? <img src={logo} alt="" width="19" height="19" loading="lazy" /> : <Icon name="box" size={19} />}
-          <span>{name}</span>
-        </button>)}
-      </div>
-      <Text as="p" id="currency" class="disclosure-heading currency-heading" />
+    <div class="disclosure-panel currency-panel">
+      <Text as="p" id="currency" class="disclosure-heading" />
       <div class="currency-options">
-        {currencies.map((currency) => <button type="button" class="shopping-choice" data-shop-currency={currency} aria-pressed={currency === defaultCurrency}>{currency}</button>)}
+        <button type="button" class="shopping-choice" data-shop-auto aria-pressed="true"><Text id="currencyByLanguage" /></button>
+        {currencies.map((currency) => <button type="button" class="shopping-choice" data-shop-currency={currency} aria-pressed="false">{currency}</button>)}
       </div>
       <p class="reference-rate" {...message('referenceRate', ratesDate)}>{copy('referenceRate', ratesDate)}</p>
     </div>
   </details>
-</div>
+)}

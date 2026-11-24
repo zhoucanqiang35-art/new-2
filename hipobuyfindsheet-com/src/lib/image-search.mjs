@@ -1,7 +1,6 @@
 import { readJson, card, ui } from './browser-data.mjs';
 
 const file = document.getElementById('image-file');
-const example = document.getElementById('image-example');
 const preview = document.getElementById('image-preview');
 const status = document.getElementById('image-status');
 const results = document.getElementById('image-results');
@@ -17,6 +16,8 @@ function loadDataset() {
   dataset ??= Promise.all([
     readJson('/data/catalog.json'),
     readJson('/data/visual-photos.json'),
+    readJson('/data/qc.json'),
+    readJson('/data/qc-featured.json'),
     fetch('/data/visual-index.bin').then((response) => {
       if (!response.ok) throw new Error('The image index could not be loaded');
       return response.arrayBuffer();
@@ -37,21 +38,27 @@ function feature(image) {
   return Uint8Array.from({length: channels}, (_, i) => pixels[Math.floor(i / 3) * 4 + i % 3]);
 }
 
-function match(input, buffer, totalProducts, totalPhotos) {
+function isQcPhoto(url, qcUrls) {
+  return qcUrls.has(url) || url?.startsWith('/qc-media/');
+}
+
+function match(input, buffer, totalProducts, photos, qcUrls) {
+  const totalPhotos = photos.length;
   if (buffer.byteLength !== totalPhotos * rowBytes) throw new Error('Image index length mismatch');
   const rows = new Uint8Array(buffer);
   const view = new DataView(buffer);
   const best = new Map();
   for (let offset = 0; offset < rows.length; offset += rowBytes) {
     const product = view.getUint16(offset, true);
-    if (product >= totalProducts) continue;
+    const photo = offset / rowBytes;
+    if (product >= totalProducts || isQcPhoto(photos[photo], qcUrls)) continue;
     let score = 0;
     for (let j = 0; j < channels; j += 1) {
       const difference = input[j] - rows[offset + 2 + j];
       score += difference * difference;
     }
     if (!best.has(product) || score < best.get(product).score) {
-      best.set(product, { product, score, photo: offset / rowBytes });
+      best.set(product, {product, score, photo});
     }
   }
   return [...best.values()].sort((a, b) => a.score - b.score).slice(0, limit);
@@ -66,11 +73,13 @@ async function search(src) {
   try {
     const image = new Image();
     image.src = src;
-    const [[catalog, photos, buffer]] = await Promise.all([loadDataset(), image.decode()]);
+    const [[catalog, photos, qc, qcFeatured, buffer]] = await Promise.all([loadDataset(), image.decode()]);
     if (run !== runNumber) return;
-    const findings = match(feature(image), buffer, catalog.length, photos.length);
+    const qcUrls = new Set([...Object.values(qc), ...Object.values(qcFeatured)]
+      .flatMap((entry) => entry.images?.map(({url}) => url) ?? []));
+    const findings = match(feature(image), buffer, catalog.length, photos, qcUrls);
     results.replaceChildren(...findings.map(({product, photo}) => card(catalog[product], photos[photo])));
-    status.replaceChildren(ui('span', 'imageMatches', {}, findings.length, photos.length.toLocaleString('en')));
+    status.replaceChildren(ui('span', 'imageMatches', {}, findings.length, photos.filter((url) => !isQcPhoto(url, qcUrls)).length.toLocaleString('en')));
   } catch {
     if (run !== runNumber) return;
     status.replaceChildren(ui('span', 'imageError'));
@@ -86,9 +95,4 @@ file.addEventListener('change', () => {
   clearObjectUrl();
   activeObjectUrl = URL.createObjectURL(file.files[0]);
   search(activeObjectUrl);
-});
-example.addEventListener('click', () => {
-  clearObjectUrl();
-  file.value = '';
-  search('/images/hero.webp');
 });

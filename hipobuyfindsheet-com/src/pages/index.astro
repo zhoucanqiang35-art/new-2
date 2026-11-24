@@ -15,8 +15,6 @@ const shortcuts = [
   ['shoes','shoe'],['t-shirts','shirt'],['hoodies-sweaters','layers'],
   ['pants-shorts','layers'],['accessories','cap'],['jersey','shirt'],
 ];
-const ivoryGift = '/images/hero-gift-ivory.webp';
-const espressoGift = '/images/hero-gift-espresso.webp';
 const shoppingTools = [
   { href: '/image-search/', icon: 'camera', title: 'findByPhoto', description: 'imageLead' },
   { href: '/qc/', icon: 'shield', title: 'qc', description: 'qcLead' },
@@ -35,16 +33,6 @@ const shoppingTools = [
           <input name="q" aria-label={copy('search')} data-i18n-label="search" placeholder={copy('searchPlaceholder')} data-i18n-placeholder="searchPlaceholder" />
           <Text as="button" id="search" class="button button-orange" type="submit" />
         </form>
-      </div>
-      <div class="hero-gift-field" aria-hidden="true">
-        <img class="hero-gift gift-main" src={espressoGift} alt="" fetchpriority="high" />
-        <img class="hero-gift gift-left" src={ivoryGift} alt="" decoding="async" />
-        <img class="hero-gift gift-right" src={ivoryGift} alt="" decoding="async" />
-        <img class="hero-gift gift-upper-left" src={espressoGift} alt="" decoding="async" />
-        <img class="hero-gift gift-upper-right" src={espressoGift} alt="" decoding="async" />
-        <img class="hero-gift gift-lower-left" src={ivoryGift} alt="" decoding="async" />
-        <img class="hero-gift gift-lower-right" src={ivoryGift} alt="" decoding="async" />
-        <img class="hero-gift gift-far-right" src={espressoGift} alt="" decoding="async" />
       </div>
       <div class="hero-tools">
         {shoppingTools.map(({href, icon, title, description}) => <a href={href}>

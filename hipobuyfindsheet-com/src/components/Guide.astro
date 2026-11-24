@@ -23,11 +23,10 @@ const stepImages = [
   </div>
   <ol class="illustrated-steps">
     {stepImages.map(([key, files]) => <li>
-      <StepText class:list={['guide-step-text', {'home-disclosure': !standalone}]} open={standalone ? undefined : true}>
+      <StepText class:list={['guide-step-text', {'compact-guide-step': !standalone}]}>
         {standalone ? <Text as="h3" id={key} /> : <summary><Text as="h3" id={key} /></summary>}
         <Text as="p" id={key + 'Body'} />
         {key === 'stepFind' && <Text as="a" id="openProduct" href="/spreadsheet/?q=7869664333" class="inline-link" />}
-      </StepText>
       {files.length > 0 && <div class="step-images">
         {files.map(([file, label]) => <figure>
           <a href={'/guide-images/' + file} target="_blank" rel="noopener noreferrer">
@@ -36,6 +35,7 @@ const stepImages = [
           <Text as="figcaption" id={label} />
         </figure>)}
       </div>}
+      </StepText>
     </li>)}
   </ol>
   <div class="tool-samples guide-links">

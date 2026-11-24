@@ -18,6 +18,11 @@ function read(key, fallback) {
 function write(key, value) {
   try { localStorage.setItem(key, JSON.stringify(value)); } catch {}
 }
+const languageCurrencies = {
+  'zh-CN': 'CNY', es: 'EUR', fr: 'EUR', de: 'EUR', pt: 'EUR', it: 'EUR', nl: 'EUR',
+  sv: 'SEK', pl: 'PLN', ro: 'RON', tr: 'TRY', ru: 'RUB', uk: 'UAH', ja: 'JPY',
+  ko: 'KRW', vi: 'VND', th: 'THB', id: 'IDR', ms: 'MYR', hi: 'INR', ar: 'AED', he: 'ILS',
+};
 let preferences;
 let savedProducts;
 
@@ -26,16 +31,22 @@ export function currentShopping() {
     const stored = read('hipobuy.shopping', {});
     preferences = {
       agent: agents.find(({id}) => id === stored.agent) ?? defaultAgent,
-      currency: Object.hasOwn(rates, stored.currency) ? stored.currency : defaultCurrency,
+      currencyMode: Object.hasOwn(rates, stored.currency) &&
+        (stored.currencyMode === 'manual' || (!stored.currencyMode && stored.currency !== defaultCurrency))
+        ? stored.currency : 'auto',
     };
   }
-  return preferences;
+  const language = typeof document === 'undefined' ? 'en' : document.documentElement.lang;
+  const currency = preferences.currencyMode === 'auto'
+    ? languageCurrencies[language] ?? defaultCurrency
+    : preferences.currencyMode;
+  return {...preferences, currency};
 }
 
 export function changeShopping({agent, currency}) {
   const before = currentShopping();
-  preferences = {agent: agent ?? before.agent, currency: currency ?? before.currency};
-  write('hipobuy.shopping', {agent: preferences.agent.id, currency: preferences.currency});
+  preferences = {agent: agent ?? before.agent, currencyMode: currency ?? before.currencyMode};
+  write('hipobuy.shopping', {agent: preferences.agent.id, currency: preferences.currencyMode, currencyMode: preferences.currencyMode === 'auto' ? 'auto' : 'manual'});
 }
 
 export function agentUrl(agent, id, path) {

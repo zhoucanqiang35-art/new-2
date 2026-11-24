@@ -18,7 +18,7 @@ const links = [['home','/',''],['spreadsheet','/spreadsheet/','spreadsheet'],['i
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   {canonical ? <link rel="canonical" href={canonical} /> : <meta name="robots" content="noindex, follow" />}
   <meta name="description" content={description} />
-  <meta name="theme-color" content="#fff8ec" />
+  <meta name="theme-color" content="#f2f7fc" />
   <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-1NPQQHP9E9"></script>
   <script is:inline>
     if (location.hostname === 'hipobuyfindsheet.com' || location.hostname === 'www.hipobuyfindsheet.com') {
@@ -27,7 +27,7 @@ const links = [['home','/',''],['spreadsheet','/spreadsheet/','spreadsheet'],['i
       gtag('js', new Date());
       gtag('config', 'G-1NPQQHP9E9');
       document.addEventListener('click', event => {
-        const link = event.target.closest?.('a[data-agent-item]');
+        const link = event.target.closest?.('a[data-agent-item], a[data-agent-outbound]');
         if (!link || !link.hostname || link.hostname === location.hostname) return;
         gtag('event', 'product_outbound_click', { agent_host: link.hostname });
       });
@@ -47,7 +47,7 @@ const links = [['home','/',''],['spreadsheet','/spreadsheet/','spreadsheet'],['i
       {links.map(([key, href, pageKey]) => <Text as="a" id={key} href={href} aria-current={page === pageKey ? 'page' : undefined} />)}
     </nav>
     <div class="header-actions">
-      {showShopping && <ShoppingMenu />}
+      {showShopping && <ShoppingMenu kind="agent" />}
       <details id="language-menu" class="disclosure language-menu">
         <summary class="button small" aria-label={copy('language')} data-i18n-label="language">
           <Icon name="globe" size={17} /><span id="language-name">English</span><Icon name="chevron" size={14} />
@@ -55,11 +55,12 @@ const links = [['home','/',''],['spreadsheet','/spreadsheet/','spreadsheet'],['i
         <div class="disclosure-panel">
           <Text as="p" id="language" class="disclosure-heading"/>
           <div class="language-options">
-            {languages.map(([code, label]) => <button type="button" lang={code} data-language={code} aria-pressed={code === 'en'}>{label}</button>)}
+            {languages.map(([code, label]) => <button class:list={{"default-language": code === "en"}} type="button" lang={code} data-language={code} aria-pressed={code === 'en'}>{label}</button>)}
           </div>
           <p id="language-status" role="status"></p>
         </div>
       </details>
+      <ShoppingMenu kind="currency" />
       <Text as="a" id="join" class="button small button-dark signup" href={registrationUrl} target="_blank" rel="noopener noreferrer" />
       <details class="mobile-nav"><summary aria-label={copy('menu')} data-i18n-label="menu"><Icon name="menu" /></summary>
         <nav aria-label="Mobile navigation">{links.map(([key, href, pageKey]) => <Text as="a" id={key} href={href} aria-current={page === pageKey ? 'page' : undefined} />)}<Text as="a" id="join" class="mobile-signup" href={registrationUrl} target="_blank" rel="noopener noreferrer" /></nav>
