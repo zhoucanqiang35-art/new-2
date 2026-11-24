@@ -31,11 +31,11 @@ import Layout from "../components/Layout.astro";
           </details>
           <section class="seller-photo-panel" aria-labelledby="seller-photo-title">
             <div class="seller-photo-heading">
-              <h2 id="seller-photo-title">Seller detail photos</h2>
+              <h2 id="seller-photo-title">Seller options</h2>
               <a id="seller-listing" class="inline-arrow" target="_blank" rel="noopener">See the original listing ↗</a>
             </div>
-            <p id="seller-photo-status" class="muted" role="status">Loading seller detail photos…</p>
-            <ul id="seller-photos" class="seller-photos" hidden></ul>
+            <p id="seller-photo-status" class="muted" role="status">Loading seller options…</p>
+            <div id="seller-photos" hidden></div>
           </section>
         </div>
       </div>
@@ -60,7 +60,7 @@ import Layout from "../components/Layout.astro";
   import {showListingPhotos, showQc} from "../lib/qc";
   import {otherAgentLinks} from "../lib/agents";
   import {productCard} from "../lib/product-card";
-  import {showSellerPhotos} from "../lib/seller-photos";
+  import {clearSellerSelection, showSellerPhotos} from "../lib/seller-photos";
 
   const status = document.querySelector<HTMLElement>("#detail-status")!;
   const item = new URLSearchParams(location.search).get("id") ?? "";
@@ -104,7 +104,6 @@ import Layout from "../components/Layout.astro";
       document.querySelector("#gallery-note")!.textContent = "Additional listing photos could not load.";
       return [p.image];
     });
-    void showSellerPhotos(item, gallery);
     const agents = otherAgentLinks(p);
     document.querySelector("#agent-count")!.textContent = "(" + agents.length + ")";
     document.querySelector("#agent-links")!.replaceChildren(...agents.map(agent => {
@@ -138,6 +137,7 @@ import Layout from "../components/Layout.astro";
     let pictures = [p.image];
     let active = 0;
     function select(index: number) {
+      clearSellerSelection();
       active = (pictures.length + index) % pictures.length;
       photo.src = pictures[active];
       photo.alt = p!.name + " · product image " + (active + 1);
@@ -148,7 +148,8 @@ import Layout from "../components/Layout.astro";
     previous.onclick = () => select(active - 1);
     next.onclick = () => select(active + 1);
     photo.addEventListener("error", () => {
-      if (photo.src !== p.image) photo.src = p.image;
+      if (photo.src !== pictures[active]) select(active);
+      else if (photo.src !== p.image) photo.src = p.image;
     });
     select(0);
     status.hidden = true;
@@ -171,6 +172,12 @@ import Layout from "../components/Layout.astro";
       return button;
     }));
     select(active);
+    void showSellerPhotos(item, ({url, label}) => {
+      photo.src = url;
+      photo.alt = label ? p.name + " · " + label : p.name;
+      counter.textContent = "Seller option";
+      for (const button of thumbnails.children) button.setAttribute("aria-pressed", "false");
+    });
     if (!(await verifiedQc)) showListingPhotos(qcStatus, qcGallery, pictures);
   }).catch(() => { status.textContent = "The product could not load. Reload the page to try again."; });
 </script>

@@ -12,6 +12,7 @@ const steps = [
       "Try item 7405460467 as a practice search. Compare the seller’s gallery, the category and the USD reference price before opening a buying link.",
     ],
     image: "spreadsheet-search",
+    arrows: [[44, 23, 90]],
     caption: "Kakobuy Finds List example showing a search by Weidian item ID.",
     links: [["Browse finds", "/browse/"], ["Search by image", "/image-search/"]],
   },
@@ -22,6 +23,7 @@ const steps = [
       "Historical warehouse photos may come from another agent. When none are available, the reference section displays the seller’s gallery. For a real warehouse photo example, try item 7405460467.",
     ],
     image: "reference-qc",
+    arrows: [[71, 40, 90]],
     caption: "Kakobuy Finds List QC Finder showing saved warehouse photos for item 7405460467.",
     links: [["See the QC example", "/qc/?id=7405460467"]],
   },
@@ -32,6 +34,7 @@ const steps = [
       "If the listing does not import, verify the original link before using Kakobuy’s manual purchase form. Enter the original URL and exact options so the buyer can identify the right item.",
     ],
     image: "product-detail",
+    arrows: [[64, 72, 90]],
     caption: "Kakobuy Finds List product detail showing the purchase link for the selected Weidian item.",
     links: [["Open the example item", detailsUrl(sample)], ["Open on Kakobuy", buyUrl(sample)], ["Register on Kakobuy", registration]],
   },
@@ -42,6 +45,7 @@ const steps = [
       "After payment, Kakobuy processes the purchase and the seller dispatches the item to its warehouse. Check the order record for updates and respond if the buyer needs more information about the listing or variant.",
     ],
     image: "official-order",
+    arrows: [[63, 46, 90], [43, 94, 135]],
     caption: "Kakobuy’s public tutorial shows how to review options and quantity before checkout.",
     links: [["Kakobuy cost breakdown", official.fees]],
   },
@@ -52,6 +56,7 @@ const steps = [
       "If something appears wrong, contact Kakobuy from the relevant order or warehouse record while the goods are still in storage. Check the order’s current after-sales options and deadline.",
     ],
     image: "official-warehouse",
+    arrows: [[63, 61, 90]],
     caption: "Kakobuy’s public tutorial illustrates warehouse intake, inspection and packing.",
     links: [["Kakobuy’s purchase and QC overview", official.purchases]],
   },
@@ -62,6 +67,7 @@ const steps = [
       "Use the official shipping estimator to plan around the destination, packed weight and dimensions. Check the final cost and available routes on the actual parcel screen.",
     ],
     image: "official-estimate",
+    arrows: [[84, 90, 45]],
     caption: "Kakobuy’s public tutorial shows the international parcel checkout.",
     links: [["Open the official shipping estimator", official.estimate]],
   },
@@ -72,6 +78,7 @@ const steps = [
       "If anything is missing or damaged, keep the label and photographs and contact Kakobuy with the parcel number and the details of the problem.",
     ],
     image: "official-tracking",
+    arrows: [[89, 81, 28]],
     caption: "Kakobuy’s public tutorial shows where to confirm receipt in the parcel list.",
     links: [["Open Kakobuy’s official walkthrough", official.tutorial]],
   },
@@ -88,7 +95,7 @@ const steps = [
     </div>
   </header>
   <ol class="guide-steps">
-    {steps.map(({ title, paragraphs, image, caption, links }, index) => (
+    {steps.map(({ title, paragraphs, image, caption, links, arrows }, index) => (
       <li>
         <details open={index === 0}>
           <summary>{title}</summary>
@@ -97,10 +104,42 @@ const steps = [
               {paragraphs.map(paragraph => <p>{paragraph}</p>)}
               <div class="guide-actions">{links.map(([label, href]) => <a class="inline-arrow" href={href}>{label} ↗</a>)}</div>
             </div>
-            {image && <figure><a href={`/guide-images/${image}.webp`} aria-label={`Enlarge screenshot: ${title}`}><img loading="lazy" decoding="async" src={`/guide-images/${image}.webp`} alt={caption} /></a><figcaption>{caption}</figcaption></figure>}
+            {image && (
+              <figure>
+                <a class="guide-screenshot" href={`/guide-images/${image}.webp`} aria-label={`Enlarge screenshot: ${title}`}>
+                  <img loading="lazy" decoding="async" src={`/guide-images/${image}.webp`} alt={caption} />
+                  {arrows.map(([x, y, angle]) => (
+                    <span class="guide-arrow" style={`--arrow-x:${x}%;--arrow-y:${y}%;--arrow-angle:${angle}deg`} aria-hidden="true"></span>
+                  ))}
+                </a>
+                <figcaption>{caption}</figcaption>
+              </figure>
+            )}
           </div>
         </details>
       </li>
     ))}
   </ol>
+  <dialog class="guide-screenshot-dialog" aria-label="Buying guide screenshot">
+    <form method="dialog"><button class="button button-small">Close</button></form>
+    <div class="guide-screenshot-view"></div>
+  </dialog>
 </section>
+<script>
+  const viewer = document.querySelector<HTMLDialogElement>(".guide-screenshot-dialog");
+  const view = viewer?.querySelector(".guide-screenshot-view");
+  if (viewer && view && typeof viewer.showModal === "function") {
+    for (const link of document.querySelectorAll<HTMLAnchorElement>(".guide-screenshot")) {
+      link.addEventListener("click", event => {
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        const image = link.cloneNode(true) as HTMLElement;
+        image.removeAttribute("href");
+        image.removeAttribute("aria-label");
+        view.replaceChildren(image);
+        viewer.showModal();
+      });
+    }
+    viewer.addEventListener("close", () => view.replaceChildren());
+  }
+</script>
