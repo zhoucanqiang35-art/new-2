@@ -40,6 +40,7 @@ const code = `function lazyJson(json) {
 ${datasets}
 const exchangeRateSnapshot = ${exchangeSnapshot};
 const usdRate = ${rate};
+const buyingAgents = ${fs.readFileSync('data/agents.json','utf8')};
 let productIndex;
 function getProductIndex() {
   return productIndex ??= Object.fromEntries(

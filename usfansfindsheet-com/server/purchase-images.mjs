@@ -11,7 +11,7 @@ export async function purchaseImages(channel,goodsId){
  const [info,qc]=await Promise.allSettled([purchaseApi('info',{channel,goodsId}),purchaseApi('estimate-info',{goodsId})]);
  const good=info.status==='fulfilled'?info.value:null;const quality=qc.status==='fulfilled'?qc.value:null;
  if(!good&&!snapshot)return null;
- return {...(good?extractUsdPrice(good):{usdMin:snapshot?.usdMin,usdMax:snapshot?.usdMax}),images:imageUrls(good?.images||snapshot?.images),descriptionImages:good?descriptionPhotos(good.description):imageUrls(snapshot?.descriptionImages),qcImages:quality?imageUrls(quality.qcImages):imageUrls(snapshot?.qcImages),qcAvailable:!!quality||!!snapshot?.qcAvailable,updated:good?new Date().toISOString():snapshot.updated,cached:!good};
+ return {...(good?extractUsdPrice(good):{usdMin:snapshot?.usdMin,usdMax:snapshot?.usdMax}),properties:good?.properties||snapshot?.properties||[],skuList:good?.skuList||snapshot?.skuList||[],images:imageUrls(good?.images||snapshot?.images),descriptionImages:good?descriptionPhotos(good.description):imageUrls(snapshot?.descriptionImages),qcImages:quality?imageUrls(quality.qcImages):imageUrls(snapshot?.qcImages),qcAvailable:!!quality||!!snapshot?.qcAvailable,updated:good?new Date().toISOString():snapshot.updated,cached:!good};
 }
 function extractUsdPrice(info){const choices=(info?.skuList||[]).filter(s=>s.stock!==0).map(s=>Number(s.convertedDiscountPrice)>0?Number(s.convertedDiscountPrice):Number(s.convertedPrice)).filter(p=>Number.isFinite(p)&&p>0);if(!choices.length&&Number(info?.convertedPrice)>0)choices.push(Number(info.convertedPrice));return {usdMin:choices.length?Math.min(...choices):null,usdMax:choices.length?Math.max(...choices):null};}
 export async function mainQcData(goodsId,limit=24){

@@ -212,7 +212,7 @@
     overflow-x: auto;
     padding: 2px 2px 7px;
     scroll-snap-type: inline proximity;
-    scrollbar-color: #996aab #211827;
+    scrollbar-color: #ff9a6b #fff3ec;
   }
 
   .storefront .home-products .listing-card {
@@ -320,7 +320,7 @@
     object-position: center;
   }
 
-  .storefront .guide-preview-image > span {
+  .storefront .guide-preview-image > .guide-step-number {
     inset: 4px auto auto 4px;
     width: 21px;
     height: 21px;
@@ -503,7 +503,7 @@
     overflow-x: auto;
     scroll-snap-type: inline proximity;
     scrollbar-width: thin;
-    scrollbar-color: #996aab #211827;
+    scrollbar-color: #ff9a6b #fff3ec;
     padding: 2px 2px 5px;
   }
 
