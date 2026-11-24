@@ -1,0 +1,139 @@
+---
+import Icon from './Icon.astro';
+import SearchExamples from './SearchExamples.astro';
+import { searchExamples } from '../lib/search-examples.js';
+import { categories } from '../lib/catalog.js';
+const { category = '' } = Astro.props;
+const [example] = searchExamples(category);
+---
+<div class="catalog" data-catalog data-category={category}>
+  <form class="catalog-toolbar" data-search role="search">
+    <label class="search-field"><span class="visually-hidden">Search products</span><Icon name="search" /><input type="search" name="q" list="product-search-examples" placeholder={'Try ' + example.toLowerCase() + ' or a Weidian item ID'} data-i18n-placeholder="homeSearchHint" data-search-example={example.toLowerCase()} /></label>
+    {!category && <label class="visually-hidden" for="category-select">Category</label>}
+    {!category && <select id="category-select" name="category"><option value="" data-i18n="allCategories">All categories</option>{categories.map((item) => <option value={item.id}>{item.label}</option>)}</select>}
+    <label class="visually-hidden" for="sort-select">Sort products</label>
+    <select id="sort-select" name="sort">
+      <option value="new" data-i18n="latest">Latest</option>
+      <option value="price-high" data-i18n="highPrice">Price: high to low</option>
+      <option value="price-low" data-i18n="lowPrice">Price: low to high</option>
+    </select>
+    <button class="button button-primary" type="submit" data-i18n="search">Search</button>
+  </form>
+  <SearchExamples category={category} />
+  <div class="catalog-summary"><p role="status" data-status>Loading products…</p><a href="/image-search/" class="text-link" data-i18n="imageSearch">Search by image</a></div>
+  <div class="product-grid" data-results></div>
+  <div class="pagination" data-pagination hidden>
+    <button type="button" class="button" data-previous data-i18n="previous">Previous</button>
+    <span data-page-label></span>
+    <button type="button" class="button" data-next data-i18n="next">Next</button>
+  </div>
+  <template data-card>
+    <article class="product-card">
+      <a class="product-card-link"><div class="product-image"><img alt="" loading="lazy" decoding="async" width="320" height="320" /></div>
+      <div class="product-meta"><span class="muted small"></span><h3></h3><strong></strong></div></a>
+    </article>
+  </template>
+</div>
+<script>
+  import { categories, formatPrice, number, productPath } from '../lib/catalog.js';
+
+  const root = document.querySelector<HTMLElement>('[data-catalog]')!;
+  const form = root.querySelector<HTMLFormElement>('form')!;
+  const query = form.querySelector<HTMLInputElement>('[name=q]')!;
+  const sort = form.querySelector<HTMLSelectElement>('[name=sort]')!;
+  const category = form.querySelector<HTMLSelectElement>('[name=category]');
+  const grid = root.querySelector<HTMLElement>('[data-results]')!;
+  const status = root.querySelector<HTMLElement>('[data-status]')!;
+  const pagination = root.querySelector<HTMLElement>('[data-pagination]')!;
+  const template = root.querySelector<HTMLTemplateElement>('[data-card]')!;
+  const back = root.querySelector<HTMLButtonElement>('[data-previous]')!;
+  const next = root.querySelector<HTMLButtonElement>('[data-next]')!;
+  const label = root.querySelector<HTMLElement>('[data-page-label]')!;
+  const categoryNames = new Map(categories.map((item) => [item.id, item.label]));
+  const pageSize = 24;
+
+  type Product = { id: string, name: string, category: string, image: string, price: number | null };
+  let products: Product[] = [];
+  let matches: Product[] = [];
+  let page = 1;
+
+  function updateAddress() {
+    const url = new URL(location.href);
+    url.search = '';
+    if (query.value.trim()) url.searchParams.set('q', query.value.trim());
+    if (category?.value) url.searchParams.set('category', category.value);
+    if (sort.value !== 'new') url.searchParams.set('sort', sort.value);
+    if (page > 1) url.searchParams.set('page', String(page));
+    history.replaceState(null, '', url);
+  }
+
+  function render() {
+    const pages = Math.max(1, Math.ceil(matches.length / pageSize));
+    page = Math.max(1, Math.min(pages, page));
+    updateAddress();
+    status.textContent = matches.length === 0
+      ? 'No matching products. Try another name, ID or category.'
+      : number.format(matches.length) + (matches.length === 1 ? ' product' : ' products');
+    const cards = document.createDocumentFragment();
+    for (const product of matches.slice((page - 1) * pageSize, page * pageSize)) {
+      const fragment = template.content.cloneNode(true) as DocumentFragment;
+      fragment.querySelector('a')!.href = productPath(product);
+      fragment.querySelector('img')!.src = product.image;
+      fragment.querySelector('span')!.textContent = categoryNames.get(product.category) ?? '';
+      fragment.querySelector('h3')!.textContent = product.name;
+      const price = fragment.querySelector('strong')!;
+      if (product.price !== null) price.dataset.cnyPrice = String(product.price);
+      price.textContent = formatPrice(product.price);
+      cards.append(fragment);
+    }
+    grid.replaceChildren(cards);
+    pagination.hidden = pages === 1;
+    back.disabled = page === 1;
+    next.disabled = page === pages;
+    label.textContent = 'Page ' + page + ' of ' + pages;
+  }
+
+  function filter() {
+    const terms = query.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+    const chosen = root.dataset.category || category?.value;
+    matches = products.filter((product) => {
+      if (chosen && product.category !== chosen) return false;
+      const searchable = (product.name + ' ' + product.id).toLowerCase();
+      return terms.every((term) => searchable.includes(term));
+    });
+    if (sort.value !== 'new') {
+      const direction = sort.value === 'price-low' ? 1 : -1;
+      matches.sort((a, b) => {
+        if (a.price === null) return b.price === null ? 0 : 1;
+        if (b.price === null) return -1;
+        return direction * (a.price - b.price);
+      });
+    }
+    render();
+  }
+
+  const params = new URLSearchParams(location.search);
+  query.value = params.get('q') ?? '';
+  if (category && categoryNames.has(params.get('category') ?? '')) category.value = params.get('category')!;
+  if (['price-high', 'price-low'].includes(params.get('sort') ?? '')) sort.value = params.get('sort')!;
+  page = Number.parseInt(params.get('page') ?? '1', 10) || 1;
+
+  function bindControls() {
+    form.addEventListener('submit', (event) => { event.preventDefault(); page = 1; filter(); });
+    sort.addEventListener('change', () => { page = 1; filter(); });
+    category?.addEventListener('change', () => { page = 1; filter(); });
+    for (const [button, increment] of [[back, -1], [next, 1]] as const) {
+      button.addEventListener('click', () => { page += increment; render(); root.scrollIntoView({ block: 'start' }); });
+    }
+  }
+
+  try {
+    const response = await fetch('/data/catalog.json');
+    if (!response.ok) throw new Error('Catalog unavailable');
+    products = await response.json();
+    bindControls();
+    filter();
+  } catch {
+    status.textContent = 'The catalog could not load. Refresh the page to retry.';
+  }
+</script>

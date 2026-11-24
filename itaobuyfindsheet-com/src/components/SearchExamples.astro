@@ -1,0 +1,13 @@
+---
+import { searchExamples } from '../lib/search-examples.js';
+const { category = '' } = Astro.props;
+const examples = searchExamples(category);
+const catalogPath = category ? '/categories/' + category + '/' : '/spreadsheet/';
+---
+<datalist id="product-search-examples">
+  {examples.map((example) => <option value={example} />)}
+</datalist>
+<div class="search-suggestions">
+  <span data-i18n="trySearch">Try a search</span>
+  {examples.map((example) => <a href={catalogPath + '?' + new URLSearchParams({ q: example.toLowerCase() })}>{example}</a>)}
+</div>

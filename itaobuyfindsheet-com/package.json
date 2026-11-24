@@ -1,0 +1,14 @@
+{
+  "name": "itaobuy-findsheet",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "astro build",
+    "preview": "astro preview --host 0.0.0.0",
+    "prebuild": "cat assets/part-* | tar -xzf -"
+  },
+  "dependencies": {
+    "astro": "7.4.13"
+  }
+}

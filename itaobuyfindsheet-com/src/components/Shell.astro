@@ -1,0 +1,49 @@
+---
+import '../styles/site.css';
+import LanguagePicker from './LanguagePicker.astro';
+import CurrencyPicker from './CurrencyPicker.astro';
+import { registrationUrl } from '../lib/catalog.js';
+
+const { title, description = 'Search the independent iTaoBuy spreadsheet from Findspreadsheet. Browse Weidian finds, product photos and available warehouse QC.', active = '' } = Astro.props;
+const navigation = [
+  ['Spreadsheet', '/spreadsheet/', 'spreadsheet', 'sheet'],
+  ['Image Search', '/image-search/', 'image', 'imageSearch'],
+  ['Buying Guide', '/guides/how-to-buy/', 'guide', 'guide'],
+  ['FAQ', '/faq/', 'faq', 'faq'],
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" href="/brand/favicon.ico" />
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="skip" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="/" aria-label="iTaoBuy Spreadsheet home">
+          <img src="/brand/itaobuy.png" alt="iTaoBuy" width="102" height="44" />
+          <span data-i18n="sheet">Spreadsheet</span>
+        </a>
+        <nav aria-label="Main navigation">
+          {navigation.map(([label, href, id, key]) => <a href={href} data-i18n={key} aria-current={active === id ? 'page' : undefined}>{label}</a>)}
+        </nav>
+        <div class="header-actions"><LanguagePicker /><CurrencyPicker /><a class="button button-primary register" href={registrationUrl} target="_blank" rel="sponsored noopener">Join iTaoBuy</a></div>
+      </div>
+    </header>
+    <main id="main-content"><slot /></main>
+    <footer class="site-footer">
+      <div class="wrap foot-inner">
+        <div><a href="/" class="footer-brand">iTaoBuy Spreadsheet</a><p>Independent product directory by Findspreadsheet.</p></div>
+        <div class="foot-links"><a href="https://findspreadsheet.com/" target="_blank" rel="noopener">Findspreadsheet</a><a href="/guides/how-to-buy/" data-i18n="guide">Buying guide</a><a href="/faq/" data-i18n="faq">FAQ</a><a href="https://www.itaobuy.com/" target="_blank" rel="noopener">iTaoBuy official site</a></div>
+      </div>
+      <div class="wrap foot-note">Product data is a Findspreadsheet snapshot. Reference prices and availability may change. iTaoBuy handles orders and shipping. We may earn a commission through the sign-up link.</div>
+    </footer>
+  </body>
+</html>

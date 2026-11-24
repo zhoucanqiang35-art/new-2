@@ -1,0 +1,18 @@
+node_modules/
+.astro/
+dist/
+
+# Assets restored by npm run build
+/public/agent-logos/
+/public/brand/
+/public/featured/
+/public/guide/
+/public/home-images/
+/public/product-covers/
+/public/product-thumbs/
+/public/qc-media/
+/public/seller-gallery/
+/public/sku/
+/public/data/catalog.json
+/public/data/image-index.bin
+/src/data/galleries.json

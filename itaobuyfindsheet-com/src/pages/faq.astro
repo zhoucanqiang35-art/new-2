@@ -1,0 +1,24 @@
+---
+import Shell from '../components/Shell.astro';
+import { faqSections } from '../lib/faq.js';
+---
+<Shell title="iTaoBuy FAQ | Spreadsheet, QC, Orders & Shipping" description="Answers to common iTaoBuy Spreadsheet questions about Weidian links, image search, warehouse QC, currencies, buying and the iTaoBuy shipping calculator." active="faq">
+  <article class="wrap inner-page faq-page">
+    <h1>iTaoBuy Spreadsheet FAQ</h1>
+    <p class="page-intro">Answers for finding Weidian products, checking warehouse photos, comparing reference prices, placing an order and choosing a shipping route.</p>
+    <nav class="article-nav" aria-label="FAQ topics">
+      {faqSections.map((section) => <a class="button" href={'#' + section.id}>{section.title}</a>)}
+    </nav>
+    {faqSections.map((section) => <section class="faq-section" id={section.id}>
+      <h2>{section.title}</h2>
+      <dl>
+        {section.questions.map(([question, answer]) => <div class="faq-answer"><dt>{question}</dt><dd>{answer}</dd></div>)}
+      </dl>
+    </section>)}
+    <div class="article-nav">
+      <a class="button button-primary" href="/guides/how-to-buy/">Open the buying guide</a>
+      <a class="button" href="/spreadsheet/">Browse the spreadsheet</a>
+      <a class="button" href="https://www.itaobuy.com/help/center" target="_blank" rel="noopener">iTaoBuy Help Center</a>
+    </div>
+  </article>
+</Shell>

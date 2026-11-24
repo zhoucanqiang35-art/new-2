@@ -1,0 +1,99 @@
+---
+import Shell from '../components/Shell.astro';
+import Icon from '../components/Icon.astro';
+---
+<Shell title="iTaoBuy QC Finder | Weidian Warehouse Photos" description="Look up a Weidian listing by URL or item ID and browse available warehouse QC photos in iTaoBuy Spreadsheet." active="qc">
+  <div class="wrap inner-page tool-page">
+    <p class="eyebrow"><span></span> Warehouse photo lookup</p>
+    <h1 data-i18n="findQc">Find QC photos</h1>
+    <p class="page-intro">Look up a Weidian item by its ID or product link. This preview includes verified examples from Findspreadsheet's QC service.</p>
+    <div class="tool-panel">
+      <form class="hero-search" data-qc-form role="search">
+        <label class="visually-hidden" for="qc-item">Weidian item ID or product link</label>
+        <Icon name="search" />
+        <input id="qc-item" name="item" type="search" placeholder="Weidian item ID or product link" required />
+        <button class="button button-primary" type="submit" data-i18n="checkQc">Check QC</button>
+      </form>
+      <div class="tool-examples"><span>Try a sample</span><button type="button" data-example="7321418559">Item with QC</button><button type="button" data-example="7866625981">Item without QC</button></div>
+      <p role="status" data-qc-status></p>
+      <a class="text-link" data-qc-product hidden></a>
+      <div class="qc-grid" data-qc-results></div>
+    </div>
+  </div>
+</Shell>
+<script>
+  const field = document.querySelector<HTMLInputElement>('#qc-item')!;
+  const form = document.querySelector<HTMLFormElement>('[data-qc-form]')!;
+  const status = document.querySelector<HTMLElement>('[data-qc-status]')!;
+  const result = document.querySelector<HTMLElement>('[data-qc-results]')!;
+  const product = document.querySelector<HTMLAnchorElement>('[data-qc-product]')!;
+  let requestId = 0;
+
+  function itemId(input: string): string | null {
+    if (/^\d{5,20}$/.test(input)) return input;
+    try {
+      let url = new URL(input);
+      if (url.hostname === 'www.itaobuy.com' && url.searchParams.has('url')) {
+        url = new URL(url.searchParams.get('url')!);
+      }
+      const id = url.searchParams.get('itemID') ?? '';
+      return ['weidian.com', 'www.weidian.com'].includes(url.hostname) && /^\d{5,20}$/.test(id) ? id : null;
+    } catch {
+      return null;
+    }
+  }
+
+  async function check() {
+    const request = ++requestId;
+    const id = itemId(field.value.trim());
+    result.replaceChildren();
+    product.hidden = true;
+    if (!id) { status.textContent = 'Enter a Weidian item ID or a full product link.'; return; }
+    const url = new URL(location.href);
+    url.searchParams.set('item', id);
+    history.replaceState(null, '', url);
+    status.textContent = 'Checking preview photos…';
+    try {
+      const response = await fetch('/data/qc.json');
+      if (!response.ok) throw new Error('QC unavailable');
+      const data = await response.json();
+      if (request !== requestId) return;
+      const record = data[id];
+      if (!record) {
+        status.textContent = id === '7866625981'
+          ? 'Findspreadsheet returned no warehouse QC for this item when checked.'
+          : 'This item has no verified result in the preview. Look up the matching product in the spreadsheet.';
+        product.href = id === '7866625981' ? '/products/' + id + '/' : '/spreadsheet/?q=' + id;
+        product.textContent = 'Look up this product';
+        product.hidden = false;
+        return;
+      }
+      status.textContent = record.items.length + ' warehouse QC photos for ' + record.product.name + '.';
+      product.href = '/products/' + id + '/';
+      product.textContent = 'View product details';
+      product.hidden = false;
+      for (const [index, row] of record.items.entries()) {
+        const link = document.createElement('a');
+        link.href = row.image;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        const image = document.createElement('img');
+        image.src = row.image;
+        image.alt = 'Warehouse QC photo ' + (index + 1);
+        image.width = image.height = 230;
+        image.loading = 'lazy';
+        link.append(image);
+        result.append(link);
+      }
+    } catch {
+      if (request === requestId) status.textContent = 'QC photos did not load. Try again.';
+    }
+  }
+
+  form.addEventListener('submit', (event) => { event.preventDefault(); void check(); });
+  for (const button of document.querySelectorAll<HTMLButtonElement>('[data-example]')) {
+    button.addEventListener('click', () => { field.value = button.dataset.example!; void check(); });
+  }
+  const initial = new URLSearchParams(location.search).get('item');
+  if (initial) { field.value = initial; void check(); }
+</script>

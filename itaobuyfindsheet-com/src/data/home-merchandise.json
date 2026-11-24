@@ -1,0 +1,68 @@
+{
+  "categoryImages": {
+    "shoes": "/home-images/7848381373.webp",
+    "hoodies-sweaters": "/home-images/7869178109.webp",
+    "t-shirts": "/home-images/7866512819.webp",
+    "jackets": "/home-images/7852860504.webp",
+    "accessories": "/home-images/7870719468.webp",
+    "electronics": "/home-images/7869205679.webp"
+  },
+  "featured": [
+    {
+      "id": "7851422720",
+      "name": "Embroidered Canvas Sneakers",
+      "category": "shoes",
+      "price": 730.0,
+      "image": "/home-images/7851422720.webp"
+    },
+    {
+      "id": "7872148512",
+      "name": "Embroidered Pullover Hoodie",
+      "category": "hoodies-sweaters",
+      "price": 250.0,
+      "image": "/home-images/7872148512.webp"
+    },
+    {
+      "id": "7871821866",
+      "name": "Graphic T-Shirt Collection",
+      "category": "t-shirts",
+      "price": 128.0,
+      "image": "/home-images/7871821866.webp"
+    },
+    {
+      "id": "7857806990",
+      "name": "Embroidered Denim Jacket",
+      "category": "jackets",
+      "price": 300.0,
+      "image": "/home-images/7857806990.webp"
+    },
+    {
+      "id": "7870736652",
+      "name": "Air Cushion Backpack 5039",
+      "category": "accessories",
+      "price": 308.0,
+      "image": "/home-images/7870736652.webp"
+    },
+    {
+      "id": "7869170181",
+      "name": "Wireless Earbuds with Charging",
+      "category": "electronics",
+      "price": 302.0,
+      "image": "/home-images/7869170181.webp"
+    },
+    {
+      "id": "7871358818",
+      "name": "Cross and Bead Wallet Chain",
+      "category": "accessories",
+      "price": 231.6,
+      "image": "/home-images/7871358818.webp"
+    },
+    {
+      "id": "7872123166",
+      "name": "Portable Speakers - Flip 6",
+      "category": "electronics",
+      "price": 336.0,
+      "image": "/home-images/7872123166.webp"
+    }
+  ]
+}

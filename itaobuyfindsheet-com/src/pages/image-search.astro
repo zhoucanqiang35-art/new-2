@@ -1,0 +1,140 @@
+---
+import Shell from '../components/Shell.astro';
+import Icon from '../components/Icon.astro';
+import { highlights } from '../lib/catalog.js';
+---
+<Shell title="iTaoBuy Image Search | iTaoBuy Spreadsheet" active="image">
+  <div class="wrap inner-page tool-page">
+    <p class="eyebrow"><span></span> Find similar product photos</p>
+    <h1 data-i18n="imageSearch">Search by image</h1>
+    <p class="page-intro">Choose a photo to compare with the Findspreadsheet preview image index. Image matching runs in your browser and returns visually similar listings.</p>
+    <div class="tool-panel">
+      <form data-image-form class="image-form">
+        <label class="file-input">
+          <Icon name="camera" size={32} />
+          <strong data-i18n="upload">Upload image</strong>
+          <small>JPEG, PNG, WebP · 12 MB max</small>
+          <span class="upload-file-name" data-image-file-name hidden></span>
+          <input type="file" name="photo" accept="image/jpeg,image/png,image/webp" data-i18n-aria="upload" aria-label="Upload image" required />
+        </label>
+        <button class="button button-primary" type="submit" data-i18n="findSimilar">Find similar products</button>
+      </form>
+      <div class="tool-examples"><button type="button" data-image-sample={highlights[0].image}>Try a sample product photo</button></div>
+      <p role="status" data-image-status></p>
+      <div class="product-grid" data-image-results></div>
+    </div>
+  </div>
+</Shell>
+<script>
+  import { categories, formatPrice, productPath } from '../lib/catalog.js';
+  type Product = { id: string, name: string, category: string, image: string, price: number | null };
+  const form = document.querySelector<HTMLFormElement>('[data-image-form]')!;
+  const field = form.querySelector<HTMLInputElement>('input')!;
+  const fileName = document.querySelector<HTMLElement>('[data-image-file-name]')!;
+  field.addEventListener('change', () => {
+    fileName.textContent = field.files?.[0]?.name ?? '';
+    fileName.hidden = !fileName.textContent;
+  });
+  const sample = document.querySelector<HTMLButtonElement>('[data-image-sample]')!;
+  const submit = form.querySelector<HTMLButtonElement>('button')!;
+  const status = document.querySelector<HTMLElement>('[data-image-status]')!;
+  const results = document.querySelector<HTMLElement>('[data-image-results]')!;
+  let catalogPromise: Promise<[Product[], ArrayBuffer]> | undefined;
+
+  async function loadData(): Promise<[Product[], ArrayBuffer]> {
+    const [catalog, index] = await Promise.all([fetch('/data/catalog.json'), fetch('/data/image-index.bin')]);
+    if (!catalog.ok || !index.ok) throw new Error('Index unavailable');
+    return [await catalog.json(), await index.arrayBuffer()];
+  }
+
+  async function fingerprint(file: Blob) {
+    const image = await createImageBitmap(file);
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = 8;
+    const context = canvas.getContext('2d', { willReadFrequently: true })!;
+    context.fillStyle = '#fff';
+    context.fillRect(0, 0, 8, 8);
+    context.drawImage(image, 0, 0, 8, 8);
+    image.close();
+    const rgba = context.getImageData(0, 0, 8, 8).data;
+    return rgba.filter((_, index) => index % 4 !== 3);
+  }
+
+  function card(product: Product) {
+    const article = document.createElement('article');
+    article.className = 'product-card';
+    const link = document.createElement('a');
+    link.className = 'product-card-link';
+    link.href = productPath(product);
+    const frame = document.createElement('div');
+    frame.className = 'product-image';
+    const image = document.createElement('img');
+    image.src = product.image;
+    image.alt = '';
+    image.width = image.height = 320;
+    image.loading = 'lazy';
+    frame.append(image);
+    const meta = document.createElement('div');
+    meta.className = 'product-meta';
+    const category = document.createElement('span');
+    category.className = 'muted small';
+    category.textContent = categories.find((item) => item.id === product.category)?.label ?? '';
+    const title = document.createElement('h3');
+    title.textContent = product.name;
+    const price = document.createElement('strong');
+    if (product.price !== null) price.dataset.cnyPrice = String(product.price);
+    price.textContent = formatPrice(product.price);
+    meta.append(category, title, price);
+    link.append(frame, meta);
+    article.append(link);
+    return article;
+  }
+
+  async function search(file: Blob | Promise<Blob>) {
+    sample.disabled = submit.disabled = true;
+    status.textContent = 'Comparing photos…';
+    results.replaceChildren();
+    try {
+      const query = await fingerprint(await file);
+      catalogPromise ??= loadData().catch((error) => { catalogPromise = undefined; throw error; });
+      const [catalog, index] = await catalogPromise;
+      const bytes = new Uint8Array(index);
+      const scores = new Map<number, number>();
+      const recordSize = 194;
+      if (!bytes.length || bytes.length % recordSize) throw new Error('Invalid photo index');
+      for (let offset = 0; offset < bytes.length; offset += recordSize) {
+        const id = bytes[offset] + 256 * bytes[offset + 1];
+        let score = 0;
+        for (let channel = 0; channel < query.length; channel++) {
+          const difference = bytes[offset + 2 + channel] - query[channel];
+          score += difference * difference;
+        }
+        if (score < (scores.get(id) ?? Infinity)) scores.set(id, score);
+      }
+      const matches = [...scores].sort((a, b) => a[1] - b[1]).slice(0, 12);
+      results.append(...matches.map(([index]) => card(catalog[index])));
+      status.textContent = 'Showing ' + matches.length + ' closest matches from the preview index.';
+    } catch {
+      status.textContent = 'The photo could not be searched. Try another image or refresh to reload the index.';
+    } finally {
+      sample.disabled = submit.disabled = false;
+    }
+  }
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const photo = field.files?.[0];
+    if (!photo) return;
+    if (!['image/jpeg', 'image/png', 'image/webp'].includes(photo.type) || photo.size > 12 * 1024 * 1024) {
+      status.textContent = 'Choose a JPEG, PNG or WebP photo under 12 MB.';
+      return;
+    }
+    void search(photo);
+  });
+  sample.addEventListener('click', () => {
+    void search(fetch(sample.dataset.imageSample!).then((response) => {
+      if (!response.ok) throw new Error('Sample unavailable');
+      return response.blob();
+    }));
+  });
+</script>

@@ -1,0 +1,14 @@
+---
+import { productPath, formatPrice } from '../lib/catalog.js';
+const { product, category } = Astro.props;
+---
+<article class="product-card">
+  <a href={productPath(product)} class="product-card-link">
+    <div class="product-image"><img src={product.image} alt="" width="320" height="320" loading="lazy" decoding="async" /></div>
+    <div class="product-meta">
+      <span class="muted small">{category}</span>
+      <h3>{product.name}</h3>
+      <strong data-cny-price={product.price ?? undefined}>{formatPrice(product.price)}</strong>
+    </div>
+  </a>
+</article>

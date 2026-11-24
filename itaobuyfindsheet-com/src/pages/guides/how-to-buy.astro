@@ -1,0 +1,78 @@
+---
+import Shell from '../../components/Shell.astro';
+import GuideScreenshot from '../../components/GuideScreenshot.astro';
+import { registrationUrl, buyUrl, productPath } from '../../lib/catalog.js';
+
+const sample = { id: '7871821866' };
+const official = 'https://www.itaobuy.com';
+const qcExample = '/qc/?item=7321418559';
+const sections = [
+  ['find', 'Find an item'], ['inspect', 'Inspect photos and options'],
+  ['qc', 'Check warehouse QC'], ['order', 'Order on iTaoBuy'],
+  ['warehouse', 'Review the warehouse order'], ['shipping', 'Estimate and submit shipping'],
+  ['track', 'Track your parcel'],
+];
+---
+<Shell title="How to Buy on iTaoBuy | Weidian Orders, QC & Shipping" description="A step-by-step iTaoBuy buying guide with real screenshots. Find a Weidian item, compare seller photos and QC, confirm the order, estimate freight and track the parcel." active="guide">
+  <article class="wrap inner-page guide-page">
+    <p class="eyebrow"><span></span><span class="eyebrow-text" data-i18n="guide">Buying guide</span></p>
+    <h1>How to buy on iTaoBuy</h1>
+    <p class="page-intro">Follow a Weidian product from the iTaoBuy Spreadsheet to the official agent. The screenshots show real search, product, QC and freight screens, so you can see where to click and what to verify.</p>
+    <nav class="article-nav" aria-label="Buying guide steps">
+      {sections.map(([id, title]) => <a class="button" href={'#' + id}>{title}</a>)}
+    </nav>
+
+    <section class="guide-section" id="find">
+      <h2>1. Find the Weidian item in the spreadsheet</h2>
+      <p>Open the <a href="/spreadsheet/">iTaoBuy Spreadsheet</a> and type a product name or Weidian item ID. Use the category selector to narrow the list and price sorting to compare results. If you only have a reference photo, use <a href="/image-search/">Image Search</a> and confirm promising matches by their product photos and original item ID.</p>
+      <p>To follow the example, enter <strong>7871821866</strong>, then click <strong>Search</strong>. Wait for <strong>1 product</strong> and open <a href={productPath(sample)}>Graphic T-Shirt Collection</a>. The item ID shown on the detail page should still be <strong>7871821866</strong>.</p>
+      <GuideScreenshot name="spreadsheet-search" alt="Spreadsheet search after loading the one Graphic T-Shirt Collection result for item 7871821866" caption="Findspreadsheet preview · The exact Weidian item ID returns one matching listing." />
+    </section>
+
+    <section class="guide-section" id="inspect">
+      <h2>2. Inspect seller photos, style and size</h2>
+      <p>Select a thumbnail below the main photo to see it at full size. Scroll or swipe the row sideways to see more seller photos. Under <strong>Color</strong>, click <strong>Blue suit</strong>. Check that the main photo changes to the blue outfit and that the tile is selected. Then click <strong>M</strong> only as an example. On the official listing, choose the size that matches your actual measurements.</p>
+      <p>Use <strong>Original Weidian listing</strong> or <strong>View on Findspreadsheet</strong> below the Warehouse QC section to verify the source. <strong>Copy product link</strong> copies the original Weidian URL. The top currency button changes displayed reference amounts for comparison.</p>
+      <GuideScreenshot name="product-options" alt="Graphic T-Shirt Collection displaying the Blue suit color option, size M and the USD price" caption="Findspreadsheet preview · The selected color changes the main photo. This item has 25 color options and seven sizes in the seller data." />
+    </section>
+
+    <section class="guide-section" id="qc">
+      <h2>3. Compare warehouse QC when available</h2>
+      <p>The product gallery contains seller photos. Warehouse QC appears in a separate section. Open the <a href="/qc/">QC finder</a> and enter a Weidian item ID or original listing URL to check the preview records. Try the <a href={qcExample}>separate QC example</a> by entering <strong>7321418559</strong> and pressing <strong>Check QC</strong>. Look for <strong>12 warehouse QC photos</strong>, then open a thumbnail. Those photos belong to the QC example item.</p>
+      <p>Compare the exact listing and variant and look at the details that matter for your item, such as fabric, print placement, seams, hardware, shoe shape or labels. If a photo from the preview is missing or shows another variant, verify your own unit after it arrives at the iTaoBuy warehouse.</p>
+      <GuideScreenshot name="warehouse-qc" alt="QC finder with twelve warehouse QC photos for Weidian item 7321418559" caption="Findspreadsheet QC example · The sample photos belong to item 7321418559." />
+    </section>
+
+    <section class="guide-section" id="order">
+      <h2>4. Open the matching listing and place the official order</h2>
+      <p>On the product page, choose <strong>Buy on iTaoBuy</strong>. The button opens the original Weidian URL inside iTaoBuy. If you already have a different seller link, paste it into the search box on the <a href={official + '/'} target="_blank" rel="noopener">official website</a>. If the listing needs manual entry, the official header provides <a href={official + '/manual-input'} target="_blank" rel="noopener">Fill&amp;Buy</a>.</p>
+      <p>Sign in to your existing iTaoBuy account, or use <a href={registrationUrl} target="_blank" rel="sponsored noopener">Join iTaoBuy</a> to register. Compare the live product title, image, size, color, quantity and stock. Review the item total, any domestic delivery charge and applicable fees before paying in the official interface.</p>
+      <p><a href={buyUrl(sample)} target="_blank" rel="noopener">Open the example Weidian product in iTaoBuy</a>. Check the embedded Weidian item ID, choose the color and size again in iTaoBuy, and set quantity to 1 for a single item. In the verified example, ¥128 is about $22.65 before shipping. Check the current amount before placing the order.</p>
+      <GuideScreenshot name="official-product" alt="Official iTaoBuy product page for item 7866625981 showing style tiles, sizes and the CNY-to-USD price" caption="iTaoBuy official product page · A second example shows how style, size and the CNY-to-USD amount appear. The original Weidian item ID for this screenshot is 7866625981." />
+    </section>
+
+    <section class="guide-section" id="warehouse">
+      <h2>5. Review the item after warehouse intake</h2>
+      <p>The seller first sends the product to the iTaoBuy warehouse in China. Check your iTaoBuy order when it reaches warehouse processing. Review the available inspection photos against the selected SKU, size and color. If something looks wrong, open the relevant order’s support or after-sales options promptly, before submitting the parcel for international shipping.</p>
+      <p>If several items have arrived, use the warehouse to select the items eligible for a combined parcel. Before confirming the parcel, compare the selected item count with the order records. Check which items are ready and which routes can handle the contents. Use the <a href={official + '/help/center'} target="_blank" rel="noopener">official Help Center</a> for current terms and support.</p>
+    </section>
+
+    <section class="guide-section" id="shipping">
+      <h2>6. Use iTaoBuy Estimation and submit a parcel</h2>
+      <p>Open <a href={official + '/freight-estimate'} target="_blank" rel="noopener">iTaoBuy Estimation</a> and select your destination. Enter the packed weight in grams, fill in the product category where applicable, and add length, width and height in centimeters when known. To repeat the screenshot, choose <strong>United Kingdom</strong>, enter <strong>1,200 g</strong> and <strong>30 × 25 × 12 cm</strong>, then click <strong>Search</strong>. The result should show routes available for those inputs. Compare each route’s estimated charge, billing basis and delivery window using the same inputs.</p>
+      <p>Read each route’s billing basis, applicable restrictions and transit estimate. Check whether the quote uses actual or volumetric weight and whether any additional fees apply. Final freight can change after the parcel is packed and measured. On the official parcel page, confirm the chosen items, address, packaging, route and international shipping charge before paying.</p>
+      <GuideScreenshot name="official-estimation" alt="Official iTaoBuy Estimation form showing destination, category, weight and dimensions" caption="iTaoBuy official Estimation · Example inputs: United Kingdom, 1,200 g and 30 × 25 × 12 cm. Enter your actual packed measurements before comparing routes." />
+    </section>
+
+    <section class="guide-section" id="track">
+      <h2>7. Track your parcel and keep the order details</h2>
+      <p>After dispatch, open the parcel record in your iTaoBuy account to find the tracking number and latest scan. Confirm that the tracking number belongs to the same parcel and check the date of the latest carrier update. Keep the order ID, parcel ID and tracking reference handy. If you need help, share the relevant record with iTaoBuy support through its official channels.</p>
+    </section>
+
+    <div class="guide-checklist">
+      <h2>Before paying</h2>
+      <ul><li>Match the original product ID and seller listing.</li><li>Check the live SKU, measurements and quantity.</li><li>Review domestic delivery, international freight and final checkout currency separately.</li><li>Inspect your warehouse photos before submitting a parcel.</li></ul>
+    </div>
+    <div class="article-nav"><a class="button button-primary" href="/spreadsheet/">Browse the spreadsheet</a><a class="button" href="/faq/">Read the iTaoBuy FAQ</a><a class="button" href={registrationUrl} target="_blank" rel="sponsored noopener">Join iTaoBuy</a></div>
+  </article>
+</Shell>

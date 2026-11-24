@@ -1,0 +1,17 @@
+---
+import Shell from '../../components/Shell.astro';
+import Catalog from '../../components/Catalog.astro';
+import { categories } from '../../lib/catalog.js';
+export function getStaticPaths() {
+  return categories.map((category) => ({ params: { category: category.id }, props: { category } }));
+}
+const { category } = Astro.props;
+---
+<Shell title={'iTaoBuy ' + category.label + ' Spreadsheet | Weidian Finds'} active="spreadsheet">
+  <div class="wrap inner-page">
+    <p class="breadcrumbs"><a href="/">Home</a> / <a href="/spreadsheet/">Spreadsheet</a> / {category.label}</p>
+    <h1>iTaoBuy {category.label}</h1>
+    <p class="page-intro">Browse {category.label.toLowerCase()} from Findspreadsheet, review seller photos and compare listings before opening iTaoBuy.</p>
+    <Catalog category={category.id} />
+  </div>
+</Shell>

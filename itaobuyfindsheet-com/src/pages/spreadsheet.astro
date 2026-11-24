@@ -1,0 +1,13 @@
+---
+import Shell from '../components/Shell.astro';
+import Catalog from '../components/Catalog.astro';
+import { total, number } from '../lib/catalog.js';
+---
+<Shell title="iTaoBuy Finds | Search Weidian Product Links" active="spreadsheet">
+  <div class="wrap inner-page">
+    <p class="eyebrow"><span></span> Findspreadsheet preview catalog</p>
+    <h1>iTaoBuy Spreadsheet</h1>
+    <p class="page-intro">Search {number.format(total)} Weidian products by name or item ID. Browse categories, compare reference prices, and open the matching seller listing on iTaoBuy.</p>
+    <Catalog />
+  </div>
+</Shell>
