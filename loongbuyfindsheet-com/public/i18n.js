@@ -22,6 +22,7 @@ function translate(value){
   else if((m=key.match(/^(\d+) (articles to explore|article to explore|questions|question)$/)))next=m[1]+' '+t(m[2]);
   else if((m=key.match(/^(\d+) MIN READ$/)))next=m[1]+' '+t('MIN READ');
   else if((m=key.match(/^(\d+) min read$/)))next=m[1]+' '+t('min read');
+  else if((m=key.match(/^Product ID (\d+)$/)))next=t('Product ID')+' '+m[1];
   else if((m=key.match(/^Weidian item ID (\d+)$/)))next=t('Weidian item ID')+' '+m[1];
   else if((m=key.match(/^(.+) \/ FIND (\d+)$/)))next=t(m[1])+' / '+t('FIND')+' '+m[2];
   else if((m=key.match(/^Reference conversion · 1 USD = ([\d.]+) CNY · (.+)\.$/)))next=t('Reference conversion')+' · 1 USD = '+m[1]+' CNY · '+m[2]+'.';

@@ -64,6 +64,7 @@ if(grid) {
  $('#catalog-query')?.addEventListener('input',e=>{query=e.target.value;imageIds=null;page=1;clearTimeout(timeout);timeout=setTimeout(render,180);});
  $('#clear-search')?.addEventListener('click',()=>{query='';imageIds=null;$('#catalog-query').value='';page=1;render();});
  $('#pagination')?.addEventListener('click',e=>{const b=e.target.closest('[data-page]');if(b){page=+b.dataset.page;render();$(imagePage?'#image-results':'#spreadsheet').scrollIntoView();}});
+ if (location.pathname === '/spreadsheet/') render();
  const initialQuery = new URLSearchParams(location.search).get('q')?.trim();
  if (!imagePage && initialQuery) {
   query = initialQuery;
@@ -389,6 +390,7 @@ function mountPhotoCarousel(photos) {
  let index = 0;
  let start;
  let swipeAt = -Infinity;
+ const controller = { showExternal(url) { image.src=open.href=url; counter.textContent='Selected style'; buttons.forEach(button=>button.setAttribute('aria-pressed','false')); } };
 
  thumbnails.innerHTML = photos.map((url, number) => `<button type="button" class="photo-thumbnail"
    aria-label="Photo ${number + 1}" aria-pressed="false" data-photo-index="${number}">
@@ -405,16 +407,14 @@ function mountPhotoCarousel(photos) {
    const active = buttons[index];
    const left = active.offsetLeft;
    const right = left + active.offsetWidth;
-   if (left < thumbnails.scrollLeft) thumbnails.scrollLeft = left;
-   if (right > thumbnails.scrollLeft + thumbnails.clientWidth) {
-    thumbnails.scrollLeft = right - thumbnails.clientWidth;
-   }
+   if(active.offsetTop < thumbnails.scrollTop) thumbnails.scrollTop=active.offsetTop;
+   if(active.offsetTop+active.offsetHeight > thumbnails.scrollTop+thumbnails.clientHeight) thumbnails.scrollTop=active.offsetTop+active.offsetHeight-thumbnails.clientHeight;
   }
  }
 
  counter.hidden = thumbnails.hidden = false;
  show(0, false);
- if (photos.length === 1) return;
+ if (photos.length === 1) return controller;
 
  previous.addEventListener('click', () => show(index - 1));
  next.addEventListener('click', () => show(index + 1));
@@ -445,6 +445,7 @@ function mountPhotoCarousel(photos) {
  });
 
  previous.hidden = next.hidden = false;
+ return controller;
 }
 
 function relatedProducts(product, products) {
@@ -480,24 +481,74 @@ function relatedProducts(product, products) {
   if (!p && root.dataset.productId) return;
   if(!p){root.innerHTML='<div class="section"><h1>Product not found</h1><a href="/#spreadsheet">Back to the spreadsheet →</a></div>';return;}
   document.title=p.name+' | LoongBuy Findsheet';
-  root.innerHTML=`<div class="detail-layout"><div class="product-media">${galleryMarkup(p)}</div><div><p class="eyebrow">${escapeHTML(titles[p.category]||p.category)} / FIND ${escapeHTML(p.id)}</p><h1 data-product-title data-product-id="${escapeHTML(p.id)}" dir="auto">${escapeHTML(p.name)}</h1><p>Weidian item ID ${escapeHTML(p.weidianId)}</p><p class="detail-price">${usd(p.price)} USD</p><p>Reference conversion · 1 USD = ${rate.cnyPerUsd} CNY · ${escapeHTML(rate.asOf)}.<br/>Confirm current pricing, options and availability on LoongBuy.</p><div class="detail-links"><a class="button" target="_blank" rel="noopener" href="${escapeHTML(buy(p.weidianId))}">Buy on LoongBuy <svg class="arrow-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><button class="outline" id="other-platforms">Other purchasing platforms / 其他代购平台 ↗</button><a class="outline" target="_blank" rel="noopener" href="https://findspreadsheet.com${escapeHTML(p.sourcePath)}">Original product ↗</a></div><p>Historical FindSpreadsheet catalog · Prices and availability may have changed.</p></div>${qcMarkup(p)}</div><dialog id="platform-dialog" aria-labelledby="platform-title"><button class="dialog-close" aria-label="Close platform selector">×</button><p class="eyebrow">THE SAME FIND, YOUR CHOICE OF AGENT</p><h2 id="platform-title">Other purchasing platforms</h2><p>其他代购平台 · Open this Weidian product with another agent. Links follow FindSpreadsheet’s platform templates and may include referral parameters.</p><div class="platform-list" id="platform-list"></div><p class="data-note">Confirm prices, service availability and order details on your selected platform.</p></dialog>`;
+  root.innerHTML=`<div class="detail-layout"><div class="product-media">${galleryMarkup(p)}</div><div class="detail-info"><p class="eyebrow">${escapeHTML(titles[p.category]||p.category)}</p><h1 data-product-title data-product-id="${escapeHTML(p.id)}" dir="auto">${escapeHTML(p.name)}</h1><p>Product ID ${escapeHTML(p.weidianId)}</p><p class="detail-price" id="detail-price">${usd(p.price)} USD</p><div class="detail-links"><a class="button" target="_blank" rel="noopener" href="${escapeHTML(buy(p.weidianId))}">Buy on LoongBuy</a><button class="outline" id="other-platforms">Other purchasing platforms</button><button class="outline" id="copy-product">Copy product link</button><a class="source-product" target="_blank" rel="noopener" href="https://findspreadsheet.com${escapeHTML(p.sourcePath)}">Original product</a></div><section id="product-variants" aria-label="Product options"><p id="variant-status" role="status">Loading styles and sizes…</p><div id="variant-groups"></div></section><p class="data-note">Choose options here to preview this product. Confirm your final selection, price and availability on LoongBuy.</p><p class="data-note">Reference conversion · 1 USD = ${rate.cnyPerUsd} CNY · ${escapeHTML(rate.asOf)}.</p></div>${qcMarkup(p)}</div><dialog id="platform-dialog" aria-labelledby="platform-title"><button class="dialog-close" aria-label="Close platform selector">×</button><h2 id="platform-title">Other purchasing platforms</h2><div class="platform-list" id="platform-list"></div><p class="data-note">Open the same item with your preferred agent. Links may include referral parameters.</p></dialog>`;
+  $('#copy-product').addEventListener('click',async()=>{
+   const button=$('#copy-product');
+   const original='https://weidian.com/item.html?itemID='+p.weidianId;
+   try { await navigator.clipboard.writeText(original); button.textContent='Link copied'; }
+   catch { button.textContent='Copy this link'; let input=$('#copy-product-fallback'); if(!input){input=document.createElement('input');input.id='copy-product-fallback';input.readOnly=true;input.setAttribute('aria-label','Product link');button.after(input);}input.value=original;input.select(); }
+  });
   const dialog=$('#platform-dialog');
   $('#other-platforms').addEventListener('click',async()=>{
    dialog.showModal();$('#platform-list').textContent='Loading platforms…';
-   try{const platforms=await json('/platforms.json');$('#platform-list').innerHTML=platforms.map(a=>`<a href="${escapeHTML(a.url.replaceAll('{productId}',p.weidianId))}" target="_blank" rel="nofollow noopener noreferrer"><img src="${escapeHTML(a.image)}" alt="" loading="lazy"/><span>${escapeHTML(a.name)} ↗</span></a>`).join('');}
+   try{const platforms=await json('/platforms.json');$('#platform-list').innerHTML=platforms.map(a=>`<a href="${escapeHTML(a.url.replaceAll('{productId}',p.weidianId))}" target="_blank" rel="nofollow noopener noreferrer"><img src="${escapeHTML(a.image)}" alt="" loading="lazy"/><span>${escapeHTML(a.name)}</span></a>`).join('');}
    catch{$('#platform-list').innerHTML=`<a href="https://findspreadsheet.com${escapeHTML(p.sourcePath)}" target="_blank" rel="noopener">Open platforms on FindSpreadsheet ↗</a>`;}
   });
   $('.dialog-close').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});
   const gallery = json('/galleries.json?v=separate-purchase-qc-v1').catch(() => ({}))
    .then(galleries => listingPhotos(p, galleries[p.id]));
   void loadProductQC(p.weidianId, gallery);
-  const related = relatedProducts(p, products);
-  if (related.length) {
-   root.insertAdjacentHTML('beforeend', `<section class="section related-products" aria-labelledby="related-heading">
-    <h2 id="related-heading">Related products</h2>
-    <div class="products" tabindex="0" role="region" aria-label="Related products">${related.map((product, index) => card(product, index)).join('')}</div>
-   </section>`);
-  }
-  mountPhotoCarousel(await gallery);
+  const carouselReady = gallery.then(photos => mountPhotoCarousel(photos));
+  void loadProductVariants(p, carouselReady);
+  await carouselReady;
  }catch{if (root.dataset.productId) return;root.innerHTML='<p class="section">Product data is temporarily unavailable. Please try again.</p>';}
 })();
+
+function safeProductPhoto(value) {
+ try { const url=new URL(value); return url.protocol==='https:' && !url.username && !url.password ? url.href : ''; } catch { return ''; }
+}
+async function loadProductVariants(product, carouselReady) {
+ const status=$('#variant-status');
+ try {
+  const data=await json('/api/sku?item='+encodeURIComponent(product.weidianId));
+  const attrs=data.specifications?.attrs?.filter(attr=>Array.isArray(attr.attr_values)&&attr.attr_values.length);
+  if(!attrs?.length) {status.textContent='No style or size options are listed. Check availability on LoongBuy.';return;}
+  const groups=$('#variant-groups');
+  const selected=new Map();
+  const skus=Object.values(data.specifications.skus || {}).filter(sku=>typeof sku.attr_ids==='string');
+  const skuIds=sku=>String(sku.attr_ids).split('-');
+  groups.innerHTML=attrs.map((attr,group)=>{
+   const withImages=attr.attr_values.some(value=>safeProductPhoto(value.img||value.image));
+   const label=withImages?'Style':(/size|尺码|尺寸/i.test(attr.attr_title)?'Size':attr.attr_title||'Options');
+   return `<div class="variant-group"><div class="variant-heading"><h2>${escapeHTML(label)}</h2><span class="variant-selection" id="variant-selection-${group}" dir="auto"></span></div><div class="variant-options ${withImages?'':'variant-text-options'}" role="group" aria-label="${escapeHTML(label)}">${attr.attr_values.map((value,index)=>{
+    const name=value.attr_value||value.name||String(index+1);
+    const image=safeProductPhoto(value.img||value.image);
+    return `<button type="button" class="variant-option" data-variant-group="${group}" data-variant-index="${index}" aria-pressed="false" aria-label="${escapeHTML(name)}" title="${escapeHTML(name)}">${image?`<img src="${escapeHTML(listingThumbnail(image))}" alt="${escapeHTML(name)}" loading="lazy" referrerpolicy="no-referrer"/>`:escapeHTML(name)}</button>`;
+   }).join('')}</div></div>`;
+  }).join('');
+  status.textContent='';
+  groups.addEventListener('click',async event=>{
+   const button=event.target.closest('[data-variant-group]');if(!button||button.disabled)return;
+   const group=Number(button.dataset.variantGroup), value=attrs[group].attr_values[Number(button.dataset.variantIndex)];
+   const id=String(value.attr_id??value.id??''); selected.set(group,id);
+   $('#variant-selection-'+group).textContent=value.attr_value||value.name||'';
+   groups.querySelectorAll(`[data-variant-group="${group}"]`).forEach(option=>option.setAttribute('aria-pressed',String(option===button)));
+   const photo=safeProductPhoto(value.img||value.image);
+   if(photo)(await carouselReady)?.showExternal(photo);
+   // Disable combinations only when the upstream provides actual inventory records.
+   groups.querySelectorAll('[data-variant-group]').forEach(option=>{
+    const g=Number(option.dataset.variantGroup),v=attrs[g].attr_values[Number(option.dataset.variantIndex)],optionId=String(v.attr_id??v.id??'');
+    if(!skus.length||!optionId)return;
+    const constraints=[...selected].filter(([key])=>key!==g).map(([,v])=>v).concat(optionId);
+    const matches=skus.filter(sku=>constraints.every(id=>skuIds(sku).includes(id)));
+    option.disabled=matches.length===0||matches.every(sku=>sku.stock!=null && Number(sku.stock)<=0);
+   });
+   if(selected.size===attrs.length){
+    const match=skus.find(sku=>[...selected.values()].every(id=>skuIds(sku).includes(id)));
+    if(match && Number.isFinite(Number(match.price))) $('#detail-price').textContent=usd(match.price)+' USD';
+   }
+  });
+ } catch {
+  status.innerHTML='Style and size information is temporarily unavailable. <a href="'+escapeHTML(buy(product.weidianId))+'" target="_blank" rel="noopener">View options on LoongBuy</a>.';
+ }
+}

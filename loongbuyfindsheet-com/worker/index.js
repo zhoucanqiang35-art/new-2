@@ -80,6 +80,7 @@ async function queryQC(itemId) {
 export default {
  async fetch(request, env) {
   const url = new URL(request.url);
+  if (url.pathname === '/api/sku') return querySKU(request, url);
   if (url.pathname !== '/api/qc') return env.ASSETS.fetch(request);
   if (request.method !== 'GET') return json({ status: 'unavailable' }, 405);
   const itemId = url.searchParams.get('item');
@@ -87,3 +88,20 @@ export default {
   return queryQC(itemId);
  },
 };
+
+async function querySKU(request, url) {
+ if (request.method !== 'GET') return json({ status: 'unavailable' }, 405);
+ const item = url.searchParams.get('item');
+ if (!item || !/^\d{6,20}$/.test(item)) return json({ status: 'unavailable' }, 400);
+ try {
+  const upstream = await fetch(qcOrigin + '/api/Goods/getSkuData?weidian_id=' + encodeURIComponent(item), {
+   headers: { Accept: 'application/json' }, signal: AbortSignal.timeout(12000), redirect: 'error'
+  });
+  if (!upstream.ok) throw Error('SKU upstream HTTP ' + upstream.status);
+  const data = await upstream.json();
+  if (String(data.weidian_id) !== item || !Array.isArray(data.specifications?.attrs)) throw Error('Invalid SKU response');
+  return json({ item, price: data.price, images: data.images, specifications: data.specifications }, 200, 'public, max-age=300, s-maxage=1800');
+ } catch {
+  return json({ status: 'unavailable' }, 502);
+ }
+}

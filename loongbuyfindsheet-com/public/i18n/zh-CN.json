@@ -805,5 +805,19 @@
   "We compare it with indexed catalog photos, available QC photos and site images.": "系统会比较已收录的商品图、可用质检图和站内图片。",
   "Your image is processed in your browser. Results are ranked by visual similarity. QC photos become searchable after they are included in the index.": "图片在你的浏览器中处理。结果按视觉相似度排序。质检图收录后即可参与搜图。",
   "Measurement photos from FindSpreadsheet.": "以下为 FindSpreadsheet 主站商品图集中的实拍测量图。",
-  "Showing product listing photos for reference.": "这里显示与轮播相同的商品展示图，仅供参考。"
+  "Showing product listing photos for reference.": "这里显示与轮播相同的商品展示图，仅供参考。",
+  "Style": "款式",
+  "Size": "尺码",
+  "Copy product link": "复制商品链接",
+  "Link copied": "链接已复制",
+  "Selected style": "已选款式",
+  "Product ID": "商品编号",
+  "Loading styles and sizes…": "正在加载款式和尺码…",
+  "Choose options here to preview this product. Confirm your final selection, price and availability on LoongBuy.": "在此选择款式和尺码预览商品，请在 LoongBuy 购买页确认最终选择、价格和库存。",
+  "Product spreadsheet": "商品目录",
+  "Browse the full catalog. Search by product name or Weidian item ID.": "浏览完整商品目录，按商品名称或微店商品编号搜索。",
+  "Open the same item with your preferred agent. Links may include referral parameters.": "选择代购平台打开同一件商品，链接可能包含推广参数。",
+  "No style or size options are listed. Check availability on LoongBuy.": "暂无款式或尺码选项，请在 LoongBuy 购买页确认。",
+  "Style and size information is temporarily unavailable.": "款式和尺码信息暂时无法加载。",
+  "View options on LoongBuy": "在 LoongBuy 查看选项"
 }

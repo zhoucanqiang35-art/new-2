@@ -13,6 +13,7 @@ export function GET({ site }) {
     '/articles/',
     '/image-search/',
     '/products/',
+    '/spreadsheet/',
     ...pilotProducts.map(({ id }) => pilotPath(id)),
     ...articles.map(({ slug }) => `/articles/${encodeURIComponent(slug)}/`),
   ];
