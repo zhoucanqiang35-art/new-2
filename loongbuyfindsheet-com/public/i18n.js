@@ -114,6 +114,7 @@ document.addEventListener('click',e=>{if(!picker.contains(e.target))picker.open=
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&picker.open){picker.open=false;$('#language-toggle').focus();}});
 window.addEventListener('popstate',()=>setLanguage(new URL(location.href).searchParams.get('lang')||'en',{updateUrl:false}));
 window.siteI18n={setLanguage,translate,apply,productName,get language(){return language;},get supportedLanguages(){return [...supported.keys()];}};
-let initial=new URL(location.href).searchParams.get('lang');if(!supported.has(initial))try{initial=localStorage.getItem('loongbuy-language');}catch{}
+// Clean URLs always open in English; an explicit language choice stays in navigation URLs.
+const initial=new URL(location.href).searchParams.get('lang');
 setLanguage(supported.has(initial)?initial:'en');
 })();
