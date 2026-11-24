@@ -3,8 +3,11 @@ import '../styles/site.css';
 import LanguagePicker from './LanguagePicker.astro';
 import CurrencyPicker from './CurrencyPicker.astro';
 import { registrationUrl } from '../lib/catalog.js';
+import { priorityPaths } from '../lib/indexing.js';
 
 const { title, description = 'Search the independent iTaoBuy spreadsheet from Findspreadsheet. Browse Weidian finds, product photos and available warehouse QC.', active = '' } = Astro.props;
+const indexable = priorityPaths.includes(Astro.url.pathname);
+const canonical = new URL(Astro.url.pathname, Astro.site);
 const navigation = [
   ['Spreadsheet', '/spreadsheet/', 'spreadsheet', 'sheet'],
   ['Image Search', '/image-search/', 'image', 'imageSearch'],
@@ -17,7 +20,8 @@ const navigation = [
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex,nofollow" />
+    {!indexable && <meta name="robots" content="noindex,follow" />}
+    <link rel="canonical" href={canonical.href} />
     <meta name="description" content={description} />
     <title>{title}</title>
     <link rel="icon" href="/brand/favicon.ico" />
