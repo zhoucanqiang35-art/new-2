@@ -12,6 +12,12 @@ export const categories = {
 };
 export const categoryLabel = (key) => categories[key] ?? 'Other Finds';
 export const productImage = (product) => product.image;
+export function productThumbnail(photo, width = 160) {
+  const url = new URL(photo, sourceOrigin);
+  if (url.hostname !== 'si.geilicdn.com' && url.hostname !== 'img.geilicdn.com') return photo;
+  url.searchParams.set('w', String(width));
+  return url.href;
+}
 export const officialLogo = '/assets/eastmallbuy-official-logo.png';
 export const officialFavicon = 'https://www.eastmallbuy.com/web/favicon.jpg';
 

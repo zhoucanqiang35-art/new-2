@@ -3,7 +3,7 @@ import {readFileSync} from 'node:fs';
 import savedMedia from '../../../public/data/product-media-saved.json';
 import Layout from '../../components/Layout.astro';
 import {storeCatalog as catalog} from '../../lib/store-catalog.mjs';
-import {categoryLabel, productImage, purchaseUrl, sourceOrigin} from '../../lib/catalog.mjs';
+import {categoryLabel, productImage, productThumbnail, purchaseUrl, sourceOrigin} from '../../lib/catalog.mjs';
 import {categoryFinds, categoryLanding, indexedProductIds} from '../../lib/landing-paths.mjs';
 import {priceFor} from '../../lib/shopping.mjs';
 
@@ -31,7 +31,8 @@ const id = product.weidianId;
 const category = categoryLabel(product.category);
 const categoryUrl = categoryLanding(product.category) || categoryFinds(product.category);
 const price = priceFor(product.price);
-const purchasePhotos = savedMedia[id]?.photos ?? [];
+const purchaseMedia = savedMedia[id];
+const purchasePhotos = purchaseMedia?.photos ?? [];
 const galleryPreview = purchasePhotos.length ? purchasePhotos : [productImage(product)];
 const catalogPhotos = [...new Set([productImage(product), ...photos])];
 const sourceUrl = new URL(product.sourcePath, sourceOrigin).href;
@@ -40,14 +41,19 @@ const description = product.name + ' on the EastMallBuy spreadsheet. Compare sel
 <Layout title={product.name + ' | EastMallBuy Spreadsheet'} description={description}>
   <section class="wrap page">
     <a href={categoryUrl}>Browse {category}</a>
-    <div id="product-detail" data-item={id} data-listing={JSON.stringify({product, photos, purchasePhotos})}>
+    <div id="product-detail" data-item={id} data-listing={JSON.stringify({product, photos, purchaseMedia})}>
       <div class="detail-grid">
         <div class="detail-gallery">
-          <img src={galleryPreview[0]} alt={product.name} class="detail-image" fetchpriority="high" />
+          <div class="gallery-stage">
+            <img src={galleryPreview[0]} alt={product.name} class="detail-image" fetchpriority="high" decoding="async" translate="no" />
+            <button type="button" class="gallery-arrow gallery-previous" aria-label="Previous seller photo" hidden>‹</button>
+            <button type="button" class="gallery-arrow gallery-next" aria-label="Next seller photo" hidden>›</button>
+            <span class="gallery-count">{'1 / ' + galleryPreview.length}</span>
+          </div>
           <div class="seller-photo-filmstrip" aria-label="Purchase listing photos">
             {galleryPreview.map((photo, index) => (
               <a href={photo} aria-label={'View purchase listing photo ' + (index + 1)} target="_blank" rel="noopener">
-                <img src={photo} width="74" height="74" alt="" loading="lazy" />
+                <img src={productThumbnail(photo)} width="74" height="74" alt="" loading="lazy" fetchpriority="low" decoding="async" />
               </a>
             ))}
           </div>
@@ -68,7 +74,7 @@ const description = product.name + ' on the EastMallBuy spreadsheet. Compare sel
             <div class="detail-photo-options" tabindex="0" role="group" aria-labelledby="listing-photo-options">
               {catalogPhotos.map((photo, index) => (
                 <a href={photo} aria-label={'View catalog photo ' + (index + 1)} target="_blank" rel="noopener">
-                  <img src={photo} width="74" height="74" alt="" loading="lazy" />
+                  <img src={productThumbnail(photo)} width="74" height="74" alt="" loading="lazy" fetchpriority="low" decoding="async" />
                 </a>
               ))}
             </div>

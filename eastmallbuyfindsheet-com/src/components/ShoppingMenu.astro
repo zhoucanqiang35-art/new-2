@@ -1,7 +1,5 @@
 ---
-import {officialFavicon} from "../lib/catalog.mjs";
-import {agents, currencies, rateDate} from '../lib/shopping.mjs';
-const defaultAgent = agents.find(({id}) => id === 'eastmallbuy');
+import {currencies, rateDate} from '../lib/shopping.mjs';
 ---
 <div class="shopping-controls">
   <a class="saved-link" href="/saved/" aria-label="Saved finds" title="Saved finds">
@@ -9,18 +7,11 @@ const defaultAgent = agents.find(({id}) => id === 'eastmallbuy');
   </a>
   <details class="shopping-menu" id="shopping-menu">
     <summary>
-      <img src={officialFavicon} alt="" width="18" height="18" id="shopping-logo" />
-      <span id="shopping-agent">{defaultAgent.name}</span>
-      <span class="shopping-code" id="shopping-currency">USD</span>
+      <span class="visually-hidden">Currency: </span>
+      <span id="shopping-currency">USD</span>
       <span class="shopping-chevron" aria-hidden="true"></span>
     </summary>
     <div class="shopping-panel">
-      <fieldset>
-        <legend>Shopping agent</legend>
-        <div class="agent-options">{agents.map((agent) => (
-          <label><input type="radio" name="site-agent" value={agent.id} checked={agent.id === defaultAgent.id} /><img src={agent.id === 'eastmallbuy' ? officialFavicon : agent.logo} alt="" width="19" height="19" loading="lazy" /><span>{agent.name}</span></label>
-        ))}</div>
-      </fieldset>
       <fieldset>
         <legend>Currency</legend>
         <div class="currency-options">{currencies.map((currency) => (
@@ -32,28 +23,22 @@ const defaultAgent = agents.find(({id}) => id === 'eastmallbuy');
   </details>
 </div>
 <script>
-  import {officialFavicon} from "../lib/catalog.mjs";
-  import {agents, shoppingOptions, updateShopping} from '../lib/shopping.mjs';
+  import {shoppingOptions, updateShopping} from '../lib/shopping.mjs';
 
   const menu = document.querySelector<HTMLDetailsElement>('#shopping-menu')!;
   const trigger = menu.querySelector('summary')!;
 
   function refresh() {
-    const {agent, currency} = shoppingOptions();
-    const selected = agents.find(({id}) => id === agent)!;
-    document.querySelector('#shopping-agent')!.textContent = selected.name;
-    document.querySelector('#shopping-currency')!.textContent = currency;
-    const logo = document.querySelector<HTMLImageElement>('#shopping-logo')!;
-    logo.src = selected.id === 'eastmallbuy' ? officialFavicon : selected.logo;
+    const {currency} = shoppingOptions();
+    menu.querySelector('#shopping-currency')!.textContent = currency;
     for (const input of menu.querySelectorAll<HTMLInputElement>('input')) {
-      input.checked = input.value === (input.name === 'site-agent' ? agent : currency);
+      input.checked = input.value === currency;
     }
   }
 
   menu.addEventListener('change', (event) => {
     if (!(event.target instanceof HTMLInputElement)) return;
-    const {name, value} = event.target;
-    updateShopping(name === 'site-agent' ? {agent: value} : {currency: value});
+    updateShopping({currency: event.target.value});
   });
   document.addEventListener('click', (event) => {
     if (menu.open && event.target instanceof Node && !menu.contains(event.target)) menu.open = false;

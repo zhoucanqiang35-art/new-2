@@ -1,5 +1,5 @@
 import {element, external, readJson, referencePrice} from './browser.mjs';
-import {categoryLabel, officialFavicon, originalUrl, parseId, productImage, productUrl, purchaseUrl, sourceOrigin} from './catalog.mjs';
+import {categoryLabel, officialFavicon, originalUrl, parseId, productImage, productThumbnail, productUrl, purchaseUrl, sourceOrigin} from './catalog.mjs';
 import {isShopItem} from './landing-paths.mjs';
 import {agents, purchaseFor} from './shopping.mjs';
 
@@ -10,44 +10,33 @@ function productOptions() {
   return readJson('/api/product-media?type=styles&id=' + encodeURIComponent(id));
 }
 
-let savedMedia;
-async function savedProductMedia() {
-  savedMedia ??= readJson('/data/product-media-saved.json').catch(() => ({}));
-  return (await savedMedia)[id] ?? {};
-}
-
-function gallery(product, images, purchasePhotos = []) {
+function gallery(product, images, purchaseMedia) {
   const catalogCover = productImage(product);
   const detailPhotos = [...new Set(images)].filter((photo) => photo !== catalogCover);
-  let photos = purchasePhotos.length ? purchasePhotos : [catalogCover];
-  const cover = element('img', {src: photos[0], alt: product.name, className: 'detail-image', translate: false, fetchPriority: 'high'});
-  const counter = element('span', {className: 'gallery-count'});
-  const previous = element('button', {type: 'button', className: 'gallery-arrow gallery-previous', textContent: '‹'});
-  const next = element('button', {type: 'button', className: 'gallery-arrow gallery-next', textContent: '›'});
-  previous.setAttribute('aria-label', 'Previous seller photo');
-  next.setAttribute('aria-label', 'Next seller photo');
-  const stage = element('div', {className: 'gallery-stage'}, [cover, previous, next, counter]);
-  const sellerThumbs = element('div', {className: 'seller-photo-filmstrip'});
-  sellerThumbs.setAttribute('aria-label', 'Purchase listing photos');
-  const sellerGallery = element('div', {className: 'detail-gallery'}, [stage, sellerThumbs]);
+  let photos = purchaseMedia?.photos?.length ? purchaseMedia.photos : [catalogCover];
+  const sellerGallery = target.querySelector('.detail-gallery');
+  const stage = sellerGallery.querySelector('.gallery-stage');
+  const cover = stage.querySelector('img');
+  const counter = stage.querySelector('.gallery-count');
+  const previous = stage.querySelector('.gallery-previous');
+  const next = stage.querySelector('.gallery-next');
+  const sellerThumbs = sellerGallery.querySelector('.seller-photo-filmstrip');
 
-  const heading = element('h2', {id: 'listing-photo-options', textContent: 'Catalog photos'});
-  const count = element('span', {className: 'detail-photo-count'});
+  const options = target.querySelector('.detail-options');
+  const heading = options.querySelector('h2');
+  const count = options.querySelector('.detail-photo-count');
+  const thumbs = options.querySelector('.detail-photo-options');
   const selectedLabel = element('span', {className: 'photo-option-label', translate: false});
   selectedLabel.setAttribute('aria-live', 'polite');
-  const thumbs = element('div', {className: 'detail-photo-options'});
-  const options = element('section', {className: 'detail-options'}, [
-    element('div', {className: 'media-heading'}, [heading, count]), thumbs, selectedLabel,
-  ]);
-  options.setAttribute('aria-labelledby', heading.id);
-  thumbs.tabIndex = 0;
-  thumbs.setAttribute('role', 'group');
-  thumbs.setAttribute('aria-labelledby', heading.id);
+  options.append(selectedLabel);
   let current = 0;
   let activeLabel = '';
+  let selectedPhoto = photos[0];
+  let interacted = false;
 
   function selectPhoto(url, label = '') {
-    cover.src = url;
+    if (cover.getAttribute('src') !== url) cover.src = url;
+    selectedPhoto = url;
     cover.alt = label ? product.name + ' · ' + label : product.name;
     selectedLabel.textContent = label;
     activeLabel = label;
@@ -59,7 +48,7 @@ function gallery(product, images, purchasePhotos = []) {
 
   function highlightPhoto() {
     for (const button of thumbs.children) {
-      button.setAttribute('aria-pressed', String(button.dataset.photo === cover.getAttribute('src') &&
+      button.setAttribute('aria-pressed', String(button.dataset.photo === selectedPhoto &&
         (!activeLabel || button.title === activeLabel)));
     }
   }
@@ -78,34 +67,50 @@ function gallery(product, images, purchasePhotos = []) {
   }
 
   function thumbnail(photo, label, description, select) {
-    const button = element('button', {type: 'button', title: label}, [
-      element('img', {src: photo, alt: '', width: 74, height: 74, loading: 'lazy', draggable: false}),
-    ]);
+    const image = element('img', {loading: 'lazy', fetchPriority: 'low', decoding: 'async',
+      src: productThumbnail(photo), alt: '', width: 74, height: 74, draggable: false});
+    const button = element('button', {type: 'button', title: label}, [image]);
     button.setAttribute('aria-label', description);
     button.setAttribute('aria-pressed', 'false');
     button.dataset.photo = photo;
-    button.addEventListener('click', select);
+    button.addEventListener('click', () => {
+      interacted = true;
+      select();
+    });
     return button;
   }
 
   function setPurchaseGallery(list) {
-    const selectedUrl = cover.getAttribute('src');
     const focusedIndex = [...sellerThumbs.children].indexOf(document.activeElement);
     photos = list;
     sellerThumbs.replaceChildren(...photos.map((photo, index) =>
       thumbnail(photo, '', 'View purchase listing photo ' + (index + 1), () => showPhoto(index))
     ));
     previous.hidden = next.hidden = photos.length < 2;
-    showPhoto(Math.max(0, photos.indexOf(selectedUrl)));
+    current = photos.indexOf(selectedPhoto);
+    selectPhoto(selectedPhoto, activeLabel);
     if (focusedIndex >= 0) sellerThumbs.children[Math.min(focusedIndex, photos.length - 1)]?.focus({preventScroll: true});
+    if (current < 0 && !interacted) {
+      // Keep the existing photo visible while the first purchase photo loads.
+      const first = new Image();
+      first.src = photos[0];
+      first.decode().then(() => {
+        if (!interacted) showPhoto(0);
+      }).catch(() => {});
+    }
   }
 
-  previous.addEventListener('click', () => showPhoto(current - 1));
-  next.addEventListener('click', () => showPhoto(current + 1));
+  function movePhoto(step) {
+    interacted = true;
+    showPhoto(current < 0 ? (step < 0 ? photos.length - 1 : 0) : current + step);
+  }
+
+  previous.addEventListener('click', () => movePhoto(-1));
+  next.addEventListener('click', () => movePhoto(1));
   stage.addEventListener('keydown', (event) => {
     if (!['ArrowLeft', 'ArrowRight'].includes(event.key) || photos.length < 2) return;
     event.preventDefault();
-    showPhoto(current + (event.key === 'ArrowLeft' ? -1 : 1));
+    movePhoto(event.key === 'ArrowLeft' ? -1 : 1);
   });
   cover.addEventListener('error', () => {
     if (cover.getAttribute('src') !== catalogCover) cover.src = catalogCover;
@@ -121,7 +126,7 @@ function gallery(product, images, purchasePhotos = []) {
     const dx = touch.clientX - swipeStart.x;
     const dy = touch.clientY - swipeStart.y;
     swipeStart = undefined;
-    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.4) showPhoto(current + (dx < 0 ? 1 : -1));
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.4) movePhoto(dx < 0 ? 1 : -1);
   }, {passive: true});
 
   function showPhotoOptions(styles, listingPhotos, name, label) {
@@ -140,7 +145,7 @@ function gallery(product, images, purchasePhotos = []) {
       return thumbnail(photo, description, 'View ' + description, () => selectPhoto(photo, description));
     }));
     if (activeLabel) {
-      const caption = available.get(cover.getAttribute('src'));
+      const caption = available.get(selectedPhoto);
       if (caption) activeLabel = selectedLabel.textContent = caption;
     }
     highlightPhoto();
@@ -148,17 +153,17 @@ function gallery(product, images, purchasePhotos = []) {
 
   setPurchaseGallery(photos);
   showPhotoOptions([], [catalogCover, ...detailPhotos], 'Catalog photos', 'Catalog photo');
-  productOptions().then(async (media) => {
-    if (media.photos?.length) return media;
-    const saved = await savedProductMedia();
-    return {...media, photos: saved.photos};
-  }).catch(savedProductMedia).then(({styles = [], photos: listingPhotos = []}) => {
-    showPhotoOptions(styles, listingPhotos, 'Weidian styles and photos', 'Listing photo');
+  if (purchaseMedia?.styles?.length || purchaseMedia?.photos?.length) {
+    showPhotoOptions(purchaseMedia.styles ?? [], purchaseMedia.photos ?? [], 'Weidian styles and photos', 'Listing photo');
+  }
+  productOptions().then(({styles = [], photos: listingPhotos = []}) => {
+    const purchasePhotos = listingPhotos.length ? listingPhotos : purchaseMedia?.photos ?? [];
+    showPhotoOptions(styles.length ? styles : purchaseMedia?.styles ?? [], purchasePhotos, 'Weidian styles and photos', 'Listing photo');
     if (listingPhotos.length && (listingPhotos.length !== photos.length || listingPhotos.some((photo, index) => photo !== photos[index]))) {
       setPurchaseGallery(listingPhotos);
     }
   }).catch(() => {});
-  return {sellerGallery, options, detailPhotos};
+  return {options, detailPhotos};
 }
 
 async function copyLink(url, status) {
@@ -210,13 +215,12 @@ function shoppingDialog(product) {
   return [trigger, dialog];
 }
 
-function render(product, photos, purchasePhotos) {
-  if (!target.dataset.listing) document.title = product.name + ' | EastMallBuy Findsheet';
+function render(product, photos, purchaseMedia) {
   const buy = external('Buy on EastMallBuy', purchaseUrl(id), 'button dark');
   buy.rel = 'sponsored noopener';
   const [otherAgents, agentDialog] = shoppingDialog(product);
   const estimate = referencePrice(product.price);
-  const {sellerGallery, options, detailPhotos} = gallery(product, photos, purchasePhotos);
+  const {options, detailPhotos} = gallery(product, photos, purchaseMedia);
   const copy = element('button', {type: 'button', className: 'button outline', textContent: 'Copy Weidian link'});
   const copyStatus = element('div', {className: 'copy-link-status'});
   copyStatus.setAttribute('role', 'status');
@@ -244,14 +248,12 @@ function render(product, photos, purchasePhotos) {
     element('div', {className: 'detail-seller-photo-grid'}, detailPhotos.map((url, index) => {
       const label = 'Seller detail photo ' + (index + 1);
       const link = external('', url);
-      link.append(element('img', {src: url, alt: label, loading: 'lazy', width: 232, height: 177}));
+      link.append(element('img', {src: productThumbnail(url, 480), alt: label, loading: 'lazy', fetchPriority: 'low', decoding: 'async', width: 232, height: 177}));
       return link;
     })),
   ]);
-  target.replaceChildren(
-    element('div', {className: 'detail-grid'}, [sellerGallery, info]),
-    ...(detailPhotos.length ? [sellerDetails] : []),
-  );
+  target.querySelector('.detail-copy').replaceWith(info);
+  if (detailPhotos.length) target.append(sellerDetails);
 }
 
 async function init() {
@@ -261,8 +263,8 @@ async function init() {
   }
   try {
     if (target.dataset.listing) {
-      const {product, photos, purchasePhotos} = JSON.parse(target.dataset.listing);
-      render(product, photos, purchasePhotos);
+      const {product, photos, purchaseMedia} = JSON.parse(target.dataset.listing);
+      render(product, photos, purchaseMedia);
       return;
     }
     location.replace(productUrl(id));

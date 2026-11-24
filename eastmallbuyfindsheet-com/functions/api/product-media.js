@@ -23,7 +23,7 @@ function imageUrl(value, allowed) {
   }
 }
 
-export async function onRequestGet({request}) {
+export async function onRequestGet({request, waitUntil}) {
   const {searchParams} = new URL(request.url);
   const id = searchParams.get('id');
   const type = searchParams.get('type');
@@ -32,6 +32,12 @@ export async function onRequestGet({request}) {
   }
 
   if (!store.has(id)) return Response.json({error: 'Item unavailable in this store'}, {status: 404});
+
+  const cache = type === 'styles' ? globalThis.caches?.default : undefined;
+  const cacheUrl = new URL('/api/product-media', request.url);
+  cacheUrl.search = new URLSearchParams({type, id, version: '1'}).toString();
+  const cached = await cache?.match(cacheUrl.href).catch(() => undefined);
+  if (cached) return cached;
 
   const remaining = Math.ceil((retryAfter - Date.now()) / 1000);
   if (remaining > 0) return unavailable('source-rate-limited', 429, remaining);
@@ -62,7 +68,11 @@ export async function onRequestGet({request}) {
     failure = 'source-response';
     if (type === 'styles') {
       const media = publicShopMedia(await response.text(), id);
-      return Response.json(media, {headers: {'Cache-Control': 'public, max-age=300'}});
+      const result = Response.json(media, {headers: {'Cache-Control': 'public, max-age=300, s-maxage=86400'}});
+      if (cache && (media.photos.length || media.styles.length)) {
+        waitUntil(cache.put(cacheUrl.href, result.clone()).catch(() => {}));
+      }
+      return result;
     }
     const data = await response.json();
 
