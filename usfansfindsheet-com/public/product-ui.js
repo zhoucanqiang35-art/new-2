@@ -68,7 +68,16 @@ async function loadPurchaseOptions() {
   }
   const status = document.createElement('p'); status.className = 'variant-status'; status.setAttribute('aria-live','polite');
   status.textContent = 'Select options to preview. Confirm your selection on USFans.'; root.append(status); note.replaceWith(root);
-  bindProductOptions(root,data.skuList || []);
+  const skus = data.skuList || [];
+  const amounts = skus.filter(sku => sku.stock !== 0).map(sku => Number(sku.convertedDiscountPrice) > 0 ? Number(sku.convertedDiscountPrice) : Number(sku.convertedPrice)).filter(amount => amount > 0);
+  const price = document.querySelector('.detail-price [data-price-usd]');
+  if (price && amounts.length) {
+   const minimum = Math.min(...amounts);
+   price.dataset.priceUsd = String(minimum);
+   price.dataset.priceFrom = String(Math.max(...amounts) > minimum);
+   price.textContent = (Math.max(...amounts) > minimum ? 'From ' : '') + '$' + minimum.toFixed(2) + ' USD';
+  }
+  bindProductOptions(root,skus);
  } catch {
   note.textContent = 'Choose the available style and size on the USFans purchase page.';
  }
