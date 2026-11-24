@@ -161,8 +161,8 @@ async function select(code: string, save = false) {
     for (const button of options) button.setAttribute("aria-pressed", String(button.dataset.language === selected.code));
     apply();
     document.dispatchEvent(new Event("catalog-language-changed"));
-    try { localStorage.setItem("kakobuy-language", selected.code); } catch {}
     if (save) {
+      try { localStorage.setItem("kakobuy-language", selected.code); } catch {}
       const url = new URL(location.href);
       url.searchParams.set("lang", selected.code);
       history.replaceState(history.state, "", url);
@@ -189,7 +189,7 @@ trigger.addEventListener("click", () => {
   else {
     dialog.hidden = false;
     trigger.setAttribute("aria-expanded", "true");
-    (options.find(button => button.getAttribute("aria-pressed") === "true") ?? options[0]).focus();
+    (options.find(button => button.getAttribute("aria-pressed") === "true") ?? options[0]).focus({preventScroll: true});
   }
 });
 close.addEventListener("click", () => closePanel(true));

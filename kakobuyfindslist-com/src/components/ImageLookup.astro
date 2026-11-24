@@ -11,7 +11,12 @@ const number = new Intl.NumberFormat("en-US");
     <p>Search {number.format(coverage.indexedImages)} catalog, carousel and warehouse QC photos across {number.format(coverage.coveredProducts)} listings.</p>
   </div>
   <div class="image-search-controls">
-    <label class="upload" for="image-file"><Icon name="image" size={28}/><strong>Choose a photo</strong><span>Image file up to 12 MB</span><input id="image-file" type="file" accept="image/*" /></label>
+    <label class="upload" for="image-file">
+      <input id="image-file" class="visually-hidden" type="file" accept="image/*" />
+      <Icon name="image" size={36} />
+      <strong>Upload image</strong>
+      <span>Image file up to 12 MB</span>
+    </label>
     <figure id="image-preview" hidden><img alt="Your reference photo" width="128" height="128" /><figcaption></figcaption></figure>
   </div>
   <button id="try-image" class="button button-outline" type="button">Try a sample photo</button>

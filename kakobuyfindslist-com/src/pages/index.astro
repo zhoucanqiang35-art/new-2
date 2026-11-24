@@ -54,17 +54,9 @@ const sample = products.find((product) => product.id === "7978")!;
 </Layout>
 
 <script>
-  const smallViewport = matchMedia("(max-width: 640px)");
   const shortViewport = matchMedia("(max-width: 640px) and (max-height: 680px)");
   const smallestViewport = matchMedia("(max-width: 340px) and (max-height: 680px)");
-  const faqGroups = document.querySelectorAll<HTMLDetailsElement>(".home-faq-group");
   const firstGuideStep = document.querySelector<HTMLDetailsElement>("#buying-guide .guide-steps details");
-
-  function setFaqDefaults() {
-    faqGroups.forEach((group, index) => {
-      group.open = !smallViewport.matches || (index === 0 && !smallestViewport.matches);
-    });
-  }
 
   const productExample = document.querySelector<HTMLDetailsElement>(".home-example");
 
@@ -76,11 +68,8 @@ const sample = products.find((product) => product.id === "7978")!;
     if (firstGuideStep) firstGuideStep.open = !shortViewport.matches;
   }
 
-  smallViewport.addEventListener("change", setFaqDefaults);
-  smallestViewport.addEventListener("change", setFaqDefaults);
   smallestViewport.addEventListener("change", setExampleDefault);
   shortViewport.addEventListener("change", setGuideDefault);
-  setFaqDefaults();
   setGuideDefault();
   setExampleDefault();
 </script>

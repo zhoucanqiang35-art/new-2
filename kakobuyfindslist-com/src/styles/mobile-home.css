@@ -77,3 +77,30 @@
   .compact-home .home-example > summary { min-height: 44px; padding-inline: 9px; border: 1px solid var(--line); border-radius: 5px; background: #fff; }
   .compact-home .home-example:not([open]) > summary { margin-bottom: 0; }
 }
+
+.home-faq {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 10px;
+}
+.compact-home .home-faq .home-faq-group {
+  margin: 0;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: white;
+}
+.compact-home .home-faq .home-faq-group > summary {
+  min-height: 54px;
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+}
+.compact-home .home-faq .faq-group-heading { margin: 0; font-size: 16px; }
+.compact-home .home-faq .home-faq-group > details { padding: 8px 0; }
+.compact-home .home-faq .home-faq-group > details > summary { min-height: 28px; }
+@media (max-width: 640px) {
+  .home-faq { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .compact-home .home-faq .home-faq-group > summary { min-height: 44px; }
+}

@@ -12,8 +12,9 @@ import languages from "../languages.json";
       <h2 id="language-title">Choose a language</h2>
       <button id="close-language" class="agent-close" type="button" aria-label="Close language picker">×</button>
     </div>
+    <button type="button" class="language-default" data-language="en" lang="en" aria-pressed="true">English</button>
     <div class="language-options">
-      {languages.map(({code, name, dir}) => <button type="button" data-language={code} dir={dir} lang={code} aria-pressed={code === "en"}>{name}</button>)}
+      {languages.filter(({code}) => code !== "en").map(({code, name, dir}) => <button type="button" data-language={code} dir={dir} lang={code} aria-pressed="false">{name}</button>)}
     </div>
     <p id="language-status" role="status" hidden></p>
   </div>

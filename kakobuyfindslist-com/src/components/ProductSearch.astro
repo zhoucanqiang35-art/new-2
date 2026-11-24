@@ -5,7 +5,7 @@ const { home = false } = Astro.props;
 <form id="search-form" class:list={["hero-search", home && "directory-search"]} action="/browse/#catalog" method="get">
   <label class="visually-hidden" for="query">Search by product name or Weidian ID</label>
   <Icon name="search" />
-  <input type="search" id="query" name="q" placeholder="Product name or Weidian ID" />
+  <input type="search" id="query" name="q" placeholder="Try “hoodie”, “jersey” or a Weidian ID" />
   <a class="search-photo" href="/image-search/" aria-label="Search by photo" title="Search by photo"><Icon name="image" size={22} /></a>
   <button class="button" type="submit">Search</button>
 </form>
