@@ -6,7 +6,9 @@ export function productCard(product: Product, photo = product.image) {
   const link = document.createElement('a');
   link.href = detailsUrl(product.weidianId);
   const image = new Image();
+  image.decoding='async';image.referrerPolicy='no-referrer';
   image.src = photo;
+  image.addEventListener('error',()=>{if(image.src!==product.image)image.src=product.image},{once:true});
   image.alt = product.name;
   image.loading = 'lazy';
   image.width = image.height = 360;

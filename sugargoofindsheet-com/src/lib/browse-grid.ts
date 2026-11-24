@@ -99,7 +99,8 @@ export function setupBrowseGrid(template: HTMLTemplateElement, refresh: (resetPa
     const href = detailsUrl(product.weidianId);
     element.dataset.browseProduct = product.weidianId;
     for (const link of element.querySelectorAll<HTMLAnchorElement>(".browse-image-link, h3 a, .grid-details")) link.href = href;
-    element.querySelector("img")!.src = featuredImage(product);
+    const image=element.querySelector('img')!;image.alt=product.name;image.decoding='async';image.referrerPolicy='no-referrer';image.src=featuredImage(product);
+    image.addEventListener('error',()=>{if(image.src!==product.image)image.src=product.image},{once:true});
     element.querySelector(".product-tag")!.textContent = categoryLabel(product.category);
     const title = element.querySelector<HTMLAnchorElement>("h3 a")!;
     title.textContent = product.name;

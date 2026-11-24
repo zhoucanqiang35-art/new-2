@@ -2,6 +2,7 @@ import {categoryLabel, getData, highlighted, type Product} from "./catalog";
 import {translate} from "./language-picker";
 import {productName} from "./product-names";
 import {productCard} from "./product-card";
+import {searchTerms,searchText} from './search-query.mjs';
 import {setupBrowseGrid} from "./browse-grid";
 
 const query = document.querySelector<HTMLInputElement>("#query")!;
@@ -50,9 +51,9 @@ function writeLocation() {
 }
 
 function filterRows(all: Product[]) {
-  const keywords = query.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+  const keywords = searchTerms(query.value);
   const rows = all.filter(p => {
-    const text = [p.name, productName(p.weidianId, p.name), p.weidianId, categoryLabel(p.category), translate(categoryLabel(p.category))].join(" ").toLowerCase();
+    const text = searchText([p.name, productName(p.weidianId, p.name), p.weidianId, categoryLabel(p.category), translate(categoryLabel(p.category))].join(" "));
     return (!grid || grid.accepts(p)) && (!category || p.category === category) && keywords.every(word => text.includes(word));
   });
   if (sort.value === "latest") return rows.sort((a, b) => Number(b.id) - Number(a.id));

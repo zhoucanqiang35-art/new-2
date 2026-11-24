@@ -1,4 +1,6 @@
 import languages from "../languages.json";
+import extraUiCopy from "../ui-copy.json";
+const extraCopy:Record<string,Record<string,string>>=extraUiCopy;
 import {loadProductNames, productName, useProductNames} from "./product-names";
 
 type Dictionary = Record<string, string>;
@@ -151,7 +153,7 @@ async function select(code: string, save = false) {
       loadProductNames(selected.code),
     ]);
     if (request !== sequence) return;
-    dictionary = Object.fromEntries(Object.entries(loaded).flatMap(([key,value]) => [[key,value],[key.toLowerCase(),value]]));
+    dictionary = Object.fromEntries(Object.entries({...loaded,...(extraCopy[selected.code]||{})}).flatMap(([key,value]) => [[key,value],[key.toLowerCase(),value]]));
     useProductNames(products);
     active = selected.code;
     document.documentElement.lang = selected.code;

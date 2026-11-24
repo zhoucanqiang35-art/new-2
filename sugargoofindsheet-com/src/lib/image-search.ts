@@ -51,6 +51,11 @@ function showMore() {
   more.hidden = shown >= matches.length;
 }
 
+const dropzone=document.querySelector<HTMLElement>('#image-dropzone')!;
+for(const event of ['dragenter','dragover'])dropzone.addEventListener(event,e=>{e.preventDefault();if(!input.disabled)dropzone.classList.add('is-dragging')});
+for(const event of ['dragleave','drop'])dropzone.addEventListener(event,e=>{e.preventDefault();dropzone.classList.remove('is-dragging')});
+dropzone.addEventListener('drop',e=>{if(input.disabled)return;const file=(e as DragEvent).dataTransfer?.files[0];if(file)void search(file)});
+dropzone.addEventListener('keydown',e=>{if(e.target===dropzone&&(e.key==='Enter'||e.key===' ')){e.preventDefault();if(!input.disabled)input.click()}});
 more.addEventListener("click", showMore);
 input.addEventListener("change", async () => {
   const file = input.files?.[0];
@@ -69,6 +74,7 @@ sample.addEventListener("click", async () => {
     status.textContent = "The sample photo could not load. Try choosing your own photo.";
   } finally {
     input.disabled = sample.disabled = false;
+    dropzone.setAttribute("aria-disabled","false");results.setAttribute("aria-busy","false");
   }
 });
 
@@ -86,6 +92,7 @@ async function search(file: File) {
   more.hidden = true;
   status.textContent = "Searching product photos…";
   input.disabled = sample.disabled = true;
+  dropzone.setAttribute("aria-disabled","true");results.setAttribute("aria-busy","true");
   try {
     index ??= loadIndex().catch(error => { index = undefined; throw error; });
     const [{products, urls, view, bytes}, rgb] = await Promise.all([index, fingerprint(file)]);
@@ -108,5 +115,6 @@ async function search(file: File) {
     status.textContent = "Could not read this photo or load the search index. Try another image.";
   } finally {
     input.disabled = sample.disabled = false;
+    dropzone.setAttribute("aria-disabled","false");results.setAttribute("aria-busy","false");
   }
 }
