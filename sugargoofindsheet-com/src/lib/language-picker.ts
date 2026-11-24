@@ -48,6 +48,7 @@ let scheduled = false;
 export function translate(source: string): string {
   if (active === "en") return source;
   const key = source.replace(/\s+/g, " ").trim();
+  if(key === "Sugargoo")return source;
   if (/^\$[0-9,]+\.[0-9]{2}$/.test(key)) return source;
   let value = dictionary[key] ?? dictionary[key.toLowerCase()];
   if (!value) {
