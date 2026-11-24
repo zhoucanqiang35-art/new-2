@@ -7,8 +7,8 @@
   let active = 'en', ui = {}, home = {}, messages = {}, revision = 0;
   let dictionaries;
   const storage = {
-    get() { try { return localStorage.getItem('litbuyLang'); } catch { return 'en'; } },
-    set(value) { try { localStorage.setItem('litbuyLang', value); } catch {} }
+    get() { try { return localStorage.getItem('litbuyLanguageChosenV2') === 'yes' ? localStorage.getItem('litbuyLang') : 'en'; } catch { return 'en'; } },
+    set(value) { try { localStorage.setItem('litbuyLang', value); localStorage.setItem('litbuyLanguageChosenV2','yes'); } catch {} }
   };
   async function json(url) {
     const response = await fetch(url,{cache:'no-cache'});
@@ -46,7 +46,7 @@
     const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
     let node;
     while ((node = walker.nextNode())) {
-      if (node.parentElement?.closest('script,style,option,.money,[data-product-title],[data-home-i18n],[data-home-category]')) continue;
+      if (node.parentElement?.closest('script,style,option,.compact-picker,.money,[data-product-title],[data-home-i18n],[data-home-category]')) continue;
       let record = originals.get(node);
       if (!record || node.nodeValue !== record.rendered) record = { source:node.nodeValue, rendered:node.nodeValue };
       const source = record.source.trim();

@@ -21,7 +21,7 @@
   const message=rateDate?(cached?t('cached_rate','Cached exchange rate'):t('rate_date','Exchange rate reference'))+': '+rateDate:t('rate_unavailable','Exchange rate unavailable; original CNY prices shown.');
   document.querySelectorAll('.rate-status').forEach(el=>{if(el.textContent!==message)el.textContent=message;});
  }
- async function load(){try{const r=await fetch('https://api.frankfurter.dev/v1/latest?base=USD&symbols=EUR,GBP,CAD,AUD,JPY,CNY');if(!r.ok)throw Error();const data=await r.json();if(!(data.rates?.CNY>0)||!/^\d{4}-\d{2}-\d{2}$/.test(data.date))throw Error();rates={USD:1,...data.rates};rateDate=data.date;cached=false;write('litbuyRates',JSON.stringify({rates,date:rateDate}));}catch{}update();}
+ async function load(){try{const r=await fetch('https://open.er-api.com/v6/latest/USD');if(!r.ok)throw Error();const data=await r.json();const date=data.date||(data.time_last_update_unix?new Date(data.time_last_update_unix*1000).toISOString().slice(0,10):'');if(!(data.rates?.CNY>0)||!/^\d{4}-\d{2}-\d{2}$/.test(date))throw Error();rates={USD:1,...data.rates};rateDate=date;cached=false;write('litbuyRates',JSON.stringify({rates,date:rateDate}));}catch{}update();}
  sel.addEventListener('change',()=>{write('litbuyCurrency',sel.value);update();});
  window.addEventListener('litbuy:languagechange',update);
  new MutationObserver(update).observe(document.body,{childList:true,subtree:true});

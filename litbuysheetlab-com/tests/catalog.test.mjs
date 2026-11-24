@@ -7,7 +7,7 @@ const pause=()=>new Promise(r=>setTimeout(r,30));
 async function page(route,path,lang='en'){
  const html=await readFile(new URL('dist/'+path,root),'utf8');
  const dom=new JSDOM(html,{url:'https://litbuysheetlab.com'+route,runScripts:'outside-only'}),w=dom.window;
- w.localStorage.setItem('litbuyLang',lang);
+ w.localStorage.setItem('litbuyLang',lang);w.localStorage.setItem('litbuyLanguageChosenV2','yes');
  w.fetch=async url=>{try{const text=await readFile(new URL('public'+url,root),'utf8');return {ok:true,json:async()=>JSON.parse(text)};}catch{return {ok:false,status:404};}};
  w.eval(await readFile(new URL('public/language.js',root),'utf8'));
  w.eval(await readFile(new URL('public/app.js',root),'utf8'));

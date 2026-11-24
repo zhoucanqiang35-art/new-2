@@ -7,7 +7,7 @@ const settle = () => new Promise(resolve => setTimeout(resolve, 40));
 async function fixture(saved='en', customFetch) {
   const dom = new JSDOM(`<body><select id="language"><option value="en">English</option><option value="zh">中文</option><option value="ar">العربية</option></select><p id="plain">Price unavailable</p><h1 data-home-i18n="home">Home</h1><h2 data-product-title="1">Test shoes</h2><input name="q" placeholder="Search products"><button aria-label="Next product image">→</button><p id="status"></p></body>`, {url:'http://localhost',runScripts:'outside-only'});
   const {window:w}=dom;
-  w.localStorage.setItem('litbuyLang',saved);
+  w.localStorage.setItem('litbuyLang',saved);w.localStorage.setItem('litbuyLanguageChosenV2','yes');
   const data={
     '/data/ui.json':{}, '/data/home-ui.json':{zh:{home:'首页',search_placeholder:'搜索商品'},ar:{home:'الرئيسية'}},
     '/data/messages.json':{zh:{'Price unavailable':'暂无价格','Weidian link copied.':'已复制微店链接。','Next product image':'下一张商品图片'}},
