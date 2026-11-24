@@ -1,5 +1,21 @@
 type SellerPhoto = {url: string; label: string};
 
+const snapshotPrefixes = new Set(["7868", "7869", "7870", "7872", "7873"]);
+
+async function savedSellerPhotos(item: string): Promise<SellerPhoto[]> {
+  const prefix = item.slice(0, 4);
+  if (!snapshotPrefixes.has(prefix)) return [];
+  try {
+    const response = await fetch("/seller-photos/" + prefix + ".json.gz");
+    if (!response.ok || !response.body) return [];
+    const decoded = response.body.pipeThrough(new DecompressionStream("gzip"));
+    const photos: Record<string, SellerPhoto[]> = await new Response(decoded).json();
+    return photos[item] ?? [];
+  } catch {
+    return [];
+  }
+}
+
 export async function showSellerPhotos(item: string, gallery: Promise<string[]>) {
   const heading = document.querySelector<HTMLElement>("#seller-photo-title")!;
   const list = document.querySelector<HTMLElement>("#seller-photos")!;
@@ -45,6 +61,12 @@ export async function showSellerPhotos(item: string, gallery: Promise<string[]>)
   const showFallback = async () => {
     render((await gallery).map(url => ({url, label: ""})), true);
   };
+
+  const saved = await savedSellerPhotos(item);
+  if (saved.length) {
+    render(saved);
+    return;
+  }
 
   try {
     const response = await fetch("/api/seller-photos?id=" + encodeURIComponent(item), {
