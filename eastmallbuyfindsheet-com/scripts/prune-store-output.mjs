@@ -41,10 +41,10 @@ await Promise.all([
   write('visual-photos.json', photoJson),
   write('visual-index.bin', index),
   writeFile(new URL('../dist/visual-index.bin.gz', import.meta.url), compressed),
-  write('store-catalog-v1.json', catalogJson),
-  write('store-visual-photos-v1.json', photoJson),
-  write('store-visual-index-v1.bin', index),
-  write('store-visual-index-v1.bin.gz', compressed),
+  write('store-catalog-v2.json', catalogJson),
+  write('store-visual-photos-v2.json', photoJson),
+  write('store-visual-index-v2.bin', index),
+  write('store-visual-index-v2.bin.gz', compressed),
   ...(await readdir(input)).filter((name) => /^(gallery-\d+|qc|qc-featured|product-media-saved)\.json$/.test(name))
     .map(async (name) => {
       const items = JSON.parse(await read(name));

@@ -18,7 +18,7 @@ let activeObjectUrl;
 
 async function loadIndex() {
   const compressed = typeof DecompressionStream === 'function';
-  const response = await fetch(compressed ? '/data/store-visual-index-v1.bin.gz' : '/data/store-visual-index-v1.bin');
+  const response = await fetch(compressed ? '/data/store-visual-index-v2.bin.gz' : '/data/store-visual-index-v2.bin');
   if (!response.ok || !response.body) throw new Error('The image index could not be loaded');
   const total = Number(response.headers.get('Content-Length'));
   let loaded = 0;
@@ -39,8 +39,8 @@ async function loadIndex() {
 
 function loadDataset() {
   dataset ??= Promise.all([
-    readJson('/data/store-catalog-v1.json'),
-    readJson('/data/store-visual-photos-v1.json'),
+    readJson('/data/store-catalog-v2.json'),
+    readJson('/data/store-visual-photos-v2.json'),
     loadIndex(),
   ]).catch((error) => { dataset = undefined; throw error; });
   return dataset;

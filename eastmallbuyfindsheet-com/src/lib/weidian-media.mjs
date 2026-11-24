@@ -1,4 +1,4 @@
-const weidianShopId = '1696846451';
+const weidianShopIds = new Set(['1696846451', '1823310451', '1789121139']);
 const imageHosts = new Set(['si.geilicdn.com', 'img.geilicdn.com']);
 const sizeField = /\b(?:size|sizing)\b|尺[码碼寸]|鞋[码碼]/i;
 
@@ -28,7 +28,7 @@ export function publicShopMedia(html, id) {
   if (!value) throw new Error('Missing public item data');
   const data = JSON.parse(attributeText(value)).result?.default_model;
   const item = data?.item_info;
-  if (String(item?.item_id) !== id || String(item?.shop_id) !== weidianShopId) {
+  if (String(item?.item_id) !== id || !weidianShopIds.has(String(item?.shop_id))) {
     throw new Error('Item or store does not match');
   }
 
