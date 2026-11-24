@@ -1,0 +1,12 @@
+---
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Indexing from '../../components/Indexing.astro';
+import {catalogProducts, productPath, browsePageCount, browsePageSize} from '../../lib/catalog-products.js';
+import {usd} from '../../lib/currency.js';
+import '../../styles/global.css';
+export function getStaticPaths(){return Array.from({length:browsePageCount},(_,i)=>({params:{page:String(i+1)},props:{page:i+1}}));}
+const {page}=Astro.props;
+const products=catalogProducts.slice((page-1)*browsePageSize,page*browsePageSize);
+---
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{`LoongBuy Product Directory — Page ${page} of ${browsePageCount}`}</title><meta name="description" content={`Browse LoongBuy finds on directory page ${page}: ${products.slice(0,3).map(p=>p.name).join(', ')}. Open product photos, prices and purchase options.`}/><Indexing/><link rel="icon" href="/assets/favicon.ico"/>{page>1&&<link rel="prev" href={`/browse/${page-1}/`}/>} {page<browsePageCount&&<link rel="next" href={`/browse/${page+1}/`}/>}</head><body><Header/><main class="section"><p class="eyebrow">COMPLETE PRODUCT DIRECTORY</p><h1>LoongBuy finds</h1><p>{catalogProducts.length.toLocaleString('en-US')} distinct Weidian items · Page {page} of {browsePageCount}. <a href="/spreadsheet/">Search and filter the catalog</a>.</p><nav class="pagination" aria-label="Product directory pages">{page>1&&<a class="outline" href={`/browse/${page-1}/`}>Previous page</a>}<span>{page} / {browsePageCount}</span>{page<browsePageCount&&<a class="outline" href={`/browse/${page+1}/`}>Next page</a>}</nav><div class="products">{products.map(product=><article class="product-card"><a class="product-picture" href={productPath(product.id)}><img src={product.image} alt={product.name} loading="lazy" decoding="async"/></a><h2 class="directory-product-name"><a href={productPath(product.id)}>{product.name}</a></h2><div class="card-bottom"><strong>{usd(product.price)}</strong><a href={productPath(product.id)}>View product</a></div></article>)}</div><nav class="pagination" aria-label="Product directory navigation">{page>1&&<a class="outline" href={`/browse/${page-1}/`}>Previous page</a>}<span>{page} / {browsePageCount}</span>{page<browsePageCount&&<a class="outline" href={`/browse/${page+1}/`}>Next page</a>}</nav></main><Footer/></body></html>

@@ -2,9 +2,10 @@ const $ = s => document.querySelector(s);
 const escapeHTML = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const buy = id => 'https://loongbuy.com/product-details?' + new URLSearchParams({url:'https://weidian.com/item.html?itemID='+id});
 const titles = {'shoes':'Shoes & sneakers','hoodies-sweaters':'Hoodies','t-shirts':'T-shirts','jackets':'Jackets','pants-shorts':'Pants & shorts','accessories':'Accessories','headwear':'Headwear','electronics':'Electronics','ShortSets':'Short sets','jersey':'Jerseys','other-stuff':'Other finds'};
+const productAliases = {"5947": "5950", "5943": "5946", "5934": "5935", "5933": "5937", "5932": "5936", "2853": "2854", "2699": "2701"};
 let cached, currency, imageIndex, qcSnapshot;
 async function json(url) {const r = await fetch(url); if (!r.ok) throw Error('Could not load '+url+'. Please try again.'); return r.json();}
-const data = () => cached ??= json('/catalog.json').then(a => a.filter(p => /^\d+$/.test(p.weidianId)));
+const data = () => cached ??= json('/catalog.json').then(a => a.filter(p => /^\d+$/.test(p.weidianId) && !Object.hasOwn(productAliases,p.id)));
 const getCurrency = () => currency ??= json('/currency.json');
 let cnyPerUsd = 6.6642;
 const usd = value => new Intl.NumberFormat('en-US', {style:'currency',currency:'USD'}).format(Number(value)/cnyPerUsd);
@@ -15,7 +16,7 @@ document.addEventListener('site-language-changed', () => {
  if (query) render();
 });
 const perPage=24, grid=$('#products'), imagePage=!!$('#image-results');
-const productHref = id => window.loongbuyPilotPaths?.[id] || '/product/?id=' + encodeURIComponent(id);
+const productHref = id => '/products/' + encodeURIComponent(productAliases[id] || id) + '/';
 const card = (p,i,match) => `<article class="product-card"><a class="product-picture" href="${productHref(p.id)}"><img loading="lazy" src="${escapeHTML(match?.url || p.image)}" alt="${escapeHTML(p.name)}" ${match ? `data-image-fallback="${escapeHTML(p.image)}"` : ''}/><span class="product-number">${String(i+1).padStart(2,'0')}</span><span class="product-arrow"><svg class="arrow-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><div class="card-meta"><span>${escapeHTML(titles[p.category]||p.category)}</span><span>${match?.kind === 'qc' ? 'QC photos' : 'WEIDIAN'}</span></div><a class="product-name" data-product-title data-product-id="${escapeHTML(p.id)}" dir="auto" href="${productHref(p.id)}">${escapeHTML(p.name)}</a><div class="card-bottom"><strong>${usd(p.price)}</strong><a href="${escapeHTML(buy(p.weidianId))}" target="_blank" rel="noopener">Buy on LoongBuy <svg class="arrow-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>${match ? `<a class="matched-image-link" href="${escapeHTML(match.url)}" target="_blank" rel="noopener noreferrer">View matched image ↗</a>` : ''}</article>`;
 async function render() {
  if (!grid || (imagePage && !imageIds)) return;
@@ -200,7 +201,8 @@ async function searchImages(event) {
      const score = imageDistance(reference, vector);
      if (!Number.isFinite(score)) throw Error('Some indexed photos could not be loaded. Please try again.');
      for (const id of ids) {
-      if (!ranked.has(id) || score < ranked.get(id).score) ranked.set(id, { score, url, kind });
+      const key = productAliases[id] || id;
+      if (!ranked.has(key) || score < ranked.get(key).score) ranked.set(key, { score, url, kind });
      }
     }
     compared += entries.length;
@@ -477,9 +479,10 @@ function relatedProducts(product, products) {
  try {
   const [products,rate]=await Promise.all([data(),getCurrency()]);cnyPerUsd=rate.cnyPerUsd;
   const id = root.dataset.productId || new URLSearchParams(location.search).get('id');
-  const p = products.find(x => x.id === id);
+  const p = products.find(x => x.id === (productAliases[id] || id));
   if (!p && root.dataset.productId) return;
   if(!p){root.innerHTML='<div class="section"><h1>Product not found</h1><a href="/#spreadsheet">Back to the spreadsheet →</a></div>';return;}
+  if (!root.dataset.productId) { const target=new URL(productHref(p.id),location.origin); const lang=new URLSearchParams(location.search).get('lang'); if(lang)target.searchParams.set('lang',lang); location.replace(target.href); return; }
   document.title=p.name+' | LoongBuy Findsheet';
   root.innerHTML=`<div class="detail-layout"><div class="product-media">${galleryMarkup(p)}</div><div class="detail-info"><p class="eyebrow">${escapeHTML(titles[p.category]||p.category)}</p><h1 data-product-title data-product-id="${escapeHTML(p.id)}" dir="auto">${escapeHTML(p.name)}</h1><p>Product ID ${escapeHTML(p.weidianId)}</p><p class="detail-price" id="detail-price">${usd(p.price)} USD</p><div class="detail-links"><a class="button" target="_blank" rel="noopener" href="${escapeHTML(buy(p.weidianId))}">Buy on LoongBuy</a><button class="outline" id="other-platforms">Other purchasing platforms</button><button class="outline" id="copy-product">Copy product link</button></div><section id="product-variants" aria-label="Product options"><p id="variant-status" role="status">Loading styles and sizes…</p><div id="variant-groups"></div></section><p class="data-note">Choose options here to preview this product. Confirm your final selection, price and availability on LoongBuy.</p><p class="data-note">Reference conversion · 1 USD = ${rate.cnyPerUsd} CNY · ${escapeHTML(rate.asOf)}.</p></div>${qcMarkup(p)}</div><dialog id="platform-dialog" aria-labelledby="platform-title"><button class="dialog-close" aria-label="Close platform selector">×</button><h2 id="platform-title">Other purchasing platforms</h2><div class="platform-list" id="platform-list"></div><p class="data-note">Open the same item with your preferred agent. Links may include referral parameters.</p></dialog>`;
   $('#copy-product').addEventListener('click',async()=>{

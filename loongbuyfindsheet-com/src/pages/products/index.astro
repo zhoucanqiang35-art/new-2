@@ -25,7 +25,7 @@ const categories = Object.groupBy(pilotProducts, item => item.category);
 <body>
   <Header />
   <main class="section">
-    <h1>Selected Weidian finds</h1>
+    <h1>Selected Weidian finds</h1><p><a href="/browse/1/">Browse all 8,087 product pages</a></p>
     <p>Compare the seller photos and reference prices before opening the exact listing on LoongBuy.</p>
     <nav class="category-tabs" aria-label="Selected product categories">
       {Object.keys(categories).map(category => <a href={'#' + category}>{categoryNames[category]}</a>)}

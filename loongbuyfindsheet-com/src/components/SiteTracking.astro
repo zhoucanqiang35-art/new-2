@@ -20,6 +20,36 @@ const measurementId = 'G-2PRPEFSYRH';
       tag.async = true;
       tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + measurementId;
       document.head.append(tag);
+      const itemData = () => {
+        const root = document.getElementById('product-detail');
+        if (!root?.dataset.weidianId) return null;
+        return { item_id: root.dataset.weidianId, item_name: root.dataset.productName,
+          price: Number(root.dataset.productPrice), quantity: 1 };
+      };
+      const trackProduct = () => {
+        const item = itemData();
+        if (item) window.gtag('event', 'view_item', { currency: 'USD', value: item.price, items: [item] });
+      };
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', trackProduct, { once: true });
+      else trackProduct();
+      document.addEventListener('click', event => {
+        const link = event.target.closest?.('a[href]');
+        if (!link) return;
+        const target = new URL(link.href, location.href);
+        if (target.hostname === 'loongbuy.com' && target.pathname === '/product-details') {
+          const original = target.searchParams.get('url');
+          const itemId = original ? new URL(original).searchParams.get('itemID') : null;
+          window.gtag('event', 'purchase_click', { item_id: itemId, agent: 'LoongBuy', link_url: target.href });
+        } else if (link.closest('#platform-list')) {
+          window.gtag('event', 'agent_click', { item_id: itemData()?.item_id, agent: link.textContent.trim(), link_url: target.href });
+        }
+      }, { capture: true });
+      document.addEventListener('submit', event => {
+        if (event.target.id !== 'hero-search') return;
+        const query = new FormData(event.target).get('q');
+        if (typeof query === 'string' && query.trim()) window.gtag('event', 'search', { search_term: query.trim().slice(0, 200) });
+      }, { capture: true });
+
     }
   </script>
 )}

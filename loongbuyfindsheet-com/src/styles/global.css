@@ -556,3 +556,5 @@ header nav a{font-size:14px}
 .product-gallery>.data-note{font-size:12px}
 @media(max-width:800px){.variant-options{grid-template-columns:repeat(6,minmax(0,1fr))}.language-panel{width:264px}}
 @media(max-width:600px){.detail-layout{grid-template-columns:1fr;gap:18px}.language-options{max-height:204px}.photo-thumbnails{max-height:75px}.variant-options{max-height:200px}}
+
+.directory-product-name{font-size:16px;letter-spacing:0;line-height:1.5;margin:14px 12px 6px}.product-breadcrumb{padding-block:20px;justify-content:flex-start;font-size:14px}.product-listing-notes{padding-top:22px;border-top:1px solid var(--line)}.product-listing-notes h2{font-size:25px}.product-listing-notes dl{display:grid;grid-template-columns:150px 1fr;gap:10px;font-size:14px}.product-listing-notes dt{font-weight:700}.product-listing-notes dd{margin:0}.product-listing-notes a{text-decoration:underline}@media(max-width:600px){.product-listing-notes dl{grid-template-columns:110px 1fr}.directory-product-name{font-size:14px}}
