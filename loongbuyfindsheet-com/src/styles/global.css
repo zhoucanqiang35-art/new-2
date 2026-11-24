@@ -537,3 +537,22 @@ header nav a{font-size:14px}
 .platform-list a img{width:78px;height:25px;object-fit:contain}
 @media(max-width:800px){header{flex-wrap:wrap;gap:12px}header nav{order:3;width:100%;overflow-x:auto;white-space:nowrap;padding-bottom:4px;gap:20px}.language-panel{position:absolute;max-width:calc(100vw - 24px)}.detail-layout{gap:22px}.variant-options{grid-template-columns:repeat(5,minmax(0,1fr))}}
 @media(max-width:600px){.detail-layout{grid-template-columns:1fr;padding:20px 4%;gap:20px}.detail-layout h1{font-size:25px}.photo-open img{height:340px}.photo-thumbnails{grid-template-columns:repeat(6,minmax(0,1fr));max-height:130px}.variant-options{grid-template-columns:repeat(6,minmax(0,1fr));max-height:200px}.detail-links .button{min-height:48px}.detail-layout .detail-price{font-size:28px}.qc-photo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* Small language popup and reference photo/SKU proportions. */
+.language-picker summary{border-radius:5px;padding:7px 10px;min-height:32px;font-size:13px}
+.language-panel{width:264px;max-width:calc(100vw - 24px);padding:9px;border-radius:6px}
+.language-panel-heading{padding-bottom:7px;margin-bottom:7px}
+.language-options{grid-auto-rows:34px;gap:4px;max-height:224px;overflow-y:auto}
+.language-options button{padding:4px 17px 4px 6px;border-radius:3px;min-height:34px}
+.language-options button>span{font-size:13px}
+.language-options button small,.language-note,.language-panel #language-status:empty{display:none}
+.language-options button i{top:8px;right:5px}
+.detail-links{margin-bottom:20px}
+.detail-layout{grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:30px}
+.variant-options{grid-template-columns:repeat(8,minmax(0,1fr));max-height:240px}
+.variant-option{border-radius:2px}
+.photo-thumbnails{max-height:96px;grid-template-columns:repeat(6,minmax(0,1fr))}
+.detail-info>.data-note{font-size:12px;margin-bottom:7px}
+.product-gallery>.data-note{font-size:12px}
+@media(max-width:800px){.variant-options{grid-template-columns:repeat(6,minmax(0,1fr))}.language-panel{width:264px}}
+@media(max-width:600px){.detail-layout{grid-template-columns:1fr;gap:18px}.language-options{max-height:204px}.photo-thumbnails{max-height:75px}.variant-options{max-height:200px}}
