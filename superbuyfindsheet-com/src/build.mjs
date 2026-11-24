@@ -72,14 +72,10 @@ function languagePicker() {
     `<button type="button" data-language="${code}" aria-pressed="${code==='en'}" lang="${code}">${name}</button>`).join('');
   return picker('language-options','Language',`${icon('globe')}<span id="current-language">English</span>`,options,`<p id="language-status" role="status" hidden></p>`);
 }
-function shoppingPreferences() {
-  const selected = agents.find(agent => agent.id === 'superbuy');
-  const agentOptions = agents.map(agent =>
-    `<button type="button" data-agent="${agent.id}" aria-pressed="${agent.id===selected.id}"><img src="${agent.logo}" width="20" height="20" alt="" loading="lazy"><span>${escape(agent.name)}</span></button>`).join('');
+function currencyPicker() {
   const currencyOptions = ['USD', ...currencies.filter(code=>code!=='USD')].map(code =>
     `<button type="button" data-currency="${code}" aria-pressed="${code==='USD'}">${code}</button>`).join('');
-  return picker('agent-options','Shopping agent',`<img id="current-agent-logo" src="${selected.logo}" alt="" width="18" height="18"><span id="current-agent">${selected.name}</span>`,agentOptions)
-    + picker('currency-options','Currency','<span id="current-currency">USD</span>',currencyOptions,`<p id="currency-source"></p>`);
+  return picker('currency-options','Currency','<span id="current-currency">USD</span>',currencyOptions,`<p id="currency-source"></p>`);
 }
 function page({path,title,description,body,active='',kind='',indexable=false}) {
   const canonical = indexable ? siteOrigin + '/' + path.replace(/index\.html$/, '') : '';
@@ -92,7 +88,7 @@ ${canonical ? `<link rel="canonical" href="${escape(canonical)}">` : '<meta name
 <meta name="description" content="${escape(description)}">
 <meta name="theme-color" content="#f2f8fe">
 <title>${escape(title)} | Superbuy Findsheet</title>
-<link rel="icon" href="/assets/superbuy-favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css?v=superbuy-layout-1"><script src="/app.js?v=superbuy-layout-1" type="module"></script></head>
+<link rel="icon" href="/assets/superbuy-favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css?v=superbuy-layout-2"><script src="/app.js?v=superbuy-layout-2" type="module"></script></head>
 <body data-page="${kind}"><a class="skip" href="#main">${t('Skip to content')}</a>
 <header class="header"><div class="wrap navigation">
 <a class="brand" href="/" aria-label="Superbuy Findsheet"><img src="/assets/superbuy-logo.svg" width="110" height="33" alt="Superbuy"><span>Findsheet</span></a>
@@ -101,7 +97,7 @@ ${canonical ? `<link rel="canonical" href="${escape(canonical)}">` : '<meta name
 ${languagePicker()}
 ${external(signup,'Joinsuperbuy',true)}
 </div></div>
-<div class="tool-strip"><div class="wrap tool-row">${searchForm()}<div class="tool-actions"><a class="saved-link btn outline" href="/saved/" aria-label="Show saved products" data-label="Show saved products">${icon('heart')} <span id="saved-count">0</span></a>${shoppingPreferences()}</div></div></div>
+<div class="tool-strip"><div class="wrap tool-row">${searchForm()}<div class="tool-actions"><a class="saved-link btn outline" href="/saved/" aria-label="Show saved products" data-label="Show saved products">${icon('heart')} <span id="saved-count">0</span></a>${currencyPicker()}</div></div></div>
 </header>
 <main id="main" class="${kind==='home'?'main home-main':'wrap main'}">${body}</main>
 <footer><div class="wrap footer"><a href="/"><strong>Superbuy Findsheet</strong></a><p>${t('Independent guide by FindSpreadsheet. Reference prices exclude delivery and optional services. Some links are referral links.')}</p>${kind==='home'?'':`<a href="/seo/">${t('SEO')}</a>`}</div></footer></body></html>`);
@@ -213,7 +209,14 @@ page({path:'seo/index.html',title:'Superbuy Spreadsheet Search Guide – Weidian
   </section>`});
 page({path:'image-search/index.html',title:'Superbuy Image Search – Find Similar Products',description:'Reverse image search across catalog covers, carousel photos, available QC images and guide screenshots.',kind:'image',body:
   heading('Find Similar Products','Choose a reference photo to compare against product and guide images. The file stays in your browser.')+
-  `<div class="image-controls"><label class="btn primary" for="image-file">${t('Choose photo')}</label><input type="file" id="image-file" accept="image/*"><button type="button" id="try-image" class="btn outline">${t('Try an example')}</button><span data-visual-total></span></div>
+  `<div class="image-upload">
+    <input type="file" id="image-file" accept="image/*">
+    <label class="image-upload-box" for="image-file">
+      ${icon('image')}<strong>${t('Choose photo')}</strong>
+      <span class="upload-limit">${t('Choose an image up to 12 MB. The image stays in your browser.')}</span>
+    </label>
+  </div>
+  <div class="image-controls"><button type="button" id="try-image" class="btn outline">${t('Try an example')}</button><span data-visual-total></span></div>
   <figure id="image-preview" hidden><img alt="Reference photo"><figcaption></figcaption></figure><p id="image-status" class="status" role="status"></p><div class="card-grid" id="image-results"></div><button type="button" id="image-more" class="btn outline" hidden>${t('Show more matches')}</button>`});
 write('search/index.html','<!doctype html><html lang="en"><meta charset="utf-8"><meta name="robots" content="noindex"><title>Site image search</title><script>location.replace("/image-search/"+location.search)</script><a href="/image-search/">Open image search</a></html>');
 page({path:'saved/index.html',title:'Saved Superbuy Finds',description:'Browse items saved in this browser.',kind:'saved',body:catalog({saved:true})});

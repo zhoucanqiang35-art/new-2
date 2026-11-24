@@ -14,7 +14,6 @@ const navForm=document.querySelector('.search-form');
 const queryInput=navForm.querySelector('input');
 const localeKey='superbuy-findsheet-language';
 const saveKey='superbuy-findsheet-saved';
-const agentKey='superbuy-findsheet-agent';
 const currencyKey='superbuy-findsheet-currency';
 const readStore=(key,fallback)=>{try{return localStorage.getItem(key) ?? fallback;}catch{return fallback;}};
 const writeStore=(key,value)=>{try{localStorage.setItem(key,value);}catch{/* storage can be disabled */}};
@@ -27,7 +26,6 @@ let words={};
 let names={};
 let meta;
 let records=[];
-let agentChoice='superbuy';
 let currency='USD';
 let saved=new Set();
 let localeRequest=0;
@@ -103,7 +101,7 @@ async function setLanguage(selected,remember=false) {
     languageChoices.forEach(button=>button.setAttribute('aria-pressed',String(button===choice)));
     if(remember)writeStore(localeKey,code);
     localize();
-    updateShoppingPreferences();
+    updateCurrencyPreference();
     rerender();
     renderVisual();
     updateSaved();
@@ -180,43 +178,24 @@ function agentUrl(agent,product) {
   if(agent.id==='findspreadsheet')return sourcePage(product);
   return agent.template.replace('{productId}',encodeURIComponent(product.weidianId));
 }
-function preferredAgentLink(product) {
-  const agent=meta.agents.find(item=>item.id===agentChoice);
-  return `<a class="btn primary" href="${esc(agentUrl(agent,product))}" target="_blank" rel="${agent.id==='findspreadsheet'?'noopener':'sponsored noopener'}">${esc(tr('View on {0}',agent.name))}</a>`;
-}
-function updateShoppingPreferences() {
+function updateCurrencyPreference() {
   if(!meta)return;
-  const agent=meta.agents.find(item=>item.id===agentChoice);
-  $('current-agent').textContent=agent.name;
-  $('current-agent-logo').src=agent.logo;
   $('current-currency').textContent=currency;
   $('currency-source').textContent=tr('Reference rates')+' · '+meta.ratesDate;
-  document.querySelectorAll('[data-agent]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.agent===agentChoice)));
   document.querySelectorAll('[data-currency]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.currency===currency)));
 }
-function setupShoppingPreferences() {
-  const initialAgent=readStore(agentKey,'superbuy');
+function setupCurrencyPreference() {
   const initialCurrency=readStore(currencyKey,'USD');
-  if(meta.agents.some(agent=>agent.id===initialAgent))agentChoice=initialAgent;
   if(Object.hasOwn(meta.rates,initialCurrency))currency=initialCurrency;
-  updateShoppingPreferences();
-  $('agent-options').addEventListener('click',event=>{
-    const button=event.target.closest('[data-agent]');
-    if(!button)return;
-    agentChoice=button.dataset.agent;
-    writeStore(agentKey,agentChoice);
-    closePicker($('agent-options'),true);
-    updateShoppingPreferences();
-    rerender();
-    renderVisual();
-  });
-  $('currency-options').addEventListener('click',event=>{
+  updateCurrencyPreference();
+  const picker=$('currency-options');
+  picker.addEventListener('click',event=>{
     const button=event.target.closest('[data-currency]');
     if(!button)return;
     currency=button.dataset.currency;
     writeStore(currencyKey,currency);
-    closePicker($('currency-options'),true);
-    updateShoppingPreferences();
+    closePicker(picker,true);
+    updateCurrencyPreference();
     rerender();
     renderVisual();
   });
@@ -226,7 +205,7 @@ function agentPicker(product) {
     `<a href="${esc(agentUrl(agent,product))}" target="_blank" rel="${agent.id==='findspreadsheet'?'noopener':'sponsored noopener'}">
       <img src="${esc(agent.logo)}" width="20" height="20" alt="" loading="lazy"><span>${esc(agent.name)}</span></a>`).join('');
   return `<details class="choice-menu detail-agent-picker" data-picker>
-    <summary>${text('Other shopping agents')}${icon('chevron')}</summary>
+    <summary>${text('Other shopping agents')}<span data-icon="chevron" aria-hidden="true">${icon('chevron')}</span></summary>
     <div class="choice-panel"><div class="choice-grid">${options}</div></div></details>`;
 }
 function link(url,label,sponsored=false) {
@@ -238,7 +217,7 @@ function card(p,photo=cover(p)) {
     <a href="${href}"><img src="${esc(photo)}" width="320" height="320" alt="${title}" loading="lazy"></a>
     <button type="button" class="save" data-save="${p.weidianId}" aria-pressed="false">${icon('heart')}</button></div>
     <div class="card-info"><p>${esc(tr(label(p.category)))}</p><h3><a href="${href}">${title}</a></h3><strong class="price">${esc(money(p))}</strong>${convertedPrice(Number(p.price))}
-    <div class="card-actions"><a class="btn outline" href="${href}">${text('View details')}</a>${preferredAgentLink(p)}</div></div></article>`;
+    <div class="card-actions"><a class="btn outline" href="${href}">${text('View details')}</a>${link(buy(p.weidianId),'View on Superbuy',true)}</div></div></article>`;
 }
 function applyImageFallback(root) {
   root.querySelectorAll('img').forEach(img=>{
@@ -414,8 +393,10 @@ async function setupProduct() {
       <section class="detail-panel detail-info">
         <h1>${title}</h1><p class="product-id">${esc(tr('Weidian item #{0}',product.weidianId))}</p>
         <div class="product-price"><strong class="detail-price">${esc(money(product))}</strong>${Number(product.price)>0?' <span>USD</span>':''}${convertedPrice(Number(product.price))}</div>
-        <div class="detail-actions">${link(buy(product.weidianId),'View on Superbuy',true)}${agentPicker(product)}
-          <button class="btn outline" type="button" data-copy-product>${text('Copy product link')}</button></div>
+        <div class="detail-actions">${link(buy(product.weidianId),'View on Superbuy',true)}
+          <div class="detail-secondary-actions">${agentPicker(product)}
+            <button class="btn outline" type="button" data-copy-product>${text('Copy product link')}</button>
+          </div></div>
         <p id="copy-status" role="status" class="status" hidden></p>
         <div id="listing-options"></div>
       </section>
@@ -588,7 +569,7 @@ function setupVisual() {
 
 const siteMetadata=get('/data/site-meta.json').then(data=>{
   meta=data;
-  setupShoppingPreferences();
+  setupCurrencyPreference();
 });
 if(catalogueRoot||sitePage==='product'||sitePage==='image') {
   Promise.all([siteMetadata,get('/data/catalog.json')]).then(async ([,products])=>{
