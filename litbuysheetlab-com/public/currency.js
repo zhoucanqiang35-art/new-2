@@ -3,7 +3,7 @@
  const supported=new Set([...sel.options].map(o=>o.value));
  const read=key=>{try{return localStorage.getItem(key);}catch{return null;}};
  const write=(key,value)=>{try{localStorage.setItem(key,value);}catch{}};
- const saved=read('litbuyCurrency');sel.value=supported.has(saved)?saved:'USD';
+ const saved=read('litbuyCurrency');sel.value=supported.has(saved)?saved:'USD';sel.dispatchEvent(new Event('change',{bubbles:true}));
  let rates=null,rateDate='',cached=false;
  try{const data=JSON.parse(read('litbuyRates')||'null');if(data?.rates?.CNY>0&&data.date){rates=data.rates;rateDate=data.date;cached=true;}}catch{}
  const t=(key,fallback)=>window.litbuyHomeText?.(key,fallback)||fallback;
