@@ -386,7 +386,7 @@ footer{margin-top:54px;padding:27px 0 32px}.footer-inner{display:flex;justify-co
 }
 .seller-photo-filmstrip :is(button, a) { padding: 0; aspect-ratio: 1; overflow: hidden; }
 .seller-photo-filmstrip img { width: 100%; height: 100%; object-fit: contain; }
-.seller-photo-filmstrip [aria-pressed="true"] {
+.seller-photo-filmstrip :is([aria-pressed="true"], [aria-current="true"]) {
   border-color: var(--brand);
   outline: 2px solid var(--brand);
   outline-offset: 1px;

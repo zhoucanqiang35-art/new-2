@@ -33,8 +33,9 @@ const categoryUrl = categoryLanding(product.category) || categoryFinds(product.c
 const price = priceFor(product.price);
 const purchaseMedia = savedMedia[id];
 const purchasePhotos = purchaseMedia?.photos ?? [];
-const galleryPreview = purchasePhotos.length ? purchasePhotos : [productImage(product)];
 const catalogPhotos = [...new Set([productImage(product), ...photos])];
+const galleryPreview = purchasePhotos.length ? [...new Set(purchasePhotos)] : catalogPhotos;
+const galleryLabel = purchasePhotos.length ? 'Purchase listing' : 'Catalog';
 const sourceUrl = new URL(product.sourcePath, sourceOrigin).href;
 const description = product.name + ' on the EastMallBuy spreadsheet. Compare seller photos, reference price and ordering options for Weidian item ' + id + '.';
 ---
@@ -50,10 +51,10 @@ const description = product.name + ' on the EastMallBuy spreadsheet. Compare sel
             <button type="button" class="gallery-arrow gallery-next" aria-label="Next seller photo" hidden>›</button>
             <span class="gallery-count">{'1 / ' + galleryPreview.length}</span>
           </div>
-          <div class="seller-photo-filmstrip" aria-label="Purchase listing photos">
+          <div class="seller-photo-filmstrip" aria-label={galleryLabel + ' photos'}>
             {galleryPreview.map((photo, index) => (
-              <a href={photo} aria-label={'View purchase listing photo ' + (index + 1)} target="_blank" rel="noopener">
-                <img src={productThumbnail(photo)} width="74" height="74" alt="" loading="lazy" fetchpriority="low" decoding="async" />
+              <a href={photo} aria-label={'View ' + galleryLabel.toLowerCase() + ' photo ' + (index + 1)} aria-current={index === 0 ? 'true' : undefined} target="_blank" rel="noopener">
+                <img src={productThumbnail(photo)} width="74" height="74" alt="" loading={index < 4 ? 'eager' : 'lazy'} fetchpriority="low" decoding="async" />
               </a>
             ))}
           </div>
