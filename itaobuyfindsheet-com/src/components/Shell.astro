@@ -25,6 +25,26 @@ const navigation = [
     <meta name="description" content={description} />
     <title>{title}</title>
     <link rel="icon" href="/brand/favicon.ico" />
+    {Astro.url.pathname === '/' && <meta name="msvalidate.01" content="E34A6C20A8A058592D1DC4B20523F6CB" />}
+    <script is:inline>
+      if (['itaobuyfindsheet.com', 'www.itaobuyfindsheet.com'].includes(window.location.hostname)) {
+        const measurementId = 'G-3450NYC8RQ';
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { window.dataLayer.push(arguments); };
+        window.gtag('js', new Date());
+        window.gtag('config', measurementId, {
+          page_location: window.location.origin + window.location.pathname,
+          page_referrer: document.referrer.split(/[?#]/, 1)[0],
+          allow_google_signals: false,
+          allow_ad_personalization_signals: false,
+        });
+
+        const tag = document.createElement('script');
+        tag.async = true;
+        tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + measurementId;
+        document.head.append(tag);
+      }
+    </script>
     <slot name="head" />
   </head>
   <body>
