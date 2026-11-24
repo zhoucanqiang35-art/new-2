@@ -84,6 +84,7 @@
   "missingProduct": "Nie znaleziono produktu",
   "productError": "Nie udało się wczytać produktu",
   "marketplace": "Platforma sprzedażowa",
+  "qcPlaceholder": "Identyfikator Weidian lub link do produktu",
   "itemId": "Identyfikator produktu Weidian",
   "referencePrice": "Cena orientacyjna w CNY",
   "missingPrice": "Brak ceny orientacyjnej w katalogu.",

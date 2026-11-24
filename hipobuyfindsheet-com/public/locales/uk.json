@@ -84,6 +84,7 @@
   "missingProduct": "Товар не знайдено",
   "productError": "Не вдалося завантажити товар",
   "marketplace": "Торговий майданчик",
+  "qcPlaceholder": "ID Weidian або посилання на товар",
   "itemId": "ID товару на Weidian",
   "referencePrice": "Орієнтовна ціна в CNY",
   "missingPrice": "У каталозі немає орієнтовної ціни.",

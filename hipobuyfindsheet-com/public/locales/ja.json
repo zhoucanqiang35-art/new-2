@@ -84,6 +84,7 @@
   "missingProduct": "商品が見つかりません",
   "productError": "商品情報を読み込めませんでした",
   "marketplace": "販売サイト",
+  "qcPlaceholder": "Weidianの商品IDまたは商品リンク",
   "itemId": "Weidian商品ID",
   "referencePrice": "参考価格（人民元）",
   "missingPrice": "この商品のカタログ参考価格はありません。",

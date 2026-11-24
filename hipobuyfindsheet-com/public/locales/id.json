@@ -84,6 +84,7 @@
   "missingProduct": "Produk tidak ditemukan",
   "productError": "Gagal memuat produk",
   "marketplace": "Lokapasar",
+  "qcPlaceholder": "ID Weidian atau tautan produk",
   "itemId": "ID produk Weidian",
   "referencePrice": "Harga referensi CNY",
   "missingPrice": "Harga referensi belum tersedia di katalog.",

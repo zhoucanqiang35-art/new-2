@@ -84,6 +84,7 @@
   "missingProduct": "Product niet gevonden",
   "productError": "Product kon niet worden geladen",
   "marketplace": "Marktplaats",
+  "qcPlaceholder": "Weidian-ID of productlink",
   "itemId": "Weidian-artikel-ID",
   "referencePrice": "Richtprijs in CNY",
   "missingPrice": "Er is geen richtprijs beschikbaar.",

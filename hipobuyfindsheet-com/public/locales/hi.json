@@ -84,6 +84,7 @@
   "missingProduct": "उत्पाद नहीं मिला",
   "productError": "उत्पाद लोड नहीं हो सका",
   "marketplace": "मार्केटप्लेस",
+  "qcPlaceholder": "Weidian आईडी या प्रोडक्ट लिंक",
   "itemId": "Weidian आइटम आईडी",
   "referencePrice": "चीनी युआन में संदर्भ कीमत",
   "missingPrice": "कैटलॉग में संदर्भ कीमत उपलब्ध नहीं है।",

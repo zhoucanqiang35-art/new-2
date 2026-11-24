@@ -84,6 +84,7 @@
   "missingProduct": "Ürün bulunamadı",
   "productError": "Ürün yüklenemedi",
   "marketplace": "Alışveriş platformu",
+  "qcPlaceholder": "Weidian kimliği veya ürün bağlantısı",
   "itemId": "Weidian ürün numarası",
   "referencePrice": "Çin yuanı cinsinden referans fiyat",
   "missingPrice": "Katalogda referans fiyatı yok.",

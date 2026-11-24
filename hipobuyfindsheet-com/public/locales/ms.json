@@ -84,6 +84,7 @@
   "missingProduct": "Produk tidak ditemui",
   "productError": "Produk tidak dapat dimuatkan",
   "marketplace": "Pasaran dalam talian",
+  "qcPlaceholder": "ID Weidian atau pautan produk",
   "itemId": "ID produk Weidian",
   "referencePrice": "Harga rujukan CNY",
   "missingPrice": "Harga rujukan tidak tersedia dalam katalog.",

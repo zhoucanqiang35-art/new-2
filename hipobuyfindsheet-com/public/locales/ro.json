@@ -84,6 +84,7 @@
   "missingProduct": "Produsul nu a fost găsit",
   "productError": "Produsul nu a putut fi încărcat",
   "marketplace": "Platformă de vânzare",
+  "qcPlaceholder": "ID Weidian sau link de produs",
   "itemId": "ID-ul produsului Weidian",
   "referencePrice": "Preț orientativ în CNY",
   "missingPrice": "Catalogul nu indică un preț orientativ.",

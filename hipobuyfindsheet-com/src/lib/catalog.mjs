@@ -1,4 +1,4 @@
-export const registrationUrl = 'https://hipobuy.com/register';
+export const registrationUrl = 'https://hipobuy.com/register?inviteCode=C6D50RQOY';
 export const sourceOrigin = 'https://findspreadsheet.com';
 export const purchaseUrl = (id) => 'https://hipobuy.com/product/weidian/' + id;
 export const productUrl = (id) => '/product/?id=' + id;

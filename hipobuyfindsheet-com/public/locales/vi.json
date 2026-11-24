@@ -84,6 +84,7 @@
   "missingProduct": "Không tìm thấy sản phẩm",
   "productError": "Không tải được sản phẩm",
   "marketplace": "Sàn thương mại",
+  "qcPlaceholder": "ID Weidian hoặc liên kết sản phẩm",
   "itemId": "Mã sản phẩm Weidian",
   "referencePrice": "Giá tham khảo bằng CNY",
   "missingPrice": "Danh mục chưa có giá tham khảo.",

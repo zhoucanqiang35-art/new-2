@@ -84,6 +84,7 @@
   "missingProduct": "لم يُعثر على المنتج",
   "productError": "تعذّر تحميل المنتج",
   "marketplace": "السوق",
+  "qcPlaceholder": "معرّف Weidian أو رابط المنتج",
   "itemId": "رقم منتج Weidian",
   "referencePrice": "السعر المرجعي باليوان الصيني",
   "missingPrice": "لا يتوفر سعر مرجعي في الدليل.",

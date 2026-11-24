@@ -84,6 +84,7 @@
   "missingProduct": "המוצר לא נמצא",
   "productError": "לא הצלחנו לטעון את המוצר",
   "marketplace": "זירת מסחר",
+  "qcPlaceholder": "מזהה Weidian או קישור למוצר",
   "itemId": "מזהה פריט ב-Weidian",
   "referencePrice": "מחיר ייחוס ביואן סיני",
   "missingPrice": "אין מחיר ייחוס זמין בקטלוג.",

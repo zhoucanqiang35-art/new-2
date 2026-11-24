@@ -84,6 +84,7 @@
   "missingProduct": "ไม่พบสินค้า",
   "productError": "โหลดสินค้าไม่ได้",
   "marketplace": "ตลาดออนไลน์",
+  "qcPlaceholder": "รหัสสินค้า Weidian หรือลิงก์สินค้า",
   "itemId": "รหัสสินค้า Weidian",
   "referencePrice": "ราคาอ้างอิง CNY",
   "missingPrice": "ไม่มีราคาอ้างอิงในแค็ตตาล็อก",

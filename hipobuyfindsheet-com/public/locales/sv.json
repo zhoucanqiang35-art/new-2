@@ -84,6 +84,7 @@
   "missingProduct": "Produkten hittades inte",
   "productError": "Produkten kunde inte läsas in",
   "marketplace": "Marknadsplats",
+  "qcPlaceholder": "Weidian-ID eller produktlänk",
   "itemId": "Weidian-ID",
   "referencePrice": "Referenspris i CNY",
   "missingPrice": "Det saknas referenspris.",

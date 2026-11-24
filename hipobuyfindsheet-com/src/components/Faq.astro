@@ -1,5 +1,6 @@
 ---
 import Text from './Text.astro';
+import { registrationUrl } from '../lib/catalog.mjs';
 const { standalone = false } = Astro.props;
 const groups = [
   ['faqFindGroup', [1, 2, 5, 7, 8, 16]],
@@ -9,7 +10,7 @@ const groups = [
 const resources = {
   2: ['spreadsheet', '/spreadsheet/'],
   5: ['imageSearch', '/image-search/'],
-  6: ['guideSignup', 'https://hipobuy.com/register'],
+  6: ['guideSignup', registrationUrl],
   7: ['officialGuide', 'https://hipobuy.com/notice/1902974843402932226'],
   9: ['findQc', '/qc/'],
   12: ['shippingEstimator', 'https://hipobuy.com/estimation'],
