@@ -92,5 +92,5 @@ document.addEventListener('click',e=>{if(!picker.contains(e.target))picker.open=
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&picker.open){picker.open=false;document.getElementById('language-toggle').focus()}});
 window.addEventListener('popstate',()=>{const code=new URL(location.href).searchParams.get('lang')||'en';setLanguage(code,{updateUrl:false})});
 window.siteI18n={setLanguage,translate:text,get language(){return language},get supportedLanguages(){return [...supported.keys()]}};
-let initial=new URL(location.href).searchParams.get('lang');if(initial==='zh-TW')initial='zh-CN';if(!supported.has(initial))try{initial=localStorage.getItem('usfans-language');if(initial==='zh-TW')initial='zh-CN'}catch{}setLanguage(supported.has(initial)?initial:'en');
+let initial=new URL(location.href).searchParams.get('lang');if(initial==='zh-TW')initial='zh-CN';setLanguage(supported.has(initial)?initial:'en');
 })();

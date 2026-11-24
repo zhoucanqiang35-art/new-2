@@ -31,14 +31,12 @@ function bindProductOptions(root, skus) {
 const skuData = document.getElementById('product-skus');
 if (skuData) bindProductOptions(document.querySelector('.product-options'), JSON.parse(skuData.textContent));
 
-async function loadPurchaseOptions() {
- if (skuData) return;
+async function loadPurchaseDetails() {
  const purchase = document.querySelector('.product-buy[data-product-purchase]');
  const match = purchase?.href.match(/^https:\/\/(?:www\.)?usfans\.com\/product\/(\d+)\/(\d+)/);
  if (!match) return;
  const note = document.querySelector('.detail-info > .variant-status');
- if (!note) return;
- note.textContent = 'Loading available styles and sizes…';
+ if (note) note.textContent = 'Loading available styles and sizes…';
  try {
   const response = await fetch('https://usfans.com/api/goods/info?channel=' + match[1] + '&goodsId=' + match[2], {
    headers:{Language:'en',Currency:'USD'},credentials:'omit',signal:AbortSignal.timeout(12000)
@@ -47,6 +45,44 @@ async function loadPurchaseOptions() {
   const payload = await response.json();
   const data = payload.data;
   if (payload.code !== 200 || !data) throw Error('Product options unavailable');
+  const gallery = (Array.isArray(data.images) ? data.images : []).filter(url => /^https:\/\//.test(url || ''));
+  const galleryRoot = document.querySelector('.detail-gallery');
+  if (galleryRoot && gallery.length) {
+   let main = document.getElementById('product-main-image');
+   if (!main) {
+    const frame = document.createElement('div'); frame.className = 'detail-main';
+    main = document.createElement('img'); main.id = 'product-main-image';
+    galleryRoot.querySelector('.no-source-image')?.replaceWith(frame); frame.append(main);
+   }
+   if (!document.querySelector('[data-variant-value][aria-pressed="true"]')) main.src = gallery[0];
+   main.loading = 'eager'; main.fetchPriority = 'high';
+   main.alt = document.querySelector('.detail-info h1')?.textContent || 'Product';
+   let thumbs = galleryRoot.querySelector('.detail-thumbs');
+   if (!thumbs) { thumbs = document.createElement('div'); thumbs.className = 'detail-thumbs'; galleryRoot.append(thumbs); }
+   thumbs.replaceChildren(...gallery.map((src,index) => {
+    const button = document.createElement('button'); button.type = 'button'; button.dataset.gallerySrc = src;
+    button.setAttribute('aria-label','Show product photo ' + (index + 1)); button.setAttribute('aria-pressed',String(index === 0));
+    const image = document.createElement('img'); image.src = src; image.alt = 'Photo ' + (index + 1); image.loading = 'eager';
+    button.append(image); return button;
+   }));
+  }
+  let description = new DOMParser().parseFromString(data.description || '', 'text/html');
+  if (!description.querySelector('img') && description.body.textContent.includes('<img')) description = new DOMParser().parseFromString(description.body.textContent,'text/html');
+  const photos = [...new Set([...description.querySelectorAll('img')].map(image => image.getAttribute('src') || image.getAttribute('data-src')).filter(url => /^https:\/\//.test(url || '')))];
+  const images = photos.length ? photos : gallery;
+  const grid = document.querySelector('.detail-photo-grid');
+  if (grid && images.length) {
+   const title = document.querySelector('.detail-info h1')?.textContent || 'Product';
+   grid.replaceChildren(...images.map((src,index) => {
+    const image = document.createElement('img');
+    image.src = src; image.alt = title + ' — product photo ' + (index + 1);
+    image.loading = 'eager'; image.decoding = 'async';
+    return image;
+   }));
+  }
+  const count = document.querySelector('.photo-section .subtle-label');
+  if (count && images.length) count.textContent = images.length + ' product-detail images';
+  if (!note) return;
   const properties = (data.properties || []).filter(property => property.valuesList?.length);
   if (!properties.length) throw Error('Product options unavailable');
   const root = document.createElement('div'); root.className = 'product-options';
@@ -79,7 +115,7 @@ async function loadPurchaseOptions() {
   }
   bindProductOptions(root,skus);
  } catch {
-  note.textContent = 'Choose the available style and size on the USFans purchase page.';
+  if (note) note.textContent = 'Choose the available style and size on the USFans purchase page.';
  }
 }
-loadPurchaseOptions();
+loadPurchaseDetails();
