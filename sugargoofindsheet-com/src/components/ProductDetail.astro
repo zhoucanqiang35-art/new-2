@@ -1,125 +1,85 @@
 ---
+import {readFileSync,existsSync} from 'node:fs';
 import Layout from './Layout.astro';
 import ProductOverview from './ProductOverview.astro';
-import { buyUrl, categoryLabel, priceLabel, sourceUrl, type Product } from '../lib/catalog';
-import { productCopy } from '../lib/product-description';
-const { product } = Astro.props as { product?: Product };
-const copy = product && productCopy(product);
+import {buyUrl,categoryLabel,priceLabel,sourceUrl,type Product} from '../lib/catalog';
+import {otherAgentLinks} from '../lib/agents';
+import {productCopy} from '../lib/product-description';
+const {product}=Astro.props as {product?:Product};
+const copy=product&&productCopy(product);
+let pictures:string[]=product?[product.image]:[];
+if(product){const file='public/data/gallery-'+product.weidianId.slice(0,4)+'.json';if(existsSync(file))pictures=[...new Set([...pictures,...(JSON.parse(readFileSync(file,'utf8'))[product.weidianId]||[])])];}
+const exactSnapshot=product?'public/seller-options/items/'+product.weidianId+'.json':'';
+const snapshotFile=product?(existsSync(exactSnapshot)?exactSnapshot:'public/seller-options/'+product.weidianId.slice(0,4)+'.json'):'';
+const sellerSnapshot=product&&existsSync(snapshotFile)?JSON.parse(readFileSync(snapshotFile,'utf8'))[product.weidianId]:undefined;
+if(sellerSnapshot?.status==='available'&&sellerSnapshot.images?.length)pictures=sellerSnapshot.images;
+const snapshotGroups=sellerSnapshot?.status==='available'?(sellerSnapshot.groups||[]).slice().sort((a,b)=>Number(b.values.some(v=>v.image))-Number(a.values.some(v=>v.image))):[];
+const payload=JSON.stringify({product,pictures}).replace(/</g,'\\u003c');
 ---
-<Layout indexable={Boolean(product)} title={product ? product.name + ' | Sugargoo Spreadsheet' : 'Product Details | Sugargoo Spreadsheet'} description={copy?.paragraphs[0]}>
-  <section class="wrap tool-page product-page">
-    <a class="text-link back-link" href="/browse/">Back to spreadsheet</a>
-    <p id="product-status" role="status" class="status" hidden={Boolean(product)}>Loading product…</p>
-    <div id="product-detail" data-item-id={product?.weidianId} hidden={!product}>
-      <div class="detail-grid">
-        <div>
-          <img id="product-photo" class="detail-photo" src={product?.image} alt={product?.name} width="600" height="600" />
-          <div id="thumbnails" class="thumbnails" aria-label="Listing photos"></div>
-        </div>
-        <div class="detail-info">
-          <p class="product-category" id="product-category">{product && categoryLabel(product.category)}</p>
-          <h1 id="product-name">{product?.name}</h1>
-          <p class="detail-price" id="product-price" data-price-cny={product?.price}>{product && priceLabel(product.price)}</p>
-          <p id="product-id">{product && `Weidian item ${product.weidianId}`}</p>
-          <div class="detail-actions"><a class="button dark" id="buy-product" href={product && buyUrl(product.weidianId)} target="_blank" rel="noopener sponsored">Buy on Sugargoo</a><a class="button clear" href="#other-shopping-agents">Other shopping agents</a><a class="button clear" id="source-product" href={product && sourceUrl(product)} target="_blank" rel="noopener">View on Findspreadsheet</a></div>
-          <p class="tool-help">Reference listing price. Check the current price and options on Sugargoo.</p>
-
-        </div>
-      </div>
-      <section class="detail-qc" id="other-shopping-agents"><h2>Other shopping agents</h2><p>Open this exact Weidian item with the same shopping platforms available on FindSpreadsheet.</p><div id="other-agent-links" class="agent-purchase-grid"></div></section>
-      <section class="detail-qc product-specific"><h2>About this product</h2><div id="product-description">{copy?.paragraphs.map(text => <p>{text}</p>)}</div><dl id="product-facts" class="product-facts">{copy?.facts.map(([key, value]) => <div><dt>{key}</dt><dd>{value}</dd></div>)}</dl></section>
-      <ProductOverview />
-      <section class="detail-qc"><h2>Warehouse QC photos</h2><p id="item-qc-status" role="status" class="status"></p><div id="item-qc-gallery" class="photo-grid"></div></section>
-      <section class="detail-qc"><header class="section-heading"><h2>Related products</h2><a class="text-link" href="/browse/">Browse all products</a></header><div id="related-products" class="products"></div></section>
-    </div>
-  </section>
+<Layout indexable={Boolean(product)} title={product?product.name+' | Sugargoo Spreadsheet':'Product Details | Sugargoo Spreadsheet'} description={copy?.paragraphs[0]}>
+<section class="wrap tool-page product-page refreshed-product">
+ <a class="text-link back-link" href="/browse/">Back to spreadsheet</a>
+ <p id="product-status" role="status" class="status" hidden={Boolean(product)}>Loading product…</p>
+ <article id="product-detail" hidden={!product}>
+  <div class="detail-grid">
+   <div class="detail-media"><img id="product-photo" class="detail-photo" src={pictures[0]} alt={product?.name} width="620" height="620" loading="eager" fetchpriority="high"/><div class="gallery-controls"><button id="photo-prev" type="button" aria-label="Previous product photo">‹</button><span id="photo-count">{pictures.length?'1 / '+pictures.length:''}</span><button id="photo-next" type="button" aria-label="Next product photo">›</button></div><div id="thumbnails" class="thumbnails" aria-label="Listing photos">{pictures.map((url,i)=><button type="button" aria-label={'Show product photo '+(i+1)} aria-pressed={i===0}><img src={url} alt="" width="80" height="80" loading="lazy"/></button>)}</div></div>
+   <div class="detail-info">
+    <p class="product-category" id="product-category">{product&&categoryLabel(product.category)}</p>
+    <h1 id="product-name" data-product-name={product?.weidianId}>{product?.name}</h1>
+    <p id="product-id">{product&&'Weidian item #'+product.weidianId}</p>
+    <p class="detail-price" id="product-price" data-i18n-ignore data-price-cny={product?.price}>{product&&priceLabel(product.price)}</p>
+    <div class="detail-actions seller-actions"><a class="button" id="buy-product" href={product&&buyUrl(product.weidianId)} target="_blank" rel="noopener sponsored">Buy on Sugargoo</a><div class="secondary-purchase-actions"><details class="product-agent-picker"><summary class="button clear">Other shopping agents</summary><div id="other-agent-links" class="compact-agent-options">{product&&otherAgentLinks(product).map(agent=><a href={agent.url} target="_blank" rel="noopener sponsored" data-i18n-ignore><img src={agent.logo} alt="" width="20" height="20"/><span>{agent.label}</span></a>)}</div></details><button class="button clear" id="copy-product-link" type="button">Copy product link</button></div></div>
+    <p id="copy-status" role="status" aria-live="polite"></p><input id="copy-link-value" readonly hidden aria-label="Product link"/>
+    <section class="seller-variants"><h2>Style and size</h2><p id="seller-options-status" role="status" hidden={snapshotGroups.length>0}>Loading the seller's actual options…</p><div id="seller-options">{snapshotGroups.map(group=><section class="seller-option-group"><h3>{/size|尺/i.test(group.name)?'Size':'Style'}</h3><div class={group.values.some(v=>v.image)?'seller-image-options':'seller-text-options'}>{group.values.map(value=><button type="button" aria-pressed="false" title={value.name} data-snapshot-option={value.image||''}>{value.image&&<img src={value.image} alt={value.name} width="80" height="80" loading="lazy"/>}<span>{value.name}</span></button>)}</div></section>)}</div><p class="tool-help">Confirm the selected option, stock and final price on Sugargoo.</p></section>
+    <a id="source-product" href={product&&sourceUrl(product)} target="_blank" rel="noopener" class="text-link">FindSpreadsheet listing</a>
+   </div>
+  </div>
+  <section class="detail-qc seller-detail-section"><h2>Product detail photos</h2><p id="seller-photo-status">Seller listing images for this exact item.</p><div id="seller-detail-photos" class="seller-detail-photos">{pictures.map((url,i)=><img src={url} alt={(product?.name||'Product')+' · seller photo '+(i+1)} width="800" height="800" loading={i<2?'eager':'lazy'} decoding="async"/>)}</div></section>
+  <section class="detail-qc product-specific"><h2>About <span id="description-product-name">{product?.name||'this product'}</span></h2><div id="product-description">{copy?.paragraphs.map(text=><p>{text}</p>)}</div><dl id="product-facts" class="product-facts">{copy?.facts.map(([key,value])=><div><dt>{key}</dt><dd>{value}</dd></div>)}</dl></section>
+  <section class="detail-qc"><h2>Warehouse QC photos</h2><p id="item-qc-status" role="status" class="status"></p><div id="item-qc-gallery" class="photo-grid"></div></section>
+  <ProductOverview />
+ </article>
+</section>
+<script id="sugar-product-payload" type="application/json" set:html={payload}/>
 </Layout>
 <script>
-  import { buyUrl, categoryLabel, galleryPhotos, getData, priceLabel, sourceUrl, type Product } from '../lib/catalog';
-  import { lookupQc } from '../lib/qc';
-  import { otherAgentLinks } from '../lib/agents';
-  import { productCard } from '../lib/product-card';
-  import { describeProduct } from '../lib/product-description';
-  const container = document.querySelector<HTMLElement>('#product-detail')!;
-  const status = document.querySelector<HTMLElement>('#product-status')!;
-  const id = container.dataset.itemId || new URLSearchParams(location.search).get('id');
-  const photo = document.querySelector<HTMLImageElement>('#product-photo')!;
-  const thumbs = document.querySelector<HTMLElement>('#thumbnails')!;
-
-  function setupPhotos(product: Product, photos: string[]) {
-    photo.src = photos[0];
-    photo.alt = product.name;
-    if (photos.length < 2) return;
-    thumbs.replaceChildren(...photos.map((url, index) => {
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.setAttribute('aria-label', 'Show listing photo ' + (index + 1));
-      button.setAttribute('aria-pressed', String(index === 0));
-      const thumb = new Image();
-      thumb.src = url;
-      thumb.alt = '';
-      thumb.width = thumb.height = 72;
-      thumb.loading = 'lazy';
-      button.append(thumb);
-      button.addEventListener('click', () => {
-        photo.src = url;
-        for (const sibling of thumbs.children) sibling.setAttribute('aria-pressed', String(sibling === button));
-      });
-      return button;
-    }));
-  }
-
-  async function show() {
-    if (!id || !/^\d{5,20}$/.test(id)) {
-      status.textContent = 'Choose a product from the spreadsheet.';
-      return;
-    }
-    const products = await getData<Product[]>('catalog.json');
-    const product = products.find(item => item.weidianId === id);
-    if (!product) {
-      status.textContent = 'This product could not be found in the catalog.';
-      return;
-    }
-    document.title = product.name + ' | Sugargoo Spreadsheet';
-    document.querySelector('#product-name')!.textContent = product.name;
-    document.querySelector<HTMLElement>('#product-name')!.dataset.productName = product.weidianId;
-    document.querySelector('#product-category')!.textContent = categoryLabel(product.category);
-    document.querySelector('#product-price')!.textContent = priceLabel(product.price);
-    document.querySelector<HTMLElement>('#product-price')!.dataset.priceCny = product.price;
-    document.querySelector('#product-price')!.setAttribute('data-i18n-ignore', '');
-    describeProduct(product);
-    document.querySelector('#product-id')!.textContent = 'Weidian item ' + product.weidianId;
-    document.querySelector<HTMLAnchorElement>('#buy-product')!.href = buyUrl(id);
-    document.querySelector<HTMLAnchorElement>('#source-product')!.href = sourceUrl(product);
-    document.querySelector('#other-agent-links')!.replaceChildren(...otherAgentLinks(product).map(agent => {
-      const link = document.createElement('a');
-      link.href = agent.url;
-      link.target = '_blank';
-      link.rel = 'noopener sponsored';
-      const logo = new Image(); logo.src = agent.logo; logo.alt = ''; logo.width = logo.height = 20; logo.loading = 'lazy';
-      const label = document.createElement('span'); label.textContent = agent.label; link.append(logo, label); link.setAttribute('data-i18n-ignore', '');
-      return link;
-    }));
-    document.querySelector('#related-products')!.replaceChildren(...products.filter(item => item.category === product.category && item.weidianId !== id).slice(0,4).map(item => productCard(item)));
-    const buyButton = document.querySelector<HTMLAnchorElement>('#buy-product')!;
-    buyButton.dataset.agentPurchaseId = product.weidianId; buyButton.dataset.sourceUrl = sourceUrl(product);
-    document.dispatchEvent(new Event('catalog-agent-changed'));
-    setupPhotos(product, [product.image]);
-    status.hidden = true;
-    container.hidden = false;
-    galleryPhotos(product).then(photos => setupPhotos(product, photos)).catch(() => { /* Keep the catalogue cover available. */ });
-    const qcStatus = document.querySelector<HTMLElement>('#item-qc-status')!;
-    const qcGallery = document.querySelector<HTMLElement>('#item-qc-gallery')!;
-    void lookupQc(id, qcStatus, qcGallery).then(async () => {
-      if (qcGallery.children.length) return;
-      const photos = await galleryPhotos(product).catch(() => [product.image]);
-      qcStatus.textContent += ' Showing the listing gallery photos for reference.';
-      qcGallery.replaceChildren(...photos.slice(0,6).map((url,index) => {
-        const link = document.createElement('a'); link.href = url; link.target = '_blank'; link.rel = 'noopener';
-        const image = new Image(); image.src = url; image.alt = 'Listing photo ' + (index + 1); image.width = image.height = 240; image.loading = 'lazy';
-        link.append(image); return link;
-      }));
-    });
-  }
-  show().catch(() => { status.textContent = 'The product could not load. Refresh to try again.'; });
+ import {buyUrl,categoryLabel,galleryPhotos,getData,priceLabel,sourceUrl,type Product} from '../lib/catalog';
+ import {otherAgentLinks} from '../lib/agents';
+ import {describeProduct} from '../lib/product-description';
+ import {lookupQc} from '../lib/qc';
+ import {loadSellerOptions} from '../lib/seller-options';
+ const payload=JSON.parse(document.querySelector('#sugar-product-payload')!.textContent!);
+ const id=payload.product?.weidianId||new URLSearchParams(location.search).get('id');
+ const status=document.querySelector<HTMLElement>('#product-status')!;
+ async function show(){
+  if(!id||!/^\d{5,20}$/.test(id)){status.hidden=false;status.textContent='Choose a product from the spreadsheet.';return}
+  const p:Product=payload.product||(await getData<Product[]>('catalog.json')).find(p=>p.weidianId===id);
+  if(!p){status.hidden=false;status.textContent='Product not found. Browse the spreadsheet to select a listing.';return}
+  const title=document.querySelector<HTMLElement>('#product-name')!;title.textContent=p.name;title.dataset.productName=id;
+  document.title=p.name+' | Sugargoo Spreadsheet';document.querySelector('#description-product-name')!.textContent=p.name;
+  document.querySelector('#product-category')!.textContent=categoryLabel(p.category);document.querySelector('#product-id')!.textContent='Weidian item #'+id;
+  const price=document.querySelector<HTMLElement>('#product-price')!;price.dataset.priceCny=p.price;price.textContent=priceLabel(p.price);
+  const buy=document.querySelector<HTMLAnchorElement>('#buy-product')!;buy.href=buyUrl(id);buy.dataset.agentPurchaseId=id;buy.dataset.sourceUrl=sourceUrl(p);
+  const source=document.querySelector<HTMLAnchorElement>('#source-product')!;source.href=sourceUrl(p);describeProduct(p);
+  const agents=document.querySelector('#other-agent-links')!;agents.replaceChildren(...otherAgentLinks(p).map(a=>{const link=document.createElement('a');link.href=a.url;link.target='_blank';link.rel='noopener sponsored';link.setAttribute('data-i18n-ignore','');const img=new Image(20,20);img.src=a.logo;img.alt='';const label=document.createElement('span');label.textContent=a.label;link.append(img,label);return link}));
+  const picker=document.querySelector<HTMLDetailsElement>('.product-agent-picker')!;document.addEventListener('click',e=>{if(e.target instanceof Node&&!picker.contains(e.target))picker.open=false});picker.addEventListener('keydown',e=>{if(e.key==='Escape'){picker.open=false;picker.querySelector('summary')?.focus()}});
+  document.querySelector('#copy-product-link')!.addEventListener('click',async()=>{const url='https://weidian.com/item.html?itemID='+id;try{await navigator.clipboard.writeText(url);document.querySelector('#copy-status')!.textContent='Product link copied'}catch{const field=document.querySelector<HTMLInputElement>('#copy-link-value')!;field.hidden=false;field.value=url;field.select();document.querySelector('#copy-status')!.textContent='Select and copy the product link below.'}});
+  document.dispatchEvent(new Event('catalog-agent-changed'));status.hidden=true;document.querySelector<HTMLElement>('#product-detail')!.hidden=false;
+  const photo=document.querySelector<HTMLImageElement>('#product-photo')!,thumbs=document.querySelector('#thumbnails')!,full=document.querySelector('#seller-detail-photos')!,count=document.querySelector('#photo-count')!;
+  let images:string[]=payload.pictures?.length?payload.pictures:[p.image],active=0;
+  function select(index:number){active=(index+images.length)%images.length;photo.src=images[active];photo.alt=p.name+' · product image '+(active+1);count.textContent=(active+1)+' / '+images.length;for(const [i,b]of [...thumbs.children].entries())b.setAttribute('aria-pressed',String(i===active));}
+  function renderPhotos(urls:string[]){images=[...new Set(urls)];thumbs.replaceChildren(...images.map((url,i)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Show product photo '+(i+1));const img=new Image(80,80);img.src=url;img.alt='';img.loading='lazy';b.append(img);b.onclick=()=>select(i);return b}));full.replaceChildren(...images.map((url,i)=>{const img=new Image(800,800);img.src=url;img.alt=p.name+' · seller listing photo '+(i+1);img.loading=i<2?'eager':'lazy';img.decoding='async';return img}));select(0)}
+  renderPhotos(images);document.querySelector<HTMLButtonElement>('#photo-prev')!.onclick=()=>select(active-1);document.querySelector<HTMLButtonElement>('#photo-next')!.onclick=()=>select(active+1);
+  void galleryPhotos(p).then(urls=>{if(!photo.dataset.liveSeller)renderPhotos(urls)}).catch(()=>{});
+  void lookupQc(id,document.querySelector<HTMLElement>('#item-qc-status')!,document.querySelector<HTMLElement>('#item-qc-gallery')!);
+  for(const b of document.querySelectorAll<HTMLButtonElement>('[data-snapshot-option]'))b.onclick=()=>{const parent=b.parentElement!;for(const option of parent.querySelectorAll('button'))option.setAttribute('aria-pressed',String(option===b));if(b.dataset.snapshotOption){photo.src=b.dataset.snapshotOption;photo.alt=p.name+' · '+b.title;count.textContent=b.title}};
+  const seller=await loadSellerOptions(id),sellerStatus=document.querySelector<HTMLElement>('#seller-options-status')!,host=document.querySelector('#seller-options')!;
+  if(!seller){sellerStatus.textContent='Seller options are temporarily unavailable. Open Sugargoo to confirm style and size.';return}
+  if(seller.images.length){photo.dataset.liveSeller='true';renderPhotos(seller.images);document.querySelector('#seller-photo-status')!.textContent='Seller images for Weidian item '+id+'.';}
+  const groups=[...seller.groups].sort((a,b)=>Number(b.values.some(v=>v.image))-Number(a.values.some(v=>v.image)));
+  sellerStatus.hidden=groups.length>0;sellerStatus.textContent='This seller has no separate style or size options.';
+  const groupNames:Record<string,string>={'颜色':'Color','颜色分类':'Style','顏色':'Color','尺码':'Size','尺寸':'Size','款式':'Style','COLOUR':'Style','SIZE':'Size'};
+  host.replaceChildren(...groups.map(group=>{const section=document.createElement('section');section.className='seller-option-group';const heading=document.createElement('h3');heading.textContent=groupNames[group.name]||group.name;const values=document.createElement('div');values.className=group.values.some(v=>v.image)?'seller-image-options':'seller-text-options';for(const value of group.values){const b=document.createElement('button');b.type='button';b.title=value.name;b.setAttribute('aria-pressed','false');if(value.image){const img=new Image(80,80);img.src=value.image;img.alt=value.name;img.loading='lazy';b.append(img)}const label=document.createElement('span');label.textContent=value.name;b.append(label);b.onclick=()=>{for(const option of values.querySelectorAll('button'))option.setAttribute('aria-pressed',String(option===b));if(value.image){photo.src=value.image;photo.alt=p.name+' · '+value.name;count.textContent=value.name}};values.append(b)}section.append(heading,values);return section}));
+ }
+ show().catch(()=>{status.hidden=false;status.textContent='Additional product data could not load. Please refresh or open the original seller listing.'});
 </script>

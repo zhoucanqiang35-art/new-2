@@ -15,16 +15,16 @@ export const inspectionSections = [
     "Use the seller’s own measurement chart and compare it with an item you already own. For tops, compare chest width, shoulder width, sleeve length and total length. For bottoms, compare waist, rise and inseam.",
     "For shoes, follow the seller’s size scale and compare foot length where measurements are provided. Check the version, quantity and color in the agent cart before paying.",
   ], points: ["Check whether the listing uses body or garment measurements.", "Confirm units and any size tolerance in the seller's chart."] },
-  { id: "inspection", title: "Warehouse QC and photo fallback", paragraphs: [
+  { id: "inspection", title: "Warehouse QC and seller photos", paragraphs: [
     "Saved warehouse QC photos can show real units ordered by past buyers. Check the pictured version, tag, visible condition and accessories before treating a photo as evidence for your chosen option.",
-    "If the preview has no warehouse photos, it shows the seller carousel images in the QC section and labels them as listing photos. After you order, use your own warehouse record to verify the specific item.",
+    "Seller listing photos are displayed in their own section above. When no warehouse record is available, the warehouse section says so. After you order, use your own warehouse record to verify the specific item.",
   ], points: ["Compare labels, stitching, logos, colors and packaging where visible.", "If there is a discrepancy, use the order’s support channel while the item is still stored."] },
   { id: "agents", title: "Buy on Sugargoo or compare agents", paragraphs: [
     "Buy on Sugargoo opens the same Weidian item. The Other shopping agents section lists the additional purchase routes used by FindSpreadsheet. The original listing link gives you another way to verify the item ID.",
     "Compare the experience on each agent using the same item and option. Availability, local shipment fees, warehouse services and international routes can vary.",
   ], points: ["Verify the item ID after the agent loads the listing.", "Select the exact variant and quantity in the agent cart."] },
-  { id: "related", title: "Related products and image search", paragraphs: [
-    "The related products area suggests listings from the same category. Use it to compare prices, seller imagery and available QC before choosing a product.",
+  { id: "related", title: "Find similar products by image", paragraphs: [
+    "Browse the spreadsheet category to compare prices, seller imagery and available QC before choosing a product.",
     "If the title is unknown, upload a product photo on the independent image-search page. It compares the preview catalog’s covers, carousel images and available warehouse QC.",
   ], points: ["Use a clear photo with the item centered and crop away unrelated objects.", "Inspect the listing details on the strongest matches and compare their Weidian IDs."] },
   { id: "before-paying", title: "Before you place an order", paragraphs: [
