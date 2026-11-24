@@ -50,9 +50,9 @@ const groups: { title: string; questions: Question[] }[] = [
   },
 ];
 ---
-<div class="faq-groups">
-  {groups.map(group => (
-    <Group class:list={[home && "home-faq-group"]}>
+{home ? <div class="home-faq-grid">{groups.map((group,index)=><article><h3>{group.title}</h3><p>{group.questions[0].answer.split(". ")[0]+"."}</p><a class="text-link" href={'/faq/#faq-group-'+index}>Read all questions</a></article>)}</div> : <div class="faq-groups">
+  {groups.map((group,index) => (
+    <Group id={"faq-group-"+index} class:list={[home && "home-faq-group"]}>
       <GroupHeading class="faq-group-heading">{group.title}</GroupHeading>
       {group.questions.map(({ title, answer, link }) => (
         <section class="faq-answer">
@@ -63,4 +63,4 @@ const groups: { title: string; questions: Question[] }[] = [
       ))}
     </Group>
   ))}
-</div>
+</div>}

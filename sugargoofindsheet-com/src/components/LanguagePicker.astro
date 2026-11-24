@@ -14,7 +14,7 @@ import languages from "../languages.json";
     </div>
     <button class="language-default" type="button" data-language="en" lang="en" aria-pressed="true">English</button>
     <div class="language-options">
-      {languages.filter(language => language.code !== 'en').map(({code, name, dir}) => <button type="button" data-language={code} dir={dir} lang={code} aria-pressed={code === "en"}>{name}</button>)}
+      {languages.filter(language => language.code !== 'en').map(({code, name, dir}) => <button type="button" data-language={code} dir="ltr" title={name} lang={code} aria-pressed={code === "en"}>{name}</button>)}
     </div>
     <p id="language-status" role="status" hidden></p>
   </div>

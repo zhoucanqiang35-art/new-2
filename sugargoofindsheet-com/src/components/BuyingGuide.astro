@@ -81,17 +81,17 @@ const steps = [
 <section class:list={["shell section guide-page", !home && "utility"]} id="buying-guide" aria-labelledby="buying-guide-title">
   <header class="content-heading">
     <Heading id="buying-guide-title">How to buy on Sugargoo</Heading>
-    <p>Follow a Weidian product from the Sugargoo Finds List to warehouse inspection and delivery. Open each step to see the instructions and screenshots.</p>
+    <p>Follow your find from product search to delivery. Select a step for the full illustrated instructions.</p>
     <div class="guide-actions">
       <a class="inline-arrow" href={official.tutorial} target="_blank" rel="noopener">Sugargoo’s official tutorial</a>
       
       {home && <a class="inline-arrow" href="/guide/">Open the full guide</a>}
     </div>
   </header>
-  <ol class="guide-steps">
+  {home ? <ol class="home-guide-grid">{steps.map(({title,image},index)=><li><a href={'/guide/#guide-step-'+(index+1)}>{image ? <img src={'/tutorial/'+image+'.webp'} alt={title} width="240" height="130" loading="lazy"/> : <div class="guide-track-icon" aria-hidden="true">✓</div>}<h3>{title}</h3></a></li>)}</ol> : <ol class="guide-steps">
     {steps.map(({ title, paragraphs, image, caption, links }, index) => (
       <li>
-        <section class="guide-step-expanded">
+        <section class="guide-step-expanded" id={"guide-step-"+(index+1)}>
           <h3 class="guide-step-title">{title}</h3>
           <div class="guide-step-body">
             <div>
@@ -105,5 +105,5 @@ const steps = [
         </section>
       </li>
     ))}
-  </ol>
+  </ol>}
 </section>
