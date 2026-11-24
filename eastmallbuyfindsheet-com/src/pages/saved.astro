@@ -16,16 +16,22 @@ import Layout from '../components/Layout.astro';
 
   const status = document.querySelector('#saved-status')!;
   const results = document.querySelector('#saved-results')!;
+  let renderId = 0;
   async function render() {
+    const requestId = ++renderId;
     const saved = new Set(savedItems());
     results.replaceChildren();
     if (!saved.size) { status.textContent = 'No saved finds yet.'; return; }
     try {
       const catalog = await readCatalog();
+      if (requestId !== renderId) return;
       const products = catalog.filter((item: {weidianId: string}) => saved.has(item.weidianId));
       results.replaceChildren(...products.map((item: Parameters<typeof card>[0]) => card(item)));
       status.textContent = products.length ? '' : 'These listings are unavailable in the saved catalog.';
-    } catch { status.textContent = 'The saved catalog could not load.'; }
+    } catch {
+      if (requestId === renderId) status.textContent = 'The saved catalog could not load.';
+    }
   }
   window.addEventListener('pageshow', render);
+  window.addEventListener('storage', render);
 </script>

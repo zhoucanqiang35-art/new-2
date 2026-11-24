@@ -1,6 +1,6 @@
   <section class="qc-tool" id="qc-finder">
     <h2>QC Finder</h2>
-    <p class="lead">Check historical QC availability by Weidian link or item ID. If a saved record has photos, the result links to the gallery. For your own order, check your EastMallBuy account.</p>
+    <p class="lead">Check warehouse QC photos for a Weidian item in our catalog. Enter its product link or item ID. For photos from your own order, check your EastMallBuy account.</p>
     <form class="search-form" id="qc-form" action="/qc/#qc-finder">
       <label class="visually-hidden" for="qc-query">Weidian item ID or link</label>
       <input name="id" id="qc-query" placeholder="Weidian link or item ID" required />
@@ -11,14 +11,16 @@
 <script>
   import {isShopItem} from '../lib/landing-paths.mjs';
   import {parseId} from '../lib/catalog.mjs';
-  import {readCatalog, showQc} from '../lib/browser.mjs';
+  import {showQc} from '../lib/browser.mjs';
 
   const field = document.querySelector<HTMLInputElement>('#qc-query')!;
   const result = document.querySelector<HTMLElement>('#qc-result')!;
   const form = document.querySelector<HTMLFormElement>('#qc-form')!;
-  const lookup = async () => {
+  let request: AbortController | undefined;
+  const lookup = () => {
+    request?.abort();
+    result.removeAttribute('aria-busy');
     const id = parseId(field.value);
-    result.dataset.item = id || 'invalid';
     if (!id) {
       result.textContent = 'Enter a numeric Weidian item ID or a valid product link.';
       return;
@@ -27,10 +29,8 @@
       result.textContent = 'This item is unavailable in our Weidian store catalog.';
       return;
     }
-    result.textContent = 'Checking saved QC records…';
-    const catalog = await readCatalog().catch(() => []);
-    const product = catalog.find((item: {weidianId: string}) => item.weidianId === id);
-    if (result.dataset.item === id) await showQc(result, id, product?.sourcePath);
+    request = new AbortController();
+    void showQc(result, id, request.signal);
   };
   field.value = new URLSearchParams(location.search).get('id') ?? '';
   if (field.value) lookup();

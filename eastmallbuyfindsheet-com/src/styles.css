@@ -451,3 +451,12 @@ footer{margin-top:54px;padding:27px 0 32px}.footer-inner{display:flex;justify-co
   .detail-secondary-actions .button { width: 100%; min-height: 44px; }
   .detail-options { padding: 9px; }
 }
+
+.detail-listing-links { align-items: center; }
+.detail-listing-links .detail-save { min-height: 36px; padding: 6px 12px; }
+.detail-save[aria-pressed="true"] {
+  border-color: var(--brand);
+  background: var(--tint);
+  color: var(--brand);
+}
+.detail-save[aria-pressed="true"]::before { content: '✓'; margin-inline-end: .35em; }

@@ -1,7 +1,7 @@
 import {element, external, readJson, referencePrice} from './browser.mjs';
 import {categoryLabel, officialFavicon, originalUrl, parseId, productImage, productThumbnail, productUrl, purchaseUrl, sourceOrigin} from './catalog.mjs';
 import {isShopItem} from './landing-paths.mjs';
-import {agents, purchaseFor} from './shopping.mjs';
+import {agents, purchaseFor, savedItems, toggleSavedItem} from './shopping.mjs';
 
 const target = document.querySelector('#product-detail');
 const id = target.dataset.item || parseId(new URLSearchParams(location.search).get('id') ?? '');
@@ -220,6 +220,30 @@ function shoppingDialog(product) {
   return [trigger, dialog];
 }
 
+function savedControl() {
+  const button = element('button', {type: 'button', className: 'button outline detail-save', textContent: 'Save find'});
+  const status = element('span', {className: 'visually-hidden'});
+  status.setAttribute('role', 'status');
+  function refresh() {
+    button.setAttribute('aria-pressed', String(savedItems().includes(id)));
+  }
+  button.addEventListener('click', () => {
+    try {
+      toggleSavedItem(id);
+      refresh();
+      status.className = 'visually-hidden';
+      status.textContent = button.getAttribute('aria-pressed') === 'true' ? 'Added to saved finds.' : 'Removed from saved finds.';
+    } catch {
+      status.className = '';
+      status.textContent = 'Could not update saved finds on this device.';
+    }
+  });
+  refresh();
+  window.addEventListener('pageshow', refresh);
+  window.addEventListener('storage', refresh);
+  return [button, status];
+}
+
 function render(product, photos, purchaseMedia) {
   const buy = external('Buy on EastMallBuy', purchaseUrl(id), 'button dark');
   buy.rel = 'sponsored noopener';
@@ -242,6 +266,7 @@ function render(product, photos, purchaseMedia) {
     options,
     element('div', {className: 'detail-listing-links'}, [
       external('View on Findspreadsheet', new URL(product.sourcePath, sourceOrigin).href),
+      ...savedControl(),
     ]),
     element('p', {className: 'detail-purchase-note', textContent: 'Confirm available options on Weidian. Agent links may contain a referral code.'}),
   ]);

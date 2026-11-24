@@ -1,5 +1,5 @@
 import {isShopItem} from './landing-paths.mjs';
-import {categoryLabel, productImage, productUrl, sourceOrigin} from './catalog.mjs';
+import {categoryLabel, productImage, productUrl, purchaseUrl} from './catalog.mjs';
 import {priceFor, shoppingOptions} from './shopping.mjs';
 
 export async function readJson(url) {
@@ -50,40 +50,51 @@ export function external(text, href, className = '') {
 }
 
 let qcData;
-export async function readQc(id) {
-  qcData ??= Promise.all([readJson('/data/qc-featured.json'), readJson('/data/qc.json')])
-    .catch((error) => { qcData = undefined; throw error; });
-  const [photos, checks] = await qcData;
-  return photos[id] ?? checks[id];
+async function readSavedQc(id) {
+  qcData ??= readJson('/data/qc.json').catch((error) => { qcData = undefined; throw error; });
+  return (await qcData)[id];
 }
 
-export async function showQc(target, id, sourcePath = '') {
-  target.textContent = 'Checking saved QC records…';
+export async function showQc(target, id, signal) {
+  target.textContent = 'Checking warehouse QC…';
+  target.setAttribute('aria-busy', 'true');
   try {
-    const record = await readQc(id);
-    if (target.dataset.item && target.dataset.item !== id) return;
-    const destinations = [];
-    let heading;
-    let explanation;
-    if (record?.status === 'available') {
-      heading = 'Historical QC available';
-      explanation = 'The saved photos are hosted on the EastMallBuy Findsheet preview.';
-      const publishedQc = new URL('/image-search/', 'https://eastmallbuyfindsheet-preview.zhoucanqiang35.chatgpt.site');
-      publishedQc.searchParams.set('id', id);
-      publishedQc.hash = 'qc-finder';
-      destinations.push(external('View saved QC on the preview site', publishedQc.href, 'button outline'));
-    } else if (record?.status === 'pending') {
-      heading = 'QC check pending';
-      explanation = 'The last saved QC check was pending.';
-    } else {
-      heading = 'No saved QC record here';
-      explanation = record?.status === 'none' ? 'The saved QC check found no warehouse photos for this item.' :
-        'Check the current listing for newer warehouse photos.';
+    const live = await fetch('/api/product-media?type=qc&id=' + encodeURIComponent(id), {signal})
+      .then((response) => {
+        if (!response.ok) throw new Error('Live QC unavailable');
+        return response.json();
+      }).catch(() => null);
+    if (signal.aborted) return;
+    const saved = live ? undefined : await readSavedQc(id).catch(() => undefined);
+    if (signal.aborted) return;
+
+    const photos = live?.status === 'ready' && Array.isArray(live.photos) ? live.photos : [];
+    const record = live ?? saved;
+    const heading = photos.length ? 'Warehouse QC photos' :
+      record?.status === 'pending' ? 'QC check pending' :
+      record?.status === 'none' ? 'No warehouse QC photos available' : 'QC lookup temporarily unavailable';
+    const children = [
+      element('p', {}, [element('strong', {textContent: heading})]),
+    ];
+    if (!live && saved) {
+      children.push(element('p', {textContent: 'Live QC is temporarily unavailable. Showing the last saved status.'}));
+    } else if (!live) {
+      children.push(element('p', {textContent: 'Try again in a moment or check the item on EastMallBuy.'}));
     }
-    if (sourcePath) destinations.push(external('Check the current listing on Findspreadsheet', new URL(sourcePath, sourceOrigin).href, 'button outline'));
-    target.replaceChildren(element('p', {}, [element('strong', {textContent: heading})]), element('p', {textContent: explanation}),
-      ...(destinations.length ? [element('div', {className: 'actions'}, destinations)] : []));
-  } catch {
-    if (!target.dataset.item || target.dataset.item === id) target.textContent = 'Saved QC records could not load. Try again in a moment.';
+    if (photos.length) {
+      children.push(element('div', {className: 'qc-grid'}, photos.map((photo, index) => {
+        const label = 'Warehouse QC photo ' + (index + 1);
+        const link = external('', photo);
+        link.append(element('img', {src: photo, alt: label, loading: 'lazy', decoding: 'async', width: 240, height: 240}));
+        return link;
+      })));
+    }
+    children.push(element('div', {className: 'actions'}, [
+      element('a', {textContent: 'View product details', className: 'button outline', href: productUrl(id)}),
+      external('Open on EastMallBuy', purchaseUrl(id), 'button outline'),
+    ]));
+    target.replaceChildren(...children);
+  } finally {
+    if (!signal.aborted) target.removeAttribute('aria-busy');
   }
 }

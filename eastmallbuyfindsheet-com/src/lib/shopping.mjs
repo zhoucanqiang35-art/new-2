@@ -1,6 +1,7 @@
 import agentList from './agents.json';
 import exchange from './rates.json';
 import {purchaseUrl, sourceOrigin} from './catalog.mjs';
+import {isShopItem} from './landing-paths.mjs';
 
 export const agents = agentList;
 export const currencies = Object.keys(exchange.rates).sort();
@@ -54,5 +55,12 @@ export function purchaseFor(agentId, itemId, sourcePath) {
 
 export function savedItems() {
   const ids = stored(savedKey, []);
-  return Array.isArray(ids) ? ids : [];
+  return Array.isArray(ids) ? [...new Set(ids.filter(isShopItem))] : [];
+}
+
+export function toggleSavedItem(id) {
+  if (!isShopItem(id)) return;
+  const ids = new Set(savedItems());
+  if (!ids.delete(id)) ids.add(id);
+  window.localStorage.setItem(savedKey, JSON.stringify([...ids]));
 }

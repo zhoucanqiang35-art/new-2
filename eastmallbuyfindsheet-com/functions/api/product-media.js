@@ -5,7 +5,7 @@ const source = 'https://findspreadsheet.com';
 const qcImageHost = 'a3146e426bcaaac6c813bbc910619829.eu.r2.cloudflarestorage.com';
 
 const store = new Set(verifiedItems);
-let retryAfter = 0;
+const retryAfter = new Map();
 
 function unavailable(reason, status = 502, wait = 0) {
   const headers = {'Cache-Control': 'no-store'};
@@ -39,7 +39,7 @@ export async function onRequestGet({request, waitUntil}) {
   const cached = await cache?.match(cacheUrl.href).catch(() => undefined);
   if (cached) return cached;
 
-  const remaining = Math.ceil((retryAfter - Date.now()) / 1000);
+  const remaining = Math.ceil(((retryAfter.get(type) ?? 0) - Date.now()) / 1000);
   if (remaining > 0) return unavailable('source-rate-limited', 429, remaining);
 
   const controller = new AbortController();
@@ -58,7 +58,7 @@ export async function onRequestGet({request, waitUntil}) {
       const hint = response.headers.get('Retry-After');
       const seconds = hint ? Number(hint) : NaN;
       const wait = Math.max(15, Number.isFinite(seconds) ? seconds : Math.ceil((Date.parse(hint) - Date.now()) / 1000) || 60);
-      retryAfter = Date.now() + wait * 1000;
+      retryAfter.set(type, Date.now() + wait * 1000);
       return unavailable('source-rate-limited', 429, wait);
     }
     if (!response.ok) {
