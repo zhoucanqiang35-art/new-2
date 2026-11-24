@@ -1,4 +1,3 @@
-import { productIntroduction } from './product-intro.mjs';
 import { readFileSync, mkdirSync, writeFileSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -40,7 +39,7 @@ const languages = [
   ['ms','Bahasa Melayu'],['ja','日本語'],['ko','한국어'],['th','ไทย'],['vi','Tiếng Việt']
 ];
 const links = [['/','Home'], ['/spreadsheet/','Spreadsheet'], ['/guide/','Buying guide'], ['/faq/','FAQ']];
-const spotlight = ['4502','8648','7357','7652','8477','7953','6297','9018'];
+const spotlight = ['6250','8779','8573','8661','8945','8381','5977','8563'];
 const local = new Set(readdirSync(join(output,'featured')).map(name => name.split('.')[0]));
 const escape = v => String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const t = s => `<span data-i18n="${escape(s)}">${escape(s)}</span>`;
@@ -58,22 +57,29 @@ function write(path, content) {
 }
 function searchForm() {
   return `<form class="search-form" action="/spreadsheet/" method="get" role="search">
-    ${icon('search')}<input name="q" type="search" placeholder="Product name or Weidian ID" aria-label="Product name or Weidian ID" data-placeholder="Product name or Weidian ID" data-label="Product name or Weidian ID" maxlength="210" autocomplete="off">
+    ${icon('search')}<input name="q" type="search" placeholder="Search by name, Weidian ID or link" aria-label="Search by name, Weidian ID or link" data-placeholder="Search by name, Weidian ID or link" data-label="Search by name, Weidian ID or link" maxlength="210" autocomplete="off">
     <a href="/image-search/" class="image-button" aria-label="Search by image" data-label="Search by image" title="Search by image">${icon('image')}</a><button class="btn primary" type="submit">${t('Search')}</button>
   </form>`;
 }
+function picker(id, label, trigger, options, extra = '') {
+  return `<details class="choice-menu" id="${id}" data-picker>
+    <summary aria-label="${escape(label)}" data-label="${escape(label)}">${trigger}${icon('chevron')}</summary>
+    <div class="choice-panel"><div class="choice-grid" role="group" aria-label="${escape(label)}" data-label="${escape(label)}">${options}</div>${extra}</div>
+  </details>`;
+}
+function languagePicker() {
+  const options = languages.map(([code,name]) =>
+    `<button type="button" data-language="${code}" aria-pressed="${code==='en'}" lang="${code}">${name}</button>`).join('');
+  return picker('language-options','Language',`${icon('globe')}<span id="current-language">English</span>`,options,`<p id="language-status" role="status" hidden></p>`);
+}
 function shoppingPreferences() {
   const selected = agents.find(agent => agent.id === 'superbuy');
-  return `<details class="shopping-options" id="shopping-options"><summary aria-label="Choose shopping agent and currency" data-label="Choose shopping agent and currency">
-    <img id="current-agent-logo" src="${selected.logo}" alt="" width="18" height="18"><strong id="current-agent">${selected.name}</strong><span id="current-currency">USD</span>${icon('chevron')}
-  </summary><div class="shopping-menu">
-    <section aria-labelledby="shopping-criterion"><h2 id="shopping-criterion">${t('Shopping agent')}</h2><div class="agent-options">
-      ${agents.map(agent => `<button type="button" data-agent="${agent.id}" aria-pressed="${agent.id===selected.id}"><img src="${agent.logo}" width="18" height="18" alt="" loading="lazy"><span>${agent.name}</span></button>`).join('')}
-    </div></section>
-    <section aria-labelledby="currency-criterion"><h2 id="currency-criterion">${t('Currency')}</h2><div class="currency-options">
-      ${currencies.map(code=>`<button type="button" data-currency="${code}" aria-pressed="${code==='USD'}">${code}</button>`).join('')}
-    </div><p id="currency-source"></p></section>
-  </div></details>`;
+  const agentOptions = agents.map(agent =>
+    `<button type="button" data-agent="${agent.id}" aria-pressed="${agent.id===selected.id}"><img src="${agent.logo}" width="20" height="20" alt="" loading="lazy"><span>${escape(agent.name)}</span></button>`).join('');
+  const currencyOptions = ['USD', ...currencies.filter(code=>code!=='USD')].map(code =>
+    `<button type="button" data-currency="${code}" aria-pressed="${code==='USD'}">${code}</button>`).join('');
+  return picker('agent-options','Shopping agent',`<img id="current-agent-logo" src="${selected.logo}" alt="" width="18" height="18"><span id="current-agent">${selected.name}</span>`,agentOptions)
+    + picker('currency-options','Currency','<span id="current-currency">USD</span>',currencyOptions,`<p id="currency-source"></p>`);
 }
 function page({path,title,description,body,active='',kind='',indexable=false}) {
   const canonical = indexable ? siteOrigin + '/' + path.replace(/index\.html$/, '') : '';
@@ -84,16 +90,16 @@ ${analyticsTag}
 ${kind === 'home' ? `<meta name="msvalidate.01" content="${bingVerification}">` : ''}
 ${canonical ? `<link rel="canonical" href="${escape(canonical)}">` : '<meta name="robots" content="noindex, follow">'}
 <meta name="description" content="${escape(description)}">
-<meta name="theme-color" content="#eff0ff">
+<meta name="theme-color" content="#f2f8fe">
 <title>${escape(title)} | Superbuy Findsheet</title>
-<link rel="icon" href="/assets/superbuy-favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"><script src="/app.js" type="module"></script></head>
+<link rel="icon" href="/assets/superbuy-favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css?v=superbuy-layout-1"><script src="/app.js?v=superbuy-layout-1" type="module"></script></head>
 <body data-page="${kind}"><a class="skip" href="#main">${t('Skip to content')}</a>
 <header class="header"><div class="wrap navigation">
 <a class="brand" href="/" aria-label="Superbuy Findsheet"><img src="/assets/superbuy-logo.svg" width="110" height="33" alt="Superbuy"><span>Findsheet</span></a>
 <nav aria-label="Main navigation">${links.map(([href,label])=>`<a href="${href}"${href===active?' aria-current="page"':''}>${t(label)}</a>`).join('')}</nav>
 <div class="header-actions">
-<label class="language"><span class="sr-only">${t('Language')}</span>${icon('globe')}<select id="language" aria-label="Language">${languages.map(([code,name])=>`<option value="${code}">${name}</option>`).join('')}</select></label>
-${external(signup,'Register',true)}
+${languagePicker()}
+${external(signup,'Joinsuperbuy',true)}
 </div></div>
 <div class="tool-strip"><div class="wrap tool-row">${searchForm()}<div class="tool-actions"><a class="saved-link btn outline" href="/saved/" aria-label="Show saved products" data-label="Show saved products">${icon('heart')} <span id="saved-count">0</span></a>${shoppingPreferences()}</div></div></div>
 </header>
@@ -128,17 +134,24 @@ function catalog({home=false,saved=false,productIndex=false}={}) {
     <nav class="pagination" aria-label="Catalog pagination" id="catalog-pages" hidden><button class="btn outline" data-page-step="-1">${t('Previous')}</button><span id="page-status"></span><button class="btn outline" data-page-step="1">${t('Next')}</button></nav>
     <noscript><p>${t('Enable JavaScript to search and filter the full catalog.')}</p></noscript></section>`;
 }
-function guideContent(expanded = false) {
+function guideContent() {
   const screenshots = `<div class="site-screens">${[['catalog','Search by Weidian ID'],['product','Open the product details']].map(([key,label])=>`<figure><a href="/guide-images/site-${key}.webp"><img src="/guide-images/site-${key}.webp" alt="${label}" data-alt="${label}" loading="lazy"></a><figcaption>${t(label)}</figcaption></figure>`).join('')}</div>`;
   const steps = guide.map(([title,zh,body,zhBody,image,alt,url],i) => {
     const stepTitle = `<span class="step-number">${i+1}</span>${t(title)}`;
     const stepBody = `<div class="guide-step"><p>${t(body)}</p>${i===0?screenshots:""}<a href="/guide-images/${image}" class="guide-photo"><img src="/guide-images/${image}" alt="${escape(alt)}" data-alt="${escape(title)}" loading="lazy"></a><a class="text-link" href="${url}" rel="noopener" target="_blank">${t('Official Superbuy reference')}</a></div>`;
-    const content = expanded ? `<h2 class="step-heading">${stepTitle}</h2>${stepBody}` :
-      `<details${i===0?' open data-home-compact':''}><summary>${stepTitle}</summary>${stepBody}</details>`;
+    const content = `<h2 class="step-heading">${stepTitle}</h2>${stepBody}`;
     return `<article class="guide-card" id="step-${image.slice(0,2)}">${content}</article>`;
   });
   return `<div class="guide-actions">${external(demo,'Official practice demo')}${external(estimate,'Open the official shipping estimator')}${external(tracking,'Track a parcel')}</div>
-  <div class="guide-grid${expanded?' guide-grid-expanded':''}">${steps.join('')}</div>`;
+  <div class="guide-grid guide-grid-expanded">${steps.join('')}</div>`;
+}
+function homeGuide() {
+  return `<div class="home-guide-grid">${[2,3,5].map(i => {
+    const [title,, , ,image,alt] = guide[i];
+    return `<a class="home-guide-card" href="/guide/#step-${image.slice(0,2)}">
+      <img src="/guide-images/${image}" alt="${escape(alt)}" width="160" height="92" loading="lazy">
+      <strong>${t(title)}</strong></a>`;
+  }).join('')}</div>`;
 }
 function faqContent(expanded = false) {
   return `<div class="faq-list">${faq.map(([q,zh,body])=>expanded ? `<article><h2>${t(q)}</h2><p>${t(body)}</p></article>` : `<details><summary>${t(q)}</summary><p>${t(body)}</p></details>`).join('')}</div>`;
@@ -161,21 +174,20 @@ const seoIntro='Start with a product name, Weidian ID or photo. Find the right c
 const seoDescription='Find Weidian products in the Superbuy spreadsheet. Search by item ID or photo, browse shoes and jerseys, check QC photos and estimate international shipping.';
 const detailIntroHeading='How to read a product detail page';
 const detailIntroLead='Each result opens its own product page, where the seller gallery, listing specifications, price, warehouse photos, and agent links are tied to the same Weidian item ID.';
-function homeFold(label, content) {
-  return `<details class="home-fold" open data-home-compact><summary>${t(label)}</summary>${content}</details>`;
-}
 function productIntroContent() {
-  return `<div class="intro-panel product-intro-lead"><p>${t(detailIntroLead)}</p><a class="btn outline" href="${detail('7405460467')}">${t('Open example product')}</a></div>
-  ${homeFold('Read the full product guide', `<div class="detail-articles product-intro-grid">${productIntroduction.map(([heading,,body])=>`<article><h3>${t(heading)}</h3><p>${t(body)}</p></article>`).join('')}</div>`)}`;
+  return `<div class="intro-panel product-intro-lead">
+    <a href="${detail('7405460467')}" class="product-intro-photo"><img src="/featured/7079.webp" alt="Classic Versatile Knit Sweater" width="96" height="96" loading="lazy"></a>
+    <p>${t(detailIntroLead)}</p><a class="btn outline" href="${detail('7405460467')}">${t('Open example product')}</a>
+  </div>`;
 }
 
 page({path:'index.html',indexable:true,title:'Superbuy Spreadsheet – Weidian Finds & QC Photos',description:'Browse Weidian finds by category, search by item ID or photo, compare reference prices and see available warehouse QC. Follow the illustrated Superbuy buying guide.',active:'/',kind:'home',body:
   `<header class="home-intro" id="home-banner"><div class="wrap home-intro-inner"><div class="home-intro-copy"><h1>${t("Superbuy Spreadsheet")}</h1><p>${t(homeIntro)}</p>
   <div class="home-actions"><a class="btn primary" href="/spreadsheet/">${t('Browse finds')}</a><a class="btn outline" href="/image-search/">${t('Search by image')}</a></div></div>
-  </div><picture class="home-banner-art"><source media="(max-width: 670px)" srcset="/assets/superbuy-air-delivery-mobile.webp" width="720" height="514"><img class="home-banner-image" src="/assets/superbuy-air-delivery.webp" width="1920" height="768" alt="A blue dragon pilot flying a parcel delivery plane above the clouds" data-alt="A blue dragon pilot flying a parcel delivery plane above the clouds" fetchpriority="high"></picture></header>
+  </div></header>
   <div class="wrap home-content">${catalog({home:true})}
   ${section('product-details',detailIntroHeading,productIntroContent(),'/products/','View all products')}
-  ${section('guide',guidesTitle,guideContent(),'/guide/','Open buying guide')}
+  ${section('guide',guidesTitle,homeGuide(),'/guide/','Open buying guide')}
   ${section('faq',faqTitle,faqContent(),'/faq/','See all FAQs')}</div>`});
 page({path:'spreadsheet/index.html',indexable:true,title:'Superbuy Finds – Weidian Product Catalog',description:'Browse Weidian sneakers, hoodies, jackets, jerseys and more. Filter by category, search by product name or Weidian ID, and compare reference prices.',active:'/spreadsheet/',kind:'catalog',body:catalog()});
 page({path:'products/index.html',indexable:true,title:'Superbuy Product Details',description:overviewText,active:'/products/',kind:'catalog',body:
@@ -185,7 +197,7 @@ page({path:'product/index.html',title:'Superbuy Product Details',description:'Ex
   <div id="product-view"><h1>${t('Product Details')}</h1><p role="status">${t('Loading product…')}</p></div>
   <noscript><p>${t('Enable JavaScript to search and filter the full catalog.')}</p></noscript>`});
 page({path:'guide/index.html',indexable:true,title:'How to Buy with Superbuy – Illustrated Guide',description:'An illustrated Superbuy guide to exact Weidian links, order options, payment, warehouse QC, parcel submission and tracking.',active:'/guide/',body:
-  heading(guidesTitle,'Follow a Weidian find from this catalog to Superbuy’s official order, warehouse and shipping screens.')+guideContent(true)});
+  heading(guidesTitle,'Follow a Weidian find from this catalog to Superbuy’s official order, warehouse and shipping screens.')+guideContent()});
 page({path:'faq/index.html',indexable:true,title:'Superbuy Spreadsheet FAQ',description:'Answers about Weidian IDs, reverse image search, listing photos, QC, prices, sizing, parcel shipping, and tracking.',active:'/faq/',body:heading(faqTitle,'Answers for finding products, checking photos and placing orders with Superbuy.')+faqContent(true)});
 page({path:'seo/index.html',title:'Superbuy Spreadsheet Search Guide – Weidian, QC & Shipping',description:seoDescription,body:heading(seoTitle,seoIntro)+seoContent()+
   `<section class="home-section"><h2>${t('Site directory')}</h2><ul class="directory">${links.map(([href,label])=>`<li><a href="${href}">${t(label)}</a></li>`).join('')}<li><a href="/image-search/">${t('Search by image')}</a></li></ul></section>

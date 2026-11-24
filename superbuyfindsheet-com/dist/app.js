@@ -33,19 +33,6 @@ let saved=new Set();
 let localeRequest=0;
 let rerender=()=>{};
 let renderVisual=()=>{};
-const mobileHome=window.matchMedia('(max-width: 670px)');
-const compactSections=[...document.querySelectorAll('[data-home-compact]')];
-function openContentAnchor() {
-  const target=$(location.hash.slice(1));
-  target?.querySelector('details')?.setAttribute('open','');
-}
-function updateHomeSections() {
-  compactSections.forEach(section=>{section.open=!mobileHome.matches;});
-  openContentAnchor();
-}
-updateHomeSections();
-mobileHome.addEventListener('change',updateHomeSections);
-window.addEventListener('hashchange',openContentAnchor);
 
 try {
   const value=JSON.parse(readStore(saveKey,'[]'));
@@ -71,10 +58,37 @@ function localize(root=document) {
   root.querySelectorAll('[data-listing-total]').forEach(el=>{el.textContent=tr('{0} Weidian listings from FindSpreadsheet',countFormat(Number(el.dataset.listingTotal.replaceAll(',',''))));});
   root.querySelectorAll('[data-alt]').forEach(el=>{el.alt=tr(el.dataset.alt);});
 }
+function closePicker(menu, restoreFocus=false) {
+  menu.open=false;
+  if(restoreFocus)menu.querySelector('summary').focus();
+}
+
+document.addEventListener('toggle',event=>{
+  const menu=event.target;
+  if(!menu.matches('[data-picker][open]'))return;
+  document.querySelectorAll('[data-picker][open]').forEach(other=>{
+    if(other!==menu)closePicker(other);
+  });
+},true);
+document.addEventListener('pointerdown',event=>{
+  document.querySelectorAll('[data-picker][open]').forEach(menu=>{
+    if(!menu.contains(event.target))closePicker(menu);
+  });
+});
+document.addEventListener('keydown',event=>{
+  if(event.key!=='Escape')return;
+  const menu=event.target.closest('[data-picker][open]');
+  if(menu){event.preventDefault();closePicker(menu,true);}
+});
+
+const languageMenu=$('language-options');
+const languageChoices=[...languageMenu.querySelectorAll('[data-language]')];
+const languageStatus=$('language-status');
 async function setLanguage(selected,remember=false) {
   const request=++localeRequest;
-  const picker=$('language');
-  const code=[...picker.options].some(o=>o.value===selected)?selected:'en';
+  const choice=languageChoices.find(button=>button.dataset.language===selected)??languageChoices[0];
+  const code=choice.dataset.language;
+  languageStatus.hidden=true;
   try {
     const [nextWords,nextNames]=code==='en'?[{},{}]:await Promise.all([
       get('/locales/'+code+'.json'),
@@ -85,18 +99,26 @@ async function setLanguage(selected,remember=false) {
     names=nextNames;
     document.documentElement.lang=language=code;
     document.documentElement.dir=['ar','he'].includes(code)?'rtl':'ltr';
-    picker.value=code;
+    $('current-language').textContent=choice.textContent;
+    languageChoices.forEach(button=>button.setAttribute('aria-pressed',String(button===choice)));
     if(remember)writeStore(localeKey,code);
     localize();
     updateShoppingPreferences();
     rerender();
     renderVisual();
+    updateSaved();
+    if(remember&&languageMenu.open)closePicker(languageMenu,languageMenu.contains(document.activeElement));
   } catch {
-    if(request===localeRequest){picker.value=language;picker.setCustomValidity(tr('Unable to load this language. Try again.'));picker.reportValidity();picker.setCustomValidity('');}
+    if(request===localeRequest){
+      languageStatus.textContent=tr('Unable to load this language. Try again.');
+      languageStatus.hidden=false;
+    }
   }
 }
-$('language').value='en';
-$('language').addEventListener('change',event=>void setLanguage(event.target.value,true));
+languageMenu.addEventListener('click',event=>{
+  const button=event.target.closest('[data-language]');
+  if(button)void setLanguage(button.dataset.language,true);
+});
 localize();
 const preferredLanguage=readStore(localeKey,'en');
 if(preferredLanguage!=='en')void setLanguage(preferredLanguage);
@@ -141,12 +163,17 @@ function idFrom(value) {
 function label(cat) {return meta.categories.find(([key])=>key===cat)?.[1]??'Other finds';}
 function name(p) {return names[p.weidianId]||p.name;}
 function cover(p) { return meta.local.includes(p.id)?'/featured/'+p.id+'.webp':p.image; }
-function moneyAmount(amount, code=currency) {
+function moneyAmount(amount, code='USD') {
   return new Intl.NumberFormat(language,{style:'currency',currency:code,currencyDisplay:code==='USD'?'narrowSymbol':'symbol'}).format(amount*meta.rates[code]);
 }
 function money(p) {
   const amount=Number(p.price);
   return Number.isFinite(amount)&&amount>0?moneyAmount(amount):tr('Price on listing');
+}
+function convertedPrice(amount) {
+  return currency!=='USD'&&Number.isFinite(amount)&&amount>0
+    ? `<span class="price-conversion">≈ ${esc(moneyAmount(amount,currency))} ${currency}</span>`
+    : '';
 }
 function sourcePage(p) { return new URL(p.sourcePath,'https://findspreadsheet.com').href; }
 function agentUrl(agent,product) {
@@ -168,47 +195,39 @@ function updateShoppingPreferences() {
   document.querySelectorAll('[data-currency]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.currency===currency)));
 }
 function setupShoppingPreferences() {
-  const menu=$('shopping-options');
-  const summary=menu.querySelector('summary');
   const initialAgent=readStore(agentKey,'superbuy');
   const initialCurrency=readStore(currencyKey,'USD');
   if(meta.agents.some(agent=>agent.id===initialAgent))agentChoice=initialAgent;
   if(Object.hasOwn(meta.rates,initialCurrency))currency=initialCurrency;
   updateShoppingPreferences();
-  menu.addEventListener('click',event=>{
-    const button=event.target.closest('[data-agent],[data-currency]');
+  $('agent-options').addEventListener('click',event=>{
+    const button=event.target.closest('[data-agent]');
     if(!button)return;
-    if(button.dataset.agent){agentChoice=button.dataset.agent;writeStore(agentKey,agentChoice);}
-    if(button.dataset.currency){currency=button.dataset.currency;writeStore(currencyKey,currency);}
+    agentChoice=button.dataset.agent;
+    writeStore(agentKey,agentChoice);
+    closePicker($('agent-options'),true);
     updateShoppingPreferences();
     rerender();
     renderVisual();
   });
-  menu.addEventListener('keydown',event=>{
-    if(event.key==='Escape'&&menu.open){
-      event.preventDefault();
-      menu.open=false;
-      summary.focus();
-    }
+  $('currency-options').addEventListener('click',event=>{
+    const button=event.target.closest('[data-currency]');
+    if(!button)return;
+    currency=button.dataset.currency;
+    writeStore(currencyKey,currency);
+    closePicker($('currency-options'),true);
+    updateShoppingPreferences();
+    rerender();
+    renderVisual();
   });
-  document.addEventListener('pointerdown',event=>{if(menu.open&&!menu.contains(event.target))menu.open=false;});
 }
-function agentDestination(product, selected) {
-  const agent=meta.agents.find(item=>item.id===selected);
-  return agent
-    ? `<a class="btn outline" href="${esc(agentUrl(agent,product))}" target="_blank" rel="${agent.id==='findspreadsheet'?'noopener':'sponsored noopener'}">${text('Open listing')}</a>`
-    : `<button type="button" class="btn outline" disabled>${text('Open listing')}</button>`;
-}
-function agentPicker(product, selected) {
+function agentPicker(product) {
   const options=meta.agents.filter(agent=>agent.id!=='superbuy').map(agent=>
-    `<option value="${esc(agent.id)}"${agent.id===selected?' selected':''}>${esc(agent.name)}</option>`
-  ).join('');
-  return `<div class="detail-agent-picker" id="other-agents">
-    <label class="language"><select id="detail-agent" aria-label="${esc(tr('Other shopping agents'))}">
-      <option value="" disabled${selected?'':' selected'}>${esc(tr('Other shopping agents'))}</option>${options}
-    </select></label>
-    <span id="agent-destination">${agentDestination(product,selected)}</span>
-  </div>`;
+    `<a href="${esc(agentUrl(agent,product))}" target="_blank" rel="${agent.id==='findspreadsheet'?'noopener':'sponsored noopener'}">
+      <img src="${esc(agent.logo)}" width="20" height="20" alt="" loading="lazy"><span>${esc(agent.name)}</span></a>`).join('');
+  return `<details class="choice-menu detail-agent-picker" data-picker>
+    <summary>${text('Other shopping agents')}${icon('chevron')}</summary>
+    <div class="choice-panel"><div class="choice-grid">${options}</div></div></details>`;
 }
 function link(url,label,sponsored=false) {
   return `<a class="btn ${sponsored?'primary':'outline'}" href="${esc(url)}" target="_blank" rel="${sponsored?'sponsored noopener':'noopener'}">${text(label)}</a>`;
@@ -218,7 +237,7 @@ function card(p,photo=cover(p)) {
   return `<article class="card" data-rendered-product="${p.weidianId}"><div class="card-media">
     <a href="${href}"><img src="${esc(photo)}" width="320" height="320" alt="${title}" loading="lazy"></a>
     <button type="button" class="save" data-save="${p.weidianId}" aria-pressed="false">${icon('heart')}</button></div>
-    <div class="card-info"><p>${esc(tr(label(p.category)))}</p><h3><a href="${href}">${title}</a></h3><strong class="price">${esc(money(p))}</strong>
+    <div class="card-info"><p>${esc(tr(label(p.category)))}</p><h3><a href="${href}">${title}</a></h3><strong class="price">${esc(money(p))}</strong>${convertedPrice(Number(p.price))}
     <div class="card-actions"><a class="btn outline" href="${href}">${text('View details')}</a>${preferredAgentLink(p)}</div></div></article>`;
 }
 function applyImageFallback(root) {
@@ -299,122 +318,163 @@ async function listingSpecs(id) {
   if(String(data.weidian_id)!==id)throw Error('Mismatched item ID');
   return data;
 }
-function sellerSpecifications(data) {
-  if(data===undefined)return `<p role="status">${text('Loading seller specifications…')}</p>`;
-  if(!data)return `<p>${text('Seller specifications are currently unavailable. Check the original Weidian listing for available options.')}</p>`;
-  const item=data.raw_data?.result?.default_model?.item_info;
-  const attrs=Array.isArray(data.specifications?.attrs)?data.specifications.attrs:[];
-  const sku=Object.values(data.specifications?.skus??{}).filter(row=>row&&typeof row==='object');
-  const prices=sku.map(row=>Number(row.price)).filter(value=>Number.isFinite(value)&&value>0);
-  const low=Math.min(...prices),high=Math.max(...prices);
-  const seller=data.shop_info?.shopName;
-  const description=typeof item?.itemShareDesc==='string'?item.itemShareDesc.trim():'';
-  const facts=[
-    ['Seller listing title',data.title],
-    ['Seller',seller],
-    ['Seller variant price range',prices.length?(low===high?moneyAmount(low):moneyAmount(low)+' – '+moneyAmount(high)):''],
-    ['Listed variant combinations',sku.length?countFormat(sku.length):'']
-  ].filter(([,value])=>typeof value==='string'&&value.trim());
-  const options=attrs.map(group=>{
-    const values=(Array.isArray(group?.attr_values)?group.attr_values:[]).map(value=>value?.attr_value||value?.name).filter(value=>typeof value==='string'&&value.trim());
-    if(!values.length)return '';
-    return `<section class="option-group"><h3>${esc(group.attr_title||tr('Options'))}</h3><ul class="option-values">${[...new Set(values)].map(value=>`<li>${esc(value)}</li>`).join('')}</ul></section>`;
-  }).join('');
-  return `${facts.length?`<dl class="facts seller-facts">${facts.map(([key,value])=>`<div><dt>${text(key)}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl>`:''}
-    ${description&&description!==data.title?`<p class="seller-description"><strong>${text('Seller description')}</strong> <span lang="zh-CN">${esc(description)}</span></p>`:''}
-    ${options||`<p>${text('The seller feed does not include separate option groups for this listing.')}</p>`}
-    <p class="status">${text('Seller specifications from FindSpreadsheet. Confirm available variants and the final price with the seller or agent.')}</p>`;
+function listingImageUrls(values) {
+  return Array.isArray(values)?values.filter(url=>typeof url==='string'&&url.startsWith('https://')):[];
 }
 
-function originalListingPhotos(data) {
-  const sellerImages=data?.raw_data?.result?.default_model?.item_info?.imgs;
-  const urls=Array.isArray(sellerImages)&&sellerImages.length?sellerImages:data?.images;
-  return Array.isArray(urls)?[...new Set(urls.filter(url=>typeof url==='string'&&url.startsWith('https://')))]:[];
-}
-
-function purchasePhotoGallery(data, fallback, product) {
-  const original=originalListingPhotos(data);
-  const images=original.length?original:fallback;
-  const label=original.length?'Photos from the original seller listing.':'Saved listing photos for this item.';
-  return `<p class="status">${text(label)} · ${esc(tr('{0} listing photos',countFormat(images.length)))}</p>
-    <div class="purchase-photo-track" tabindex="0" role="region" aria-label="${esc(tr('Purchase page photos'))}">
-      ${images.map((url,index)=>`<a href="${esc(url)}" target="_blank" rel="noopener" aria-label="${esc(tr('Open seller photo {0}',countFormat(index+1)))}">
-        <img src="${esc(url)}" width="150" height="150" loading="lazy" referrerpolicy="no-referrer" alt="${esc(name(product))}"></a>`).join('')}
-    </div>`;
+function variantGroups(specifications) {
+  const attrs=specifications?.specifications?.attrs;
+  if(!Array.isArray(attrs))return [];
+  return attrs.map(group=>({
+    title:group.attr_title||tr('Options'),
+    options:(Array.isArray(group.attr_values)?group.attr_values:[]).flatMap(value=>{
+      const label=value?.attr_value||value?.name;
+      if(typeof label!=='string'||!label.trim())return [];
+      const [photo]=listingImageUrls([value.img]);
+      return [{label,photo}];
+    })
+  })).filter(group=>group.options.length);
 }
 
 async function setupProduct() {
   const id=idFrom(params.get('id')??'');
   const product=records.find(p=>p.weidianId===id)||records.find(p=>p.id===id);
   const view=$('product-view');
-  if(!product){view.innerHTML=`<h1>${text('Product Details')}</h1><p class="empty">${text('This product could not be found in the preview.')}</p><a class="btn outline" href="/products/">${text('Back to finds')}</a>`;return;}
-  const skuRequest=listingSpecs(product.weidianId).catch(()=>null);
-  const [galleryResult,qcResult]=await Promise.allSettled([get('/data/gallery-'+product.weidianId.slice(0,4)+'.json'),get('/data/qc-featured.json')]);
-  const listingSnapshot=[...new Set([product.image,...(galleryResult.value?.[product.weidianId]??[])])].filter(Boolean);
-  const images=[...new Set([cover(product),...listingSnapshot])].filter(Boolean);
-  const qc=qcResult.value?.[product.weidianId]?.images??[];
-  const related=records.filter(p=>p.category===product.category&&p.weidianId!==product.weidianId).slice(0,4);
-  let selected=0;
-  let selectedAgent='';
-  let specifications;
+  if(!product){
+    view.innerHTML=`<h1>${text('Product Details')}</h1><p class="empty">${text('This product could not be found.')}</p><a class="btn outline" href="/products/">${text('Back to finds')}</a>`;
+    return;
+  }
+
+  const coverPhoto=cover(product);
+  let selected=coverPhoto;
+  let gallery=[];
+  let qc=[];
+  let sellerPhotos=[];
+  let groups=[];
+  let optionsLoading=true;
+  const chosenOptions=new Map();
+
+  function galleryImages() {
+    return [...new Set([coverPhoto,...sellerPhotos,product.image,...gallery])].filter(Boolean);
+  }
+
+  function updatePhoto() {
+    const link=view.querySelector('.detail-media a');
+    const img=link.querySelector('img');
+    if(img.getAttribute('src')!==selected){
+      delete img.dataset.loadFailed;
+      img.src=selected;
+    }
+    link.href=selected;
+    view.querySelectorAll('[data-photo]').forEach(button=>{
+      const active=button.dataset.photo===selected;
+      button.setAttribute('aria-pressed',String(active));
+    });
+  }
+
+  function renderGallery() {
+    const images=galleryImages();
+    const thumbnails=view.querySelector('.thumbnails');
+    thumbnails.hidden=images.length<2;
+    thumbnails.innerHTML=images.map((url,index)=>
+      `<button type="button" data-photo="${esc(url)}" aria-pressed="${url===selected}" aria-label="${esc(tr('Show product photo {0}',index+1))}"><img src="${esc(url)}" width="64" height="64" loading="lazy" referrerpolicy="no-referrer" alt=""></button>`).join('');
+    applyImageFallback(thumbnails);
+  }
+
+  function renderOptions() {
+    const panel=$('listing-options');
+    panel.innerHTML=groups.map(({title,options},group)=>
+      `<fieldset class="option-group"><legend>${esc(title)}</legend>
+      <div class="variant-list${options.some(option=>option.photo)?' variant-photos':''}">${options.map(({label,photo},index)=>
+        `<button type="button" data-variant-group="${group}" data-variant-option="${index}" aria-pressed="${chosenOptions.get(group)===index}" aria-label="${esc(label)}" title="${esc(label)}">${photo?`<img src="${esc(photo)}" width="68" height="68" loading="lazy" referrerpolicy="no-referrer" alt="">`:esc(label)}</button>`).join('')}
+      </div></fieldset>`).join('');
+    if(!groups.length)panel.innerHTML=`<p class="status" role="status">${text(optionsLoading?'Loading seller specifications…':'Check the seller listing for available options.')}</p>`;
+    applyImageFallback(panel);
+  }
+
+  function renderDetailPhotos() {
+    const panel=$('detail-photos');
+    const images=[...new Set((qc.length?qc:galleryImages()).filter(url=>url!==coverPhoto))];
+    panel.hidden=images.length===0;
+    panel.innerHTML=`<div class="section-head"><h2>${text('Detail photos')}</h2><span>${countFormat(images.length)}</span></div>
+      <div class="qc-grid">${images.map((url,index)=>
+        `<a href="${esc(url)}" target="_blank" rel="noopener"><img src="${esc(url)}" width="180" height="180" loading="lazy" referrerpolicy="no-referrer" alt="${esc(tr('Show product photo {0}',index+1))}"></a>`).join('')}</div>`;
+    applyImageFallback(panel);
+  }
+
   function render() {
     const title=esc(name(product));
-    const category=label(product.category);
-    const check=meta.checks[product.category]?.[0]??meta.checks['other-stuff'][0];
     $('product-crumb').textContent=name(product);
     document.title=name(product)+' | Superbuy Findsheet';
-    view.innerHTML=`<div class="detail-grid"><section class="detail-panel" aria-label="${esc(tr('Product photos'))}">
-      <div class="detail-media"><a href="${esc(images[selected])}" target="_blank" rel="noopener"><img src="${esc(images[selected])}" alt="${title}" width="580" height="580"></a></div>
-      <div class="photo-tools">${images.length>1?`<button class="btn outline" data-photo-step="-1">${text('Previous photo')}</button>`:''}<span>${countFormat(selected+1)} / ${countFormat(images.length)}</span>${images.length>1?`<button class="btn outline" data-photo-step="1">${text('Next photo')}</button>`:''}</div>
-      <div class="thumbnails">${images.map((url,index)=>`<button type="button" data-photo="${index}" aria-pressed="${index===selected}" aria-label="${esc(tr('Show product photo {0}',index+1))}"><img src="${esc(url)}" width="62" height="62" loading="lazy" alt=""></button>`).join('')}</div>
-      ${galleryResult.status==='rejected'?`<p>${text('Additional listing photos could not load.')}</p>`:''}</section>
-      <div class="detail-side"><section class="detail-panel detail-info"><p class="category-label">${esc(tr(category))}</p><h1>${title}</h1>
-      <strong class="detail-price">${esc(money(product))}</strong><p>${text('Reference price')} (${esc(currency)}) · ${esc(tr('Weidian item #{0}',product.weidianId))}</p>
-      <div class="detail-actions">${link(buy(product.weidianId),'View on Superbuy',true)}${link(sellerLink(product.weidianId),'View on Weidian')}
-      ${agentPicker(product,selectedAgent)}
-      <button class="btn outline" type="button" data-save="${product.weidianId}">${icon('heart')} <span data-save-text></span></button></div>
-      <dl class="facts"><div><dt>${text('Category')}</dt><dd>${esc(tr(category))}</dd></div><div><dt>${text('Weidian item ID')}</dt><dd>${product.weidianId}</dd></div>
-      <div><dt>${text('Seller snapshot price')}</dt><dd>${Number(product.price)>0?'¥'+esc(product.price):esc(tr('Price on listing'))}</dd></div><div><dt>${text('Listing photos')}</dt><dd>${countFormat(images.length)}</dd></div></dl>
-      <p>${text('Reference listing price. Delivery and optional services are separate. Confirm the exact variant and payable amount on Superbuy.')}</p></section>
-      <section class="detail-panel purchase-photo-panel" aria-labelledby="purchase-photos-title">
-        <h2 id="purchase-photos-title">${text('Purchase page photos')}</h2>
-        <div id="purchase-photos">${purchasePhotoGallery(specifications,listingSnapshot,product)}</div>
-      </section></div></div>
-      <section class="home-section" aria-labelledby="seller-spec-title"><h2 id="seller-spec-title">${text('Seller specifications')}</h2><div class="detail-panel seller-specifications" id="seller-specifications">${sellerSpecifications(specifications)}</div></section>
-      <section class="home-section"><h2>${text('Product introduction')}</h2><div class="detail-articles"><article><h3>${text('Product identity and source')}</h3><p>${esc(tr('{0} is a Weidian listing in the {1} category. The linked seller page, image gallery and Superbuy entry refer to item {2}.',name(product),tr(category),product.weidianId))}</p><p>${text('Check the color, silhouette, materials described by the seller, and visible markings.')}</p></article>
-      <article><h3>${text('Size, measurements and options')}</h3><p>${esc(tr(check))}</p><p>${text('Check whether the listing uses body or garment measurements.')}</p></article>
-      <article><h3>${text('Reference price and what you pay')}</h3><p>${text('The catalog price converts the saved CNY listing price into your selected currency. Variant prices, local delivery, international shipping and agent services may affect the amount you pay.')}</p></article>
-      <article><h3>${text('Before you order')}</h3><p>${text('Confirm the seller page, variant, measurements, quantity and payable total. Review any route restrictions and plan international shipping based on the expected packed parcel.')}</p><a class="text-link" href="/guide/">${text('Open buying guide')}</a></article></div></section>
-      <section class="home-section"><h2>${text('Warehouse QC photos')}</h2><p>${qc.length?text('Historical reference QC from FindSpreadsheet. Review your own Superbuy warehouse photos before shipping.'):text('No warehouse photos are available in the preview for this listing.')}</p>
-      ${qcResult.status==='rejected'?`<p>${text('QC records could not load. Try again.')}</p>`:''}
-      <div class="qc-grid">${qc.map(({url,agent},index)=>`<figure><a href="${esc(url)}" target="_blank" rel="noopener"><img src="${esc(url)}" width="180" height="180" loading="lazy" alt="${esc(tr('Warehouse QC photo {0} from {1}',index+1,agent))}"></a><figcaption>${esc(agent||'FindSpreadsheet')}</figcaption></figure>`).join('')}</div>
-      </section><section class="home-section"><h2>${text('Related products')}</h2><div class="card-grid">${related.map(p=>card(p)).join('')}</div></section>`;
-    applyImageFallback(view);
-    updateSaved();
+    view.innerHTML=`<div class="detail-grid">
+      <section class="detail-panel product-gallery" aria-label="${esc(tr('Product photos'))}">
+        <div class="detail-media"><a href="${esc(selected)}" target="_blank" rel="noopener"><img src="${esc(selected)}" alt="${title}" width="580" height="580" fetchpriority="high" referrerpolicy="no-referrer"></a></div>
+        <div class="thumbnails"></div>
+      </section>
+      <section class="detail-panel detail-info">
+        <h1>${title}</h1><p class="product-id">${esc(tr('Weidian item #{0}',product.weidianId))}</p>
+        <div class="product-price"><strong class="detail-price">${esc(money(product))}</strong>${Number(product.price)>0?' <span>USD</span>':''}${convertedPrice(Number(product.price))}</div>
+        <div class="detail-actions">${link(buy(product.weidianId),'View on Superbuy',true)}${agentPicker(product)}
+          <button class="btn outline" type="button" data-copy-product>${text('Copy product link')}</button></div>
+        <p id="copy-status" role="status" class="status" hidden></p>
+        <div id="listing-options"></div>
+      </section>
+    </div><section class="home-section detail-photos" id="detail-photos" hidden></section>`;
+    applyImageFallback(view.querySelector('.detail-media'));
+    renderGallery();
+    renderOptions();
+    renderDetailPhotos();
   }
-  view.addEventListener('change',event=>{
-    if(event.target.id!=='detail-agent')return;
-    selectedAgent=event.target.value;
-    $('agent-destination').innerHTML=agentDestination(product,selectedAgent);
-  });
-  view.addEventListener('click',event=>{
-    const button=event.target.closest('[data-photo],[data-photo-step]');
+
+  view.addEventListener('click',async event=>{
+    const button=event.target.closest('[data-photo],[data-variant-option],[data-copy-product]');
     if(!button)return;
-    selected=button.hasAttribute('data-photo')?Number(button.dataset.photo):(selected+Number(button.dataset.photoStep)+images.length)%images.length;
-    const selector=button.hasAttribute('data-photo')?`[data-photo="${selected}"]`:`[data-photo-step="${button.dataset.photoStep}"]`;
-    render();
-    view.querySelector(selector)?.focus();
+    if(button.hasAttribute('data-copy-product')){
+      const status=$('copy-status');
+      status.hidden=false;
+      try {
+        await navigator.clipboard.writeText(sellerLink(product.weidianId));
+        status.textContent=tr('Product link copied.');
+      } catch {
+        status.innerHTML=`<a class="text-link" href="${esc(sellerLink(product.weidianId))}" target="_blank" rel="noopener">${text('View on Weidian')}</a>`;
+      }
+      return;
+    }
+    if(button.hasAttribute('data-photo')){
+      selected=button.dataset.photo;
+    } else {
+      const group=Number(button.dataset.variantGroup);
+      const index=Number(button.dataset.variantOption);
+      chosenOptions.set(group,index);
+      button.closest('.variant-list').querySelectorAll('button').forEach(option=>{
+        option.setAttribute('aria-pressed',String(option===button));
+      });
+      selected=groups[group].options[index].photo||selected;
+    }
+    updatePhoto();
   });
+
   rerender=render;
   render();
-  void skuRequest.then(data=>{
-    specifications=data;
-    $('seller-specifications').innerHTML=sellerSpecifications(specifications);
-    if(originalListingPhotos(specifications).length){
-      const photos=$('purchase-photos');
-      photos.innerHTML=purchasePhotoGallery(specifications,listingSnapshot,product);
-      applyImageFallback(photos);
-    }
+  void get('/data/gallery-'+product.weidianId.slice(0,4)+'.json').then(data=>{
+    gallery=listingImageUrls(data[product.weidianId]);
+    renderGallery();
+    renderDetailPhotos();
+  }).catch(()=>{});
+  void get('/data/qc-featured.json').then(data=>{
+    qc=(data[product.weidianId]?.images??[]).map(photo=>photo.url).filter(Boolean);
+    renderDetailPhotos();
+  }).catch(()=>{});
+  void listingSpecs(product.weidianId).then(data=>{
+    const item=data.raw_data?.result?.default_model?.item_info;
+    sellerPhotos=listingImageUrls(item?.imgs);
+    if(!sellerPhotos.length)sellerPhotos=listingImageUrls(data.images);
+    groups=variantGroups(data);
+    renderGallery();
+    renderDetailPhotos();
+  }).catch(()=>{}).finally(()=>{
+    optionsLoading=false;
+    renderOptions();
   });
 }
 
