@@ -53,7 +53,7 @@ const steps = [
       </div>
       {home && <a class="inline-arrow" href="/guide/how-to-buy/">Open buying guide <span aria-hidden="true">↗</span></a>}
     </div>
-    <details class="mobile-section-fold" open data-mobile-fold={home ? "" : undefined}>
+    <details class="mobile-section-fold" open>
       <summary>Expand the six illustrated buying steps</summary>
       <ol class="buying-steps">
         {steps.map((step, index) => <li>
@@ -65,6 +65,7 @@ const steps = [
           </div>
           <figure>
             <a href={`/guide-images/${step.image}.webp`} target="_blank" rel="noopener" aria-label={`Enlarge screenshot for ${step.title}`}>
+              <span class:list={["screenshot-pointer", "pointer-" + step.image]} aria-hidden="true">➜</span>
               <img src={`/guide-images/${step.image}.webp`} alt={step.alt} loading="lazy" decoding="async" />
             </a>
             <figcaption>{step.source}</figcaption>

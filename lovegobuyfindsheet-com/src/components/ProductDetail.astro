@@ -1,0 +1,229 @@
+---
+import Layout from "./Layout.astro";
+import {buyUrl, categoryLabel, priceLabel, upstream} from "../lib/catalog";
+const {product: p, pictures, warehouse} = Astro.props;
+const item = p.weidianId;
+const detailPictures = warehouse.length ? warehouse.map(photo => photo.url) : pictures;
+const serialized = JSON.stringify({product:p, pictures, warehouse}).replace(/</g, "\\u003c");
+---
+<Layout title={p.name + " | LoveGoBuy Findsheet"} description={p.name + " — view product photographs, available seller options and warehouse QC, and compare shopping agents for Weidian item " + item + "."}>
+  <div class="shell section utility product-page">
+    <div class="content-heading product-page-heading"><h1>Product details</h1><a class="inline-arrow" href="/browse/">Back to finds</a></div>
+    <p id="detail-status" class="notice" role="status" hidden></p>
+    <div id="product">
+      <div class="detail-grid">
+        <div class="detail-media">
+          <div class="gallery"><img id="main-photo" src={pictures[0]} alt={p.name} width="620" height="620" loading="eager" decoding="async" fetchpriority="high" />
+            <div class="gallery-controls"><button id="gallery-prev" class="button button-outline" type="button" aria-label="Previous photo">‹</button><span id="gallery-count" aria-live="polite">1 / {pictures.length}</span><button id="gallery-next" class="button button-outline" type="button" aria-label="Next photo">›</button></div>
+          </div>
+          <div id="thumbnails" class="thumbs" aria-label="Product photos">{pictures.map((url,index) => <button type="button" aria-label={"Show product photo " + (index + 1)} aria-pressed={index === 0}><img src={url} alt="" width="80" height="80" loading={index < 6 ? "eager" : "lazy"} /></button>)}</div>
+          <p id="gallery-note" class="muted"></p>
+        </div>
+        <div class="detail-copy">
+          <p class="kicker"><span class="dot"></span><span id="detail-category">{categoryLabel(p.category)}</span> / WEIDIAN</p>
+          <h2 id="detail-title" data-product-name={item}>{p.name}</h2>
+          <p id="detail-id" class="muted">Weidian item #{item}</p>
+          <p id="detail-price" data-i18n-ignore data-price-cny={p.price}>{priceLabel(p.price)}</p>
+          <p class="muted">Reference price. Confirm the final price and stock on the agent listing.</p>
+          <div class="detail-actions">
+            <a id="buy" href={buyUrl(item)} class="button" target="_blank" rel="sponsored noopener">Buy on LoveGoBuy</a>
+            <button id="open-agents" class="button button-outline" type="button" aria-haspopup="dialog" aria-controls="agent-dialog">Other shopping agents</button>
+            <button id="copy-link" class="button button-outline" type="button">Copy product link</button>
+          </div>
+          <p id="copy-status" role="status" aria-live="polite"></p>
+          <input id="copy-value" aria-label="Product link" readonly hidden />
+          <section class="product-options" aria-labelledby="style-title">
+            <h3 id="style-title">Seller options</h3>
+            <p id="seller-option-status" class="muted" role="status">Loading seller options…</p>
+            <div id="seller-options"></div>
+            <p class="seller-snapshot-note">Confirm stock and your final selection on LoveGoBuy.</p>
+            <a id="size-source" href={buyUrl(item)} class="button button-outline" target="_blank" rel="sponsored noopener">View sizes on LoveGoBuy</a>
+          </section>
+          <a id="source" href={new URL(p.sourcePath,upstream).href} class="source-link" target="_blank" rel="noopener">FindSpreadsheet listing</a>
+        </div>
+      </div>
+      <dialog id="agent-dialog" class="agent-dialog" aria-labelledby="agent-dialog-title"><div class="agent-dialog-header"><h2 id="agent-dialog-title">Choose a shopping agent</h2><form method="dialog"><button class="agent-close" type="submit" aria-label="Close shopping agents" autofocus>×</button></form></div><div id="other-agents" class="agent-options"></div></dialog>
+      <section class="qc-panel" aria-labelledby="detail-qc-title">
+        <h2 id="detail-qc-title">Detail photos</h2>
+        <p id="detail-qc-status" role="status">{warehouse.length ? "Warehouse QC photos" : "Listing photos"}</p>
+        <div id="detail-qc-images" class="qc-photos direct-detail-photos">{detailPictures.map((url,index) => <a href={url} target="_blank" rel="noopener"><img src={url} alt={p.name + " · product image " + (index + 1)} width="640" height="640" loading={index < 2 ? "eager" : "lazy"} decoding="async" /></a>)}</div>
+        <a id="finder" class="inline-arrow" href={"/qc/?id=" + item}>View warehouse QC</a>
+      </section>
+    </div>
+  </div>
+  <script id="product-payload" type="application/json" set:html={serialized} />
+</Layout>
+<script>
+  import {buyUrl, categoryLabel, priceLabel, upstream, type Product} from "../lib/catalog";
+  import {otherAgentLinks} from "../lib/agents";
+
+  const status = document.querySelector<HTMLElement>("#detail-status")!;
+  const payload = JSON.parse(document.querySelector("#product-payload")!.textContent!);
+  const item: string = payload.product.weidianId;
+  const photo = document.querySelector<HTMLImageElement>("#main-photo")!;
+  const thumbnails = document.querySelector<HTMLElement>("#thumbnails")!;
+  const previous = document.querySelector<HTMLButtonElement>("#gallery-prev")!;
+  const next = document.querySelector<HTMLButtonElement>("#gallery-next")!;
+  const counter = document.querySelector<HTMLElement>("#gallery-count")!;
+  type SellerValue = {id: string; name: string; image: string};
+  type SellerRecord = {status: string; images?: string[]; groups?: {name: string; values: SellerValue[]}[]};
+  const agentDialog = document.querySelector<HTMLDialogElement>("#agent-dialog")!;
+  document.querySelector("#open-agents")!.addEventListener("click", () => agentDialog.showModal());
+
+  void (async () => {
+    const p: Product = payload.product;
+    document.title = p.name + " | LoveGoBuy Findsheet";
+    const heading = document.querySelector<HTMLElement>("#detail-title")!;
+    heading.dataset.productName = item;
+    heading.textContent = p.name;
+    document.querySelector("#detail-category")!.textContent = categoryLabel(p.category);
+    const amount = document.querySelector<HTMLElement>("#detail-price")!;
+    amount.dataset.priceCny = p.price;
+    amount.textContent = priceLabel(p.price);
+    document.querySelector("#detail-id")!.textContent = "Weidian item #" + item;
+    document.querySelector<HTMLAnchorElement>("#buy")!.href = buyUrl(item);
+    document.querySelector<HTMLAnchorElement>("#source")!.href = new URL(p.sourcePath, upstream).href;
+    document.querySelector<HTMLAnchorElement>("#size-source")!.href = buyUrl(item);
+    document.querySelector<HTMLAnchorElement>("#finder")!.href = "/qc/?id=" + item;
+    document.querySelector("#other-agents")!.replaceChildren(...otherAgentLinks(item).map(agent => {
+      const link = document.createElement("a");
+      link.href = agent.url;
+      link.target = "_blank";
+      link.rel = "sponsored noopener noreferrer";
+      const logo = new Image(28, 28);
+      logo.src = agent.logo;
+      logo.alt = "";
+      logo.loading = "lazy";
+      logo.addEventListener("error", () => { logo.hidden = true; }, {once: true});
+      const label = document.createElement("span");
+      label.textContent = agent.label;
+      link.append(logo, label);
+      return link;
+    }));
+    const copy = document.querySelector<HTMLButtonElement>("#copy-link")!;
+    copy.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText("https://weidian.com/item.html?itemID=" + item);
+        document.querySelector("#copy-status")!.textContent = "Product link copied";
+      } catch {
+        document.querySelector("#copy-status")!.textContent = "Copy this link";
+        const link = document.querySelector<HTMLInputElement>("#copy-value")!;
+        link.hidden = false;
+        link.value = "https://weidian.com/item.html?itemID=" + item;
+        link.select();
+      }
+    });
+    const sellerOptions = fetch("https://findspreadsheet.com/api/Goods/getSkuData?weidian_id=" + encodeURIComponent(item), {
+      signal: AbortSignal.timeout(10000),
+    }).then(async response => {
+      if (!response.ok) throw new Error("Seller options unavailable");
+      const data = await response.json();
+      if (String(data.weidian_id) !== item || !Array.isArray(data.specifications?.attrs)) {
+        throw new Error("Seller item mismatch");
+      }
+      const cleanImage = (value: unknown) => typeof value === "string" && value.startsWith("https://") ? value : "";
+      return {
+        status: "available",
+        images: (Array.isArray(data.images) ? data.images : []).map(cleanImage).filter(Boolean),
+        groups: data.specifications.attrs.map((group: {attr_title: string; attr_values: {attr_id: string; attr_value: string; img?: string}[]}) => ({
+          name: String(group.attr_title || "Style"),
+          values: (Array.isArray(group.attr_values) ? group.attr_values : []).map(value => ({
+            id: String(value.attr_id), name: String(value.attr_value), image: cleanImage(value.img),
+          })),
+        })),
+      } as SellerRecord;
+    }).catch(() => fetch("/seller-options/" + item.slice(0, 4) + ".json")
+      .then(response => {
+        if (!response.ok) throw new Error("Seller snapshot unavailable");
+        return response.json() as Promise<Record<string, SellerRecord>>;
+      }).then(shard => shard[item]).catch(() => undefined));
+    photo.dataset.productPhoto = item;
+    let pictures: string[] = payload.pictures;
+    let active = 0;
+    function select(index: number) {
+      active = (pictures.length + index) % pictures.length;
+      photo.src = pictures[active];
+      photo.alt = p!.name + " · product image " + (active + 1);
+      counter.textContent = (active + 1) + " / " + pictures.length;
+      previous.disabled = next.disabled = pictures.length < 2;
+      for (const container of [thumbnails]) {
+        for (const [i, button] of Array.from(container.children).entries()) button.setAttribute("aria-pressed", String(i === active));
+      }
+    }
+    previous.onclick = () => select(active - 1);
+    next.onclick = () => select(active + 1);
+    photo.addEventListener("error", () => {
+      if (photo.src !== p.image) photo.src = p.image;
+    });
+    select(0);
+    status.hidden = true;
+    document.querySelector<HTMLElement>("#product")!.hidden = false;
+      function pictureButton(url: string, index: number) {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.setAttribute("aria-label", "Show product photo " + (index + 1));
+        const image = new Image(80, 80);
+        image.src = url;
+        image.alt = "";
+        image.loading = "lazy";
+        button.append(image);
+        button.onclick = () => select(index);
+        return button;
+      }
+    thumbnails.replaceChildren(...pictures.map(pictureButton));
+    select(0);
+    const seller = await sellerOptions;
+    const sellerStatus = document.querySelector<HTMLElement>("#seller-option-status")!;
+    const optionHost = document.querySelector<HTMLElement>("#seller-options")!;
+    if (seller?.status === "available") {
+      if (seller.images?.length) {
+        pictures = seller.images;
+        thumbnails.replaceChildren(...pictures.map(pictureButton));
+        select(0);
+      }
+      const groups = seller.groups || [];
+      sellerStatus.hidden = groups.length > 0;
+      sellerStatus.textContent = "This seller listing has no separate style or size options.";
+      for (const group of groups) {
+        const section = document.createElement("section");
+        section.className = "seller-option-group";
+        const heading = document.createElement("h3");
+        const groupNames: Record<string, string> = {"颜色": "Color", "顏色": "Color", "颜色分类": "Color", "尺码": "Size", "尺寸": "Size", "款式": "Style"};
+        heading.textContent = groupNames[group.name] || group.name;
+        const values = document.createElement("div");
+        values.className = group.values.some(value => value.image) ? "seller-option-values" : "seller-text-options";
+        values.setAttribute("aria-label", group.name);
+        for (const value of group.values) {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.setAttribute("aria-pressed", "false");
+          button.title = value.name;
+          if (value.image) {
+            const image = new Image(80, 80);
+            image.src = value.image;
+            image.alt = value.name;
+            image.loading = "lazy";
+            button.append(image);
+          }
+          const label = document.createElement("span");
+          label.textContent = value.name;
+          button.append(label);
+          button.addEventListener("click", () => {
+            for (const option of values.querySelectorAll("button")) option.setAttribute("aria-pressed", String(option === button));
+            if (value.image) {
+              photo.src = value.image;
+              photo.alt = value.name;
+              counter.textContent = value.name;
+              for (const thumbnail of thumbnails.children) thumbnail.setAttribute("aria-pressed", "false");
+            }
+          });
+          values.append(button);
+        }
+        section.append(heading, values);
+        optionHost.append(section);
+      }
+    } else {
+      sellerStatus.textContent = "Seller options are currently unavailable. Open LoveGoBuy to check.";
+    }
+  })().catch(() => { status.hidden = false; status.textContent = "Additional product options could not load. The listing photos remain available below."; });
+</script>

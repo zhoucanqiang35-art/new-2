@@ -12,7 +12,7 @@ const Heading = home ? "h2" : "h1";
     {home && <a class="inline-arrow" href="/faq/">Open FAQ <span aria-hidden="true">↗</span></a>}
   </div>
   <div class="faq-topics">
-    {faqTopics.map(topic => <details class="faq-topic" id={topic.id} open data-mobile-fold>
+    {faqTopics.map(topic => <details class="faq-topic" id={topic.id} open={!home}>
       <summary>{topic.title}</summary>
       <div class="faq-questions">
         {topic.entries.map(entry => <details id={entry.id} class="faq-question">

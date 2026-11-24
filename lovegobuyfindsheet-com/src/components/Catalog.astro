@@ -26,7 +26,7 @@ const displayCount = new Intl.NumberFormat("en").format(products.length);
     </div>
     <div id="catalog-status" class="catalog-status" role="status" aria-live="polite"><span>Featured finds</span></div>
     <div id="results" class="products">
-      {highlights.map(product => <article class="product-card"><a href={detailsUrl(product.weidianId)}><div class="product-image"><img src={photo(product)} alt="" width="320" height="320" loading="lazy" /></div><div class="product-copy"><span class="product-tag">{categoryLabel(product.category)}</span><h3 data-product-name={product.weidianId}>{product.name}</h3><span class="product-price">{priceLabel(product.price)} <b aria-hidden="true">↗</b></span></div></a></article>)}
+      {highlights.map(product => <article class="product-card"><a href={detailsUrl(product.weidianId)}><div class="product-image"><img src={photo(product)} alt="" width="320" height="320" loading="lazy" /></div><div class="product-copy"><span class="product-tag">{categoryLabel(product.category)}</span><h3 data-product-name={product.weidianId}>{product.name}</h3><span class="product-price"><span data-price-cny={product.price} data-i18n-ignore>{priceLabel(product.price)}</span> <b aria-hidden="true">↗</b></span></div></a></article>)}
     </div>
     <div id="pagination" class="pagination" hidden><button id="prev" class="button button-outline" type="button">← Previous</button><span id="pages"></span><button id="next" class="button button-outline" type="button">Next →</button></div>
     <noscript><p>Enable JavaScript to search and filter the full catalog.</p></noscript>

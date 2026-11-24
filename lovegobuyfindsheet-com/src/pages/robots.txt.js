@@ -8,3 +8,4 @@ export function GET({ site }) {
     headers: { "Content-Type": "text/plain; charset=utf-8" },
   });
 }
+

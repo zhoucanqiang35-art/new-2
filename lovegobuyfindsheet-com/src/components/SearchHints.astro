@@ -1,0 +1,4 @@
+<datalist id="search-hints">
+  <option value="hoodie" /><option value="sneakers" /><option value="jacket" /><option value="T-shirt" /><option value="7858402075" />
+</datalist>
+<div class="search-hints" aria-label="Suggested searches"><span>Try searching</span>{["hoodie", "sneakers", "jacket", "T-shirt"].map(word => <a href={"/browse/?q=" + encodeURIComponent(word) + "#catalog"}>{word}</a>)}</div>

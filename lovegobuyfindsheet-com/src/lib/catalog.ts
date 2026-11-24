@@ -20,22 +20,13 @@ export const categories = [
 export const highlighted = ["4509", "7366", "7980", "7653", "8573", "8510", "8324", "6837"];
 export const featuredImage = (product: Product) => highlighted.includes(product.id) ? "/featured/" + product.id + ".webp" : product.image;
 export const categoryLabel = (key: string) => categories.find(([slug]) => slug === key)?.[1] ?? key;
-export const detailsUrl = (item: string) => "/product/?id=" + encodeURIComponent(item);
+export const detailsUrl = (item: string) => "/product/" + encodeURIComponent(item) + "/";
 export function buyUrl(item: string) {
   const url = new URL("https://www.lovegobuy.com/product");
   url.search = new URLSearchParams({id: item, shop_type: "weidian", invite_code: "161CPG"}).toString();
   return url.href;
 }
-// Wise mid-market reference, 2026-11-17. Source catalog prices are in CNY.
-const cnyPerUsd = 6.665;
-const usd = new Intl.NumberFormat("en-US", {style: "currency", currency: "USD"});
-
-export function priceLabel(price: string) {
-  const value = Number(price);
-  return price.trim() && Number.isFinite(value) && value > 0
-    ? usd.format(value / cnyPerUsd)
-    : "Price on listing";
-}
+export {formatPrice as priceLabel} from "./currency";
 export async function getData<T>(file: string): Promise<T> {
   const response = await fetch("/data/" + file);
   if (!response.ok) throw new Error("Unable to load " + file);

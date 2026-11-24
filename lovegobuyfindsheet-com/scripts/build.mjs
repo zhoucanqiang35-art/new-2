@@ -26,9 +26,8 @@ if (refreshCatalog || !["visual-coverage.json", "visual-photos.json", "visual-in
     "--offline",
   ]);
 }
-const productLocales = readdirSync(join(root, "public/locales"))
-  .filter(file => file.endsWith(".json") && file !== "en.json");
-if (refreshCatalog || productLocales.some(file => !existsSync(join(root, "public/product-locales", file)))) {
+const locales = readdirSync(join(root,"public/locales")).filter(file => file.endsWith(".json") && file !== "en.json");
+if (refreshCatalog || locales.some(file => !existsSync(join(root,"public/product-locales",file)))) {
   run("python3", ["scripts/prepare-product-locales.py", upstream]);
 }
 run("astro", ["build"]);

@@ -1,21 +1,29 @@
 ---
 import languages from "../languages.json";
+import currencies from "../lib/currencies.json";
+const currencyCodes = [...new Set(Object.values(currencies))];
 ---
 <div class="language-picker" data-i18n-ignore>
-  <button id="open-language" class="button button-small button-outline language-button" type="button" aria-haspopup="dialog" aria-controls="language-dialog">
+  <button id="open-language" class="button button-small button-outline language-button" type="button" aria-haspopup="dialog" aria-controls="language-dialog" aria-expanded="false">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg>
     <span id="current-language">English</span>
   </button>
-  <dialog id="language-dialog" class="agent-dialog language-dialog" aria-labelledby="language-title">
+  <div id="language-dialog" class="agent-dialog language-dialog control-popover" role="dialog" aria-labelledby="language-title" hidden>
     <div class="agent-dialog-header">
       <h2 id="language-title">Choose a language</h2>
-      <form method="dialog"><button id="close-language" class="agent-close" type="submit" aria-label="Close language picker">×</button></form>
+      <button id="close-language" class="agent-close" type="button" aria-label="Close language picker">×</button>
     </div>
     <div class="language-options">
       {languages.map(({code, name, dir}) => <button type="button" data-language={code} dir={dir} lang={code} aria-pressed={code === "en"}>{name}</button>)}
     </div>
     <p id="language-status" role="status" hidden></p>
-  </dialog>
+  </div>
+</div>
+<div class="currency-picker" data-i18n-ignore>
+  <button id="open-currency" class="button button-small button-outline" type="button" aria-label="Currency" aria-controls="currency-menu" aria-expanded="false">USD <span aria-hidden="true">⌄</span></button>
+  <div id="currency-menu" class="control-popover currency-menu" role="group" aria-label="Currency" hidden>
+    {currencyCodes.map(code => <button type="button" data-currency={code} aria-pressed={code === "USD"}>{code}</button>)}
+  </div>
 </div>
 <script>
   import "../lib/language-picker";

@@ -1,14 +1,11 @@
 ---
 import LanguagePicker from "./LanguagePicker.astro";
 import SiteTracking from "./SiteTracking.astro";
+import {isIndexableSite,isIndexablePath} from "../lib/seo.mjs";
 import {registration} from "../lib/catalog";
-import {indexablePaths, isIndexableSite} from "../lib/seo.mjs";
 import "../styles/style.css";
 const {compactHome = false, title = "LoveGoBuy Spreadsheet | Findsheet", description = "Explore Weidian finds from FindSpreadsheet, search by photo, and open the original listing on LoveGoBuy."} = Astro.props;
-const path = Astro.url.pathname;
-const canonical = Astro.site && isIndexableSite(Astro.site) && indexablePaths.includes(path)
-  ? new URL(path, Astro.site).href
-  : undefined;
+const canonical = isIndexableSite(Astro.site) && isIndexablePath(Astro.url.pathname) ? new URL(Astro.url.pathname,Astro.site).href : undefined;
 const navigation = [
   ["Home", "/"], ["Browse finds", "/browse/"], ["Image search", "/image-search/"],
   ["Buying guide", "/guide/how-to-buy/"], ["FAQ", "/faq/"], ["SEO", "/seo/"],
@@ -19,9 +16,7 @@ const navigation = [
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  {canonical
-    ? <link rel="canonical" href={canonical} />
-    : <meta name="robots" content="noindex, follow" />}
+  {canonical ? <link rel="canonical" href={canonical} /> : <meta name="robots" content="noindex, follow" />}
   <meta name="description" content={description} />
   <meta name="theme-color" content="#f8f9f5" />
   <link rel="icon" href="/favicon.ico" />
@@ -54,6 +49,7 @@ const navigation = [
       <div><a class="wordmark" href="/"><img src="/lovegobuy-logo.png" width="122" height="23" alt="LoveGoBuy" /><span>FINDSHEET</span></a><p>Independent shopping guide. Some outbound links are referral links.</p></div>
       <div><a href="/guide/how-to-buy/">Buying guide</a><a href="/faq/">FAQ</a><a href="https://findspreadsheet.com/">Catalog by FindSpreadsheet ↗</a><a href={registration} rel="sponsored noopener" target="_blank">Open LoveGoBuy ↗</a></div>
     </div>
+    <p class="currency-attribution">Reference rates · 2026-11-24 · <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener">Rates By Exchange Rate API</a></p>
   </footer>
 </body>
 </html>

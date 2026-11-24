@@ -41,7 +41,9 @@ function writeLocation() {
 }
 
 function filterRows(all: Product[]) {
-  const keywords = query.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+  const value = query.value.trim();
+  const item = value.match(/(?:itemID|[?&]id|product_id)=([0-9]{5,20})/i)?.[1];
+  const keywords = (item || value).toLowerCase().split(/\s+/).filter(Boolean);
   const rows = all.filter(p => {
     const text = [p.name, productName(p.weidianId, p.name), p.weidianId, categoryLabel(p.category)].join(" ").toLowerCase();
     return (!category || p.category === category) && keywords.every(word => text.includes(word));

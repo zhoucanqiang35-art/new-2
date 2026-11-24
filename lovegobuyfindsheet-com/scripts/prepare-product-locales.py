@@ -33,3 +33,4 @@ for locale in sorted((public / "locales").glob("*.json")):
         encoding="utf-8",
     )
 print(f"Prepared product translations for {len(catalog)} items")
+

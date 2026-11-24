@@ -1,9 +1,10 @@
 import languages from "../languages.json";
+import {currencyForLanguage, setCurrency, refreshPrices} from "./currency";
 import {loadProductNames, productName, useProductNames} from "./product-names";
 
 type Dictionary = Record<string, string>;
 type AttrValue = {source: string; rendered: string};
-const dialog = document.querySelector<HTMLDialogElement>("#language-dialog")!;
+const dialog = document.querySelector<HTMLElement>("#language-dialog")!;
 const trigger = document.querySelector<HTMLButtonElement>("#open-language")!;
 const current = document.querySelector<HTMLElement>("#current-language")!;
 const title = document.querySelector<HTMLElement>("#language-title")!;
@@ -102,6 +103,7 @@ function apply() {
         if (document.title !== pageTitle) document.title = pageTitle;
       }
     }
+    refreshPrices();
     for (const element of document.querySelectorAll("[aria-label],[alt],[placeholder],[title],meta[name=description]")) {
       if (element.closest(excluded)) continue;
       for (const attribute of element.matches("meta") ? ["content"] : localizedAttributes) localizedAttr(element, attribute);
@@ -120,7 +122,7 @@ const observer = new MutationObserver(() => {
 function preference() {
   const url = new URL(location.href).searchParams.get("lang");
   if (url && languages.some(entry => entry.code === url)) return url;
-  try { return localStorage.getItem("lovegobuy-language") ?? "en"; }
+  try { return sessionStorage.getItem("lovegobuy-language") ?? "en"; }
   catch { return "en"; }
 }
 
@@ -147,6 +149,10 @@ async function select(code: string, save = false) {
     dictionary = loaded;
     useProductNames(products);
     active = selected.code;
+    let currency = currencyForLanguage(active);
+    if (!save) { try { currency = sessionStorage.getItem("lovegobuy-currency") || currency; } catch {} }
+    else { try { sessionStorage.removeItem("lovegobuy-currency"); } catch {} }
+    setCurrency(currency, active);
     document.documentElement.lang = selected.code;
     document.documentElement.dir = selected.dir;
     current.textContent = selected.name;
@@ -156,12 +162,12 @@ async function select(code: string, save = false) {
     for (const button of options) button.setAttribute("aria-pressed", String(button.dataset.language === selected.code));
     apply();
     document.dispatchEvent(new Event("catalog-language-changed"));
-    try { localStorage.setItem("lovegobuy-language", selected.code); } catch {}
+    try { sessionStorage.setItem("lovegobuy-language", selected.code); } catch {}
     if (save) {
       const url = new URL(location.href);
       url.searchParams.set("lang", selected.code);
       history.replaceState(history.state, "", url);
-      dialog.close();
+      closeMenus();
     }
   } catch {
     if (request !== sequence) return;
@@ -172,7 +178,45 @@ async function select(code: string, save = false) {
   }
 }
 
-trigger.addEventListener("click", () => dialog.showModal());
+const currencyMenu = document.querySelector<HTMLElement>("#currency-menu")!;
+const currencyTrigger = document.querySelector<HTMLButtonElement>("#open-currency")!;
+function closeMenus() {
+  dialog.hidden = true;
+  currencyMenu.hidden = true;
+  trigger.setAttribute("aria-expanded", "false");
+  currencyTrigger.setAttribute("aria-expanded", "false");
+}
+trigger.addEventListener("click", () => {
+  const open = dialog.hidden;
+  closeMenus();
+  dialog.hidden = !open;
+  trigger.setAttribute("aria-expanded", String(open));
+});
+close.addEventListener("click", () => { closeMenus(); trigger.focus(); });
+currencyTrigger.addEventListener("click", () => {
+  const open = currencyMenu.hidden;
+  closeMenus();
+  currencyMenu.hidden = !open;
+  currencyTrigger.setAttribute("aria-expanded", String(open));
+});
+for (const button of document.querySelectorAll<HTMLButtonElement>("[data-currency]")) {
+  button.addEventListener("click", () => {
+    const code = button.dataset.currency!;
+    setCurrency(code);
+    try { sessionStorage.setItem("lovegobuy-currency", code); } catch {}
+    closeMenus();
+    currencyTrigger.focus();
+  });
+}
+document.addEventListener("click", event => {
+  if (!(event.target instanceof Element) || !event.target.closest(".language-picker,.currency-picker")) closeMenus();
+});
+document.addEventListener("keydown", event => {
+  if (event.key !== "Escape") return;
+  const focus = !dialog.hidden ? trigger : !currencyMenu.hidden ? currencyTrigger : null;
+  closeMenus();
+  focus?.focus();
+});
 for (const button of options) button.addEventListener("click", () => void select(button.dataset.language!, true));
 addEventListener("popstate", () => void select(preference()));
 void select(preference());

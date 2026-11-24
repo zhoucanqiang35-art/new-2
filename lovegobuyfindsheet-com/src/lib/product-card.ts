@@ -14,7 +14,10 @@ export function productCard(product: Product, imageUrl?: string) {
   title.dataset.productName = product.weidianId;
   title.textContent = product.name;
   card.querySelector(".product-tag")!.textContent = categoryLabel(product.category);
-  card.querySelector(".product-price span")!.textContent = priceLabel(product.price);
+  const amount = card.querySelector<HTMLElement>(".product-price span")!;
+  amount.dataset.priceCny = product.price;
+  amount.dataset.i18nIgnore = "";
+  amount.textContent = priceLabel(product.price);
   return card;
 }
 
