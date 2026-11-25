@@ -87,12 +87,11 @@ html :is(a, button, input, summary):focus-visible { outline: 2px solid var(--joy
   background: var(--joy-ink);
   box-shadow: 0 12px 32px #0007;
 }
-.preference-grid, .preference-extra {
+.preference-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: .35rem;
 }
-.preference-extra { margin-top: .45rem; padding-top: .45rem; border-top: 1px solid var(--joy-border); }
 .preference-panel button {
   min-height: 34px;
   padding: .35rem .45rem;

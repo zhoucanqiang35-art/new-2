@@ -1,7 +1,7 @@
 (()=>{
  const names={en:'English',de:'Deutsch',fr:'Français',es:'Español',it:'Italiano',pt:'Português',nl:'Nederlands',pl:'Polski',sv:'Svenska',zh:'中文'};
  Object.assign(names,{"fi": "Suomi · partial", "da": "Dansk · partial", "nb": "Norsk bokmål · partial", "cs": "Čeština · partial", "sk": "Slovenčina · partial", "hu": "Magyar · partial", "ro": "Română · partial", "el": "Ελληνικά · partial", "tr": "Türkçe · partial", "uk": "Українська · partial", "ar": "العربية · partial", "ja": "日本語 · partial", "ko": "한국어 · partial", "vi": "Tiếng Việt · partial"});
- delete names.sk;delete names.vi;names.ru='Русский · partial';names.id='Bahasa Indonesia · partial';
+ delete names.sk;delete names.vi;
  const menu=document.querySelector('.language');if(!menu)return;
  menu.innerHTML=Object.entries(names).map(([k,v])=>`<option value="${k}">${v}</option>`).join('');menu.classList.add('notranslate');menu.setAttribute('translate','no');
  let selected='en';try{selected=localStorage.getItem('joyagoo-language')||'en'}catch(e){}if(!names[selected])selected='en';menu.value=selected;
