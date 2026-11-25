@@ -44,14 +44,15 @@ function otherAgentLinks(id){
  ['Panglobalbuy','https://panglobalbuy.com/#/details?type=3&offerId='+id+'&share_id=14918']
  ];
 }
-function setupDetailActions(p){
+function setupDetailActions(){
  const container=root.querySelector('.detail-actions');if(!container)return;
  const menu=document.querySelector('.language'),summary=container.querySelector('summary'),copy=container.querySelector('[data-copy-weidian]'),status=container.querySelector('[data-copy-status]');
+ const sourceLink=container.querySelector('.detail-agent-source');
  const text=()=>actionText[menu?.value]||actionText.en;
- const sync=()=>{summary.textContent=text()[0]+' ▾';copy.textContent=text()[1];status.textContent=''};
+ const sync=()=>{summary.textContent=text()[0]+' ▾';copy.textContent=text()[1];sourceLink.textContent=menu?.value==='zh'?'打开微店商品原页':'Open original Weidian listing';status.textContent=''};
  menu?.addEventListener('change',sync);sync();
  copy.addEventListener('click',async()=>{
-  const value='https://weidian.com/item.html?itemID='+p.weidianId;
+  const value=sourceLink.href;
   try{if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(value);else{const el=document.createElement('textarea');el.value=value;el.setAttribute('readonly','');el.style.position='fixed';el.style.opacity='0';document.body.appendChild(el);el.select();const ok=document.execCommand('copy');el.remove();if(!ok)throw Error('copy unavailable')}status.textContent=text()[2]}
   catch(e){status.textContent=text()[3]}
  });
@@ -67,6 +68,7 @@ function details(p) {
  });
  const listingPhotos = photoUrls([p.image, ...(p.weidianImages || []), ...(p.sourceImages || [])]);
  const qcPhotos = photoUrls(p.qcImages || []);
+ const original = 'https://weidian.com/item.html?itemID=' + encodeURIComponent(p.weidianId);
  const detailPhotos = photoUrls([...(p.sourceImages || []), ...listingPhotos]);
  let activePhoto = listingPhotos[0];
  let images = listingPhotos;
@@ -96,7 +98,9 @@ function details(p) {
         `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">
          <img src="/assets/agents/${esc(name.toLowerCase())}.webp" alt="" width="24" height="24" loading="lazy">
          <span>${esc(name)}</span>
-        </a>`).join('')}</div>
+        </a>`).join('')}
+        <a class="detail-agent-source" href="${esc(original)}" target="_blank" rel="noopener noreferrer">Open original Weidian listing</a>
+       </div>
       </details>
       <button type="button" class="detail-copy" data-copy-weidian>Copy Weidian link</button>
       <span class="detail-copy-status" data-copy-status role="status"></span>
@@ -110,9 +114,10 @@ function details(p) {
   </section>
   <section class="detail-photos detail-qc" hidden>
    <h2>QC photos</h2>
+   <p class="detail-qc-status notranslate" translate="no" role="status" hidden></p>
    <div class="detail-photo-grid"></div>
   </section>`;
- setupDetailActions(p);
+ setupDetailActions();
 
  const photo = root.querySelector('#detail-photo');
  const thumbs = root.querySelector('.detail-thumbs');
@@ -154,6 +159,48 @@ function details(p) {
  drawPhotoGrid('.detail-photos', detailPhotos);
  drawPhotoGrid('.detail-qc', qcPhotos);
  if (!valid) return;
+ if (!qcPhotos.length && /^\d{5,18}$/.test(String(p.weidianId))) {
+  const section = root.querySelector('.detail-qc');
+  const status = section.querySelector('.detail-qc-status');
+  const language = document.querySelector('select.language');
+  const messages = {
+   loading: ['Checking for QC photos…', '正在查询验货图…'],
+   none: ['No QC photos are available for this item.', '这个商品暂无验货图。'],
+   pending: ['QC photos are being processed. Check again later.', '验货图正在处理，请稍后查看。'],
+   unavailable: ['QC photos could not be checked. Try again later.', '暂时无法查询验货图，请稍后再试。']
+  };
+  let state = 'loading';
+  function showQcStatus() {
+   status.hidden = state === 'ready';
+   if (status.hidden) return;
+   section.hidden = false;
+   status.textContent = messages[state][language?.value === 'zh' ? 1 : 0];
+  }
+  language?.addEventListener('change', showQcStatus);
+  showQcStatus();
+  fetch('/api/qc?item=' + encodeURIComponent(p.weidianId), {signal:AbortSignal.timeout(8500)})
+   .then(response => {
+    if (!response.ok) throw Error('QC unavailable');
+    return response.json();
+   })
+   .then(record => {
+    if (record.itemId !== String(p.weidianId) || !Array.isArray(record.images)) throw Error('QC response invalid');
+    if (record.status === 'ready') {
+     const images = photoUrls(record.images);
+     if (!images.length) throw Error('QC images unavailable');
+     drawPhotoGrid('.detail-qc', images);
+     state = 'ready';
+    } else {
+     state = ['none', 'pending'].includes(record.status) ? record.status : 'unavailable';
+    }
+    showQcStatus();
+   })
+   .catch(() => {
+    state = 'unavailable';
+    showQcStatus();
+   });
+ }
+
 
  const endpoint = 'https://findspreadsheet.com/api/Goods/getSkuData?weidian_id=' + encodeURIComponent(p.weidianId);
  fetch(endpoint, {credentials:'omit', signal:AbortSignal.timeout(8000)})

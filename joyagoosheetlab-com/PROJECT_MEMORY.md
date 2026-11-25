@@ -564,3 +564,5 @@
 2026-11-25: Added locally served WebP logos to the 18 existing alternate purchasing agent links in every product detail using the shared catalogue renderer. Kept the two-column scrollable panel and existing product destinations.
 
 2026-11-25: Restored the homepage category anchor used by footer links. Checked all 15 category routes, catalogue search by Weidian ID, sorting, pagination, language/currency switching, listing photos, seller options, copy link, and a real image search in the browser.
+
+2026-11-25: Added an original Weidian listing link to the alternate buying agents panel. Connected product details to the main site warehouse QC endpoint through a same-origin Pages Function, with item ID validation and separate unavailable, pending, and no-photo messages. Verified the upstream has 12 QC photos for Weidian 7321418559 (Joyagoo product 7046). The Function is scoped to /api/qc via the output routing manifest.
