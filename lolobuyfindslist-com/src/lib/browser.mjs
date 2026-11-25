@@ -57,22 +57,41 @@ async function currentQc(id) {
   return record;
 }
 
+export async function getQcRecord(id) {
+  const live = await currentQc(id).catch(() => null);
+  const saved = !live || live.status === 'pending' ? await savedQc(id).catch(() => null) : null;
+  if (saved?.images?.length) return {photos: saved.images, historical: true, status: 'ready'};
+  return {photos: live?.images ?? [], historical: false, status: live?.status};
+}
+
+export function photoGrid(photos, label, fallbackUrl = '', onEmpty) {
+  return element('div', {className: 'qc-grid'}, photos.map(({url, agent}, index) => {
+    const alt = label + ' ' + (index + 1) + (agent ? ' · ' + agent : '');
+    const image = element('img', {src: url, loading: 'lazy', decoding: 'async', alt});
+    const link = external('', url);
+    link.append(image);
+    image.addEventListener('error', () => {
+      link.hidden = true;
+      if (!link.parentElement || ![...link.parentElement.children].every((child) => child.hidden)) return;
+      if (fallbackUrl && image.getAttribute('src') !== fallbackUrl) {
+        image.src = fallbackUrl;
+        link.href = fallbackUrl;
+        link.hidden = false;
+      } else {
+        onEmpty?.();
+      }
+    });
+    return link;
+  }));
+}
+
 export async function showQc(target, id, sourcePath = '') {
   target.textContent = 'Checking warehouse QC photos…';
-  const live = await currentQc(id).catch(() => null);
-  const saved = live ? null : await savedQc(id).catch(() => null);
+  const {photos, historical, status} = await getQcRecord(id);
   if (target.dataset.item && target.dataset.item !== id) return;
-  const photos = live?.images ?? saved?.images ?? [];
   if (photos.length) {
-    const description = live ? 'Warehouse QC photos for Weidian item ' : 'Historical warehouse photos for Weidian item ';
-    target.replaceChildren(element('p', {textContent: description + id + '.'}),
-      element('div', {className: 'qc-grid'}, photos.map(({url, agent}, index) => {
-        const alt = 'Warehouse QC photo ' + (index + 1) + (agent ? ' · ' + agent : '');
-        const image = element('img', {src: url, loading: 'lazy', decoding: 'async', alt});
-        const link = external('', url);
-        link.append(image);
-        return link;
-      })));
+    const description = historical ? 'Historical warehouse photos for Weidian item ' : 'Warehouse QC photos for Weidian item ';
+    target.replaceChildren(element('p', {textContent: description + id + '.'}), photoGrid(photos, 'Warehouse QC photo'));
     return;
   }
 
@@ -80,6 +99,6 @@ export async function showQc(target, id, sourcePath = '') {
     none: 'FindSpreadsheet has no published warehouse QC photos for this item.',
     pending: 'The warehouse QC photos are still processing.',
   };
-  target.replaceChildren(element('p', {textContent: message[live?.status] ?? 'Warehouse QC photos could not load. Try again in a moment.'}));
+  target.replaceChildren(element('p', {textContent: message[status] ?? 'Warehouse QC photos could not load. Try again in a moment.'}));
   if (sourcePath) target.append(external('Check the current listing on Findspreadsheet', new URL(sourcePath, sourceOrigin).href));
 }

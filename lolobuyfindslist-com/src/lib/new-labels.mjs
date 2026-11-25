@@ -58,6 +58,9 @@ export function newLabels(code) {
     'Check styles and sizes on LoloBuy': '到 LoloBuy 查看款式和尺码',
     'Confirm your selected options and stock on the purchase page.': '请在购买页确认所选款式、尺码及库存。',
     'This option is listed as out of stock. Confirm on the purchase page.': '此规格显示缺货，请以购买页为准。',
+    'Detail photos': '商品详情图', 'Seller listing photos from FindSpreadsheet.': '图片来自 FindSpreadsheet 的商品图集。',
+    'Previous product image': '上一张商品图', 'Next product image': '下一张商品图',
+    'Warehouse QC photos for Weidian item ZZ1ZZ.': '微店商品 ZZ1ZZ 的仓库质检照片。',
     'Back to the spreadsheet': '返回商品表', 'Hoodies & Sweaters': '连帽衫和毛衣',
   });
   return translated;

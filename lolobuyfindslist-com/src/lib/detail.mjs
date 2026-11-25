@@ -1,4 +1,4 @@
-import {element, external, readJson, referencePrice, showQc} from './browser.mjs';
+import {element, external, getQcRecord, photoGrid, readJson, referencePrice} from './browser.mjs';
 import {categoryLabel, originalUrl, parseId, productImage, sourceOrigin} from './catalog.mjs';
 import {agents, priceFor, purchaseFor, savedItems, shoppingOptions, toggleSaved} from './shopping.mjs';
 import {loadProductOptions, showProductOptions} from './product-options.mjs';
@@ -6,7 +6,7 @@ import {loadProductOptions, showProductOptions} from './product-options.mjs';
 const target = document.querySelector('#product-detail');
 const id = parseId(new URLSearchParams(location.search).get('id') ?? '');
 
-function gallery(product, images) {
+function gallery(product, images, onPhotos) {
   const primary = productImage(product);
   const cover = element('img', {src: primary, alt: product.name, className: 'detail-image', fetchPriority: 'high'});
   cover.addEventListener('error', () => {
@@ -16,9 +16,26 @@ function gallery(product, images) {
   const count = element('span', {className: 'gallery-count'});
   const stage = element('div', {className: 'listing-stage'}, [cover, count]);
   stage.setAttribute('aria-label', 'Seller photos');
-  const node = element('div', {className: 'listing-gallery'}, [stage, thumbs]);
+  const previous = element('button', {type: 'button', className: 'listing-gallery-nav', textContent: '‹'});
+  const next = element('button', {type: 'button', className: 'listing-gallery-nav', textContent: '›'});
+  previous.setAttribute('aria-label', 'Previous product image');
+  next.setAttribute('aria-label', 'Next product image');
+  const controls = element('div', {className: 'listing-gallery-controls'}, [previous, thumbs, next]);
+  const node = element('div', {className: 'listing-gallery'}, [stage, controls]);
   let photos = [];
   let active = primary;
+  function move(direction) {
+    const available = [...thumbs.children].filter((thumb) => !thumb.hidden);
+    if (!available.length) return;
+    const index = available.findIndex((thumb) => thumb.dataset.image === active);
+    const nextIndex = index === -1 ? (direction > 0 ? 0 : available.length - 1)
+      : (index + direction + available.length) % available.length;
+    const button = available[nextIndex];
+    select(button.dataset.image);
+    button.scrollIntoView({block: 'nearest', inline: 'nearest'});
+  }
+  previous.addEventListener('click', () => move(-1));
+  next.addEventListener('click', () => move(1));
 
   function select(url, option = false) {
     active = url;
@@ -41,6 +58,8 @@ function gallery(product, images) {
       return button;
     }) : [];
     thumbs.replaceChildren(...buttons);
+    controls.hidden = photos.length < 2;
+    onPhotos(photos);
     select(preferSource ? photos[0] : photos.includes(active) ? active : photos[0]);
   }
   setPhotos(images);
@@ -98,6 +117,39 @@ function copyProductLink(id) {
   return [button, status];
 }
 
+function detailPhotos(product) {
+  const heading = element('h2', {textContent: 'Detail photos'});
+  const description = element('p', {textContent: 'Seller listing photos from FindSpreadsheet.'});
+  const section = element('section', {className: 'listing-qc', id: 'warehouse-qc'});
+  section.dataset.photoSource = 'listing';
+  section.append(heading, description);
+  let listingUrls = [];
+
+  function showListing(urls) {
+    listingUrls = urls;
+    if (section.dataset.photoSource !== 'listing') return;
+    heading.textContent = 'Detail photos';
+    description.textContent = 'Seller listing photos from FindSpreadsheet.';
+    const images = urls.map((url) => ({url}));
+    section.replaceChildren(heading, description, photoGrid(images, 'Seller listing photo', productImage(product)));
+  }
+
+  async function showVerified() {
+    const {photos, historical} = await getQcRecord(product.weidianId);
+    if (!photos.length) return;
+    section.dataset.photoSource = 'warehouse';
+    heading.textContent = 'Warehouse QC photos';
+    description.textContent = historical ? 'Historical warehouse photos for Weidian item ' + product.weidianId + '.'
+      : 'Warehouse QC photos for Weidian item ' + product.weidianId + '.';
+    section.replaceChildren(heading, description, photoGrid(photos, 'Warehouse QC photo', '', () => {
+      section.dataset.photoSource = 'listing';
+      showListing(listingUrls);
+    }));
+  }
+
+  return {section, showListing, showVerified};
+}
+
 function render(product, photos) {
   document.title = product.name + ' | LoloBuy Findslist';
   const buy = external('', '', 'button dark');
@@ -122,7 +174,8 @@ function render(product, photos) {
   updateSaved();
   const estimate = referencePrice(product.price);
   const options = element('div', {className: 'listing-options', textContent: 'Loading listing options…'});
-  const media = gallery(product, photos);
+  const galleryPanel = detailPhotos(product);
+  const media = gallery(product, photos, galleryPanel.showListing);
   const categoryPath = '/spreadsheet/?category=' + encodeURIComponent(product.category);
   const title = element('header', {className: 'listing-title'}, [
     element('a', {textContent: categoryLabel(product.category), href: categoryPath}),
@@ -142,19 +195,13 @@ function render(product, photos) {
       external('View on FindSpreadsheet', new URL(product.sourcePath, sourceOrigin).href),
     ]),
   ]);
-  const qcStatus = element('div', {className: 'result-status'});
-  qcStatus.setAttribute('role', 'status');
-  const qc = element('section', {className: 'listing-qc', id: 'warehouse-qc'}, [
-    element('h2', {textContent: 'Warehouse QC photos'}),
-    qcStatus,
-  ]);
   const comparison = element('div', {className: 'listing-layout', id: 'listing-media'}, [
     media.node,
     info,
   ]);
-  target.replaceChildren(comparison, qc);
+  target.replaceChildren(comparison, galleryPanel.section);
   if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
-  void showQc(qcStatus, id, product.sourcePath);
+  void galleryPanel.showVerified();
   loadProductOptions(id).catch(() => null).then((data) => {
     if (data?.images.length) media.setPhotos(data.images, true);
     showProductOptions(options, data, id, (image, amount) => {

@@ -685,3 +685,20 @@ body[data-page="home"] > .edit-footer { grid-area: 4 / 1; }
   .cover-content .search-examples { margin-top: 6px; }
 }
 .sku-image-options .sku-option-no-image span { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
+
+.listing-gallery-controls { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 5px; }
+.listing-gallery-controls[hidden] { display: none; }
+.listing-gallery-nav {
+  inline-size: 34px;
+  block-size: 38px;
+  padding: 0;
+  border: 1px solid var(--edge);
+  border-radius: 4px;
+  background: var(--paper);
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.listing-gallery-nav:hover { background: var(--brand-warm); }
+[dir="rtl"] .listing-gallery-nav { transform: scaleX(-1); }
+.listing-qc > p { margin-top: 5px; color: var(--muted); }
+.qc-grid a[hidden] { display: none; }
