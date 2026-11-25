@@ -4,6 +4,7 @@ import {productCard} from './catalog-client.mjs';
 import {showQc} from './qc-client.mjs';
 import {setProductImage} from './product-images.mjs';
 import {findCatalogItem} from './catalog-item.mjs';
+import {lookupProductOptions} from './upstream.mjs';
 
 function relatedProducts(item, items) {
   const words = new Set(item.title.toLowerCase().match(/[a-z0-9]{4,}/g) || []);
@@ -274,9 +275,14 @@ export function setupDetail() {
     const query = new URLSearchParams({id, from});
     const read = (url, timeout) => fetch(url, {signal:AbortSignal.timeout(timeout)})
       .then((res) => res.ok ? res.json() : null).catch(() => null);
-    const readOptions = (itemId) => itemId
-      ? read('/api/sku?id=' + encodeURIComponent(itemId), 6500).then((data) => data?.listing)
-      : Promise.resolve(undefined);
+    async function readOptions(itemId) {
+      if (!itemId) return;
+      try {
+        const listing = await lookupProductOptions(itemId);
+        if (listing) return listing;
+      } catch {}
+      return (await read('/api/sku?id=' + encodeURIComponent(itemId), 5500))?.listing;
+    }
     const optionsRequest = id ? readOptions(id) : null;
     async function updateSellerOptions(item) {
       const options = await (optionsRequest ?? readOptions(item.id));
@@ -300,22 +306,29 @@ export function setupDetail() {
       if (saved.gallery?.length > 1) return;
       if (saved.path) query.set('from', saved.path);
     }
-    const live = await read('/api/product?' + query, 5500);
+    const liveRequest = read('/api/product?' + query, 5500);
+    if (!saved && id) {
+      const options = await optionsRequest;
+      if (options) {
+        sellerOptions = options;
+        render({id, title:options.title, price:options.price});
+        renderSellerOptions(options.groups);
+      }
+    }
+    const live = await liveRequest;
     if (live?.product) {
       const gallery = [...new Set([...(live.product.gallery || []), ...(saved?.gallery || [])])];
       const item = {...saved, ...live.product, gallery};
       render(item);
       if (!saved) {
-        void updateSellerOptions(item);
+        if (!sellerOptions) void updateSellerOptions(item);
         void items().then((all) => renderRelated(product, all));
       }
-    } else if (!saved && id) {
-      if (!await updateSellerOptions({id})) {
-        render({id, title: 'Weidian item ' + id});
-        status.hidden = false;
-        status.textContent = 'Open the original listing to review this item.';
-      }
-    } else if (!saved) {
+    } else if (!saved && id && !sellerOptions) {
+      render({id, title: 'Weidian item ' + id});
+      status.hidden = false;
+      status.textContent = 'Open the original listing to review this item.';
+    } else if (!saved && !product) {
       status.textContent = 'The product could not be loaded. Return to the spreadsheet and try again.';
     }
   }
