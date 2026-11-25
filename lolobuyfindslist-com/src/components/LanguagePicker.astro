@@ -1,17 +1,13 @@
 ---
 import {languages} from '../lib/languages.mjs';
 import {currencies, rateDate} from '../lib/shopping.mjs';
-const [english, ...otherLanguages] = languages;
 ---
 <div class="locale-controls">
   <details class="choice-menu" id="language-menu">
     <summary aria-label="Website language"><span id="current-language" lang="en" translate="no">English</span></summary>
     <div class="choice-panel">
-      <div class="language-default">
-        <button class="choice-tile" type="button" data-language={english[0]} lang={english[0]} translate="no" aria-pressed="true">{english[1]}</button>
-      </div>
       <div class="choice-grid" aria-label="Website language">
-        {otherLanguages.map(([code, label]) => <button class="choice-tile" type="button" data-language={code} lang={code} translate="no" aria-pressed="false">{label}</button>)}
+        {languages.map(([code, label]) => <button class="choice-tile" type="button" data-language={code} lang={code} translate="no" aria-pressed={code === 'en' ? 'true' : 'false'}>{label}</button>)}
       </div>
     </div>
   </details>
@@ -159,6 +155,7 @@ const [english, ...otherLanguages] = languages;
   showCurrency();
   try {
     const stored = localStorage.getItem(storageKey);
-    if (stored && knownCodes.has(stored) && stored !== 'en') void setLanguage(stored);
+    if (stored === 'zh-Hant') void setLanguage('zh-Hans');
+    else if (stored && knownCodes.has(stored) && stored !== 'en') void setLanguage(stored);
   } catch {}
 </script>

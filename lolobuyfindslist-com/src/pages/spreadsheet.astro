@@ -9,11 +9,17 @@ import {categories} from '../lib/catalog.mjs';
     <div class="spreadsheet-layout">
       <form id="filters" class="spreadsheet-filters" action="/spreadsheet/">
 
-        <label for="query">Search</label><input id="query" name="q" placeholder="Name, ID or link" />
+        <label for="query">Search</label><input id="query" name="q" type="search" placeholder="Name, item ID or link" aria-describedby="catalog-search-examples" />
         <label for="category">Category</label><select id="category" name="category"><option value="">All categories</option>{Object.entries(categories).map(([key, label]) => <option value={key}>{label}</option>)}</select>
         <label for="sort">Sort by</label><select id="sort" name="sort"><option value="latest">Latest in snapshot</option><option value="oldest">Oldest in snapshot</option><option value="price-low">Price low to high</option><option value="price-high">Price high to low</option></select>
         <button class="button dark" type="submit">Apply filters</button>
         <label class="catalog-qc-filter"><input type="checkbox" id="qc-only" name="qc" value="1" /> With warehouse QC</label>
+        <div id="catalog-search-examples" class="search-examples">
+          <span>Try a search</span>
+          <a href="/spreadsheet/?q=hoodie">Hoodie</a>
+          <a href="/spreadsheet/?q=Nike" translate="no">Nike</a>
+          <a href="/spreadsheet/?q=7321418559" translate="no">7321418559</a>
+        </div>
       </form>
       <div class="spreadsheet-list">
         <div class="directory-toolbar">

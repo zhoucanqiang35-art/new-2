@@ -458,8 +458,6 @@ body[data-page="home"] > .edit-footer { grid-area: 4 / 1; }
   scrollbar-gutter: stable;
   padding: 3px;
 }
-.language-default { padding: 3px 3px 6px; }
-.language-default .choice-tile { width: 100%; }
 .choice-tile {
   display: flex;
   align-items: center;
@@ -534,7 +532,7 @@ body[data-page="home"] > .edit-footer { grid-area: 4 / 1; }
 #product-detail { margin-top: 13px; }
 .listing-layout { gap: clamp(18px,4vw,50px); }
 .listing-gallery, .listing-qc { background: none; border: 0; padding: 0; }
-.listing-gallery .detail-image { border-radius: 9px; aspect-ratio: 1.08; }
+.listing-gallery .detail-image { border-radius: 6px; aspect-ratio: 1.16; }
 .listing-gallery .thumbs img { object-fit: contain; }
 .listing-purchase { display: grid; gap: 12px; padding: 0; min-width: 0; background: none; }
 .listing-title { margin: 0; }
@@ -554,7 +552,7 @@ body[data-page="home"] > .edit-footer { grid-area: 4 / 1; }
 .listing-qc .qc-grid img { border: 1px solid var(--edge); border-radius: 6px; }
 @media (max-width: 720px) {
   .listing-layout { grid-template-columns: 1fr; gap: 15px; }
-  .listing-gallery .detail-image { aspect-ratio: 1.35; }
+  .listing-gallery .detail-image { aspect-ratio: 1.25; }
   .listing-qc .qc-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
 
@@ -615,3 +613,75 @@ body[data-page="home"] > .edit-footer { grid-area: 4 / 1; }
   .home-guide details[open] > summary { grid-template-columns: minmax(0, 1fr) auto; min-height: 38px; }
   .home-guide details[open] .guide-shot-compact { display: none; }
 }
+
+.search-examples {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px 7px;
+  font-size: .84rem;
+}
+.search-examples a {
+  padding: 2px 8px;
+  border: 1px solid var(--edge);
+  border-radius: 5px;
+  text-decoration: none;
+}
+.search-examples a:hover { text-decoration: underline; }
+.cover-content .search-examples { margin-top: 9px; color: #fff0e0; }
+.cover-content .search-examples a { border-color: #ffce8d81; background: #2a160c99; }
+.cover-content .search-examples a:hover { color: #ffca77; }
+.spreadsheet-filters .search-examples { grid-column: 1 / -1; }
+
+.listing-stage { position: relative; }
+.listing-stage .gallery-count {
+  position: absolute;
+  inset-block-end: 9px;
+  inset-inline-end: 9px;
+  padding: 3px 8px;
+  border: 1px solid var(--edge);
+  border-radius: 4px;
+  background: var(--paper);
+  font-size: .78rem;
+  font-variant-numeric: tabular-nums;
+}
+.listing-gallery .thumbs { padding-inline: 3px; }
+.listing-options { color: var(--muted); font-size: .88rem; }
+.sku-group { min-width: 0; padding: 0; border: 0; margin: 0 0 12px; color: var(--ink); }
+.sku-group legend { padding: 0; margin-bottom: 6px; font-weight: 750; }
+.sku-selection { margin-inline-start: 8px; color: var(--muted); font-weight: 400; }
+.sku-image-options, .sku-text-options { display: grid; gap: 5px; padding: 3px; }
+.sku-image-options {
+  grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
+  max-height: 198px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+.sku-text-options { display: flex; flex-wrap: wrap; }
+.sku-option {
+  display: grid;
+  place-items: center;
+  position: relative;
+  min-width: 34px;
+  min-height: 34px;
+  padding: 3px 6px;
+  border: 1px solid var(--edge);
+  border-radius: 4px;
+  background: #fff;
+  font-size: .84rem;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+.sku-image-options .sku-option { aspect-ratio: 1; padding: 2px; }
+.sku-option img { display: block; width: 100%; height: 100%; min-height: 0; object-fit: contain; }
+.sku-option[aria-pressed=true], .sku-option:hover { border-color: var(--accent); background: var(--brand-warm); }
+.sku-option:focus-visible { outline-offset: -2px; }
+.sku-photo-label { position: absolute; inset-inline: 2px; inset-block-end: 2px; padding: 1px 2px; background: #fffcf8e8; font-size: .71rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.listing-option-note { font-size: .86rem; }
+.listing-option-note a { color: var(--deep); }
+@media (max-width: 720px) {
+  .cover-search input { font-size: .9rem; }
+  .cover-content .search-examples { margin-top: 6px; }
+}
+.sku-image-options .sku-option-no-image span { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }

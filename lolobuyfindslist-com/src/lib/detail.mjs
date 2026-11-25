@@ -1,33 +1,50 @@
 import {element, external, readJson, referencePrice, showQc} from './browser.mjs';
 import {categoryLabel, originalUrl, parseId, productImage, sourceOrigin} from './catalog.mjs';
-import {agents, purchaseFor, savedItems, shoppingOptions, toggleSaved} from './shopping.mjs';
+import {agents, priceFor, purchaseFor, savedItems, shoppingOptions, toggleSaved} from './shopping.mjs';
+import {loadProductOptions, showProductOptions} from './product-options.mjs';
 
 const target = document.querySelector('#product-detail');
 const id = parseId(new URLSearchParams(location.search).get('id') ?? '');
 
 function gallery(product, images) {
   const primary = productImage(product);
-  const photos = [...new Set([...images.map((url) => url === product.image ? primary : url), primary])];
-  const cover = element('img', {src: photos[0], alt: product.name, className: 'detail-image', fetchPriority: 'high'});
+  const cover = element('img', {src: primary, alt: product.name, className: 'detail-image', fetchPriority: 'high'});
   cover.addEventListener('error', () => {
-    if (cover.getAttribute('src') !== primary) cover.src = primary;
+    if (cover.getAttribute('src') !== primary) select(primary);
   });
   const thumbs = element('div', {className: 'thumbs'});
-  const count = element('span', {className: 'gallery-count', textContent: '1 / ' + photos.length});
-  for (const [index, url] of photos.entries()) {
-    if (photos.length < 2) break;
-    const button = element('button', {type: 'button'}, [element('img', {src: url, alt: '', loading: 'lazy'})]);
-    button.setAttribute('aria-label', 'View seller photo ' + (index + 1));
-    button.setAttribute('aria-pressed', String(index === 0));
-    button.addEventListener('click', () => {
-      cover.src = url;
-      count.textContent = (index + 1) + ' / ' + photos.length;
-      for (const thumb of thumbs.children) thumb.setAttribute('aria-pressed', String(thumb === button));
-    });
-    thumbs.append(button);
+  const count = element('span', {className: 'gallery-count'});
+  const stage = element('div', {className: 'listing-stage'}, [cover, count]);
+  stage.setAttribute('aria-label', 'Seller photos');
+  const node = element('div', {className: 'listing-gallery'}, [stage, thumbs]);
+  let photos = [];
+  let active = primary;
+
+  function select(url, option = false) {
+    active = url;
+    cover.src = url;
+    const index = photos.indexOf(url);
+    count.textContent = index < 0 || option ? '' : (index + 1) + ' / ' + photos.length;
+    count.hidden = !count.textContent || photos.length < 2;
+    count.setAttribute('aria-hidden', String(count.hidden));
+    for (const thumb of thumbs.children) thumb.setAttribute('aria-pressed', String(!option && thumb.dataset.image === url));
   }
-  const label = element('div', {className: 'gallery-label'}, [element('strong', {textContent: 'Seller photos'}), count]);
-  return element('div', {className: 'listing-gallery'}, [label, cover, thumbs]);
+  function setPhotos(newImages, preferSource = false) {
+    const galleryImages = preferSource ? newImages : [...newImages, primary];
+    photos = [...new Set(galleryImages.map((url) => url === product.image ? primary : url))];
+    const buttons = photos.length > 1 ? photos.map((url, index) => {
+      const button = element('button', {type: 'button'}, [element('img', {src: url, alt: '', loading: 'lazy'})]);
+      button.dataset.image = url;
+      button.firstElementChild.addEventListener('error', () => { button.hidden = true; }, {once: true});
+      button.setAttribute('aria-label', 'View seller photo ' + (index + 1));
+      button.addEventListener('click', () => select(url));
+      return button;
+    }) : [];
+    thumbs.replaceChildren(...buttons);
+    select(preferSource ? photos[0] : photos.includes(active) ? active : photos[0]);
+  }
+  setPhotos(images);
+  return {node, setPhotos, selectStyle: (url) => { if (url) select(url, true); }};
 }
 
 function platformPicker(product) {
@@ -104,6 +121,8 @@ function render(product, photos) {
   window.addEventListener('pageshow', updateSaved);
   updateSaved();
   const estimate = referencePrice(product.price);
+  const options = element('div', {className: 'listing-options', textContent: 'Loading listing options…'});
+  const media = gallery(product, photos);
   const categoryPath = '/spreadsheet/?category=' + encodeURIComponent(product.category);
   const title = element('header', {className: 'listing-title'}, [
     element('a', {textContent: categoryLabel(product.category), href: categoryPath}),
@@ -116,7 +135,7 @@ function render(product, photos) {
     ...(estimate ? [element('p', {className: 'detail-estimate'}, [estimate, ' estimated item price'])] : []),
     buy,
     element('div', {className: 'listing-primary-actions'}, [platformPicker(product), ...copyProductLink(id)]),
-    element('p', {textContent: 'Check size, stock and shipping with your selected agent before ordering. Agent links may contain a referral code.'}),
+    options,
     element('div', {className: 'listing-source-links'}, [
       save,
       external('Original Weidian listing', originalUrl(id)),
@@ -130,12 +149,22 @@ function render(product, photos) {
     qcStatus,
   ]);
   const comparison = element('div', {className: 'listing-layout', id: 'listing-media'}, [
-    gallery(product, photos),
+    media.node,
     info,
   ]);
   target.replaceChildren(comparison, qc);
   if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
-  showQc(qcStatus, id, product.sourcePath);
+  void showQc(qcStatus, id, product.sourcePath);
+  loadProductOptions(id).catch(() => null).then((data) => {
+    if (data?.images.length) media.setPhotos(data.images, true);
+    showProductOptions(options, data, id, (image, amount) => {
+      media.selectStyle(image);
+      if (!estimate) return;
+      const nextAmount = Number.isFinite(amount) ? amount : product.price;
+      estimate.dataset.referencePrice = nextAmount;
+      estimate.textContent = priceFor(nextAmount, shoppingOptions().currency);
+    });
+  });
 }
 
 async function init() {

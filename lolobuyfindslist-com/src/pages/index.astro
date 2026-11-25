@@ -32,10 +32,16 @@ const categoryPath = (key: string) => buyerCategories[key]?.path ?? '/spreadshee
       <div class="cover-search-row">
         <form class="search-form cover-search" action="/spreadsheet/">
           <label class="visually-hidden" for="home-query">Name, item ID or link</label>
-          <input id="home-query" name="q" type="search" placeholder="Name, item ID or link" />
+          <input id="home-query" name="q" type="search" placeholder="Name, item ID or link" aria-describedby="home-search-examples" />
           <button class="button dark" type="submit">Search</button>
         </form>
         <a class="cover-photo-search" href="/image-search/">Search by photo</a>
+      </div>
+      <div id="home-search-examples" class="search-examples">
+        <span>Try a search</span>
+        <a href="/spreadsheet/?q=hoodie">Hoodie</a>
+        <a href="/spreadsheet/?q=Nike" translate="no">Nike</a>
+        <a href="/spreadsheet/?q=7321418559" translate="no">7321418559</a>
       </div>
       <div class="cover-links">
         <a href="/spreadsheet/">Browse All Finds</a>
