@@ -112,10 +112,17 @@ export async function lookupProductOptions(id) {
     const name = attribute.attr_title.trim().slice(0, 80);
     const values = attribute.attr_values.slice(0, 180).flatMap((value) => {
       const label = value.attr_value ?? value.name;
-      return typeof label === 'string' && label.trim() ? [{label:label.trim().slice(0, 160), image:photo(value.img ?? value.image)}] : [];
+      const id = String(value.attr_id ?? value.id ?? '');
+      return typeof label === 'string' && label.trim() ? [{id:/^\d+$/.test(id) ? id : '', label:label.trim().slice(0, 160), image:photo(value.img ?? value.image)}] : [];
     });
     return name && values.length ? [{name, values}] : [];
   });
+  const variants = Object.values(data.specifications?.skus ?? {}).slice(0, 10000).flatMap((sku) => {
+    const ids = String(sku?.attr_ids ?? '').split('-');
+    const price = Number(sku?.price);
+    return ids.length === groups.length && ids.every(id => /^\d+$/.test(id)) &&
+      Number.isFinite(price) && price > 0 ? [{key:ids.sort().join('-'), price}] : [];
+  });
   const price = Number(data.price);
-  return {title:data.title.trim(), price:data.price != null && Number.isFinite(price) && price >= 0 ? price : null, photos, groups};
+  return {title:data.title.trim(), price:data.price != null && Number.isFinite(price) && price >= 0 ? price : null, photos, groups, variants};
 }

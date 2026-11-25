@@ -1,16 +1,13 @@
 ---
 import Base from '../../layouts/Base.astro';
-import ShoppingMenu from '../../components/ShoppingMenu.astro';
 import {agents} from '../../lib/shopping.mjs';
 ---
 <Base title="Product Find | Pikobuy Spreadsheet" noindex={true}>
   <section class="container section product-detail-page">
-    <div class="breadcrumbs"><a id="find-back" href="/spreadsheet/">Spreadsheet</a> / Product</div>
-    <div class="catalog-heading"><ShoppingMenu/></div>
+    <div class="breadcrumbs"><a id="find-back" href="/spreadsheet/">Browse all products</a></div>
     <p id="find-status" class="catalog-status" role="status">Opening product…</p>
     <div class="detail" id="find-detail" hidden>
       <section class="listing-gallery" aria-label="Seller photo carousel" aria-roledescription="carousel">
-        <h2>Seller photos</h2>
         <div class="listing-gallery-stage">
           <a id="gallery-open" target="_blank" rel="noopener noreferrer" aria-label="Open seller photo in full size" hidden>
             <img class="detail-cover" id="find-image" alt="" width="550" height="550" fetchpriority="high" decoding="async"/>
@@ -23,7 +20,9 @@ import {agents} from '../../lib/shopping.mjs';
         <div class="detail-gallery" id="find-gallery"></div>
       </section>
       <div class="detail-copy">
-        <h1 id="find-title">Weidian item</h1><p id="find-id"></p><p class="price" id="find-price" translate="no"></p>
+        <h1 id="find-title">Weidian item</h1>
+        <p id="find-id" hidden><span>Product ID</span> <strong id="find-weidian-id" translate="no"></strong></p>
+        <p class="price" id="find-price" translate="no"></p>
         <a id="find-buy" class="button primary detail-buy" target="_blank" rel="sponsored noopener">Buy on Pikobuy</a>
         <div class="detail-purchase-options">
           <details class="detail-agents" id="other-agents" hidden>
@@ -38,12 +37,16 @@ import {agents} from '../../lib/shopping.mjs';
               </div>
             </div>
           </details>
-          <button id="find-copy" class="button outline" type="button" hidden>Copy product link</button>
+          <button id="find-copy" class="button outline" type="button" hidden>Copy Weidian link</button>
         </div>
         <p id="find-copy-status" class="sr" role="status"></p>
         <div id="find-options" class="listing-options" hidden></div>
       </div>
     </div>
+    <section class="detail-photo-section detail-block" id="seller-details" hidden>
+      <h2>Detail photos</h2>
+      <div class="detail-photo-grid"></div>
+    </section>
     <section class="qc-results detail-block" id="product-qc" hidden>
       <div class="section-head"><h2>Warehouse QC photos</h2><a class="text-link" href="/qc/#qc-checklist">QC checklist</a></div>
       <p role="status"></p><div class="product-grid"></div>

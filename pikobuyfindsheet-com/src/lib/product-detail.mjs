@@ -1,4 +1,4 @@
-import {sourceOrigin, itemId, sourceItem, categoryName} from './platform.mjs';
+import {sourceOrigin, itemId, sourceItem} from './platform.mjs';
 import {formatPrice, purchaseFor} from './shopping.mjs';
 import {showQc} from './qc-client.mjs';
 import {setProductImage} from './product-images.mjs';
@@ -39,6 +39,10 @@ export function setupDetail() {
   const failedPhotos = new Set();
   let qcId;
   let sellerOptions;
+  let variantPrice;
+  const sellerDetails = select('#seller-details');
+  const sellerDetailGrid = sellerDetails.querySelector('.detail-photo-grid');
+  const productPrice = select('#find-price');
   const copy = select('#find-copy');
   const optionList = select('#find-options');
 
@@ -64,6 +68,7 @@ export function setupDetail() {
     emptyGallery.hidden = Boolean(images.length);
     previous.hidden = next.hidden = images.length < 2;
     thumbs.replaceChildren();
+    thumbs.hidden = images.length < 2;
     if (images.length > 1) {
       for (const [index, image] of images.entries()) {
         const button = document.createElement('button');
@@ -82,12 +87,35 @@ export function setupDetail() {
     showImage(0);
   }
 
+  function showDetailPhotos(paths) {
+    sellerDetailGrid.replaceChildren(...[...new Set(paths.filter(Boolean))].map((path, index) => {
+      const link = document.createElement('a');
+      link.href = new URL(path, sourceOrigin).href;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      const photo = document.createElement('img');
+      photo.alt = product.title + ' · ' + (index + 1);
+      photo.loading = 'lazy';
+      photo.decoding = 'async';
+      photo.addEventListener('product-image-unavailable', () => {
+        link.remove();
+        sellerDetails.hidden = !sellerDetailGrid.childElementCount;
+      });
+      setProductImage(photo, path, 320);
+      link.append(photo);
+      return link;
+    }));
+    sellerDetails.hidden = !sellerDetailGrid.childElementCount;
+  }
+
   function renderSellerOptions(groups) {
+    const selected = new Map();
+    const skuPrices = new Map((sellerOptions?.variants || []).map(({key,price}) => [key, price]));
     optionList.hidden = !groups.length;
-    optionList.replaceChildren(...groups.map(({name, values}) => {
+    optionList.replaceChildren(...groups.map(({name, values}, groupIndex) => {
       const group = document.createElement('fieldset');
       const title = document.createElement('legend');
-      title.textContent = name;
+      title.textContent = name.replace(/\.$/, '');
       title.translate = false;
       const grid = document.createElement('div');
       grid.className = 'listing-choices';
@@ -95,7 +123,7 @@ export function setupDetail() {
       selection.className = 'listing-selected';
       selection.translate = false;
       group.append(title, selection, grid);
-      for (const {label, image} of values) {
+      for (const {id: optionId, label, image} of values) {
         const button = document.createElement('button');
         button.type = 'button';
         button.title = label;
@@ -114,6 +142,11 @@ export function setupDetail() {
         button.addEventListener('click', () => {
           for (const choice of grid.children) choice.setAttribute('aria-pressed', String(choice === button));
           selection.textContent = label;
+          if (optionId) selected.set(groupIndex, optionId);
+          else selected.delete(groupIndex);
+          variantPrice = selected.size === groups.length
+            ? skuPrices.get([...selected.values()].sort().join('-')) : undefined;
+          refreshPrice();
           const index = images.indexOf(image);
           if (index >= 0) showImage(index);
         });
@@ -125,10 +158,18 @@ export function setupDetail() {
 
   function refreshOptions() {
     if (!product) return;
-    const purchase = purchaseFor(product);
+    const purchase = purchaseFor(product, 'pikobuy');
     select('#find-buy').href = purchase.href;
     select('#find-buy').textContent = purchase.label;
-    select('#find-price').textContent = product.price == null ? '' : formatPrice(product.price);
+    refreshPrice();
+  }
+
+  function refreshPrice() {
+    if (!product) return;
+    const price = variantPrice ?? product.price;
+    productPrice.hidden = price == null;
+    productPrice.textContent = price == null ? '' : formatPrice(price);
+
   }
 
   function render(item) {
@@ -142,7 +183,8 @@ export function setupDetail() {
     select('#find-title').textContent = item.title;
     select('#find-title').translate = false;
     document.title = item.title + ' | Pikobuy Spreadsheet';
-    select('#find-id').textContent = item.id ? categoryName(item.category) + ' · Weidian item ID ' + item.id : categoryName(item.category);
+    select('#find-id').hidden = !item.id;
+    select('#find-weidian-id').textContent = item.id || '';
     copy.hidden = !item.id;
     const others = select('#other-agents');
     others.hidden = !item.id;
@@ -151,17 +193,18 @@ export function setupDetail() {
     }
     refreshOptions();
     showGallery();
-    qc.hidden = false;
+    showDetailPhotos([item.image, ...(item.gallery || []), ...(sellerOptions?.photos || [])]);
     const originalQc = select('#original-qc');
     originalQc.hidden = !item.path;
     if (!originalQc.hidden) originalQc.href = sourceOrigin + item.path + '#qcPhotosStatus';
     if (item.id && qcId !== item.id) {
       qcId = item.id;
-      if (location.hash === '#product-qc') requestAnimationFrame(() => qc.scrollIntoView());
+      if (location.hash === '#product-qc') {
+        qc.hidden = false;
+        requestAnimationFrame(() => qc.scrollIntoView());
+      }
       const isHeadphone = /\b(?:headphones?|headsets?|earbuds?|earphones?|airpods?)\b|耳[机機]/i.test(item.title);
       showQc(qcId, qc, isHeadphone ? 8 : undefined, item.path);
-    } else if (!item.id) {
-      qc.querySelector('[role=status]').textContent = 'This source listing has no Weidian item ID for a warehouse photo lookup.';
     }
     status.hidden = true;
   }
@@ -217,7 +260,7 @@ export function setupDetail() {
       message.textContent = 'Could not copy the product link. Please try again.';
     }
   });
-  window.addEventListener('shopping-change', refreshOptions);
+  window.addEventListener('shopping-change', refreshPrice);
   async function load() {
     if (!id && !from) {
       status.textContent = 'A product link or Weidian item ID is required.';

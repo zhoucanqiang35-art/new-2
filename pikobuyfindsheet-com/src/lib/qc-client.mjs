@@ -30,6 +30,7 @@ function renderPhotos(photos, grid) {
     return link;
   });
   grid.replaceChildren(...links);
+  grid.closest('#product-qc').hidden = false;
 }
 
 function addSource(status, id, productPath) {
