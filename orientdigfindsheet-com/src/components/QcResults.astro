@@ -1,7 +1,7 @@
 ---
-const { limit } = Astro.props;
+const { limit, eager = false } = Astro.props;
 ---
-<div data-qc-results data-qc-limit={limit} hidden>
+<div data-qc-results data-qc-limit={limit} data-qc-eager={eager ? "" : undefined} hidden>
   <p class="status muted" data-qc-status role="status"></p>
   <div class="grid qc-grid" data-qc-gallery></div>
 </div>

@@ -44,6 +44,7 @@ export async function showQc(id, root) {
     }
     if (query !== latestQuery.get(root)) return;
     if (data?.photos?.length) {
+      const loading = root.hasAttribute('data-qc-eager') ? 'eager' : 'lazy';
       status.textContent = saved
         ? 'Live QC is unavailable. Showing saved warehouse photos.'
         : data.photos.length + ' warehouse photos from the main site.';
@@ -64,7 +65,7 @@ export async function showQc(id, root) {
           const button = element('button',{type:'button',className:'qc-thumbnail'});
           button.setAttribute('aria-label','Show warehouse photo '+(index+1));
           button.setAttribute('aria-pressed',String(index===0));
-          button.append(element('img',{src:photo.url,alt:'',loading:'lazy'}));
+          button.append(element('img',{src:photo.url,alt:'',loading}));
           button.addEventListener('click',()=>{
             selectPhoto(photo,index);
             gallery.querySelector('[aria-pressed="true"]')?.setAttribute('aria-pressed','false');
@@ -74,7 +75,7 @@ export async function showQc(id, root) {
           continue;
         }
         const link = element('a',{href:photo.url,target:'_blank',rel:'noopener'});
-        link.append(element('img',{src:photo.url,alt:'Warehouse QC photo '+(index+1),loading:'lazy'}));
+        link.append(element('img',{src:photo.url,alt:'Warehouse QC photo '+(index+1),loading}));
         if (photo.source) link.append(element('span',{},'Warehouse source: '+photo.source));
         gallery.append(link);
       }

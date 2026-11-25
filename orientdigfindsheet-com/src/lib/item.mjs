@@ -30,13 +30,13 @@ if (product) {
       const sections = groups.map(group => {
         const section = element('section', { className: 'seller-option-group' });
         const title = element('h3', { translate: false }, group.label);
-        const grid = element('div', { className: 'purchase-photo-grid picker-scroll' });
+        const grid = element('div', { className: 'purchase-photo-grid' });
         for (const option of group.options) {
           const button = element('button', { type: 'button', title: option.label, translate: false });
           button.dataset.sellerPhoto = option.image;
           button.setAttribute('aria-label', option.label);
           button.setAttribute('aria-pressed', String(main.getAttribute('src') === option.image));
-          button.append(element('img', { src: option.image, alt: '', width: 58, height: 58, loading: 'lazy', decoding: 'async' }));
+          button.append(element('img', { src: option.image, alt: '', width: 58, height: 58, loading: 'eager', decoding: 'async' }));
           grid.append(button);
         }
         section.append(title, grid);
