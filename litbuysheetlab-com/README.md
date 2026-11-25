@@ -1,27 +1,22 @@
 # Litbuy Sheet Lab
 
-Astro static catalog for https://litbuysheetlab.com, deployed by Cloudflare Pages from this source directory.
+Astro static catalog deployed from `litbuysheetlab-com` to Cloudflare Pages.
 
-## Build and checks
+- 8,911 product detail pages, with source item IDs and historical CNY reference prices.
+- Compact two-column language/currency menus. English/USD on first use; saved choices persist, and explicit language changes select a corresponding currency.
+- Seller batch/colour/size options come from FindSpreadsheet `api/Goods/getSkuData`; the currently cached reference item RS337 includes 21 colour images. Options preview the product photo and source variant reference; checkout and stock confirmation remain on Litbuy.
+- The shared detail template contains no related-product recommendations. Source options are cached for 112 items; other valid catalog IDs load through `/api/sku` on demand. A failed source request shows a retry/open-platform message rather than replacing colours with generic gallery pictures.
+- Seven guide screenshots contain responsive SVG arrows and step labels.
+- All 12 homepage FAQ questions remain in three expandable topic groups.
+- Image search ranks products plus local page/guide illustrations. The published index has 56,161 image entries. Of the 43,360 images in this site's known catalog/seller inventory, 43,359 were retrievable and indexed; one unavailable source image is reported rather than fabricated. Source options newly fetched after publication require a later index refresh.
+- Analytics `G-QXBPND9VPN`, Bing verification and the generated 8,931-URL sitemap remain in the base layout/build.
 
-- Root directory: `litbuysheetlab-com`
-- Install: `npm ci`
-- Build: `npm run build`
-- Output: `dist`
-- Regression checks after build: `npm test` and `npm run preview:check`
+## Build and verify
 
-The build generates 8,911 product pages and 11 category pages from the source catalog, plus the main and information pages. `/sitemap.xml` is generated at build time and includes 8,931 canonical URLs. Do not upload an old `dist` directory in place of building current source. Build output is intentionally ignored by Git.
+`npm ci`, `npm run build`, `npm test`.
 
-## Catalog and prices
+Cloudflare builds `dist`; `functions/api/sku.js` serves only known catalog seller IDs. `/product/?id=` preserves its existing server redirect. `_routes.json` limits Functions to the legacy product route and the SKU endpoint.
 
-All source records are retained, including items without a valid Weidian number. Only valid seller IDs receive direct buying-agent links. The data snapshot is dated 2026-10-19; prices are reference CNY amounts, not live Litbuy quotes. Currency estimates use Frankfurter reference rates and show the reference date. Failed rate requests retain original CNY or explicitly dated cached rates. Platform conversions and fees can differ.
+## Refresh public source data
 
-## Images and QC
-
-Source and seller photos are labelled as listing images, never as verified warehouse QC. Actual QC availability is not inferred from the existence of a gallery. The current client-side visual index has usable descriptors for 35,688 of 39,269 source images. Matching is approximate and missing images may not match. Uploads are processed in the browser.
-
-## Compatibility and operations
-
-Legacy `/product/?id=...` URLs redirect in the browser to `/products/ID/`. Product pages are rendered in the initial HTML and do not download the entire catalog or all galleries. The English homepage also uses pre-rendered product cards. Catalog filters and paging retain keywords, category, price bounds, image-result state and sorting in the URL.
-
-Existing GA4 measurement `G-QXBPND9VPN`, Bing verification and referral destinations are preserved. Privacy, about, contact-routing and referral-disclosure pages explain the independent role of this site. Contact details are not invented. Core new controls and price/QC notices are localized; unsupported new long-form translations fall back to English. Existing product title translations remain source data and may contain abbreviations.
+From this folder, run `python scripts/collect-options.py` only while the upstream is healthy. It uses bounded concurrency, cached files and stops on rate limits or repeated source failures. Temporary public responses are ignored by Git. Run `node scripts/package-options.mjs` to package successful option snapshots. For the image index, remove `.cache/options-finished`, run `python scripts/expand-image-index.py`, then create `.cache/options-finished` when source collection finishes. The builder drains newly discovered images and records actual coverage; unavailable images must not be counted as searchable. Commit the updated snapshot and hashed/current index manifest together.

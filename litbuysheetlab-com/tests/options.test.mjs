@@ -1,0 +1,17 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {readFile} from 'node:fs/promises';import {JSDOM} from 'jsdom';import {normalizeOptions} from '../src/lib/options.js';import {onRequestGet} from '../functions/api/sku.js';
+const root=new URL('../',import.meta.url);
+test('reference item renders real seller batch, 21 colours and source sizes and changes the image',async()=>{
+ const html=await readFile(new URL('dist/products/5981/index.html',root),'utf8');const dom=new JSDOM(html,{url:'https://litbuysheetlab.com/products/5981/',runScripts:'outside-only'}),w=dom.window,d=w.document;
+ w.fetch=()=>{throw Error('Snapshot should avoid a network delay');};w.eval(await readFile(new URL('public/product-options.js',root),'utf8'));
+ assert.equal(d.querySelectorAll('.seller-colors button').length,21);assert.equal(d.querySelectorAll('.seller-option-group').length,3);assert.equal(d.querySelectorAll('.seller-sizes button').length,13);
+ const colour=[...d.querySelectorAll('.seller-colors button')].find(b=>b.title.includes('Enflame Orange'));colour.click();assert.equal(colour.getAttribute('aria-pressed'),'true');assert.equal(d.querySelector('#slide-image').src,colour.querySelector('img').src);assert.match(d.querySelector('.options-status').textContent,/Enflame Orange/);assert.equal(d.querySelector('.related-panel'),null);assert.ok(d.querySelector('.money').dataset.cny);dom.window.close();
+});
+test('seller option normalization rejects mismatched products and unsafe image hosts',()=>{
+ const data={weidian_id:'123',images:['https://bad.example/image.png'],specifications:{attrs:[{attr_title:'Color',attr_values:[{attr_id:1,attr_value:'Blue',img:'javascript:alert(1)'}]}]}};assert.throws(()=>normalizeOptions(data,'456'));const result=normalizeOptions(data,'123');assert.equal(result.groups[0].options[0].image,null);assert.deepEqual(result.images,[]);
+});
+test('options endpoint serves catalog snapshots and rejects unrelated item identifiers',async()=>{
+ const response=await onRequestGet({request:new Request('https://litbuysheetlab.com/api/sku?item=7854243633')});assert.equal(response.status,200);const data=await response.json();assert.equal(data.item,'7854243633');assert.equal(data.groups[1].options.length,21);assert.equal((await onRequestGet({request:new Request('https://litbuysheetlab.com/api/sku?item=not-a-product')})).status,404);
+});
+test('every known retrievable source and seller image participates in image search',async()=>{
+ const manifest=JSON.parse(await readFile(new URL('public/search-index/manifest.json',root),'utf8'));const source=JSON.parse(await readFile(new URL('src/data/image-coverage.json',root),'utf8'));assert.equal(source.indexedKnownImages+source.unavailableImages,source.knownImages);assert.equal(source.pending,0);assert.ok(source.totalSearchImages>55000);assert.ok(source.staticImages>=30);const rows=[];for(const path of manifest.shards){rows.push(...JSON.parse(await readFile(new URL('public'+path,root),'utf8')));}const photo='https://si.geilicdn.com/pcitem1849202325-7d0c0000018f9039195e0a20e273-unadjust_360_360.png';const match=rows.find(r=>r[2]===photo);assert.ok(match);assert.ok(match[0].includes('5981'));assert.equal(match[1].length,112);assert.ok(Object.values(manifest.pages).some(p=>p.href==='/guide/'));
+});

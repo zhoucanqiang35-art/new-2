@@ -14,5 +14,5 @@ test('all agent logos are local assets and product styles update the main photo'
  const dom=new JSDOM(await readFile(new URL('dist/products/9018/index.html',root),'utf8'),{url:'https://litbuysheetlab.com/products/9018/',runScripts:'outside-only'}),w=dom.window,d=w.document;
  const links=[...d.querySelectorAll('.agent-grid a')];assert.equal(links.length,19);
  for(const a of links){const img=a.querySelector('img');assert.ok(img);await readFile(new URL('public'+img.getAttribute('src'),root));}
- w.HTMLElement.prototype.scrollIntoView=()=>{};w.eval(await readFile(new URL('public/product-page.js',root),'utf8'));const choices=[...d.querySelectorAll('[data-preview-image]')];assert.ok(choices.length);choices.at(-1).click();assert.equal(d.querySelector('#slide-image').src,choices.at(-1).dataset.previewImage);assert.equal(choices.at(-1).getAttribute('aria-pressed'),'true');dom.window.close();
+ assert.equal(d.querySelector('.related-panel'),null);assert.ok(d.querySelector('.seller-options'));dom.window.close();
 });

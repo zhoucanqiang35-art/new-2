@@ -1,5 +1,9 @@
 {
   "version": 1,
-  "include": ["/product", "/product/"],
+  "include": [
+    "/product",
+    "/product/",
+    "/api/sku"
+  ],
   "exclude": []
 }

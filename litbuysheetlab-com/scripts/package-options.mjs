@@ -1,0 +1,3 @@
+import {normalizeOptions} from '../src/lib/options.js';import {readdirSync,readFileSync,writeFileSync} from 'node:fs';
+const out={};for(const file of readdirSync('public/data/options')){try{const id=file.replace('.json','');out[id]=normalizeOptions(JSON.parse(readFileSync('public/data/options/'+file)),id);}catch{}}
+writeFileSync('src/data/options-snapshot.js','export default '+JSON.stringify(out)+';\n');const products=JSON.parse(readFileSync('public/data/products.json'));writeFileSync('src/data/seller-ids.js','export default '+JSON.stringify([...new Set(products.map(p=>String(p.weidianId)).filter(id=>/^\d+$/.test(id)))])+';\n');console.log('Packaged seller options:',Object.keys(out).length);

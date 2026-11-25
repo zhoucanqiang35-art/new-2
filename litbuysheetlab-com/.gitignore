@@ -5,3 +5,8 @@ reports/
 .env.*
 
 dist/
+.cache/
+public/data/options/
+option-progress.json
+image-progress.json
+image-unavailable.json

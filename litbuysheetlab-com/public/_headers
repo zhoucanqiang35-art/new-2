@@ -9,3 +9,5 @@
   Cache-Control: public, max-age=0, must-revalidate
 /data/home-ui.json
   Cache-Control: public, max-age=0, must-revalidate
+/search-index/manifest.json
+  Cache-Control: public, max-age=0, must-revalidate
