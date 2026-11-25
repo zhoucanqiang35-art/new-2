@@ -12,7 +12,8 @@ const nav = [
   ['/spreadsheet/', 'Spreadsheet'], ['/categories/', 'Categories'], ['/image-search/', 'Image Search'],
   ['/guides/', 'Guides'], ['/guides/shipping/', 'Shipping'], ['/faq/', 'FAQ'],
 ];
-const activeLink = nav.findLast(([href]) => active.startsWith(href))?.[0];
+const mainNav = nav.filter(([href]) => href !== '/guides/shipping/');
+const activeLink = mainNav.findLast(([href]) => active.startsWith(href))?.[0];
 ---
 <!doctype html>
 <html lang="en">
@@ -52,7 +53,7 @@ const activeLink = nav.findLast(([href]) => active.startsWith(href))?.[0];
     <header class="header">
       <div class="container head">
         <a href="/" class="brand" aria-label="Pikobuy Findsheet home"><img src="/assets/pikobuy-logo.png" width="112" height="26" alt="Pikobuy"/> <span>FINDSHEET</span></a>
-        <nav aria-label="Main navigation">{nav.map(([href,label]) => <a href={href} aria-current={activeLink === href ? (active === href ? 'page' : 'location') : undefined}>{label}</a>)}</nav>
+        <nav aria-label="Main navigation">{mainNav.map(([href,label]) => <a href={href} aria-current={activeLink === href ? (active === href ? 'page' : 'location') : undefined}>{label}</a>)}</nav>
         <div class="header-tools">
           <LanguagePicker/>
           <CurrencyPicker/>
