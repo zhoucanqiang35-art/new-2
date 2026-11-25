@@ -414,15 +414,13 @@
 .detail-info .detail-actions > .button, .detail-info .agent-menu > summary { width: 100%; white-space: normal; text-align: center; }
 .detail-info .agent-menu > summary::after { content: '▾'; margin-inline-start: 4px; }
 .product-variants { display: grid; gap: 12px; margin-block: 12px; }
-.variant-group h2, .detail-photos h2 { font-size: 1rem; margin-bottom: 7px; }
+.variant-group h2 { font-size: 1rem; margin-bottom: 7px; }
 .variant-options { display: flex; flex-wrap: wrap; gap: 5px; max-block-size: 228px; overflow-y: auto; scrollbar-gutter: stable; }
 .variant-options button { min-width: 36px; min-height: 34px; padding: 4px 6px; border: 1px solid var(--line); border-radius: 5px; background: var(--paper); color: var(--ink); }
 .variant-options button[aria-pressed="true"] { border-color: var(--orange); box-shadow: inset 0 0 0 1px var(--orange); }
 .variant-photos { display: grid; grid-template-columns: repeat(auto-fill, minmax(48px, 1fr)); }
 .variant-photos img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
 .detail-note { color: var(--muted); font-size: .9rem; margin-bottom: 6px; }
-.detail-photos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 122px), 1fr)); gap: 9px; }
-.detail-photos-grid img { display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 6px; background: var(--canvas); }
 
 @media (max-width: 770px) {
   .header .language-menu .disclosure-panel,

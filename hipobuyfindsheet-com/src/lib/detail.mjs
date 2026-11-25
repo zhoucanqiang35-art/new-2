@@ -1,6 +1,6 @@
 import { sourceOrigin, productUrl } from './catalog.mjs';
 import { currentShopping, agentUrl, ratesDate } from './shopping-data.mjs';
-import { readJson, parseId, element, external, localize, ui, qcLookup, renderQc, imageLink, favoriteButton, referencePrice } from './browser-data.mjs';
+import { readJson, parseId, element, external, localize, ui, qcLookup, renderQc, favoriteButton, referencePrice } from './browser-data.mjs';
 
 const target = document.getElementById('product-detail');
 const id = parseId(new URLSearchParams(location.search).get('id') ?? '');
@@ -105,14 +105,6 @@ function variantGroup(attribute, showPhoto) {
   return tiles.childElementCount ? element('section', {className: 'variant-group'}, [heading, tiles]) : null;
 }
 
-function detailPhotos(name, urls) {
-  const photos = uniquePhotos(urls);
-  const grid = element('div', {className: 'detail-photos-grid'}, photos.map((src) => imageLink(src, name)));
-  return element('section', {className: 'detail-panel detail-photos', hidden: !photos.length}, [
-    ui('h2', 'detailPhotos'), grid,
-  ]);
-}
-
 function showDetails(product, savedPhotos, agents) {
   document.title = product.name + ' | Hipobuy Findsheet';
   const price = product.price ? element('p', {className: 'detail-price'}, [
@@ -139,7 +131,6 @@ function showDetails(product, savedPhotos, agents) {
   });
   const variants = element('div', {className: 'product-variants'});
   const photos = gallery(product, savedPhotos);
-  const extraPhotos = detailPhotos(product.name, savedPhotos);
   const info = element('div', {className: 'detail-info'}, [
     element('div', {className: 'detail-heading'}, [
       ui('p', 'category.' + product.category, {className: 'kicker'}),
@@ -162,7 +153,7 @@ function showDetails(product, savedPhotos, agents) {
     references,
     ui('p', 'qcHelp', {className: 'qc-note'}),
   ]);
-  target.replaceChildren(element('div', {className: 'product-main'}, [photos.section, info]), extraPhotos, warehouse);
+  target.replaceChildren(element('div', {className: 'product-main'}, [photos.section, info]), warehouse);
   qcLookup(product.weidianId).then((entry) => renderQc(references, product.weidianId, entry))
     .catch(() => references.append(ui('p', 'qcError')));
   readJson(new URL('/api/Goods/getSkuData?weidian_id=' + product.weidianId, sourceOrigin).href).then((live) => {
@@ -172,9 +163,6 @@ function showDetails(product, savedPhotos, agents) {
     if (Array.isArray(live.specifications?.attrs)) {
       variants.append(...live.specifications.attrs.map((attribute) => variantGroup(attribute, photos.show)).filter(Boolean));
     }
-    const dynamic = detailPhotos(product.name, [...livePhotos, ...savedPhotos]);
-    extraPhotos.replaceChildren(...dynamic.children);
-    extraPhotos.hidden = dynamic.hidden;
   }).catch(() => {});
 }
 
