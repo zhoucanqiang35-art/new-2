@@ -25,7 +25,7 @@ currency.setAttribute('aria-label', names[lang()] || names.en);
 for (const code of codes) currency.add(new Option(code, code));
 language.after(currency);
 
-function createPicker(select, label, splitAt) {
+function createPicker(select, label) {
   select.hidden = true;
   const picker = document.createElement('details');
   picker.className = 'preference-picker notranslate';
@@ -36,12 +36,11 @@ function createPicker(select, label, splitAt) {
   const grid = document.createElement('div');
   grid.className = 'preference-grid';
   panel.append(grid);
-  const extra = document.createElement('div');
-  extra.className = 'preference-extra';
-  const tiles = Array.from(select.options, (option, index) => {
+  const tiles = Array.from(select.options, option => {
     const tile = document.createElement('button');
     tile.type = 'button';
-    tile.textContent = option.textContent;
+    tile.textContent = option.textContent.replace(' · partial', '');
+    if (tile.textContent !== option.textContent) tile.setAttribute('aria-label', option.textContent);
     tile.dir = 'auto';
     tile.addEventListener('click', () => {
       select.value = option.value;
@@ -49,10 +48,9 @@ function createPicker(select, label, splitAt) {
       picker.open = false;
       toggle.focus();
     });
-    (index < splitAt ? grid : extra).append(tile);
+    grid.append(tile);
     return [option, tile];
   });
-  if (extra.children.length) panel.append(extra);
   picker.append(toggle, panel);
   select.after(picker);
   picker.addEventListener('toggle', () => {
@@ -83,8 +81,8 @@ const languageLabel = {en:'Language', de:'Sprache', fr:'Langue', es:'Idioma', it
   pt:'Idioma', nl:'Taal', pl:'Język', sv:'Språk', zh:'语言', fi:'Kieli', da:'Sprog',
   nb:'Språk', cs:'Jazyk', hu:'Nyelv', ro:'Limbă', el:'Γλώσσα', tr:'Dil',
   uk:'Мова', ar:'اللغة', ja:'言語', ko:'언어', ru:'Язык', id:'Bahasa'};
-const updateLanguage = createPicker(language, () => languageLabel[lang()] || languageLabel.en, 22);
-const updateCurrency = createPicker(currency, () => names[lang()] || names.en, codes.length);
+const updateLanguage = createPicker(language, () => languageLabel[lang()] || languageLabel.en);
+const updateCurrency = createPicker(currency, () => names[lang()] || names.en);
 const status = document.createElement('p');
 status.className = 'currency-status notranslate';
 status.translate = false;
