@@ -2,7 +2,7 @@ import {test} from 'node:test';import assert from 'node:assert/strict';import {r
 const root=new URL('../',import.meta.url);
 test('reference item renders real seller batch, 21 colours and source sizes and changes the image',async()=>{
  const html=await readFile(new URL('dist/products/5981/index.html',root),'utf8');const dom=new JSDOM(html,{url:'https://litbuysheetlab.com/products/5981/',runScripts:'outside-only'}),w=dom.window,d=w.document;
- w.fetch=()=>{throw Error('Snapshot should avoid a network delay');};w.eval(await readFile(new URL('public/product-options.js',root),'utf8'));
+ w.fetch=()=>{throw Error('Snapshot should avoid a network delay');};w.normalizeOptions=normalizeOptions;w.eval((await readFile(new URL('public/product-options.js',root),'utf8')).replace(/^import[^\n]+\n/,''));
  assert.equal(d.querySelectorAll('.seller-colors button').length,21);assert.equal(d.querySelectorAll('.seller-option-group').length,3);assert.equal(d.querySelectorAll('.seller-sizes button').length,13);
  const colour=[...d.querySelectorAll('.seller-colors button')].find(b=>b.title.includes('Enflame Orange'));colour.click();assert.equal(colour.getAttribute('aria-pressed'),'true');assert.equal(d.querySelector('#slide-image').src,colour.querySelector('img').src);assert.match(d.querySelector('.options-status').textContent,/Enflame Orange/);assert.equal(d.querySelector('.related-panel'),null);assert.ok(d.querySelector('.money').dataset.cny);dom.window.close();
 });
@@ -17,4 +17,9 @@ test('every known retrievable source and seller image participates in image sear
 });
 test('uncached source options use the redirect mode supported by Cloudflare Workers',async(t)=>{
  const {mock}=await import('node:test');const id='7869696051';const fetch=mock.method(globalThis,'fetch',async(url,init)=>{assert.equal(url,'https://findspreadsheet.com/api/Goods/getSkuData?weidian_id='+id);assert.equal(init.redirect,'manual');return Response.json({weidian_id:id,images:[],specifications:{attrs:[{attr_title:'Size',attr_values:[{attr_id:10,attr_value:'One size'}]}],skus:{}}});});t.after(()=>fetch.mock.restore());const response=await onRequestGet({request:new Request('https://litbuysheetlab.com/api/sku?item='+id)});assert.equal(response.status,200);const data=await response.json();assert.equal(data.groups[0].options[0].label,'One size');
+});
+test('uncached product pages load real options directly from the public main-site feed',async()=>{
+ const html=await readFile(new URL('dist/products/9018/index.html',root),'utf8');const dom=new JSDOM(html,{url:'https://litbuysheetlab.com/products/9018/',runScripts:'outside-only'}),w=dom.window,d=w.document;const called=[];
+ w.fetch=async(url,init)=>{called.push(url);assert.equal(init.credentials,'omit');assert.match(url,/^https:\/\/findspreadsheet.com\/api\/Goods\/getSkuData\?weidian_id=7869696051$/);return {ok:true,json:async()=>({weidian_id:'7869696051',images:[],specifications:{attrs:[{attr_title:'Color',attr_values:[{attr_id:1,attr_value:'Blue',img:'https://si.geilicdn.com/blue.jpg'}]},{attr_title:'Size',attr_values:[{attr_id:2,attr_value:'One size'}]}],skus:{}}})};};
+ w.normalizeOptions=normalizeOptions;w.eval((await readFile(new URL('public/product-options.js',root),'utf8')).replace(/^import[^\n]+\n/,''));await new Promise(r=>setTimeout(r,30));assert.equal(d.querySelectorAll('.seller-option-group').length,2);assert.equal(d.querySelectorAll('.seller-colors button').length,1);assert.equal(called.length,1);dom.window.close();
 });
