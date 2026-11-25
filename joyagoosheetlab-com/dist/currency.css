@@ -1,2 +1,138 @@
-.currency{background:#282b20;color:#fff;border:1px solid #73764d;min-height:44px;padding:0 8px;max-width:80px}.currency-status{position:absolute;right:0;top:100%;z-index:15;background:#25291d;color:#fff;font:12px/1.35 sans-serif;padding:5px 9px;border-radius:0 0 4px 4px;max-width:240px}.nav-actions{position:relative}@media(max-width:700px){.currency{min-height:38px;max-width:66px;font-size:12px;padding:0 3px}.currency-status{font-size:10px;max-width:190px}}
+:root {
+  --joy-accent: #e3fc00;
+  --joy-silver: #e3e3e3;
+  --joy-ink: #171917;
+  --joy-surface: #222522;
+  --joy-border: #61655f;
+}
+
+html:root, html body {
+  background: var(--joy-ink) !important;
+  color: var(--joy-silver) !important;
+}
+html .site-header, html footer, html .ticker, html .links {
+  background: var(--joy-ink) !important;
+  border-color: var(--joy-border) !important;
+}
+html .fashion-hero, html .home-intro, html .discover-hero {
+  background: radial-gradient(ellipse at 50% 0%, #373c35, var(--joy-ink) 70%) !important;
+}
+html .fashion-hero::before, html .fashion-hero::after { border-color: var(--joy-accent) !important; }
+html .register, html .btn, html .fashion-button, html .catalog-pages button,
+html .joy-search button, html .image-page-choose {
+  background: var(--joy-accent) !important;
+  color: var(--joy-ink) !important;
+}
+html .register:hover, html .btn:hover, html .fashion-button:hover,
+html .joy-search button:hover, html .image-page-choose:hover { background: #efff63 !important; }
+html .hero-content h1 em, html .discover-copy h1 em, html .editorial-heading h2 em,
+html .home-content-section h1 em, html .home-feature-heading a, html .ticker b,
+html .guide-intro h1 em, html .text-link, html .product-bottom b, html .image-page-kicker,
+html .story-copy h2 em, html .catalog-card span, html .links a:hover {
+  color: var(--joy-accent) !important;
+}
+html .story-band, html .home-reader-intro, html .home-content-section .callout,
+html .article .callout, html .article .notice, html .catalog-notice, html .guide-category,
+html .home-faq-card, html .home-editorial-card, html .browse-sidebar, html .product-card,
+html .catalog-card, html .image-page-box, html .image-page-details {
+  background: var(--joy-surface) !important;
+  border-color: var(--joy-border) !important;
+  color: var(--joy-silver) !important;
+}
+html .image-search-page { background: var(--joy-ink) !important; color: var(--joy-silver) !important; }
+html .image-search-page :is(h1, h2, p, a):not(.image-page-kicker) { color: var(--joy-silver); }
+html :is(a, button, input, summary):focus-visible { outline: 2px solid var(--joy-accent); outline-offset: 3px; }
+
+.nav-actions { position: relative; margin-inline-start: auto; }
+.nav-actions :is(select.language, select.currency)[hidden] { display: none !important; }
+.preference-picker > summary {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  min-height: 38px;
+  padding: .4rem .55rem;
+  border: 1px solid var(--joy-border);
+  border-radius: 5px;
+  background: var(--joy-surface);
+  color: var(--joy-silver);
+  font-size: .8125rem;
+  white-space: nowrap;
+  cursor: pointer;
+  list-style: none;
+}
+.preference-picker > summary::-webkit-details-marker { display: none; }
+.preference-picker > summary::after {
+  content: "";
+  width: .38rem;
+  height: .38rem;
+  border: solid currentColor;
+  border-width: 0 1px 1px 0;
+  transform: translateY(-2px) rotate(45deg);
+  flex: none;
+}
+.preference-picker[open] > summary { border-color: var(--joy-accent); }
+.preference-panel {
+  position: absolute;
+  z-index: 20;
+  inset-block-start: calc(100% + .5rem);
+  inset-inline-end: 0;
+  width: min(17rem, calc(100vw - 2rem));
+  max-height: min(16rem, 55vh);
+  padding: .55rem;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  border: 1px solid var(--joy-border);
+  border-radius: 7px;
+  background: var(--joy-ink);
+  box-shadow: 0 12px 32px #0007;
+}
+.preference-grid, .preference-extra {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .35rem;
+}
+.preference-extra { margin-top: .45rem; padding-top: .45rem; border-top: 1px solid var(--joy-border); }
+.preference-panel button {
+  min-height: 34px;
+  padding: .35rem .45rem;
+  border: 1px solid var(--joy-border);
+  border-radius: 4px;
+  color: var(--joy-silver);
+  background: var(--joy-surface);
+  font-size: .75rem;
+  cursor: pointer;
+  text-align: center;
+}
+.preference-panel button[aria-pressed="true"] { background: var(--joy-accent); color: var(--joy-ink); }
+.preference-panel button:hover:not(:disabled) { border-color: var(--joy-accent); }
+.preference-panel button:disabled { opacity: .42; cursor: default; }
+.currency-status { color: var(--joy-silver); font-size: .75rem; margin: .55rem .15rem .1rem; }
+
+.joy-search {
+  display: flex;
+  gap: .45rem;
+  width: min(100%, 33rem);
+  margin: 1rem auto;
+}
+.joy-search input {
+  flex: 1;
+  min-width: 0;
+  min-height: 44px;
+  padding: .55rem .75rem;
+  border: 1px solid var(--joy-border);
+  border-radius: 5px;
+  background: var(--joy-surface);
+  color: #fff;
+}
+.joy-search input::placeholder { color: var(--joy-silver); opacity: .9; }
+.joy-search button { padding: .55rem .9rem; border: 0; border-radius: 5px; font-weight: 700; cursor: pointer; }
+
+@media (max-width: 480px) {
+  html .nav { gap: 6px; }
+  html .nav-actions { gap: 4px; }
+  html .nav .brand img { width: clamp(60px, 20vw, 86px); }
+  html .nav .register { max-width: 22vw; white-space: normal; text-align: center; padding: .35rem; }
+  .preference-picker summary { font-size: .75rem; padding: .35rem; max-width: 26vw; white-space: normal; overflow-wrap: anywhere; }
+}
 .browse-note,.live-price-note,.guide-note{display:none!important}

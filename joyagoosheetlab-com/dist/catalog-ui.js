@@ -56,18 +56,179 @@ function setupDetailActions(p){
   catch(e){status.textContent=text()[3]}
  });
 }
-function details(p){
- const valid=/^\d+$/.test(String(p.weidianId||''));
- const buy='https://joyagoo.com/product?'+new URLSearchParams({id:p.weidianId,platform:'WEIDIAN',productUrl:'',productPwd:''});
- let images=[...new Set([p.image,...(p.sourceImages||[]),...(p.weidianImages||[])].filter(x=>/^https:\/\//.test(x)))];
- const related=data.filter(x=>x.id!==p.id&&x.category===p.category&&/^\d+$/.test(String(x.weidianId||''))&&x.image).slice(0,4);
- root.innerHTML=`<a class="detail-back" href="/catalog/">← Browse all products</a><div class="detail-layout"><section class="detail-gallery"><div class="detail-main"><img id="detail-photo" src="${esc(images[0]||'')}" alt="${esc(p.name)}"></div><div class="detail-thumbs" aria-label="Product photos"></div><h2>QC photos</h2><p>QC photos are not available in this catalogue. Check your own order on Joyagoo.</p></section><section class="detail-info"><p class="eyebrow">JOYAGOO SPREADSHEET</p><h1>${esc(p.name)}</h1><p>Product ID: <strong>${esc(p.weidianId)}</strong></p><p class="detail-price" data-cny-price="${esc(p.price)}">${usd(p.price)}</p>${valid?`<a class="btn detail-buy" href="${esc(buy)}">Buy on Joyagoo ↗</a><div class="detail-actions notranslate" translate="no"><details class="detail-agents"><summary>Other buying agents ▾</summary><div class="detail-agents-list">${otherAgentLinks(String(p.weidianId)).map(([name,url])=>`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(name)} ↗</a>`).join('')}</div></details><button type="button" class="detail-copy" data-copy-weidian>Copy Weidian link</button><span class="detail-copy-status" data-copy-status role="status" aria-live="polite"></span></div>`:''}<h2>Product photos</h2><p class="detail-status">Loading product photos…</p></section></div><section class="detail-weidian"><h2>Weidian product photos</h2><div class="detail-weidian-grid"></div><p class="detail-weidian-status">Loading product photos…</p></section><section class="detail-related"><h2>Related products</h2><div class="detail-related-grid">${related.map(x=>`<a class="detail-related-card" href="/product/?id=${encodeURIComponent(x.id)}"><img loading="lazy" src="${esc(x.image)}" alt="${esc(x.name)}"><strong>${esc(x.name)}</strong><span data-cny-price="${esc(x.price)}">${usd(x.price)}</span></a>`).join('')}</div></section>`;
+const photoUrls = values => [...new Set(values.filter(value =>
+ typeof value === 'string' && /^https:\/\//i.test(value)
+))];
+
+function details(p) {
+ const valid = /^\d+$/.test(String(p.weidianId || ''));
+ const buy = 'https://joyagoo.com/product?' + new URLSearchParams({
+  id:p.weidianId, platform:'WEIDIAN', productUrl:'', productPwd:''
+ });
+ const listingPhotos = photoUrls([p.image, ...(p.weidianImages || []), ...(p.sourceImages || [])]);
+ const qcPhotos = photoUrls(p.qcImages || []);
+ const detailPhotos = photoUrls([...(p.sourceImages || []), ...listingPhotos]);
+ let activePhoto = listingPhotos[0];
+ let images = listingPhotos;
+
+ root.innerHTML = `
+  <a class="detail-back" href="/catalog/">← Browse all products</a>
+  <div class="detail-layout">
+   <section class="detail-gallery" aria-label="Product photos">
+    <div class="detail-main" hidden>
+     <a target="_blank" rel="noopener noreferrer" aria-label="Open full-size photo">
+      <img id="detail-photo" alt="${esc(p.name)}" fetchpriority="high">
+     </a>
+    </div>
+    <p class="detail-empty" hidden>No product photos available.</p>
+    <div class="detail-thumbs" aria-label="Product photos"></div>
+   </section>
+   <section class="detail-info">
+    <h1>${esc(p.name)}</h1>
+    <p class="detail-id">Product ID: <strong>${esc(p.weidianId)}</strong></p>
+    <p class="detail-price" data-cny-price="${esc(p.price)}">${usd(p.price)}</p>
+    ${valid ? `
+     <a class="btn detail-buy" href="${esc(buy)}">Buy on Joyagoo ↗</a>
+     <div class="detail-actions notranslate" translate="no">
+      <details class="detail-agents">
+       <summary>Other buying agents ▾</summary>
+       <div class="detail-agents-list">${otherAgentLinks(String(p.weidianId)).map(([name,url]) =>
+        `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(name)}</a>`).join('')}</div>
+      </details>
+      <button type="button" class="detail-copy" data-copy-weidian>Copy Weidian link</button>
+      <span class="detail-copy-status" data-copy-status role="status"></span>
+     </div>` : ''}
+    <div class="detail-options"></div>
+   </section>
+  </div>
+  <section class="detail-photos" hidden>
+   <h2>Detail photos</h2>
+   <div class="detail-photo-grid"></div>
+  </section>
+  <section class="detail-photos detail-qc" hidden>
+   <h2>QC photos</h2>
+   <div class="detail-photo-grid"></div>
+  </section>`;
  setupDetailActions(p);
- const thumb=root.querySelector('.detail-thumbs'),photo=root.querySelector('#detail-photo'),status=root.querySelector('.detail-status');
- function drawImages(){thumb.innerHTML=images.map((src,i)=>`<button type="button" class="detail-thumb" aria-label="Product photo ${i+1}"><img loading="lazy" src="${esc(src)}" alt=""></button>`).join('');thumb.querySelectorAll('button').forEach((b,i)=>b.addEventListener('click',()=>{photo.src=images[i];thumb.querySelectorAll('button').forEach(x=>x.classList.remove('active'));b.classList.add('active')}));thumb.querySelector('button')?.classList.add('active')}
- drawImages();fetch('https://findspreadsheet.com/api/Goods/getSkuData?weidian_id='+encodeURIComponent(p.weidianId),{credentials:'omit'}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(d=>{if(String(d.weidian_id)!==String(p.weidianId)||!Array.isArray(d.images))throw Error();const weidian=[...new Set(d.images.filter(x=>typeof x==='string'&&/^https:\/\//.test(x)))];images=[...new Set([...images,...weidian])];drawImages();root.querySelector('.detail-weidian-grid').innerHTML=weidian.map((src,i)=>`<img loading="lazy" src="${esc(src)}" alt="${esc(p.name)} ${i+1}">`).join('');root.querySelector('.detail-weidian-status').textContent=weidian.length?'':'Product images from the catalogue. Additional photos are currently unavailable.';status.textContent='Product images from FindSpreadsheet. Check the exact item and options before buying.'}).catch(()=>{status.textContent='Product images from the catalogue. Additional photos are currently unavailable.';root.querySelector('.detail-weidian-status').textContent='Product images from the catalogue. Additional photos are currently unavailable.'});
+
+ const photo = root.querySelector('#detail-photo');
+ const thumbs = root.querySelector('.detail-thumbs');
+ function showPhoto(url) {
+  activePhoto = url;
+  if (url) {
+   photo.src = url;
+   photo.parentElement.href = url;
+  }
+  photo.closest('.detail-main').hidden = !url;
+  root.querySelector('.detail-empty').hidden = Boolean(url);
+  for (const tile of thumbs.children) {
+   tile.setAttribute('aria-pressed', String(tile.dataset.photo === url));
+  }
+ }
+
+ function drawThumbs() {
+  thumbs.hidden = images.length < 2;
+  thumbs.innerHTML = images.map((url, index) => `
+   <button type="button" class="detail-thumb" data-photo="${esc(url)}" aria-label="Product photo ${index + 1}">
+    <img loading="lazy" src="${esc(url)}" alt="">
+   </button>`).join('');
+  showPhoto(activePhoto);
+ }
+ thumbs.addEventListener('click', event => {
+  const tile = event.target.closest('[data-photo]');
+  if (tile) showPhoto(tile.dataset.photo);
+ });
+ function drawPhotoGrid(selector, urls) {
+  const section = root.querySelector(selector);
+  section.hidden = urls.length === 0;
+  section.querySelector('.detail-photo-grid').innerHTML = urls.map((url, index) => `
+   <a href="${esc(url)}" target="_blank" rel="noopener noreferrer">
+    <img loading="lazy" src="${esc(url)}" alt="${esc(p.name)} ${index + 1}">
+   </a>`).join('');
+ }
+
+ drawThumbs();
+ drawPhotoGrid('.detail-photos', detailPhotos);
+ drawPhotoGrid('.detail-qc', qcPhotos);
+ if (!valid) return;
+
+ const endpoint = 'https://findspreadsheet.com/api/Goods/getSkuData?weidian_id=' + encodeURIComponent(p.weidianId);
+ fetch(endpoint, {credentials:'omit', signal:AbortSignal.timeout(8000)})
+  .then(response => {
+   if (!response.ok) throw Error('Seller details unavailable');
+   return response.json();
+  })
+  .then(seller => {
+   if (String(seller.weidian_id) !== String(p.weidianId)) return;
+   const sellerPhotos = photoUrls(Array.isArray(seller.images) ? seller.images : []);
+   const firstPhoto = images[0];
+   images = photoUrls([...sellerPhotos, ...listingPhotos]);
+   if (!activePhoto || activePhoto === firstPhoto) activePhoto = images[0];
+   drawThumbs();
+   drawPhotoGrid('.detail-photos', photoUrls([...detailPhotos, ...sellerPhotos]));
+   drawOptions(seller.specifications, p.price, showPhoto);
+  })
+  .catch(() => {});
+}
+
+function drawOptions(specifications, basePrice, showPhoto) {
+ const attrs = Array.isArray(specifications?.attrs) ? specifications.attrs : [];
+ const groups = attrs.map(group => ({
+  title: String(group.attr_title || '').trim(),
+  values: (Array.isArray(group.attr_values) ? group.attr_values : [])
+   .filter(option => option?.attr_id != null && String(option.attr_value || '').trim())
+ })).filter(group => group.title && group.values.length);
+ const container = root.querySelector('.detail-options');
+ const price = root.querySelector('.detail-price');
+ const skus = Object.values(specifications?.skus || {}).filter(sku => sku?.attr_ids);
+ const chosen = new Map();
+ const priceFor = ids => skus.find(sku => {
+  const skuIds = String(sku.attr_ids).split('-');
+  return skuIds.length === ids.length && ids.every(id => skuIds.includes(id));
+ })?.price;
+
+ for (const [index, group] of groups.entries()) {
+  const field = document.createElement('fieldset');
+  const title = document.createElement('legend');
+  title.textContent = /^size[.\s]*$/i.test(group.title) ? 'Size' : group.title;
+  field.append(title);
+  const tiles = document.createElement('div');
+  tiles.className = 'detail-option-grid';
+  field.append(tiles);
+  for (const option of group.values) {
+   const tile = document.createElement('button');
+   tile.type = 'button';
+   tile.setAttribute('aria-pressed', 'false');
+   const image = photoUrls([option.img])[0];
+   if (image) {
+    const thumbnail = document.createElement('img');
+    thumbnail.loading = 'lazy';
+    thumbnail.alt = '';
+    thumbnail.src = image;
+    tile.append(thumbnail);
+    tile.classList.add('detail-option-photo');
+    tile.title = String(option.attr_value);
+    tile.setAttribute('aria-label', tile.title);
+   } else {
+    tile.textContent = option.attr_value;
+   }
+   tile.addEventListener('click', () => {
+    chosen.set(index, String(option.attr_id));
+    for (const sibling of tiles.children) {
+     sibling.setAttribute('aria-pressed', String(sibling === tile));
+    }
+    if (image) showPhoto(image);
+    const amount = chosen.size === groups.length ? priceFor([...chosen.values()]) : null;
+    const next = amount != null && Number(amount) > 0 ? amount : basePrice;
+    price.dataset.cnyPrice = next;
+    price.textContent = window.joyCurrency?.format(next) || usd(next);
+   });
+   tiles.append(tile);
+  }
+  container.append(field);
+ }
 }
 function draw(){if(kind==='detail'){const p=data.find(x=>String(x.id)===params.get('id'));if(p)details(p);else root.innerHTML='<p>Product not found in this catalogue snapshot.</p>';return}const q=(root.querySelector('input')?.value||'').trim().toLowerCase(),sort=root.querySelector('select')?.value;let arr=data.filter(p=>p.id!=='6250'&&/^\d+$/.test(String(p.weidianId||''))&&findClass(p,kind)&&(!q||normalizeSearch(`${p.name} ${p.id} ${p.weidianId} ${p.category}`).includes(normalizeSearch(q))));if(sort==='price-low')arr.sort((a,b)=>Number(a.price)-Number(b.price));else if(sort==='price-high')arr.sort((a,b)=>Number(b.price)-Number(a.price));else arr.sort((a,b)=>Number(b.id)-Number(a.id));let total=Math.max(1,Math.ceil(arr.length/n));page=Math.min(page,total);let out=arr.slice((page-1)*n,page*n);root.querySelector('[data-status]').textContent=`${arr.length.toLocaleString()} products · page ${page} of ${total}`;root.querySelector('[data-grid]').innerHTML=out.map(p=>`<article class="catalog-card"><a href="/product/?id=${encodeURIComponent(p.id)}"><div class="catalog-image"><img loading="lazy" src="${esc(p.image)}" alt="${esc(p.name)}"></div><div class="product-info"><small>${esc(p.category)}</small><h3>${esc(p.name)}</h3><div class="product-bottom"><span data-cny-price="${esc(p.price)}">${usd(p.price)}</span><b>View details ↗</b></div></div></a></article>`).join('')||'<p>No matching products in this snapshot.</p>';root.querySelector('[data-prev]').disabled=page===1;root.querySelector('[data-next]').disabled=page>=total}
-if(kind!=='detail'){root.innerHTML=`<div class="catalog-notice">FindSpreadsheet snapshot: 19 Oct 2026. Listings shown have a Weidian ID and open on Joyagoo. USD prices are estimates converted from the snapshot at 1 USD = 6.6753 CNY (6 Nov 2026); confirm the current price and availability on Joyagoo. QC photos are not included.</div><div class="catalog-controls"><label>Search <input type="search" placeholder="Product, category or item ID"></label><label>Sort <select><option value="latest">Latest ID</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option></select></label></div><p data-status>Loading products…</p><div class="catalog-grid" data-grid></div><div class="catalog-pages"><button data-prev>← Previous</button><button data-next>Next →</button></div>`;root.querySelector('input').addEventListener('input',()=>{page=1;draw()});root.querySelector('select').addEventListener('change',()=>{page=1;draw()});root.querySelector('[data-prev]').onclick=()=>{page--;draw();root.scrollIntoView()};root.querySelector('[data-next]').onclick=()=>{page++;draw();root.scrollIntoView()}}
+if(kind!=='detail'){root.innerHTML=`<div class="catalog-notice">FindSpreadsheet snapshot: 19 Oct 2026. Listings shown have a Weidian ID and open on Joyagoo. Displayed prices are estimates. Confirm the current price and availability on Joyagoo.</div><div class="catalog-controls"><label>Search <input type="search" placeholder="Try sneakers, hoodie, or a Weidian item ID…"></label><label>Sort <select><option value="latest">Latest ID</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option></select></label></div><p data-status>Loading products…</p><div class="catalog-grid" data-grid></div><div class="catalog-pages"><button data-prev>← Previous</button><button data-next>Next →</button></div>`;root.querySelector('input').value=params.get('q')||'';root.querySelector('input').addEventListener('input',()=>{page=1;draw()});root.querySelector('select').addEventListener('change',()=>{page=1;draw()});root.querySelector('[data-prev]').onclick=()=>{page--;draw();root.scrollIntoView()};root.querySelector('[data-next]').onclick=()=>{page++;draw();root.scrollIntoView()}}
 fetch('/catalog.json').then(r=>{if(!r.ok)throw Error();return r.json()}).then(d=>{data=d.products;draw()}).catch(()=>root.innerHTML='<p>Unable to load the catalogue. Please try again.</p>');
 })();
