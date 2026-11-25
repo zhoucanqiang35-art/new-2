@@ -104,7 +104,16 @@ export async function qcLookup(id) {
   const [featured, checks] = await Promise.all([
     readJson('/data/qc-featured.json'), readJson('/data/qc.json'),
   ]);
-  return featured[id] ?? checks[id];
+  const saved = featured[id] ?? checks[id];
+  if (saved?.images?.length) return saved;
+  try {
+    const response = await fetch('/api/qc?item=' + encodeURIComponent(id));
+    if (!response.ok) throw new Error('QC request failed');
+    return await response.json();
+  } catch (error) {
+    if (!saved) throw error;
+    return saved;
+  }
 }
 
 export function renderQc(target, id, entry) {

@@ -144,7 +144,7 @@ function showDetails(product, savedPhotos, agents) {
     ui('p', 'confirmListing', {className: 'detail-note'}),
     localize(external('', new URL(product.sourcePath, sourceOrigin).href, 'inline-link'), 'mainListing'),
   ]);
-  const references = element('div', {className: 'qc-references'});
+  const references = element('div', {className: 'qc-references'}, [ui('p', 'qcCheck')]);
   const warehouse = element('section', {className: 'detail-panel warehouse-section'}, [
     element('div', {className: 'section-head'}, [
       ui('h2', 'warehouseQc'),
@@ -154,8 +154,10 @@ function showDetails(product, savedPhotos, agents) {
     ui('p', 'qcHelp', {className: 'qc-note'}),
   ]);
   target.replaceChildren(element('div', {className: 'product-main'}, [photos.section, info]), warehouse);
-  qcLookup(product.weidianId).then((entry) => renderQc(references, product.weidianId, entry))
-    .catch(() => references.append(ui('p', 'qcError')));
+  qcLookup(product.weidianId).then((entry) => {
+    references.replaceChildren();
+    renderQc(references, product.weidianId, entry);
+  }).catch(() => references.replaceChildren(ui('p', 'qcError')));
   readJson(new URL('/api/Goods/getSkuData?weidian_id=' + product.weidianId, sourceOrigin).href).then((live) => {
     if (String(live?.weidian_id) !== product.weidianId) return;
     const livePhotos = Array.isArray(live.images) ? live.images : [];

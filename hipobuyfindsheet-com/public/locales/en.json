@@ -101,7 +101,7 @@
   "qcFor": "Historical warehouse references for Weidian item {0}.",
   "warehouseSource": "Warehouse source: {0}",
   "qcNone": "The saved QC check found no warehouse photos for this item.",
-  "qcUnsaved": "There are no saved QC photos for this item in the preview.",
+  "qcUnsaved": "Warehouse QC photos are not available for this item yet.",
   "qcHelp": "The seller gallery appears above. Check your own Hipobuy warehouse photos after arrival.",
   "qcError": "QC references could not be loaded. Please try again.",
   "qcPhoto": "QC photo {0} for item {1}",
