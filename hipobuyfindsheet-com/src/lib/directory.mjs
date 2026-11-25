@@ -19,12 +19,13 @@ let page = 1;
 
 function updateLocation() {
   const url = new URL(location.href);
-  url.search = '';
+  url.searchParams.delete('page');
   for (const [key, value] of new FormData(filters).entries()) {
     if (value.trim()) url.searchParams.set(key, value.trim());
+    else url.searchParams.delete(key);
   }
   if (page > 1) url.searchParams.set('page', String(page));
-  history.pushState(null, '', url);
+  if (url.href !== location.href) history.pushState(null, '', url);
 }
 
 function render() {
@@ -69,9 +70,13 @@ function turnPage(step) {
   filters.scrollIntoView({block: 'start'});
 }
 
+setFromLocation();
+for (const select of filters.querySelectorAll('select')) {
+  select.addEventListener('change', () => filters.requestSubmit());
+}
+
 try {
   catalog = await readJson('/data/catalog.json');
-  setFromLocation();
   filter();
   filters.addEventListener('submit', (event) => {
     event.preventDefault();
