@@ -5,16 +5,30 @@ const product = document.querySelector('#product[data-weidian-id]');
 if (product) {
   const main = product.querySelector('#main-image');
   const mainLink = product.querySelector('#main-photo-link');
+  const mainStatus = product.querySelector('#main-photo-status');
   const optionSelector = '[data-listing-photo], [data-seller-photo]';
-  product.addEventListener('click', event => {
-    const button = event.target.closest(optionSelector);
-    if (!button) return;
-    const url = button.dataset.sellerPhoto ?? button.dataset.listingPhoto;
+  const listingPhotos = [...product.querySelectorAll('[data-listing-photo]')].map(button => button.dataset.listingPhoto);
+  const failedPhotos = new Set();
+  function selectPhoto(url) {
+    if (main.getAttribute('src') === url) return;
+    mainStatus.hidden = true;
     main.src = url;
     mainLink.href = url;
     for (const option of product.querySelectorAll(optionSelector)) {
       option.setAttribute('aria-pressed', String((option.dataset.sellerPhoto ?? option.dataset.listingPhoto) === url));
     }
+  }
+  function recoverMainPhoto() {
+    failedPhotos.add(main.getAttribute('src'));
+    const fallback = listingPhotos.find(url => !failedPhotos.has(url));
+    if (fallback) selectPhoto(fallback);
+    else mainStatus.hidden = false;
+  }
+  main.addEventListener('error', recoverMainPhoto);
+  if (main.complete && !main.naturalWidth) recoverMainPhoto();
+  product.addEventListener('click', event => {
+    const button = event.target.closest(optionSelector);
+    if (button) selectPhoto(button.dataset.sellerPhoto ?? button.dataset.listingPhoto);
   });
 
   const optionGroups = product.querySelector('#seller-options-groups');
@@ -42,7 +56,7 @@ if (product) {
         section.append(title, grid);
         return section;
       });
-      if (optionGroups.contains(document.activeElement)) return;
+      if (optionGroups.contains(document.activeElement) || (!sections.length && optionGroups.childElementCount)) return;
       optionGroups.replaceChildren(...sections);
       optionStatus.hidden = sections.length > 0;
       if (!sections.length) optionStatus.textContent = 'Open Weidian to see the seller’s current options.';
@@ -76,8 +90,15 @@ if (product) {
   });
 
   const qc = product.querySelector('[data-qc-results]');
-  showQc(product.dataset.weidianId, qc).then(() => {
-    if (!qc.querySelector('[data-qc-gallery]').childElementCount) return;
-    for (const section of product.querySelectorAll('#seller-reference-photos, #saved-detail-photos')) section.hidden = true;
+  showQc(product.dataset.weidianId, qc).then(async () => {
+    const livePhotos = [...qc.querySelectorAll('[data-qc-gallery] img')];
+    if (!livePhotos.length) return;
+    try {
+      await Promise.any(livePhotos.map(photo => photo.decode()));
+      for (const section of product.querySelectorAll('#seller-reference-photos, #saved-detail-photos')) section.hidden = true;
+    } catch {
+      qc.querySelector('[data-qc-gallery]').replaceChildren();
+      qc.querySelector('[data-qc-status]').textContent = 'Live warehouse photos could not load. Showing the available photos above.';
+    }
   });
 }

@@ -11,6 +11,7 @@ const description = intro ?? 'Compare Weidian listings and see which items have 
 const useCards = !category;
 const path = category ? `/categories/${category.toLowerCase()}/` : '/spreadsheet/';
 const selectedCategory = category || initialCategory;
+const categoryLinks = [['', 'All categories'], ...Object.entries(categories)];
 const products = selectedCategory ? catalog.filter(product => product.category === selectedCategory) : catalog;
 const withWarehousePhotos = category
   ? products.filter(product => savedQc[product.weidianId]?.photos?.length).slice(0, 3)
@@ -31,7 +32,13 @@ const picks = category ? [...new Map(
       <button class="button primary">Search</button>
       <label class="qc-filter"><input type="checkbox" name="qc" value="1" /> With saved warehouse QC</label>
     </form>
-    {useCards ? <p class="small catalog-search-hint"><a class="text-link" href="/spreadsheet/">All categories</a></p>
+    {useCards ? <nav class="catalog-categories" aria-label="Browse by category">
+        {categoryLinks.map(([key, name]) => <a
+          href={key ? '/spreadsheet/?' + new URLSearchParams({ category: key }) : '/spreadsheet/'}
+          data-catalog-category={key}
+          aria-current={key === selectedCategory ? 'true' : undefined}
+        >{name}</a>)}
+      </nav>
       : <p class="small muted catalog-search-hint">{englishSearchHelp} <span lang="zh-Hans" translate="no">{chineseSearchHelp}</span></p>}
     <p class="status muted" id="catalog-status" role="status">{products.length.toLocaleString('en-US')} listings</p>
     {useCards ? <div id="catalog-list" class="sheet-grid" data-layout="cards">
@@ -94,6 +101,10 @@ const picks = category ? [...new Map(
 @media(max-width:620px){.sheet-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.sheet-info{padding:8px}.sheet-actions{grid-template-columns:1fr}}
 
 .category-examples{margin-top:24px}
+.catalog-categories{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 15px}
+.catalog-categories a{display:inline-flex;align-items:center;min-height:36px;padding:5px 10px;border:1px solid var(--line);border-radius:6px;background:#fff;font-size:.875rem;font-weight:650}
+.catalog-categories a:is(:hover,:focus-visible){border-color:var(--ink)}
+.catalog-categories a[aria-current=true]{color:#fff;background:var(--ink);border-color:var(--ink)}
 .filters{display:grid;grid-template-columns:minmax(190px,2.4fr) 1fr 1fr auto;gap:12px;align-items:end}.qc-filter{grid-column:1/-1;display:flex;align-items:center;gap:7px;color:var(--muted)}.qc-filter input{accent-color:var(--accent-dark);width:17px;height:17px}
 .filters[data-category]{grid-template-columns:minmax(190px,2.4fr) 1fr auto}
 .paging{justify-content:center;margin-top:22px}.paging button:disabled{opacity:.45;cursor:default}

@@ -11,6 +11,7 @@ const fixedCategory = form.dataset.category;
 const list = document.querySelector('#catalog-list');
 const empty = document.querySelector('#catalog-empty');
 const status = document.querySelector('#catalog-status');
+const categoryLinks = document.querySelectorAll('[data-catalog-category]');
 const controls = document.querySelector('#catalog-paging');
 const prev = document.querySelector('#catalog-prev');
 const next = document.querySelector('#catalog-next');
@@ -94,6 +95,10 @@ function render(updateUrl = false) {
   const key = findItemId(query);
   const terms = queryTerms(query);
   const selectedCategory = fixedCategory ?? category.value;
+  for (const link of categoryLinks) {
+    if (link.dataset.catalogCategory === selectedCategory) link.setAttribute('aria-current', 'true');
+    else link.removeAttribute('aria-current');
+  }
   const results = catalog.filter(product => {
     if (qc.checked && !savedQc[product.weidianId]?.photos?.length) return false;
     if (selectedCategory && product.category !== selectedCategory) return false;

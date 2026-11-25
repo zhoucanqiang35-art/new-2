@@ -30,6 +30,7 @@ const sellerUrl = product ? 'https://weidian.com/item.html?itemID=' + product.we
           <a id="main-photo-link" href={photos[0]} target="_blank" rel="noopener" aria-label="Open product photo">
             <img id="main-image" src={photos[0]} alt={product.name} translate="no" width="600" height="500" fetchpriority="high" loading="eager" />
           </a>
+          <p id="main-photo-status" class="small muted" role="status" hidden>Product photo temporarily unavailable.</p>
           {photos.length > 1 && <div class="photo-strip" aria-label="Seller photos">
             {photos.map((photo, index) => <button type="button" data-listing-photo={photo} aria-pressed={index === 0} aria-label={'Show product photo ' + (index + 1)}>
               <img src={photo} alt="" width="58" height="58" loading="eager" decoding="async" />
