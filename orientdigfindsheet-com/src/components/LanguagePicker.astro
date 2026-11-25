@@ -6,7 +6,7 @@ import { currencies, rateDate, rateSource } from '../lib/currency.mjs';
   <summary class="control-button" aria-label="Website language"><span data-current-language translate="no">English</span><span class="control-caret" aria-hidden="true"></span></summary>
   <div class="settings-panel picker-panel">
     <div class="option-grid picker-scroll" dir="ltr">
-      {languages.map(([code, label]) => <button type="button" data-select-language={code} aria-pressed={code === 'en'}><span lang={code} translate="no" dir="auto">{label}</span></button>)}
+      {languages.map(([code, label]) => <button type="button" data-select-language={code} aria-label={label} lang={code} translate="no" aria-pressed={code === 'en'}><span dir="auto">{label}</span></button>)}
     </div>
   </div>
 </details>

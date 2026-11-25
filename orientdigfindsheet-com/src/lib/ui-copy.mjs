@@ -59,7 +59,13 @@ export function uiCopy(locale) {
   const [hoodies, sneakers, jerseys] = searchSuggestions[locale];
   return {
     ...Object.fromEntries(keys.map((key, index) => [key, translated[index]])),
-    ...(locale === 'zh-Hans' ? { 'Image search': '图片搜索', 'Search suggestions': '搜索提示' } : {}),
+    ...(locale === 'zh-Hans' ? {
+      'Image search': '图片搜索',
+      'Search suggestions': '搜索提示',
+      'Hoodies & sweaters': '连帽衫与卫衣',
+      Headwear: '帽子和头饰',
+      'ZZ1ZZ visually similar listings from the saved index.': '从图片索引找到 ZZ1ZZ 件相似商品。',
+    } : {}),
     Hoodies: hoodies,
     Sneakers: sneakers,
     Jerseys: jerseys,

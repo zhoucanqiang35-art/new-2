@@ -47,7 +47,7 @@ const description = 'Search OrientDig spreadsheet finds, match items by image, r
         <p>Find a Weidian product, check its warehouse photos and choose a shopping agent.</p>
         <form action="/spreadsheet/" role="search" class="intro-search">
           <label for="home-query">Search {catalog.length.toLocaleString('en-US')} listings</label>
-          <div class="row">
+          <div class="search-fields">
             <input class="input" id="home-query" name="q" placeholder={productSearchPlaceholder} />
             <button class="button primary">Search</button>
           </div>
@@ -119,7 +119,7 @@ const description = 'Search OrientDig spreadsheet finds, match items by image, r
 .intro-copy h1{font-size:clamp(1.95rem,4.8vw,3.8rem);line-height:1;letter-spacing:-.058em}
 .intro-copy>p{color:var(--muted);font-size:1.05rem;margin:7px auto 10px;max-width:52ch}
 .intro-search label{display:block;font-size:.86rem;font-weight:750;margin-bottom:5px;text-align:start}
-.intro-search .row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:7px}
+.search-fields{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:7px}
 .search-language{margin:4px 0 0;text-align:start;font-size:.78rem}.intro-links{justify-content:center;margin-top:9px;font-size:.9rem;gap:14px}
 .intro-links .button{min-height:38px;font-size:.86rem}
 
@@ -134,7 +134,7 @@ const description = 'Search OrientDig spreadsheet finds, match items by image, r
 .search-suggestions{gap:5px;margin-top:7px}
 .search-suggestions a{border:1px solid var(--line);border-radius:6px;font-size:.77rem;font-weight:650;padding:3px 8px;background:var(--accent-soft)}
 .search-suggestions a:hover{border-color:var(--ink)}
-.pick-grid :global(.card img){aspect-ratio:1.55}
+.pick-grid :global(.card img){height:auto;aspect-ratio:1.55}
 .pick-grid :global(.card-body){padding:7px 8px;gap:2px;font-size:.83rem}
 
 .home-blog{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:start}
