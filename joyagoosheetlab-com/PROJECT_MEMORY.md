@@ -562,3 +562,5 @@
 2026-11-25: Limited the language menu to 22 tiles in a vertically scrollable two-column grid. Currency remains independently selectable and changes to the corresponding currency when a language is selected. Added version parameters to the updated styles and scripts on all affected routes so browsers refresh previously cached assets. The catalogue snapshot currently has no populated QC photo arrays, so seller and listing images appear under Detail photos.
 
 2026-11-25: Added locally served WebP logos to the 18 existing alternate purchasing agent links in every product detail using the shared catalogue renderer. Kept the two-column scrollable panel and existing product destinations.
+
+2026-11-25: Restored the homepage category anchor used by footer links. Checked all 15 category routes, catalogue search by Weidian ID, sorting, pagination, language/currency switching, listing photos, seller options, copy link, and a real image search in the browser.
