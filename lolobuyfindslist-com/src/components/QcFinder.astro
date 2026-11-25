@@ -1,6 +1,6 @@
   <section class="qc-tool" id="qc-finder">
     <h2>QC Finder</h2>
-    <p class="lead">Look up saved warehouse photos from Findspreadsheet by Weidian link or item ID. For a recent order, check your photos in your LoloBuy account.</p>
+    <p class="lead">Look up warehouse photos from Findspreadsheet by Weidian link or item ID. For a recent order, check your photos in your LoloBuy account.</p>
     <form class="search-form" id="qc-form" action="/qc/#qc-finder">
       <label class="visually-hidden" for="qc-query">Weidian item ID or link</label>
       <input name="id" id="qc-query" placeholder="Weidian link or item ID" required />
@@ -23,7 +23,7 @@
       result.textContent = 'Enter a numeric Weidian item ID or a valid product link.';
       return;
     }
-    result.textContent = 'Checking saved QC records…';
+    result.textContent = 'Checking warehouse QC photos…';
     const catalog = await readJson('/data/catalog.json').catch(() => []);
     const product = catalog.find((item: {weidianId: string}) => item.weidianId === id);
     if (result.dataset.item === id) await showQc(result, id, product?.sourcePath);

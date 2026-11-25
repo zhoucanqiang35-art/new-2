@@ -41,28 +41,45 @@ export function external(text, href, className = '') {
 }
 
 let qcData;
-export async function showQc(target, id, sourcePath = '') {
-  target.textContent = 'Checking saved QC records…';
-  try {
-    qcData ??= Promise.all([readJson('/data/qc-featured.json'), readJson('/data/qc.json')])
-      .catch((error) => { qcData = undefined; throw error; });
-    const [photos, checks] = await qcData;
-    if (target.dataset.item && target.dataset.item !== id) return;
-    const record = photos[id] ?? checks[id];
-    if (record?.images?.length) {
-      target.replaceChildren(element('p', {textContent: 'Historical warehouse photos for Weidian item ' + id + '.'}),
-        element('div', {className: 'qc-grid'}, record.images.map(({url, agent}, i) => {
-          const image = element('img', {src: url, loading: 'lazy', alt: 'Warehouse QC photo ' + (i + 1) + (agent ? ' · ' + agent : '')});
-          const link = external('', url);
-          link.append(image);
-          return link;
-        })));
-      return;
-    }
-    const message = {none: 'The saved QC check found no warehouse photos for this item.', pending: 'The last saved QC check was pending.'};
-    target.replaceChildren(element('p', {textContent: message[record?.status] ?? 'This item has no saved QC record in the preview.'}));
-    if (sourcePath) target.append(external('Check the current listing on Findspreadsheet', new URL(sourcePath, sourceOrigin).href));
-  } catch {
-    if (!target.dataset.item || target.dataset.item === id) target.textContent = 'Saved QC records could not load. Try again in a moment.';
+
+async function savedQc(id) {
+  qcData ??= Promise.all([readJson('/data/qc-featured.json'), readJson('/data/qc.json')])
+    .catch((error) => { qcData = undefined; throw error; });
+  const [photos, checks] = await qcData;
+  return photos[id] ?? checks[id];
+}
+
+async function currentQc(id) {
+  const record = await readJson('/api/warehouse-qc?item=' + encodeURIComponent(id));
+  if (record.itemId !== id || !['ready', 'none', 'pending'].includes(record.status) || !Array.isArray(record.images)) {
+    throw new Error('Invalid warehouse QC response');
   }
+  return record;
+}
+
+export async function showQc(target, id, sourcePath = '') {
+  target.textContent = 'Checking warehouse QC photos…';
+  const live = await currentQc(id).catch(() => null);
+  const saved = live ? null : await savedQc(id).catch(() => null);
+  if (target.dataset.item && target.dataset.item !== id) return;
+  const photos = live?.images ?? saved?.images ?? [];
+  if (photos.length) {
+    const description = live ? 'Warehouse QC photos for Weidian item ' : 'Historical warehouse photos for Weidian item ';
+    target.replaceChildren(element('p', {textContent: description + id + '.'}),
+      element('div', {className: 'qc-grid'}, photos.map(({url, agent}, index) => {
+        const alt = 'Warehouse QC photo ' + (index + 1) + (agent ? ' · ' + agent : '');
+        const image = element('img', {src: url, loading: 'lazy', decoding: 'async', alt});
+        const link = external('', url);
+        link.append(image);
+        return link;
+      })));
+    return;
+  }
+
+  const message = {
+    none: 'FindSpreadsheet has no published warehouse QC photos for this item.',
+    pending: 'The warehouse QC photos are still processing.',
+  };
+  target.replaceChildren(element('p', {textContent: message[live?.status] ?? 'Warehouse QC photos could not load. Try again in a moment.'}));
+  if (sourcePath) target.append(external('Check the current listing on Findspreadsheet', new URL(sourcePath, sourceOrigin).href));
 }
