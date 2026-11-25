@@ -29,7 +29,39 @@ const labels = {
   uk: ['Завантажити зображення','Виберіть фото або перетягніть його сюди','Скопіювати посилання на товар','Посилання скопійовано','Інші посередники','Фото продавця','Фото перевірки на складі','Довідкові фото продавця','Перевірте розміри й наявність на Weidian','Введіть «hoodie», «sneakers» або посилання на товар','Відкрити пошук за фото','Виберіть файл зображення.'],
 };
 
+const searchSuggestions = {
+  'zh-Hans': ['连帽卫衣', '运动鞋', '球衣'],
+  es: ['Sudaderas con capucha', 'Zapatillas', 'Camisetas deportivas'],
+  fr: ['Sweats à capuche', 'Baskets', 'Maillots'],
+  de: ['Kapuzenpullover', 'Sneaker', 'Trikots'],
+  it: ['Felpe con cappuccio', 'Sneakers', 'Maglie sportive'],
+  pt: ['Camisolas com capuz', 'Sapatilhas', 'Camisolas desportivas'],
+  ru: ['Худи', 'Кроссовки', 'Джерси'],
+  ja: ['パーカー', 'スニーカー', 'ユニフォーム'],
+  ko: ['후드티', '운동화', '유니폼'],
+  ar: ['هوديز', 'أحذية رياضية', 'قمصان رياضية'],
+  tr: ['Kapüşonlular', 'Spor ayakkabılar', 'Formalar'],
+  pl: ['Bluzy z kapturem', 'Sneakersy', 'Koszulki sportowe'],
+  nl: ['Hoodies', 'Sneakers', 'Sportshirts'],
+  sv: ['Huvtröjor', 'Sneakers', 'Matchtröjor'],
+  da: ['Hættetrøjer', 'Sneakers', 'Sportstrøjer'],
+  fi: ['Hupparit', 'Lenkkarit', 'Pelipaidat'],
+  no: ['Hettegensere', 'Joggesko', 'Treningsdrakter'],
+  hu: ['Kapucnis pulóverek', 'Sneakerek', 'Mezek'],
+  ro: ['Hanorace', 'Adidași', 'Tricouri de sport'],
+  cs: ['Mikiny s kapucí', 'Tenisky', 'Dresy'],
+  uk: ['Худі', 'Кросівки', 'Ігрові футболки'],
+};
+
 export function uiCopy(locale) {
   const translated = labels[locale];
-  return translated ? Object.fromEntries(keys.map((key, index) => [key, translated[index]])) : {};
+  if (!translated) return {};
+  const [hoodies, sneakers, jerseys] = searchSuggestions[locale];
+  return {
+    ...Object.fromEntries(keys.map((key, index) => [key, translated[index]])),
+    ...(locale === 'zh-Hans' ? { 'Image search': '图片搜索', 'Search suggestions': '搜索提示' } : {}),
+    Hoodies: hoodies,
+    Sneakers: sneakers,
+    Jerseys: jerseys,
+  };
 }
