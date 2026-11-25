@@ -1,0 +1,266 @@
+---
+import { existsSync, readFileSync } from 'node:fs';
+import Price from './Price.astro';
+import AgentPicker from './AgentPicker.astro';
+import { purchaseUrl, getProductData, getAgentLinks } from '../lib/catalog.js';
+import { exchangeDate } from '../lib/money.js';
+import { photoThumbnail } from '../lib/catalog-photos.js';
+import { listingPhotoShard, listingPhotoUrl } from '../lib/listing-photos.js';
+import qc from '../data/qc.json';
+
+const { item } = Astro.props;
+const dynamic = !item;
+const data = item ? getProductData(item) : { gallery: [], groups: [] };
+const recordId = item?.detailUrl?.match(/-(\d+)\.html$/)?.[1];
+const shard = listingPhotoShard(recordId);
+const album = shard && existsSync('public' + shard)
+  ? (JSON.parse(readFileSync('public' + shard, 'utf8'))[recordId] ?? []).map(listingPhotoUrl) : [];
+const sellerPhotos = [...new Set([...(item?.images ?? []), ...data.gallery].filter(Boolean))];
+const optionPhotos = data.groups.flatMap((group) => group.options.map((option) => option.image).filter(Boolean));
+const lessPhotos = sellerPhotos.length <= 1 ? optionPhotos.slice(0, 8) : [];
+const gallery = [...new Set([item?.image, ...album, ...sellerPhotos, ...lessPhotos].filter(Boolean))];
+const qcPhotos = item ? (qc[item.id] ?? []) : [];
+const detailPhotos = [...new Set([item?.image, ...album, ...sellerPhotos].filter(Boolean))];
+const buy = item && purchaseUrl(item);
+const agents = item ? getAgentLinks(item) : undefined;
+const imageSearch = item ? '/image-search/?' + new URLSearchParams({ item: item.id, photo: gallery[0] }) : '/image-search/';
+
+function optionLabel(group) {
+  if (/^(尺寸|尺码|大小|size)$/i.test(group.name)) return 'Size';
+  if (/^(颜色|颜色分类|款式|规格|colour|color|style)$/i.test(group.name)) return 'Style';
+  return group.name;
+}
+---
+  <div class="wrap detail-wrap">
+    <p class="breadcrumb"><a href="/spreadsheet/">Spreadsheet</a> {item && <>/ <a href={'/spreadsheet/?category=' + encodeURIComponent(item.categorySlug)}>{item.category}</a></>}</p>
+    {dynamic && <p id="listing-state" role="status">Loading product…</p>}
+    <div class="detail-grid product-detail" data-product data-dynamic={dynamic ? "" : undefined} hidden={dynamic}>
+      <section class="detail-gallery" aria-label="Product photos">
+        <a class="detail-image" href={gallery[0]} target="_blank" rel="noopener" aria-label="Open full-size product image">
+          <img id="gallery-image" src={gallery[0]} alt={item?.title ?? ""} width="640" height="540" fetchpriority="high" decoding="async" />
+          <span class="muted" id="gallery-photo-unavailable" hidden>Product photo is temporarily unavailable.</span>
+        </a>
+        <div class="gallery-controls">
+          <div class="gallery-nav" data-photo-nav hidden={gallery.length < 2}>
+            <button class="button button-ghost gallery-prev" type="button" data-photo-step="-1" aria-label="Previous product image">‹</button>
+            <button class="button button-ghost gallery-next" type="button" data-photo-step="1" aria-label="Next product image">›</button>
+          </div>
+          <div class="thumbs gallery-thumbs" aria-label="Product photos">
+          {gallery.map((image, index) => <button class="thumb" type="button" data-image={image} aria-label={'Show product image ' + (index + 1)} data-aria-label="Show product image {count}" data-aria-count={index + 1} aria-pressed={index === 0 ? 'true' : 'false'}><img src={photoThumbnail(image, 144)} alt="" width="64" height="64" loading="lazy" decoding="async" /></button>)}
+          </div>
+        </div>
+      </section>
+      <div class="detail-copy">
+        <p class="eyebrow" data-detail-category>{item?.category}</p>
+        <h1 data-detail-title data-no-translate>{item?.title}</h1>
+        <p class="listing-number" data-detail-market><span>Listing ID</span> <span data-detail-id data-no-translate>{item?.id}</span></p>
+        <p class="detail-price">{dynamic ? <span data-detail-price></span> : <Price amount={data.priceCny} />}</p>
+        <p class="muted small" data-detail-price-note hidden={!dynamic && data.priceCny == null} title={exchangeDate}>Prices are estimates based on exchange rates.</p>
+        <div class="purchase-area">
+          <a class="button buy-button" data-detail-buy href={buy} hidden={!buy} target="_blank" rel="sponsored noopener">Open PonyBuy listing</a>
+          <div class="purchase-secondary">
+            <AgentPicker links={agents} sourceUrl={item?.sourceUrl} />
+            <button class="button button-ghost" type="button" data-copy={item?.sourceUrl ?? ""}>Copy product link</button>
+          </div>
+          <p class="copy-status small" aria-live="polite"></p>
+        </div>
+        <div class="listing-links">
+          <a class="text-link" href={imageSearch} data-search-photo>Search with this photo</a>
+          <a class="text-link" data-detail-source href={item?.detailUrl} target="_blank" rel="noopener">View the Findspreadsheet record</a>
+        </div>
+        {data.groups.length > 0 ? <div class="product-options" data-variants={JSON.stringify((data.variants ?? []).map(({ values, priceCny }) => ({ values, priceCny })))}>
+          {data.groups.map((group, index) => {
+            const label = optionLabel(group);
+            const photos = group.options.filter(({ image }) => image);
+            return <fieldset data-option-group={index}>
+              <legend>{label}</legend>
+              {photos.length ? <>
+                <div class="option-grid with-photos">
+                  {photos.map(({ name, image }) => <button class="option-pill photo-option" type="button" data-option={name} data-option-photo={image} aria-pressed="false" aria-label={name} title={name} data-no-translate>
+                    <img src={photoThumbnail(image, 160)} alt="" width="66" height="66" loading="lazy" decoding="async" />
+                  </button>)}
+                </div>
+                <details class="option-by-name">
+                  <summary>Choose by name</summary>
+                  <select data-option-select aria-label={label}>
+                    <option value="">Select an option</option>
+                    {group.options.map(({ name, image }) => <option value={name} data-option-photo={image} data-no-translate>{name}</option>)}
+                  </select>
+                </details>
+              </> : <div class="option-grid">
+                {group.options.map(({ name }) => <button class="option-pill" type="button" data-option={name} aria-pressed="false" title={name}>
+                  <span data-no-translate>{name}</span>
+                </button>)}
+              </div>}
+            </fieldset>;
+          })}
+          <p class="variant-status muted small" aria-live="polite"></p>
+        </div> : <div class="product-options" data-variants="[]"></div>}
+
+      </div>
+    </div>
+
+    <section class="section detail-photo-section" data-qc-section hidden={!qcPhotos.length} aria-labelledby="qc-photo-title">
+      <h2 id="qc-photo-title">Warehouse QC photos</h2>
+      <div class="detail-photos" data-qc-photos>{qcPhotos.map(({ image }) => <a href={image} target="_blank" rel="noopener"><img src={photoThumbnail(image, 360)} alt={'QC photo for ' + item?.title} width="180" height="150" loading="lazy" decoding="async" /></a>)}</div>
+    </section>
+    <section class="section detail-photo-section" data-seller-section hidden={!detailPhotos.length} aria-labelledby="seller-photo-title">
+      <h2 id="seller-photo-title">Detail photos</h2>
+      <p class="muted small detail-photo-source">Listing photos from Findspreadsheet or the original seller.</p>
+      <div class="detail-photos" data-seller-photos>{detailPhotos.map((image) => <a href={image} target="_blank" rel="noopener"><img src={photoThumbnail(image, 360)} alt={item?.title} width="180" height="150" loading="lazy" decoding="async" /></a>)}</div>
+    </section>
+  </div>
+<script>
+  import { setUiText, refreshPrices } from '../lib/preferences';
+  function activateDetail() {
+    const mainImage = document.querySelector<HTMLImageElement>('#gallery-image');
+    const mainImageLink = mainImage?.closest('a');
+    const photoUnavailable = document.querySelector<HTMLElement>('#gallery-photo-unavailable');
+    const failedPhotos = new Set<string>();
+    const searchLink = document.querySelector<HTMLAnchorElement>('[data-search-photo]');
+    const searchUrl = searchLink ? new URL(searchLink.href) : null;
+    const thumbs = () => [...document.querySelectorAll<HTMLButtonElement>('[data-image]')];
+
+    function showImage(url: string) {
+      if (!mainImage || !url || failedPhotos.has(new URL(url, location.href).href)) return;
+      mainImage.hidden = false;
+      if (photoUnavailable) photoUnavailable.hidden = true;
+      if (searchLink) searchLink.hidden = false;
+      mainImage.src = url;
+      if (mainImageLink) mainImageLink.href = url;
+      if (searchLink && searchUrl) {
+        searchUrl.searchParams.set('photo', url);
+        searchLink.href = searchUrl.href;
+      }
+      thumbs().forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.image === url)));
+    }
+
+    function recoverMainPhoto() {
+      if (!mainImage) return;
+      failedPhotos.add(mainImage.src);
+      const next = thumbs().find((thumb) => thumb.dataset.image && !failedPhotos.has(new URL(thumb.dataset.image, location.href).href));
+      if (next) {
+        showImage(next.dataset.image ?? '');
+        return;
+      }
+      mainImage.hidden = true;
+      if (photoUnavailable) photoUnavailable.hidden = false;
+      if (searchLink) searchLink.hidden = true;
+      mainImageLink?.removeAttribute('href');
+    }
+
+    mainImage?.addEventListener('select-product-photo', (event) => showImage((event as CustomEvent<string>).detail));
+    mainImage?.addEventListener('error', recoverMainPhoto);
+    if (mainImage?.getAttribute('src') && mainImage.complete && !mainImage.naturalWidth) recoverMainPhoto();
+    const strip = document.querySelector('.gallery-thumbs');
+    for (const control of document.querySelectorAll<HTMLButtonElement>('[data-photo-step]')) {
+      control.addEventListener('click', () => {
+        const photos = thumbs().filter((button) => !button.hidden && button.dataset.image
+          && !failedPhotos.has(new URL(button.dataset.image, location.href).href));
+        if (photos.length < 2) return;
+        const active = photos.findIndex((button) => button.getAttribute('aria-pressed') === 'true');
+        const step = Number(control.dataset.photoStep);
+        const next = active < 0 ? (step > 0 ? 0 : photos.length - 1) : (active + step + photos.length) % photos.length;
+        const thumbnail = photos[next];
+        showImage(thumbnail.dataset.image ?? '');
+        thumbnail.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      });
+    }
+    strip?.addEventListener('click', (event) => {
+      const thumb = (event.target as Element).closest<HTMLButtonElement>('[data-image]');
+      if (thumb) showImage(thumb.dataset.image ?? '');
+    });
+    strip?.addEventListener('error', (event) => {
+      const img = event.target as HTMLImageElement;
+      const thumb = img.closest<HTMLButtonElement>('[data-image]');
+      if (!thumb?.dataset.image) return;
+      const original = new URL(thumb.dataset.image, location.href).href;
+      if (img.src !== original) img.src = original;
+      else thumb.hidden = true;
+    }, true);
+  }
+
+  function activateOptions() {
+    const mainImage = document.querySelector<HTMLImageElement>('#gallery-image');
+    const options = document.querySelector<HTMLElement>('[data-variants]');
+    const price = document.querySelector<HTMLElement>('.detail-price [data-price-value]');
+    const basePrice = price?.dataset.priceValue;
+    const variantStatus = document.querySelector<HTMLElement>('.variant-status');
+    const groups = [...document.querySelectorAll<HTMLElement>('[data-option-group]')];
+    const variants: { values: string[]; priceCny?: number }[] = JSON.parse(options?.dataset.variants ?? '[]');
+
+    function updateVariantPrice() {
+      if (!price || !basePrice) return;
+      const selection = groups.map((group) => {
+        const select = group.querySelector<HTMLSelectElement>('[data-option-select]');
+        return select?.value || group.querySelector<HTMLButtonElement>('[aria-pressed="true"]')?.dataset.option;
+      });
+      const allSelected = selection.length > 0 && selection.every(Boolean);
+      const variant = allSelected && variants.find((entry) => selection.every((value, i) => value === entry.values[i]));
+      price.dataset.priceValue = variant && variant.priceCny != null ? String(variant.priceCny) : basePrice;
+      refreshPrices(price);
+      setUiText(variantStatus, allSelected && variants.length > 0 && !variant ? 'This option combination is unavailable.' : '');
+    }
+
+    groups.forEach((group) => {
+      const choices = [...group.querySelectorAll<HTMLButtonElement>('[data-option]')];
+      const select = group.querySelector<HTMLSelectElement>('[data-option-select]');
+
+      function choose(value: string, photo?: string) {
+        if (select) select.value = value;
+        choices.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.option === value)));
+        if (photo) mainImage?.dispatchEvent(new CustomEvent('select-product-photo', { detail: photo }));
+        updateVariantPrice();
+      }
+
+      for (const choice of choices) {
+        const photo = choice.querySelector('img');
+        if (photo) {
+          const recoverPhoto = () => {
+            const original = choice.dataset.optionPhoto;
+            if (original && photo.src !== original) photo.src = original;
+            else choice.hidden = true;
+          };
+          photo.addEventListener('error', recoverPhoto);
+          if (photo.complete && !photo.naturalWidth) recoverPhoto();
+        }
+        choice.addEventListener('click', () => choose(choice.dataset.option ?? '', choice.dataset.optionPhoto));
+      }
+      select?.addEventListener('change', () => {
+        const photo = select.selectedOptions[0]?.dataset.optionPhoto;
+        choose(select.value, choices.some((choice) => choice.dataset.option === select.value && !choice.hidden) ? photo : undefined);
+      });
+    });
+
+  }
+
+  function activateCopy() {
+    const copy = document.querySelector<HTMLButtonElement>('[data-copy]');
+    copy?.addEventListener('click', async () => {
+      const status = document.querySelector<HTMLElement>('.copy-status');
+      try {
+        await navigator.clipboard.writeText(copy.dataset.copy ?? '');
+        setUiText(status, 'Link copied');
+      } catch {
+        setUiText(status, 'Copy the link from the original seller listing.');
+      }
+    });
+  }
+
+  const detail = document.querySelector<HTMLElement>('[data-product]')!;
+  if ('dynamic' in detail.dataset) {
+    import('../lib/listing-detail').then(async ({ loadListing, loadSellerOptions, loadListingAlbum }) => {
+      const item = await loadListing(detail);
+      if (!item) return;
+      activateDetail();
+      activateCopy();
+      void loadListingAlbum(detail, item);
+      await loadSellerOptions(detail, item);
+      activateOptions();
+    }).catch(() => setUiText(document.querySelector('#listing-state'), 'The full catalog could not be loaded. Reload the page to try again.'));
+  } else {
+    activateDetail();
+    activateOptions();
+    activateCopy();
+  }
+</script>

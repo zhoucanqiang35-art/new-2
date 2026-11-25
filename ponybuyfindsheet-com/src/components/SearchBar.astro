@@ -1,0 +1,17 @@
+---
+const { hero = false } = Astro.props;
+const id = hero ? 'home-query' : 'catalog-query';
+const suggestions = ['Graphic T-Shirt', 'Emblem Crew Sock', 'Flared Jeans', '7871821866'];
+---
+<div class="search-block">
+  <form class:list={['search-form', { 'hero-search': hero }]} action="/spreadsheet/" method="get" role="search">
+    <label class="visually-hidden" for={id}>Product name, item ID or source link</label>
+    <span class="search-icon" aria-hidden="true"></span>
+    <input id={id} name="q" type="search" spellcheck="false" placeholder="Try “Graphic T-Shirt” or an item ID" aria-describedby={id + '-suggestions'} />
+    <button class="button" type="submit">Search</button>
+  </form>
+  <div class="search-suggestions" id={id + '-suggestions'}>
+    <span>Try searching</span>
+    {suggestions.map((query) => <a href={'/spreadsheet/?' + new URLSearchParams({ q: query })} data-no-translate>{query}</a>)}
+  </div>
+</div>

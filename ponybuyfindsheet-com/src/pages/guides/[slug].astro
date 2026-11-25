@@ -1,0 +1,37 @@
+---
+import Shell from '../../layouts/Shell.astro';
+import { guides } from '../../lib/guide-content.js';
+
+export function getStaticPaths() {
+  return guides.map((guide) => ({ params: { slug: guide.slug }, props: { guide } }));
+}
+const { guide } = Astro.props;
+---
+<Shell title={guide.title + ' | PonyBuy Findsheet'} description={guide.description} active="/guides/">
+  <section class="wrap page-top illustrated-guide">
+    <p class="breadcrumb"><a href="/guides/">All guides</a></p>
+    <h1>{guide.title}</h1>
+    <p>{guide.description}</p>
+    {guide.source && <div class="guide-source">
+      <img src="/media/ponybuy-mark.png" alt="PonyBuy" width="96" height="23" />
+      <a class="text-link" href={guide.source.href} target="_blank" rel="noopener">{guide.source.label}</a>
+    </div>}
+  </section>
+  <section class="wrap illustrated-guide guide-content">
+    <ol class="steps">
+      {guide.sections.map(({ title, text, link, figure }) => <li>
+        <h2>{title}</h2>
+        <p>{text}</p>
+        {link && <a class="text-link" href={link[1]}>{link[0]}</a>}
+        {figure && <figure class="guide-figure">
+          <a class:list={['guide-image', { 'guide-qc': figure.src.startsWith('/media/qc-') }]} href={figure.src} target="_blank" rel="noopener" aria-label="Open full-size screenshot">
+            <img src={figure.src} alt="" loading="lazy" decoding="async" />
+            {figure.marks.map(([number, x, y]) => <span class="guide-mark" style={`left:${x}%;top:${y}%`} aria-hidden="true">{number}</span>)}
+          </a>
+          <figcaption>{figure.caption}</figcaption>
+        </figure>}
+      </li>)}
+    </ol>
+    <a class="button" href={guide.next.href}>{guide.next.label}</a>
+  </section>
+</Shell>

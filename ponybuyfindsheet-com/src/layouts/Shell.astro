@@ -1,0 +1,69 @@
+---
+import '../styles/site.css';
+import PreferencePicker from '../components/PreferencePicker.astro';
+import { locales } from '../lib/translations.js';
+import { currencyCodes } from '../lib/money.js';
+import { platformGuide, ponySignup } from '../lib/catalog.js';
+
+const { title, description, active = '' } = Astro.props;
+const current = active || Astro.url.pathname;
+const pathname = Astro.url.pathname;
+const indexable = Astro.site?.hostname === 'ponybuyfindsheet.com' && !['/listing/', '/404', '/404.html'].includes(pathname);
+const links = [
+  ['Home', '/'],
+  ['Spreadsheet', '/spreadsheet/'],
+  ['Image search', '/image-search/'],
+  ['Guides', '/guides/'],
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content={indexable ? "index, follow" : "noindex, follow"} />
+    {indexable && <link rel="canonical" href={new URL(pathname, Astro.site)} />}
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f7f9fc" />
+    <link rel="icon" type="image/png" href="/media/favicon.png" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap nav-row">
+        <a class="brand" href="/" aria-label="PonyBuy Findsheet home">
+          <img src="/media/ponybuy-mark.png" alt="" width="113" height="27" />
+          <span class="brand-tail">Findsheet</span>
+        </a>
+        <nav aria-label="Main navigation">
+          {links.map(([label, path]) => <a href={path} aria-current={current === path || (path === '/guides/' && current.startsWith(path)) ? 'page' : undefined}>{label}</a>)}
+          <a class="mobile-join" href={ponySignup} target="_blank" rel="sponsored noopener">Join PonyBuy</a>
+        </nav>
+        <div class="nav-settings">
+          <div class="settings-pair">
+            <PreferencePicker kind="language" label="Language" options={Object.entries(locales).map(([code, [label]]) => [code, label])} initial="en" />
+            <PreferencePicker kind="currency" label="Currency" options={currencyCodes.map((code) => [code, code])} initial="USD" />
+          </div>
+          <a class="nav-action" href={ponySignup} target="_blank" rel="sponsored noopener">Join PonyBuy</a>
+        </div>
+      </div>
+    </header>
+    <main id="main"><slot /></main>
+    <footer class="site-footer">
+      <div class="wrap footer-row">
+        <div>
+          <a class="brand footer-brand" href="/">PonyBuy<span class="brand-tail"> Findsheet</span></a>
+          <p>An independent shopping guide by Findspreadsheet.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <a href="/spreadsheet/">Spreadsheet</a>
+          <a href="/image-search/">Image search</a>
+          <a href={platformGuide}>Findspreadsheet guide</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script>import '../lib/preferences.js';</script>

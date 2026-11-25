@@ -1,0 +1,195 @@
+---
+import Shell from '../layouts/Shell.astro';
+import SearchBar from '../components/SearchBar.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { catalog, categories, mainCatalog } from '../lib/catalog.js';
+---
+<Shell title="PonyBuy Finds | Search the Spreadsheet" description="Search the PonyBuy Findsheet catalog by name, listing ID or product URL." active="/spreadsheet/">
+  <section class="wrap page-top">
+    <p class="eyebrow">Findspreadsheet catalog</p>
+    <h1>Browse the spreadsheet</h1>
+    <p>Search by product name, marketplace listing ID or source link across the Findspreadsheet catalog.</p>
+    <div id="catalog-search"><SearchBar /></div>
+  </section>
+  <section class="wrap catalog-area" aria-label="Product results">
+    <div class="catalog-controls">
+      <label>Category <select id="category"><option value="">All categories</option>{categories.map(([slug, label]) => <option value={slug}>{label}</option>)}</select></label>
+      <label>Sort by <select id="sort"><option value="latest">Latest</option><option value="popular">Popular</option><option value="low">Price, low to high</option><option value="high">Price, high to low</option></select></label>
+    </div>
+    <div class="catalog-results-bar">
+      <p class="result-status" id="result-status" aria-live="polite">{catalog.length} products</p>
+      <button type="button" class="button button-ghost" id="show-all-matches" hidden>Show all matches</button>
+    </div>
+    <div class="product-grid" id="catalog-products">{catalog.slice(0, 16).map((item) => <ProductCard item={item} />)}</div>
+    <div hidden>{catalog.map((item) => <template data-catalog-card={new URL(item.detailUrl).pathname}><ProductCard item={item} /></template>)}</div>
+    <template id="new-catalog-card">
+      <article class="product-card">
+        <a class="product-photo" tabindex="-1" aria-hidden="true"><img alt="" width="400" height="320" loading="lazy" decoding="async" /></a>
+        <div class="product-content"><p class="product-category"></p><h3><a data-no-translate></a></h3>
+          <div class="product-meta"><strong><span></span></strong><span>Findspreadsheet</span></div>
+        </div>
+      </article>
+    </template>
+    <p id="catalog-load-error" class="notice" hidden>The full catalog could not be loaded. Reload the page to try again.</p>
+    <div class="empty-state" id="catalog-empty" hidden><h2>No matching products</h2><p>Try a shorter search, choose a different category, or search the full Findspreadsheet catalog.</p><a class="button button-ghost" id="main-search" href={mainCatalog}>Open Findspreadsheet</a></div>
+    <nav class="pagination" id="pagination" aria-label="Catalog pages" hidden>
+      <button type="button" class="button button-ghost" id="previous">Previous</button>
+      <span id="page-number"></span>
+      <button type="button" class="button button-ghost" id="next">Next</button>
+    </nav>
+  </section>
+</Shell>
+
+<script>
+  import { setUiText, refreshPrices } from '../lib/preferences';
+  import type { searchProducts } from '../lib/search-catalog';
+  type Product = typeof searchProducts[number];
+
+  const grid = document.querySelector<HTMLElement>('#catalog-products')!;
+  const status = document.querySelector<HTMLElement>('#result-status')!;
+  const input = document.querySelector<HTMLInputElement>('#catalog-query')!;
+  const category = document.querySelector<HTMLSelectElement>('#category')!;
+  const sort = document.querySelector<HTMLSelectElement>('#sort')!;
+  const empty = document.querySelector<HTMLElement>('#catalog-empty')!;
+  const mainSearch = document.querySelector<HTMLAnchorElement>('#main-search')!;
+  const pagination = document.querySelector<HTMLElement>('#pagination')!;
+  const pageNumber = document.querySelector<HTMLElement>('#page-number')!;
+  const previous = document.querySelector<HTMLButtonElement>('#previous')!;
+  const next = document.querySelector<HTMLButtonElement>('#next')!;
+  const error = document.querySelector<HTMLElement>('#catalog-load-error')!;
+  const showAllButton = document.querySelector<HTMLButtonElement>('#show-all-matches')!;
+  const originalCards = new Map([...document.querySelectorAll<HTMLTemplateElement>('[data-catalog-card]')]
+    .map((template) => [template.dataset.catalogCard, template]));
+  const cardTemplate = document.querySelector<HTMLTemplateElement>('#new-catalog-card')!;
+  let currentPage = 1;
+  let appliedQuery = '';
+  let showAll = false;
+
+  function makeCard(item: Product, photoUrl: string) {
+    const original = originalCards.get(item.path);
+    if (original) return original.content.cloneNode(true);
+    const fragment = cardTemplate.content.cloneNode(true) as DocumentFragment;
+    const href = '/listing/?id=' + encodeURIComponent(item.id);
+    const pictureLink = fragment.querySelector<HTMLAnchorElement>('.product-photo')!;
+    const photo = pictureLink.querySelector('img')!;
+    pictureLink.href = href;
+    photo.src = photoUrl;
+    photo.addEventListener('error', () => { photo.hidden = true; }, { once: true });
+    fragment.querySelector('.product-category')!.textContent = item.categoryLabel;
+    const title = fragment.querySelector<HTMLAnchorElement>('h3 a')!;
+    title.href = href;
+    title.textContent = item.title;
+    const price = fragment.querySelector<HTMLElement>('.product-meta strong span')!;
+    if (item.price == null) {
+      setUiText(price, 'View source price');
+    } else {
+      price.dataset.priceValue = String(item.price);
+      price.dataset.priceSource = 'CNY';
+      refreshPrices(price);
+    }
+    return fragment;
+  }
+
+  setUiText(status, 'Loading catalog…');
+  grid.setAttribute('aria-busy', 'true');
+  if (new URLSearchParams(location.search).has('q')) grid.replaceChildren();
+  import('../lib/search-catalog').then(({ searchProducts, buildMatcher, sourceSite, catalogPhotoUrl }) => {
+    const knownCategories = new Set([...category.options].map((option) => option.value));
+    for (const item of searchProducts) {
+      if (knownCategories.has(item.category)) continue;
+      category.add(new Option(item.categoryLabel, item.category));
+      knownCategories.add(item.category);
+    }
+
+    const previewPrices = new Map([...originalCards].flatMap(([path, card]) => {
+      const price = card.content.querySelector<HTMLElement>('[data-price-value]')?.dataset.priceValue;
+      return price ? [[path, Number(price)] as const] : [];
+    }));
+
+    function compare(a: Product, b: Product) {
+      if (sort.value === 'popular') return b.views - a.views;
+      if (sort.value === 'low' || sort.value === 'high') {
+        const first = previewPrices.get(a.path) ?? a.price;
+        const second = previewPrices.get(b.path) ?? b.price;
+        if (first == null || second == null) return Number(first == null) - Number(second == null);
+        return (first - second) * (sort.value === 'low' ? 1 : -1);
+      }
+      return b.date - a.date;
+    }
+
+    function render() {
+      const matchesQuery = buildMatcher(appliedQuery);
+      const matches = searchProducts.filter((item) => (!category.value || category.value === item.category) && matchesQuery(item)).sort(compare);
+      const pageSize = appliedQuery ? 80 : 16;
+      const size = showAll ? Math.max(1, matches.length) : pageSize;
+      const pageCount = Math.max(1, Math.ceil(matches.length / size));
+      currentPage = Math.min(Math.max(1, currentPage), pageCount);
+      const offset = (currentPage - 1) * size;
+      grid.replaceChildren(...matches.slice(offset, offset + size).map((item) => makeCard(item, catalogPhotoUrl(item.photo))));
+      setUiText(status, matches.length === 1 ? '{count} product' : '{count} products', { count: matches.length });
+      empty.hidden = matches.length > 0;
+      pagination.hidden = pageCount <= 1;
+      showAllButton.hidden = !appliedQuery || matches.length <= pageSize;
+      setUiText(showAllButton, showAll ? 'Show paged results' : 'Show all matches');
+      showAllButton.setAttribute('aria-pressed', String(showAll));
+      previous.disabled = currentPage <= 1;
+      next.disabled = currentPage >= pageCount;
+      pageNumber.textContent = currentPage + ' / ' + pageCount;
+      mainSearch.href = appliedQuery ? sourceSite + '/search.html?keywords=' + encodeURIComponent(appliedQuery) : sourceSite + '/AllProducts/';
+    }
+
+    function readLocation() {
+      const params = new URLSearchParams(location.search);
+      appliedQuery = input.value = (params.get('q') ?? '').trim();
+      category.value = params.get('category') ?? '';
+      if (category.selectedIndex < 0) category.value = '';
+      sort.value = params.get('sort') ?? 'latest';
+      if (!sort.value) sort.value = 'latest';
+      currentPage = Number.parseInt(params.get('page') ?? '1', 10) || 1;
+      showAll = Boolean(appliedQuery) && params.get('view') === 'all';
+      render();
+    }
+
+    function changePage(page = 1, scroll = false, push = false) {
+      currentPage = page;
+      render();
+      const params = new URLSearchParams();
+      if (appliedQuery) params.set('q', appliedQuery);
+      if (category.value) params.set('category', category.value);
+      if (sort.value !== 'latest') params.set('sort', sort.value);
+      if (currentPage > 1) params.set('page', String(currentPage));
+      if (showAll) params.set('view', 'all');
+      const target = location.pathname + (params.size ? '?' + params : '');
+      if (target !== location.pathname + location.search) {
+        if (push) history.pushState(null, '', target);
+        else history.replaceState(null, '', target);
+      }
+      if (scroll) status.scrollIntoView({ block: 'start' });
+    }
+
+    input.form?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const query = input.value.trim();
+      if (query !== appliedQuery) {
+        category.value = '';
+        showAll = false;
+      }
+      appliedQuery = query;
+      changePage(1, false, true);
+    });
+    showAllButton.addEventListener('click', () => {
+      showAll = !showAll;
+      changePage();
+    });
+    category.addEventListener('change', () => changePage());
+    sort.addEventListener('change', () => changePage());
+    previous.addEventListener('click', () => changePage(currentPage - 1, true));
+    next.addEventListener('click', () => changePage(currentPage + 1, true));
+    addEventListener('popstate', readLocation);
+    readLocation();
+  }).catch(() => {
+    grid.replaceChildren();
+    status.hidden = true;
+    error.hidden = false;
+  }).finally(() => grid.removeAttribute('aria-busy'));
+</script>

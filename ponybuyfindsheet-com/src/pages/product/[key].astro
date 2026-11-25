@@ -1,0 +1,14 @@
+---
+import Shell from '../../layouts/Shell.astro';
+import ProductDetail from '../../components/ProductDetail.astro';
+import { catalog } from '../../lib/catalog.js';
+
+export function getStaticPaths() {
+  return catalog.map((item) => ({ params: { key: item.source + '-' + item.id }, props: { item } }));
+}
+
+const { item } = Astro.props;
+---
+<Shell title={item.title + ' | PonyBuy Findsheet'} description={'Review details and product photos for ' + item.title + '.'}>
+  <ProductDetail item={item} />
+</Shell>

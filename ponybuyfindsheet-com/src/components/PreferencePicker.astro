@@ -1,0 +1,14 @@
+---
+const { kind, label, options, initial } = Astro.props;
+---
+<details class="preference-picker" data-preference={kind}>
+  <summary aria-label={label}><span class="visually-hidden">{label} </span><span data-preference-current data-no-translate>{options.find(([value]) => value === initial)?.[1]}</span></summary>
+  <div class="preference-panel">
+    <strong>{label}</strong>
+    <div class="preference-options" role="group" aria-label={label} tabindex="0">
+      {options.map(([value, name]) => (
+        <button type="button" data-preference-value={value} aria-pressed={value === initial ? 'true' : 'false'} data-no-translate>{name}</button>
+      ))}
+    </div>
+  </div>
+</details>

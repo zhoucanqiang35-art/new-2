@@ -1,0 +1,6 @@
+---
+import { formatMoney } from '../lib/money.js';
+const { amount, currency = 'CNY', class: style } = Astro.props;
+const price = formatMoney(amount, currency);
+---
+<span class={style} data-price-value={price ? amount : undefined} data-price-source={price ? currency : undefined}>{price || 'View source price'}</span>

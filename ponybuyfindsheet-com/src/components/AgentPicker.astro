@@ -1,0 +1,41 @@
+---
+import agentLinks from '../data/agent-links.json';
+
+interface Props {
+  links?: { name: string; url: string }[];
+  sourceUrl?: string;
+}
+
+const { links, sourceUrl } = Astro.props;
+const [exampleId, examples] = Object.entries(agentLinks)[0];
+const platforms = links ?? examples.map(({ name, url }) => ({ name, url: url.replace(exampleId, '{id}') }));
+---
+<details class="agent-options" hidden={!links}>
+  <summary class="button button-ghost">Other buying platforms</summary>
+  <div class="agent-menu" tabindex="0" role="group" aria-label="Other buying platforms">
+    {platforms.map(({ name, url }) => (
+      <a href={links ? url : undefined} data-agent-url={links ? undefined : url} target="_blank" rel="sponsored noopener" data-no-translate>
+        <img src={'/media/agents/' + name.toLowerCase() + '.webp'} alt="" width="22" height="22" loading="lazy" decoding="async" />
+        <span>{name}</span>
+      </a>
+    ))}
+    <a href={sourceUrl} target="_blank" rel="noopener" class="agent-source">Original seller listing</a>
+  </div>
+</details>
+<script>
+  const pickers = [...document.querySelectorAll<HTMLDetailsElement>('.agent-options')];
+  for (const picker of pickers) {
+    picker.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape' || !picker.open) return;
+      picker.open = false;
+      picker.querySelector('summary')?.focus();
+    });
+  }
+  document.addEventListener('click', (event) => {
+    if (!(event.target instanceof Node)) return;
+    const target = event.target;
+    for (const picker of pickers) {
+      if (picker.open && !picker.contains(target)) picker.open = false;
+    }
+  });
+</script>

@@ -1,0 +1,101 @@
+---
+import Shell from '../layouts/Shell.astro';
+import SearchBar from '../components/SearchBar.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { catalog, categories } from '../lib/catalog.js';
+import searchCatalog from '../data/search-catalog.json';
+import { faqGroups, guides, shoppingSteps } from '../lib/guide-content.js';
+
+const popular = [...catalog].sort((a, b) => (b.views ?? 0) - (a.views ?? 0));
+// The seller gallery for 7857789312 contains jacket photos under a shoe title.
+const photoCheckedFeatured = popular.filter(({ id }) => id !== '7857789312');
+const rankedCategories = [...new Set(popular.map(({ categorySlug }) => categorySlug))];
+const featured = rankedCategories.slice(0, 8).flatMap((slug) => {
+  const item = photoCheckedFeatured.find((entry) => entry.categorySlug === slug);
+  return item ? [item] : [];
+});
+const categoryCounts = new Map();
+for (const [, , , path, photo] of searchCatalog) {
+  if (!photo) continue;
+  const slug = path.split('/')[1];
+  categoryCounts.set(slug, (categoryCounts.get(slug) ?? 0) + 1);
+}
+const categoryTiles = categories.flatMap(([slug, title]) => {
+  const count = categoryCounts.get(slug);
+  return count ? [{ slug, title, count }] : [];
+});
+---
+<Shell title="PonyBuy Spreadsheet | Product Finds, Image Search & Guides" description="Browse PonyBuy finds from the Findspreadsheet catalog, search by listing link or ID, and search with a photo.">
+  <div class="home-intro">
+    <section class="wrap storefront-hero" aria-labelledby="hero-title">
+      <div class="storefront-copy">
+        <h1 id="hero-title">PonyBuy <span>Spreadsheet</span></h1>
+        <p>Find products by name, item ID or marketplace link. Browse the catalog, compare product photos and open the matching PonyBuy listing.</p>
+        <SearchBar hero />
+        <div class="hero-actions">
+          <a class="button" href="/spreadsheet/">Open spreadsheet</a>
+          <a class="button button-ghost" href="/image-search/">Image search</a>
+        </div>
+      </div>
+      <div class="storefront-workflow" aria-labelledby="workflow-title">
+        <h2 id="workflow-title">From listing to parcel</h2>
+        <ol class="workflow-steps">
+          {shoppingSteps.map(({ title, text, href }, i) => (
+            <li><a href={href}><span class="step-number" aria-hidden="true">{i + 1}</span><span><strong>{title}</strong><small>{text}</small></span></a></li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  </div>
+
+  <section class="wrap section" aria-labelledby="category-title">
+    <div class="section-heading">
+      <h2 id="category-title">Browse categories</h2>
+      <a class="text-link" href="/spreadsheet/">View full catalog</a>
+    </div>
+    <div class="browse-grid home-categories" role="group" aria-labelledby="category-title" tabindex="0">
+      {categoryTiles.map(({ slug, title, count }) => (
+        <a class="browse-tile" href={'/spreadsheet/?category=' + encodeURIComponent(slug)}>
+          <img src={'/media/home/category-' + slug + '.webp'} alt="" width="104" height="104" loading="lazy" decoding="async" />
+          <span><strong>{title}</strong><small data-ui-text={count === 1 ? '{count} item' : '{count} items'} data-ui-values={JSON.stringify({ count })}>{count} {count === 1 ? 'item' : 'items'}</small></span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="wrap section featured" aria-labelledby="featured-title">
+    <div class="section-heading">
+      <div><h2 id="featured-title">Popular finds</h2><p>Frequently viewed listings across categories.</p></div>
+      <a class="text-link" href="/spreadsheet/?sort=popular">Browse popular products</a>
+    </div>
+    <div class="product-grid home-popular" role="group" aria-labelledby="featured-title" tabindex="0">{featured.map((item) => <ProductCard item={item} cover={'/media/home/popular-' + item.id + '.webp'} />)}</div>
+  </section>
+
+  <section class="wrap section" aria-labelledby="faq-title">
+    <div class="section-heading"><h2 id="faq-title">Frequently asked questions</h2></div>
+    <div class="faq-groups">
+      {faqGroups.map(({ title, items }) => <div class="faq-group">
+        <h3>{title}</h3>
+        <div class="faq-list">
+          {items.map(({ question, answer, link }) => <details>
+            <summary>{question}</summary>
+            <p>{answer}</p>
+            {link && <a class="text-link" href={link[1]}>{link[0]}</a>}
+          </details>)}
+        </div>
+      </div>)}
+    </div>
+  </section>
+
+  <section class="wrap section" aria-labelledby="guides-title">
+    <div class="section-heading">
+      <h2 id="guides-title">Shopping guides</h2>
+      <a class="text-link" href="/guides/">All guides</a>
+    </div>
+    <div class="guide-grid guide-list home-guides" role="group" aria-labelledby="guides-title" tabindex="0">
+      {guides.map(({ slug, title, description }) => (
+        <article class="guide-card"><h3><a href={'/guides/' + slug + '/'}>{title}</a></h3><p>{description}</p></article>
+      ))}
+    </div>
+  </section>
+</Shell>

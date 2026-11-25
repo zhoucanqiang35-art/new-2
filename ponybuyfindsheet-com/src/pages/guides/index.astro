@@ -1,0 +1,13 @@
+---
+import Shell from '../../layouts/Shell.astro';
+import { guides } from '../../lib/guide-content.js';
+---
+<Shell title="PonyBuy Shopping Guides | Findsheet" description="Learn how to search, choose a listing, order through PonyBuy, review warehouse photos and track a parcel." active="/guides/">
+  <section class="wrap page-top">
+    <h1>PonyBuy shopping guides</h1>
+    <p>From choosing an item to tracking a parcel, follow the steps for your order.</p>
+  </section>
+  <section class="wrap section guide-grid guide-list" aria-label="Guides">
+    {guides.map(({ slug, title, description }) => <article class="guide-card"><h2><a href={'/guides/' + slug + '/'}>{title}</a></h2><p>{description}</p></article>)}
+  </section>
+</Shell>

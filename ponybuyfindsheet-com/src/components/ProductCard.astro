@@ -1,0 +1,15 @@
+---
+import Price from './Price.astro';
+import { getProductData, productPath } from '../lib/catalog.js';
+const { item, lazy = true, cover = item.image, url = productPath(item), priceCny = getProductData(item).priceCny } = Astro.props;
+---
+<article class="product-card" data-item data-category={item.categorySlug} data-price={priceCny ?? ''} data-views={item.views ?? 0} data-date={item.publishedAt ?? ''} data-search={[item.title, item.id, item.source, item.category, item.sourceUrl, item.detailUrl].join(' ').toLowerCase()}>
+  <a class="product-photo" href={url} tabindex="-1" aria-hidden="true">
+    <img src={cover} alt="" width="400" height="320" loading={lazy ? 'lazy' : 'eager'} decoding="async" />
+  </a>
+  <div class="product-content">
+    <p class="product-category">{item.category}</p>
+    <h3><a href={url} data-no-translate>{item.title}</a></h3>
+    <div class="product-meta"><strong><Price amount={priceCny} /></strong><span>{item.source}</span></div>
+  </div>
+</article>
