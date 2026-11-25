@@ -7,18 +7,12 @@ import ShippingOverview from '../components/ShippingOverview.astro';
 import PlatformFaq from '../components/PlatformFaq.astro';
 import { articles } from '../lib/articles.mjs';
 import { chineseSearchHelp, productSearchPlaceholder } from '../lib/search.mjs';
-import { itemUrl } from '../lib/catalog.mjs';
 import { categoryEntries } from '../lib/category-content.mjs';
 import catalog from '../../public/data/catalog.json';
 
 const picks = ['6250','8945','8573','8709','8656','8640','8397','8381','9018','8347','5984','8708','8648','8389','8367','8395','8943','8352']
   .map(id => catalog.find(item => item.id === id)).filter(Boolean);
-const homeCategories = categoryEntries.filter(entry => entry.key !== 'other-stuff').map(entry => ({
-  ...entry,
-  product: (entry.key === 'shoes' ? catalog.find(item => item.weidianId === '7854168601') : undefined)
-    ?? picks.find(item => item.category === entry.key)
-    ?? catalog.find(item => item.category === entry.key),
-}));
+const homeCategories = categoryEntries.filter(entry => entry.key !== 'other-stuff');
 const icons = {
   shoes: 'M2 14l5-3 4-6 3 3-1 4 7 2a2 2 0 0 1 2 2v2H2zM2 17h20m-12-5 2 2m0-5 2 2',
   'hoodies-sweaters': 'M8 8c0-3 2-5 4-5s4 2 4 5l4 3 2 8h-4l-1-5v7H7v-7l-1 5H2l2-8zm0 0 4 4 4-4m-6 9h4',
@@ -73,12 +67,12 @@ const description = 'Search OrientDig spreadsheet finds, match items by image, r
     <section class="content-block" id="categories">
       <div class="content-heading"><h2>Browse by category</h2><a class="text-link" href="/categories/">All categories</a></div>
       <ul class="category-links">
-        {homeCategories.map(entry => <li><a href={entry.product ? itemUrl(entry.product.weidianId) : entry.href}>
+        {homeCategories.map(entry => <li><a href={entry.href}>
           <span class="category-icon" aria-hidden="true" style={{'--icon-color': categoryColors[entry.key][0], '--icon-background': categoryColors[entry.key][1]}}>
             <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linejoin="round" stroke-linecap="round"><path d={icons[entry.key]} /></svg>
           </span>
           <span class="category-title">{entry.title}</span>
-          {entry.product && <small>View product</small>}
+          <small>View all products</small>
         </a></li>)}
       </ul>
     </section>
@@ -123,12 +117,13 @@ const description = 'Search OrientDig spreadsheet finds, match items by image, r
 </Layout>
 <style>
 .home-intro{padding:clamp(28px,5.5vw,76px) 0;background:var(--accent-soft);border-bottom:1px solid var(--line)}
-.intro-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(22px,5vw,75px)}
+.intro-wrap{display:grid;grid-template-columns:minmax(0,.83fr) minmax(0,1.17fr);align-items:center;gap:clamp(22px,4.3vw,62px)}
 .intro-copy h1{font-size:clamp(2.15rem,5vw,4.3rem);line-height:1.04;letter-spacing:-.06em;overflow-wrap:anywhere}
 .intro-copy>p{color:var(--muted);font-size:1.05rem;margin:14px 0 0;max-width:43ch}
-.intro-panel{min-width:0;border:1px solid var(--line);background:white;border-radius:12px;padding:clamp(15px,2.6vw,30px)}
+.intro-panel{min-width:0;border:1px solid var(--line);background:white;border-radius:12px;padding:clamp(16px,3vw,38px)}
 .intro-search label{display:block;font-size:.9rem;font-weight:750;margin-bottom:9px;text-align:start}
-.search-fields{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
+.search-fields{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:9px}
+.search-fields :is(.input,.button){min-height:52px}
 .search-language{margin:8px 0 0;text-align:start;font-size:.8rem}
 .intro-links{margin-top:14px;font-size:.9rem;gap:12px}
 .intro-links .button{min-height:40px;font-size:.86rem}
@@ -165,7 +160,7 @@ const description = 'Search OrientDig spreadsheet finds, match items by image, r
 @media(max-width:675px){
   .intro-wrap{grid-template-columns:1fr;gap:16px}
   .intro-copy>p{margin:8px 0 0;font-size:.95rem}
-  .intro-panel{padding:14px}
+  .intro-panel{padding:16px}
   .category-links{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
   .category-links a{flex-direction:row;justify-content:flex-start;text-align:start;flex-wrap:wrap;gap:3px 7px;font-size:.84rem;padding:7px 8px;min-height:58px}
   .category-title{flex:1}
