@@ -93,7 +93,10 @@ function details(p) {
       <details class="detail-agents">
        <summary>Other buying agents ▾</summary>
        <div class="detail-agents-list">${otherAgentLinks(String(p.weidianId)).map(([name,url]) =>
-        `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(name)}</a>`).join('')}</div>
+        `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">
+         <img src="/assets/agents/${esc(name.toLowerCase())}.webp" alt="" width="24" height="24" loading="lazy">
+         <span>${esc(name)}</span>
+        </a>`).join('')}</div>
       </details>
       <button type="button" class="detail-copy" data-copy-weidian>Copy Weidian link</button>
       <span class="detail-copy-status" data-copy-status role="status"></span>

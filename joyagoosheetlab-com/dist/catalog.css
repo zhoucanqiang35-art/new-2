@@ -89,7 +89,24 @@
  background: #fff;
  box-shadow: 0 8px 24px #0002;
 }
-.detail-agents-list a { display: block; padding: .45rem; font-size: .8rem; background: #eee; border-radius: 4px; }
+.detail-agents-list a {
+ display: flex;
+ align-items: center;
+ gap: .35rem;
+ min-height: 38px;
+ padding: .35rem;
+ font-size: .8rem;
+ overflow-wrap: anywhere;
+ background: #eee;
+ border-radius: 4px;
+}
+.detail-agents-list img {
+ flex: none;
+ display: block;
+ object-fit: contain;
+ background: #fff;
+ border-radius: 4px;
+}
 .detail-agents-list a:hover { background: var(--joy-accent); }
 .detail-copy-status { grid-column: 1 / -1; font-size: .875rem; }
 .detail-copy-status:empty { display: none; }
