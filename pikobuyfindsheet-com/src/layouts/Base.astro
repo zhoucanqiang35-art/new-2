@@ -9,7 +9,7 @@ const analyticsId = 'G-1Z0PKNT1DL';
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const active = Astro.url.pathname;
 const nav = [
-  ['/spreadsheet/', 'Spreadsheet'], ['/categories/', 'Categories'], ['/qc/', 'QC Photos'],
+  ['/spreadsheet/', 'Spreadsheet'], ['/categories/', 'Categories'], ['/image-search/', 'Image Search'],
   ['/guides/', 'Guides'], ['/guides/shipping/', 'Shipping'], ['/faq/', 'FAQ'],
 ];
 const activeLink = nav.findLast(([href]) => active.startsWith(href))?.[0];
@@ -64,7 +64,7 @@ const activeLink = nav.findLast(([href]) => active.startsWith(href))?.[0];
     <footer class="footer">
       <div class="container foot">
         <div><a class="brand" href="/"><img src="/assets/pikobuy-logo.png" width="112" height="26" alt="Pikobuy"/> <span>FINDSHEET</span></a><p>Independent shopping guide. Product data from <a href={sourceOrigin}>FindSpreadsheet</a>.</p></div>
-        <nav aria-label="Footer navigation">{nav.map(([href,label])=><a href={href}>{label}</a>)}</nav>
+        <nav aria-label="Footer navigation">{nav.map(([href,label]) => href === '/image-search/' ? <a href="/qc/">QC Photos</a> : <a href={href}>{label}</a>)}</nav>
       </div>
       <div class="container footnote">Registration uses a referral link. Purchases and shipping are handled on Pikobuy.</div>
     </footer>
@@ -75,7 +75,7 @@ const activeLink = nav.findLast(([href]) => active.startsWith(href))?.[0];
   import {enableProductImageFallback} from '../lib/product-images.mjs';
   window.addEventListener('shopping-change', () => refreshPrices());
   refreshPrices();
-  const menus = [...document.querySelectorAll<HTMLDetailsElement>('.header-picker')];
+  const menus = [...document.querySelectorAll<HTMLDetailsElement>('.header-picker, .detail-agents')];
   for (const menu of menus) {
     menu.addEventListener('toggle', () => {
       if (menu.open) for (const other of menus) if (other !== menu) other.open = false;

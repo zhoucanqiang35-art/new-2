@@ -66,10 +66,24 @@ export async function lookupQc(id, request = fetch) {
   });
   if (!response.ok) throw new Error('QC service unavailable');
   const data = await response.json();
-  const photos = (Array.isArray(data.images) ? data.images : [])
-    .filter((entry) => !entry.isVideo && typeof entry.display === 'string' && entry.display.startsWith('https://'))
-    .map((entry) => ({url:entry.display,label:typeof entry.skuLabel === 'string' ? entry.skuLabel : ''}));
-  return {status:data.status,photos};
+  if (String(data.itemId) !== id || !Array.isArray(data.images)) {
+    throw new Error('Unexpected QC response from FindSpreadsheet');
+  }
+  const seen = new Set();
+  const photos = data.images.flatMap((entry) => {
+    if (entry?.isVideo || typeof entry?.display !== 'string') return [];
+    const image = URL.parse(entry.display);
+    if (image?.protocol !== 'https:' || image.username || image.password) return [];
+    const key = entry.mediaId ?? image.origin + image.pathname;
+    if (seen.has(key)) return [];
+    seen.add(key);
+    return [{
+      url: image.href,
+      label: typeof entry.skuLabel === 'string' ? entry.skuLabel : '',
+      agent: typeof entry.agentPlatform === 'string' ? entry.agentPlatform : '',
+    }];
+  });
+  return {status: data.degraded && !photos.length ? 'pending' : data.status, photos};
 }
 
 

@@ -1,30 +1,9 @@
-import {sourceOrigin, itemId, sourceItem, mainSearch, categoryName} from './platform.mjs';
-import {formatPrice, purchaseFor, savedPaths, toggleSaved} from './shopping.mjs';
-import {productCard} from './catalog-client.mjs';
+import {sourceOrigin, itemId, sourceItem, categoryName} from './platform.mjs';
+import {formatPrice, purchaseFor} from './shopping.mjs';
 import {showQc} from './qc-client.mjs';
 import {setProductImage} from './product-images.mjs';
 import {findCatalogItem} from './catalog-item.mjs';
 import {lookupProductOptions} from './upstream.mjs';
-
-function relatedProducts(item, items) {
-  const words = new Set(item.title.toLowerCase().match(/[a-z0-9]{4,}/g) || []);
-  const candidates = items.filter((product) => product.path !== item.path &&
-    (!item.id || item.id !== product.id) && product.category === item.category);
-  const scored = candidates.map((product) => {
-    const shared = new Set(product.title.toLowerCase().match(/[a-z0-9]{4,}/g) || []);
-    const overlap = [...shared].filter((word) => words.has(word)).length;
-    const nearPrice = item.price != null && product.price != null ? 1 / (1 + Math.abs(item.price - product.price) / 50) : 0;
-    return {product, score: overlap * 2 + nearPrice};
-  });
-  scored.sort((a, b) => b.score - a.score || b.product.views - a.product.views);
-  const seen = new Set();
-  return scored.map(({product}) => product).filter((product) => {
-    const identifier = product.id || product.path;
-    if (seen.has(identifier)) return false;
-    seen.add(identifier);
-    return true;
-  }).slice(0, 8);
-}
 
 export function setupDetail() {
   const select = (selector) => document.querySelector(selector);
@@ -53,7 +32,6 @@ export function setupDetail() {
   const thumbs = select('#find-gallery');
   const previous = select('#gallery-prev');
   const next = select('#gallery-next');
-  const save = select('#find-save');
   const qc = select('#product-qc');
   let product;
   let images = [];
@@ -153,12 +131,6 @@ export function setupDetail() {
     select('#find-price').textContent = product.price == null ? '' : formatPrice(product.price);
   }
 
-  function refreshSaved() {
-    const enabled = savedPaths().includes(product?.path);
-    save.setAttribute('aria-pressed', String(enabled));
-    save.textContent = enabled ? 'Remove saved product' : 'Save product';
-  }
-
   function render(item) {
     const optionPhotos = sellerOptions?.groups.flatMap(({values}) => values.map(({image}) => image).filter(Boolean)) || [];
     product = sellerOptions ? {
@@ -171,18 +143,13 @@ export function setupDetail() {
     select('#find-title').translate = false;
     document.title = item.title + ' | Pikobuy Spreadsheet';
     select('#find-id').textContent = item.id ? categoryName(item.category) + ' · Weidian item ID ' + item.id : categoryName(item.category);
-    select('#find-source').href = item.path ? sourceOrigin + item.path : mainSearch(item.id);
-    const weidian = select('#find-weidian');
-    weidian.hidden = copy.hidden = !item.id;
-    if (item.id) weidian.href = sourceItem(item.id);
+    copy.hidden = !item.id;
     const others = select('#other-agents');
     others.hidden = !item.id;
     if (item.id) {
       for (const link of others.querySelectorAll('[data-agent]')) link.href = purchaseFor(item, link.dataset.agent).href;
     }
-    save.hidden = !item.path;
     refreshOptions();
-    refreshSaved();
     showGallery();
     qc.hidden = false;
     const originalQc = select('#original-qc');
@@ -197,15 +164,6 @@ export function setupDetail() {
       qc.querySelector('[role=status]').textContent = 'This source listing has no Weidian item ID for a warehouse photo lookup.';
     }
     status.hidden = true;
-  }
-
-  function renderRelated(item, local) {
-    const related = relatedProducts(item, local);
-    select('#related-section').hidden = !related.length;
-    if (related.length) {
-      select('#related-category').href = '/categories/' + item.category + '/';
-      select('#related-grid').replaceChildren(...related.map((entry) => productCard(entry)));
-    }
   }
 
   cover.addEventListener('product-image-unavailable', () => {
@@ -255,18 +213,11 @@ export function setupDetail() {
       copy.textContent = 'Link copied';
       message.textContent = 'Product link copied.';
     } catch {
-      copy.textContent = 'Use the Weidian link';
-      message.textContent = 'Could not copy the link. Open the Weidian listing to copy it.';
+      copy.textContent = 'Link could not be copied';
+      message.textContent = 'Could not copy the product link. Please try again.';
     }
   });
   window.addEventListener('shopping-change', refreshOptions);
-  save.addEventListener('click', () => {
-    if (product?.path) {
-      toggleSaved(product.path);
-      refreshSaved();
-    }
-  });
-
   async function load() {
     if (!id && !from) {
       status.textContent = 'A product link or Weidian item ID is required.';
@@ -293,15 +244,10 @@ export function setupDetail() {
       renderSellerOptions(options.groups);
       return true;
     }
-    let catalog;
-    const items = () => catalog ??= read('/catalog-data.json', 12000).then((data) => data?.items || []);
     const lookup = await read('/api/catalogitem?' + query, 5000);
-    const saved = lookup?.product || findCatalogItem(await items(), id, from);
+    const saved = lookup?.product || findCatalogItem((await read('/catalog-data.json', 12000))?.items || [], id, from);
     if (saved) {
       render(saved);
-      requestAnimationFrame(() => setTimeout(() => {
-        void items().then((all) => renderRelated(product, all));
-      }, 0));
       void updateSellerOptions(saved);
       if (saved.gallery?.length > 1) return;
       if (saved.path) query.set('from', saved.path);
@@ -322,7 +268,6 @@ export function setupDetail() {
       render(item);
       if (!saved) {
         if (!sellerOptions) void updateSellerOptions(item);
-        void items().then((all) => renderRelated(product, all));
       }
     } else if (!saved && id && !sellerOptions) {
       render({id, title: 'Weidian item ' + id});

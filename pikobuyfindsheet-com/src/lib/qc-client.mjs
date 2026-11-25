@@ -89,11 +89,11 @@ export async function showQc(input, root, limit, productPath) {
     showDate(status, 'Saved on', savedAt);
     setSource();
   };
-  if (snapshot.length && !limit) showSnapshot(snapshot, entry.savedAt);
+  if (snapshot.length) showSnapshot(snapshot, entry.savedAt);
   const live = await liveRequest;
   if (!isCurrent()) return;
   if (live?.source === 'snapshot' && live.photos?.length) {
-    if (limit || !snapshot.length) showSnapshot(live.photos.slice(0, limit ?? Infinity), live.savedAt);
+    if (!snapshot.length) showSnapshot(live.photos.slice(0, limit ?? Infinity), live.savedAt);
   } else if (live?.photos?.length) {
     const photos = live.photos.slice(0, limit ?? Infinity);
     renderPhotos(photos, grid);
@@ -101,9 +101,7 @@ export async function showQc(input, root, limit, productPath) {
       + ' warehouse QC ' + (photos.length === 1 ? 'photo' : 'photos') + ' from FindSpreadsheet.';
     showDate(status, 'Checked on', new Date().toISOString().slice(0, 10));
     setSource();
-  } else if (snapshot.length) {
-    if (limit) showSnapshot(snapshot, entry.savedAt);
-  } else {
+  } else if (!snapshot.length) {
     status.textContent = live?.status === 'pending' ? 'FindSpreadsheet is preparing the photos. Check again later.'
       : live ? 'No warehouse QC photos are currently listed for this item.'
       : 'The live QC lookup is unavailable right now. Check the original product page for warehouse photos.';

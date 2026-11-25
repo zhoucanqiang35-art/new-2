@@ -144,13 +144,6 @@
 .detail-gallery { display:flex; gap:8px; overflow-x:auto; padding:3px 3px 8px; }
 .detail-gallery .thumb { flex:0 0 clamp(49px,9vw,83px); }
 .detail-gallery .thumb[aria-current="true"] { outline:2px solid var(--link); }
-.detail-agents { margin-top:15px; }
-.detail-agents summary { width:max-content; max-width:100%; justify-content:flex-start; }
-.detail-agents summary::after { content:'+'; margin-inline-start:5px; }
-.detail-agents[open] summary::after { content:'−'; }
-.detail-agent-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px; margin-top:9px; }
-.detail-agent-grid a { display:flex; align-items:center; gap:7px; padding:8px; min-height:38px; border:1px solid var(--line); border-radius:7px; background:var(--surface); overflow-wrap:anywhere; }
-.detail-agent-grid a:hover { background:var(--mist); }
 .detail-agent-grid img { object-fit:contain; flex:none; background:#fff; border-radius:3px; }
 .detail-block { margin-top:32px; padding-top:20px; border-top:1px solid var(--line); }
 .qc-results p a { margin-inline-start:4px; }
@@ -177,13 +170,13 @@
 
 
 .header-picker { position:relative; flex:none; }
-.header-picker summary {
+:is(.header-picker, .detail-agents) summary {
   display:flex; align-items:center; gap:6px; min-height:38px; border:1px solid var(--line);
   border-radius:7px; padding:4px 8px; font-size:.83rem; font-weight:750; background:var(--surface);
 }
-.header-picker summary::-webkit-details-marker { display:none; }
-.header-picker summary::after { content:""; width:6px; height:6px; border:solid currentColor; border-width:0 1.5px 1.5px 0; transform:rotate(45deg); }
-.header-picker[open] summary::after { transform:rotate(225deg); }
+:is(.header-picker, .detail-agents) summary::-webkit-details-marker { display:none; }
+:is(.header-picker, .detail-agents) summary::after { content:""; width:6px; height:6px; border:solid currentColor; border-width:0 1.5px 1.5px 0; transform:rotate(45deg); }
+:is(.header-picker, .detail-agents)[open] summary::after { transform:rotate(225deg); }
 .picker-panel {
   position:absolute; z-index:10; inset-inline-end:0; top:calc(100% + 7px);
   width:min(260px,calc(100vw - 30px)); border:1px solid var(--line); border-radius:9px;
@@ -193,11 +186,11 @@
   display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:5px;
   max-height:min(235px, 55vh); overflow-y:auto; overscroll-behavior:contain; padding:3px;
 }
-.picker-grid button,.listing-choices button {
+.picker-grid button,.picker-grid a,.listing-choices button {
   padding:5px; min-height:36px; border:1px solid var(--line); border-radius:6px;
   background:var(--surface); color:var(--ink); font-size:.85rem; font-weight:650;
 }
-.picker-grid button:hover,.picker-grid button[aria-pressed="true"],.listing-choices button[aria-pressed="true"] {
+.picker-grid a:hover,.picker-grid button:hover,.picker-grid button[aria-pressed="true"],.listing-choices button[aria-pressed="true"] {
   background:var(--mist); border-color:var(--focus);
 }
 .picker-panel p { padding:5px 4px 0; color:var(--muted); font-size:.78rem; }
@@ -211,10 +204,10 @@
 .detail-buy { width:100%; }
 .detail-purchase-options { position:relative; display:flex; flex-wrap:wrap; gap:7px; margin-top:8px; }
 .detail-purchase-options > * { flex:1 1 160px; }
-.detail-purchase-options .detail-agents { margin-top:0; min-width:0; }
+.detail-purchase-options .detail-agents { position:relative; min-width:0; }
 .detail-purchase-options summary { width:100%; justify-content:center; }
-.detail-agent-grid { max-height:220px; overflow-y:auto; overscroll-behavior:contain; padding:3px; }
-.detail-resource-links { display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-top:12px; }
+.detail-agents .picker-panel { inset-inline:0 auto; }
+.detail-agent-grid a { display:flex; align-items:center; gap:5px; overflow-wrap:anywhere; }
 .listing-options { margin-top:12px; }
 .listing-options fieldset { min-width:0; border:0; margin:0; padding:0; }
 .listing-options fieldset + fieldset { margin-top:10px; }
@@ -238,7 +231,7 @@
   .listing-gallery-stage .detail-cover { max-height:345px; }
 }
 @media(max-width:420px) {
-  .header-picker summary { min-height:36px; padding-inline:6px; }
+  :is(.header-picker, .detail-agents) summary { min-height:36px; padding-inline:6px; }
   #selected-language { max-width:66px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
   #product-qc .product-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
