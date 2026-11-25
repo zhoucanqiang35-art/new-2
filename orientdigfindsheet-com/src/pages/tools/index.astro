@@ -1,12 +1,21 @@
 ---
 import Layout from '../../components/Layout.astro';
 import FindTools from '../../components/FindTools.astro';
-const description = 'Find similar product listings by image or check saved warehouse QC for a specific Weidian item.';
+const description = 'Upload a product photo to find visually similar listings. The photo stays in your browser.';
 ---
-<Layout title="Image Search & Warehouse QC | OrientDig Findsheet" description={description}>
-  <section class="wrap page">
-    <h1>Image search &amp; warehouse QC</h1>
+<Layout title="Image Search | OrientDig Findsheet" description={description}>
+  <script is:inline>
+    const qcQuery = new URLSearchParams(location.search);
+    if (location.hash === '#qc' || qcQuery.has('id')) location.replace('/qc/' + location.search);
+  </script>
+  <section class="wrap page image-page">
+    <h1>Image search</h1>
     <p class="lead">{description}</p>
     <FindTools />
   </section>
 </Layout>
+<style>
+.image-page h1,.image-page .lead{text-align:center}
+.image-page .lead{margin-inline:auto}
+.image-page h1{font-size:clamp(2.2rem,5vw,3.6rem)}
+</style>

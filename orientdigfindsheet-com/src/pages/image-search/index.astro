@@ -1,4 +1,9 @@
 ---
-import ToolRedirect from '../../components/ToolRedirect.astro';
+import Layout from '../../components/Layout.astro';
 ---
-<ToolRedirect section="image-search" />
+<Layout noIndex title="Image Search | OrientDig Findsheet">
+  <script is:inline>
+    location.replace('/tools/' + location.search + '#image-search');
+  </script>
+  <p class="wrap"><a href="/tools/" class="text-link">Image search</a></p>
+</Layout>

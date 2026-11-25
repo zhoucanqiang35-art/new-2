@@ -1,5 +1,5 @@
 import { agentAction, agentByKey, agentUrl, currentAgent } from './agents.mjs';
-import { getCurrency, preference, priceLabel, savePreference, setCurrency } from './currency.mjs';
+import { getCurrency, languageCurrencies, preference, priceLabel, savePreference, setCurrency } from './currency.mjs';
 import { itemUrl } from './catalog.mjs';
 import { element } from './dom.mjs';
 
@@ -65,28 +65,34 @@ function toggleFavorite(item) {
   updateFavorites();
 }
 
+function selectCurrency(currency) {
+  setCurrency(currency);
+  savePreference('currency', getCurrency());
+  updateSettings();
+}
+
 settings?.addEventListener('click', event => {
   const agent = event.target.closest('[data-select-agent]')?.dataset.selectAgent;
-  const currency = event.target.closest('[data-select-currency]')?.dataset.selectCurrency;
-  if (agent) {
-    activeAgent = agent;
-    savePreference('agent', agent);
-  } else if (currency) {
-    setCurrency(currency);
-    savePreference('currency', currency);
-  } else return;
+  if (!agent) return;
+  activeAgent = agent;
+  savePreference('agent', agent);
   updateSettings();
 });
+for (const option of currencyOptions) {
+  option.addEventListener('click', () => {
+    selectCurrency(option.dataset.selectCurrency);
+    const picker = option.closest('details');
+    picker.open = false;
+    picker.querySelector('summary').focus();
+  });
+}
+document.addEventListener('orientdig:language', event => {
+  const currency = languageCurrencies[event.detail];
+  if (currency) selectCurrency(currency);
+});
 document.addEventListener('click', event => {
-  if (settings && !settings.contains(event.target)) settings.open = false;
   const button = event.target.closest('[data-save-product]');
   if (button?.dataset.saveProduct) toggleFavorite({ weidianId: button.dataset.saveProduct, name: button.dataset.productName });
-});
-settings?.addEventListener('keydown', event => {
-  if (event.key === 'Escape' && settings.open) {
-    settings.open = false;
-    settings.querySelector('summary').focus();
-  }
 });
 document.querySelector('[data-open-favorites]')?.addEventListener('click', () => {
   favoritesDialog.showModal();

@@ -1,21 +1,26 @@
 ---
 import { faq } from '../lib/faq.mjs';
-const { headingLevel: Heading = 'h3' } = Astro.props;
+const { headingLevel: Heading = 'h3', compact = false } = Astro.props;
+const Group = compact ? 'details' : 'section';
+const Title = compact ? 'summary' : Heading;
 ---
 <div class="platform-faq faq">
-  {faq.map(group => <section class="panel">
-    <Heading>{group.title}</Heading>
+  {faq.map(group => <Group class:list={["panel", { "faq-summary": compact }]}>
+    <Title>{group.title}</Title>
     {group.questions.map(([question, answer, href, label]) => <details>
       <summary>{question}</summary>
       <p>{answer}</p>
       <a class="text-link small" href={href}>{label}</a>
     </details>)}
-  </section>)}
+  </Group>)}
 </div>
 <style>
 .platform-faq{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:start}
-.platform-faq .panel{padding:clamp(12px,2vw,20px)}
+.platform-faq .faq-summary{padding:8px 11px}
+.faq-summary>summary{padding:3px 0}
+.faq-summary>details:first-of-type{margin-top:6px}
+.platform-faq .panel:not(.faq-summary){padding:clamp(12px,2vw,20px)}
 .platform-faq details{padding:10px 0}.platform-faq details:last-child{border-bottom:0;padding-bottom:0}
 .platform-faq summary{line-height:1.4}.platform-faq a{display:inline-block;margin-top:5px}
-@media(max-width:850px){.platform-faq{grid-template-columns:1fr}}
+@media(max-width:850px){.platform-faq{grid-template-columns:1fr;gap:6px}}
 </style>

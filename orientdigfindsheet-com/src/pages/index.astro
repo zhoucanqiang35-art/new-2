@@ -6,7 +6,7 @@ import BuyingWalkthrough from '../components/BuyingWalkthrough.astro';
 import ShippingOverview from '../components/ShippingOverview.astro';
 import PlatformFaq from '../components/PlatformFaq.astro';
 import { articles } from '../lib/articles.mjs';
-import { chineseSearchHelp } from '../lib/search.mjs';
+import { chineseSearchHelp, productSearchPlaceholder } from '../lib/search.mjs';
 import { categoryEntries } from '../lib/category-content.mjs';
 import catalog from '../../public/data/catalog.json';
 
@@ -48,8 +48,11 @@ const description = 'Search OrientDig spreadsheet finds, match items by image, r
         <form action="/spreadsheet/" role="search" class="intro-search">
           <label for="home-query">Search {catalog.length.toLocaleString('en-US')} listings</label>
           <div class="row">
-            <input class="input" id="home-query" name="q" placeholder="Product name, link or item ID" />
+            <input class="input" id="home-query" name="q" placeholder={productSearchPlaceholder} />
             <button class="button primary">Search</button>
+          </div>
+          <div class="row search-suggestions" aria-label="Search suggestions">
+            {['Hoodies', 'Sneakers', 'Jerseys'].map((label, index) => <a href={'/spreadsheet/?q=' + ['hoodie', 'sneaker', 'jersey'][index]}>{label}</a>)}
           </div>
           <p class="small muted search-language" lang="zh-Hans" translate="no">{chineseSearchHelp}</p>
         </form>
@@ -75,8 +78,8 @@ const description = 'Search OrientDig spreadsheet finds, match items by image, r
       <div class="pick-grid" tabindex="0" role="region" aria-label="Spreadsheet picks">{picks.map(product => <Card product={product} image={"/media/featured/" + product.id + ".webp"} />)}</div>
     </section>
     <section class="content-block home-tools" id="tools">
-      <div class="content-heading"><h2>Image search &amp; QC</h2><a class="text-link" href="/tools/">Open tools page</a></div>
-      <FindTools />
+      <div class="content-heading"><h2>Image search</h2><a class="text-link" href="/tools/">Open image search</a></div>
+      <FindTools compact />
     </section>
     <section class="content-block" id="how-to-use">
       <div class="content-heading"><h2>How to use OrientDig Findsheet</h2><a class="text-link" href="/guides/how-to-buy/">Open walkthrough</a></div>
@@ -84,16 +87,18 @@ const description = 'Search OrientDig spreadsheet finds, match items by image, r
     </section>
     <section class="content-block" id="shipping">
       <div class="content-heading"><h2>Shipping</h2><a class="text-link" href="/guides/shipping/">Shipping guide</a></div>
-      <ShippingOverview compact />
+      <details class="home-disclosure">
+        <summary>Estimate international shipping</summary>
+        <ShippingOverview compact />
+      </details>
     </section>
     <section class="content-block" id="blog">
       <div class="content-heading"><h2>Blog and agent comparisons</h2><a class="text-link" href="/articles/">All articles</a></div>
       <div class="home-blog">
         {articles.map(article => <article class="panel">
-          <h3><a class="text-link" href={article.href}>{article.title}</a></h3>
-          <p class="muted">{article.intro}</p>
           <details>
-            <summary>Read a practical tip</summary>
+            <summary>{article.title}</summary>
+            <p class="muted">{article.intro}</p>
             <h4>{article.sections[0].title}</h4>
             <p>{article.sections[0].text}</p>
             <a class="text-link small" href={article.href}>Read the full article</a>
@@ -103,55 +108,52 @@ const description = 'Search OrientDig spreadsheet finds, match items by image, r
     </section>
     <section class="content-block" id="faq">
       <div class="content-heading"><h2>OrientDig spreadsheet FAQ</h2><a class="text-link" href="/faq/">Open FAQ page</a></div>
-      <PlatformFaq />
+      <PlatformFaq compact />
     </section>
   </div>
 </Layout>
 <style>
-.home-intro{padding:35px 0 27px;border-bottom:1px solid var(--line)}
+.home-intro{padding:22px 0 15px;border-bottom:1px solid var(--line)}
 .intro-wrap{display:grid;justify-items:center}
 .intro-copy{width:min(100%,650px);text-align:center}
-.intro-copy h1{font-size:clamp(2.15rem,5.4vw,4.7rem);line-height:1;letter-spacing:-.058em}
-.intro-copy>p{color:var(--muted);font-size:1.05rem;margin:11px auto 15px;max-width:52ch}
+.intro-copy h1{font-size:clamp(1.95rem,4.8vw,3.8rem);line-height:1;letter-spacing:-.058em}
+.intro-copy>p{color:var(--muted);font-size:1.05rem;margin:7px auto 10px;max-width:52ch}
 .intro-search label{display:block;font-size:.86rem;font-weight:750;margin-bottom:5px;text-align:start}
 .intro-search .row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:7px}
 .search-language{margin:4px 0 0;text-align:start;font-size:.78rem}.intro-links{justify-content:center;margin-top:9px;font-size:.9rem;gap:14px}
 .intro-links .button{min-height:38px;font-size:.86rem}
-.home-content{padding-top:24px}
+
+.home-content{padding-top:13px}
+.home-content>.content-block{padding-block:18px}
+.home-content>.content-block:first-child{padding-top:0}
+.home-content>.content-block>.content-heading{margin-bottom:9px}
+.home-content .content-heading h2{font-size:clamp(1.3rem,3vw,1.88rem);line-height:1.14}
+.home-disclosure{padding:8px 12px;border:1px solid var(--line);border-radius:8px}
+.home-disclosure>summary{padding:4px 0;cursor:pointer;font-weight:650}
+.home-disclosure[open]>summary{margin-bottom:8px}
+.search-suggestions{gap:5px;margin-top:7px}
+.search-suggestions a{border:1px solid var(--line);border-radius:6px;font-size:.77rem;font-weight:650;padding:3px 8px;background:var(--accent-soft)}
+.search-suggestions a:hover{border-color:var(--ink)}
+.pick-grid :global(.card img){aspect-ratio:1.55}
+.pick-grid :global(.card-body){padding:7px 8px;gap:2px;font-size:.83rem}
+
 .home-blog{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:start}
-.home-blog h3{line-height:1.25}.home-blog p{margin-bottom:.65rem}
-.home-blog summary{cursor:pointer;font-weight:700;font-size:.9rem}.home-blog h4{margin:10px 0 0}
-@media(max-width:850px){.home-blog{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:580px){.home-blog{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
-  .home-blog .panel{padding:9px}
-  .home-blog h3{font-size:.94rem}
-  .home-blog p,.home-blog summary{font-size:.78rem;line-height:1.4}
-  .home-blog p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-  .home-blog article:has(details[open]) p{display:block;overflow:visible}
-  .home-content>.content-block:not(#faq){padding-block:14px}
-  .home-content>.content-block:first-child{padding-top:0}
-  .home-content>.content-block:not(#faq)>.content-heading{margin-bottom:9px}
-  .home-tools :global(.tool-panel){padding:9px}
-  .home-tools :global(.tool-grid){gap:6px}
-  .home-tools :global(.tool-panel p){margin-block:3px;font-size:.8rem;line-height:1.35}
-  .home-tools :global(.tool-panel h2){font-size:1.08rem}
-  .home-tools :global(.tool-panel .field){gap:3px;font-size:.82rem}
-  .home-tools :global(#image-status){min-height:0}
-  .home-tools :global(.tool-panel .row){gap:5px}
-  .home-tools :global(.tool-panel .row .field){flex:1 1 100%}
-  .home-tools :global(.tool-panel .row){margin-top:5px}
-  .home-tools :global(.tool-panel .input){min-height:38px;padding:5px 7px}
-  .home-tools :global(.tool-panel .button){min-height:34px;padding:4px 7px;font-size:.74rem}}
+.home-blog .panel{padding:7px 9px}
+.home-blog p{margin-bottom:.55rem}
+.home-blog summary{cursor:pointer;font-weight:700;font-size:.86rem;line-height:1.35;padding:3px 0}
+.home-blog h4{margin:8px 0 0}
+@media(max-width:850px){.home-blog{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}}
+@media(max-width:580px){.home-blog summary{font-size:.78rem}.home-content>.content-block{padding-block:12px}}
 .category-links{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
-.category-links a{height:100%;display:flex;gap:7px;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:72px;background:white;border:1px solid var(--line);border-radius:9px;padding:7px;font-weight:700;font-size:.89rem;overflow-wrap:anywhere}
-.category-icon{width:34px;height:34px;display:grid;place-items:center;flex:none;border-radius:9px;color:var(--icon-color);background:var(--icon-background)}
+.category-links a{height:100%;display:flex;gap:7px;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:58px;background:white;border:1px solid var(--line);border-radius:9px;padding:7px;font-weight:700;font-size:.89rem;overflow-wrap:anywhere}
+.category-icon{width:28px;height:28px;display:grid;place-items:center;flex:none;border-radius:9px;color:var(--icon-color);background:var(--icon-background)}
 .category-links a:hover{border-color:var(--accent-dark);background:var(--accent-soft)}
 .pick-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
 .content-heading .text-link{font-size:.88rem;flex-shrink:0}
 @media(max-width:900px){.pick-grid{grid-template-columns:repeat(6,minmax(116px,1fr));overflow-x:auto;padding:2px 2px 8px;scroll-snap-type:x proximity}.pick-grid :global(.card){scroll-snap-align:start}}
 @media(max-width:675px){
-  .home-intro{padding:21px 0 17px}.intro-copy>p{font-size:.96rem;margin:8px 0}.intro-links{gap:10px}
-  .category-links{gap:5px}.category-links a{font-size:.69rem;padding:4px 2px;min-height:62px}.category-icon{width:27px;height:27px;border-radius:7px}.category-icon svg{width:18px;height:18px}
+  .home-intro{padding:13px 0 11px}.intro-copy>p{font-size:.96rem;margin:8px 0}.intro-links{gap:10px}
+  .category-links{gap:5px}.category-links a{font-size:.69rem;padding:4px 2px;min-height:55px}.category-icon{width:27px;height:27px;border-radius:7px}.category-icon svg{width:18px;height:18px}
   .pick-grid{gap:7px}.pick-grid :global(.card img){height:auto;aspect-ratio:4/3}.pick-grid :global(.card-body){padding:7px 6px;font-size:.8rem}
   .pick-grid :global(.card-price),.pick-grid :global(.small){font-size:.76rem}
   .content-heading{align-items:baseline}.content-heading .text-link{font-size:.77rem;max-width:107px;text-align:end}

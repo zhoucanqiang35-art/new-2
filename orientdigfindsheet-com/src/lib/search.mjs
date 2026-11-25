@@ -35,6 +35,7 @@ function normalize(text) {
   return text.normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
 }
 
+export const productSearchPlaceholder = 'Try “hoodie”, “sneakers” or a product link';
 export const englishSearchHelp = 'Search by English product name, Weidian ID or link.';
 export const chineseSearchHelp = '支持常用中文商品词，例如：连帽卫衣、运动鞋、球衣。';
 

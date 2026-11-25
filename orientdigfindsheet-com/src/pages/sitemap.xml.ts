@@ -9,7 +9,7 @@ export const prerender = true;
 
 export const GET: APIRoute = () => {
   const paths = indexable ? [
-    '/', '/spreadsheet/', '/categories/', '/tools/', '/articles/', '/faq/',
+    '/', '/spreadsheet/', '/categories/', '/tools/', '/qc/', '/articles/', '/faq/',
     '/guides/how-to-buy/', '/guides/agent/', '/guides/shipping/',
     ...categoryEntries.map(category => category.href),
     ...articles.map(article => article.href),

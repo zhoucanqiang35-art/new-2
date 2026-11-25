@@ -29,10 +29,20 @@ const perEuro = {
   "SGD": 1.416,
   "THB": 37.262,
   "ZAR": 19.1987,
+  // November 20 CBR and NBU references. SAR is pegged at 3.75 per USD.
+  "RUB": 89.8597,
+  "UAH": 49.5335,
+  "SAR": 1.099 * 3.75,
   "EUR": 1
 };
 export const currencies = Object.keys(perEuro).sort();
 export const defaultCurrency = 'USD';
+export const languageCurrencies = {
+  en: 'USD', 'zh-Hans': 'CNY', es: 'EUR', fr: 'EUR', de: 'EUR', it: 'EUR',
+  pt: 'EUR', ru: 'RUB', ja: 'JPY', ko: 'KRW', ar: 'SAR', tr: 'TRY',
+  pl: 'PLN', nl: 'EUR', sv: 'SEK', da: 'DKK', fi: 'EUR', no: 'NOK',
+  hu: 'HUF', ro: 'RON', cs: 'CZK', uk: 'UAH',
+};
 export const rateDate = '20 Nov 2026';
 export const rateSource = 'https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html';
 

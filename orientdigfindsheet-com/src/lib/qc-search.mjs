@@ -18,10 +18,8 @@ function check() {
     error.textContent = 'Enter a Weidian item ID or a supported product URL.';
     return;
   }
-  if (location.pathname.startsWith('/tools/')) {
-    const params = new URLSearchParams({id});
-    history.replaceState(null,'',location.pathname+'?'+params+'#qc');
-  }
+  const params = new URLSearchParams({ id });
+  history.replaceState(null, '', '/qc/?' + params);
   itemLink.href = itemLookupUrl(id);
   showQc(id,output);
 }

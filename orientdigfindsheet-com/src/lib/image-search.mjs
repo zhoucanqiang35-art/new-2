@@ -2,6 +2,7 @@ import { card, readJson } from './dom.mjs';
 
 const file = document.querySelector('#image-file');
 const example = document.querySelector('#image-example');
+const drop = document.querySelector('#image-drop');
 const preview = document.querySelector('#image-preview');
 const status = document.querySelector('#image-status');
 const results = document.querySelector('#image-results');
@@ -77,20 +78,38 @@ function clearUpload() {
   objectUrl = undefined;
 }
 
-file.addEventListener('change',()=>{
-  const selected = file.files[0];
+function handlePhoto(selected) {
   if (!selected) return;
   clearUpload();
-  if (selected.size > 20*1024*1024) {
+  const isImage = !selected.type || selected.type.startsWith('image/');
+  if (!isImage || selected.size > 20 * 1024 * 1024) {
     latest += 1;
     preview.hidden = true;
     preview.removeAttribute('src');
     results.replaceChildren();
-    status.textContent = 'Choose a photo smaller than 20 MB.';
+    status.textContent = isImage
+      ? 'Choose a photo smaller than 20 MB.'
+      : 'Choose an image file.';
     return;
   }
   objectUrl = URL.createObjectURL(selected);
   search(objectUrl);
+}
+
+file.addEventListener('change', () => handlePhoto(file.files[0]));
+drop.addEventListener('dragover', event => {
+  if (!event.dataTransfer?.types.includes('Files')) return;
+  event.preventDefault();
+  drop.classList.add('is-dragging');
+});
+drop.addEventListener('dragleave', event => {
+  if (!(event.relatedTarget instanceof Node) || !drop.contains(event.relatedTarget)) drop.classList.remove('is-dragging');
+});
+drop.addEventListener('drop', event => {
+  event.preventDefault();
+  drop.classList.remove('is-dragging');
+  file.value = '';
+  handlePhoto(event.dataTransfer?.files[0]);
 });
 
 example.addEventListener('click',()=>{

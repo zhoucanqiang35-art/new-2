@@ -4,7 +4,7 @@ import { categories, itemUrl, priceLabel, buyUrl } from '../lib/catalog.mjs';
 import catalog from '../../public/data/catalog.json';
 import savedQc from '../../public/data/qc.json';
 import { savedQcLabel } from '../lib/qc.mjs';
-import { englishSearchHelp, chineseSearchHelp } from '../lib/search.mjs';
+import { englishSearchHelp, chineseSearchHelp, productSearchPlaceholder } from '../lib/search.mjs';
 const { category = '', intro } = Astro.props;
 const title = category ? `OrientDig ${categories[category]} Spreadsheet` : 'OrientDig product spreadsheet';
 const description = intro ?? 'Compare Weidian listings and see which items have saved warehouse photos. Prices are estimates converted from saved seller listings.';
@@ -33,7 +33,7 @@ const picks = category ? [...new Map(
       </aside>
     )}
     <form id="catalog-form" class="panel filters" action={path} data-category={category || undefined} role="search">
-      <label class="field search-field">Product search<input class="input" name="q" placeholder="Product name, item ID or link" /></label>
+      <label class="field search-field">Product search<input class="input" name="q" placeholder={productSearchPlaceholder} /></label>
       {!category && <label class="field">Category<select name="category"><option value="">All categories</option>{Object.entries(categories).map(([slug,name])=><option value={slug}>{name}</option>)}</select></label>}
       <label class="field">Sort by<select name="sort"><option value="">Latest in snapshot</option><option value="price-asc">Price low to high</option><option value="price-desc">Price high to low</option></select></label>
       <button class="button primary">Search</button>

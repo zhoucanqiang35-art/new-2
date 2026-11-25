@@ -96,3 +96,44 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,su
   .settings-panel{position:fixed;left:14px;right:14px;top:58px;width:auto;max-height:72vh}
   [dir=rtl] .settings-panel{left:14px;right:14px}
 }
+
+:root {
+  color:#161616;
+  --ink:#161616;
+  --muted:#535353;
+  --line:#dedede;
+  --accent:#171717;
+  --accent-dark:#202020;
+  --accent-soft:#f5f5f5;
+  --radius:12px;
+}
+button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline-color:#444}
+.site-header{border-color:var(--line)}
+.header-inner{min-height:68px}
+.header-inner nav,.header-inner nav a[aria-current]{color:var(--ink)}
+.button.primary,.button.join{border-color:var(--accent)}
+.card img{background:var(--accent-soft)}
+.panel{box-shadow:none}
+.header-picker{position:relative}
+.header-options .control-button{border-color:#d0d0d0;min-height:36px;border-radius:7px}
+.header-picker[open] .control-caret{transform:rotate(225deg);margin-top:3px}
+.picker-panel{inset-inline-end:0;left:auto;right:auto;width:min(272px, calc(100vw - 28px));padding:9px;overflow:visible}
+.option-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}
+.picker-scroll{max-height:min(42vh,230px);overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding:4px}
+.option-grid button,.agent-grid button{border:1px solid var(--line);background:#fff;color:var(--ink);text-align:center;cursor:pointer;border-radius:6px;min-height:34px;font-size:.83rem;font-weight:650;padding:4px 6px;min-width:0}
+.option-grid span{display:block;overflow-wrap:anywhere}
+.option-grid button:hover,.option-grid button[aria-pressed=true],.agent-grid button:hover,.agent-grid button[aria-pressed=true]{border-color:var(--ink);background:#eee}
+.agent-grid button{text-align:start}
+.picker-panel .settings-note{margin:5px 4px 0}
+[data-current-language]{max-width:88px;overflow:hidden;text-overflow:ellipsis}
+[dir=rtl] .header-picker .picker-panel{inset-inline-end:0;right:auto}
+@media(max-width:560px){
+  .header-options .header-picker .settings-panel{position:fixed;inset:56px 14px auto;width:auto}
+  .header-inner .brand img{width:clamp(78px,24vw,132px)}
+  .header-inner .header-options{gap:3px}
+  .header-options .control-button{padding-inline:6px;font-size:.73rem}
+  [data-current-language]{max-width:61px}
+  .header-options .join{padding-inline:6px;font-size:.75rem;min-height:36px}
+  .header-inner:has(#shopping-settings) .brand img{width:clamp(68px,20vw,112px)}
+  #shopping-settings [data-selected-agent]{max-width:60px}
+}

@@ -11,13 +11,12 @@ const links = [
   ['/', 'Home'],
   ['/spreadsheet/', 'Spreadsheet'],
   ['/categories/', 'Categories'],
-  ['/tools/', 'Image Search & QC'],
+  ['/tools/', 'Image search'],
   ['/guides/how-to-buy/', 'How to use'],
-  ['/articles/', 'Blog'],
   ['/guides/shipping/', 'Shipping'],
 ];
 const path = Astro.url.pathname;
-const isSection = href => ['/categories/', '/guides/', '/articles/'].includes(href) &&
+const isSection = href => ['/categories/', '/guides/'].includes(href) &&
   path.startsWith(href) && !links.some(([link]) => link === path);
 ---
 <!doctype html>
@@ -79,6 +78,23 @@ const isSection = href => ['/categories/', '/guides/', '/articles/'].includes(hr
 <script>
   import '../lib/shopping-controls.mjs';
   import '../lib/localize.mjs';
+
+  const pickers = [...document.querySelectorAll<HTMLDetailsElement>('.header-options details')];
+  for (const picker of pickers) {
+    picker.addEventListener('toggle', () => {
+      if (picker.open) for (const other of pickers) if (other !== picker) other.open = false;
+    });
+    picker.addEventListener('keydown', event => {
+      if (event.key !== 'Escape' || !picker.open) return;
+      picker.open = false;
+      picker.querySelector('summary')?.focus();
+    });
+  }
+  document.addEventListener('click', event => {
+    if (event.target instanceof Node) for (const picker of pickers) {
+      if (!picker.contains(event.target)) picker.open = false;
+    }
+  });
 </script>
 </body>
 </html>

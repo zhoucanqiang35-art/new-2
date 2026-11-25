@@ -1,15 +1,23 @@
 ---
 import { languages } from '../lib/languages.mjs';
+import { currencies, rateDate, rateSource } from '../lib/currency.mjs';
 ---
-<label class="language-control">
-  <span class="visually-hidden">Website language</span>
-  <select id="site-language" aria-label="Website language">
-    {languages.map(([code, label]) => <option value={code} lang={code} translate="no" selected={code === 'en'}>{label}</option>)}
-  </select>
-</label>
+<details class="header-picker" id="site-language">
+  <summary class="control-button" aria-label="Website language"><span data-current-language translate="no">English</span><span class="control-caret" aria-hidden="true"></span></summary>
+  <div class="settings-panel picker-panel">
+    <div class="option-grid picker-scroll" dir="ltr">
+      {languages.map(([code, label]) => <button type="button" data-select-language={code} aria-pressed={code === 'en'}><span lang={code} translate="no" dir="auto">{label}</span></button>)}
+    </div>
+  </div>
+</details>
+<details class="header-picker" id="site-currency">
+  <summary class="control-button" aria-label="Currency"><span data-currency-code>USD</span><span class="control-caret" aria-hidden="true"></span></summary>
+  <div class="settings-panel picker-panel">
+    <div class="option-grid picker-scroll" dir="ltr">
+      {currencies.map(code => <button type="button" data-select-currency={code} aria-pressed={code === 'USD'} translate="no">{code}</button>)}
+    </div>
+    <p class="settings-note">Reference rates · <time datetime="2026-11-20" translate="no">{rateDate}</time></p>
+    <p class="settings-note"><a href={rateSource}>ECB</a> · <a href="https://www.cbr.ru/eng/currency_base/dynamics/?UniDbQuery.FromDate=19.11.2026&amp;UniDbQuery.Posted=True&amp;UniDbQuery.ToDate=20.11.2026&amp;UniDbQuery.VAL_NM_RQ=R01239&amp;UniDbQuery.mode=1">CBR</a> · <a href="https://kurs.com.ua/en/novost/1489205-kurs-valjut-nbu-na-20-listopada">NBU</a> · <a href="https://sama.gov.sa/en-US/Currency/FinExc/Pages/Currency.aspx">SAMA</a></p>
+  </div>
+</details>
 <span id="language-status" class="visually-hidden" role="status"></span>
-<style>
-.language-control{display:block;min-width:0}
-.language-control select{min-height:39px;max-width:8.6rem;border-color:#cdd2d9;border-radius:8px;background:#ffffff;color:var(--ink);padding:6px 9px;font-size:.82rem;font-weight:700}
-@media(max-width:480px){.language-control select{max-width:6.4rem;padding-inline:5px;font-size:.75rem}}
-</style>
