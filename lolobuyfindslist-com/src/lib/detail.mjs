@@ -1,4 +1,4 @@
-import {card, element, external, readJson, referencePrice, showQc} from './browser.mjs';
+import {element, external, readJson, referencePrice, showQc} from './browser.mjs';
 import {categoryLabel, originalUrl, parseId, productImage, sourceOrigin} from './catalog.mjs';
 import {agents, purchaseFor, savedItems, shoppingOptions, toggleSaved} from './shopping.mjs';
 
@@ -6,8 +6,12 @@ const target = document.querySelector('#product-detail');
 const id = parseId(new URLSearchParams(location.search).get('id') ?? '');
 
 function gallery(product, images) {
-  const photos = [...new Set([productImage(product), ...images.filter((image) => image !== product.image)])];
-  const cover = element('img', {src: photos[0], alt: product.name, className: 'detail-image'});
+  const primary = productImage(product);
+  const photos = [...new Set([...images.map((url) => url === product.image ? primary : url), primary])];
+  const cover = element('img', {src: photos[0], alt: product.name, className: 'detail-image', fetchPriority: 'high'});
+  cover.addEventListener('error', () => {
+    if (cover.getAttribute('src') !== primary) cover.src = primary;
+  });
   const thumbs = element('div', {className: 'thumbs'});
   const count = element('span', {className: 'gallery-count', textContent: '1 / ' + photos.length});
   for (const [index, url] of photos.entries()) {
@@ -27,40 +31,57 @@ function gallery(product, images) {
 }
 
 function platformPicker(product) {
-  const trigger = element('button', {type: 'button', className: 'button outline agent-picker-button', textContent: 'Other shopping agents'});
-  const title = element('h2', {id: 'other-agents-title', textContent: 'Other shopping agents'});
-  const close = element('button', {type: 'button', className: 'button outline', textContent: 'Close'});
   const links = agents.filter(({id}) => id !== 'findspreadsheet').map((agent) => {
     const {url, sponsored} = purchaseFor(agent.id, product.weidianId, product.sourcePath);
-    const link = external('', url, 'button agent-choice');
+    const link = external('', url, 'choice-tile agent-choice');
+    link.dataset.agent = agent.id;
     if (sponsored) link.rel = 'sponsored noopener';
     link.append(
-      element('img', {src: agent.logo, alt: '', loading: 'lazy', width: 22, height: 22}),
+      element('img', {src: agent.logo, alt: '', width: 22, height: 22}),
       element('span', {textContent: agent.name, translate: false}),
     );
     return link;
   });
-  const dialog = element('dialog', {id: 'other-agents', className: 'agent-picker'}, [
-    element('div', {className: 'agent-picker-head'}, [title, close]),
-    element('div', {className: 'agent-picker-list'}, links),
+  const menu = element('details', {className: 'choice-menu listing-agent-menu'}, [
+    element('summary', {textContent: 'Other shopping agents'}),
+    element('div', {className: 'choice-panel'}, [element('div', {className: 'choice-grid'}, links)]),
   ]);
-  dialog.setAttribute('aria-labelledby', title.id);
-  trigger.setAttribute('aria-haspopup', 'dialog');
-  trigger.setAttribute('aria-controls', dialog.id);
-  trigger.setAttribute('aria-expanded', 'false');
-  trigger.addEventListener('click', () => {
-    dialog.showModal();
-    trigger.setAttribute('aria-expanded', 'true');
-  });
-  dialog.addEventListener('close', () => {
-    trigger.setAttribute('aria-expanded', 'false');
-    trigger.focus();
-  });
-  close.addEventListener('click', () => dialog.close());
-  return {trigger, dialog};
+  function filterCurrentAgent() {
+    for (const link of links) link.hidden = link.dataset.agent === shoppingOptions().agent;
+  }
+  window.addEventListener('shopping-change', filterCurrentAgent);
+  window.addEventListener('pageshow', filterCurrentAgent);
+  filterCurrentAgent();
+  return menu;
 }
 
-function render(product, photos, catalog) {
+function copyProductLink(id) {
+  const label = element('span', {textContent: 'Copy product link'});
+  const button = element('button', {type: 'button', className: 'button outline listing-copy'}, [label]);
+  const status = element('span', {className: 'visually-hidden'});
+  status.setAttribute('role', 'status');
+  let reset;
+  button.addEventListener('click', async () => {
+    const url = originalUrl(id);
+    try {
+      await navigator.clipboard.writeText(url);
+      label.textContent = 'Link copied';
+      status.textContent = 'Link copied';
+      clearTimeout(reset);
+      reset = setTimeout(() => { label.textContent = 'Copy product link'; }, 2200);
+    } catch {
+      const field = element('input', {type: 'url', value: url, readOnly: true, className: 'listing-link-field'});
+      field.setAttribute('aria-label', 'Original Weidian listing');
+      button.parentElement.after(field);
+      field.focus();
+      field.select();
+      field.addEventListener('blur', () => field.remove(), {once: true});
+    }
+  });
+  return [button, status];
+}
+
+function render(product, photos) {
   document.title = product.name + ' | LoloBuy Findslist';
   const buy = external('', '', 'button dark');
   const updatePurchase = () => {
@@ -89,42 +110,30 @@ function render(product, photos, catalog) {
     element('h1', {textContent: product.name, translate: false}),
     element('p', {textContent: 'Weidian item ' + id}),
   ]);
-  const {trigger, dialog} = platformPicker(product);
-  const info = element('aside', {className: 'listing-purchase'}, [
-    element('h2', {textContent: 'Open listing'}),
+  buy.classList.add('listing-buy');
+  const info = element('div', {className: 'listing-purchase'}, [
+    title,
     ...(estimate ? [element('p', {className: 'detail-estimate'}, [estimate, ' estimated item price'])] : []),
     buy,
-    trigger,
-    save,
+    element('div', {className: 'listing-primary-actions'}, [platformPicker(product), ...copyProductLink(id)]),
     element('p', {textContent: 'Check size, stock and shipping with your selected agent before ordering. Agent links may contain a referral code.'}),
-    external('Original Weidian listing', originalUrl(id)),
-    external('View on FindSpreadsheet', new URL(product.sourcePath, sourceOrigin).href),
+    element('div', {className: 'listing-source-links'}, [
+      save,
+      external('Original Weidian listing', originalUrl(id)),
+      external('View on FindSpreadsheet', new URL(product.sourcePath, sourceOrigin).href),
+    ]),
   ]);
   const qcStatus = element('div', {className: 'result-status'});
   qcStatus.setAttribute('role', 'status');
-  const related = catalog.filter((item) => item.category === product.category && item.weidianId !== id && /^\d+$/.test(item.weidianId ?? '')).slice(0, 4);
   const qc = element('section', {className: 'listing-qc', id: 'warehouse-qc'}, [
     element('h2', {textContent: 'Warehouse QC photos'}),
     qcStatus,
   ]);
-  const tabs = element('nav', {className: 'listing-jumps'}, [
-    element('a', {href: '#listing-media', textContent: 'Seller and QC photos'}),
-    element('a', {href: '#related', textContent: 'Related finds'}),
-  ]);
-  tabs.setAttribute('aria-label', 'Listing sections');
-  const relatedSection = element('section', {className: 'listing-related', id: 'related'}, [
-    element('div', {className: 'section-title'}, [
-      element('h2', {textContent: 'More in ' + categoryLabel(product.category)}),
-      element('a', {textContent: 'Browse category', href: categoryPath}),
-    ]),
-    element('div', {className: 'product-grid'}, related.map((item) => card(item))),
-  ]);
-  const side = element('div', {className: 'listing-side'}, [qc, info]);
   const comparison = element('div', {className: 'listing-layout', id: 'listing-media'}, [
     gallery(product, photos),
-    side,
+    info,
   ]);
-  target.replaceChildren(title, tabs, comparison, relatedSection, dialog);
+  target.replaceChildren(comparison, qc);
   if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
   showQc(qcStatus, id, product.sourcePath);
 }
@@ -138,7 +147,7 @@ async function init() {
       return;
     }
     const galleries = await readJson('/data/gallery-' + id.slice(0, 4) + '.json').catch(() => ({}));
-    render(product, Array.isArray(galleries[id]) ? galleries[id] : [], catalog);
+    render(product, Array.isArray(galleries[id]) ? galleries[id] : []);
   } catch {
     target.textContent = 'The listing could not load. Reload the page to try again.';
   }

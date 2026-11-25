@@ -9,6 +9,7 @@ const defaultOptions = {agent: 'lolobuy', currency: 'USD'};
 const optionsKey = 'lolobuy-shopping';
 const savedKey = 'lolobuy-saved';
 const formats = new Map();
+let sessionOptions = null;
 
 function stored(key, fallback) {
   try {
@@ -23,7 +24,7 @@ function write(key, value) {
 }
 
 export function shoppingOptions() {
-  const saved = stored(optionsKey, defaultOptions);
+  const saved = sessionOptions ?? stored(optionsKey, defaultOptions);
   return {
     agent: agents.some(({id}) => id === saved.agent) ? saved.agent : defaultOptions.agent,
     currency: currencies.includes(saved.currency) ? saved.currency : defaultOptions.currency,
@@ -31,7 +32,8 @@ export function shoppingOptions() {
 }
 
 export function updateShopping(patch) {
-  write(optionsKey, {...shoppingOptions(), ...patch});
+  sessionOptions = {...shoppingOptions(), ...patch};
+  write(optionsKey, sessionOptions);
   window.dispatchEvent(new Event('shopping-change'));
 }
 

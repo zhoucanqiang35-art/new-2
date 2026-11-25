@@ -1,0 +1,8 @@
+---
+const {src, caption, marker, compact = false} = Astro.props;
+const [x, y, angle, width, height] = marker;
+---
+<span class:list={['guide-shot', {'guide-shot-compact': compact}]} aria-hidden={compact ? 'true' : undefined}>
+  <img src={src} width={width} height={height} loading="lazy" alt={compact ? '' : caption} />
+  <span class="guide-arrow" style={`--target-x:${x}%;--target-y:${y}%;--arrow-angle:${angle}deg`} aria-hidden="true"></span>
+</span>

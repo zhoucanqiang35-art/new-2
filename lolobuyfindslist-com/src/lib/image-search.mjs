@@ -1,6 +1,7 @@
 import { readJson, card } from './browser.mjs';
 
 const file = document.getElementById('image-file');
+const dropzone = document.getElementById('image-dropzone');
 const example = document.getElementById('image-example');
 const preview = document.getElementById('image-preview');
 const status = document.getElementById('image-status');
@@ -82,11 +83,31 @@ function clearObjectUrl() {
   if (activeObjectUrl) URL.revokeObjectURL(activeObjectUrl);
   activeObjectUrl = undefined;
 }
-file.addEventListener('change', () => {
-  if (!file.files.length) return;
+function searchFile(imageFile) {
+  if (!imageFile) return;
   clearObjectUrl();
-  activeObjectUrl = URL.createObjectURL(file.files[0]);
+  activeObjectUrl = URL.createObjectURL(imageFile);
   search(activeObjectUrl);
+}
+
+file.addEventListener('change', () => {
+  searchFile(file.files[0]);
+  file.value = '';
+});
+dropzone.addEventListener('dragover', (event) => {
+  if (!event.dataTransfer?.types.includes('Files')) return;
+  event.preventDefault();
+  event.dataTransfer.dropEffect = 'copy';
+  dropzone.classList.add('dragging');
+});
+dropzone.addEventListener('dragleave', (event) => {
+  if (!dropzone.contains(event.relatedTarget)) dropzone.classList.remove('dragging');
+});
+dropzone.addEventListener('drop', (event) => {
+  if (!event.dataTransfer?.types.includes('Files')) return;
+  event.preventDefault();
+  dropzone.classList.remove('dragging');
+  searchFile(event.dataTransfer.files[0]);
 });
 example.addEventListener('click', () => {
   clearObjectUrl();

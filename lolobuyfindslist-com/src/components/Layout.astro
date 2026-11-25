@@ -48,7 +48,7 @@ const analyticsHost = new URL(publicOrigin).hostname;
       <div class="edit-head-actions"><LanguagePicker /><a class="button dark edit-join" href={registrationUrl} rel="sponsored noopener" target="_blank">Join LoloBuy</a></div>
     </div>
   </header>
-  {(page === 'sheet' || page === 'product') && <div class="wrap edit-settings"><ShoppingMenu /></div>}
+  {page === 'sheet' && <div class="wrap edit-settings"><ShoppingMenu /></div>}
   <main id="main"><slot /></main>
   <footer class="edit-footer">
     <div class="wrap footer-inner">
@@ -58,6 +58,7 @@ const analyticsHost = new URL(publicOrigin).hostname;
   </footer>
   <script>
     import {priceFor, shoppingOptions} from '../lib/shopping.mjs';
+    import '../lib/choice-menu.mjs';
     function updateDisplayedPrices() {
       const {currency} = shoppingOptions();
       for (const node of document.querySelectorAll<HTMLElement>('[data-reference-price]')) {

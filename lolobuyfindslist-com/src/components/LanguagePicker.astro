@@ -1,18 +1,45 @@
 ---
 import {languages} from '../lib/languages.mjs';
+import {currencies, rateDate} from '../lib/shopping.mjs';
+const [english, ...otherLanguages] = languages;
 ---
-<div class="language-picker">
-  <label class="visually-hidden" for="site-language">Website language</label>
-  <select id="site-language">
-    {languages.map(([code, label]) => <option value={code} selected={code === 'en'} lang={code} translate="no">{label}</option>)}
-  </select>
+<div class="locale-controls">
+  <details class="choice-menu" id="language-menu">
+    <summary aria-label="Website language"><span id="current-language" lang="en" translate="no">English</span></summary>
+    <div class="choice-panel">
+      <div class="language-default">
+        <button class="choice-tile" type="button" data-language={english[0]} lang={english[0]} translate="no" aria-pressed="true">{english[1]}</button>
+      </div>
+      <div class="choice-grid" aria-label="Website language">
+        {otherLanguages.map(([code, label]) => <button class="choice-tile" type="button" data-language={code} lang={code} translate="no" aria-pressed="false">{label}</button>)}
+      </div>
+    </div>
+  </details>
+  <details class="choice-menu" id="currency-menu">
+    <summary aria-label="Currency"><span id="current-currency" translate="no">USD</span></summary>
+    <div class="choice-panel">
+      <div class="choice-grid" aria-label="Currency">
+        {currencies.map(code => <button class="choice-tile" type="button" data-currency={code} translate="no" aria-pressed={code === 'USD' ? 'true' : 'false'}>{code}</button>)}
+      </div>
+      <p class="currency-credit"><a href="https://www.exchangerate-api.com/">Rates by ExchangeRate-API</a> · <time datetime={rateDate}>{rateDate}</time></p>
+    </div>
+  </details>
 </div>
 <p id="language-status" class="visually-hidden" role="status"></p>
 <script>
   import {languages} from '../lib/languages.mjs';
   import {navigationLabels} from '../lib/language-labels.mjs';
 
-  const input = document.querySelector<HTMLSelectElement>('#site-language')!;
+  import {shoppingOptions, updateShopping} from '../lib/shopping.mjs';
+  import {currencyForLanguage} from '../lib/locale-currency.mjs';
+  import {newLabels} from '../lib/new-labels.mjs';
+
+  const languageMenu = document.querySelector<HTMLDetailsElement>('#language-menu')!;
+  const currencyMenu = document.querySelector<HTMLDetailsElement>('#currency-menu')!;
+  const languageLabel = document.querySelector<HTMLElement>('#current-language')!;
+  const currencyLabel = document.querySelector<HTMLElement>('#current-currency')!;
+  const languageButtons = [...languageMenu.querySelectorAll<HTMLButtonElement>('[data-language]')];
+  const currencyButtons = [...currencyMenu.querySelectorAll<HTMLButtonElement>('[data-currency]')];
   const status = document.querySelector('#language-status')!;
   const attributes = ['placeholder', 'aria-label', 'alt', 'title'];
   const ignored = 'script, style, noscript, [translate="no"], [data-reference-price]';
@@ -68,7 +95,7 @@ import {languages} from '../lib/languages.mjs';
     for (const child of root.childNodes) apply(child);
   }
 
-  async function setLanguage(code: string) {
+  async function setLanguage(code: string, changeCurrency = false) {
     const id = ++requestId;
     try {
       let next = {};
@@ -78,18 +105,20 @@ import {languages} from '../lib/languages.mjs';
         next = await response.json();
       }
       if (id !== requestId) return;
-      dictionary = {...next, ...navigationLabels(code)};
+      dictionary = {...next, ...navigationLabels(code), ...newLabels(code)};
       active = code;
       document.documentElement.lang = code;
       document.documentElement.dir = code === 'ar' ? 'rtl' : 'ltr';
-      input.value = code;
+      languageLabel.lang = code;
+      languageLabel.textContent = languages.find(([key]) => key === code)?.[1] ?? code;
+      for (const button of languageButtons) button.setAttribute('aria-pressed', String(button.dataset.language === code));
+      if (changeCurrency) updateShopping({currency: currencyForLanguage[code as keyof typeof currencyForLanguage]});
       status.textContent = '';
       apply(document.querySelector('title')!);
       apply(document.body);
       try { localStorage.setItem(storageKey, code); } catch {}
     } catch {
       if (id === requestId) {
-        input.value = active;
         status.textContent = 'Could not load that language. Please try again.';
       }
     }
@@ -104,27 +133,32 @@ import {languages} from '../lib/languages.mjs';
   observer.observe(document.body, {childList: true, subtree: true});
   observer.observe(document.querySelector('title')!, {childList: true});
 
-  input.addEventListener('change', () => {
-    if (knownCodes.has(input.value)) void setLanguage(input.value);
+  function showCurrency() {
+    const {currency} = shoppingOptions();
+    currencyLabel.textContent = currency;
+    for (const button of currencyButtons) button.setAttribute('aria-pressed', String(button.dataset.currency === currency));
+  }
+
+  languageMenu.addEventListener('click', (event) => {
+    const choice = (event.target as Element).closest<HTMLButtonElement>('[data-language]');
+    if (choice?.dataset.language && knownCodes.has(choice.dataset.language)) {
+      languageMenu.open = false;
+      languageMenu.querySelector('summary')?.focus();
+      void setLanguage(choice.dataset.language, true);
+    }
   });
+  currencyMenu.addEventListener('click', (event) => {
+    const choice = (event.target as Element).closest<HTMLButtonElement>('[data-currency]');
+    if (!choice?.dataset.currency) return;
+    updateShopping({currency: choice.dataset.currency});
+    currencyMenu.open = false;
+    currencyMenu.querySelector('summary')?.focus();
+  });
+  window.addEventListener('shopping-change', showCurrency);
+  window.addEventListener('pageshow', showCurrency);
+  showCurrency();
   try {
     const stored = localStorage.getItem(storageKey);
     if (stored && knownCodes.has(stored) && stored !== 'en') void setLanguage(stored);
   } catch {}
 </script>
-<style>
-  .language-picker select {
-    min-height: 43px;
-    max-width: 7.8rem;
-    padding: 5px 8px;
-    border: 1px solid #b8cbd7;
-    border-radius: 5px;
-    color: #182533;
-    background: #f5f8fa;
-    font-size: .87rem;
-    font-weight: 700;
-  }
-  @media (max-width: 720px) {
-    .language-picker select { min-height: 37px; max-width: 6.2rem; font-size: .78rem; }
-  }
-</style>
