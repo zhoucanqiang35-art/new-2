@@ -63,7 +63,8 @@ const isSection = href => ['/categories/', '/guides/'].includes(href) &&
     </nav>
     <div class="header-options">
       <LanguagePicker />
-      {path === '/spreadsheet/' ? <ShoppingControls /> : <a class="button join" href={register} rel="sponsored noopener">Sign up</a>}
+      {path === '/spreadsheet/' && <ShoppingControls />}
+      <a class="button join" href={register} rel="sponsored noopener" translate="no">Join orientdig</a>
     </div>
   </div>
 </header>
