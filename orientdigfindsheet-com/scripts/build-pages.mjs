@@ -15,7 +15,7 @@ for (const entry of await readdir(worker, { recursive: true, withFileTypes: true
 }
 await writeFile('dist/client/_routes.json', JSON.stringify({
   version: 1,
-  include: ['/products/*', '/item', '/item/*', '/api/qc', '/api/qc/*', '/api/seller-options', '/api/seller-options/*'],
+  include: ['/spreadsheet', '/spreadsheet/', '/products/*', '/item', '/item/*', '/api/qc', '/api/qc/*', '/api/seller-options', '/api/seller-options/*'],
   exclude: [],
 }) + '\n');
 

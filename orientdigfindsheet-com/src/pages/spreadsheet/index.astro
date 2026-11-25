@@ -1,4 +1,9 @@
 ---
 import CatalogPage from '../../components/CatalogPage.astro';
+import { categories } from '../../lib/catalog.mjs';
+
+export const prerender = false;
+const requestedCategory = Astro.url.searchParams.get('category') ?? '';
+const initialCategory = Object.hasOwn(categories, requestedCategory) ? requestedCategory : '';
 ---
-<CatalogPage />
+<CatalogPage initialCategory={initialCategory} />

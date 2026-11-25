@@ -61,6 +61,7 @@ export function uiCopy(locale) {
     ...Object.fromEntries(keys.map((key, index) => [key, translated[index]])),
     ...(locale === 'zh-Hans' ? {
       'Image search': '图片搜索',
+      'All categories': '所有类别',
       'View all products': '查看此类别全部商品',
       'Checking seller options…': '正在读取卖家选项…',
       'Open Weidian to see the seller’s current options.': '前往微店查看卖家的当前选项。',

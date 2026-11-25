@@ -65,9 +65,9 @@ const description = 'Search OrientDig spreadsheet finds, match items by image, r
 
   <div class="wrap home-content">
     <section class="content-block" id="categories">
-      <div class="content-heading"><h2>Browse by category</h2><a class="text-link" href="/categories/">All categories</a></div>
+      <div class="content-heading"><h2>Browse by category</h2><a class="text-link" href="/spreadsheet/">All categories</a></div>
       <ul class="category-links">
-        {homeCategories.map(entry => <li><a href={entry.href}>
+        {homeCategories.map(entry => <li><a href={'/spreadsheet/?' + new URLSearchParams({ category: entry.key })}>
           <span class="category-icon" aria-hidden="true" style={{'--icon-color': categoryColors[entry.key][0], '--icon-background': categoryColors[entry.key][1]}}>
             <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linejoin="round" stroke-linecap="round"><path d={icons[entry.key]} /></svg>
           </span>
