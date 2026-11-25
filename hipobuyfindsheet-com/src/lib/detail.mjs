@@ -1,6 +1,6 @@
 import { sourceOrigin, productUrl } from './catalog.mjs';
 import { currentShopping, agentUrl, ratesDate } from './shopping-data.mjs';
-import { readJson, parseId, element, external, localize, ui, qcLookup, renderQc, favoriteButton, referencePrice } from './browser-data.mjs';
+import { readJson, parseId, element, external, localize, ui, qcLookup, renderQc, imageLink, favoriteButton, referencePrice } from './browser-data.mjs';
 
 const target = document.getElementById('product-detail');
 const id = parseId(new URLSearchParams(location.search).get('id') ?? '');
@@ -30,14 +30,16 @@ function gallery(product, savedPhotos) {
     ui('h2', 'sellerGallery', {className: 'visually-hidden'}), coverLink, thumbs,
   ]);
   let selected = product.image;
+  let urls = [];
   function show(src) {
     selected = src;
     cover.src = src;
     coverLink.href = src;
     for (const tile of thumbs.children) tile.setAttribute('aria-pressed', String(tile.dataset.photo === src));
   }
-  function addPhotos(urls) {
-    thumbs.replaceChildren(...uniquePhotos([product.image, ...urls]).map((src, index) => {
+  function addPhotos(nextPhotos) {
+    urls = uniquePhotos([product.image, ...nextPhotos]);
+    thumbs.replaceChildren(...urls.map((src, index) => {
       const tile = element('button', {type: 'button'}, [element('img', {src, alt: '', width: 60, height: 60})]);
       tile.dataset.photo = src;
       localize(tile, 'showPhoto', [index + 1], 'label');
@@ -52,7 +54,7 @@ function gallery(product, savedPhotos) {
     if (available) show(available.dataset.photo);
   });
   addPhotos(savedPhotos);
-  return {section, show, addPhotos};
+  return {section, show, addPhotos, get urls() { return urls; }};
 }
 
 function agentMenu(product, agents, primaryAgent) {
@@ -145,6 +147,23 @@ function showDetails(product, savedPhotos, agents) {
     localize(external('', new URL(product.sourcePath, sourceOrigin).href, 'inline-link'), 'mainListing'),
   ]);
   const references = element('div', {className: 'qc-references'}, [ui('p', 'qcCheck')]);
+  const galleryGrid = element('div', {className: 'qc-grid seller-reference-grid'});
+  const galleryFallback = element('div', {className: 'seller-reference-photos'}, [
+    ui('h3', 'sellerGallery'), galleryGrid,
+  ]);
+  function updateFallbackPhotos() {
+    galleryGrid.replaceChildren(...photos.urls.map((src) => {
+      const photo = imageLink(src, product.name);
+      photo.querySelector('img').addEventListener('error', () => photo.remove(), {once: true});
+      return photo;
+    }));
+  }
+  function showFallbackPhotos() {
+    const failedGrid = references.querySelector('.qc-grid');
+    if (failedGrid) references.replaceChildren(ui('p', 'qcError'));
+    updateFallbackPhotos();
+    references.append(galleryFallback);
+  }
   const warehouse = element('section', {className: 'detail-panel warehouse-section'}, [
     element('div', {className: 'section-head'}, [
       ui('h2', 'warehouseQc'),
@@ -156,12 +175,16 @@ function showDetails(product, savedPhotos, agents) {
   target.replaceChildren(element('div', {className: 'product-main'}, [photos.section, info]), warehouse);
   qcLookup(product.weidianId).then((entry) => {
     references.replaceChildren();
-    renderQc(references, product.weidianId, entry);
-  }).catch(() => references.replaceChildren(ui('p', 'qcError')));
+    renderQc(references, product.weidianId, entry, showFallbackPhotos);
+  }).catch(() => {
+    references.replaceChildren(ui('p', 'qcError'));
+    showFallbackPhotos();
+  });
   readJson(new URL('/api/Goods/getSkuData?weidian_id=' + product.weidianId, sourceOrigin).href).then((live) => {
     if (String(live?.weidian_id) !== product.weidianId) return;
     const livePhotos = Array.isArray(live.images) ? live.images : [];
     photos.addPhotos([...livePhotos, ...savedPhotos]);
+    if (galleryFallback.isConnected) updateFallbackPhotos();
     if (Array.isArray(live.specifications?.attrs)) {
       variants.append(...live.specifications.attrs.map((attribute) => variantGroup(attribute, photos.show)).filter(Boolean));
     }

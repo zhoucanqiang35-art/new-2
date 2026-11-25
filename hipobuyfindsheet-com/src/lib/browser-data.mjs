@@ -116,16 +116,27 @@ export async function qcLookup(id) {
   }
 }
 
-export function renderQc(target, id, entry) {
+export function renderQc(target, id, entry, onUnavailable) {
   const images = entry?.images ?? [];
   if (images.length) {
     target.append(ui('p', 'qcFor', {}, id));
-    target.append(element('div', {className: 'qc-grid'}, images.map(({url, agent}, i) => {
+    const grid = element('div', {className: 'qc-grid'});
+    for (const [i, {url, agent}] of images.entries()) {
       const photo = imageLink(url, '');
-      localize(photo.querySelector('img'), 'qcPhoto', [i + 1, id], 'alt');
-      return element('figure', {}, [photo, ...(agent ? [ui('figcaption', 'warehouseSource', {}, agent)] : [])]);
-    })));
+      const image = photo.querySelector('img');
+      localize(image, 'qcPhoto', [i + 1, id], 'alt');
+      const figure = element('figure', {}, [photo, ...(agent ? [ui('figcaption', 'warehouseSource', {}, agent)] : [])]);
+      if (onUnavailable) {
+        image.addEventListener('error', () => {
+          figure.remove();
+          if (!grid.childElementCount) onUnavailable();
+        }, {once: true});
+      }
+      grid.append(figure);
+    }
+    target.append(grid);
     return;
   }
   target.append(ui('p', entry?.status === 'none' ? 'qcNone' : 'qcUnsaved'));
+  onUnavailable?.();
 }

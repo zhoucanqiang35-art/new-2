@@ -431,3 +431,7 @@
   .guide-step-text:not(details) { display: block; }
   .guide-step-text:not(details) .step-images { margin-top: 9px; }
 }
+
+.seller-reference-photos { margin-top: 12px; }
+.seller-reference-photos h3 { font-size: 1rem; }
+.seller-reference-grid img { display: block; object-fit: contain; }
