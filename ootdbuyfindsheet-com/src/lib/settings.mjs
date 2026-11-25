@@ -1,6 +1,5 @@
 export const mainSite = 'https://findspreadsheet.com';
 export const register = 'https://ootdbuy.com/register?inviteCode=PY4OUQ9A1';
-export const sampleProduct = '7866623967';
 export const sampleQc = '7321418559';
 
 export const categories = {

@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { buyUrl, categories, mainSite, priceLabel, productCategory } from '../lib/settings.mjs';
-import { productChecks } from '../lib/product-guide.mjs';
+import { buyUrl, categories, priceLabel, productCategory } from '../lib/settings.mjs';
 const { initial } = Astro.props;
 const product = initial?.product;
 const category = product && categories[productCategory(product)];
@@ -23,64 +22,38 @@ const description = product && 'Browse photos, price and seller information for 
         <p class="eyebrow" id="item-category">{category}</p><h1 id="item-name" translate="no">{product?.name}</h1>
         <div class="detail-price"><strong id="item-price" data-price-cny={product?.price}>{product && priceLabel(product.price)}</strong> <small>Estimated item price · <span data-currency-code>USD</span></small></div>
         <p id="item-id">{product && 'Weidian item ' + product.weidianId}</p>
-        <p>Check the seller’s current price, options and availability on Ootdbuy before ordering.</p>
-        <div class="button-row">
-          <a class="button primary" id="item-buy" href={product && buyUrl(product.weidianId)} target="_blank" rel="sponsored noopener">Buy on Ootdbuy</a>
-          <a class="button outline" id="item-source" href={product && new URL(product.sourcePath, mainSite).href}>Findspreadsheet listing</a>
-          <button class="button outline" id="item-save" type="button" aria-pressed="false">Save product</button>
+        <a class="button primary detail-buy" id="item-buy" href={product && buyUrl(product.weidianId)} target="_blank" rel="sponsored noopener">Buy on Ootdbuy</a>
+        <div class="detail-actions">
+          <details class="other-agents">
+            <summary class="button outline"><span>Other shopping agents</span><span class="control-caret" aria-hidden="true"></span></summary>
+            <ul id="item-agents" class="choice-grid item-agent-grid"></ul>
+          </details>
+          <button class="button outline" id="item-copy" type="button">Copy product link</button>
         </div>
-        <details class="other-agents">
-          <summary class="button outline">Other shopping agents</summary>
-          <ul id="item-agents" class="item-agent-grid"></ul>
-        </details>
-        <a id="item-qc-link" href="#item-qc">View warehouse photos</a>
+        <p id="item-copy-status" class="sr-only" role="status"></p>
+        <input id="item-share-url" class="item-share-url" type="url" aria-label="Product link" readonly hidden>
+        <div class="seller-options" id="seller-options" hidden></div>
+        <div class="detail-utilities">
+          <a id="item-source">Findspreadsheet listing</a>
+          <button id="item-save" type="button" aria-pressed="false">Save product</button>
+        </div>
       </div>
     </div>
-    <section class="section product-profile" id="product-profile" hidden={!product}>
-      <h2>About this listing</h2>
-      <div class="profile-grid">
-        <article>
-          <h3>Listing information</h3>
-          <dl class="profile-facts">
-            <div><dt>Product</dt><dd id="profile-name" translate="no">{product?.name}</dd></div>
-            <div><dt>Category</dt><dd id="profile-category">{category}</dd></div>
-            <div><dt>Marketplace</dt><dd>Weidian</dd></div>
-            <div><dt>Seller item ID</dt><dd id="profile-id">{product?.weidianId}</dd></div>
-            <div><dt>Seller photos</dt><dd id="profile-count">{initial?.photos.length}</dd></div>
-          </dl>
-          <a id="profile-source" href={product && ('https://weidian.com/item.html?itemID=' + product.weidianId)} target="_blank" rel="noopener">View the original seller listing</a>
-        </article>
-        <article>
-          <h3>What to check before ordering</h3>
-          <ul id="profile-checks">{product && productChecks(productCategory(product)).map(text=><li>{text}</li>)}</ul>
-          <p>Current price, stock and variant options come from the seller or your chosen shopping agent.</p>
-          <h3>What the photos show</h3>
-          <p>The product gallery comes from the listing. The warehouse section shows saved inspection photos where available. Use the photos from your own order to confirm what arrived.</p>
-        </article>
-      </div>
-      <article class="seller-options" id="seller-options" hidden>
-        <h3>Seller options</h3>
-        <dl class="profile-facts" id="seller-facts"></dl>
-        <p>Confirm the selected variant and current availability on the agent’s product page.</p>
-      </article>
-    </section>
     <section class="item-qc section" id="item-qc" hidden>
-      <h2>Warehouse QC</h2>
-      <p class="status" data-qc-status role="status">Select View warehouse photos to check this item.</p>
-      <button class="button outline" type="button" data-qc-refresh hidden>Check for newer photos</button>
+      <div class="detail-photo-heading">
+        <h2 data-qc-heading>Product photos</h2>
+        <button class="button outline" type="button" data-qc-refresh>Check QC</button>
+      </div>
+      <p class="status" data-qc-status role="status" hidden></p>
       <div class="qc-grid" data-qc-gallery></div>
-    </section>
-    <section class="section related-section" id="related-section" hidden>
-      <h2>Related products</h2>
-      <div class="product-grid" id="related-products"></div>
     </section>
   </section>
 </Layout>
 <script>
   import { buyUrl, categories, coverUrl, mainSite, findItemId, itemShard, priceLabel, productCategory } from '../lib/settings.mjs';
-  import { card, element, readJson } from '../lib/dom.mjs';
-  import { agents, agentUrl, currentAgent } from '../lib/agents.mjs';
-  import { productChecks, readSellerDetails } from '../lib/product-guide.mjs';
+  import { element, readJson } from '../lib/dom.mjs';
+  import { agents, agentUrl, defaultAgent } from '../lib/agents.mjs';
+  import { readSellerDetails } from '../lib/product-guide.mjs';
   import { renderQc } from '../lib/qc.mjs';
 
   const byId = id => document.getElementById(id);
@@ -101,7 +74,7 @@ const description = product && 'Browse photos, price and seller information for 
       status.textContent = 'This item is not in the saved catalog.';
       return;
     }
-    const {product, photos, related} = data;
+    const {product, photos} = data;
     const mainPhoto = byId('item-photo');
     const photoStatus = byId('photo-status');
     const thumbnails = byId('item-thumbs');
@@ -115,24 +88,29 @@ const description = product && 'Browse photos, price and seller information for 
     byId('item-price').dataset.priceCny = product.price ?? '';
     byId('item-id').textContent = 'Weidian item ' + id;
     byId('item-buy').href = buyUrl(id);
-    byId('item-buy').dataset.agentProduct = id;
-    byId('item-buy').dataset.sourcePath = product.sourcePath;
     byId('item-save').dataset.saveProduct = id;
     byId('item-save').dataset.productName = product.name;
     byId('item-source').href = new URL(product.sourcePath, mainSite);
     document.title = product.name + ' | Ootdbuy Findsheet';
-    byId('profile-name').textContent = product.name;
-    byId('profile-category').textContent = categories[category] ?? 'Weidian product';
-    byId('profile-id').textContent = id;
-    byId('profile-count').textContent = String(photos.length);
-    byId('profile-source').href = 'https://weidian.com/item.html?' + new URLSearchParams({itemID:id});
-    byId('profile-checks').replaceChildren(...productChecks(category).map(text => element('li', {}, text)));
-    byId('product-profile').hidden = false;
-    const selectedAgent = currentAgent();
-    for (const agent of agents.filter(entry => entry.key !== selectedAgent)) {
+    const copy = byId('item-copy');
+    const shareUrl = byId('item-share-url');
+    const copyStatus = byId('item-copy-status');
+    copy.addEventListener('click', async () => {
+      shareUrl.value = location.origin + location.pathname + location.search;
+      try {
+        await navigator.clipboard.writeText(shareUrl.value);
+        copy.textContent = 'Link copied';
+        copyStatus.textContent = 'Link copied';
+        shareUrl.hidden = true;
+      } catch {
+        shareUrl.hidden = false;
+        shareUrl.select();
+      }
+    });
+    for (const agent of agents.filter(entry => entry.key !== defaultAgent)) {
       const row = element('li');
       const link = element('a', {
-        href: agentUrl(agent.key, id, product.sourcePath), target: '_blank',
+        href: agentUrl(agent.key, id, product.sourcePath), target: '_blank', className: 'choice-tile',
         rel: agent.key === 'findspreadsheet' ? 'noopener' : 'sponsored noopener',
       });
       link.translate = false;
@@ -141,16 +119,12 @@ const description = product && 'Browse photos, price and seller information for 
       row.append(link);
       byId('item-agents').append(row);
     }
-    byId('related-products').replaceChildren(...related.map(card));
-    byId('related-section').hidden = related.length === 0;
     status.hidden = true;
     byId('item').hidden = false;
     document.dispatchEvent(new Event('product:ready'));
-    byId('item-qc').hidden = false;
-    const checkQc = () => void renderQc(id, byId('item-qc'));
-    byId('item-qc-link').addEventListener('click', checkQc);
-    if (location.hash === '#item-qc') checkQc();
-    else void renderQc(id, byId('item-qc'), 'preview');
+    const qc = byId('item-qc');
+    qc.hidden = false;
+    void renderQc(id, qc, location.hash === '#item-qc' ? 'lookup' : 'preview', photos);
     const photoButtons = [];
     function addPhotoButton(url, index) {
       const thumb = element('button', { type:'button' });
@@ -196,21 +170,35 @@ const description = product && 'Browse photos, price and seller information for 
 
     void readSellerDetails(id).then(seller => {
       if (!seller) return;
-      const facts = byId('seller-facts');
-      const fields = [
-        {name: 'Seller', values: [seller.seller]},
-        {name: 'Seller listing title', values: [seller.title]},
-        ...seller.options,
-      ];
-      for (const {name, values} of fields) {
-        if (!values.some(Boolean)) continue;
-        const row = element('div');
-        const content = element('dd', {}, values.join(' · '));
-        content.translate = false;
-        row.append(element('dt', {}, name), content);
-        facts.append(row);
+      const options = byId('seller-options');
+      for (const {name, values} of seller.options) {
+        const group = element('fieldset', {className:'variant-group'});
+        const legend = element('legend', {}, name);
+        legend.translate = false;
+        const tiles = element('div', {className:'variant-grid'});
+        for (const {label, image} of values) {
+          const button = element('button', {type:'button', className:'choice-tile variant-tile'});
+          button.translate = false;
+          button.setAttribute('aria-pressed', 'false');
+          button.setAttribute('aria-label', label);
+          if (image) {
+            button.title = label;
+            button.append(element('img', {src:image, alt:'', loading:'lazy'}));
+          } else {
+            button.textContent = label;
+          }
+          button.addEventListener('click', () => {
+            const selected = tiles.querySelector('[aria-pressed="true"]');
+            selected?.setAttribute('aria-pressed', 'false');
+            button.setAttribute('aria-pressed', 'true');
+            if (image) showPhoto(image);
+          });
+          tiles.append(button);
+        }
+        group.append(legend, tiles);
+        options.append(group);
       }
-      byId('seller-options').hidden = facts.childElementCount === 0;
+      options.hidden = options.childElementCount === 0;
 
       liveImages = seller.images;
       if (photos.length < 2 || !photoStatus.hidden) {
@@ -219,7 +207,6 @@ const description = product && 'Browse photos, price and seller information for 
           photos.push(url);
           addPhotoButton(url, photos.length - 1);
         }
-        byId('profile-count').textContent = String(photos.length);
         const backup = liveImages.find(url => !attempted.has(url));
         if (!photoStatus.hidden && backup) showPhoto(backup);
       }

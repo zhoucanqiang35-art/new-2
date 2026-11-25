@@ -1,15 +1,15 @@
 ---
-import ShoppingControls from '../../components/ShoppingControls.astro';
+import { searchHint } from '../../lib/languages.mjs';
 import Layout from '../../layouts/Layout.astro';
 import { categories } from '../../lib/settings.mjs';
 ---
 <Layout title="Browse the Ootdbuy Spreadsheet | Ootdbuy Findsheet">
   <section class="wrap tool-page">
     <p class="eyebrow"><a href="/">Home</a> / Spreadsheet</p>
-    <div class="section-head"><h1>Browse the spreadsheet</h1><ShoppingControls /></div>
+    <div class="section-head"><h1>Browse the spreadsheet</h1></div>
     <p class="intro">Search Findspreadsheet’s saved catalog by title, product ID or Weidian link.</p>
     <form class="filter-bar" id="catalog-filter" action="/spreadsheet/">
-      <label>Search finds<input name="q" placeholder="Name, item ID or Weidian link"></label>
+      <label>Search finds<input name="q" placeholder={searchHint}></label>
       <label>Category<select name="category"><option value="">All categories</option>{Object.entries(categories).map(([value, text]) => <option value={value}>{text}</option>)}</select></label>
       <label>Sort by<select name="sort"><option value="">Newest in catalog</option><option value="price-up">Price low to high</option><option value="price-down">Price high to low</option></select></label>
       <button class="button primary">Apply filters</button>
@@ -33,7 +33,9 @@ import { categories } from '../../lib/settings.mjs';
   const navigation = document.querySelector('#catalog-pages');
   const input = form.querySelector('[name=q]');
   input.value = query;
-  if (Object.hasOwn(categories, category)) form.querySelector('[name=category]').value = category;
+  const categoryInput = form.elements.category;
+  if (Object.hasOwn(categories, category)) categoryInput.value = category;
+  categoryInput.addEventListener('change', () => form.requestSubmit());
   if (['price-up','price-down'].includes(sort)) form.querySelector('[name=sort]').value = sort;
   function pageLink(number, label) {
     const next = new URLSearchParams(params);

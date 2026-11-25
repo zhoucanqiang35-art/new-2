@@ -1,36 +1,30 @@
-import { agentAction, agentByKey, agentUrl, currentAgent } from './agents.mjs';
-import { getCurrency, preference, priceLabel, savePreference, setCurrency } from './currency.mjs';
+import { currencyByLanguage } from './languages.mjs';
+import { defaultCurrency, getCurrency, preference, priceLabel, savePreference, setCurrency } from './currency.mjs';
 import { itemUrl } from './settings.mjs';
 import { element } from './dom.mjs';
 
-const settings = document.querySelector('#shopping-settings');
+const picker = document.querySelector('#site-currency');
+const currencySummary = picker.querySelector('summary');
+const currencyOptions = [...picker.querySelectorAll('[data-select-currency]')];
 const favoritesDialog = document.querySelector('#favorites-dialog');
 const favoriteList = document.querySelector('#favorite-list');
-const selectedAgentLabel = document.querySelector('[data-selected-agent]');
-const agentOptions = [...(settings?.querySelectorAll('[data-select-agent]') ?? [])];
-const currencyOptions = [...(settings?.querySelectorAll('[data-select-currency]') ?? [])];
-let activeAgent = currentAgent();
-setCurrency(preference('currency', 'USD'));
+const preferredLanguageCurrency = () => {
+  const locale = preference('language', 'en');
+  return currencyByLanguage[locale === 'zh-Hant' ? 'zh-Hans' : locale] ?? defaultCurrency;
+};
+setCurrency(preference('currency', preferredLanguageCurrency()));
 
-function updateSettings() {
-  const agent = agentByKey[activeAgent];
-  if (selectedAgentLabel) selectedAgentLabel.textContent = agent.name;
-  const icon = document.querySelector('[data-selected-agent-icon]');
-  if (icon) {
-    icon.hidden = !agent.icon;
-    if (agent.icon) icon.src = agent.icon;
-  }
+function updatePrices() {
   const currency = getCurrency();
-  for (const option of agentOptions) option.setAttribute('aria-pressed', String(option.dataset.selectAgent === activeAgent));
   for (const option of currencyOptions) option.setAttribute('aria-pressed', String(option.dataset.selectCurrency === currency));
   for (const node of document.querySelectorAll('[data-currency-code]')) node.textContent = currency;
   for (const node of document.querySelectorAll('[data-price-cny]')) node.textContent = priceLabel(node.dataset.priceCny);
-  for (const link of document.querySelectorAll('[data-agent-product]')) {
-    const { agentProduct, sourcePath } = link.dataset;
-    link.href = agentUrl(activeAgent, agentProduct, sourcePath);
-    link.textContent = agentAction(activeAgent);
-    link.rel = activeAgent === 'findspreadsheet' ? 'noopener' : 'sponsored noopener';
-  }
+}
+
+function chooseCurrency(currency) {
+  setCurrency(currency);
+  savePreference('currency', currency);
+  updatePrices();
 }
 
 let favorites;
@@ -72,36 +66,31 @@ function toggleFavorite(item) {
   updateFavorites();
 }
 
-settings?.addEventListener('click', event => {
-  const agent = event.target.closest('[data-select-agent]')?.dataset.selectAgent;
+picker.addEventListener('click', event => {
   const currency = event.target.closest('[data-select-currency]')?.dataset.selectCurrency;
-  if (agent) {
-    activeAgent = agent;
-    savePreference('agent', agent);
-  } else if (currency) {
-    setCurrency(currency);
-    savePreference('currency', currency);
-  } else return;
-  updateSettings();
+  if (!currency) return;
+  chooseCurrency(currency);
+  picker.open = false;
+  currencySummary.focus();
 });
+picker.addEventListener('keydown', event => {
+  if (event.key !== 'Escape' || !picker.open) return;
+  picker.open = false;
+  currencySummary.focus();
+});
+document.addEventListener('language:changed', () => chooseCurrency(preferredLanguageCurrency()));
 document.addEventListener('click', event => {
-  if (settings && !settings.contains(event.target)) settings.open = false;
+  if (picker.open && !picker.contains(event.target)) picker.open = false;
   const button = event.target.closest('[data-save-product]');
   if (button?.dataset.saveProduct) toggleFavorite({ weidianId: button.dataset.saveProduct, name: button.dataset.productName });
-});
-settings?.addEventListener('keydown', event => {
-  if (event.key === 'Escape' && settings.open) {
-    settings.open = false;
-    settings.querySelector('summary').focus();
-  }
 });
 document.querySelector('[data-open-favorites]')?.addEventListener('click', () => {
   favoritesDialog.showModal();
   updateFavorites();
 });
 document.addEventListener('product:ready', () => {
-  updateSettings();
+  updatePrices();
   updateFavorites();
 });
-updateSettings();
+updatePrices();
 updateFavorites();

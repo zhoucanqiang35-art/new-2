@@ -35,5 +35,5 @@ export const categoryCards = Object.entries(categories).map(([key, name]) => {
   const products = catalog.filter(row => productCategory(row) === key);
   const photo = products.find(row => row.id === picks[key] && Number(row.price) > 0)
     ?? products.find(row => row.image && Number(row.price) > 0);
-  return { key, name, description: descriptions[key], count: products.length, href: categoryUrl(key), image: coverUrl(photo), price: photo.price };
+  return { key, name, description: descriptions[key], count: products.length, href: categoryUrl(key), image: coverUrl(photo), price: photo.price, productId: photo.weidianId };
 });

@@ -3,9 +3,9 @@ import { element, readJson } from './dom.mjs';
 let savedQc;
 const latestLookup = new WeakMap();
 
-function addPhoto(gallery, photo, index) {
+function addPhoto(gallery, photo, index, label) {
   const link = element('a', { href: photo.url, target: '_blank', rel: 'noopener noreferrer' });
-  const image = element('img', { src: photo.url, alt: 'Warehouse QC photo ' + (index + 1), loading: 'lazy' });
+  const image = element('img', { src: photo.url, alt: label + ' ' + (index + 1), loading: 'lazy' });
   image.referrerPolicy = 'no-referrer';
   link.append(image);
   if (photo.source) {
@@ -16,9 +16,10 @@ function addPhoto(gallery, photo, index) {
   gallery.append(link);
 }
 
-export async function renderQc(id, root, mode = 'lookup') {
+export async function renderQc(id, root, mode = 'lookup', fallback) {
   const request = {};
   latestLookup.set(root, request);
+  const heading = root.querySelector('[data-qc-heading]');
   const status = root.querySelector('[data-qc-status]');
   const gallery = root.querySelector('[data-qc-gallery]');
   const refresh = root.querySelector('[data-qc-refresh]');
@@ -35,16 +36,23 @@ export async function renderQc(id, root, mode = 'lookup') {
   const savedLabel = saved?.savedAt
     ? 'Saved Findspreadsheet warehouse photos · ' + saved.savedAt
     : 'Saved Findspreadsheet warehouse photos.';
-  gallery.replaceChildren();
-  photos.forEach((photo, index) => addPhoto(gallery, photo, index));
+  const showPhotos = (photos, isQc) => {
+    if (heading) heading.textContent = isQc ? 'Warehouse QC' : 'Product photos';
+    gallery.replaceChildren();
+    const label = isQc ? 'Warehouse QC photo' : 'Product photo';
+    photos.forEach((photo, index) => addPhoto(gallery, photo, index, label));
+  };
+  showPhotos(hasSaved ? photos : (fallback ?? []).map(url => ({url})), hasSaved);
   refresh.disabled = false;
-  refresh.hidden = !hasSaved;
-  refresh.onclick = () => void renderQc(id, root, 'live');
+  refresh.hidden = !hasSaved && !fallback;
+  refresh.textContent = hasSaved ? 'Check for newer photos' : 'Check QC';
+  refresh.onclick = () => void renderQc(id, root, 'live', fallback);
+  if (mode === 'preview') return;
+  status.hidden = false;
   if (mode !== 'live' && hasSaved) {
     status.textContent = savedLabel;
     return;
   }
-  if (mode === 'preview') return;
 
   refresh.disabled = true;
   let limited = false;
@@ -68,8 +76,7 @@ export async function renderQc(id, root, mode = 'lookup') {
     }
     if (entry.status !== 'ready' || !entry.photos?.length) throw new Error('Unexpected QC result');
     status.textContent = 'Warehouse photos found on Findspreadsheet.';
-    gallery.replaceChildren();
-    entry.photos.forEach((photo, index) => addPhoto(gallery, photo, index));
+    showPhotos(entry.photos, true);
   } catch {
     if (latestLookup.get(root) !== request) return;
     const message = limited

@@ -3,6 +3,8 @@ import { register, mainSite } from '../lib/settings.mjs';
 import '../site.css';
 import { isProductionSite, siteUrl } from '../lib/seo.mjs';
 import LanguagePicker from '../components/LanguagePicker.astro';
+import CurrencyPicker from '../components/CurrencyPicker.astro';
+import Favorites from '../components/Favorites.astro';
 const { title, indexable = true, canonicalPath, description = 'Browse Ootdbuy finds with product photos, saved warehouse QC and direct links to Ootdbuy.' } = Astro.props;
 const path = Astro.url.pathname;
 const links = [
@@ -62,11 +64,14 @@ const activePath = ['/guides/', '/guides/shipping/'].includes(path) ? '/how-to-o
         </a>
         <button class="control-button nav-toggle" type="button" aria-controls="main-navigation" aria-expanded="false">Menu</button>
         <nav id="main-navigation" aria-label="Main navigation">
-          {links.map(([href, label]) => <a href={href} aria-current={activePath === href ? 'page' : undefined}>{label}</a>)}
+          {links.filter(([href]) => href !== '/handoffs/').map(([href, label]) => <a href={href} aria-current={activePath === href ? 'page' : undefined}>{label}</a>)}
           <a class="mobile-signup" href={register} target="_blank" rel="sponsored noopener">Join Ootdbuy</a>
         </nav>
         <div class="header-actions">
-          <LanguagePicker />
+          <div class="locale-controls">
+            <LanguagePicker />
+            <CurrencyPicker />
+          </div>
           <a class="button signup" href={register} target="_blank" rel="sponsored noopener">Join Ootdbuy</a>
         </div>
       </div>
@@ -77,6 +82,7 @@ const activePath = ['/guides/', '/guides/shipping/'].includes(path) ? '/how-to-o
         <div><strong translate="no">Ootdbuy Findsheet</strong><p>An independent catalog from <a href={mainSite}>Findspreadsheet</a>. Orders are placed on Ootdbuy.</p></div>
         <nav aria-label="Footer navigation">
           {[...links, ...toolLinks].map(([href, label]) => <a href={href}>{label}</a>)}
+          <Favorites />
         </nav>
       </div>
     </footer>

@@ -1,4 +1,3 @@
-import { preference } from './currency.mjs';
 import { buyUrl, mainSite } from './settings.mjs';
 
 export const defaultAgent = 'ootdbuy';
@@ -129,13 +128,4 @@ export function agentUrl(key, id, sourcePath) {
   if (key === 'findspreadsheet' && sourcePath) return new URL(sourcePath, mainSite).href;
   if (key === defaultAgent) return buyUrl(id);
   return (agentByKey[key] ?? agentByKey[defaultAgent]).template.replaceAll('{id}', encodeURIComponent(id));
-}
-
-export function currentAgent() {
-  const key = preference('agent', defaultAgent);
-  return Object.hasOwn(agentByKey, key) ? key : defaultAgent;
-}
-
-export function agentAction(key) {
-  return key === 'findspreadsheet' ? 'View on Findspreadsheet' : 'Buy on ' + agentByKey[key].name;
 }

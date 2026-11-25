@@ -1,4 +1,4 @@
-// ECB euro reference rates, 20 November 2026. Catalog amounts are in CNY.
+// Euro reference rates, 20 November 2026. Catalog amounts are in CNY.
 const perEuro = {
   "USD": 1.099,
   "JPY": 174.35,
@@ -29,12 +29,19 @@ const perEuro = {
   "SGD": 1.416,
   "THB": 37.262,
   "ZAR": 19.1987,
-  "EUR": 1
+  "EUR": 1,
+  "RUB": 89.8597,
+  "UAH": 89.8597 / 1.81251,
+  "SAR": 1.099 * 3.75
 };
 export const currencies = Object.keys(perEuro).sort();
 export const defaultCurrency = 'USD';
 export const rateDate = '20 Nov 2026';
-export const rateSource = 'https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html';
+export const rateSources = [
+  ['ECB', 'https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html'],
+  ['CBR', 'https://www.cbr.ru/eng/currency_base/daily/?UniDbQuery.Posted=True&UniDbQuery.To=20.11.2026'],
+  ['SAMA', 'https://www.sama.gov.sa/en-US/MediaCenter/News/Pages/news-557.aspx'],
+];
 
 export function preference(key, fallback) {
   try { return window.localStorage.getItem('ootdbuy-findsheet-' + key) ?? fallback; }

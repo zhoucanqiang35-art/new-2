@@ -1,0 +1,18 @@
+---
+import { currencies, defaultCurrency, rateDate, rateSources } from '../lib/currency.mjs';
+---
+<details class="currency-picker" id="site-currency">
+  <summary class="control-button" aria-label="Currency">
+    <span data-currency-code>{defaultCurrency}</span>
+    <span class="control-caret" aria-hidden="true"></span>
+  </summary>
+  <div class="choice-grid currency-grid">
+    {currencies.map(code =>
+      <button class="choice-tile" type="button" data-select-currency={code} translate="no" aria-pressed={code === defaultCurrency}>{code}</button>
+    )}
+    <p class="currency-note">
+      <span>Reference rates</span> · <time datetime="2026-11-20">{rateDate}</time><br>
+      {rateSources.map(([label, href]) => <a href={href} translate="no">{label}</a>)}
+    </p>
+  </div>
+</details>

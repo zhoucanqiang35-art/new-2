@@ -1,8 +1,11 @@
 import { agents } from './agents.mjs';
-import { languages } from './languages.mjs';
+import { interfaceLabels, interfaceTranslations, languages } from './languages.mjs';
 import { preference, savePreference } from './currency.mjs';
 
 const controls = document.querySelector('#site-language');
+const languageButtons = [...controls.querySelectorAll('[data-language]')];
+const languageLabel = controls.querySelector('[data-language-label]');
+const summary = controls.querySelector('summary');
 const status = document.querySelector('#language-status');
 const supported = new Set(languages.map(([locale]) => locale));
 const skipped = 'script, style, noscript, [translate="no"], [data-price-cny], [data-currency-code], #language-status';
@@ -55,7 +58,7 @@ function apply(node) {
   for (const child of node.childNodes) apply(child);
 }
 
-async function setLanguage(locale) {
+async function setLanguage(locale, followCurrency = false) {
   if (!supported.has(locale)) return;
   const id = ++request;
   try {
@@ -64,20 +67,26 @@ async function setLanguage(locale) {
       const response = await fetch('/data/languages/' + locale + '.json');
       if (!response.ok) throw new Error('Translation unavailable');
       next = await response.json();
+      const labels = interfaceTranslations[locale];
+      interfaceLabels.forEach((label, index) => { next[label] = labels[index]; });
     }
     if (id !== request) return;
     dictionary = next;
     active = locale;
     document.documentElement.lang = locale;
     document.documentElement.dir = locale === 'ar' ? 'rtl' : 'ltr';
-    controls.value = locale;
+    for (const button of languageButtons) {
+      const selected = button.dataset.language === locale;
+      button.setAttribute('aria-pressed', String(selected));
+      if (selected) languageLabel.textContent = button.textContent;
+    }
     status.textContent = '';
     apply(document.querySelector('title'));
     apply(document.body);
     savePreference('language', locale);
+    if (followCurrency) document.dispatchEvent(new Event('language:changed'));
   } catch {
     if (id !== request) return;
-    controls.value = active;
     status.textContent = 'Could not load that language. Please try again.';
   }
 }
@@ -91,7 +100,24 @@ const observer = new MutationObserver(changes => {
 });
 observer.observe(document.body, {childList:true, characterData:true, subtree:true});
 observer.observe(document.querySelector('title'), {childList:true, characterData:true, subtree:true});
-controls.addEventListener('change', () => void setLanguage(controls.value));
+for (const button of languageButtons) {
+  button.addEventListener('click', () => {
+    controls.open = false;
+    summary.focus();
+    void setLanguage(button.dataset.language, true);
+  });
+}
+document.addEventListener('click', event => {
+  if (controls.open && !controls.contains(event.target)) controls.open = false;
+});
+controls.addEventListener('keydown', event => {
+  if (event.key !== 'Escape' || !controls.open) return;
+  controls.open = false;
+  summary.focus();
+});
+controls.addEventListener('toggle', () => {
+  if (controls.open) controls.querySelector('.language-grid').scrollTop = 0;
+});
 const savedLanguage = preference('language', 'en');
 const initial = savedLanguage === 'zh-Hant' ? 'zh-Hans' : savedLanguage;
 if (initial !== 'en') void setLanguage(initial);

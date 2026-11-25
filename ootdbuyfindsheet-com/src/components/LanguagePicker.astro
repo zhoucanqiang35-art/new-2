@@ -1,15 +1,15 @@
 ---
 import { languages } from '../lib/languages.mjs';
 ---
-<label class="language-control">
-  <span class="sr-only">Website language</span>
-  <select id="site-language" aria-label="Website language" translate="no">
-    {languages.map(([code, label]) => <option value={code} lang={code} selected={code === 'en'}>{label}</option>)}
-  </select>
-</label>
+<details class="language-picker" id="site-language">
+  <summary class="control-button" aria-label="Website language">
+    <span data-language-label translate="no">English</span>
+    <span class="control-caret" aria-hidden="true"></span>
+  </summary>
+  <div class="choice-grid language-grid">
+    {languages.map(([code, label]) =>
+      <button class="choice-tile" type="button" data-language={code} lang={code} dir="auto" translate="no" aria-pressed={code === 'en'}>{label}</button>
+    )}
+  </div>
+</details>
 <span id="language-status" class="sr-only" role="status"></span>
-<style>
-.language-control{display:block;min-width:0}
-.language-control select{min-height:39px;max-width:8.6rem;border:1px solid var(--border-strong);border-radius:8px;background:var(--surface-soft);color:var(--forest);padding:6px 9px;font-size:.82rem;font-weight:700}
-@media(max-width:480px){.language-control select{max-width:6.4rem;padding-inline:5px;font-size:.75rem}}
-</style>

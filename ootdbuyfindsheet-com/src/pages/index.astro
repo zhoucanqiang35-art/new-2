@@ -1,12 +1,12 @@
 ---
-import { categoryPath, productPath } from '../lib/seo.mjs';
+import { productPath } from '../lib/seo.mjs';
+import { searchHint } from '../lib/languages.mjs';
 import Layout from '../layouts/Layout.astro';
 import OrderWalkthrough from '../components/OrderWalkthrough.astro';
 import HandoffGuide from '../components/HandoffGuide.astro';
 import HelpFaq from '../components/HelpFaq.astro';
-import { priceLabel, sampleProduct, sampleQc } from '../lib/settings.mjs';
+import { priceLabel } from '../lib/settings.mjs';
 import { categoryCards, catalog } from '../lib/categories-at-build.mjs';
-const sample = catalog.find((item) => item.weidianId === sampleProduct);
 const number = new Intl.NumberFormat('en').format(catalog.length);
 ---
 <Layout title="Ootdbuy Spreadsheet | Finds, QC Photos & Product Links">
@@ -18,7 +18,7 @@ const number = new Intl.NumberFormat('en').format(catalog.length);
         <p class="hero-lead">Find your next piece, check product and warehouse photos, then open the listing on Ootdbuy.</p>
         <form class="hero-search" action="/spreadsheet/">
           <label class="sr-only" for="hero-query">Find a product</label>
-          <input id="hero-query" name="q" placeholder="Try “hoodie” or a Weidian link">
+          <input id="hero-query" name="q" placeholder={searchHint}>
           <button class="button primary">Search finds</button>
         </form>
         <div class="hero-links">
@@ -37,22 +37,10 @@ const number = new Intl.NumberFormat('en').format(catalog.length);
       <a class="button outline" href="/categories/">Browse all categories</a>
     </div>
     <div class="category-grid">
-       {categoryCards.map(({key, name, image, price}) =>
-        <a href={categoryPath(key)} class="category-card">
+       {categoryCards.map(({name, image, price, productId}) =>
+        <a href={productPath(productId)} class="category-card">
           <img src={image} alt="" loading="lazy"><span>{name}<br><small>Example price <span data-price-cny={price}>{priceLabel(price)}</span></small></span>
         </a>)}
-    </div>
-  </section>
-  <section class="wrap section check-section">
-    <div class="split">
-      <div class="check-panel">
-        <div><p class="eyebrow">Before you order</p><h2>See the actual warehouse photos.</h2><p>Paste a Weidian or Ootdbuy item link to check Findspreadsheet for warehouse photos.</p><a class="button primary" href={'/qc/?id=' + sampleQc}>Open a QC example</a></div>
-        <img src="/media/qc-7321418559-7.webp" alt="Saved warehouse QC of a sweatshirt" loading="lazy">
-      </div>
-      <div class="check-panel light">
-        <div><p class="eyebrow">Product walkthrough</p><h2>From the spreadsheet to Ootdbuy.</h2><p>Open a real listing and check the product gallery, source and current seller price before ordering.</p><a class="button outline" href={productPath(sampleProduct)}>View sample listing</a></div>
-        {sample && <img src="/media/detail-7358-3.webp" alt="Cable-knit crewneck sweater" loading="lazy">}
-      </div>
     </div>
   </section>
   <section class="wrap section guide-home" id="ordering">
