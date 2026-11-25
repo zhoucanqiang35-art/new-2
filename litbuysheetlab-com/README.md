@@ -20,3 +20,6 @@ Cloudflare builds `dist`; `functions/api/sku.js` serves only known catalog selle
 ## Refresh public source data
 
 From this folder, run `python scripts/collect-options.py` only while the upstream is healthy. It uses bounded concurrency, cached files and stops on rate limits or repeated source failures. Temporary public responses are ignored by Git. Run `node scripts/package-options.mjs` to package successful option snapshots. For the image index, remove `.cache/options-finished`, run `python scripts/expand-image-index.py`, then create `.cache/options-finished` when source collection finishes. The builder drains newly discovered images and records actual coverage; unavailable images must not be counted as searchable. Commit the updated snapshot and hashed/current index manifest together.
+
+## Product detail simplification — 2026-11-25
+All product pages end after the detail photo gallery. Removed the lower listing-information cards, generic pre-purchase checks and empty QC explanation panel at the owner’s request. Product photos, real seller options and purchase actions remain available.

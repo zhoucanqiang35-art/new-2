@@ -43,6 +43,6 @@ test('static product HTML preserves item IDs and agents and does not mislabel so
  assert.ok([...d.querySelectorAll('.agent-grid a')].some(a=>a.href==='https://oopbuy.com/product/weidian/7869696051?inviteCode=U68CWQBN5'));
  assert.ok(d.querySelector('.detail-product-id').textContent.includes('7869696051'));assert.ok(d.querySelector('.source-thumbs img'));
  assert.equal(d.querySelector('meta[name=robots]').content,'index,follow');assert.equal(d.querySelector('link[rel=canonical]').href,'https://litbuysheetlab.com/products/9018/');
- assert.match(d.querySelector('title').textContent,/Orb Graphic Crew Socks/);assert.match(d.querySelector('script[src^="/currency.js"]').getAttribute('src'),/\?v=[a-f0-9]{12}$/);assert.match(d.querySelector('script[src^="/product-page.js"]').getAttribute('src'),/\?v=[a-f0-9]{12}$/);assert.match(d.querySelector('.qc-panel').textContent,/No verified warehouse QC/);assert.equal(d.querySelectorAll('.qc-panel img').length,0);
+ assert.match(d.querySelector('title').textContent,/Orb Graphic Crew Socks/);assert.match(d.querySelector('script[src^="/currency.js"]').getAttribute('src'),/\?v=[a-f0-9]{12}$/);assert.match(d.querySelector('script[src^="/product-page.js"]').getAttribute('src'),/\?v=[a-f0-9]{12}$/);assert.equal(d.querySelectorAll('.product-facts,.product-checks,.qc-panel').length,0);assert.ok(d.querySelector('.gallery-panel'));
  dom.window.close();
 });
