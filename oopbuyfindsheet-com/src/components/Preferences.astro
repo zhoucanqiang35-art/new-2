@@ -1,0 +1,41 @@
+---
+const languages = [
+  ['en', 'English', 'USD'], ['zh', '简体中文', 'CNY'], ['de', 'Deutsch', 'EUR'],
+  ['fr', 'Français', 'EUR'], ['es', 'Español', 'EUR'], ['it', 'Italiano', 'EUR'],
+  ['pt', 'Português', 'BRL'], ['nl', 'Nederlands', 'EUR'], ['pl', 'Polski', 'PLN'],
+  ['sv', 'Svenska', 'SEK'], ['fi', 'Suomi', 'EUR'], ['ro', 'Română', 'RON'],
+  ['cs', 'Čeština', 'CZK'], ['hu', 'Magyar', 'HUF'], ['el', 'Ελληνικά', 'EUR'],
+  ['tr', 'Türkçe', 'TRY'], ['uk', 'Українська', 'UAH'], ['ru', 'Русский', 'RUB'],
+  ['ja', '日本語', 'JPY'], ['ko', '한국어', 'KRW'], ['ar', 'العربية', 'SAR'],
+  ['id', 'Bahasa Indonesia', 'IDR'],
+];
+const currencies = [
+  'USD', 'EUR', 'GBP', 'CAD', 'AUD', 'CHF', 'CNY', 'JPY', 'PLN', 'SEK', 'DKK',
+  'NOK', 'RON', 'BRL', 'CZK', 'HUF', 'TRY', 'UAH', 'RUB', 'KRW', 'SAR', 'IDR',
+];
+const legacyLanguages = [['da', 'Dansk', 'DKK'], ['no', 'Norsk', 'NOK']];
+---
+<div class="preferences">
+  <details class="choice-picker">
+    <summary class="choice-trigger" aria-label="Language" data-i18n-aria-label="ui_language"><span>English</span></summary>
+    <div class="choice-grid choice-popover">
+      {languages.map(([code, name, currency]) => <button type="button" data-choice={code} data-currency={currency} lang={code} dir="auto" aria-pressed={code === 'en'}>{name}</button>)}
+    </div>
+    <select id="language" hidden>
+      {[...languages, ...legacyLanguages].map(([code, name]) => <option value={code}>{name}</option>)}
+    </select>
+  </details>
+  <details class="choice-picker">
+    <summary class="choice-trigger" aria-label="Currency"><span>USD</span></summary>
+    <div class="choice-grid choice-popover">
+      {currencies.map(code => <button type="button" data-choice={code} aria-pressed={code === 'USD'}>{code}</button>)}
+    </div>
+    <select id="currency" hidden>
+      {currencies.map(code => <option value={code}>{code}</option>)}
+    </select>
+  </details>
+  <span class="currency-status">
+    <span id="currency-status" role="status"></span>
+    <a hidden href="https://www.exchangerate-api.com/" rel="noopener" target="_blank">Rates by ExchangeRate-API</a>
+  </span>
+</div>

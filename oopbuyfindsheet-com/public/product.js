@@ -1,3 +1,5 @@
+import {normalizeOptions, safeImage} from './source-options.js';
+
 (() => {
  const root=document.querySelector('#product'); if(!root)return;
  const translations={
@@ -34,43 +36,280 @@
  Object.assign(buttonLabels,{cs:['Další nákupní agenti','Kopírovat odkaz Weidian'],hu:['Más vásárlási ügynökök','Weidian-link másolása'],el:['Άλλοι πράκτορες αγορών','Αντιγραφή συνδέσμου Weidian'],tr:['Diğer alışveriş aracıları','Weidian bağlantısını kopyala'],uk:['Інші посередники','Копіювати посилання Weidian'],ru:['Другие посредники','Копировать ссылку Weidian'],ja:['その他の購入代行','Weidianリンクをコピー'],ko:['다른 구매대행','Weidian 링크 복사'],ar:['وكلاء شراء آخرون','نسخ رابط Weidian'],id:['Agen belanja lain','Salin tautan Weidian']});
  // Platform templates checked against two FindSpreadsheet product pages on 2026-11-12.
  const platformLinks=[["Joyagoo","https://joyagoo.com/product?id={id}&platform=WEIDIAN&productUrl=&productPwd="],["Oopbuy","https://oopbuy.com/product/weidian/{id}?inviteCode=U68CWQBN5"],["Litbuy","https://litbuy.com/product/weidian/{id}"],["Lovegobuy","https://www.lovegobuy.com/product?id={id}&shop_type=weidian&invite_code=161CPG"],["Hipobuy","https://hipobuy.com/product/weidian/{id}"],["Sugargoo","https://www.sugargoo.com/#/home/productDetail?productLink=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D{id}&memberId=1771881989097259278"],["Kakobuy","https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D{id}"],["Superbuy","https://www.superbuy.com/en/page/buy/?nTag=Home-search&from=search-input&url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D{id}&partnercode=ES7pVI"],["Loongbuy","https://loongbuy.com/product-details?url=https://weidian.com/item.html?itemID={id}"],["USFans","https://usfans.com/product/3/{id}"],["Mulebuy","https://mulebuy.com/zh/product/?shop_type=weidian&id={id}&ref=200232406"],["Hoobuy","https://hoobuy.com/product/2/{id}?utm_source=share&utm_medium=product_details&inviteCode=vXpLpmrX"],["Ootdbuy","https://www.ootdbuy.com/goods/details?id={id}&channel=weidian&inviteCode=179LQ1SVA"],["Orientdig","https://orientdig.com/product/?shop_type=weidian&id={id}&ref=100114240"],["Eastmallbuy","https://eastmallbuy.com/index/weidian/itemID={id}&inviter=lianglook520"],["Ponybuy","https://www.ponybuy.com/en-gb/goods?tracking=e6cd1dcf21&product_id={id}&platform=weidian"],["Pikobuy","https://www.pikobuy.com/product/detail?productUrl=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D{id}"],["Lolobuy","https://www.lolobuy.com/productDetail/1783404849631986?url=https://weidian.com/item.html?itemID={id}"],["Panglobalbuy","https://panglobalbuy.com/#/details?type=3&offerId={id}&share_id=14918"]];
- const lang=()=>window.oopLanguage?.()||'en';let item=null,failed=false,items=[];
- const relatedLabels={en:'Related products',zh:'相关产品',de:'Ähnliche Produkte',fr:'Produits similaires',es:'Productos relacionados',it:'Prodotti correlati',pt:'Produtos relacionados',nl:'Gerelateerde producten',pl:'Podobne produkty',sv:'Relaterade produkter',fi:'Samankaltaiset tuotteet',da:'Relaterede produkter',no:'Relaterte produkter',ro:'Produse similare',cs:'Související produkty',hu:'Kapcsolódó termékek',el:'Σχετικά προϊόντα',tr:'İlgili ürünler',uk:'Схожі товари',ru:'Похожие товары',ja:'関連商品',ko:'관련 상품',ar:'منتجات ذات صلة',id:'Produk terkait'};
+ const lang=()=>window.oopLanguage?.()||'en';let item=null, failed=false, seller=null, sellerFailed=false;
+ const productId = new URLSearchParams(location.search).get('id') || '';
+ let activePhoto='', selectedOptions=[];
  const styleLabels={en:['Product photos','Photos are for reference; select options on the purchase page.'],zh:['款式图片','图片仅供参考，请在购买页面选择具体款式。'],de:['Produktbilder','Bilder dienen zur Orientierung; Varianten auf der Kaufseite wählen.'],fr:['Photos du produit','Photos indicatives ; choisissez les options sur la page d’achat.'],es:['Imágenes del producto','Imágenes de referencia; elige las opciones en la página de compra.'],it:['Foto del prodotto','Immagini indicative; scegli le opzioni nella pagina di acquisto.'],pt:['Fotos do produto','Imagens de referência; escolha as opções na página de compra.'],nl:['Productfoto’s','Afbeeldingen ter referentie; kies opties op de aankooppagina.'],pl:['Zdjęcia produktu','Zdjęcia poglądowe; wybierz wariant na stronie zakupu.'],sv:['Produktbilder','Bilderna är vägledande; välj alternativ på köpsidan.'],fi:['Tuotekuvat','Kuvat ovat viitteellisiä; valitse vaihtoehdot ostosivulla.'],da:['Produktbilleder','Billederne er vejledende; vælg varianter på købssiden.'],no:['Produktbilder','Bildene er veiledende; velg varianter på kjøpssiden.'],ro:['Fotografii produs','Fotografiile sunt orientative; selectează opțiunile pe pagina de cumpărare.'],cs:['Fotografie produktu','Fotografie jsou orientační; variantu vyberte na stránce nákupu.'],hu:['Termékfotók','A képek tájékoztató jellegűek; a változatot a vásárlási oldalon válaszd ki.'],el:['Φωτογραφίες προϊόντος','Οι εικόνες είναι ενδεικτικές· επιλέξτε παραλλαγές στη σελίδα αγοράς.'],tr:['Ürün fotoğrafları','Görseller referans içindir; seçenekleri satın alma sayfasında seçin.'],uk:['Фото товару','Фото довідкові; виберіть варіант на сторінці покупки.'],ru:['Фото товара','Фото для ознакомления; выберите вариант на странице покупки.'],ja:['商品画像','画像は参考です。種類は購入ページで選択してください。'],ko:['상품 이미지','이미지는 참고용이며 옵션은 구매 페이지에서 선택하세요.'],ar:['صور المنتج','الصور للعرض؛ اختر الخيارات في صفحة الشراء.'],id:['Foto produk','Foto hanya referensi; pilih opsi di halaman pembelian.']};
- const qcFallback={en:'QC photos are unavailable; showing Weidian seller photos.',zh:'暂无 QC 图，以下展示微店卖家图片。',de:'Keine QC-Fotos verfügbar; angezeigt werden Weidian-Verkäuferbilder.',fr:'Photos QC indisponibles ; affichage des photos du vendeur Weidian.',es:'No hay fotos QC; se muestran fotos del vendedor de Weidian.',it:'Foto QC non disponibili; sono mostrate le foto del venditore Weidian.',pt:'Fotos QC indisponíveis; são exibidas fotos do vendedor Weidian.',nl:'Geen QC-foto’s beschikbaar; Weidian-verkopersfoto’s worden getoond.',pl:'Brak zdjęć QC; wyświetlane są zdjęcia sprzedawcy Weidian.',sv:'QC-bilder saknas; bilder från Weidian-säljaren visas.',fi:'QC-kuvia ei ole; näytetään Weidian-myyjän kuvat.',da:'QC-billeder mangler; billeder fra Weidian-sælgeren vises.',no:'QC-bilder mangler; bilder fra Weidian-selgeren vises.',ro:'Fotografiile QC lipsesc; sunt afișate fotografiile vânzătorului Weidian.',cs:'Fotografie QC nejsou dostupné; zobrazují se fotografie prodejce Weidian.',hu:'QC-fotók nem állnak rendelkezésre; a Weidian-eladó fotói láthatók.',el:'Δεν υπάρχουν φωτογραφίες QC· εμφανίζονται εικόνες του πωλητή Weidian.',tr:'QC fotoğrafı yok; Weidian satıcısının fotoğrafları gösteriliyor.',uk:'Фото QC немає; показано фото продавця Weidian.',ru:'Фото QC нет; показаны фотографии продавца Weidian.',ja:'QC写真がないため、Weidianの販売者画像を表示しています。',ko:'QC 사진이 없어 Weidian 판매자 사진을 표시합니다.',ar:'لا توجد صور فحص جودة؛ تظهر صور بائع Weidian.',id:'Foto QC tidak tersedia; foto penjual Weidian ditampilkan.'};
  const noCarousel={en:'No Weidian or QC photos are available for this item.',zh:'此商品暂无可用的微店图或 QC 图。',de:'Für diesen Artikel sind keine Weidian- oder QC-Fotos verfügbar.',fr:'Aucune photo Weidian ou QC disponible pour cet article.',es:'No hay fotos de Weidian ni de QC disponibles para este producto.',it:'Non sono disponibili foto Weidian o QC per questo prodotto.',pt:'Não há fotos Weidian ou QC disponíveis para este produto.',nl:'Voor dit product zijn geen Weidian- of QC-foto’s beschikbaar.',pl:'Brak zdjęć Weidian lub QC dla tego produktu.',sv:'Det finns inga Weidian- eller QC-bilder för denna produkt.',fi:'Tuotteelle ei ole saatavilla Weidian- tai QC-kuvia.',da:'Der er ingen Weidian- eller QC-billeder til dette produkt.',no:'Det finnes ingen Weidian- eller QC-bilder for dette produktet.',ro:'Nu există fotografii Weidian sau QC pentru acest produs.',cs:'Pro tento produkt nejsou dostupné fotografie Weidian ani QC.',hu:'Ehhez a termékhez nem áll rendelkezésre Weidian- vagy QC-fotó.',el:'Δεν υπάρχουν διαθέσιμες φωτογραφίες Weidian ή QC για αυτό το προϊόν.',tr:'Bu ürün için Weidian veya QC fotoğrafı bulunmuyor.',uk:'Для цього товару немає фото Weidian або QC.',ru:'Для этого товара нет фотографий Weidian или QC.',ja:'この商品には利用可能なWeidian画像またはQC写真がありません。',ko:'이 상품에 사용할 수 있는 Weidian 또는 QC 사진이 없습니다.',ar:'لا توجد صور Weidian أو صور فحص جودة متاحة لهذا المنتج.',id:'Tidak ada foto Weidian atau QC untuk produk ini.'};
  const sourceLabels={da:'FindSpreadsheet-produktgalleri',no:'FindSpreadsheet-produktgalleri',ro:'Galeria de produse FindSpreadsheet',fi:'FindSpreadsheetin tuotegalleria',en:'FindSpreadsheet product gallery',zh:'主站商品图片集',de:'FindSpreadsheet-Produktbilder',fr:'Photos du catalogue FindSpreadsheet',es:'Galería de FindSpreadsheet',it:'Galleria prodotti FindSpreadsheet',pt:'Galeria de produtos FindSpreadsheet',nl:'FindSpreadsheet-productgalerij',pl:'Galeria produktów FindSpreadsheet',sv:'FindSpreadsheet-produktbilder'};
  Object.assign(sourceLabels,{cs:'Galerie produktů FindSpreadsheet',hu:'FindSpreadsheet termékgaléria',el:'Συλλογή προϊόντων FindSpreadsheet',tr:'FindSpreadsheet ürün galerisi',uk:'Галерея товару FindSpreadsheet',ru:'Галерея товара FindSpreadsheet',ja:'FindSpreadsheetの商品ギャラリー',ko:'FindSpreadsheet 상품 갤러리',ar:'معرض منتجات FindSpreadsheet',id:'Galeri produk FindSpreadsheet'});
- const make=(tag,cls,text)=>{let n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n};
- const safe=url=>{try{let u=new URL(url,'https://findspreadsheet.com');return u.protocol==='https:'?u.href:''}catch{return ''}};
- const sources=a=>[...new Set((Array.isArray(a)?a:[]).map(safe).filter(Boolean))];
- function picture(url,alt){let img=make('img');img.src=url;img.alt=alt;img.loading='lazy';img.decoding='async';return img}
- function render(){if(!item&&!failed)return;let t=translations[lang()]||translations.en;const menuOpen=!!root.querySelector('.platform-menu')?.open;root.replaceChildren();if(!item){root.append(make('p','data-note',t.missing));return}
-  let title=window.oopProductTitle?.(item,lang())||item.name;let hero=make('div','product-layout'),left=make('div','product-gallery-wrap'),photo=make('div','product-gallery');const verifiedWeidian=sources(item.weidianImages).filter(url=>{try{return ['si.geilicdn.com','s.geilicdn.com','assets.geilicdn.com'].includes(new URL(url).hostname)}catch{return false}});const verifiedQc=sources(item.qcImages);const catalogImages=sources([...(Array.isArray(item.sourceImages)?item.sourceImages:[]),item.image].filter(x=>typeof x==='string'&&x.trim()));const displayPhotos=verifiedWeidian.length?verifiedWeidian:catalogImages;let mainImage=safe(item.image);let img=mainImage?picture(mainImage,title):null;if(img){img.loading='eager';photo.append(img)}else photo.append(make('div','product-image-placeholder',noCarousel[lang()]||noCarousel.en));left.append(photo);if(displayPhotos.length){let thumbs=make('div','thumbnails');left.append(thumbs);let galleryNote=make('p','product-empty');left.append(galleryNote);
-   function fillThumbnails(urls,fromCatalog){thumbs.replaceChildren();galleryNote.textContent=fromCatalog?(sourceLabels[lang()]||sourceLabels.en):'';let remaining=urls.length;
-    urls.forEach((url,i)=>{let b=make('button','thumbnail');b.type='button';b.setAttribute('aria-label',t.image+' '+(i+1));let thumbnail=picture(url,'');thumbnail.addEventListener('error',()=>{b.remove();if(--remaining===0){if(!fromCatalog&&catalogImages.length)fillThumbnails(catalogImages,true);else galleryNote.textContent=t.galleryEmpty}},{once:true});b.append(thumbnail);b.addEventListener('click',()=>{if(img)img.src=url});thumbs.append(b)})
-   }fillThumbnails(displayPhotos,!verifiedWeidian.length)
-  }else left.append(make('p','product-empty',t.galleryEmpty));
-  let qc=make('section','product-qc');qc.append(make('h2','product-section-title',t.qc));
-  // A missing or broken QC image must never prevent the same item's seller or catalog photos from being shown.
-  const backendGallery=sources(item.sourceImages).filter(url=>url!==mainImage);
-  const imageGroups=[{kind:'qc',urls:verifiedQc},{kind:'source',urls:backendGallery},{kind:'seller',urls:verifiedWeidian},{kind:'catalog',urls:catalogImages}].filter(group=>group.urls.length);
-  function showQcGroup(index){
-   qc.querySelectorAll('.product-photo-grid, .qc-fallback-message').forEach(node=>node.remove());
-   const group=imageGroups[index];if(!group){qc.append(make('p','product-empty qc-fallback-message',t.qcEmpty));return}
-   if(group.kind!=='qc')qc.append(make('p','product-empty qc-fallback-message',group.kind==='seller'?(qcFallback[lang()]||qcFallback.en):(sourceLabels[lang()]||sourceLabels.en)));
-   const grid=make('div','product-photo-grid');let remaining=group.urls.length;
-   group.urls.forEach((url,i)=>{const image=picture(url,(group.kind==='qc'?t.qc:group.kind==='seller'?t.gallery:(sourceLabels[lang()]||sourceLabels.en))+' '+(i+1));image.addEventListener('error',()=>{image.remove();if(--remaining===0)showQcGroup(index+1)},{once:true});grid.append(image)});qc.append(grid)
-  }
-  showQcGroup(0);
-  let info=make('div','product-info');let productTitle=make('h1','',title);info.append(productTitle,make('p','product-meta',t.id+': '+item.weidianId),make('div','sku',t.price));let value=Number(item.priceUsd);info.append(make('div','product-price-usd',item.priceUsd!==''&&item.priceUsd!=null&&Number.isFinite(value)?(window.oopFormatPrice?.(value)||'≈ $'+value.toFixed(2)+' USD'):'—'));
-  let actions=make('div','product-actions');let buy=make('a','btn product-buy',t.buy);buy.href='https://oopbuy.com/product/weidian/'+encodeURIComponent(item.weidianId)+'?inviteCode=U68CWQBN5';const labels=buttonLabels[lang()]||buttonLabels.en;let agents=make('details','platform-menu');agents.open=menuOpen;let menuTitle=make('summary','product-secondary platform-menu-title',labels[0]);let grid=make('div','platform-menu-grid');for(const [name,template] of platformLinks){let link=make('a','platform-menu-link',name+' ↗');link.href=template.replaceAll('{id}',encodeURIComponent(String(item.weidianId)));link.target='_blank';link.rel='nofollow sponsored noopener noreferrer';grid.append(link)}agents.append(menuTitle,grid);let copy=make('button','product-secondary',labels[1]);copy.type='button';const feedback=make('span','product-copy-feedback','');feedback.setAttribute('role','status');copy.addEventListener('click',async()=>{const url='https://weidian.com/item.html?itemID='+encodeURIComponent(String(item.weidianId));try{if(!navigator.clipboard?.writeText)throw Error('clipboard unavailable');await navigator.clipboard.writeText(url);feedback.textContent=t.copied}catch{feedback.textContent=t.failed+' '+url}});actions.append(buy,agents,copy,feedback);info.append(actions);let photos=displayPhotos;const photoSection=make('section','style-photos');const photoLabels=styleLabels[lang()]||styleLabels.en;photoSection.append(make('h2','style-photos-title',photoLabels[0]));if(photos.length){const grid=make('div','style-photos-grid');grid.setAttribute('tabindex','0');const note=make('p','style-photos-note');photoSection.append(grid,note);
-   function fillStyles(urls,fromCatalog){grid.replaceChildren();note.textContent=(fromCatalog?(sourceLabels[lang()]||sourceLabels.en)+' · ':'')+photoLabels[1];let remaining=urls.length;
-    urls.forEach((url,i)=>{let image=picture(url,photoLabels[0]+' '+(i+1));image.addEventListener('error',()=>{image.remove();if(--remaining===0){if(!fromCatalog&&catalogImages.length)fillStyles(catalogImages,true);else note.textContent=t.galleryEmpty}},{once:true});grid.append(image)})
-   }fillStyles(photos,!verifiedWeidian.length)
-  }else photoSection.append(make('p','product-empty',t.galleryEmpty));info.append(photoSection,make('p','product-disclaimer',t.note));hero.append(left,info);
-  root.append(hero,qc);
-  const tokens=x=>new Set(String(x||'').toLowerCase().match(/[\p{L}\p{N}]{3,}/gu)||[]);const words=tokens(item.name);let matches=items.filter(p=>String(p.id)!==String(item.id)).map(p=>{let score=p.category===item.category?5:0;for(const word of tokens(p.name))if(words.has(word))score++;return {p,score}}).sort((a,b)=>b.score-a.score).slice(0,8);if(matches.length){const section=make('section','related-products section');section.append(make('h2','product-section-title',relatedLabels[lang()]||relatedLabels.en));const cards=make('div','listing related-products-grid');for(const {p} of matches){const card=make('article','catalog-card');const link=make('a');link.href='/product/?id='+encodeURIComponent(p.id);const frame=make('div','picture');const name=window.oopProductTitle?.(p,lang())||p.name;frame.append(picture(safe(p.image),name));link.append(frame,make('p','product-card-title',name));if(p.priceUsd!==''&&p.priceUsd!=null&&Number.isFinite(Number(p.priceUsd)))link.append(make('span','sku',window.oopFormatPrice?.(Number(p.priceUsd))||'≈ $'+Number(p.priceUsd).toFixed(2)+' USD'));card.append(link);cards.append(card)}section.append(cards);root.append(section)}
+ const make = (tag, className, value) => {
+   const node = document.createElement(tag);
+   if (className) node.className = className;
+   if (value != null) node.textContent = value;
+   return node;
+ };
+ function safe(url) {
+   if (!url || typeof url !== 'string') return '';
+   try {
+     const parsed = new URL(url, 'https://findspreadsheet.com');
+     return parsed.protocol === 'https:' && !parsed.username && !parsed.password ? parsed.href : '';
+   } catch { return ''; }
  }
- window.addEventListener('oop-language',render);window.addEventListener('oop-currency',render);let id=new URLSearchParams(location.search).get('id')||'';if(!/^\d+$/.test(id)){failed=true;render();return}fetch('/data/catalog.json').then(r=>{if(!r.ok)throw Error();return r.json()}).then(d=>{window.oopBuildTitleNameIndex?.(d.products||[]);items=(d.products||[]).filter(p=>p.name&&p.sourcePath&&/^\d{5,20}$/.test(String(p.weidianId||'')));item=items.find(p=>String(p.id)===id&&/^\d{5,20}$/.test(String(p.weidianId||'')))||null;failed=!item;render()}).catch(()=>{failed=true;render()});
+ const sources = urls => [...new Set(urls.map(safe).filter(Boolean))];
+ function picture(url, alt, loading = 'lazy') {
+   const image = make('img');
+   image.alt = alt;
+   image.loading = loading;
+   image.decoding = 'async';
+   image.src = url;
+   return image;
+ }
+ function menu(id, label, wasOpen) {
+   const agents = make('details', 'platform-menu');
+   agents.open = wasOpen;
+   const summary = make('summary', 'product-secondary choice-trigger', label);
+   const grid = make('div', 'choice-grid choice-popover platform-menu-grid');
+   for (const [name, template] of platformLinks) {
+     if (name === 'Oopbuy') continue;
+     const link = make('a', 'platform-menu-link', name);
+     link.prepend(picture('/agents/' + name.toLowerCase() + '.webp', ''));
+     link.href = template.replaceAll('{id}', id);
+     link.target = '_blank';
+     link.rel = 'nofollow sponsored noopener noreferrer';
+     grid.append(link);
+   }
+   agents.addEventListener('keydown', event => {
+     if (event.key === 'Escape' && agents.open) {
+       agents.open = false;
+       summary.focus();
+     }
+   });
+   agents.append(summary, grid);
+   return agents;
+ }
+ function renderOptions(info, setPhoto, chooseFallbackPhoto, labels) {
+   if (!seller?.groups.length) {
+     if (!seller && !sellerFailed) return;
+     const referenceImages = sources(seller?.images || (item.weidianImages || []).map(safeImage));
+     if (referenceImages.length < 2) return;
+     const section = make('section', 'style-photos');
+     section.append(make('h2', 'style-photos-title', labels[0]));
+     const grid = make('div', 'style-photos-grid');
+     for (const [index, url] of referenceImages.entries()) {
+       const button = make('button', 'style-photo');
+       button.type = 'button';
+       button.setAttribute('aria-label', labels[0] + ' ' + (index + 1));
+       button.append(picture(url, ''));
+       button.addEventListener('click', () => setPhoto(url));
+       grid.append(button);
+     }
+     section.append(grid, make('p', 'style-photos-note', labels[1]));
+     info.append(section);
+     return;
+   }
+
+   const section = make('section', 'seller-options');
+   const controls = [];
+   seller.groups.forEach((group, index) => {
+     const name = make('h2', 'style-photos-title', group.name);
+     const selected = make('span', 'selected-option');
+     name.append(selected);
+     const grid = make('div', group.options.some(option => option.image) ? 'style-photos-grid' : 'sizes-grid');
+     grid.setAttribute('role', 'group');
+     grid.setAttribute('aria-label', group.name);
+     const buttons = group.options.map(option => {
+       const button = make('button', option.image ? 'style-photo' : 'size-option');
+       button.type = 'button';
+       button.title = option.label;
+       button.setAttribute('aria-label', option.label);
+       if (option.image) button.append(picture(option.image, ''));
+       else button.textContent = option.label;
+       button.addEventListener('click', () => {
+         selectedOptions[index] = option.id;
+         update();
+         const sku = seller.skus.find(entry => entry.ids.every((id, i) => selectedOptions[i] === id));
+         const image = sku?.image || option.image;
+         if (image) setPhoto(image);
+         else chooseFallbackPhoto();
+       });
+       grid.append(button);
+       return [button, option];
+     });
+     controls.push({buttons, selected});
+     section.append(name, grid);
+   });
+   function update() {
+     controls.forEach(({buttons, selected}, index) => {
+       for (const [button, option] of buttons) {
+         const active = option.id === selectedOptions[index];
+         button.setAttribute('aria-pressed', String(active));
+         if (active) selected.textContent = ' · ' + option.label;
+       }
+     });
+   }
+   update();
+   section.append(make('p', 'style-photos-note', labels[1]));
+   info.append(section);
+ }
+ function renderDetails(qcPhotos, detailPhotos, language, t) {
+   const section = make('section', 'product-qc');
+   const heading = make('h2', 'product-section-title');
+   section.append(heading);
+   function fill(urls, label, onEmpty) {
+     heading.textContent = label;
+     const grid = make('div', 'product-photo-grid');
+     let remaining = urls.length;
+     for (const [index, url] of urls.entries()) {
+       const caption = label + ' ' + (index + 1);
+       const link = make('a');
+       link.href = url;
+       link.target = '_blank';
+       link.rel = 'noopener noreferrer';
+       const image = picture(url, caption);
+       image.addEventListener('error', () => {
+         link.remove();
+         if (--remaining === 0) {
+           grid.remove();
+           onEmpty();
+         }
+       }, {once: true});
+       link.append(image);
+       grid.append(link);
+     }
+     if (remaining) section.append(grid);
+     else onEmpty();
+   }
+   const empty = () => section.append(make('p', 'product-empty', t.galleryEmpty));
+   const fallback = () => fill(detailPhotos, sourceLabels[language] || sourceLabels.en, empty);
+   if (qcPhotos.length) fill(qcPhotos, t.qc, fallback);
+   else fallback();
+   return section;
+ }
+ function updatePrice() {
+   const price = root.querySelector('.product-price-usd');
+   if (!price || !item) return;
+   const value = Number(item.priceUsd);
+   price.textContent = item.priceUsd != null && item.priceUsd !== '' && Number.isFinite(value)
+     ? (window.oopFormatPrice?.(value) || '≈ $' + value.toFixed(2) + ' USD')
+     : '—';
+ }
+ function render() {
+   if (!item && !failed) return;
+   const language = lang();
+   const t = translations[language] || translations.en;
+   const menuOpen = !!root.querySelector('.platform-menu')?.open;
+   root.replaceChildren();
+   if (!item) {
+     root.append(make('p', 'data-note', t.missing));
+     return;
+   }
+
+   const title = window.oopProductTitle?.(item, language) || item.name;
+   const sellerPhotos = sources([...(seller?.images || []), ...(item.weidianImages || []).map(safeImage)]);
+   const qcPhotos = sources(item.qcImages || []);
+   const catalogPhotos = sources([item.image, ...(item.sourceImages || [])]);
+   const gallery = sources([...sellerPhotos, ...catalogPhotos, ...qcPhotos]);
+   const layout = make('div', 'product-layout');
+   const left = make('div', 'product-gallery-wrap');
+   const stage = make('div', 'product-gallery');
+   const thumbs = make('div', 'thumbnails');
+   const mainImage = gallery.length ? picture(activePhoto || gallery[0], title, 'eager') : null;
+   function setPhoto(url) {
+     if (!mainImage || !url) return;
+     activePhoto = url;
+     if (mainImage.src !== url) mainImage.src = url;
+     for (const button of thumbs.children) {
+       button.setAttribute('aria-pressed', String(button.dataset.photo === url));
+     }
+   }
+   if (mainImage) {
+     const broken = new Set();
+     mainImage.addEventListener('error', () => {
+       broken.add(mainImage.src);
+       const next = gallery.find(url => !broken.has(url));
+       if (next) setPhoto(next);
+       else stage.replaceChildren(make('p', 'product-empty', noCarousel[language] || noCarousel.en));
+     });
+     stage.append(mainImage);
+     for (const [index, url] of gallery.entries()) {
+       const button = make('button', 'thumbnail');
+       button.type = 'button';
+       button.dataset.photo = url;
+       button.setAttribute('aria-label', t.image + ' ' + (index + 1));
+       const image = picture(url, '');
+       image.addEventListener('error', () => button.remove(), {once: true});
+       button.append(image);
+       button.addEventListener('click', () => setPhoto(url));
+       thumbs.append(button);
+     }
+     for (const button of thumbs.children) {
+       button.setAttribute('aria-pressed', String(button.dataset.photo === mainImage.src));
+     }
+   } else stage.append(make('p', 'product-empty', noCarousel[language] || noCarousel.en));
+   left.append(stage, thumbs);
+
+   const info = make('div', 'product-info');
+   info.append(make('h1', '', title), make('p', 'product-meta', t.id + ': ' + item.weidianId),
+     make('div', 'sku', t.price), make('div', 'product-price-usd'));
+   const actions = make('div', 'product-actions');
+   const id = encodeURIComponent(item.weidianId);
+   const buy = make('a', 'btn product-buy', t.buy.replace(/\s*↗$/, ''));
+   buy.href = 'https://oopbuy.com/product/weidian/' + id + '?inviteCode=U68CWQBN5';
+   const labels = buttonLabels[language] || buttonLabels.en;
+   const copy = make('button', 'product-secondary', labels[1]);
+   copy.type = 'button';
+   const feedback = make('span', 'product-copy-feedback');
+   feedback.setAttribute('role', 'status');
+   copy.addEventListener('click', async () => {
+     const url = 'https://weidian.com/item.html?itemID=' + id;
+     try {
+       await navigator.clipboard.writeText(url);
+       feedback.textContent = t.copied;
+     } catch {
+       feedback.textContent = t.failed + ' ' + url;
+     }
+   });
+   actions.append(buy, menu(id, labels[0], menuOpen), copy, feedback);
+   info.append(actions);
+   renderOptions(info, setPhoto, () => setPhoto(gallery[0]), styleLabels[language] || styleLabels.en);
+   info.append(make('p', 'product-disclaimer', t.note));
+   layout.append(left, info);
+   root.append(layout, renderDetails(qcPhotos, sources([...catalogPhotos.slice(1), ...sellerPhotos, ...catalogPhotos.slice(0, 1)]), language, t));
+   updatePrice();
+ }
+
+ async function loadProduct() {
+   try {
+     if (!/^\d+$/.test(productId)) throw Error('Invalid product');
+     const response = await fetch('/data/catalog.json');
+     if (!response.ok) throw Error('Catalog unavailable');
+     const {products} = await response.json();
+     window.oopBuildTitleNameIndex?.(products);
+     item = products.find(p => String(p.id) === productId && p.name && p.sourcePath && /^\d{5,20}$/.test(String(p.weidianId)));
+     if (!item) throw Error('Product unavailable');
+   } catch { failed = true; }
+   render();
+   if (!item) return;
+
+   try {
+     const endpoint = new URL('https://findspreadsheet.com/api/Goods/getSkuData');
+     endpoint.searchParams.set('weidian_id', item.weidianId);
+     const response = await fetch(endpoint, {credentials: 'omit', signal: AbortSignal.timeout(10000)});
+     if (!response.ok) throw Error('Seller options unavailable');
+     seller = normalizeOptions(await response.json(), item.weidianId);
+     const sku = seller.skus.find(entry => entry.stock > 0) || seller.skus[0];
+     selectedOptions = seller.groups.map((group, i) => {
+       return group.options.some(option => option.id === sku?.ids[i]) ? sku.ids[i] : group.options[0].id;
+     });
+   } catch { sellerFailed = true; }
+   render();
+ }
+ window.addEventListener('oop-language', render);
+ window.addEventListener('oop-currency', updatePrice);
+ document.addEventListener('click', event => {
+   const open = root.querySelector('.platform-menu[open]');
+   if (open && !open.contains(event.target)) open.open = false;
+ });
+ loadProduct();
 })();
