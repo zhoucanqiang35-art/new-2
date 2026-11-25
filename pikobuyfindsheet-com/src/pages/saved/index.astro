@@ -13,20 +13,45 @@ import PageHead from '../../components/PageHead.astro';
 <script>
   import {savedPaths} from '../../lib/shopping.mjs';
   import {productCard} from '../../lib/catalog-client.mjs';
+  import {saveButton} from '../../lib/saved-products.mjs';
+
   const status = document.querySelector('#saved-message')!;
   const grid = document.querySelector('#saved-products')!;
-  const saved = new Set(savedPaths());
-  if (!saved.size) {
-    status.textContent = 'Save a product from its detail page to start a shortlist.';
-  } else {
-    fetch('/catalog-data.json').then((response) => {
+  let items: Promise<Map<string, any>> | undefined;
+  let sequence = 0;
+
+  async function renderSaved() {
+    const current = ++sequence;
+    const paths = [...new Set(savedPaths())];
+    if (!paths.length) {
+      grid.replaceChildren();
+      status.hidden = false;
+      status.textContent = 'Use Save product on a product card to start a shortlist.';
+      return;
+    }
+    items ??= fetch('/catalog-data.json').then(async (response) => {
       if (!response.ok) throw new Error('Catalog unavailable');
-      return response.json();
-    }).then(({items}) => {
-      const products = items.filter(({path}) => saved.has(path));
-      grid.replaceChildren(...products.map((product) => productCard(product)));
-      status.hidden = products.length > 0;
-      if (!products.length) status.textContent = 'These saved products are no longer in the synced catalog.';
-    }).catch(() => { status.textContent = 'Saved products could not be loaded.'; });
+      const {items} = await response.json();
+      return new Map(items.map((item: {path: string}) => [item.path, item]));
+    });
+    const index = await items.catch(() => undefined);
+    if (!index) items = undefined;
+    if (sequence !== current) return;
+    grid.replaceChildren(...paths.map(path => {
+      const item = index?.get(path);
+      if (item) return productCard(item);
+      const card = document.createElement('article');
+      card.className = 'product product-copy';
+      const link = document.createElement('a');
+      link.href = '/finds/?' + new URLSearchParams({from: path});
+      link.textContent = path.split('/').at(-1)!.replace(/-\d+\.html$/, '').replaceAll('-', ' ');
+      link.translate = false;
+      card.append(link, saveButton(path));
+      return card;
+    }));
+    status.hidden = true;
   }
+
+  window.addEventListener('saved-products-change', renderSaved);
+  void renderSaved();
 </script>

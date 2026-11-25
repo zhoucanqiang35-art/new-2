@@ -54,6 +54,8 @@ function showDate(status, label, date) {
 export async function showQc(input, root, limit, productPath) {
   const id = itemId(input);
   const status = root.querySelector('[role=status]');
+  const retry = root.querySelector('#qc-retry');
+  retry.hidden = true;
   const grid = root.querySelector('.product-grid');
   const sequence = Number(root.dataset.request || 0) + 1;
   root.dataset.request = sequence;
@@ -103,6 +105,11 @@ export async function showQc(input, root, limit, productPath) {
     showDate(status, 'Checked on', new Date().toISOString().slice(0, 10));
     setSource();
   } else if (!snapshot.length) {
+    if (!live || live.status === 'pending') {
+      root.hidden = false;
+      retry.hidden = false;
+      retry.onclick = () => void showQc(id, root, limit, productPath);
+    }
     status.textContent = live?.status === 'pending' ? 'FindSpreadsheet is preparing the photos. Check again later.'
       : live ? 'No warehouse QC photos are currently listed for this item.'
       : 'The live QC lookup is unavailable right now. Check the original product page for warehouse photos.';

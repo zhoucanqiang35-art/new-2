@@ -2,6 +2,7 @@ import {catalogSearchTerm,rankCatalogItems,relatedCatalogItems} from './catalog-
 import {categoryName,sourceOrigin,mainSearch} from './platform.mjs';
 import {formatPrice} from './shopping.mjs';
 import {setProductImage} from './product-images.mjs';
+import {saveButton} from './saved-products.mjs';
 function element(tag,className,text) {
   const node=document.createElement(tag);
   if(className) node.className=className;
@@ -28,6 +29,7 @@ export function productCard(product, photo = '') {
   if(price!==null) {cost.dataset.cnyPrice=String(price);cost.translate=false;}
   meta.append(cost,element('span','',id?'Weidian':'FindSpreadsheet'));
   copy.append(link,meta);
+  if (path) copy.append(saveButton(path));
   card.append(art,copy);
   return card;
 }

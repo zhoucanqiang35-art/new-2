@@ -244,3 +244,11 @@
   #selected-language { max-width:66px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
   #product-qc .product-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
+
+
+.product-save {
+  margin-top:8px; padding:4px 8px; min-height:30px; border:1px solid var(--line);
+  border-radius:6px; background:var(--surface); color:var(--link); font-size:.79rem; font-weight:700;
+}
+.product-save[aria-pressed="true"] { border-color:var(--focus); background:var(--mist); }
+#qc-retry { margin-top:12px; }

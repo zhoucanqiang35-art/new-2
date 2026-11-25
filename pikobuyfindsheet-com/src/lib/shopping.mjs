@@ -65,12 +65,11 @@ export function purchaseFor(item, agentId = preferences.agent) {
 export function savedPaths() {
   try {
     const list = JSON.parse(localStorage.getItem('pikobuy-saved')) ?? [];
-    return Array.isArray(list) ? list : [];
+    return Array.isArray(list) ? list.filter(path => typeof path === 'string' && /^\/[\w-]+\/[\w-]+\.html$/.test(path)) : [];
   } catch { return []; }
 }
 export function toggleSaved(path) {
   const list = savedPaths();
   const next = list.includes(path) ? list.filter((item) => item !== path) : [...list, path];
-  try { localStorage.setItem('pikobuy-saved', JSON.stringify(next)); } catch {}
-  return next.includes(path);
+  localStorage.setItem('pikobuy-saved', JSON.stringify(next));
 }

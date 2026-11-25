@@ -73,6 +73,7 @@ const activeLink = mainNav.findLast(([href]) => active.startsWith(href))?.[0];
 </html>
 <script>
   import {refreshPrices} from '../lib/shopping.mjs';
+  import {enableSaving} from '../lib/saved-products.mjs';
   import {enableProductImageFallback} from '../lib/product-images.mjs';
   window.addEventListener('shopping-change', () => refreshPrices());
   refreshPrices();
@@ -93,4 +94,5 @@ const activeLink = mainNav.findLast(([href]) => active.startsWith(href))?.[0];
     for (const menu of menus) if (!menu.contains(event.target)) menu.open = false;
   });
   enableProductImageFallback();
+  enableSaving();
 </script>

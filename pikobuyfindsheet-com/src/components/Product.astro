@@ -13,5 +13,6 @@ const target = '/finds/?' + new URLSearchParams(product.id ? {id: product.id, fr
   <div class="product-copy">
     <a href={target} translate="no">{product.title}</a>
     <div>{product.price === null ? <strong>See source</strong> : <strong data-cny-price={product.price} translate="no">{formatPrice(product.price, 'USD')}</strong>}<span>{product.id ? 'Weidian' : 'FindSpreadsheet'}</span></div>
+    {product.path && <button class="product-save" type="button" data-save-path={product.path} aria-pressed="false">Save product</button>}
   </div>
 </article>
