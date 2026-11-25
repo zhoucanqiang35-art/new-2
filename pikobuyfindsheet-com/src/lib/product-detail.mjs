@@ -59,6 +59,9 @@ export function setupDetail() {
   let active = 0;
   const failedPhotos = new Set();
   let qcId;
+  let sellerOptions;
+  const copy = select('#find-copy');
+  const optionList = select('#find-options');
 
   function showImage(index) {
     if (!images.length || failedPhotos.size === images.length) return;
@@ -89,15 +92,56 @@ export function setupDetail() {
         button.type = 'button';
         button.setAttribute('aria-label', 'Show seller photo ' + (index + 1));
         const thumbnail = document.createElement('img');
-        setProductImage(thumbnail, image, 120);
         thumbnail.alt = '';
         thumbnail.loading = 'lazy';
+        setProductImage(thumbnail, image, 120);
         button.append(thumbnail);
         button.addEventListener('click', () => showImage(index));
         thumbs.append(button);
       }
     }
     showImage(0);
+  }
+
+  function renderSellerOptions(groups) {
+    optionList.hidden = !groups.length;
+    optionList.replaceChildren(...groups.map(({name, values}) => {
+      const group = document.createElement('fieldset');
+      const title = document.createElement('legend');
+      title.textContent = name;
+      title.translate = false;
+      const grid = document.createElement('div');
+      grid.className = 'listing-choices';
+      const selection = document.createElement('p');
+      selection.className = 'listing-selected';
+      selection.translate = false;
+      group.append(title, selection, grid);
+      for (const {label, image} of values) {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.title = label;
+        button.setAttribute('aria-label', label);
+        button.setAttribute('aria-pressed', 'false');
+        button.translate = false;
+        button.textContent = label;
+        if (image) {
+          const thumbnail = document.createElement('img');
+          thumbnail.alt = label;
+          thumbnail.loading = 'lazy';
+          thumbnail.addEventListener('error', () => { button.textContent = label; }, {once:true});
+          setProductImage(thumbnail, image, 120);
+          button.replaceChildren(thumbnail);
+        }
+        button.addEventListener('click', () => {
+          for (const choice of grid.children) choice.setAttribute('aria-pressed', String(choice === button));
+          selection.textContent = label;
+          const index = images.indexOf(image);
+          if (index >= 0) showImage(index);
+        });
+        grid.append(button);
+      }
+      return group;
+    }));
   }
 
   function refreshOptions() {
@@ -115,7 +159,12 @@ export function setupDetail() {
   }
 
   function render(item) {
-    product = item;
+    const optionPhotos = sellerOptions?.groups.flatMap(({values}) => values.map(({image}) => image).filter(Boolean)) || [];
+    product = sellerOptions ? {
+      ...item,
+      image: sellerOptions.photos[0] || item.image,
+      gallery: [...sellerOptions.photos, ...optionPhotos, item.image, ...(item.gallery || [])],
+    } : item;
     select('#find-detail').hidden = false;
     select('#find-title').textContent = item.title;
     select('#find-title').translate = false;
@@ -123,7 +172,7 @@ export function setupDetail() {
     select('#find-id').textContent = item.id ? categoryName(item.category) + ' · Weidian item ID ' + item.id : categoryName(item.category);
     select('#find-source').href = item.path ? sourceOrigin + item.path : mainSearch(item.id);
     const weidian = select('#find-weidian');
-    weidian.hidden = !item.id;
+    weidian.hidden = copy.hidden = !item.id;
     if (item.id) weidian.href = sourceItem(item.id);
     const others = select('#other-agents');
     others.hidden = !item.id;
@@ -140,6 +189,7 @@ export function setupDetail() {
     if (!originalQc.hidden) originalQc.href = sourceOrigin + item.path + '#qcPhotosStatus';
     if (item.id && qcId !== item.id) {
       qcId = item.id;
+      if (location.hash === '#product-qc') requestAnimationFrame(() => qc.scrollIntoView());
       const isHeadphone = /\b(?:headphones?|headsets?|earbuds?|earphones?|airpods?)\b|耳[机機]/i.test(item.title);
       showQc(qcId, qc, isHeadphone ? 8 : undefined, item.path);
     } else if (!item.id) {
@@ -196,6 +246,18 @@ export function setupDetail() {
       showImage(active + (event.key === 'ArrowLeft' ? -1 : 1));
     }
   });
+  copy.addEventListener('click', async () => {
+    const link = sourceItem(product.id);
+    const message = select('#find-copy-status');
+    try {
+      await navigator.clipboard.writeText(link);
+      copy.textContent = 'Link copied';
+      message.textContent = 'Product link copied.';
+    } catch {
+      copy.textContent = 'Use the Weidian link';
+      message.textContent = 'Could not copy the link. Open the Weidian listing to copy it.';
+    }
+  });
   window.addEventListener('shopping-change', refreshOptions);
   save.addEventListener('click', () => {
     if (product?.path) {
@@ -212,6 +274,19 @@ export function setupDetail() {
     const query = new URLSearchParams({id, from});
     const read = (url, timeout) => fetch(url, {signal:AbortSignal.timeout(timeout)})
       .then((res) => res.ok ? res.json() : null).catch(() => null);
+    const readOptions = (itemId) => itemId
+      ? read('/api/sku?id=' + encodeURIComponent(itemId), 6500).then((data) => data?.listing)
+      : Promise.resolve(undefined);
+    const optionsRequest = id ? readOptions(id) : null;
+    async function updateSellerOptions(item) {
+      const options = await (optionsRequest ?? readOptions(item.id));
+      if (!options) return false;
+      sellerOptions = options;
+      const current = product?.id === item.id ? product : item;
+      render({...current, title: current.title || options.title, price: current.price ?? options.price});
+      renderSellerOptions(options.groups);
+      return true;
+    }
     let catalog;
     const items = () => catalog ??= read('/catalog-data.json', 12000).then((data) => data?.items || []);
     const lookup = await read('/api/catalogitem?' + query, 5000);
@@ -221,18 +296,25 @@ export function setupDetail() {
       requestAnimationFrame(() => setTimeout(() => {
         void items().then((all) => renderRelated(product, all));
       }, 0));
+      void updateSellerOptions(saved);
       if (saved.gallery?.length > 1) return;
       if (saved.path) query.set('from', saved.path);
     }
     const live = await read('/api/product?' + query, 5500);
     if (live?.product) {
       const gallery = [...new Set([...(live.product.gallery || []), ...(saved?.gallery || [])])];
-      render({...saved, ...live.product, gallery});
-      if (!saved) void items().then((all) => renderRelated(product, all));
+      const item = {...saved, ...live.product, gallery};
+      render(item);
+      if (!saved) {
+        void updateSellerOptions(item);
+        void items().then((all) => renderRelated(product, all));
+      }
     } else if (!saved && id) {
-      render({id, title: 'Weidian item ' + id});
-      status.hidden = false;
-      status.textContent = 'Open the original listing to review this item.';
+      if (!await updateSellerOptions({id})) {
+        render({id, title: 'Weidian item ' + id});
+        status.hidden = false;
+        status.textContent = 'Open the original listing to review this item.';
+      }
     } else if (!saved) {
       status.textContent = 'The product could not be loaded. Return to the spreadsheet and try again.';
     }

@@ -24,9 +24,9 @@ Use this directory as the project root, `npm run build` as the build command and
 | --- | --- |
 | Catalog, filters and sorting | Snapshot of all public directory pages at the last refresh |
 | Keyword search | Renders snapshot results first and adds available live results |
-| Listing details and photos | Public FindSpreadsheet detail when available, with snapshot fallback. The detail page loads a single listing before requesting related products. Main-site photos use resized sources, original URLs and local thumbnails, including backups for high-traffic single-photo listings. |
+| Listing details and photos | Public FindSpreadsheet detail when available, with snapshot fallback. The public Weidian SKU data exposed by FindSpreadsheet supplies the seller carousel and style and size choices. The detail page loads a single listing before requesting related products. Main-site photos use resized sources, original URLs and local thumbnails, including backups for high-traffic single-photo listings. |
 | Warehouse QC | FindSpreadsheet QC endpoint via same-origin API, with dated public QC snapshots for selected products |
 | Image search | Browser-side comparison against indexed product covers, seller galleries and saved warehouse QC photos. The browser retains the latest index version between visits. |
-| Agent and currency selection | Shared agent link templates and dated CNY exchange-rate estimates |
+| Agent and currency selection | Shared agent link templates and dated CNY exchange-rate estimates from Frankfurter. Currency follows the selected language until manually overridden. |
 
 Product links use the verified Weidian ID when available. Listings without an ID remain browsable and link to their FindSpreadsheet source. The default USD price uses the main site's display rate. Other currency conversions use the dated reference rates. Checkout charges appear on the selected agent’s site.

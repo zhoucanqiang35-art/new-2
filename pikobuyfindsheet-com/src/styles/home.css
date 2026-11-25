@@ -1,13 +1,13 @@
 .showcase {
-  background: radial-gradient(ellipse at 86% 75%, #5720a366, transparent 55%), linear-gradient(115deg, #221139, #0c0812 60%, #130b20);
+  background: radial-gradient(ellipse at 86% 75%, #7efcf843, transparent 58%), linear-gradient(115deg, var(--surface), var(--mist));
   color: var(--ink);
 }
 .showcase-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, .92fr);
   align-items: center;
-  gap: clamp(24px, 5vw, 76px);
-  padding-block: clamp(28px, 5vw, 62px);
+  gap: clamp(16px, 3vw, 42px);
+  padding-block: clamp(18px, 3vw, 35px);
 }
 .showcase-copy .source-credit {
   margin-bottom: 12px;
@@ -16,8 +16,8 @@
 }
 .source-credit a { text-decoration: underline; text-underline-offset: 3px; }
 .showcase h1 {
-  font-size: clamp(2.65rem, 6.9vw, 6.15rem);
-  line-height: .89;
+  font-size: clamp(2.5rem, 5.5vw, 4.8rem);
+  line-height: .98;
   letter-spacing: -.07em;
 }
 .showcase-copy > p:not(.source-credit) {
@@ -27,11 +27,6 @@
 }
 .showcase .button.primary { background: var(--accent); color: #fff; }
 .showcase .button.primary:hover { background: var(--accent-hover); }
-.home-qc .button.primary {
-  background: #b983ff;
-  color: #160c22;
-}
-.home-qc .button.primary:hover { background: #d2abff; }
 .showcase-links {
   display: flex;
   flex-wrap: wrap;
@@ -45,14 +40,14 @@
   text-underline-offset: 4px;
 }
 .showcase a:focus-visible { outline-color: var(--focus); }
-.home-qc a:focus-visible { outline-color: #b983ff; }
+.home-qc a:focus-visible { outline-color: var(--focus); }
 .showcase-cart {
   position:relative;
   isolation:isolate;
-  --cart-trim:#a95cff;
+  --cart-trim:#48958c;
   padding-block:32px 49px;
   padding-inline:0 clamp(10px,1.6vw,22px);
-  filter:drop-shadow(0 12px 22px #7c28e63d);
+  filter:drop-shadow(0 12px 22px #21544924);
 }
 .showcase-categories {
   position:relative;
@@ -68,11 +63,11 @@
 }
 .showcase-categories::before {
   inset:0;
-  background:linear-gradient(140deg,#d0a1ff 0%,#9643f5 40%,#6631ac 75%,#b46aff 100%);
+  background:linear-gradient(140deg,#7efcf8,#26837a);
 }
 .showcase-categories::after {
   inset:3px 4px;
-  background:linear-gradient(150deg,#26143d,#171022 73%);
+  background:linear-gradient(150deg,#ebfaf6,#d8f1eb 73%);
 }
 .showcase-categories h2 { margin-bottom:16px; }
 .showcase-categories .category-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
@@ -91,8 +86,8 @@
 .cart-undercarriage::before, .cart-undercarriage::after {
   content:""; position:absolute; top:100%; transform:skewX(15deg);
   width:26px; height:26px; margin-top:1px;
-  border:5px solid #a95cff; border-radius:50%; background:#291643;
-  box-shadow:inset 0 0 0 3px #1a1029;
+  border:5px solid #48958c; border-radius:50%; background:#7efcf8;
+  box-shadow:inset 0 0 0 3px #f4fffc;
 }
 .cart-undercarriage::before { left:10%; }
 .cart-undercarriage::after { right:7%; }
@@ -109,7 +104,7 @@
 }
 .home-shortcuts svg { color: var(--link); flex: none; }
 .home-shortcuts a:hover { color: var(--link); text-decoration: underline; }
-.home-featured { background: #130f1a; border-block: 1px solid var(--line); }
+.home-featured { background: var(--paper); border-block: 1px solid var(--line); }
 .home-qc {
   display: grid;
   grid-template-columns: minmax(0, .93fr) minmax(0, 1fr);
@@ -117,8 +112,8 @@
   align-items: center;
   border-radius: 14px;
   padding: clamp(18px, 3vw, 32px);
-  color: white;
-  background: #201033;
+  color: var(--ink);
+  background: var(--mist);
 }
 .home-qc p { color: var(--muted); margin-block: 8px 11px; }
 .home-qc .text-link { color: var(--link); }
@@ -144,14 +139,10 @@
 }
 .home-ordering li p { grid-column: 2; color: var(--muted); }
 .home-guides h3 a, .home-articles h3 a { white-space: normal; }
-.home-articles { background: #171021; border-block: 1px solid var(--line); }
+.home-articles { background: var(--paper); border-block: 1px solid var(--line); }
 .home-articles .steps h3 { margin-top: 0; }
 .home-articles + .faq { padding-top: 38px; }
 .faq h2 + a { display: inline-block; margin-top: 10px; }
-.home-final-search { background: #1b0e29; color: white; }
-.home-final-search .search-form { margin-top: 16px; }
-.home-final-search .button { background: #b983ff; color: #160c22; }
-.home-final-search .button:hover { background: #d2abff; }
 
 @media (max-width: 780px) {
   .showcase-grid { grid-template-columns:minmax(0, 1fr); }
@@ -203,7 +194,7 @@
   .showcase h1 { font-size:clamp(2.15rem,9.5vw,3.25rem); line-height:.96; }
   .showcase-copy .source-credit { margin-bottom:8px; }
   .showcase-copy > p:not(.source-credit) { margin-top:8px; font-size:.875rem; }
-  .showcase .search-form, .home-final-search .search-form { margin-top:8px; }
+  .showcase .search-form { margin-top:8px; }
   .showcase-links { gap:4px 12px; margin-top:8px; }
   .showcase-cart { padding-block:19px 31px; }
   .showcase-categories { padding:12px 22px 8px 24px; }
@@ -221,7 +212,7 @@
   .home-shortcuts svg { width:17px; height:17px; }
   .showcase h2,
   main:has(.showcase) > .section h2,
-  .home-featured h2, .home-articles h2, .home-final-search h2 {
+  .home-featured h2, .home-articles h2 {
     font-size:clamp(1.22rem,5.35vw,1.65rem); line-height:1.12;
   }
   main:has(.showcase) .section { padding-block:12px; }
@@ -295,4 +286,21 @@
     line-height:1.3;
   }
   #home-faq .help-card { padding-block:5px; }
+}
+
+
+.showcase .search-form { margin-top:13px; }
+.search-suggestions { display:flex; align-items:center; flex-wrap:wrap; gap:5px; margin-top:8px; font-size:.84rem; color:var(--muted); }
+.search-suggestions a { border:1px solid var(--line); border-radius:6px; background:var(--surface); padding:3px 7px; color:var(--link); }
+.search-suggestions a:hover { text-decoration:underline; }
+main:has(.showcase) .section { padding-block:20px; }
+main:has(.showcase) .section-head { margin-bottom:11px; }
+main:has(.showcase) .steps article,.home-ordering li { padding-block:10px; }
+.home-featured .product-art { aspect-ratio:1.65; }
+#home-faq .help-grid { align-items:start; gap:7px; }
+#home-faq .help-card { padding:9px 11px; }
+#home-faq summary { font-weight:700; }
+@media(max-width:670px) {
+  main:has(.showcase) .section { padding-block:10px; }
+  .home-articles .steps article p { grid-column:auto; }
 }

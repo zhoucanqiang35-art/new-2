@@ -1,5 +1,6 @@
 ---
 import '../styles/site.css';
+import CurrencyPicker from '../components/CurrencyPicker.astro';
 import LanguagePicker from '../components/LanguagePicker.astro';
 import {registerUrl,sourceOrigin} from '../lib/platform.mjs';
 const {title='Pikobuy Spreadsheet | Finds, Product Links & QC Photos', description='Browse FindSpreadsheet product finds for Pikobuy. Compare catalog listings, open Weidian links, check available QC photos and learn how to order.', noindex=false} = Astro.props;
@@ -54,6 +55,7 @@ const activeLink = nav.findLast(([href]) => active.startsWith(href))?.[0];
         <nav aria-label="Main navigation">{nav.map(([href,label]) => <a href={href} aria-current={activeLink === href ? (active === href ? 'page' : 'location') : undefined}>{label}</a>)}</nav>
         <div class="header-tools">
           <LanguagePicker/>
+          <CurrencyPicker/>
           <a href={registerUrl} class="button primary signup" target="_blank" rel="sponsored noopener">Join Pikobuy</a>
         </div>
       </div>
@@ -73,5 +75,21 @@ const activeLink = nav.findLast(([href]) => active.startsWith(href))?.[0];
   import {enableProductImageFallback} from '../lib/product-images.mjs';
   window.addEventListener('shopping-change', () => refreshPrices());
   refreshPrices();
+  const menus = [...document.querySelectorAll<HTMLDetailsElement>('.header-picker')];
+  for (const menu of menus) {
+    menu.addEventListener('toggle', () => {
+      if (menu.open) for (const other of menus) if (other !== menu) other.open = false;
+    });
+    menu.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && menu.open) {
+        menu.open = false;
+        menu.querySelector('summary')?.focus();
+      }
+    });
+  }
+  document.addEventListener('click', (event) => {
+    if (!(event.target instanceof Node)) return;
+    for (const menu of menus) if (!menu.contains(event.target)) menu.open = false;
+  });
   enableProductImageFallback();
 </script>

@@ -1,0 +1,37 @@
+---
+import {currencies, rateDate} from '../lib/shopping.mjs';
+---
+<details class="header-picker" id="currency-picker">
+  <summary aria-label="Currency"><span id="selected-currency" translate="no">USD</span></summary>
+  <div class="picker-panel" aria-label="Currency">
+    <div class="picker-grid">
+      <button type="button" data-currency="auto" aria-pressed="true">Match language</button>
+      {currencies.map((code) => <button type="button" data-currency={code} aria-pressed="false" translate="no">{code}</button>)}
+    </div>
+    <p>Reference rates <time datetime={rateDate} translate="no">{rateDate}</time></p>
+  </div>
+</details>
+<script>
+  import {selectCurrency, shoppingOptions} from '../lib/shopping.mjs';
+
+  const menu = document.querySelector<HTMLDetailsElement>('#currency-picker')!;
+  const summary = menu.querySelector('summary')!;
+  const value = menu.querySelector('#selected-currency')!;
+  const choices = [...menu.querySelectorAll<HTMLButtonElement>('[data-currency]')];
+  function renderCurrency() {
+    const {currency, currencyMode} = shoppingOptions();
+    value.textContent = currency;
+    for (const choice of choices) {
+      choice.setAttribute('aria-pressed', String(choice.dataset.currency === (currencyMode === 'language' ? 'auto' : currency)));
+    }
+  }
+  for (const choice of choices) {
+    choice.addEventListener('click', () => {
+      selectCurrency(choice.dataset.currency);
+      menu.open = false;
+      summary.focus();
+    });
+  }
+  window.addEventListener('shopping-change', renderCurrency);
+  renderCurrency();
+</script>

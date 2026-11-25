@@ -124,8 +124,7 @@ export function setupImageSearch(root) {
     if (objectUrl) URL.revokeObjectURL(objectUrl);
     objectUrl = undefined;
   }
-  file.addEventListener('change', () => {
-    const photo = file.files[0];
+  function searchFile(photo) {
     if (!photo) return;
     clearPreview();
     if (photo.size > 15 * 1024 * 1024) {
@@ -138,6 +137,23 @@ export function setupImageSearch(root) {
     }
     objectUrl = URL.createObjectURL(photo);
     search(objectUrl);
+  }
+  const upload = file.closest('.upload-box');
+  file.addEventListener('change', () => {
+    searchFile(file.files[0]);
+    file.value = '';
+  });
+  upload.addEventListener('dragover', (event) => {
+    event.preventDefault();
+    upload.dataset.dragging = 'true';
+  });
+  upload.addEventListener('dragleave', (event) => {
+    if (!upload.contains(event.relatedTarget)) delete upload.dataset.dragging;
+  });
+  upload.addEventListener('drop', (event) => {
+    event.preventDefault();
+    delete upload.dataset.dragging;
+    searchFile(event.dataTransfer.files[0]);
   });
   example.addEventListener('click', () => {
     clearPreview();

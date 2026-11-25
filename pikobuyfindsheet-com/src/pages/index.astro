@@ -35,9 +35,15 @@ const guides = [
     <div class="container showcase-grid">
       <div class="showcase-copy">
         <p class="source-credit">Product directory by <a href={sourceOrigin}>FindSpreadsheet</a></p>
-        <h1>Pikobuy<br/>Spreadsheet</h1>
+        <h1>Pikobuy Spreadsheet</h1>
         <p>Search by Weidian link, item ID or photo. Compare the listing and any available warehouse photos before placing your PikoBuy order.</p>
         <HomeSearch id="home-search" label="Search from the homepage"/>
+        <div class="search-suggestions" aria-label="Example searches">
+          <span>Try</span>
+          <a href="/spreadsheet/?q=sneakers">Sneakers</a>
+          <a href="/spreadsheet/?q=hoodie">Hoodie</a>
+          <a href="/spreadsheet/?q=7552531394">7552531394</a>
+        </div>
         <div class="showcase-links">
           <a href="/spreadsheet/">Browse spreadsheet</a>
           <a href="/image-search/">Search by image</a>
@@ -151,14 +157,8 @@ const guides = [
     <div class="section-head"><h2>Pikobuy FAQ</h2><a class="text-link" href="/faq/">All questions and answers</a></div>
     <div class="help-grid">
       {homeFaqs.map(([title, copy, href, label]) => (
-        <article class="help-card"><h3>{title}</h3><p>{copy}</p>{href && <a class="text-link" href={href}>{label}</a>}</article>
+        <details class="help-card"><summary>{title}</summary><p>{copy}</p>{href && <a class="text-link" href={href}>{label}</a>}</details>
       ))}
-    </div>
-  </section>
-  <section class="home-final-search">
-    <div class="container section">
-      <h2>Search the Pikobuy spreadsheet</h2>
-      <HomeSearch id="footer-search" label="Search from the end of the homepage"/>
     </div>
   </section>
 </Base>

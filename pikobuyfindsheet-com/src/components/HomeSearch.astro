@@ -5,7 +5,7 @@ const {id, label} = Astro.props;
 <form action="/spreadsheet/" class="search-form" role="search" aria-label={label}>
   <label for={id} class="sr">Product name, item ID or link</label>
   <Icon name="search" size={22}/>
-  <input id={id} type="search" name="q" placeholder="Product name, item ID or link" maxlength="500" required/>
+  <input id={id} type="search" name="q" placeholder="Try sneakers, item ID or Weidian link" maxlength="500" required/>
   <button type="submit" class="button primary">Search</button>
   <a class="button outline image-search-entry" href="/image-search/" aria-label="Search by image" title="Search by image"><Icon name="camera" size={21}/></a>
 </form>

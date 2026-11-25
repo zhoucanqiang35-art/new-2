@@ -5,7 +5,7 @@ import {buyUrl, sourceOrigin} from './platform.mjs';
 export {agents};
 export const currencies = Object.keys(exchange.rates).sort();
 export const rateDate = exchange.date;
-const defaults = {agent: 'pikobuy', currency: 'USD'};
+const defaults = {agent: 'pikobuy', currency: 'USD', currencyMode: 'language'};
 let preferences = defaults;
 if (typeof window !== 'undefined') {
   try {
@@ -13,6 +13,7 @@ if (typeof window !== 'undefined') {
     preferences = {
       agent: agents.some(({id}) => id === stored.agent) ? stored.agent : defaults.agent,
       currency: currencies.includes(stored.currency) ? stored.currency : defaults.currency,
+      currencyMode: stored.currencyMode ?? (stored.currency && stored.currency !== defaults.currency ? 'manual' : 'language'),
     };
   } catch {}
 }
@@ -21,6 +22,24 @@ export function updateShopping(patch) {
   preferences = {...preferences, ...patch};
   try { localStorage.setItem('pikobuy-shopping', JSON.stringify(preferences)); } catch {}
   window.dispatchEvent(new Event('shopping-change'));
+}
+const languageCurrencies = {
+  en: 'USD', 'zh-Hans': 'CNY', es: 'EUR', fr: 'EUR', de: 'EUR', it: 'EUR', pt: 'EUR',
+  ru: 'RUB', ja: 'JPY', ko: 'KRW', ar: 'AED', tr: 'TRY', pl: 'PLN', nl: 'EUR', sv: 'SEK',
+  da: 'DKK', fi: 'EUR', no: 'NOK', hu: 'HUF', ro: 'RON', cs: 'CZK', uk: 'UAH',
+};
+export function followLanguageCurrency(language) {
+  if (preferences.currencyMode === 'language') {
+    const currency = languageCurrencies[language] ?? defaults.currency;
+    if (currency !== preferences.currency) updateShopping({currency});
+  }
+}
+export function selectCurrency(currency, language = document.documentElement.lang) {
+  if (currency === 'auto') {
+    updateShopping({currencyMode: 'language', currency: languageCurrencies[language] ?? defaults.currency});
+  } else if (currencies.includes(currency)) {
+    updateShopping({currency, currencyMode: 'manual'});
+  }
 }
 export function formatPrice(amount, currency = preferences.currency) {
   return new Intl.NumberFormat('en-US', {style: 'currency', currency, currencyDisplay: currency === 'USD' ? 'symbol' : 'code'})

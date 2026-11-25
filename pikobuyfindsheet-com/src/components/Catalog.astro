@@ -13,7 +13,7 @@ const initial = data.items.filter((p)=>!category||p.category===category).sort((a
     <ShoppingMenu/>
   </div>
   <form class="toolbar" id="browse-form" action="/spreadsheet/">
-    <div class="search-form"><Icon name="search" size={21}/><label for="catalog-q" class="sr">Search products</label><input id="catalog-q" name="q" type="search" maxlength="500" placeholder="Product name, item ID or link"/><button class="button primary">Search</button><a class="button outline image-search-entry" href="/image-search/" aria-label="Search by image" title="Search by image"><Icon name="camera" size={21}/></a></div>
+    <div class="search-form"><Icon name="search" size={21}/><label for="catalog-q" class="sr">Search products</label><input id="catalog-q" name="q" type="search" maxlength="500" placeholder="Try sneakers, item ID or Weidian link"/><button class="button primary">Search</button><a class="button outline image-search-entry" href="/image-search/" aria-label="Search by image" title="Search by image"><Icon name="camera" size={21}/></a></div>
     <label class="field">Category<select id="catalog-category" name="category"><option value="">All categories</option>{categories.map(([slug,label])=><option value={slug} selected={slug===category}>{label}</option>)}</select></label>
     <label class="field">Sort by<select id="catalog-sort" name="sort"><option value="relevance">Best match</option><option value="latest">Latest</option><option value="popular">Popular</option><option value="price-asc">Price low to high</option><option value="price-desc">Price high to low</option></select></label>
   </form>

@@ -1,5 +1,5 @@
 .category-hero {
-  background:linear-gradient(125deg,#211236,#110c1a 68%);
+  background:linear-gradient(125deg,var(--mist),var(--paper) 68%);
   border-bottom:1px solid var(--line);
   color:var(--ink);
 }

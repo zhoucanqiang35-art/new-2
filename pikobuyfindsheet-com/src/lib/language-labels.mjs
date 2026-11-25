@@ -71,6 +71,31 @@ const chineseLabels = {
 
 };
 
+const pickerLabels = {
+  'zh-Hans': ['币种', '随语言切换', '上传图片', '试试运动鞋、商品编号或微店链接', '复制商品链接'],
+  es: ['Moneda', 'Según el idioma', 'Subir imagen', 'Prueba con zapatillas, un ID o un enlace de Weidian', 'Copiar enlace del producto'],
+  fr: ['Devise', 'Selon la langue', 'Importer une image', 'Essayez baskets, un identifiant ou un lien Weidian', 'Copier le lien du produit'],
+  de: ['Währung', 'An Sprache anpassen', 'Bild hochladen', 'Sneaker, Artikel-ID oder Weidian-Link eingeben', 'Produktlink kopieren'],
+  it: ['Valuta', 'Segui lingua', 'Carica immagine', 'Prova sneaker, ID articolo o link Weidian', 'Copia link del prodotto'],
+  pt: ['Moeda', 'Seguir idioma', 'Enviar imagem', 'Tente tênis, ID do item ou link do Weidian', 'Copiar link do produto'],
+  ru: ['Валюта', 'По языку', 'Загрузить фото', 'Попробуйте кроссовки, ID товара или ссылку Weidian', 'Копировать ссылку товара'],
+  ja: ['通貨', '言語に合わせる', '画像をアップロード', 'スニーカー、商品 ID、Weidian リンクで検索', '商品リンクをコピー'],
+  ko: ['통화', '언어에 맞춤', '이미지 업로드', '운동화, 상품 ID 또는 Weidian 링크로 검색', '상품 링크 복사'],
+  ar: ['العملة', 'حسب اللغة', 'رفع صورة', 'جرّب أحذية رياضية أو معرّف المنتج أو رابط Weidian', 'نسخ رابط المنتج'],
+  tr: ['Para birimi', 'Dile göre', 'Görsel yükle', 'Spor ayakkabı, ürün kimliği veya Weidian bağlantısı', 'Ürün bağlantısını kopyala'],
+  pl: ['Waluta', 'Według języka', 'Prześlij zdjęcie', 'Wpisz trampki, ID produktu lub link Weidian', 'Kopiuj link do produktu'],
+  nl: ['Valuta', 'Volg taal', 'Afbeelding uploaden', 'Probeer sneakers, artikel-ID of Weidian-link', 'Productlink kopiëren'],
+  sv: ['Valuta', 'Följ språk', 'Ladda upp bild', 'Prova sneakers, artikel-ID eller Weidian-länk', 'Kopiera produktlänk'],
+  da: ['Valuta', 'Følg sprog', 'Upload billede', 'Prøv sneakers, vare-id eller Weidian-link', 'Kopiér produktlink'],
+  fi: ['Valuutta', 'Kielen mukaan', 'Lataa kuva', 'Kokeile tennareita, tuotetunnusta tai Weidian-linkkiä', 'Kopioi tuotelinkki'],
+  no: ['Valuta', 'Følg språk', 'Last opp bilde', 'Prøv joggesko, vare-ID eller Weidian-lenke', 'Kopier produktlenke'],
+  hu: ['Pénznem', 'Nyelv szerint', 'Kép feltöltése', 'Próbáld ki: sportcipő, termékazonosító vagy Weidian-link', 'Terméklink másolása'],
+  ro: ['Monedă', 'După limbă', 'Încarcă imagine', 'Încearcă adidași, ID-ul produsului sau un link Weidian', 'Copiază linkul produsului'],
+  cs: ['Měna', 'Podle jazyka', 'Nahrát obrázek', 'Zkuste tenisky, ID položky nebo odkaz Weidian', 'Kopírovat odkaz na produkt'],
+  uk: ['Валюта', 'За мовою', 'Завантажити фото', 'Спробуйте кросівки, ID товару або посилання Weidian', 'Копіювати посилання на товар'],
+};
+const pickerKeys = ['Currency', 'Match language', 'Upload image', 'Try sneakers, item ID or Weidian link', 'Copy product link'];
+
 export function navigationLabels(code) {
   const row = translated[code];
   if (!row) return {};
@@ -87,5 +112,6 @@ export function navigationLabels(code) {
     'Pikobuy Spreadsheet Catalog | Search Product Finds': 'Pikobuy · ' + row[2],
     'Buy on ZZ1ZZ': catalogLabels[code][0],
     ...chineseLabels[code],
+    ...Object.fromEntries(pickerKeys.map((key, index) => [key, pickerLabels[code][index]])),
   };
 }

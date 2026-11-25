@@ -71,3 +71,37 @@ export async function lookupQc(id, request = fetch) {
     .map((entry) => ({url:entry.display,label:typeof entry.skuLabel === 'string' ? entry.skuLabel : ''}));
   return {status:data.status,photos};
 }
+
+
+export async function lookupProductOptions(id) {
+  const url = new URL('/api/Goods/getSkuData', sourceOrigin);
+  url.searchParams.set('weidian_id', id);
+  const response = await fetch(url, {headers:{accept:'application/json'}, signal:AbortSignal.timeout(4500)});
+  if (response.status === 404) return null;
+  if (!response.ok) throw new Error('Seller options are unavailable');
+  const data = await response.json();
+  if (String(data.weidian_id) !== id || typeof data.title !== 'string') return null;
+
+  function photo(value) {
+    if (typeof value !== 'string' || !value) return '';
+    const image = URL.parse(value, sourceOrigin);
+    if (image?.protocol === 'https:' && (image.origin === sourceOrigin || image.hostname.endsWith('.geilicdn.com'))) {
+      return image.href;
+    }
+    return '';
+  }
+
+  const photos = [...new Set((Array.isArray(data.images) ? data.images : []).slice(0, 80).map(photo).filter(Boolean))];
+  const attributes = Array.isArray(data.specifications?.attrs) ? data.specifications.attrs : [];
+  const groups = attributes.slice(0, 6).flatMap((attribute) => {
+    if (typeof attribute.attr_title !== 'string' || !Array.isArray(attribute.attr_values)) return [];
+    const name = attribute.attr_title.trim().slice(0, 80);
+    const values = attribute.attr_values.slice(0, 180).flatMap((value) => {
+      const label = value.attr_value ?? value.name;
+      return typeof label === 'string' && label.trim() ? [{label:label.trim().slice(0, 160), image:photo(value.img ?? value.image)}] : [];
+    });
+    return name && values.length ? [{name, values}] : [];
+  });
+  const price = Number(data.price);
+  return {title:data.title.trim(), price:data.price != null && Number.isFinite(price) && price >= 0 ? price : null, photos, groups};
+}

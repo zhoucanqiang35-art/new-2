@@ -1,19 +1,26 @@
 ---
 import {languages} from '../lib/languages.mjs';
 ---
-<div class="language-picker">
-  <label class="sr" for="site-language">Website language</label>
-  <select id="site-language">
-    {languages.map(([code, label]) => <option value={code} selected={code === 'en'} lang={code} translate="no">{label}</option>)}
-  </select>
-</div>
+<details class="header-picker" id="language-picker">
+  <summary aria-label="Website language"><span id="selected-language" translate="no">English</span></summary>
+  <div class="picker-panel" aria-label="Website language">
+    <div class="picker-grid" dir="ltr">
+      {languages.map(([code, label]) => <button type="button" data-language={code} aria-pressed={code === 'en'} lang={code} dir="auto" translate="no">{label}</button>)}
+    </div>
+  </div>
+</details>
 <p id="language-status" class="sr" role="status"></p>
 <script>
   import {languages} from '../lib/languages.mjs';
 
   import {navigationLabels} from '../lib/language-labels.mjs';
 
-  const input = document.querySelector<HTMLSelectElement>('#site-language')!;
+  import {followLanguageCurrency} from '../lib/shopping.mjs';
+
+  const menu = document.querySelector<HTMLDetailsElement>('#language-picker')!;
+  const input = menu.querySelector('summary')!;
+  const selected = menu.querySelector('#selected-language')!;
+  const choices = [...menu.querySelectorAll<HTMLButtonElement>('[data-language]')];
   const status = document.querySelector('#language-status')!;
   const attributes = ['placeholder', 'aria-label', 'alt', 'title'];
   const ignored = 'script, style, noscript, [translate="no"], [data-reference-price]';
@@ -83,14 +90,15 @@ import {languages} from '../lib/languages.mjs';
       active = code;
       document.documentElement.lang = code;
       document.documentElement.dir = code === 'ar' ? 'rtl' : 'ltr';
-      input.value = code;
+      selected.textContent = languages.find(([language]) => language === code)?.[1] ?? 'English';
+      for (const choice of choices) choice.setAttribute('aria-pressed', String(choice.dataset.language === code));
+      followLanguageCurrency(code);
       status.textContent = '';
       apply(document.querySelector('title')!);
       apply(document.body);
       try { localStorage.setItem(storageKey, code); } catch {}
     } catch {
       if (id === requestId) {
-        input.value = active;
         status.textContent = 'Could not load that language. Please try again.';
       }
     }
@@ -105,28 +113,16 @@ import {languages} from '../lib/languages.mjs';
   observer.observe(document.body, {childList: true, subtree: true});
   observer.observe(document.querySelector('title')!, {childList: true});
 
-  input.addEventListener('change', () => {
-    if (knownCodes.has(input.value)) void setLanguage(input.value);
-  });
+  for (const choice of choices) {
+    choice.addEventListener('click', () => {
+      menu.open = false;
+      input.focus();
+      if (choice.dataset.language) void setLanguage(choice.dataset.language);
+    });
+  }
   try {
     const previous = localStorage.getItem(storageKey);
     const stored = previous === 'zh-Hant' ? 'zh-Hans' : previous;
     if (stored && knownCodes.has(stored) && stored !== 'en') void setLanguage(stored);
   } catch {}
 </script>
-<style>
-  .language-picker select {
-    min-height: 43px;
-    max-width: 7.8rem;
-    padding: 5px 8px;
-    border: 1px solid var(--line);
-    border-radius: 5px;
-    color: var(--ink);
-    background: var(--surface);
-    font-size: .87rem;
-    font-weight: 700;
-  }
-  @media (max-width: 720px) {
-    .language-picker select { min-height: 37px; max-width: 6.2rem; font-size: .78rem; }
-  }
-</style>

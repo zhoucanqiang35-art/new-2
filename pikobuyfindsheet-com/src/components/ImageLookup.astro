@@ -1,13 +1,19 @@
 ---
+import Icon from './Icon.astro';
 import {imageIndexVersion} from '../lib/image-index-version.mjs';
 ---
 <div data-image-lookup data-image-version={imageIndexVersion}>
     <div class="image-lookup">
-      <div>
-        <label for="image-file"><strong>Choose a product photo</strong></label>
+      <label class="upload-box" for="image-file">
         <input id="image-file" type="file" accept="image/jpeg,image/png,image/webp,image/avif,image/gif" disabled/>
-        <p>Search product covers, seller galleries and indexed warehouse QC photos. Your upload stays in this browser.</p>
+        <Icon name="camera" size={25}/>
+        <strong>Upload image</strong>
+        <span>Drag a photo here or choose one from your device</span>
+        <small>JPG, PNG, WebP, AVIF or GIF · up to 15 MB</small>
+      </label>
+      <div class="upload-tools">
         <button id="image-example" class="button outline" type="button" disabled>Try an example photo</button>
+        <p>Search product covers, seller galleries and indexed warehouse QC photos. Your upload stays in this browser.</p>
       </div>
       <img id="image-preview" alt="Selected search image" width="170" height="170" hidden/>
     </div>

@@ -1,6 +1,6 @@
 import {itemId,mainSearch,sourceOrigin} from './platform.mjs';
 import {catalogSearchTerm,rankCatalogItems} from './catalog-search.mjs';
-import {lookupQc,parseProducts,parseSearchResults,parseGallery,findNextPage} from './upstream.mjs';
+import {lookupQc,lookupProductOptions,parseProducts,parseSearchResults,parseGallery,findNextPage} from './upstream.mjs';
 
 async function getHtml(url, timeout = 9500) {
   const response=await fetch(url,{headers:{accept:'text/html'},signal:AbortSignal.timeout(timeout)});
@@ -13,12 +13,19 @@ function response(data,status=200) {
   return Response.json(data,{status,headers:{'Cache-Control':'no-store','X-Robots-Tag':'noindex'}});
 }
 const unavailable = () => response({error:'FindSpreadsheet is temporarily unavailable'},503);
-const supported = new Set(['qc','search','product']);
+const supported = new Set(['qc','search','product','sku']);
 export async function handleApi(request,action,{loadCatalog,loadQc}={}) {
   if(!supported.has(action)) return response({error:'Not found'},404);
   if(request.method!=='GET') return response({error:'Method not allowed'},405);
   const params=new URL(request.url).searchParams;
   try {
+    if(action==='sku') {
+      const id = itemId(params.get('id') || '');
+      if (!id) return response({error:'Invalid Weidian item ID'},400);
+      const listing = await lookupProductOptions(id);
+      if (!listing) return response({listing:null},404);
+      return Response.json({listing}, {headers:{'Cache-Control':'public, max-age=300, s-maxage=900','X-Robots-Tag':'noindex'}});
+    }
     if(action==='qc') {
       const id=itemId(params.get('item')||'');
       if(!id) return response({error:'Invalid Weidian item ID'},400);
