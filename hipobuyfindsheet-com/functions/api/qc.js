@@ -8,7 +8,7 @@ export async function onRequestGet({request}) {
 
   try {
     const upstream = await fetch(source + '?item=' + id, {
-      redirect: 'error',
+      redirect: 'manual',
       signal: AbortSignal.timeout(6500),
     });
     if (!upstream.ok) throw new Error('QC source unavailable');
