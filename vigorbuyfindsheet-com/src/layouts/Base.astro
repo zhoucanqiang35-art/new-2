@@ -2,7 +2,8 @@
 import Preferences from '../components/Preferences.astro';
 import { signup } from '../lib/site';
 import '../style.css';
-const { title, description, active = '' } = Astro.props;
+const { title, description, active = '', noindex = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const nav = [
   ['/', 'Home', 'home'],
   ['/spreadsheet/', 'Spreadsheet', 'spreadsheet'],
@@ -17,7 +18,7 @@ const nav = [
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content={description} />
-  <meta name="robots" content="noindex, nofollow" />
+  {noindex ? <meta name="robots" content="noindex, follow" /> : <link rel="canonical" href={canonical} />}
   <meta name="theme-color" content="#faf9f7" />
   <link rel="icon" type="image/x-icon" href="/brand/favicon.ico" />
   <title>{title}</title>

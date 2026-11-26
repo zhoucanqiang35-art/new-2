@@ -1,16 +1,10 @@
 ---
-import { readFileSync } from 'node:fs';
 import Base from '../../layouts/Base.astro';
 import ListingDetail from '../../components/ListingDetail.astro';
-import { items } from '../../lib/site';
+import { getListingItems } from '../../lib/catalog-build';
 import { getListingPhotos } from '../../lib/listing-photos';
 export function getStaticPaths() {
-  const catalog = JSON.parse(readFileSync('public/data/catalog.json', 'utf8'));
-  const detailItems = new Map(catalog.map((product) => [product.id, product]));
-  for (const item of Object.values(items)) {
-    detailItems.set(item.id, { ...detailItems.get(item.id), ...item });
-  }
-  return Array.from(detailItems.values(), (item) => ({ params: { id: item.id }, props: { item } }));
+  return getListingItems().map((item) => ({ params: { id: item.id }, props: { item } }));
 }
 const { item } = Astro.props;
 const photos = getListingPhotos(item);
