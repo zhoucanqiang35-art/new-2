@@ -22,6 +22,23 @@ const nav = [
   <meta name="theme-color" content="#faf9f7" />
   <link rel="icon" type="image/x-icon" href="/brand/favicon.ico" />
   <title>{title}</title>
+  {Astro.url.pathname === '/' && <meta name="msvalidate.01" content="E34A6C20A8A058592D1DC4B20523F6CB" />}
+  {!noindex && (
+    <script define:vars={{ analyticsHost: Astro.site.hostname, measurementId: 'G-NZ0NGHQBVX' }}>
+      if (window.location.hostname === analyticsHost) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { window.dataLayer.push(arguments); }
+
+        gtag('js', new Date());
+        gtag('config', measurementId);
+
+        const tag = document.createElement('script');
+        tag.async = true;
+        tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + measurementId;
+        document.head.append(tag);
+      }
+    </script>
+  )}
   <slot name="head" />
 </head>
 <body>
