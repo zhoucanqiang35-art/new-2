@@ -1,0 +1,102 @@
+---
+import Site from '../layouts/Site.astro';
+import { categoryKeys } from '../lib/locale-controls.js';
+const categories = Object.entries({
+  shoes: 'Shoes', 'hoodies-sweaters': 'Hoodies & sweaters', 't-shirts': 'T-shirts',
+  jackets: 'Jackets', 'pants-shorts': 'Pants & shorts', headwear: 'Headwear',
+  accessories: 'Accessories', jersey: 'Jerseys', ShortSets: 'Short sets',
+  electronics: 'Electronics', 'other-stuff': 'Other finds'
+});
+---
+<Site title="Browse the Fansbuy Spreadsheet | Findsheet" description="Browse FindSpreadsheet products and find matching Weidian items on Fansbuy.">
+  <section class="shell section">
+    <h1 data-t="spreadsheet">Browse the spreadsheet</h1>
+    <form class="search" action="/spreadsheet/">
+      <input type="search" name="q" data-t-placeholder="searchHint" data-copy-attrs="aria-label" aria-label="Search products" placeholder="Try sneakers, hoodies, jerseys, or a Weidian ID" maxlength="120" />
+      <button class="button" data-t="search">Search</button>
+    </form>
+    <div data-copy-attrs class="categories" aria-label="Product categories">
+      <a href="/spreadsheet/" data-t="all">All finds</a>
+      {categories.map(([slug,name]) => <a data-category={slug} data-t={categoryKeys[slug]} href={'/spreadsheet/?category=' + slug}>{name}</a>)}
+    </div>
+    <form class="search" id="sort" action="/spreadsheet/">
+      <label for="order" data-t="sort">Sort products</label>
+      <select id="order" name="sort" disabled>
+        <option value="" data-t="defaultSort">Default order</option>
+        <option value="latest" data-t="latest">Latest</option>
+        <option value="popular" data-t="popular">Popular</option>
+        <option value="price-low" data-t="lowHigh">Price: low to high</option>
+        <option value="price-high" data-t="highLow">Price: high to low</option>
+      </select>
+      <button class="button secondary" data-t="applySort" disabled>Apply sort</button>
+    </form>
+    <p id="status" role="status" data-copy>Loading products from FindSpreadsheet…</p>
+    <noscript><p><a href="https://findspreadsheet.com/AllProducts/">Browse the source catalog on FindSpreadsheet.</a></p></noscript>
+    <div class="grid" id="products"></div>
+    <div class="pager" id="pager"></div>
+  </section>
+</Site>
+<script>
+  import { paintPrice, setLabel } from '../lib/preferences.js';
+  import { setCopy } from '../lib/page-copy.js';
+  import { element, getData } from '../lib/client.js';
+  const parameters = new URLSearchParams(location.search);
+  const query = parameters.get('q')?.trim() || '';
+  if (query) document.querySelector('input[name=q]').value = query;
+  const category = parameters.get('category') ?? '';
+  for (const link of document.querySelectorAll('.categories a')) {
+    if (!query && (link.dataset.category ?? '') === category) link.setAttribute('aria-current', 'page');
+  }
+  const sortForm = document.getElementById('sort');
+  const selectedSort = parameters.get('sort') ?? '';
+  const order = document.getElementById('order');
+  if (Array.from(order.options).some(option => option.value === selectedSort)) order.value = selectedSort;
+  for (const [name, value] of [['q', query], ['category', query ? '' : category]]) {
+    if (!value) continue;
+    const field = element('input');
+    field.type = 'hidden';
+    field.name = name;
+    field.value = value;
+    sortForm.append(field);
+  }
+  order.disabled = false;
+  sortForm.querySelector('button').disabled = false;
+  const status = document.getElementById('status');
+  getData('/api/catalog', parameters).then(({ products, page, hasNext, total }) => {
+    if (!products.length) setCopy(status, 'No matching products on this page.');
+    else if (query) setCopy(status, 'Results for “[V0]” · [V1] products · Page [V2]', query, total, page);
+    else setCopy(status, 'FindSpreadsheet catalog · [V0] products · Page [V1]', total, page);
+    const grid = document.getElementById('products');
+    for (const product of products) {
+      const link = element('a');
+      link.href = '/product/?' + new URLSearchParams({ path: product.path });
+      if (product.image) {
+        const picture = element('img');
+        picture.src = product.image;
+        picture.alt = '';
+        picture.loading = 'lazy';
+        link.append(picture);
+      } else link.append(element('div', '', 'placeholder'));
+      const info = element('div', '', 'card-info');
+      info.append(element('strong', product.name));
+      if (product.price) {
+        const cost = element('span');
+        paintPrice(cost,product.price);
+        info.append(cost);
+      }
+      link.append(info);
+      const card = element('article', '', 'card');
+      card.append(link);
+      grid.append(card);
+    }
+    const pager = document.getElementById('pager');
+    for (const [caption, number] of [['previous', page - 1], ['next', page + 1]]) {
+      if (number < 1 || (number > page && !hasNext)) continue;
+      parameters.set('page', number);
+      const link = element('a', '', 'button secondary');
+      setLabel(link, caption);
+      link.href = '?' + parameters;
+      pager.append(link);
+    }
+  }).catch(error => { setCopy(status, error.message); });
+</script>

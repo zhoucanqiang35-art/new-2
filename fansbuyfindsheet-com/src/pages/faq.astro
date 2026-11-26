@@ -1,0 +1,21 @@
+---
+import Site from '../layouts/Site.astro';
+import { faq } from '../data/faq.js';
+import FaqTopics from '../components/FaqTopics.astro';
+const { canonical } = Astro.props;
+---
+<Site canonical={canonical} title="Fansbuy FAQ | Ordering, QC, Payments and Shipping" description="Practical answers about Fansbuy product links, payment, warehouse photos, shipping and support.">
+  <section class="shell section faq-page">
+    <h1 data-copy>Fansbuy FAQ</h1>
+    <p class="prose" data-copy>Find answers about the spreadsheet and the official Fansbuy order process. Search by topic, from seller links and top-ups to QC, customs and insurance.</p>
+    <nav data-copy-attrs class="faq-topics" aria-label="FAQ topics">
+      {faq.map(([slug,title]) => <a href={'#'+slug} data-copy>{title}</a>)}
+    </nav>
+    <FaqTopics />
+    <div class="actions">
+      <a class="button" href="/how-to-buy/" data-copy>View the illustrated buying guide</a>
+      <a class="button secondary" href="https://fansbuy.com/helpCenter" data-copy>Official Fansbuy Help Center</a>
+      <a class="button secondary" href="https://fansbuy.com/beginnerGuide" data-copy>Official Fansbuy Beginner’s Guide</a>
+    </div>
+  </section>
+</Site>

@@ -1,0 +1,67 @@
+---
+import { faq, faqSources } from '../data/faq.js';
+
+const { compact = false } = Astro.props;
+---
+<div data-faq-topics data-compact={String(compact)}>
+  <label class="faq-search">
+    <span data-t="faqSearch">Search FAQ</span>
+    <input data-faq-query data-t-placeholder="faqHint" type="search" placeholder="Try shipping, QC or copy link…" />
+  </label>
+  <p data-faq-empty data-t="faqEmpty" role="status" hidden>No FAQ results. Try a different term.</p>
+  <div class:list={[compact && 'home-faq-topics']}>
+    {faq.map(([slug, title, questions]) => (
+      <details class="faq-group" id={slug} open={!compact}>
+        <summary><h2 data-copy>{title}</h2></summary>
+        {questions.map(([question, answer, source]) => (
+          <details class="faq-answer">
+            <summary data-copy>{question}</summary>
+            <p data-copy>{answer}</p>
+            {source && <p class="faq-source"><a href={faqSources[source][1]} data-copy>{faqSources[source][0]}</a></p>}
+          </details>
+        ))}
+      </details>
+    ))}
+  </div>
+</div>
+<script>
+  for (const root of document.querySelectorAll('[data-faq-topics]')) {
+    const field = root.querySelector('[data-faq-query]');
+    const empty = root.querySelector('[data-faq-empty]');
+    const groups = [...root.querySelectorAll('.faq-group')].map(group => ({
+      group, entries: [...group.querySelectorAll('.faq-answer')].map(entry => ({entry, english:entry.textContent.toLowerCase()}))
+    }));
+    let savedOpen = null;
+
+    function searchQuestions() {
+      const terms = field.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+      if (terms.length && !savedOpen) savedOpen = groups.map(({group}) => group.open);
+
+      for (const [index, {group, entries}] of groups.entries()) {
+        for (const {entry, english} of entries) {
+          const current = entry.textContent.toLowerCase();
+          entry.hidden = !terms.every(term => current.includes(term) || english.includes(term));
+        }
+        group.hidden = entries.every(({entry}) => entry.hidden);
+        if (terms.length) group.open = !group.hidden;
+        else if (savedOpen) group.open = savedOpen[index];
+      }
+      if (!terms.length) savedOpen = null;
+      empty.hidden = groups.some(({group}) => !group.hidden);
+    }
+    field.addEventListener('input', searchQuestions);
+    document.addEventListener('fansbuy-copychange', () => {
+      if (field.value.trim()) searchQuestions();
+    });
+
+    if (root.dataset.compact === 'false') {
+      function openLinkedTopic() {
+        for (const {group} of groups) {
+          if (location.hash === '#' + group.id) group.open = true;
+        }
+      }
+      window.addEventListener('hashchange', openLinkedTopic);
+      openLinkedTopic();
+    }
+  }
+</script>

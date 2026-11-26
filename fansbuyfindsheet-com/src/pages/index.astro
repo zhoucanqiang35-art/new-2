@@ -1,0 +1,88 @@
+---
+import Site from '../layouts/Site.astro';
+import Categories from '../components/Categories.astro';
+import FaqTopics from '../components/FaqTopics.astro';
+import { catalogProductAt } from '../lib/catalog-product.js';
+import { categoryKeys } from '../lib/locale-controls.js';
+import { money } from '../lib/locale.js';
+import featuredIds from '../data/featured-ids.json';
+import snapshot from '../data/preview-catalog.json';
+
+const finds = featuredIds.flatMap(id => {
+  const featured = snapshot.products.find(product => product.id === id);
+  const product = catalogProductAt(featured?.path);
+  return product?.id === id ? [product] : [];
+}).slice(0, 15);
+const detail = (product) => '/product/?' + new URLSearchParams({ path: product.path });
+const art = (product) => '/featured/' + product.id + '.webp';
+const shortcuts = [
+  ['shoes', 'Shoes'],
+  ['hoodies-sweaters', 'Hoodies & knits'],
+  ['electronics', 'Electronics'],
+  ['jackets', 'Jackets'],
+  ['accessories', 'Accessories']
+];
+const steps = [
+  ['Find a listing', 'Search by product name or open a category. Use the listing photos and Weidian ID to check that you have the right item.', '/spreadsheet/'],
+  ['Image Search', 'Upload or drop a photo to find visually similar listings, colors, and QC photos in the spreadsheet.', '/image-search/'],
+  ['Plan your parcel', 'Compare routes for your destination, size and weight when you’re ready to submit your parcel.', '/how-to-buy/#shipping']
+];
+---
+<Site title="Fansbuy Spreadsheet | Shop Weidian Finds & Plan Your Order" description="Find Fansbuy-ready products, browse the FindSpreadsheet catalog, check QC photos, and learn how to place your first order.">
+  <section class="guide-hero" aria-labelledby="hero-title">
+    <div class="shell hero-layout">
+      <div class="hero-content">
+        <h1 id="hero-title" data-copy>Explore Weidian finds with <span>Fansbuy Spreadsheet</span></h1>
+        <ul class="hero-benefits">
+          <li data-copy>Browse {new Set(snapshot.products.map(product => product.path.split('/')[1])).size} product categories</li>
+          <li data-copy>Review available warehouse QC photos</li>
+          <li data-copy>Open the original item on Fansbuy</li>
+        </ul>
+        <div class="hero-links">
+          <a class="button light" href="/spreadsheet/" data-t="catalog">Open the catalog</a>
+          <a class="button hero-outline" href="/how-to-buy/" data-t="guide">Buying Guide</a>
+        </div>
+      </div>
+      <div class="hero-discovery">
+        <form class="search hero-search" action="/spreadsheet/" role="search">
+          <input type="search" name="q" data-t-placeholder="searchHint" data-copy-attrs="aria-label" aria-label="Search the Fansbuy spreadsheet" placeholder="Try sneakers, hoodies, jerseys, or a Weidian ID" required maxlength="120" />
+          <button class="button" type="submit" data-t="search">Search</button>
+        </form>
+        <nav data-copy-attrs class="hero-shortcuts" aria-label="Popular categories">
+          {shortcuts.map(([slug,label]) => <a href={'/spreadsheet/?category=' + slug} data-t={categoryKeys[slug]}>{label}</a>)}
+          <a class="hero-image-search" href="/image-search/" data-t="image">Image Search</a>
+        </nav>
+      </div>
+    </div>
+  </section>
+  <section class="section shell home-section" id="categories" aria-labelledby="categories-title">
+    <div class="section-heading"><h2 id="categories-title" data-t="categories">Shop by category</h2></div>
+    <Categories />
+  </section>
+  <section class="section shell home-section" aria-labelledby="featured-title">
+    <div class="section-heading"><h2 id="featured-title" data-t="featured">Featured finds</h2><a href="/spreadsheet/" data-t="catalog">Open the catalog</a></div>
+    <div class="find-grid">
+      {finds.map(product => <article class="card featured-card">
+        <a href={detail(product)}>
+          <img src={art(product)} alt="" loading="lazy" width="360" height="270"/>
+          <div class="card-info"><strong>{product.name}</strong><span data-cny={product.price}>{money(product.price)}</span></div>
+        </a>
+      </article>)}
+    </div>
+  </section>
+  <section class="guide-band">
+    <div class="shell section home-section">
+      <div class="section-heading"><h2 data-t="orderWorks">How a Fansbuy order works</h2><a href="/how-to-buy/" data-copy>Read the buying guide</a></div>
+      <ol class="step-grid">
+        {steps.map(([name,copy,url]) => <li><a href={url}><strong data-t={url === "/image-search/" ? "image" : undefined} data-copy={url === "/image-search/" ? undefined : ""}>{name}</strong></a><p data-copy>{copy}</p></li>)}
+      </ol>
+    </div>
+  </section>
+  <section class="shell section home-section home-faq" aria-labelledby="home-faq-title">
+    <div class="section-heading">
+      <h2 id="home-faq-title" data-copy>Fansbuy FAQ</h2>
+      <a href="/faq/" data-t="openFaq">Open the FAQ page</a>
+    </div>
+    <FaqTopics compact />
+  </section>
+</Site>

@@ -1,0 +1,39 @@
+---
+import Site from '../layouts/Site.astro';
+---
+<Site title="Fansbuy QC Photos | Findsheet" description="Look up warehouse inspection photos in FindSpreadsheet using a Weidian item ID.">
+  <section class="shell section">
+    <h1 data-copy>Fansbuy QC Photos</h1>
+    <p class="prose" data-copy>Enter a Weidian item ID to check FindSpreadsheet for warehouse inspection photos. Check your Fansbuy account for inspections tied to your own order.</p>
+    <form class="search" id="qc-form">
+      <input data-copy-attrs name="id" aria-label="Weidian item ID" placeholder="Weidian item ID" inputmode="numeric" pattern="[0-9]{6,20}" required />
+      <button class="button" data-copy>Find QC photos</button>
+    </form>
+    <p class="note" data-copy>Try item ID <strong>7321418559</strong> to see a sample with QC photos.</p>
+    <p id="status" role="status"></p>
+    <div class="gallery" id="photos"></div>
+  </section>
+</Site>
+<script>
+  import { displayQc } from '../lib/client.js';
+  import { setCopy } from '../lib/page-copy.js';
+  const form = document.getElementById('qc-form');
+  const button = form.querySelector('button');
+  const status = document.getElementById('status');
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    button.disabled = true;
+    try {
+      await displayQc(new FormData(form).get('id'), status, document.getElementById('photos'));
+    } catch (error) {
+      setCopy(status, error.message);
+    } finally {
+      button.disabled = false;
+    }
+  });
+  const itemId = new URLSearchParams(location.search).get('id') || '';
+  if (/^[0-9]{6,20}$/.test(itemId)) {
+    form.elements.namedItem('id').value = itemId;
+    form.requestSubmit();
+  }
+</script>

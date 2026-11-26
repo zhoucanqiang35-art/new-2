@@ -1,0 +1,147 @@
+---
+import Site from '../layouts/Site.astro';
+---
+<Site title="Fansbuy Image Search | Findsheet" description="Upload a photo to find visually similar listings in the Fansbuy preview.">
+  <section class="shell section">
+    <h1 data-t="image">Image Search</h1>
+    <p class="prose" data-copy>Compare your photo with FindSpreadsheet listing, variant and warehouse images in our search index. Your photo is processed in your browser.</p>
+    <label class="upload-zone" id="drop-zone" for="photo-upload">
+      <input id="photo-upload" type="file" accept="image/jpeg,image/png,image/webp,image/avif" aria-describedby="upload-formats" />
+      <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 18V5h18v13H3Zm0-3 5-4 4 4 3-2 6 5"/><circle cx="16" cy="9" r="1.5"/></svg>
+      <strong data-t="upload">Upload an image</strong>
+      <span id="upload-formats" data-copy>Drag it here or click to select · JPG, PNG, WebP or AVIF · Up to 12 MB</span>
+    </label>
+    <div class="actions"><button class="button secondary" type="button" id="sample" data-t="sample">Try a sample photo</button></div>
+    <p id="image-status" role="status"></p>
+    <div class="grid" id="image-matches"></div>
+  </section>
+</Site>
+<script>
+  import { archiveDescriptor, searchArchive } from '../lib/archived-image-search.js';
+  import { element, getData } from '../lib/client.js';
+  import { paintPrice } from '../lib/preferences.js';
+  import { setCopy } from '../lib/page-copy.js';
+  const upload = document.getElementById('photo-upload');
+  const drop = document.getElementById('drop-zone');
+  const status = document.getElementById('image-status');
+  const matches = document.getElementById('image-matches');
+  let index;
+  let extraIndex;
+  let sequence = 0;
+
+  async function signature(file) {
+    const bitmap = await createImageBitmap(file);
+    try {
+      const canvas = document.createElement('canvas');
+      canvas.width = canvas.height = 8;
+      const context = canvas.getContext('2d', {willReadFrequently:true});
+      context.fillStyle = '#fff';
+      context.fillRect(0,0,8,8);
+      context.imageSmoothingQuality = 'high';
+      context.drawImage(bitmap,0,0,8,8);
+      return {pixels:context.getImageData(0,0,8,8).data,archive:archiveDescriptor(bitmap)};
+    } finally { bitmap.close(); }
+  }
+  function distance(reference, input) {
+    let score = 0;
+    const packed = reference.length === 256 ? atob(reference) : null;
+    for (let pixel = 0; pixel < 64; pixel++) {
+      for (let channel = 0; channel < 3; channel++) {
+        const offset = pixel * 3 + channel;
+        const expected = packed ? packed.charCodeAt(offset) : parseInt(reference.slice(offset * 2,offset * 2 + 2),16);
+        const diff = input[pixel * 4 + channel] - expected;
+        score += diff * diff;
+      }
+    }
+    return score;
+  }
+  async function search(file) {
+    if (!file) return;
+    const current = ++sequence;
+    matches.replaceChildren();
+    if (!/^image\/(jpeg|png|webp|avif)$/.test(file.type) || file.size > 12 * 1024 * 1024) {
+      setCopy(status, 'Choose a supported image under 12 MB.');
+      return;
+    }
+    setCopy(status, 'Comparing images…');
+    try {
+      index ??= fetch('/visual-index.json').then(r => {
+        if (!r.ok) throw new Error('Image index unavailable');
+        return r.json();
+      }).catch(error => { index = null; throw error; });
+      extraIndex ??= fetch('/visual-index-extra.json', { signal: AbortSignal.timeout(11000) }).then(r => {
+        if (!r.ok) throw new Error('Additional image index unavailable');
+        return r.json();
+      }).catch(() => { extraIndex = null; return null; });
+      const [data, descriptor, extra] = await Promise.all([index,signature(file),extraIndex]);
+      if (current !== sequence) return;
+      const best = new Map();
+      const rows = extra ? [...data.items, ...extra.items] : data.items;
+      for (const [path,vector,name,image,price,kind] of rows) {
+        const key = kind === 'site' ? image : path;
+        const score = Math.sqrt(distance(vector,descriptor.pixels) / 192) * .8;
+        if (score < (best.get(key)?.score ?? Infinity)) best.set(key,{path,name,image,price,kind,score});
+      }
+      setCopy(status, 'Comparing photos across the full catalog…');
+      const archive = await searchArchive(descriptor.archive,best,() => current === sequence).catch(() => ({compared:0,failures:1}));
+      if (current !== sequence) return;
+      const ranked = [...best.values()].sort((a,b) => a.score-b.score).slice(0,48);
+      const ids = ranked.filter(item => item.id && !item.path).map(item => item.id);
+      const { products } = ids.length
+        ? await getData('/api/image-products',{ids:ids.join(',')}).catch(() => ({products:{}}))
+        : {products:{}};
+      if (current !== sequence) return;
+      const paths = new Set();
+      const results = ranked.flatMap(item => {
+        if (item.path) return [item];
+        const product = products[item.id];
+        return product ? [{...item,path:product.path,name:product.name,price:product.price,cover:product.image}] : [];
+      }).filter(item => {
+        if (paths.has(item.path)) return false;
+        paths.add(item.path);
+        return true;
+      }).slice(0,12);
+      const count = rows.length + archive.compared;
+      setCopy(status, archive.failures || !extra
+        ? 'Compared [V0] image records. Some index sections could not be loaded.'
+        : 'Closest visual matches across [V0] indexed image records.', count);
+      for (const {path,name,image,price,kind,cover} of results) {
+        const card = element('article','','card');
+        const link = element('a');
+        link.href = /^(qc|site)$/.test(kind) && !path.endsWith('.html')
+          ? path
+          : '/product/?' + new URLSearchParams({ path }) + (kind === 'qc' ? '#qc' : '');
+        const photo = element('img');
+        photo.src = image;
+        photo.alt = '';
+        photo.loading = 'lazy';
+        if (cover && cover !== image && kind !== 'qc') photo.addEventListener('error', () => { photo.src = cover; }, {once:true});
+        const info = element('div','','card-info');
+        const cost = element('span');
+        paintPrice(cost,price);
+        info.append(element('strong',name),cost);
+        const labels = { cover:'Listing image', gallery:'Detail photo', variant:'Variant image', qc:'QC photo', site:'Site image' };
+        if (Object.hasOwn(labels,kind)) {
+          const label = element('small', '', 'match-kind');
+          setCopy(label, labels[kind]);
+          info.append(label);
+        }
+        link.append(photo,info);
+        card.append(link);
+        matches.append(card);
+      }
+    } catch { if (current === sequence) setCopy(status, 'Could not search this photo. Try a different image.'); }
+  }
+  upload.addEventListener('change', () => { search(upload.files[0]); upload.value = ''; });
+  drop.addEventListener('dragover', event => { event.preventDefault(); drop.classList.add('dragging'); });
+  drop.addEventListener('dragleave', () => drop.classList.remove('dragging'));
+  drop.addEventListener('drop', event => {
+    event.preventDefault();
+    drop.classList.remove('dragging');
+    search(event.dataTransfer.files[0]);
+  });
+  document.getElementById('sample').addEventListener('click', async () => {
+    const response = await fetch('/featured/7869064925.webp');
+    if (response.ok) await search(await response.blob());
+  });
+</script>

@@ -1,0 +1,351 @@
+---
+import Site from '../layouts/Site.astro';
+---
+<Site title="Product Details | Fansbuy Findsheet" description="Review listing photos, the matching Fansbuy purchase link and available FindSpreadsheet QC photos.">
+  <section class="shell product-section">
+    <p class="product-breadcrumb"><a href="/spreadsheet/" data-t="spreadsheet">Spreadsheet</a> / <span data-t="productDetails">Product details</span></p>
+    <p id="status" role="status" hidden></p>
+    <div class="actions" id="product-recovery" hidden>
+      <button type="button" class="button secondary" id="product-retry" data-t="retry">Try again</button>
+      <a id="product-source-fallback" data-t="sourceListing" hidden>View listing on FindSpreadsheet</a>
+      <a href="/spreadsheet/" data-t="catalog">Open the catalog</a>
+    </div>
+    <div class="product-layout" id="product" hidden>
+      <div class="product-gallery-panel">
+        <h2 data-t="listing">Listing photos</h2>
+        <div class="primary-frame" id="frame" hidden>
+          <a data-copy-attrs id="open-image" target="_blank" rel="noopener" aria-label="Open full listing photo"><img id="primary-image" alt="" fetchpriority="high" decoding="async" /></a>
+        </div>
+        <div data-copy-attrs class="thumbnails" id="thumbnails" aria-label="Choose listing photo"></div>
+        <p id="no-photos" hidden data-copy>No listing photos are currently available.</p>
+      </div>
+      <div class="product-info">
+        <h1 id="name">Product details</h1>
+        <p class="note" id="item-id"></p>
+        <p id="price"></p>
+        <div class="actions">
+          <a id="buy" class="button purchase-button" hidden rel="nofollow" data-t="buy">Buy on Fansbuy</a>
+          <a id="buy-search" class="button secondary purchase-button" href="https://fansbuy.com/" data-t="findOnFansbuy" hidden>Search on Fansbuy</a>
+          <div class="purchase-tools" id="purchase-tools" hidden>
+            <details class="agent-menu" id="agent-menu"><summary data-t="agents">Other platforms</summary><div class="option-grid agent-links" id="agents"></div></details>
+            <button class="button secondary" id="copy" type="button" data-t="copy">Copy product link</button>
+          </div>
+          <p class="note" role="status" id="copy-status" hidden></p>
+        </div>
+        <div id="variants" aria-live="polite" hidden></div>
+        <a id="source" href="https://findspreadsheet.com/" data-t="sourceListing">View listing on FindSpreadsheet</a>
+        <p class="note" data-copy>Confirm the seller’s size, color, availability and current price on Fansbuy before ordering.</p>
+      </div>
+    </div>
+  </section>
+  <section class="shell product-qc" id="product-photos" hidden>
+    <h2 data-t="listing">Listing photos</h2>
+    <div class="gallery" id="listing-photos"></div>
+    <p id="listing-photos-empty" hidden data-copy>No listing photos are currently available.</p>
+    <details class="product-qc-details" id="qc" open>
+      <summary data-t="qc">Warehouse QC photos</summary>
+      <p id="qc-status" role="status"></p>
+      <div class="gallery" id="qc-photos"></div>
+      <div class="qc-recovery" id="qc-recovery" hidden>
+        <button type="button" class="button secondary" id="qc-retry" data-t="qcRetry">Retry QC</button>
+        <a id="qc-source" data-copy>Check the source listing</a>
+      </div>
+    </details>
+  </section>
+  <script id="product-seed" type="application/json" is:inline>null</script>
+</Site>
+<script>
+  import agentOptions from '../data/agents.json';
+  import { findspreadsheet, productPath } from '../lib/fansbuy.js';
+  import { paintPrice, setLabel, translate } from '../lib/preferences.js';
+  import { productOptions } from '../lib/product-options.js';
+  import { clearCopy, setCopy, setCopyAttribute } from '../lib/page-copy.js';
+  import { displayQc, element, getData } from '../lib/client.js';
+  const status = document.getElementById('status');
+  const path = new URLSearchParams(location.search).get('path') || '';
+
+  async function showProduct(product) {
+    document.getElementById('name').textContent = product.name;
+    setCopy(document.querySelector('title'), '[V0] | Fansbuy Findsheet', product.name);
+    const itemId = document.getElementById('item-id');
+    if (product.id) setCopy(itemId, 'Weidian item [V0]', product.id);
+    else setLabel(itemId, 'noWeidian');
+    const price = document.getElementById('price');
+    if (String(product.price ?? '').trim()) paintPrice(price,product.price);
+    else setCopy(price, 'Check the original listing for price.');
+    document.getElementById('source').href = product.source;
+    const buy = document.getElementById('buy');
+    document.getElementById('buy-search').hidden = Boolean(product.buy);
+    if (product.buy) {
+      buy.href = product.buy;
+      buy.hidden = false;
+      const seller = 'https://weidian.com/item.html?itemID=' + product.id;
+      const agents = document.getElementById('agents');
+      for (const agent of agentOptions) {
+        const url = agent.href.replaceAll('{id}',product.id);
+        const link = element('a');
+        const logo = element('img');
+        logo.src = '/agents/' + agent.key + '.webp';
+        logo.alt = '';
+        logo.width = 25;
+        logo.height = 25;
+        const caption = element('span');
+        caption.append(element('strong',agent.name));
+        if (agent.paste) {
+          const instruction = element('small');
+          setCopy(instruction, 'Paste link');
+          caption.append(instruction);
+        }
+        link.append(logo,caption);
+        link.href = url;
+        link.target = '_blank';
+        link.rel = 'nofollow noopener';
+        agents.append(link);
+      }
+      const menu = document.getElementById('agent-menu');
+      const summary = menu.querySelector('summary');
+      menu.addEventListener('keydown',event => {
+        if (event.key === 'Escape' && menu.open) {
+          menu.open = false;
+          summary.focus();
+        }
+      });
+      document.addEventListener('click',event => {
+        if (menu.open && !menu.contains(event.target)) menu.open = false;
+      });
+      document.getElementById('purchase-tools').hidden = false;
+      document.getElementById('copy').addEventListener('click',async () => {
+        const message = document.getElementById('copy-status');
+        message.hidden = false;
+        try { await navigator.clipboard.writeText(seller); setCopy(message, 'Product link copied.'); }
+        catch { setCopy(message, '[V0]', seller); }
+      });
+    }
+
+    const image = document.getElementById('primary-image');
+    const imageLink = document.getElementById('open-image');
+    const thumbnails = document.getElementById('thumbnails');
+    const listingPhotos = document.getElementById('listing-photos');
+    const listingEmpty = document.getElementById('listing-photos-empty');
+    const frame = document.getElementById('frame');
+    const noPhotos = document.getElementById('no-photos');
+    const failedImages = new Set();
+
+    function showImage(index) {
+      if (image.getAttribute('src') !== product.images[index]) image.src = product.images[index];
+      setCopyAttribute(image, 'alt', '[V0] · listing photo [V1]', product.name, index + 1);
+      imageLink.href = product.images[index];
+      Array.from(thumbnails.children).forEach((button, n) =>
+        button.setAttribute('aria-pressed', String(n === index)));
+      frame.hidden = false;
+      noPhotos.hidden = true;
+    }
+
+    function markUnavailable(url) {
+      failedImages.add(url);
+      const index = product.images.indexOf(url);
+      if (index < 0) return;
+      listingPhotos.children[index].hidden = true;
+      thumbnails.children[index].hidden = true;
+      const noAvailablePhotos = product.images.every(photo => failedImages.has(photo));
+      thumbnails.hidden = noAvailablePhotos;
+      listingEmpty.hidden = !noAvailablePhotos;
+    }
+
+    image.addEventListener('error', () => {
+      markUnavailable(image.getAttribute('src'));
+      const next = product.images.findIndex(url => !failedImages.has(url));
+      if (next >= 0) showImage(next);
+      else {
+        frame.hidden = true;
+        noPhotos.hidden = false;
+      }
+    });
+
+    if (product.images.length) showImage(0);
+
+    for (const [index, url] of product.images.entries()) {
+      const button = element('button');
+      const thumb = element('img');
+      button.type = 'button';
+      setCopyAttribute(button, 'aria-label', 'Show photo [V0]', index + 1);
+      button.setAttribute('aria-pressed', String(index === 0));
+      button.addEventListener('click', () => showImage(index));
+      thumb.alt = '';
+      thumb.loading = 'eager';
+      thumb.fetchPriority = 'low';
+      thumb.addEventListener('error', () => markUnavailable(url), { once: true });
+      button.append(thumb);
+      thumbnails.append(button);
+
+      const link = element('a');
+      const photo = element('img');
+      link.href = url;
+      link.target = '_blank';
+      link.rel = 'noopener';
+      setCopyAttribute(photo, 'alt', '[V0] · listing photo [V1]', product.name, index + 1);
+      photo.loading = 'eager';
+      photo.fetchPriority = 'low';
+      photo.addEventListener('error', () => markUnavailable(url), { once: true });
+      link.append(photo);
+      listingPhotos.append(link);
+      thumb.src = url;
+      photo.src = url;
+    }
+    // The initial HTML can have discovered a failed cover before this script ran.
+    if (image.getAttribute('src') && image.complete && !image.naturalWidth) image.dispatchEvent(new Event('error'));
+    if (!product.images.length) {
+      noPhotos.hidden = false;
+      listingEmpty.hidden = false;
+    }
+
+    status.hidden = true;
+    document.getElementById('product').hidden = false;
+    document.getElementById('product-photos').hidden = false;
+    const qcPanel = document.getElementById('qc');
+    if (location.hash === '#qc') {
+      qcPanel.open = true;
+      qcPanel.scrollIntoView();
+    }
+    const qcStatus = document.getElementById('qc-status');
+    if (!product.id) {
+      setCopy(qcStatus, 'No warehouse QC record is linked to this listing.');
+      return;
+    }
+    const qcGallery = document.getElementById('qc-photos');
+    const recovery = document.getElementById('qc-recovery');
+    const retry = document.getElementById('qc-retry');
+    document.getElementById('qc-source').href = product.source;
+
+    async function loadQc(cached) {
+      retry.disabled = true;
+      recovery.hidden = true;
+      try {
+        await displayQc(product.id, qcStatus, qcGallery, () => { recovery.hidden = false; }, { cached, eager: true });
+      } catch {
+        setCopy(qcStatus, 'We could not check FindSpreadsheet for QC photos right now.');
+        recovery.hidden = false;
+      } finally {
+        retry.disabled = false;
+      }
+    }
+
+    retry.addEventListener('click', () => loadQc());
+    void loadQc(product.qc);
+    const panel = document.getElementById('variants');
+    panel.hidden = false;
+
+    function showSellerPhoto(url, label) {
+      image.src = url;
+      setCopyAttribute(image, 'alt', '[V0]', label);
+      imageLink.href = url;
+      frame.hidden = false;
+      noPhotos.hidden = true;
+      for (const thumb of thumbnails.children) thumb.setAttribute('aria-pressed','false');
+    }
+
+    try {
+      const { groups, images = [] } = product.options ?? await productOptions(product.id);
+      clearCopy(panel);
+      panel.replaceChildren();
+      for (const group of groups) {
+        const section = element('section','','variant-group');
+        const heading = element('h2',group.name);
+        const choices = element('div','','variant-options');
+        if (group.options.some(option => option.image)) choices.classList.add('variant-photos');
+        if (/size|尺码|尺寸/i.test(group.name)) heading.dataset.t = 'size';
+        if (/style|颜色|款式/i.test(group.name)) heading.dataset.t = 'style';
+        if (/color|colour|颜色/i.test(group.name)) heading.dataset.t = 'color';
+        if (heading.dataset.t) heading.textContent = translate(heading.dataset.t);
+        for (const option of group.options) {
+          let optionImage = option.image;
+          const button = element('button',optionImage ? '' : option.label);
+          button.type = 'button';
+          button.title = option.label;
+          button.setAttribute('aria-label',option.label);
+          button.setAttribute('aria-pressed','false');
+          if (optionImage) {
+            const icon = element('img');
+            icon.alt = '';
+            icon.loading = 'eager';
+            icon.fetchPriority = 'low';
+            icon.addEventListener('error', () => {
+              optionImage = null;
+              icon.remove();
+              button.classList.add('variant-text');
+              button.textContent = option.label;
+            }, { once: true });
+            button.append(icon);
+            icon.src = optionImage;
+          }
+          button.addEventListener('click', () => {
+            for (const other of choices.children) other.setAttribute('aria-pressed',String(other === button));
+            if (optionImage) showSellerPhoto(optionImage, option.label);
+          });
+          choices.append(button);
+        }
+        section.append(heading,choices);
+        panel.append(section);
+      }
+      if (images.length) {
+        const section = element('section', '', 'variant-group seller-photo-group');
+        const heading = element('h2');
+        setLabel(heading, 'sellerPhotos');
+        const choices = element('div', '', 'variant-options variant-photos');
+        for (const [index, url] of images.entries()) {
+          const button = element('button');
+          button.type = 'button';
+          setCopyAttribute(button, 'aria-label', 'Show photo [V0]', index + 1);
+          const icon = element('img');
+          icon.alt = '';
+          icon.loading = 'eager';
+          icon.fetchPriority = 'low';
+          icon.addEventListener('error', () => {
+            button.remove();
+            if (!choices.children.length) {
+              section.remove();
+              if (!groups.length) setCopy(panel, 'Open Fansbuy to check the seller’s available colors and sizes.');
+            }
+          }, { once: true });
+          button.addEventListener('click', () => showSellerPhoto(url, product.name));
+          button.append(icon);
+          choices.append(button);
+          icon.src = url;
+        }
+        section.append(heading, choices);
+        panel.prepend(section);
+      }
+      if (!groups.length && !images.length) setCopy(panel, 'Open Fansbuy to check the seller’s available colors and sizes.');
+    } catch {
+      setCopy(panel, 'Open Fansbuy to check the seller’s available colors and sizes.');
+    }
+  }
+
+  const recovery = document.getElementById('product-recovery');
+  const retry = document.getElementById('product-retry');
+  if (productPath.test(path)) {
+    const original = document.getElementById('product-source-fallback');
+    original.href = new URL(path, findspreadsheet).href;
+    original.hidden = false;
+  }
+
+  let initialProduct = JSON.parse(document.getElementById('product-seed').textContent);
+
+  async function loadProduct() {
+    recovery.hidden = true;
+    retry.hidden = !productPath.test(path);
+    status.hidden = true;
+    try {
+      const product = initialProduct ?? await getData('/api/product', { path });
+      initialProduct = null;
+      await showProduct(product);
+    } catch (error) {
+      status.hidden = false;
+      setCopy(status, error.message);
+      recovery.hidden = false;
+    }
+  }
+
+  retry.addEventListener('click', loadProduct);
+  void loadProduct();
+</script>

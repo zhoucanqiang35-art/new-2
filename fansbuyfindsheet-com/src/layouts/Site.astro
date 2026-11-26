@@ -1,0 +1,45 @@
+---
+import Preferences from '../components/Preferences.astro';
+import { register } from '../lib/fansbuy.js';
+import './site.css';
+const { title, description, canonical } = Astro.props;
+const indexable = process.env.SITE_INDEXABLE === '1' || process.env.CF_PAGES_BRANCH === 'main';
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  {canonical && <link rel="canonical" href={canonical} />}
+  <meta data-copy-attrs="content" name="description" content={description} />
+  <meta name="robots" content={indexable ? "index,follow" : "noindex,follow"} />
+  <link rel="icon" type="image/svg+xml" href="/brand/favicon.svg" />
+</head>
+<body>
+  <a class="skip" href="#content" data-t="skip">Skip to content</a>
+  <header class="header">
+    <div class="shell bar">
+      <a data-copy-attrs class="brand" href="/" aria-label="Fansbuy Findsheet home">
+        <img data-copy-attrs src="/brand/fansbuy.svg" alt="Fansbuy" width="114" height="32" />
+      </a>
+      <nav data-copy-attrs aria-label="Main">
+        <a href="/spreadsheet/" data-t="spreadsheet">Spreadsheet</a>
+        <a href="/image-search/" data-t="image">Image Search</a>
+        <a href="/how-to-buy/" data-t="guide">Buying Guide</a>
+        <a href="/faq/">FAQ</a>
+      </nav>
+      <div class="header-tools"><Preferences /><a class="button" rel="sponsored" href={register} data-t="join">Join Fansbuy</a></div>
+    </div>
+  </header>
+  <main id="content"><slot /></main>
+  <footer class="footer">
+    <div class="shell">
+      <strong>Fansbuy Findsheet</strong>
+      <p data-copy>An independent product discovery site powered by FindSpreadsheet. Ordering, payments and shipping take place on Fansbuy. The registration link is a referral link.</p>
+      <a href="https://findspreadsheet.com/">FindSpreadsheet</a> · <a href="https://fansbuy.com/" data-copy>Official Fansbuy ↗</a>
+      <p class="note" data-copy>Converted prices are estimates based on <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html">ECB reference rates</a> for 24 November 2026.</p>
+    </div>
+  </footer>
+</body>
+</html>

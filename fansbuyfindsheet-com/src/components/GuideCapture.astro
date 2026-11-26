@@ -1,0 +1,20 @@
+---
+const { name, alt, arrows, source, width = 1920, height = 919 } = Astro.props;
+---
+<figure class="guide-capture">
+  <a data-copy-attrs href={'/guide/guide-' + name + '.jpg'} target="_blank" rel="noopener" aria-label={'Open screenshot: ' + alt}>
+    <img data-copy-attrs src={'/guide/guide-' + name + '.jpg'} width={width} height={height} loading="lazy" alt={alt} />
+    <svg viewBox={`0 0 ${width} ${height}`} aria-hidden="true" focusable="false">
+      {arrows.map(([fromX,fromY,toX,toY]) => {
+        const angle = Math.atan2(toY-fromY,toX-fromX);
+        const left = [toX-30*Math.cos(angle-.55),toY-30*Math.sin(angle-.55)];
+        const right = [toX-30*Math.cos(angle+.55),toY-30*Math.sin(angle+.55)];
+        return <>
+          <path d={`M${fromX} ${fromY} L${toX} ${toY} M${left.join(' ')} L${toX} ${toY} L${right.join(' ')}`} stroke="white" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d={`M${fromX} ${fromY} L${toX} ${toY} M${left.join(' ')} L${toX} ${toY} L${right.join(' ')}`} stroke="#d21534" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </>;
+      })}
+    </svg>
+  </a>
+  <figcaption data-copy>{source}</figcaption>
+</figure>

@@ -1,0 +1,21 @@
+---
+import { languages } from '../lib/locale.js';
+const entries = Object.entries(languages);
+---
+<div class="preferences">
+  <details>
+    <summary data-active-language aria-label="Language: English">English</summary>
+    <div data-copy-attrs class="option-grid" role="group" aria-label="Languages">
+      {entries.map(([code,[label]]) => <button type="button" data-language={code} lang={code} aria-pressed={String(code === 'en')}>{label}</button>)}
+    </div>
+  </details>
+  <details>
+    <summary data-active-currency aria-label="Currency: USD">USD</summary>
+    <div data-copy-attrs class="option-grid" role="group" aria-label="Currencies">
+      {entries.map(([code,[label,currency]]) => <button type="button" data-region={code} aria-pressed={String(code === 'en')}><strong>{currency}</strong><small>{label}</small></button>)}
+    </div>
+  </details>
+</div>
+<script>
+  import '../lib/preferences.js';
+</script>

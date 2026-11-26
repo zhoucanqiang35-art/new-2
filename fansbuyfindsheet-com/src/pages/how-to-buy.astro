@@ -1,0 +1,63 @@
+---
+import Site from '../layouts/Site.astro';
+import GuideCapture from '../components/GuideCapture.astro';
+import { register } from '../lib/fansbuy.js';
+---
+<Site title="How to Buy on Fansbuy | Illustrated Shopping Guide" description="Find a product, place a Fansbuy order, check warehouse photos and track your parcel with illustrated steps.">
+  <section class="shell section walkthrough">
+    <h1 data-copy>Fansbuy Buying Guide</h1>
+    <p class="prose" data-copy>Find an item on Findsheet, then follow it through the Fansbuy warehouse and international delivery. Select any screenshot to open it full size.</p>
+    <nav data-copy-attrs class="faq-topics" aria-label="Buying steps">
+      <a href="#find" data-copy>Find & order</a>
+      <a href="#review" data-copy>Warehouse QC</a>
+      <a href="#shipping" data-copy>Shipping & tracking</a>
+    </nav>
+    <div class="walkthrough-grid">
+      <section id="find" class="walkthrough-step">
+        <h2 data-copy>1. Find your item</h2>
+        <p data-copy>In the <a href="/spreadsheet/">catalog</a>, search by name, category or Weidian ID. Use <a href="/image-search/">Image Search</a> if you only have a photo.</p>
+        <GuideCapture name="search" source="Findsheet catalog · Search by keyword or item ID." alt="Findsheet catalog showing the hoodie search control" arrows={[[1000,205,904,260]]}/>
+      </section>
+      <section id="order" class="walkthrough-step">
+        <h2 data-copy>2. Open the listing on Fansbuy</h2>
+        <p data-copy>Select <strong>Buy on Fansbuy</strong> and <a href={register} rel="sponsored">sign up</a> if needed. Confirm your color, size and quantity, then review the item price and domestic delivery at checkout.</p>
+        <GuideCapture name="product" source="Findsheet detail · Open the original listing with Buy on Fansbuy." alt="Findsheet product detail showing the Fansbuy buying button" arrows={[[1518,338,1443,401]]}/>
+      </section>
+      <section id="diy" class="walkthrough-step">
+        <h2 data-copy>3. Use DIY Order if the link fails</h2>
+        <p data-copy>On Findsheet, use <strong>Copy product link</strong>. In Fansbuy’s <a href="https://fansbuy.com/fillbuy">DIY Order</a>, paste the seller URL and fill in the item details and requested options before adding it to the cart.</p>
+        <GuideCapture name="diy" width={1510} height={755} source="Fansbuy official guide · DIY Order item URL and title fields." alt="Official Fansbuy DIY Order interface showing the Item URL field" arrows={[[1120,121,1000,173]]}/>
+      </section>
+      <section id="review" class="walkthrough-step">
+        <h2 data-copy>4. Look up reference QC photos</h2>
+        <p data-copy>On the Findsheet product page, scroll to <strong>Warehouse QC photos</strong> or use the <a href="/qc-photos/?id=7321418559">QC lookup</a> with a Weidian ID.</p>
+        <GuideCapture name="inspection" source="Findsheet QC lookup · Enter a product ID and search." alt="Findsheet QC lookup showing the Weidian item ID field" arrows={[[1110,286,1000,337]]}/>
+      </section>
+      <section id="warehouse" class="walkthrough-step">
+        <h2 data-copy>5. Inspect your own warehouse order</h2>
+        <p data-copy>When the seller’s parcel arrives, open <strong>Packing Centre</strong> on Fansbuy. Find your item and check its inspection photos against your order before you submit it for shipping.</p>
+        <GuideCapture name="warehouse" width={1512} height={603} source="Fansbuy official guide · Packing Centre and the photo option." alt="Official Fansbuy Packing Centre showing an item and the Take photos option" arrows={[[495,347,396,401]]}/>
+      </section>
+      <section id="shipping" class="walkthrough-step">
+        <h2 data-copy>6. Estimate international shipping</h2>
+        <p data-copy>Open Fansbuy’s <a href="https://fansbuy.com/estimates">Shipping Cost Estimate</a>. Enter your destination, item category, package weight and any available dimensions to compare routes.</p>
+        <GuideCapture name="shipping" source="Fansbuy estimator · Destination, weight and Estimate controls." alt="Official Fansbuy shipping cost estimator showing destination, weight and Estimate" arrows={[[706,430,650,492],[707,544,666,592],[1160,650,1060,697]]}/>
+      </section>
+      <section id="parcel" class="walkthrough-step">
+        <h2 data-copy>7. Submit your parcel</h2>
+        <p data-copy>Select the items in Packing Centre and use <strong>Submit Shipping</strong>. Review the address, shipping method, packaging and final charges in your Fansbuy account.</p>
+        <GuideCapture name="parcel" width={1486} height={586} source="Fansbuy official guide · Submit Shipping in Packing Centre." alt="Official Fansbuy Packing Centre with an arrow marking Submit Shipping" arrows={[]}/>
+      </section>
+      <section id="track" class="walkthrough-step">
+        <h2 data-copy>8. Track the shipment</h2>
+        <p data-copy>After dispatch, open <strong>My Packages</strong>, find your parcel and select <strong>Track shipping</strong> to see its latest status.</p>
+        <GuideCapture name="tracking" width={1860} height={583} source="Fansbuy official guide · Track shipping in My Packages." alt="Official Fansbuy My Packages interface showing the Track shipping button" arrows={[[1680,466,1631,530]]}/>
+      </section>
+    </div>
+    <div class="actions">
+      <a class="button" href="/spreadsheet/" data-t="spreadsheet">Browse the spreadsheet</a>
+      <a class="button secondary" href="/faq/" data-t="openFaq">Read the FAQ</a>
+      <a class="button secondary" href="https://fansbuy.com/beginnerGuide" data-copy>Official Fansbuy instructions</a>
+    </div>
+  </section>
+</Site>

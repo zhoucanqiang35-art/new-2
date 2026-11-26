@@ -1,0 +1,21 @@
+{
+  "name": "fansbuyfindsheet-com",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "build:preview": "npm run build && node scripts/build-preview.mjs"
+  },
+  "dependencies": {
+    "astro": "7.4.13",
+    "cheerio": "1.1.2"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "wrangler": "4.163.0"
+  }
+}
