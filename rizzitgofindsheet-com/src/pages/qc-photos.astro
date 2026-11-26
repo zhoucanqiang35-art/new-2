@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import { sampleId } from '../lib/shared.js';
+---
+<Base title="RizzitGo QC Photos | Findspreadsheet Warehouse Photo Lookup" description="Look up available Findspreadsheet warehouse QC photos by Weidian item ID before choosing a RizzitGo product.">
+  <section class="wrap section qc-panel" data-qc>
+    <h1>RizzitGo QC photos</h1>
+    <p class="intro">Enter a Weidian item ID to check Findspreadsheet for warehouse inspection photos. Inspect color, labels, stitching and measurements where shown.</p>
+    <form class="search-form" aria-label="Look up QC">
+      <label class="sr-only" for="qc-id">Weidian item ID</label>
+      <input id="qc-id" name="item" inputmode="numeric" pattern="[0-9]&#123;8,15&#125;" maxlength="15" required placeholder={sampleId} />
+      <button class="button" type="submit">Check QC</button>
+    </form>
+    <p role="status" data-qc-status>Enter your product’s Weidian item ID.</p>
+    <div class="qc-grid" data-qc-results></div>
+    <button class="button outline" type="button" data-qc-retry hidden>Retry QC lookup</button>
+  </section>
+</Base>
+<script>
+  import '../lib/qc-ui.js';
+</script>

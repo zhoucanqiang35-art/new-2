@@ -1,0 +1,46 @@
+---
+import { join } from '../lib/shared.js';
+import '../style.css';
+
+const { title, description, path = Astro.url.pathname, noindex = false, structured } = Astro.props;
+const canonical = new URL(path, Astro.site);
+const nav = [['/spreadsheet/', 'Spreadsheet'], ['/image-search/', 'Image Search'], ['/qc-photos/', 'QC Photos'], ['/how-to-buy/', 'Buying Guide']];
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="theme-color" content="#cefa05" />
+  {noindex && <meta name="robots" content="noindex, follow" />}
+  <link rel="canonical" href={canonical} />
+  <link rel="icon" href="/favicon.png" type="image/png" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={new URL('/brand/logo.png', Astro.site)} />
+  {structured && <script type="application/ld+json" set:html={JSON.stringify(structured).replaceAll('<', '\\u003c')} />}
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="/" aria-label="RizzitGo FindSheet home">
+        <img src="/brand/header-logo.png" width="236" height="66" alt="RizzitGO" /><span>FINDSHEET</span>
+      </a>
+      <nav aria-label="Main navigation">
+        {nav.map(([href, label]) => <a href={href} aria-current={Astro.url.pathname === href ? 'page' : undefined}>{label}</a>)}
+      </nav>
+      <a class="button join" href={join} rel="sponsored noopener" target="_blank">Join RizzitGo <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main id="main"><slot /></main>
+  <footer class="footer"><div class="wrap">
+    <strong>RizzitGo FindSheet</strong>
+    <p>An independent Findspreadsheet guide. We may earn a referral reward when you join through our link.</p>
+    <div><a href="/faq/">FAQ</a><a href="/sitemap.xml">Sitemap</a><a href="https://findspreadsheet.com/">Findspreadsheet.com</a></div>
+  </div></footer>
+</body>
+</html>

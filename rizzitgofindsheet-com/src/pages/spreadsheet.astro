@@ -1,0 +1,13 @@
+---
+import Base from '../layouts/Base.astro';
+import Catalog from '../components/Catalog.astro';
+import Categories from '../components/Categories.astro';
+---
+<Base title="RizzitGo Finds | Browse the Product Spreadsheet" description="Search RizzitGo finds by product name and Weidian item ID. Browse Findspreadsheet categories and sort by latest, popularity, or USD price.">
+  <div class="wrap section">
+    <h1>RizzitGo finds</h1>
+    <p class="intro">Search the Findspreadsheet catalog and compare listings before buying on RizzitGo.</p>
+    <Catalog />
+    <section class="section"><h2>Browse by category</h2><Categories /></section>
+  </div>
+</Base>

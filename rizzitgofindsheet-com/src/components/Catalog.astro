@@ -1,0 +1,20 @@
+---
+import Card from './Card.astro';
+import { categoryNames, latestItems } from '../lib/data.js';
+const { category = '' } = Astro.props;
+const matches = category ? latestItems.filter((item) => item.category === category) : latestItems;
+---
+<div data-catalog data-category={category}>
+  <form class="filters" action="/spreadsheet/" method="get">
+    <div><label for="query">Search products</label><input id="query" type="search" name="q" maxlength="100" placeholder="Product name or Weidian ID" /></div>
+    <div><label for="category">Category</label><select id="category" name="category"><option value="">All categories</option>{Object.entries(categoryNames).map(([key, label]) => <option value={key} selected={key === category}>{label}</option>)}</select></div>
+    <div><label for="sort">Sort by</label><select id="sort" name="sort"><option value="latest">Latest</option><option value="popular">Popular</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option></select></div>
+    <button class="button" type="submit">Search</button>
+  </form>
+  <p data-status role="status">{matches.length.toLocaleString('en-US')} products</p>
+  <div class="cards" data-results>{matches.slice(0, 24).map((item) => <Card item={item} />)}</div>
+  <div class="pagination" data-pagination hidden><button type="button" data-previous>Previous</button><span data-page></span><button type="button" data-next>Next</button></div>
+</div>
+<script>
+  import '../lib/catalog-ui.js';
+</script>

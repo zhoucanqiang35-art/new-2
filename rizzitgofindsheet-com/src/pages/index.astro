@@ -1,0 +1,36 @@
+---
+import Base from '../layouts/Base.astro';
+import Card from '../components/Card.astro';
+import Search from '../components/Search.astro';
+import Categories from '../components/Categories.astro';
+import { catalog, latestItems, sample, productPath, productImage } from '../lib/data.js';
+const featured = [sample, ...['shoes', 'jackets', 'electronics'].map((key) => latestItems.find((item) => item.category === key))];
+const description = 'Search the RizzitGo spreadsheet for Findspreadsheet products by keyword, Weidian ID, or image. Browse categories, compare USD prices, and check available QC photos.';
+---
+<Base title="RizzitGo Spreadsheet | Product Finds, Image Search & QC Photos" description={description} structured={{'@context':'https://schema.org','@type':'WebSite',name:'RizzitGo FindSheet',url:String(Astro.site),description}}>
+  <section class="hero"><div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="tag">Independent shopping guide</span>
+      <h1>RizzitGo<br/><em>Spreadsheet.</em></h1>
+      <p>Browse Findspreadsheet products, find similar items from a photo, and check available warehouse QC before you buy through RizzitGo.</p>
+      <Search />
+      <div class="hero-links"><a href="/image-search/">Search by image ↗</a><a href="/qc-photos/">Look up QC photos ↗</a></div>
+    </div>
+    <a class="hero-feature" href={productPath(sample.id)}>
+      <img src={productImage(sample)} alt={sample.name} width="580" height="450" fetchpriority="high" />
+      <div><span>Featured find</span><strong>{sample.name}</strong><span aria-hidden="true">↗</span></div>
+    </a>
+  </div></section>
+  <section class="wrap section">
+    <div class="section-head"><div><h2>Browse by category</h2><p>{catalog.length.toLocaleString('en-US')} listings in the Findspreadsheet snapshot.</p></div><a href="/spreadsheet/">View spreadsheet ↗</a></div>
+    <Categories />
+  </section>
+  <section class="wrap section">
+    <div class="section-head"><h2>Product finds</h2><a href="/spreadsheet/">Browse all finds ↗</a></div>
+    <div class="cards">{featured.map((item) => <Card item={item} />)}</div>
+  </section>
+  <section class="wrap section editorial">
+    <div><h2>How to use the RizzitGo spreadsheet</h2><p>Search by item name or Weidian ID, then check the listing photos and any available QC. Open the matching RizzitGo purchase page to confirm the variant, current price, and availability.</p><a href="/how-to-buy/">Read the buying and shipping guide ↗</a></div>
+    <div><h2>Questions about buying or QC?</h2><p>Find where prices come from, which photos are warehouse inspections, and how to check the original item before you order.</p><a href="/faq/">Read the FAQ ↗</a></div>
+  </section>
+</Base>

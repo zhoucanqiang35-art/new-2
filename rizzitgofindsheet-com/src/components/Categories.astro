@@ -1,0 +1,6 @@
+---
+import { categoryNames, categorySlug } from '../lib/shared.js';
+---
+<div class="categories">
+  {Object.entries(categoryNames).map(([key, label]) => <a href={'/categories/' + categorySlug(key) + '/'}>{label}<span aria-hidden="true">↗</span></a>)}
+</div>

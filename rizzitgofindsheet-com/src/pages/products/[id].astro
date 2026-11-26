@@ -1,0 +1,41 @@
+---
+import Base from '../../layouts/Base.astro';
+import { catalog, buy, categoryNames, categorySlug, price, source, productImage } from '../../lib/data.js';
+export function getStaticPaths() {
+  return catalog.map((item) => ({ params: { id: item.id }, props: { item } }));
+}
+const { item } = Astro.props;
+const categoryUrl = '/categories/' + categorySlug(item.category) + '/';
+---
+<Base title={item.name + ' | RizzitGo Spreadsheet'} description={'View listing photos, the Findspreadsheet reference price and warehouse QC availability for ' + item.name + ' (Weidian ' + item.id + ').'}>
+  <article class="wrap section">
+    <p class="breadcrumb"><a href="/spreadsheet/">Spreadsheet</a> / <a href={categoryUrl}>{categoryNames[item.category]}</a></p>
+    <div class="detail">
+      <div data-gallery data-path={item.path}>
+        <a class="main-photo" href={productImage(item)} target="_blank" rel="noopener">
+          <img src={productImage(item)} width="650" height="540" alt={item.name} fetchpriority="high" />
+        </a>
+        <div class="thumbnails" data-thumbnails aria-label="Product photos"></div>
+      </div>
+      <div class="detail-copy">
+        <span class="tag">{categoryNames[item.category]}</span>
+        <h1>{item.name}</h1>
+        <p>Weidian item <strong>{item.id}</strong></p>
+        <div class="detail-price">{price(item.price)}</div>
+        <p class="muted">Findspreadsheet reference price in USD. Confirm the current price, options, availability and shipping on RizzitGo.</p>
+        <a class="button" href={buy(item.id)} target="_blank" rel="noopener">View on RizzitGo ↗</a>
+        <a class="subtle" href={source + item.path}>Original Findspreadsheet listing</a>
+      </div>
+    </div>
+    <section class="section qc-panel" data-qc data-item={item.id}>
+      <h2>Warehouse QC photos</h2>
+      <p role="status" data-qc-status>Checking Findspreadsheet for warehouse QC…</p>
+      <div class="qc-grid" data-qc-results></div>
+      <button class="button outline" type="button" data-qc-retry hidden>Retry QC lookup</button>
+    </section>
+  </article>
+</Base>
+<script>
+  import '../../lib/gallery.js';
+  import '../../lib/qc-ui.js';
+</script>

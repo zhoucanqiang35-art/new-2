@@ -1,0 +1,12 @@
+---
+import Base from '../../layouts/Base.astro';
+import Catalog from '../../components/Catalog.astro';
+import { categoryNames, categorySlug } from '../../lib/shared.js';
+export function getStaticPaths() {
+  return Object.entries(categoryNames).map(([key, label]) => ({ params: { category: categorySlug(key) }, props: { key, label } }));
+}
+const { key, label } = Astro.props;
+---
+<Base title={label + ' | RizzitGo Finds Spreadsheet'} description={'Browse ' + label.toLowerCase() + ' from Findspreadsheet and open matching RizzitGo product links.'}>
+  <div class="wrap section"><p><a href="/spreadsheet/">Spreadsheet</a> / {label}</p><h1>{label}</h1><Catalog category={key} /></div>
+</Base>

@@ -1,0 +1,14 @@
+---
+import { categoryNames, price, productPath, productImage } from '../lib/shared.js';
+const { item, eager = false } = Astro.props;
+---
+<article class="card">
+  <a class="card-link" href={productPath(item.id)}>
+    <div class="card-image"><img src={productImage(item)} alt={item.name} width="360" height="300" loading={eager ? 'eager' : 'lazy'} decoding="async" /></div>
+    <div class="card-text">
+      <small>{categoryNames[item.category] || 'Finds'}</small>
+      <h3>{item.name}</h3>
+      <strong>{price(item.price)}</strong>
+    </div>
+  </a>
+</article>
