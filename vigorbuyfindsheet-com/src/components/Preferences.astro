@@ -1,0 +1,30 @@
+---
+import { languages } from '../lib/locale';
+import { currencies, rateDate } from '../lib/money';
+const names = new Intl.DisplayNames('en', {type:'currency'});
+---
+<div class="locale-controls" data-preferences>
+  <details>
+    <summary data-active-language aria-label="Language: English">English</summary>
+    <div class="locale-menu">
+      <p data-t="language">Language</p>
+      <div class="locale-options" role="group" aria-label="Languages">
+        {Object.entries(languages).map(([code, [name]]) => <button type="button" lang={code} data-language={code} aria-pressed={String(code==='en')}>{name}</button>)}
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary data-active-currency aria-label="Currency: USD">USD</summary>
+    <div class="locale-menu">
+      <p data-t="currency">Currency</p>
+      <div class="locale-options" role="group" aria-label="Currencies">
+        {currencies.map((code) => <button type="button" data-currency={code} aria-pressed={String(code==='USD')} title={names.of(code)}>{code}</button>)}
+      </div>
+      <small>ECB {rateDate}</small>
+    </div>
+  </details>
+</div>
+<script>
+  import { initPreferences } from '../lib/preferences';
+  initPreferences();
+</script>

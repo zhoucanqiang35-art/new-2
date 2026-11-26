@@ -1,0 +1,15 @@
+---
+import Base from '../../layouts/Base.astro';
+import CategoryLinks from '../../components/CategoryLinks.astro';
+import { categories, count } from '../../lib/site';
+---
+<Base title="VigorBuy Categories | Browse the Spreadsheet" description="Explore Findspreadsheet product categories and open Weidian finds on VigorBuy." active="/categories/">
+  <section class="wrap page-top">
+    <header class="page-intro">
+      <h1 data-t="categories">Browse categories</h1>
+      <p class="intro">{count.toLocaleString('en-US')} products across {categories.length} categories. Choose a category to compare products, photos, and available QC.</p>
+      <a class="button quiet" href="/spreadsheet/" data-t="catalog">View all products</a>
+    </header>
+    <CategoryLinks showDescription />
+  </section>
+</Base>

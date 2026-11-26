@@ -1,0 +1,130 @@
+---
+import { categories } from '../lib/site';
+const { category = '' } = Astro.props;
+---
+<div data-catalog data-category={category}>
+  <div class="catalog-rail"><form class="catalog-controls" role="search">
+    <label><span data-t="search">Search products</span><input data-t-placeholder="searchHint" name="q" placeholder="Product name, ID, or product link" /></label>
+    <label><span data-t="categoryIndex">Category</span><select name="category"><option value="" data-t="allCategories">All categories</option>{categories.map(({ id,name }) => <option value={id} data-t={'cat:' + id}>{name}</option>)}</select></label>
+    <label><span data-t="sort">Sort by</span><select name="sort"><option value="latest" data-t="latest">Latest</option><option value="popular" data-t="popular">Popular</option><option value="low" data-t="low">Price: low to high</option><option value="high" data-t="high">Price: high to low</option></select></label>
+    <button class="button primary" type="submit" data-t="search">Search</button>
+    <button class="reset-link" type="button" data-reset data-t="reset">Reset filters</button>
+  </form></div>
+  <div class="catalog-content">
+  <div class="catalog-meta">
+    <p class="status" role="status">Loading products…</p>
+    <div class="catalog-view">
+      <div class="view-toggle" role="group" aria-label="Product display">
+        <button type="button" data-view="photos" aria-pressed="true" data-t="large">Large photos</button>
+        <button type="button" data-view="compact" aria-pressed="false" data-t="compact">Compact</button>
+      </div>
+    </div>
+  </div>
+  <div class="product-grid" data-results></div>
+  <nav class="pagination" aria-label="Product result pages" hidden>
+    <button class="button quiet" type="button" data-step="-1" data-t="previous">Previous</button>
+    <span data-page></span>
+    <button class="button quiet" type="button" data-step="1" data-t="next">Next</button>
+  </nav>
+  </div>
+</div>
+<script>
+  import { catalog, makeCard, categoryNames } from '../lib/browser';
+  const root = document.querySelector('[data-catalog]');
+  const form = root.querySelector('form');
+  const results = root.querySelector('[data-results]');
+  const status = root.querySelector('[role=status]');
+  const pages = root.querySelector('.pagination');
+  const pageSize = 24;
+  const fields = {
+    q: form.elements.namedItem('q'),
+    category: form.elements.namedItem('category'),
+    sort: form.elements.namedItem('sort'),
+  };
+  const orders = {
+    latest: (a,b) => b.date - a.date, popular: (a,b) => b.views - a.views,
+    low: (a,b) => (a.price || Infinity) - (b.price || Infinity),
+    high: (a,b) => (b.price || 0) - (a.price || 0),
+  };
+  function normalize(value) {
+    return value.normalize('NFKD').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+  }
+  function matches(item, query) {
+    if (!query) return true;
+    const identifier = /^\d{8,20}$/.test(query) ? query : query.match(/(?:[?&](?:itemID|offerId|id)=|\/product\/2\/)(\d{8,20})(?=\D|$)/i)?.[1];
+    if (identifier) return item.id === identifier;
+    if (/^https?:\/\//i.test(query)) {
+      try { const url = new URL(query); return url.hostname === 'findspreadsheet.com' && url.pathname === item.path; }
+      catch { return false; }
+    }
+    const haystack = normalize(item.name + ' ' + categoryNames[item.category] + ' ' + item.path.split('/').at(-1));
+    return normalize(query).split(' ').every((term) => haystack.includes(term));
+  }
+  const viewButtons = [...root.querySelectorAll('[data-view]')];
+  let view = 'photos';
+  let page = 1;
+  function setView(value) {
+    view = value === 'compact' ? 'compact' : 'photos';
+    results.classList.toggle('compact-products', view === 'compact');
+    for (const option of viewButtons) option.setAttribute('aria-pressed', String(option.dataset.view === view));
+  }
+  function restore() {
+    const query = new URLSearchParams(location.search);
+    fields.q.value = query.get('q') || '';
+    setView(query.get('view'));
+    fields.category.value = query.get('category') ?? root.dataset.category;
+    const sort = query.get('sort');
+    fields.sort.value = Object.hasOwn(orders, sort) ? sort : 'latest';
+    page = Math.max(1, Number.parseInt(query.get('page'), 10) || 1);
+  }
+  function sync() {
+    const url = new URL(location.href);
+    const values = {q: fields.q.value.trim(), category: fields.category.value, sort: fields.sort.value, page: String(page), view};
+    for (const [key,value] of Object.entries(values)) {
+      const fallback = { q: '', category: root.dataset.category, sort: 'latest', page: '1', view: 'photos' }[key];
+      if (value === fallback) url.searchParams.delete(key);
+      else url.searchParams.set(key,value);
+    }
+    if (url.href !== location.href) history.pushState(null, '', url);
+  }
+  try {
+    const { items } = await catalog();
+    function render() {
+      const query = fields.q.value.trim();
+      const category = fields.category.value;
+      const hits = items.filter((item) => (!category || category === item.category) && matches(item, query)).sort(orders[fields.sort.value] || orders.latest);
+      const total = Math.max(1, Math.ceil(hits.length / pageSize));
+      page = Math.min(page, total);
+      results.replaceChildren(...hits.slice((page - 1) * pageSize, page * pageSize).map((item) => makeCard(item)));
+      status.textContent = hits.length ? hits.length.toLocaleString('en-US') + (hits.length === 1 ? ' product' : ' products') : 'No products found. Try a shorter keyword or a product ID.';
+      pages.hidden = total <= 1;
+      pages.querySelector('[data-page]').textContent = 'Page ' + page + ' of ' + total;
+      pages.querySelector('[data-step="-1"]').disabled = page <= 1;
+      pages.querySelector('[data-step="1"]').disabled = page >= total;
+    }
+    restore();
+    render();
+    function update(event) { event.preventDefault(); page = 1; render(); sync(); }
+    form.addEventListener('submit', update);
+    for (const option of viewButtons) option.addEventListener('click', () => { setView(option.dataset.view); sync(); });
+    root.querySelector('[data-reset]').addEventListener('click', (event) => {
+      fields.q.value = '';
+      fields.category.value = root.dataset.category;
+      fields.sort.value = 'latest';
+      update(event);
+    });
+    fields.category.addEventListener('change', update);
+    fields.sort.addEventListener('change', update);
+    pages.addEventListener('click', (event) => {
+      const step = event.target.closest('[data-step]');
+      if (!step || step.disabled) return;
+      page += Number(step.dataset.step);
+      render();
+      sync();
+      root.scrollIntoView({block:'start'});
+    });
+    window.addEventListener('popstate', () => { restore(); render(); });
+  } catch {
+    status.textContent = 'The preview catalog could not load. Refresh to try again.';
+  }
+</script>

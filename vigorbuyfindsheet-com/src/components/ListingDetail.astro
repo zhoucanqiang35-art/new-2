@@ -1,0 +1,74 @@
+---
+import AgentMenu from './AgentMenu.astro';
+import { buy, names, price, source } from '../lib/site';
+const { item } = Astro.props;
+const { productPhotos = [], gallery = [], photoSource = 'productPhotos' } = Astro.props.photos ?? {};
+const sourceLabels = { sellerLabel: 'Seller photos', warehouseLabel: 'Warehouse photos', productPhotos: 'Product photos' };
+const weidian = item ? 'https://weidian.com/item.html?itemID=' + item.id : '';
+---
+<section class="wrap page-top product-page" data-listing data-id={item?.id}>
+  <a class="breadcrumb" href="/spreadsheet/" data-t="backToCatalog">Back to spreadsheet</a>
+  <p data-loading data-t="itemLoading" role="status" hidden={Boolean(item)}>Loading product…</p>
+  <div data-detail hidden={!item}>
+    <div class="detail-grid detail-grid-purchase">
+      <section class="detail-gallery" aria-labelledby="listing-qc-title">
+        <div class="panel-head">
+          <h2 id="listing-qc-title" data-t="qcPhotos">QC Photos</h2>
+          <a class="button quiet" data-qc href={item && '/qc/?q=' + item.id} data-t="qcFinder">QC Finder</a>
+        </div>
+        <div class="gallery-body">
+          <div class="detail-main">
+            <img data-cover src={gallery[0]} fetchpriority="high" loading="eager" alt={item?.name || ''} />
+            <div class="gallery-controls" data-gallery-controls hidden={!gallery.length}>
+              <button type="button" data-photo-step="-1" disabled={gallery.length < 2} data-t-aria="previous" aria-label="Previous">‹</button>
+              <span data-photo-count aria-live="polite">{gallery.length ? '1 / ' + gallery.length : ''}</span>
+              <button type="button" data-photo-step="1" disabled={gallery.length < 2} data-t-aria="next" aria-label="Next">›</button>
+            </div>
+          </div>
+          <p class="image-source gallery-source" data-photo-source data-t={photoSource} hidden={!gallery.length}>{sourceLabels[photoSource]}</p>
+          <div class="thumbnail-row" data-gallery data-t-aria="qcPhotos" aria-label="QC Photos" hidden={!gallery.length}>
+            {gallery.map((url, index) => (
+              <button type="button" data-photo={url} aria-pressed={String(index === 0)} data-t-aria="pickPhoto" data-t-aria-suffix={index + 1} aria-label={'Show product photo ' + (index + 1)}>
+                <img src={url} alt="" loading="eager" decoding="async" />
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section class="detail-copy" aria-labelledby="listing-product-title">
+        <p class="eyebrow" data-category data-t={item && 'cat:' + item.category}>{item ? names[item.category] : ''}</p>
+        <h1 id="listing-product-title" data-title>{item?.name}</h1>
+        <p class="detail-id"><span data-t="itemNumber">Weidian item</span> <span data-item>{item?.id}</span></p>
+        <p class="detail-price" data-price hidden={!item || !price(item.price)}><span data-amount data-cny={item?.price}>{item ? price(item.price) : ''}</span> <small data-currency-code>USD</small></p>
+        <a class="button primary detail-buy" data-buy href={item && buy(item.id)} target="_blank" rel="noopener" data-t="buy">Open on VigorBuy</a>
+        <div class="detail-actions detail-purchase-tools">
+          <AgentMenu id={item?.id} />
+          <button class="button quiet" type="button" data-copy data-t="copy">Copy Weidian link</button>
+        </div>
+        <p class="copy-status" data-copy-status role="status"></p>
+        <div class="detail-variants" data-variants hidden></div>
+        <div class="detail-sources">
+          <a class="text-link" data-source href={item && source + item.path} target="_blank" rel="noopener">Findspreadsheet</a>
+          <a class="text-link" data-weidian data-t="openWeidian" href={weidian || undefined} target="_blank" rel="noopener">Open Weidian</a>
+        </div>
+      </section>
+    </div>
+
+    <section class="listing-photo-shelf" data-photo-shelf aria-labelledby="product-photos-title" hidden={!productPhotos.length}>
+      <div class="shelf-heading">
+        <h2 id="product-photos-title" data-t="productPhotos">Product photos</h2>
+      </div>
+      <div class="inspection-grid" data-product-grid>
+        {productPhotos.map((image, index) => (
+          <a href={image} target="_blank" rel="noopener">
+            <img src={image} alt={'Product photos ' + (index + 1)} data-t-aria="productPhotos" data-t-aria-suffix={index + 1} loading="eager" decoding="async" />
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+</section>
+<script>
+  import { initListing } from '../lib/listing-detail';
+  initListing();
+</script>

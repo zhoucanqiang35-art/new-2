@@ -1,0 +1,28 @@
+---
+import Icon from './Icon.astro';
+import { categories } from '../lib/site';
+const { showDescription = false } = Astro.props;
+const descriptions = {
+  shoes:'Sneakers, casual shoes, slides, and clogs.',
+  'hoodies-sweaters':'Zip-ups, pullovers, crewnecks, and knitwear.',
+  't-shirts':'Graphic tees, basics, and athletic styles.',
+  jackets:'Denim, windbreakers, and other outer layers.',
+  'pants-shorts':'Trousers, shorts, sweats, and base layers.',
+  headwear:'Baseball caps, beanies, and bucket hats.',
+  accessories:'Socks, bags, belts, and small extras.',
+  jersey:'Football kits, jerseys, and training tops.',
+  ShortSets:'Coordinated tops and shorts.',
+  electronics:'Headphones, speakers, mice, and more.',
+  'other-stuff':'Fragrance, swimwear, and everyday finds.',
+};
+---
+<ul class:list={['category-grid', { 'category-directory': showDescription }]}>
+  {categories.map(({ id, slug, name, count }) => (
+    <li>
+      <a class="category-card" href={'/categories/' + slug + '/'}>
+        <span class="category-icon"><Icon name={id} /></span>
+        <span class="category-text"><strong data-t={'cat:' + id}>{name}</strong>{showDescription && <><span>{descriptions[id]}</span><small>{count.toLocaleString('en-US')} products</small></>}</span>
+      </a>
+    </li>
+  ))}
+</ul>

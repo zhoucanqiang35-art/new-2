@@ -1,0 +1,16 @@
+---
+import { names, price, warehouse } from '../lib/site';
+const { item, eager = false } = Astro.props;
+const photos = warehouse[item.id]?.length;
+---
+<a class="product-card" href={'/products/' + item.id + '/'}>
+  <div class="product-photo">
+    <img src={item.image} alt="" loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : undefined} decoding="async" />
+    {photos > 0 && <span class="photo-tag">{photos} QC photos</span>}
+  </div>
+  <div class="product-copy">
+    <div class="product-category" data-t={'cat:' + item.category}>{names[item.category] || 'Product'}</div>
+    <h3>{item.name}</h3>
+    {price(item.price) && <p class="product-price" data-cny={item.price}>{price(item.price)}</p>}
+  </div>
+</a>

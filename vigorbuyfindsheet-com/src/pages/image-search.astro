@@ -1,0 +1,71 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="VigorBuy Image Search | Find Similar Products" description="Search by photo across the Findspreadsheet catalog and open visually similar finds on VigorBuy." active="/image-search/">
+  <div class="visual-page">
+    <section class="wrap visual-tool" data-image-finder>
+      <header class="visual-intro">
+        <h1 data-t="image">Search by image</h1>
+        <p>Use a product photo or screenshot to find similar items in the VigorBuy spreadsheet.</p>
+      </header>
+
+      <div class="visual-upload">
+        <label class="visual-drop" id="image-drop" for="image-file">
+          <span class="upload-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="38" height="38" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h5a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5M16 19V3m-4 4 4-4 4 4M5 22l7-5 6 5 4-3 5 5"/></svg>
+          </span>
+          <strong data-t="upload">Choose an image</strong>
+          <span>Drop a photo here or paste it from your clipboard.</span>
+          <span class="visual-formats">JPG, PNG, WebP or GIF · Up to 20 MB</span>
+          <input class="sr-only" id="image-file" type="file" accept="image/jpeg,image/png,image/webp,image/gif,.jpg,.jpeg,.png,.webp,.gif" />
+        </label>
+        <div class="visual-query" id="image-query" hidden>
+          <img id="image-preview" alt="Search image preview" width="54" height="54" hidden />
+          <div><span>Search image</span><strong id="image-name"></strong></div>
+          <button class="button quiet" type="button" id="image-retry" hidden>Try again</button>
+          <button class="button quiet" type="button" id="image-reset">Remove</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap visual-matches" aria-labelledby="matches-title">
+      <div class="visual-matches-head">
+        <h2 id="matches-title" data-t="similar">Similar finds</h2>
+        <a class="text-link" href="/spreadsheet/" data-t="catalog">Browse the spreadsheet</a>
+      </div>
+      <p class="visual-status" id="image-status" role="status">Choose an image to see similar products.</p>
+      <div class="product-grid" id="image-results" aria-busy="false"></div>
+      <noscript><p>Enable JavaScript to search by image.</p></noscript>
+    </section>
+  </div>
+</Base>
+<script>
+  import '../lib/image-finder';
+</script>
+<style>
+  .visual-page{padding-bottom:36px}
+  .visual-tool{padding-top:36px}
+  .visual-intro{padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:15px}
+  .visual-intro p{margin-top:6px}
+  .visual-upload{min-width:0}
+  .visual-drop{position:relative;display:grid;justify-items:center;align-content:center;gap:6px;min-height:222px;border:1px dashed #d1b6bf;border-radius:var(--radius);padding:15px;text-align:center;background:white;color:var(--muted);cursor:pointer}
+  .visual-drop:hover,.visual-drop:focus-within,.visual-drop.is-dragging{border-color:var(--hot);background:var(--rose)}
+  .upload-mark{display:grid;place-items:center;width:55px;height:55px;border-radius:11px;background:var(--rose);color:var(--hot-dark)}
+  .upload-mark svg{width:31px;height:31px}
+  .visual-drop strong{color:var(--ink);font:800 1.27rem/1.3 Manrope,sans-serif}
+  .visual-formats{font-size:.83rem}
+  .visual-query{display:flex;align-items:center;gap:9px;padding:8px 3px 0;min-width:0}
+  .visual-query img{object-fit:cover;border-radius:7px;background:#f0eae9}
+  .visual-query div{min-width:0;flex:1;display:grid}
+  .visual-query div span{font-size:.8rem;color:var(--muted)}
+  .visual-query div strong{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:.89rem}
+  .visual-query button{padding-inline:8px;min-height:34px}
+  .visual-matches{padding-top:19px;min-height:150px}
+  .visual-matches-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+  .visual-matches-head a{font-size:.85rem}
+  .visual-status{margin:7px 0 11px}
+  @media(max-width:750px){
+    .visual-tool{padding-top:19px}.visual-drop{min-height:172px}
+    .visual-matches{padding-top:12px}
+  }
+</style>

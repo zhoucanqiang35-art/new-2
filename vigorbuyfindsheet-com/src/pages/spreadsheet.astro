@@ -1,0 +1,14 @@
+---
+import Base from '../layouts/Base.astro';
+import Catalog from '../components/Catalog.astro';
+import { count } from '../lib/site';
+---
+<Base title="VigorBuy Spreadsheet | Browse Product Finds" description="Search, filter, and sort VigorBuy finds from Findspreadsheet." active="/spreadsheet/">
+  <section class="wrap page-top">
+    <header class="page-intro spreadsheet-intro">
+      <div><h1>VigorBuy Spreadsheet</h1><p class="intro">Search and sort {count.toLocaleString('en-US')} Weidian finds from the Findspreadsheet catalog.</p></div>
+      <a class="button quiet" href="/image-search/" data-t="image">Search by image</a>
+    </header>
+    <Catalog />
+  </section>
+</Base>

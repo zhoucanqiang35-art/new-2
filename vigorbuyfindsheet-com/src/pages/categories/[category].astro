@@ -1,0 +1,19 @@
+---
+import Base from '../../layouts/Base.astro';
+import Catalog from '../../components/Catalog.astro';
+import { categories } from '../../lib/site';
+export function getStaticPaths() {
+  return categories.map((category) => ({params:{category:category.slug}, props:{category}}));
+}
+const { category } = Astro.props;
+---
+<Base title={'VigorBuy ' + category.name + ' Spreadsheet'} description={'Browse ' + category.name + ' in Findspreadsheet and open selected finds on VigorBuy.'} active="/categories/">
+  <section class="wrap page-top">
+    <header class="page-intro">
+      <a class="breadcrumb" href="/categories/" data-t="allCategories">All categories</a>
+      <h1 data-t={'cat:' + category.id}>{category.name}</h1>
+      <p class="intro">{category.count.toLocaleString('en-US')} {category.name.toLowerCase()} listings to compare and open on VigorBuy.</p>
+    </header>
+    <Catalog category={category.id} />
+  </section>
+</Base>

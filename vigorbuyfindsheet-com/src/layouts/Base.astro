@@ -1,0 +1,52 @@
+---
+import Preferences from '../components/Preferences.astro';
+import { signup } from '../lib/site';
+import '../style.css';
+const { title, description, active = '' } = Astro.props;
+const nav = [
+  ['/', 'Home', 'home'],
+  ['/spreadsheet/', 'Spreadsheet', 'spreadsheet'],
+  ['/image-search/', 'Image Search', 'image'],
+  ['/guides/how-to-buy/', 'Buying Guide', 'guide'],
+  ['/faq/', 'FAQ', 'faq'],
+];
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content={description} />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#faf9f7" />
+  <link rel="icon" type="image/x-icon" href="/brand/favicon.ico" />
+  <title>{title}</title>
+  <slot name="head" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="VigorBuy Findsheets home">
+        <img src="/brand/vigorbuy-icon.png" width="34" height="34" alt="" />
+        <span>VigorBuy<span class="brand-sub">Findsheets</span></span>
+      </a>
+      <nav aria-label="Main navigation">{nav.map(([href, name, key]) => <a href={href} data-t={key} aria-current={active === href ? 'page' : undefined}>{name}</a>)}</nav>
+      <div class="header-actions"><Preferences /><a class="button primary join" href={signup} rel="sponsored noopener" target="_blank" data-t="join">Join VigorBuy</a></div>
+    </div>
+  </header>
+  <main id="main"><slot /></main>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <a class="brand" href="/"><img src="/brand/vigorbuy-icon.png" width="32" height="32" alt="" /> VigorBuy Findsheets</a>
+        <p>An independent shopping guide by <a href="https://findspreadsheet.com/">Findspreadsheet</a>.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="/spreadsheet/" data-t="spreadsheet">Spreadsheet</a><a href="/categories/" data-t="categoryIndex">Categories</a><a href="/image-search/" data-t="image">Image Search</a><a href="/qc/" data-t="qcFinder">QC Finder</a><a href="/guides/how-to-buy/" data-t="guide">How to Buy</a>
+      </nav>
+      <div><p>Product data comes from Findspreadsheet. Orders, payments, and shipping are handled on VigorBuy.</p><p>Registration links may earn us a referral commission.</p></div>
+    </div>
+  </footer>
+</body>
+</html>

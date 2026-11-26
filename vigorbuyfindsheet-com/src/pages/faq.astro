@@ -1,0 +1,29 @@
+---
+import Base from '../layouts/Base.astro';
+
+import { groups } from '../data/faq';
+---
+<Base title="VigorBuy FAQ | Ordering, QC Photos, Shipping and Returns" description="Answers to 26 VigorBuy questions about Weidian links, product search, checkout, QC photos, warehouse storage, parcel shipping, tracking, and returns." active="/faq/">
+  <section class="wrap page-top">
+    <header class="page-intro"><h1>VigorBuy FAQ</h1><p class="intro">Find answers about using the spreadsheet, placing an order on VigorBuy, reviewing warehouse QC and shipping your parcel.</p></header>
+    <div class="guide-layout">
+      <div class="faq faq-article">
+        {groups.map((group) => (
+          <section id={group.id} aria-labelledby={group.id + '-title'}>
+            <h2 id={group.id + '-title'}>{group.title}</h2>
+            {group.entries.map(([question, answer]) => <details><summary>{question}</summary><p>{answer}</p></details>)}
+          </section>
+        ))}
+      </div>
+      <aside class="guide-aside">
+        <h2>Browse by topic</h2>
+        {groups.map((group) => <a href={'#' + group.id}>{group.title}</a>)}
+        <h2>Guides and official resources</h2>
+        <a href="/guides/how-to-buy/">Illustrated buying guide</a>
+        <a href="https://vigorbuy.com/beginner-guide">VigorBuy beginner guide</a>
+        <a href="https://vigorbuy.com/estimation">VigorBuy shipping estimator</a>
+        <a href="https://vigorbuy.com/help-center">VigorBuy Help Center</a>
+      </aside>
+    </div>
+  </section>
+</Base>

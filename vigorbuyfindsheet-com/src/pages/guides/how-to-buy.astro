@@ -1,0 +1,74 @@
+---
+import Base from '../../layouts/Base.astro';
+import { buy, signup } from '../../lib/site';
+
+const steps = [
+  {
+    id: 'find', title: 'Find your item on the spreadsheet',
+    text: 'Search by product name or Weidian item ID. If you only have a photo, open Image Search and upload a clear crop of the item. Open a result to compare the listing photos, price and available variants. Save the item ID so you can match the same listing later.',
+    links: [['Open the spreadsheet', '/spreadsheet/'], ['Search by image', '/image-search/']],
+  },
+  {
+    id: 'join', title: 'Create or sign in to your VigorBuy account',
+    text: 'Use Join VigorBuy to open registration on vigorbuy.com. If you already have an account, sign in there. Your order, warehouse photos and parcel tracking are managed in that account.',
+    links: [['Join VigorBuy', signup]],
+  },
+  {
+    id: 'open', title: 'Open the same product on VigorBuy',
+    text: 'From the detail page, select Buy on VigorBuy. If you prefer to search on VigorBuy, use Copy product link and paste the original Weidian URL into the official search box. Check that the listing and item ID match before choosing a variant.',
+    links: [['Open the pictured product', '/products/7869064925/']],
+    image: { key: 'subsite', w: 599, h: 278, x: 48, y: 63.6, alt: 'Subsite product detail with an arrow pointing to the Buy on VigorBuy button', caption: 'On VigorBuy Findsheets, the highlighted button opens the same Weidian item on the agent site.' },
+  },
+  {
+    id: 'order', title: 'Choose the variant and review the first payment',
+    text: 'On VigorBuy, check the color, size and quantity, and read the seller’s after-sales terms. Compare measurements against a similar item you own. Review the checkout total and available payment methods before placing the item order. International freight is arranged separately after warehouse intake.',
+    links: [['View an official product-page example', buy('7843332735')]],
+    image: { key: 'merchant', w: 487, h: 269, x: 49, y: 67, alt: 'VigorBuy product options and the official Buy Now button marked with an arrow', caption: 'On the official product page, select the required options before using Buy Now (立即购买).' },
+  },
+  {
+    id: 'warehouse', title: 'Track the order and inspect your warehouse photos',
+    text: 'Follow purchasing and seller dispatch in your VigorBuy orders. When the item is stocked, open Warehouse and review the photos for your own order. Check the variant, visible condition, labels and measurements where provided. If anything looks wrong, contact VigorBuy about that item before submitting a parcel.',
+    links: [['Read VigorBuy’s warehouse walkthrough', 'https://vigorbuy.com/beginner-guide'], ['Look up historical QC by item', '/qc/']],
+    image: { key: 'warehouse', w: 485, h: 279, x: 39, y: 62, alt: 'Official VigorBuy guide highlighting the inspection and warehouse step', caption: 'The official public walkthrough shows where stocked items appear. Your own inspection photos are inside your account.' },
+  },
+  {
+    id: 'estimate', title: 'Estimate shipping and compare available routes',
+    text: 'Choose the destination and enter the estimated packed weight in grams. Add dimensions and product category where relevant. Compare the available routes, their charging weights and delivery estimates. Treat the estimator as a planning tool and review the final parcel quote before paying.',
+    links: [['Open the official shipping estimator', 'https://vigorbuy.com/estimation']],
+    image: { key: 'estimate', w: 945, h: 200, x: 87, y: 64.5, alt: 'Official shipping estimator with 1500 grams entered and its query button marked', caption: 'Example entry of 1,500 g in the official estimator. Set your destination, then select Query (查询).' },
+  },
+  {
+    id: 'ship', title: 'Submit the parcel and track delivery',
+    text: 'In Warehouse, select the stocked items you want to ship together. Review the packing choices, delivery address, route and quote. Complete the international shipping payment on VigorBuy. Once dispatched, use the parcel tracking number and keep it with your order record.',
+    links: [['Open the official help center', 'https://vigorbuy.com/help-center'], ['Read the VigorBuy FAQ', '/faq/']],
+  },
+];
+---
+<Base title="How to Buy on VigorBuy | Illustrated Shopping Guide" description="Follow seven practical steps from searching the VigorBuy spreadsheet to checking your own warehouse photos and submitting a parcel. Includes actual VigorBuy screenshots." active="/guides/how-to-buy/">
+  <section class="wrap page-top">
+    <header class="page-intro"><h1 data-t="guide">How to buy on VigorBuy</h1><p class="intro">Find a product, place your item order, review warehouse QC and arrange international delivery.</p></header>
+    <div class="guide-layout">
+      <ol class="guide-steps illustrated-steps">
+        {steps.map((step) => (
+          <li id={step.id}>
+            <h2>{step.title}</h2>
+            <p>{step.text}</p>
+            <div class="article-links">{step.links.map(([label, href]) => (
+              <a class="text-link" href={href} rel={href === signup ? 'sponsored noopener' : undefined}>{label}</a>
+            ))}</div>
+            {step.image && (
+              <figure class="guide-figure">
+                <div class="guide-shot">
+                  <img src={'/media/guide/' + step.image.key + '.jpg'} width={step.image.w} height={step.image.h} alt={step.image.alt} decoding="async" />
+                  <span class="guide-arrow" style={`--arrow-x:${step.image.x}%;--arrow-y:${step.image.y}%`} aria-hidden="true"></span>
+                </div>
+                <figcaption>{step.image.caption}</figcaption>
+              </figure>
+            )}
+          </li>
+        ))}
+      </ol>
+      <aside class="guide-aside"><h2>On this page</h2>{steps.map((step) => <a href={'#' + step.id}>{step.title}</a>)}<a href="/faq/">VigorBuy FAQ</a></aside>
+    </div>
+  </section>
+</Base>

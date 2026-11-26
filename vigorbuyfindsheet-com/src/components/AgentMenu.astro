@@ -1,0 +1,15 @@
+---
+import { agents, agentHref } from '../lib/agent-links';
+const { id } = Astro.props;
+---
+<details class="agent-menu" data-agent-menu>
+  <summary class="button quiet" data-t="agents">Other platforms</summary>
+  <div class="agent-grid" aria-label="Other purchasing platforms" tabindex="0">
+    {agents.map((agent) => (
+      <a data-agent-link={agent.href} href={id && agentHref(agent.href,id)} target="_blank" rel="nofollow sponsored noopener noreferrer">
+        <img src={'/agents/' + agent.key + '.webp'} alt="" width="30" height="30" loading="lazy" decoding="async" />
+        <span>{agent.name}</span>
+      </a>
+    ))}
+  </div>
+</details>

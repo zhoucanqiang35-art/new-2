@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Joyagoo",
+    "key": "joyagoo",
+    "href": "https://joyagoo.com/product?id={id}&platform=WEIDIAN&productUrl=&productPwd="
+  },
+  {
+    "name": "Oopbuy",
+    "key": "oopbuy",
+    "href": "https://oopbuy.com/product/weidian/{id}?inviteCode=U68CWQBN5"
+  },
+  {
+    "name": "Litbuy",
+    "key": "litbuy",
+    "href": "https://litbuy.com/product/weidian/{id}"
+  },
+  {
+    "name": "LoveGoBuy",
+    "key": "lovegobuy",
+    "href": "https://www.lovegobuy.com/product?id={id}&shop_type=weidian&invite_code=161CPG"
+  },
+  {
+    "name": "HipoBuy",
+    "key": "hipobuy",
+    "href": "https://hipobuy.com/product/weidian/{id}"
+  },
+  {
+    "name": "Sugargoo",
+    "key": "sugargoo",
+    "href": "https://www.sugargoo.com/#/home/productDetail?productLink=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D{id}&memberId=1771881989097259278"
+  },
+  {
+    "name": "KakoBuy",
+    "key": "kakobuy",
+    "href": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D{id}"
+  },
+  {
+    "name": "Superbuy",
+    "key": "superbuy",
+    "href": "https://www.superbuy.com/en/page/buy/?nTag=Home-search&from=search-input&url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D{id}&partnercode=ES7pVI"
+  },
+  {
+    "name": "LoongBuy",
+    "key": "loongbuy",
+    "href": "https://loongbuy.com/product-details?url=https://weidian.com/item.html?itemID={id}"
+  },
+  {
+    "name": "USFans",
+    "key": "usfans",
+    "href": "https://usfans.com/product/3/{id}"
+  },
+  {
+    "name": "OOTDBuy",
+    "key": "ootdbuy",
+    "href": "https://www.ootdbuy.com/goods/details?id={id}&channel=weidian&inviteCode=179LQ1SVA"
+  },
+  {
+    "name": "OrientDig",
+    "key": "orientdig",
+    "href": "https://orientdig.com/product/?shop_type=weidian&id={id}&ref=100114240"
+  },
+  {
+    "name": "EastMallBuy",
+    "key": "eastmallbuy",
+    "href": "https://www.eastmallbuy.com/web/#/item/index?tp=micro&tid={id}&searchlang=en&inviter=lianglook520"
+  },
+  {
+    "name": "Pikobuy",
+    "key": "pikobuy",
+    "href": "https://www.pikobuy.com/product/detail?productUrl=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D{id}"
+  },
+  {
+    "name": "LoloBuy",
+    "key": "lolobuy",
+    "href": "https://www.lolobuy.com/productDetail/1783404849631986?url=https://weidian.com/item.html?itemID={id}"
+  },
+  {
+    "name": "FansBuy",
+    "key": "fansbuy",
+    "href": "https://fansbuy.com/item-micro-{id}.html?&url=https://weidian.com/item.html?itemID={id}"
+  },
+  {
+    "name": "ACBuy",
+    "key": "acbuy",
+    "href": "https://www.acbuy.com/product?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D{id}&id={id}&source=WD"
+  },
+  {
+    "name": "CSSBuy",
+    "key": "cssbuy",
+    "href": "https://www.cssbuy.com/shop/goodsDetail?type=micro&id={id}"
+  },
+  {
+    "name": "iTaoBuy",
+    "key": "itaobuy",
+    "href": "https://www.itaobuy.com/product-detail?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D{id}"
+  },
+  {
+    "name": "ZentBuy",
+    "key": "zentbuy",
+    "href": "https://zentbuy.com/product/2/{id}"
+  }
+]

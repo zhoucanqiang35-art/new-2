@@ -1,0 +1,61 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+---
+<Base title="VigorBuy QC Finder | Warehouse Photos" description="Look up available historical Findspreadsheet warehouse photos by Weidian ID or VigorBuy product link." active="/qc/">
+  <section class="wrap page-top">
+    <header class="page-intro"><h1 data-t="qcFinder">VigorBuy QC Finder</h1>
+      <p class="intro">Look up historical Findspreadsheet warehouse inspection photos by Weidian ID or product link.</p>
+    </header>
+    <div class="tool-workspace">
+      <form class="tool-form" id="qc-form">
+        <label for="qc-query">Weidian item ID or product link</label>
+        <div class="tool-row"><input id="qc-query" name="q" required placeholder="e.g. 7403416956" /><button class="button primary" data-t="checkQc">Find QC photos</button></div>
+      </form>
+      <aside class="tool-aside"><Icon name="qc" /><div><h2>Try a QC example</h2><p>View the warehouse photos saved for this crewneck.</p><a class="text-link" href="?q=7403416956">Casual Crewneck Sweatshirt 008</a></div></aside>
+    </div>
+    <section class="tool-results" aria-labelledby="qc-results-title">
+      <h2 id="qc-results-title" data-t="qc">Warehouse photos</h2>
+      <p id="qc-status" class="status" role="status">Enter a product link or item ID to check for photos.</p>
+      <div id="qc-photos" class="qc-grid"></div>
+    </section>
+  </section>
+</Base>
+<script>
+  import warehouse from '../data/qc.json';
+  const form = document.querySelector('#qc-form');
+  const input = document.querySelector('#qc-query');
+  const status = document.querySelector('#qc-status');
+  const gallery = document.querySelector('#qc-photos');
+  function show() {
+    gallery.replaceChildren();
+    const query = input.value.trim();
+    const id = /^\d{8,20}$/.test(query) ? query : query.match(/(?:[?&]itemid=|\/product\/2\/)(\d{8,20})(?=\D|$)/i)?.[1];
+    if (!id) { status.textContent = 'Enter a Weidian item ID or a VigorBuy product link.'; return; }
+    const photos = warehouse[id];
+    if (!photos) { status.textContent = 'This item has not been checked for QC photos in the preview.'; return; }
+    if (!photos.length) { status.textContent = 'Findspreadsheet returned no QC photos for this item.'; return; }
+    status.textContent = photos.length + ' warehouse QC photos for item ' + id;
+    for (const [index, {image}] of photos.entries()) {
+      const link = document.createElement('a');
+      link.href = image;
+      link.target = '_blank';
+      link.rel = 'noopener';
+      const preview = document.createElement('img');
+      preview.src = image;
+      preview.alt = 'Warehouse QC photo ' + (index + 1);
+      preview.loading = 'lazy';
+      link.append(preview);
+      gallery.append(link);
+    }
+  }
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const url = new URL(location.href);
+    url.searchParams.set('q', input.value.trim());
+    history.replaceState(null, '', url);
+    show();
+  });
+  input.value = new URLSearchParams(location.search).get('q') || '';
+  if (input.value) show();
+</script>
