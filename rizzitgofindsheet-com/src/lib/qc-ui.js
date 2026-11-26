@@ -55,6 +55,6 @@ async function lookup(id) {
 retry.addEventListener('click', () => void lookup(currentItem));
 form?.addEventListener('submit', (event) => {
   event.preventDefault();
-  void lookup(form.elements.item.value.trim());
+  void lookup(form.elements.namedItem('item').value.trim());
 });
 if (panel.dataset.item) void lookup(panel.dataset.item);
