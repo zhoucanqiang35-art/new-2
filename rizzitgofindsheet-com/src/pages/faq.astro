@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 const questions = [
   ['What is the RizzitGo spreadsheet?', 'It is a Findspreadsheet product discovery site with direct links to matching Weidian items on RizzitGo.'],
   ['How do I find an item by Weidian ID?', 'Copy the digits in the itemID field of the original Weidian link, then paste them into the spreadsheet search. Use the same digits for the QC lookup.'],
-  ['Where do the prices come from?', 'The displayed USD reference prices come from the Findspreadsheet snapshot. The agent confirms current variant prices, availability and shipping costs.'],
+  ['Where do the prices come from?', 'The Findspreadsheet snapshot stores prices in Chinese yuan. We convert them to estimated USD amounts using European Central Bank reference rates. The agent confirms current variant prices, availability and shipping costs.'],
   ['Where do the QC photos come from?', 'The site checks the Findspreadsheet warehouse QC feed by Weidian item ID. If it has no photos, you will see a status message. Listing photos are shown separately.'],
   ['Can I search by picture?', 'Yes. On Image Search, upload, drop, or paste a reference image. Your browser compares it with the indexed photos and displays visually similar products.'],
   ['Can I complete an order here?', 'Open the product on RizzitGo to confirm options and complete the purchase in your RizzitGo account.'],

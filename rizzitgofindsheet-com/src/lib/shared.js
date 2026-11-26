@@ -12,8 +12,12 @@ export const categoryNames = {
 export const categorySlug = (key) => key === 'ShortSets' ? 'short-sets' : key;
 export const productImage = (item) => imageOverrides[item.image] || item.image;
 export const productPath = (id) => '/products/' + id + '/';
-export const price = (value) => Number.isFinite(value)
-  ? new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value)
+// 25 Nov 2026 ECB euro reference rates. The catalog stores seller prices in CNY.
+export const rateDate = '25 Nov 2026';
+const dollarsPerYuan = 1.0935 / 7.2999;
+const usd = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
+export const price = (yuan) => Number.isFinite(yuan) && yuan > 0
+  ? usd.format(yuan * dollarsPerYuan)
   : 'Price unavailable';
 export function buy(id) {
   if (!/^\d{8,15}$/.test(id)) throw new TypeError('Invalid Weidian product ID');

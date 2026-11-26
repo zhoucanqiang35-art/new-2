@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { buy, catalog, categoryNames, productImage, sample, selectProducts } from '../src/lib/data.js';
+import { buy, catalog, categoryNames, price, productImage, sample, selectProducts } from '../src/lib/data.js';
 import worker from '../public/_worker.js';
 
 test('main-site snapshot fits every catalog and visual index route', () => {
@@ -31,6 +31,8 @@ test('main-site snapshot fits every catalog and visual index route', () => {
 test('maps the exact RizzitGo item ID and source', () => {
   assert.equal(buy(sample.id), 'https://rizzitgo.com/detail-page/?goodsId=7872190238&source=3');
   assert.throws(() => buy('example'), TypeError);
+  assert.equal(price(sample.price), '$54.83');
+  assert.equal(price(null), 'Price unavailable');
 });
 
 test('searches by term and ID, filters by category, and sorts', () => {

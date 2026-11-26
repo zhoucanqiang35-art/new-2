@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { catalog, buy, categoryNames, categorySlug, price, source, productImage } from '../../lib/data.js';
+import { catalog, buy, categoryNames, categorySlug, price, rateDate, source, productImage } from '../../lib/data.js';
 export function getStaticPaths() {
   return catalog.map((item) => ({ params: { id: item.id }, props: { item } }));
 }
@@ -22,7 +22,7 @@ const categoryUrl = '/categories/' + categorySlug(item.category) + '/';
         <h1>{item.name}</h1>
         <p>Weidian item <strong>{item.id}</strong></p>
         <div class="detail-price">{price(item.price)}</div>
-        <p class="muted">Findspreadsheet reference price in USD. Confirm the current price, options, availability and shipping on RizzitGo.</p>
+        <p class="muted">Estimated USD price using ECB rates on {rateDate}. Confirm the current price, options, availability and shipping on RizzitGo.</p>
         <a class="button" href={buy(item.id)} target="_blank" rel="noopener">View on RizzitGo ↗</a>
         <a class="subtle" href={source + item.path}>Original Findspreadsheet listing</a>
       </div>
