@@ -5,17 +5,47 @@ import '../style.css';
 
 const { title, description, path = Astro.url.pathname, noindex = false, structured } = Astro.props;
 const canonical = new URL(path, Astro.site);
+const isProductionBuild = process.env.SITE_PREVIEW !== '1';
 const nav = [['/spreadsheet/', 'Spreadsheet'], ['/image-search/', 'Image Search'], ['/qc-photos/', 'QC Photos'], ['/how-to-buy/', 'Buying Guide']];
 ---
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  {isProductionBuild && path === '/' && <meta name="msvalidate.01" content="E34A6C20A8A058592D1DC4B20523F6CB" />}
+  {isProductionBuild && (
+    <script is:inline>
+      if (location.hostname === 'rizzitgofindsheet.com') {
+        const measurementId = 'G-CEBY0B5T0M';
+        const pageLocation = new URL(location.pathname, location.origin);
+        const query = new URLSearchParams(location.search);
+        for (const key of ['utm_source', 'utm_medium', 'utm_campaign', 'utm_id', 'utm_term', 'utm_content', 'utm_source_platform']) {
+          if (query.has(key)) pageLocation.searchParams.set(key, query.get(key));
+        }
+        const referrer = document.referrer ? new URL(document.referrer) : null;
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { window.dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', measurementId, {
+          page_location: pageLocation.href,
+          page_referrer: referrer ? referrer.origin + referrer.pathname : '',
+          allow_google_signals: false,
+          allow_ad_personalization_signals: false,
+        });
+
+        const tag = document.createElement('script');
+        tag.async = true;
+        tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + measurementId;
+        document.head.append(tag);
+      }
+    </script>
+  )}
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{title}</title>
   <meta name="description" content={description} />
   <meta name="theme-color" content="#cefa05" />
-  {(noindex || process.env.SITE_PREVIEW === "1") && <meta name="robots" content="noindex, follow" />}
+  {(noindex || !isProductionBuild) && <meta name="robots" content="noindex, follow" />}
   <link rel="canonical" href={canonical} />
   <link rel="icon" href="/favicon.png" type="image/png" />
   <meta property="og:title" content={title} />

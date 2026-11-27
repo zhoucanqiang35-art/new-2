@@ -26,3 +26,4 @@
 - RizzitGo 注册页和样本购买页返回 HTTP 200。真实交易与登录后付款流程未执行。
 - 实际打开 RizzitGo 样本确认可显示商品详情和购买按钮。该平台当时显示 USD 64.00。Findspreadsheet 快照 ¥366 按 [ECB 2026-11-25 参考汇率](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html) 换算为约 $54.83，详情标明换算日期并提示以平台实际价格为准。
 - Cloudflare Pages 生产分支为 `rizzitgo-pages`，仅监视 `rizzitgofindsheet-com/*`，已关闭非生产分支自动预览。构建先跑 `npm test`，通过后执行 `npm run build`。
+- 2026-11-27：RizzitGo 的 GA4 网站数据流使用衡量 ID `G-CEBY0B5T0M`，共用布局仅在正式域名加载代码，记录基础网页浏览量并过滤站内搜索参数。正式首页加入 Bing Webmaster Tools 所有权验证标签。
