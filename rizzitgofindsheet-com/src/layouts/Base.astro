@@ -1,5 +1,6 @@
 ---
 import { join } from '../lib/shared.js';
+import Preferences from '../components/Preferences.astro';
 import '../style.css';
 
 const { title, description, path = Astro.url.pathname, noindex = false, structured } = Astro.props;
@@ -14,7 +15,7 @@ const nav = [['/spreadsheet/', 'Spreadsheet'], ['/image-search/', 'Image Search'
   <title>{title}</title>
   <meta name="description" content={description} />
   <meta name="theme-color" content="#cefa05" />
-  {noindex && <meta name="robots" content="noindex, follow" />}
+  {(noindex || process.env.SITE_PREVIEW === "1") && <meta name="robots" content="noindex, follow" />}
   <link rel="canonical" href={canonical} />
   <link rel="icon" href="/favicon.png" type="image/png" />
   <meta property="og:title" content={title} />
@@ -28,12 +29,12 @@ const nav = [['/spreadsheet/', 'Spreadsheet'], ['/image-search/', 'Image Search'
   <header class="site-header">
     <div class="wrap bar">
       <a class="brand" href="/" aria-label="RizzitGo FindSheet home">
-        <img src="/brand/header-logo.png" width="236" height="66" alt="RizzitGO" /><span>FINDSHEET</span>
+        <img src="/brand/header-logo.png" width="236" height="66" alt="RizzitGO" /><span data-catalog-copy>FINDSHEET</span>
       </a>
       <nav aria-label="Main navigation">
         {nav.map(([href, label]) => <a href={href} aria-current={Astro.url.pathname === href ? 'page' : undefined}>{label}</a>)}
       </nav>
-      <a class="button join" href={join} rel="sponsored noopener" target="_blank">Join RizzitGo <span aria-hidden="true">↗</span></a>
+      <div class="header-tools"><Preferences /><a class="button join" href={join} rel="sponsored noopener" target="_blank">Join RizzitGo <span aria-hidden="true">↗</span></a></div>
     </div>
   </header>
   <main id="main"><slot /></main>

@@ -1,17 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
-import { buy, join, sampleId } from '../lib/shared.js';
+import Guide from '../components/Guide.astro';
 ---
 <Base title="How to Buy on RizzitGo | Ordering, QC & Shipping Guide" description="Follow a RizzitGo order from finding a Weidian item through variants, warehouse QC, parcel consolidation and international shipping.">
-  <article class="wrap section prose">
+  <article class="wrap section">
     <h1>How to buy on RizzitGo</h1>
-    <p class="intro">Use the spreadsheet to research a product, then complete the purchase and shipping steps on the RizzitGo website.</p>
-    <ol>
-      <li><h2>Find an item</h2><p>Open the <a href="/spreadsheet/">spreadsheet</a>, search for a product name or Weidian ID, then open its detail page. Compare the listing images and reference price.</p></li>
-      <li><h2>Open the matching purchase page</h2><p>Use <strong>View on RizzitGo</strong> and confirm the item name, photos, color, and size. <a href={buy(sampleId)} target="_blank" rel="noopener">Open the sample product on RizzitGo</a>.</p></li>
-      <li><h2>Sign in and place the order</h2><p><a href={join} target="_blank" rel="sponsored noopener">Join RizzitGo</a> or sign in to the platform. Confirm the final price, warehouse terms, and available payment options on the order page.</p></li>
-      <li><h2>Review warehouse QC</h2><p>If the platform provides QC after warehouse receipt, check the photos for the variant, condition, and measurements. You can also check public history on the <a href="/qc-photos/">QC lookup page</a>.</p></li>
-      <li><h2>Choose international shipping</h2><p>Review parcel dimensions, actual or volumetric weight, destination, tracking and available carrier options. Compare total cost and any destination charges in your account before confirming the shipment.</p></li>
-    </ol>
+    <p class="intro">Follow the process from finding a product to reviewing warehouse photos and receiving your parcel.</p>
+    <Guide />
   </article>
 </Base>

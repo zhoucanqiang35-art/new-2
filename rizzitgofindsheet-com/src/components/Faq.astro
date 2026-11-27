@@ -1,0 +1,13 @@
+---
+import { faqs, officialGuide, freight, support } from '../data/help.js';
+const { compact = false } = Astro.props;
+---
+<div class:list={['faq-list', { 'faq-preview': compact }]}>
+  {faqs.map(([heading, items]) => (
+    <section>
+      <h3>{heading}</h3>
+      {items.map(([question, answer]) => <details><summary>{question}</summary><p>{answer}</p></details>)}
+    </section>
+  ))}
+</div>
+{!compact && <p class="guide-sources"><a href={officialGuide}>Official RizzitGO walkthrough</a><a href={freight}>Official shipping estimates</a><a href={support}>Contact RizzitGO support</a></p>}

@@ -1,0 +1,14 @@
+---
+import agents from '../data/purchase-agents.json';
+const { id } = Astro.props;
+const referral = /([?&])(?:inviteCode|invite_code|memberId|partnercode|ref|inviter)=[^&#]*/gi;
+const agentLink = (href) => href.replaceAll('{id}', id).replace(referral, '$1').replace(/&&+/g, '&').replace(/\?&+/g, '?').replace(/[?&]$/, '');
+---
+<details class="agent-menu">
+  <summary class="button outline">Other purchasing platforms</summary>
+  <div class="agent-options" role="group" aria-label="Other purchasing platforms" tabindex="0">
+    {agents.map((agent) => <a href={agentLink(agent.href)} target="_blank" rel="noopener nofollow" data-catalog-copy>
+      <img src={'/agents/' + agent.key + '.webp'} alt="" width="28" height="28" loading="lazy" /><span>{agent.name}</span>
+    </a>)}
+  </div>
+</details>

@@ -1,6 +1,13 @@
 ---
 import { categoryNames, categorySlug } from '../lib/shared.js';
+const { filterCatalog = false, showAll = false } = Astro.props;
 ---
 <div class="categories">
-  {Object.entries(categoryNames).map(([key, label]) => <a href={'/categories/' + categorySlug(key) + '/'}>{label}<span aria-hidden="true">↗</span></a>)}
+  {Object.entries(categoryNames).map(([key, label]) => (
+    <a
+      href={filterCatalog ? '/spreadsheet/?category=' + encodeURIComponent(key) : '/categories/' + categorySlug(key) + '/'}
+      data-catalog-category={filterCatalog ? key : undefined}
+    >{label}{!filterCatalog && <span aria-hidden="true">↗</span>}</a>
+  ))}
+  {showAll && <a href="/spreadsheet/">All categories<span aria-hidden="true">↗</span></a>}
 </div>

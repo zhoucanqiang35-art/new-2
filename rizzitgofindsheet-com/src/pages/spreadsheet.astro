@@ -7,7 +7,43 @@ import Categories from '../components/Categories.astro';
   <div class="wrap section">
     <h1>RizzitGo finds</h1>
     <p class="intro">Search the Findspreadsheet catalog and compare listings before buying on RizzitGo.</p>
+    <section class="spreadsheet-categories" aria-labelledby="spreadsheet-categories-title">
+      <h2 id="spreadsheet-categories-title">Browse by category</h2>
+      <Categories filterCatalog />
+    </section>
     <Catalog />
-    <section class="section"><h2>Browse by category</h2><Categories /></section>
   </div>
 </Base>
+
+<style>
+  .spreadsheet-categories {
+    margin-block-start: clamp(16px, 2vw, 24px);
+  }
+
+  .spreadsheet-categories h2 {
+    font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+    margin-block-end: 8px;
+  }
+
+  .spreadsheet-categories :global(.categories) {
+    grid-template-columns: repeat(6, minmax(118px, 1fr));
+    gap: 6px;
+    overflow-x: auto;
+    padding: 2px 2px 4px;
+  }
+
+  .spreadsheet-categories :global(.categories a) {
+    min-height: 40px;
+    padding: 6px 9px;
+    gap: 6px;
+    border-radius: 8px;
+    font-size: .875rem;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+  }
+
+  .spreadsheet-categories :global(.categories a[aria-current="true"]) {
+    background: #edf6d7;
+    border-color: #758e52;
+  }
+</style>

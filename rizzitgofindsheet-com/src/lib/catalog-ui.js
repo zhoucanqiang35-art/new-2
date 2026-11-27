@@ -12,6 +12,7 @@ const pagination = panel.querySelector('[data-pagination]');
 const previous = pagination.querySelector('[data-previous]');
 const next = pagination.querySelector('[data-next]');
 const pageLabel = pagination.querySelector('[data-page]');
+const categoryLinks = document.querySelectorAll('[data-catalog-category]');
 const pageSize = 24;
 let requestId = 0;
 let page = 1;
@@ -32,6 +33,10 @@ async function render(updateUrl = false) {
     previous.disabled = page <= 1;
     next.disabled = page >= pages;
     pageLabel.textContent = 'Page ' + page + ' of ' + pages;
+    for (const link of categoryLinks) {
+      if (link.dataset.catalogCategory === category.value) link.setAttribute('aria-current', 'true');
+      else link.removeAttribute('aria-current');
+    }
     if (updateUrl) {
       const url = new URL(location.href);
       url.search = '';
@@ -60,6 +65,15 @@ function updateFilters() {
   void render(true);
 }
 form.addEventListener('submit', (event) => { event.preventDefault(); updateFilters(); });
+for (const link of categoryLinks) {
+  link.addEventListener('click', (event) => {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    category.value = link.dataset.catalogCategory;
+    query.value = '';
+    updateFilters();
+  });
+}
 category.addEventListener('change', updateFilters);
 sort.addEventListener('change', updateFilters);
 previous.addEventListener('click', () => { page -= 1; void render(true); });

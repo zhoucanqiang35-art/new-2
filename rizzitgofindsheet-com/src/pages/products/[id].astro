@@ -1,37 +1,83 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { catalog, buy, categoryNames, categorySlug, price, rateDate, source, productImage } from '../../lib/data.js';
+import AgentMenu from '../../components/AgentMenu.astro';
+import qcRecords from '../../../public/data/qc-preview.json';
+import { listingPhotos } from '../../lib/listing-photos.js';
+import { catalog, buy, categoryNames, categorySlug, price, rateDate, source } from '../../lib/data.js';
 export function getStaticPaths() {
   return catalog.map((item) => ({ params: { id: item.id }, props: { item } }));
 }
 const { item } = Astro.props;
+const photos = listingPhotos(item);
+const archived = qcRecords[item.id];
+const qcPhotos = archived?.status === 'ready' ? archived.images : [];
+const qcStatus = qcPhotos.length
+  ? qcPhotos.length + ' warehouse QC records from Findspreadsheet. Showing archived photos.'
+  : archived?.status === 'none'
+    ? 'Findspreadsheet has no warehouse QC photos for this item in the preview snapshot.'
+    : 'Checking Findspreadsheet for warehouse QC…';
 const categoryUrl = '/categories/' + categorySlug(item.category) + '/';
+const seller = 'https://weidian.com/item.html?itemID=' + item.id;
 ---
 <Base title={item.name + ' | RizzitGo Spreadsheet'} description={'View listing photos, the Findspreadsheet reference price and warehouse QC availability for ' + item.name + ' (Weidian ' + item.id + ').'}>
-  <article class="wrap section">
+  <article class="wrap section product-page" data-product={item.id}>
     <p class="breadcrumb"><a href="/spreadsheet/">Spreadsheet</a> / <a href={categoryUrl}>{categoryNames[item.category]}</a></p>
     <div class="detail">
-      <div data-gallery data-path={item.path}>
-        <a class="main-photo" href={productImage(item)} target="_blank" rel="noopener">
-          <img src={productImage(item)} width="650" height="540" alt={item.name} fetchpriority="high" />
+      <section data-gallery data-path={item.path} aria-label="Seller photo gallery">
+        <a class="main-photo" href={photos[0]} target="_blank" rel="noopener">
+          <img src={photos[0]} width="650" height="540" alt={item.name} fetchpriority="high" loading="eager" data-catalog-copy data-listing-photo />
         </a>
-        <div class="thumbnails" data-thumbnails aria-label="Product photos"></div>
-      </div>
-      <div class="detail-copy">
+        <div class="gallery-carousel" data-gallery-carousel>
+          <button class="gallery-arrow" type="button" data-gallery-previous aria-label="Previous" hidden>
+            <span aria-hidden="true">‹</span>
+          </button>
+          <div class="thumbnails" data-thumbnails aria-label="Product photos">
+            {photos.map((photo, index) => <button type="button" aria-pressed={String(index === 0)} aria-label={'Show product photo ' + (index + 1)} data-photo={photo}>
+              <img src={photo} width="78" height="70" alt="" loading="eager" data-listing-photo />
+            </button>)}
+          </div>
+          <button class="gallery-arrow" type="button" data-gallery-next aria-label="Next" hidden>
+            <span aria-hidden="true">›</span>
+          </button>
+          <span class="gallery-count" data-gallery-count aria-live="polite" hidden></span>
+        </div>
+      </section>
+      <section class="detail-copy">
         <span class="tag">{categoryNames[item.category]}</span>
-        <h1>{item.name}</h1>
-        <p>Weidian item <strong>{item.id}</strong></p>
-        <div class="detail-price">{price(item.price)}</div>
-        <p class="muted">Estimated USD price using ECB rates on {rateDate}. Confirm the current price, options, availability and shipping on RizzitGo.</p>
-        <a class="button" href={buy(item.id)} target="_blank" rel="noopener">View on RizzitGo ↗</a>
-        <a class="subtle" href={source + item.path}>Original Findspreadsheet listing</a>
-      </div>
+        <h1 data-catalog-copy>{item.name}</h1>
+        <p class="detail-id"><span>Weidian item</span> <strong>{item.id}</strong></p>
+        <div class="detail-price" data-price-cny={item.price}>{price(item.price)}</div>
+        <a class="button detail-buy" href={buy(item.id)} target="_blank" rel="noopener">Buy on RizzitGO</a>
+        <div class="detail-actions">
+          <AgentMenu id={item.id} />
+          <button class="button outline" type="button" data-copy-seller>Copy product link</button>
+        </div>
+        <p class="copy-status" data-copy-status role="status"></p>
+        <div data-options class="detail-options" hidden></div>
+        <p class="muted"><span>Estimated item price based on ECB rates.</span> <time data-catalog-copy>{rateDate}</time> <span>Confirm the selected variant, availability and total on RizzitGO.</span></p>
+        <div class="detail-sources">
+          <a class="subtle" href={source + item.path}>Original Findspreadsheet listing</a>
+          <a class="subtle" href={seller} data-seller>Open Weidian listing</a>
+        </div>
+      </section>
     </div>
-    <section class="section qc-panel" data-qc data-item={item.id}>
-      <h2>Warehouse QC photos</h2>
-      <p role="status" data-qc-status>Checking Findspreadsheet for warehouse QC…</p>
-      <div class="qc-grid" data-qc-results></div>
-      <button class="button outline" type="button" data-qc-retry hidden>Retry QC lookup</button>
+    <section class="photo-shelf" aria-labelledby="listing-qc-title">
+      <h2 id="listing-qc-title">QC photos</h2>
+      <div class="detail-photo-grid" data-seller-photos aria-label="Product photos">
+        {photos.map((photo, index) => <a href={photo} target="_blank" rel="noopener">
+          <img src={photo} width="220" height="200" loading="eager" decoding="async" data-listing-photo alt={'Product detail photo ' + (index + 1)} />
+        </a>)}
+      </div>
+      <div class="qc-panel" data-qc data-item={item.id} data-qc-archived={archived ? '' : undefined}>
+        <p role="status" data-qc-status>{qcStatus}</p>
+        <div class="qc-grid" data-qc-results>
+          {qcPhotos.map((photo, index) => <a href={photo.display} target="_blank" rel="noopener">
+            {photo.video ? 'Open warehouse video ' + (index + 1) :
+              <img src={photo.thumbnail} width="220" height="200" alt={'Warehouse inspection photo ' + (index + 1)} loading="eager" decoding="async" />}
+          </a>)}
+        </div>
+        <button class="button outline" type="button" data-qc-retry hidden>Retry QC lookup</button>
+      </div>
     </section>
   </article>
 </Base>

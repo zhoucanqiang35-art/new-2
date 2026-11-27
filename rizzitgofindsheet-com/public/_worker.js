@@ -3,8 +3,11 @@ const idPattern = /^\d{8,15}$/;
 const detailPath = /^\/[a-zA-Z0-9-]+\/[a-zA-Z0-9-]+\.html$/;
 
 async function upstream(url) {
-  const response = await fetch(url, { signal: AbortSignal.timeout(7000), redirect: 'error' });
-  if (!response.ok) throw new Error('Findspreadsheet request failed');
+  const response = await fetch(url, {
+    signal: AbortSignal.timeout(7000),
+    headers: { Accept: url.includes('qcradar-qc.php') ? 'application/json' : 'text/html' },
+  });
+  if (!response.ok) throw new Error('Findspreadsheet returned HTTP ' + response.status);
   return response;
 }
 
@@ -35,6 +38,25 @@ async function gallery(path) {
     .map((match) => secureImage(match[1])).filter(Boolean))].slice(0, 24) };
 }
 
+
+async function snapshot(request, env, path) {
+  const response = await env.ASSETS.fetch(new URL(path, request.url).href);
+  if (!response.ok) return {};
+  return response.json();
+}
+
+async function previewGallery(request, env, path) {
+  const record = path.match(/-(\d+)\.html$/)?.[1];
+  if (record) {
+    const shard = Math.floor(Number(record) / 100);
+    const groups = await snapshot(request, env, '/data/listing-photos/' + shard + '.json');
+    if (Array.isArray(groups[record]) && groups[record].length) {
+      return { images: groups[record].map(secureImage).filter(Boolean).slice(0, 24) };
+    }
+  }
+  return gallery(path);
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -44,15 +66,17 @@ export default {
       if (url.pathname === '/api/qc') {
         const id = url.searchParams.get('item') || '';
         if (!idPattern.test(id)) return Response.json({ error: 'Invalid Weidian ID' }, { status: 400 });
-        return Response.json(await qc(id), { headers: { 'Cache-Control': 'public, max-age=120' } });
+        const cache = await snapshot(request, env, '/data/qc-preview.json');
+        return Response.json(cache[id] || await qc(id), { headers: { 'Cache-Control': 'public, max-age=120' } });
       }
       if (url.pathname === '/api/gallery') {
         const path = url.searchParams.get('path') || '';
         if (!detailPath.test(path)) return Response.json({ error: 'Invalid product path' }, { status: 400 });
-        return Response.json(await gallery(path), { headers: { 'Cache-Control': 'public, max-age=900' } });
+        return Response.json(await previewGallery(request, env, path), { headers: { 'Cache-Control': 'public, max-age=900' } });
       }
       return Response.json({ error: 'Unknown endpoint' }, { status: 404 });
-    } catch {
+    } catch (error) {
+      console.warn('Findspreadsheet request failed', url.pathname, error.message);
       return Response.json({ error: 'Findspreadsheet is temporarily unavailable' }, { status: 502 });
     }
   },

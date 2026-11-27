@@ -3,34 +3,56 @@ import Base from '../layouts/Base.astro';
 import Card from '../components/Card.astro';
 import Search from '../components/Search.astro';
 import Categories from '../components/Categories.astro';
-import { catalog, latestItems, sample, productPath, productImage } from '../lib/data.js';
-const featured = [sample, ...['shoes', 'jackets', 'electronics'].map((key) => latestItems.find((item) => item.category === key))];
+import Guide from '../components/Guide.astro';
+import Faq from '../components/Faq.astro';
+import { catalog, sample, productPath, productImage } from '../lib/data.js';
+// Late-autumn and winter picks from the catalog, using listing views as a popularity signal.
+const seasonalIds = [
+  '7854781299', '7852377842', '7847303320', '7869092169', '7873275234',
+  '7857190484', '7868565538', '7846963535', '7857170990', '7857749428',
+  '7850992059', '7866271635', '7847014893', '7861464104', '7872698302',
+  '7858664890', '7528935415', '7857253652', '7869189767', '7857812656',
+  '7854232197', '7872207856', '7853393101', '7851408954', '7873360294',
+];
+const featured = seasonalIds.map((id) => catalog.find((item) => item.id === id)).filter(Boolean);
 const description = 'Search the RizzitGo spreadsheet for Findspreadsheet products by keyword, Weidian ID, or image. Browse categories, compare USD prices, and check available QC photos.';
 ---
 <Base title="RizzitGo Spreadsheet | Product Finds, Image Search & QC Photos" description={description} structured={{'@context':'https://schema.org','@type':'WebSite',name:'RizzitGo FindSheet',url:String(Astro.site),description}}>
-  <section class="hero"><div class="wrap hero-grid">
-    <div class="hero-copy">
-      <span class="tag">Independent shopping guide</span>
-      <h1>RizzitGo<br/><em>Spreadsheet.</em></h1>
-      <p>Browse Findspreadsheet products, find similar items from a photo, and check available warehouse QC before you buy through RizzitGo.</p>
-      <Search />
-      <div class="hero-links"><a href="/image-search/">Search by image ↗</a><a href="/qc-photos/">Look up QC photos ↗</a></div>
+  <div class="home-page">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="tag">Independent shopping guide</span>
+          <h1>RizzitGo Spreadsheet</h1>
+          <p>Browse Findspreadsheet products, find similar items from a photo, and check available warehouse QC before you buy through RizzitGo.</p>
+          <Search />
+          <div class="hero-links"><a href="/image-search/">Search by image ↗</a><a href="/qc-photos/">Look up QC photos ↗</a></div>
+        </div>
+        <a class="hero-feature" href={productPath(sample.id)}>
+          <img src={productImage(sample)} alt={sample.name} width="580" height="450" fetchpriority="high" />
+          <div><span>Featured find</span><strong data-catalog-copy>{sample.name}</strong><span aria-hidden="true">↗</span></div>
+        </a>
+      </div>
+    </section>
+    <div class="wrap home-discovery">
+      <section class="home-block">
+        <div class="section-head"><div><h2>Browse by category</h2><p>{catalog.length.toLocaleString('en-US')} listings in the Findspreadsheet snapshot.</p></div><a href="/spreadsheet/">View spreadsheet ↗</a></div>
+        <Categories showAll />
+      </section>
+      <section class="home-block">
+        <div class="section-head"><h2>Product finds</h2><a href="/spreadsheet/">Browse all finds ↗</a></div>
+        <div class="cards featured-grid">{featured.map((item) => <Card item={item} />)}</div>
+      </section>
     </div>
-    <a class="hero-feature" href={productPath(sample.id)}>
-      <img src={productImage(sample)} alt={sample.name} width="580" height="450" fetchpriority="high" />
-      <div><span>Featured find</span><strong>{sample.name}</strong><span aria-hidden="true">↗</span></div>
-    </a>
-  </div></section>
-  <section class="wrap section">
-    <div class="section-head"><div><h2>Browse by category</h2><p>{catalog.length.toLocaleString('en-US')} listings in the Findspreadsheet snapshot.</p></div><a href="/spreadsheet/">View spreadsheet ↗</a></div>
-    <Categories />
-  </section>
-  <section class="wrap section">
-    <div class="section-head"><h2>Product finds</h2><a href="/spreadsheet/">Browse all finds ↗</a></div>
-    <div class="cards">{featured.map((item) => <Card item={item} />)}</div>
-  </section>
-  <section class="wrap section editorial">
-    <div><h2>How to use the RizzitGo spreadsheet</h2><p>Search by item name or Weidian ID, then check the listing photos and any available QC. Open the matching RizzitGo purchase page to confirm the variant, current price, and availability.</p><a href="/how-to-buy/">Read the buying and shipping guide ↗</a></div>
-    <div><h2>Questions about buying or QC?</h2><p>Find where prices come from, which photos are warehouse inspections, and how to check the original item before you order.</p><a href="/faq/">Read the FAQ ↗</a></div>
-  </section>
+    <div class="wrap home-help">
+      <section class="home-block" id="buying-guide">
+        <div class="section-head"><h2>RizzitGo buying guide</h2><a href="/how-to-buy/">Open full buying guide ↗</a></div>
+        <Guide compact />
+      </section>
+      <section class="home-block" id="frequently-asked-questions">
+        <div class="section-head"><h2>Frequently asked questions</h2><a href="/faq/">Open FAQ page ↗</a></div>
+        <Faq compact />
+      </section>
+    </div>
+  </div>
 </Base>

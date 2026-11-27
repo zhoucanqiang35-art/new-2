@@ -1,0 +1,27 @@
+---
+import { guides, officialGuide, freight } from '../data/help.js';
+const { compact = false } = Astro.props;
+const arrows = {
+  find: ['↘', 91, 43], compare: ['↘', 74, 46], order: ['↘', 75, 87],
+  pay: ['↘', 80, 87], enquire: ['↘', 17, 42], inspect: ['↘', 80, 52],
+  ship: ['↘', 84, 86], track: ['↘', 24, 44], receive: ['↘', 78, 29],
+};
+---
+<div class:list={['guide-list', { 'guide-preview': compact }]}>
+  {guides.map(([id, title, copy, image, alt, href, label], index) => (
+    <details id={'step-' + id} open={!compact && index === 0}>
+      <summary><span>{index + 1}.</span> {title}</summary>
+      <div class="guide-body">
+        <div><p>{copy}</p><a href={href} target={href.startsWith('https:') ? '_blank' : undefined} rel={href.startsWith('https:') ? 'noopener' : undefined}>{label}</a></div>
+        <figure>
+          <a class="guide-shot" href={'/guide/' + image + '.webp'} target="_blank" rel="noopener" aria-label={alt}>
+            <img loading="lazy" decoding="async" src={'/guide/' + image + '.webp'} alt={alt} />
+            <span class="shot-arrow" style={'--arrow-x:' + arrows[id][1] + '%;--arrow-y:' + arrows[id][2] + '%'} aria-hidden="true">{arrows[id][0]}</span>
+          </a>
+          <figcaption>{alt}</figcaption>
+        </figure>
+      </div>
+    </details>
+  ))}
+</div>
+{!compact && <p class="guide-sources"><a href={officialGuide}>Official RizzitGO walkthrough</a><a href={freight}>RizzitGO Freight Calculator</a></p>}

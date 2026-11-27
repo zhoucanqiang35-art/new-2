@@ -1,0 +1,30 @@
+---
+import { languages } from '../lib/locales.js';
+import { currencies, rateDate } from '../lib/shared.js';
+const names = new Intl.DisplayNames('en', { type: 'currency' });
+---
+<div class="preferences" data-preferences>
+  <details>
+    <summary aria-label="Language"><span data-current-language data-catalog-copy>English</span></summary>
+    <div class="choice-panel">
+      <strong>Language</strong>
+      <div class="choice-grid" role="group" aria-label="Languages" tabindex="0">
+        {Object.entries(languages).map(([code, name]) => <button type="button" data-language={code} aria-pressed={String(code === 'en')} lang={code} data-catalog-copy>{name}</button>)}
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary aria-label="Currency"><span data-current-currency data-catalog-copy>USD</span></summary>
+    <div class="choice-panel">
+      <strong>Currency</strong>
+      <div class="choice-grid" role="group" aria-label="Currencies" tabindex="0">
+        {currencies.map((code) => <button type="button" title={names.of(code)} data-currency={code} aria-pressed={String(code === 'USD')} data-catalog-copy>{code}</button>)}
+      </div>
+      <small data-catalog-copy>ECB · {rateDate}</small>
+    </div>
+  </details>
+  <span class="sr-only" role="status" data-language-status></span>
+</div>
+<script>
+  import '../lib/preferences.js';
+</script>

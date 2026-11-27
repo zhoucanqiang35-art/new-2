@@ -17,7 +17,8 @@ function photoLink(photo, index) {
     const image = document.createElement('img');
     image.src = photo.thumbnail;
     image.alt = 'Warehouse inspection photo ' + (index + 1);
-    image.loading = index < 4 ? 'eager' : 'lazy';
+    image.loading = 'eager';
+    image.decoding = 'async';
     link.append(image);
   }
   return link;
@@ -38,16 +39,19 @@ async function lookup(id) {
     controller.signal.throwIfAborted();
     if (data.status === 'ready' && data.images.length) {
       results.replaceChildren(...data.images.map(photoLink));
-      status.textContent = data.images.length + ' warehouse QC records from Findspreadsheet.';
+      status.textContent = data.images.length + ' warehouse QC records from Findspreadsheet.'
+        + (data.archived ? ' Showing archived photos.' : '');
     } else if (data.status === 'none') {
-      status.textContent = 'Findspreadsheet has no warehouse QC photos for this item at the moment.';
+      status.textContent = data.archived
+        ? 'Findspreadsheet has no warehouse QC photos for this item in the preview snapshot.'
+        : 'Findspreadsheet has no warehouse QC photos for this item at the moment.';
     } else {
       status.textContent = 'Warehouse QC for this item is still being checked. Try again later.';
       retry.hidden = false;
     }
   } catch {
     if (controller.signal.aborted) return;
-    status.textContent = 'Could not load QC photos. Please try again.';
+    status.textContent = 'Could not load QC photos. Please try again or check the original Findspreadsheet listing.';
     retry.hidden = false;
   }
 }
@@ -57,4 +61,4 @@ form?.addEventListener('submit', (event) => {
   event.preventDefault();
   void lookup(form.elements.namedItem('item').value.trim());
 });
-if (panel.dataset.item) void lookup(panel.dataset.item);
+if (panel.dataset.item && !panel.hasAttribute('data-qc-archived')) void lookup(panel.dataset.item);

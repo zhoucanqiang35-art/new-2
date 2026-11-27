@@ -20,8 +20,13 @@ export function makeCard(item) {
   const image = card.querySelector('img');
   image.src = productImage(item);
   image.alt = item.name;
+  image.dataset.catalogCopy = '';
   card.querySelector('small').textContent = categoryNames[item.category] || 'Finds';
-  card.querySelector('h3').textContent = item.name;
-  card.querySelector('strong').textContent = price(item.price);
+  const title = card.querySelector('h3');
+  title.dataset.catalogCopy = '';
+  title.textContent = item.name;
+  const amount = card.querySelector('strong');
+  amount.dataset.priceCny = item.price;
+  amount.textContent = price(item.price);
   return card;
 }
