@@ -1,0 +1,37 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import CategoryProducts from '../../../../components/CategoryProducts.astro';
+import { categoryNames, categoryPageSize, categoryPageUrl, products } from '../../../../lib/catalog.js';
+
+export function getStaticPaths() {
+  const byCategory = new Map();
+  for (const product of products) {
+    if (!byCategory.has(product.category)) byCategory.set(product.category, []);
+    byCategory.get(product.category).push(product);
+  }
+
+  return Object.entries(categoryNames).flatMap(([slug, name]) => {
+    const matches = byCategory.get(slug) ?? [];
+    const total = Math.ceil(matches.length / categoryPageSize);
+    return Array.from({ length: Math.max(0, total - 1) }, (_, index) => ({
+      params: { slug, page: String(index + 2) },
+      props: { slug, name, matches, page: index + 2 },
+    }));
+  });
+}
+
+const { slug, name, matches, page } = Astro.props;
+const offset = (page - 1) * categoryPageSize;
+const description = `Browse listings ${offset + 1}–${Math.min(offset + categoryPageSize, matches.length)} of ${matches.length} in Litbuy's ${name.toLowerCase()} category. Compare product photos and reference prices.`;
+---
+<Base title={`${name} Finds for Litbuy | Page ${page}`} description={description} indexable={true}>
+  <main class="section category-landing">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a><span>/</span><a href="/categories/">Categories</a><span>/</span><a href={categoryPageUrl(slug)}>{name}</a>
+    </nav>
+    <h1>{name} finds</h1>
+    <p class="category-description">{description}</p>
+    <a class="text-link" href={'/products/?category=' + encodeURIComponent(slug)}>Browse and filter this category</a>
+    <CategoryProducts slug={slug} products={matches} page={page} />
+  </main>
+</Base>

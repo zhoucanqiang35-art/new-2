@@ -1,0 +1,25 @@
+---
+import ProductCard from './ProductCard.astro';
+import { categoryPageSize, categoryPageUrl } from '../lib/catalog.js';
+
+const { slug, products, page = 1 } = Astro.props;
+const offset = (page - 1) * categoryPageSize;
+const total = Math.ceil(products.length / categoryPageSize);
+---
+<div class="products">
+  {products.slice(offset, offset + categoryPageSize).map(product => <ProductCard product={product} />)}
+</div>
+{total > 1 && <nav class="category-pagination" aria-label="Category pages">
+  {page > 1 && <a class="text-link" href={categoryPageUrl(slug, page - 1)}>Previous</a>}
+  <span>Page {page} of {total}</span>
+  {page < total && <a class="text-link" href={categoryPageUrl(slug, page + 1)}>Next</a>}
+</nav>}
+<style>
+  .category-pagination {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-block: 1.5rem;
+  }
+</style>
