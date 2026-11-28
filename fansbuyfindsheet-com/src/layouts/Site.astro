@@ -2,15 +2,16 @@
 import Preferences from '../components/Preferences.astro';
 import { register } from '../lib/fansbuy.js';
 import './site.css';
-const { title, description, canonical } = Astro.props;
-const indexable = process.env.SITE_INDEXABLE === '1' || process.env.CF_PAGES_BRANCH === 'main';
+const { title, description, canonical, noindex = false } = Astro.props;
+const production = process.env.SITE_INDEXABLE === '1' || process.env.CF_PAGES_BRANCH === 'main';
+const pageCanonical = !noindex && new URL(canonical ?? Astro.url.pathname, 'https://fansbuyfindsheet.com').href;
 ---
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   {Astro.url.pathname === '/' && <meta name="msvalidate.01" content="E34A6C20A8A058592D1DC4B20523F6CB" />}
-  {indexable && (
+  {production && (
     <script define:vars={{ measurementId: 'G-JY4SBCDFR8', analyticsHost: 'fansbuyfindsheet.com' }}>
       if (window.location.hostname === analyticsHost) {
         window.dataLayer = window.dataLayer || [];
@@ -35,9 +36,9 @@ const indexable = process.env.SITE_INDEXABLE === '1' || process.env.CF_PAGES_BRA
   )}
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{title}</title>
-  {canonical && <link rel="canonical" href={canonical} />}
+  {pageCanonical && <link rel="canonical" href={pageCanonical} />}
   <meta data-copy-attrs="content" name="description" content={description} />
-  <meta name="robots" content={indexable ? "index,follow" : "noindex,follow"} />
+  <meta name="robots" content={production && !noindex ? "index,follow" : "noindex,follow"} />
   <link rel="icon" type="image/svg+xml" href="/brand/favicon.svg" />
 </head>
 <body>
