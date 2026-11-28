@@ -3,16 +3,22 @@ import Layout from './Layout.astro';
 import { categories, itemUrl, priceLabel, buyUrl } from '../lib/catalog.mjs';
 import catalog from '../../public/data/catalog.json';
 import savedQc from '../../public/data/qc.json';
+import { catalogPageSize, categoryPageUrl } from '../lib/catalog-pagination.mjs';
 import { savedQcLabel } from '../lib/qc.mjs';
 import { englishSearchHelp, chineseSearchHelp, productSearchPlaceholder } from '../lib/search.mjs';
-const { category = '', initialCategory = '', intro } = Astro.props;
-const title = category ? `OrientDig ${categories[category]} Spreadsheet` : 'OrientDig product spreadsheet';
+const { category = '', initialCategory = '', intro, page = 1 } = Astro.props;
+const heading = category ? `OrientDig ${categories[category]} Spreadsheet` : 'OrientDig product spreadsheet';
+const title = page > 1 ? `${heading} | Page ${page}` : heading + ' | Search Weidian Finds';
 const description = intro ?? 'Compare Weidian listings and see which items have saved warehouse photos. Prices are estimates converted from saved seller listings.';
 const useCards = !category;
-const path = category ? `/categories/${category.toLowerCase()}/` : '/spreadsheet/';
+const path = category ? categoryPageUrl(category) : '/spreadsheet/';
 const selectedCategory = category || initialCategory;
 const categoryLinks = [['', 'All categories'], ...Object.entries(categories)];
 const products = selectedCategory ? catalog.filter(product => product.category === selectedCategory) : catalog;
+const offset = (page - 1) * catalogPageSize;
+const pageProducts = products.slice(offset, offset + catalogPageSize);
+const pageCount = Math.ceil(products.length / catalogPageSize);
+const pageDescription = page > 1 ? `Browse listings ${offset + 1}–${offset + pageProducts.length} of ${products.length}. ${description}` : description;
 const withWarehousePhotos = category
   ? products.filter(product => savedQc[product.weidianId]?.photos?.length).slice(0, 3)
   : [];
@@ -20,12 +26,12 @@ const picks = category ? [...new Map(
   [...withWarehousePhotos, ...products.slice(24, 27)].map(product => [product.weidianId, product])
 ).values()].slice(0, 3) : [];
 ---
-<Layout title={title + " | Search Weidian Finds"} description={description}>
+<Layout title={title} description={pageDescription}>
   <section class="wrap page">
     {category && <p><a class="text-link" href="/categories/">All categories</a></p>}
-    <h1>{title}</h1>
+    <h1>{heading}</h1>
     <p class="lead">{description}</p>
-    <form id="catalog-form" class="panel filters" action={path} data-category={category || undefined} role="search">
+    <form id="catalog-form" class="panel filters" action={path} data-category={category || undefined} data-page={page} role="search">
       <label class="field search-field">Product search<input class="input" name="q" placeholder={productSearchPlaceholder} /></label>
       {!category && <label class="field">Category<select name="category"><option value="" selected={!initialCategory}>All categories</option>{Object.entries(categories).map(([slug,name])=><option value={slug} selected={slug === initialCategory}>{name}</option>)}</select></label>}
       <label class="field">Sort by<select name="sort"><option value="">Latest in snapshot</option><option value="price-asc">Price low to high</option><option value="price-desc">Price high to low</option></select></label>
@@ -42,7 +48,7 @@ const picks = category ? [...new Map(
       : <p class="small muted catalog-search-hint">{englishSearchHelp} <span lang="zh-Hans" translate="no">{chineseSearchHelp}</span></p>}
     <p class="status muted" id="catalog-status" role="status">{products.length.toLocaleString('en-US')} listings</p>
     {useCards ? <div id="catalog-list" class="sheet-grid" data-layout="cards">
-      {products.slice(0,24).map(product => {
+      {pageProducts.map(product => {
         const href = itemUrl(product.weidianId);
         const record = savedQc[product.weidianId];
         const count = record?.photos?.length ?? 0;
@@ -61,7 +67,7 @@ const picks = category ? [...new Map(
     </div> : <div class="table-scroll">
       <table class="finds-table">
         <thead><tr><th scope="col">Product</th><th scope="col">Estimate (<span data-currency-code>USD</span>)</th><th scope="col">Warehouse QC</th><th scope="col">Review & order</th></tr></thead>
-        <tbody id="catalog-list">{products.slice(0,24).map(product=>
+        <tbody id="catalog-list">{pageProducts.map(product=>
           <tr>
             <th scope="row"><a class="listing" href={itemUrl(product.weidianId)}><img src={product.image} alt="" width="62" height="54" loading="lazy" /><span><strong translate="no">{product.name}</strong><small>{categories[product.category]} · {product.weidianId}</small></span></a></th>
             <td class="catalog-price" data-price-cny={product.price ?? ""}>{priceLabel(product.price)}</td>
@@ -71,6 +77,11 @@ const picks = category ? [...new Map(
       </table>
     </div>}
     <div id="catalog-empty"></div>
+    {category && pageCount > 1 && <nav id="category-paging" class="row paging" aria-label="Category pages">
+      <a id="category-prev" class="button outline" href={page > 1 ? categoryPageUrl(category, page - 1) : undefined} hidden={page === 1}>Previous</a>
+      <span id="category-page">Page {page} of {pageCount}</span>
+      <a id="category-next" class="button outline" href={page < pageCount ? categoryPageUrl(category, page + 1) : undefined} hidden={page === pageCount}>Next</a>
+    </nav>}
     <div class="row paging" id="catalog-paging" hidden><button class="button outline" id="catalog-prev">Previous</button><span id="catalog-page"></span><button class="button outline" id="catalog-next">Next</button></div>
     {picks.length > 0 && (
       <aside class="panel category-examples" aria-label="Listings to compare">
@@ -81,7 +92,7 @@ const picks = category ? [...new Map(
         </li>)}</ul>
       </aside>
     )}
-    <noscript><p>Enable JavaScript to filter and page through the full preview catalog.</p></noscript>
+    <noscript><p>{category ? 'Enable JavaScript to search and filter this category.' : 'Enable JavaScript to filter and page through the full catalog.'}</p></noscript>
   </section>
 </Layout>
 <style is:global>

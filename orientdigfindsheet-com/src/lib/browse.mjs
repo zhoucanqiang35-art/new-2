@@ -1,5 +1,6 @@
 import { element, readJson } from './dom.mjs';
 import { buyUrl, categories, findItemId, itemUrl, priceLabel } from './catalog.mjs';
+import { catalogPageSize as pageSize, categoryPageUrl } from './catalog-pagination.mjs';
 
 import { agentAction, agentUrl, currentAgent } from './agents.mjs';
 import { queryTerms, searchMatches } from './search.mjs';
@@ -16,7 +17,10 @@ const controls = document.querySelector('#catalog-paging');
 const prev = document.querySelector('#catalog-prev');
 const next = document.querySelector('#catalog-next');
 const pageLabel = document.querySelector('#catalog-page');
-const pageSize = 24;
+const categoryPaging = document.querySelector('#category-paging');
+const categoryPrevious = document.querySelector('#category-prev');
+const categoryNext = document.querySelector('#category-next');
+const categoryPageLabel = document.querySelector('#category-page');
 const productView = list.dataset.layout === 'cards' ? listingCard : listingRow;
 let page = 1;
 let catalog;
@@ -88,6 +92,7 @@ function render(updateUrl = false) {
   if (qc.checked && !savedQc) {
     list.replaceChildren();
     controls.hidden = true;
+    if (categoryPaging) categoryPaging.hidden = true;
     status.textContent = 'Saved QC could not load. Reload or clear the QC filter.';
     return;
   }
@@ -126,18 +131,33 @@ function render(updateUrl = false) {
       empty.append(link);
     }
   }
-  controls.hidden = total <= 1;
+  const useCategoryPaging = categoryPaging && !query && !sort.value && !qc.checked;
+  if (categoryPaging) categoryPaging.hidden = !useCategoryPaging;
+  if (useCategoryPaging) {
+    categoryPrevious.hidden = page === 1;
+    categoryNext.hidden = page === total;
+    if (page > 1) categoryPrevious.href = categoryPageUrl(fixedCategory, page - 1);
+    else categoryPrevious.removeAttribute('href');
+    if (page < total) categoryNext.href = categoryPageUrl(fixedCategory, page + 1);
+    else categoryNext.removeAttribute('href');
+    categoryPageLabel.textContent = 'Page ' + page + ' of ' + total;
+  }
+  controls.hidden = Boolean(useCategoryPaging) || total <= 1;
   prev.disabled = page === 1;
   next.disabled = page === total;
   pageLabel.textContent = 'Page ' + page + ' of ' + total;
   if (updateUrl) {
+    if (useCategoryPaging) {
+      history.replaceState(null, '', categoryPageUrl(fixedCategory, page));
+      return;
+    }
     const params = new URLSearchParams();
     if (query) params.set('q',query);
     if (category?.value) params.set('category',category.value);
     if (sort.value) params.set('sort',sort.value);
     if (qc.checked) params.set('qc','1');
     if (page > 1) params.set('page',page);
-    history.replaceState(null,'',location.pathname+(params.size ? '?'+params : ''));
+    history.replaceState(null,'',new URL(form.action).pathname+(params.size ? '?'+params : ''));
   }
 }
 
@@ -152,7 +172,7 @@ const selected = params.get('category') ?? '';
 if (category && Object.hasOwn(categories,selected)) category.value = selected;
 if (['price-asc','price-desc'].includes(params.get('sort'))) sort.value = params.get('sort');
 qc.checked = params.get('qc') === '1';
-page = Number.parseInt(params.get('page'),10) || 1;
+page = Number.parseInt(params.get('page'),10) || Number(form.dataset.page) || 1;
 Promise.all([readJson('/data/catalog.json'),loadQc().catch(()=>null)])
   .then(([data,records])=>{
     catalog = data;

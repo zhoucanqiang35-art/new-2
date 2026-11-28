@@ -1,0 +1,22 @@
+---
+const { product } = Astro.props;
+const id = String(product.weidianId || '');
+const href = '/product/' + encodeURIComponent(product.id) + '/';
+const sellerUrl = 'https://weidian.com/item.html?itemID=' + id;
+const purchaseUrl = /^\d+$/.test(id)
+  ? 'https://www.pikobuy.com/product/detail?productUrl=' + encodeURIComponent(sellerUrl)
+  : null;
+const price = Number(product.price);
+const usd = Number.isFinite(price) ? '$' + (price / 6.6615).toFixed(2) : '—';
+---
+<article class="product">
+  <a class="product-detail-link" href={href}>
+    <img src={product.image} alt={product.name} loading="lazy" />
+    <h3 data-product-name={product.id}>{product.name}</h3>
+  </a>
+  <p>FindSpreadsheet · {product.id}</p>
+  <span class="price">{usd} USD <small data-i="estimate">estimate</small></span>
+  {purchaseUrl
+    ? <a class="buy-button" href={purchaseUrl} target="_blank" rel="noopener noreferrer" data-i="Buy through PikoBuy ↗">Buy through PikoBuy ↗</a>
+    : <a class="buy-button fallback" href={href} data-i="View product details ↗">View product details ↗</a>}
+</article>

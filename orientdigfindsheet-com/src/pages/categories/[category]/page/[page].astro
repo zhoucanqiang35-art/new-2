@@ -1,0 +1,25 @@
+---
+import CatalogPage from '../../../../components/CatalogPage.astro';
+import catalog from '../../../../../public/data/catalog.json';
+import { catalogPageSize } from '../../../../lib/catalog-pagination.mjs';
+import { categoryEntries } from '../../../../lib/category-content.mjs';
+
+export function getStaticPaths() {
+  const counts = new Map();
+  for (const product of catalog) {
+    counts.set(product.category, (counts.get(product.category) ?? 0) + 1);
+  }
+
+  return categoryEntries.flatMap(({ key, intro }) => {
+    const total = Math.ceil((counts.get(key) ?? 0) / catalogPageSize);
+    return Array.from({ length: Math.max(0, total - 1) }, (_, index) => {
+      const page = index + 2;
+      return {
+        params: { category: key.toLowerCase(), page: String(page) },
+        props: { category: key, intro, page },
+      };
+    });
+  });
+}
+---
+<CatalogPage {...Astro.props} />
