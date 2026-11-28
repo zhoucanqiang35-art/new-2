@@ -53,7 +53,7 @@ export function showListingPhotos(status: HTMLElement, gallery: HTMLElement, pho
 
 export async function showQc(id: string, status: HTMLElement, gallery: HTMLElement, isCurrent = () => true) {
   gallery.replaceChildren();
-  status.textContent = "Checking preview QC records…";
+  status.textContent = "Checking saved warehouse photos…";
   try {
     const [states, featured] = await records();
     if (!isCurrent()) return false;
@@ -70,7 +70,7 @@ export async function showQc(id: string, status: HTMLElement, gallery: HTMLEleme
         ? "The saved FindSpreadsheet check returned no warehouse photos for this item."
         : record?.status === "pending"
           ? "The saved FindSpreadsheet check was pending for this item."
-          : "This item has no verified QC record in the preview.";
+          : "No verified warehouse photos are saved for this item.";
       status.textContent = status.dataset.qcMessage;
     }
   } catch {
