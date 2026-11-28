@@ -2,13 +2,13 @@
 import Layout from "../components/Layout.astro";
 import Icon from "../components/Icon.astro";
 ---
-<Layout title="Kakobuy QC Finder | Finds List" description="Find warehouse QC photos for supported Weidian listings in the Kakobuy Finds List preview.">
+<Layout title="Kakobuy QC Finder | Search Warehouse Photos by Weidian ID" description="Look up saved warehouse QC photos with a Weidian item ID, Weidian listing link, or supported Kakobuy product link. See the source of any available photos.">
   <section class="shell section utility qc-page">
     <a class="inline-arrow" href="/browse/">← Back to finds</a>
     <div class="utility-heading">
       <p class="kicker"><span class="dot"></span> WEIDIAN QUALITY CHECK</p>
       <h1>Kakobuy <em>QC Finder.</em></h1>
-      <p>Paste a Weidian product ID or a Weidian product link from Kakobuy. The preview checks saved warehouse photo records from FindSpreadsheet.</p>
+      <p>Enter a Weidian item ID, paste a Weidian listing, or use a Kakobuy product link that points to Weidian. The finder checks saved warehouse photo records from FindSpreadsheet.</p>
     </div>
     <form id="qc-form" class="hero-search">
       <label class="visually-hidden" for="qc-id">Weidian product ID or link</label><Icon name="qc" />
@@ -20,6 +20,12 @@ import Icon from "../components/Icon.astro";
       <h2 id="qc-result-title">Warehouse QC photos</h2><p id="qc-status" role="status"></p>
       <div id="qc-images" class="qc-photos"></div>
       <a id="qc-source" class="inline-arrow" hidden>Open item in the catalog →</a>
+    </section>
+    <section class="qc-panel" aria-labelledby="qc-help-title">
+      <h2 id="qc-help-title">How to read the QC results</h2>
+      <p>Warehouse photos show an item that reached a warehouse. Compare the color, size tag and selected option with your listing before using a saved photo as a reference.</p>
+      <p>If the finder shows listing photos, those are the seller’s images. For an order you have already placed, use the inspection photos in your own Kakobuy account.</p>
+      <p><a class="inline-arrow" href="/guide/how-to-buy/">Read the Kakobuy buying guide →</a></p>
     </section>
   </section>
 </Layout>
